@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-04-20 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-04-20 の Vibe Coder Bootcamp モーニングディスパッチ — 9本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0420</span>
+    <span class="sep">/</span>
+    <span>2026-04-20</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>09 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260420.0725</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-04-20/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:25 · SUN</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SUNDAY · APRIL 20, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>04<span class="dot">.</span>20</h1>
+    <div class="strap">
+      <span>Vercel · Claude · Claude · Claude</span>
+      <span><span class="count">09</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🛡️ セキュリティ <span class="sep">/</span> @VERCEL (公式) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Vercel セキュリティインシデント — サードパーティ製AIツール経由で侵入</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-20/topic_1.png" data-alt="Vercel セキュリティインシデント — サードパーティ製AIツール経由で侵入" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-20/topic_1.png" alt="Vercel セキュリティインシデント — サードパーティ製AIツール経由で侵入" />
+      </div>
+      <p class="lede">
+        Vercel が内部システムへの不正アクセスを検知し、4/20 に公式 KB で security bulletin を公開。続報投稿で「数百顧客規模を持つサードパーティ製AIツールが侵入経路」と明示し、影響範囲は『限定的なサブセット』とした。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">影響範囲は『a limited subset of customers』(公式表現)</li>
+        <li data-i="02">侵入起点は third-party AI tool（数百顧客規模)</li>
+        <li data-i="03">公式 KB に security bulletin を公開・連投で続報</li>
+        <li data-i="04">Vercel に本番デプロイしている VBC 受講者にも影響可能性</li>
+      </ul>
+      <div class="pull">
+        AI ツール経由のサプライチェーン侵入が現実化。Vibe Coder 系ホスティングの代表格が標的になった事例として、サードパーティ統合の見直しが必須。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">4,898</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/kb/bulletin/vercel-april-2026-security-incident">@vercel (公式)</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-20</dd>
+        <dt>CATEGORY</dt>
+        <dd>🛡️ セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/kb/bulletin/vercel-april-2026-security-incident">https://vercel.com/kb/bulletin/vercel-april-2026-security-incident</a></dd>
+        <dd><a href="https://x.com/vercel/status/2045865072074035664">x.com/vercel/status/2045865072074035664</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · CLAUDEAI / ANTHROP</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🎨 デザインツール <span class="sep">/</span> @CLAUDEAI / ANTHROPIC <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Design 公開 — ブランドデザインシステムを自動取込</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-20/topic_2.png" data-alt="Claude Design 公開 — ブランドデザインシステムを自動取込" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-20/topic_2.png" alt="Claude Design 公開 — ブランドデザインシステムを自動取込" />
+      </div>
+      <p class="lede">
+        Anthropic Labs が『Claude Design』をリサーチプレビューとして公開。Claude との会話だけでプロトタイプ・スライド・1枚資料を生成でき、コードベースとデザインファイルを読み込んでブランドデザインシステムを自動構築・適用する機能まで備える。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">駆動モデルは Claude Opus 4.7（最新ビジョンモデル)</li>
+        <li data-i="02">入力: テキスト/画像/DOCX/PPTX/XLSX/コードベース/Webキャプチャ</li>
+        <li data-i="03">出力: Canva 連携 / PDF / PPTX / Claude Code へのハンドオフ</li>
+        <li data-i="04">インラインコメント・直接編集・カスタムスライダーで反復改善</li>
+        <li data-i="05">Pro / Max / Team / Enterprise で順次ロールアウト</li>
+      </ul>
+      <div class="pull">
+        スライド・LP制作の起点が『Figma → Claude Design → Code』に統合される可能性。VBC受講者の制作パイプライン候補として一次資料化が必須。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">146,316</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.anthropic.com/news/claude-design-anthropic-labs">@claudeai / Anthropic</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-18</dd>
+        <dt>CATEGORY</dt>
+        <dd>🎨 デザインツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.anthropic.com/news/claude-design-anthropic-labs">https://www.anthropic.com/news/claude-design-anthropic-labs</a></dd>
+        <dd><a href="https://x.com/claudeai/status/2045156267690213649">x.com/claudeai/status/204515626769021364…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · CLAUDEAI / ANTHROP</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 ツール・サービス <span class="sep">/</span> @CLAUDEAI / ANTHROPIC <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude for Word が Pro / Max で利用可能に</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-20/topic_3.png" data-alt="Claude for Word が Pro / Max で利用可能に" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-20/topic_3.png" alt="Claude for Word が Pro / Max で利用可能に" />
+      </div>
+      <p class="lede">
+        Microsoft Word のアドインとして Claude を呼べる『Claude for Word』が、Pro / Max プランで提供開始。Word 内から Opus 4.7 と直接連携でき、外部に貼り付けせず文書編集ができる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Word アドインとして Claude を呼べる</li>
+        <li data-i="02">Opus 4.7 と直接連携</li>
+        <li data-i="03">Pro / Max プラン対象（発表時点）</li>
+        <li data-i="04">外部コピペなしで文書編集が完結</li>
+      </ul>
+      <div class="pull">
+        受講生・クライアント企業の『Wordで提案書を書く』リアル業務に Claude を直接刺せる。Office 系資料制作の置換ステップ。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">10,551</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://claude.com/claude-for-word">@claudeai / Anthropic</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 ツール・サービス</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://claude.com/claude-for-word">https://claude.com/claude-for-word</a></dd>
+        <dd><a href="https://x.com/claudeai/status/2045222254699511855">x.com/claudeai/status/204522225469951185…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · CLAUDEAI / CEREBRA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 ニュース・動向 <span class="sep">/</span> @CLAUDEAI / CEREBRAL VALLEY <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code Hackathon for Opus 4.7 — 賞金 $100K</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-20/topic_4.png" data-alt="Claude Code Hackathon for Opus 4.7 — 賞金 $100K" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-20/topic_4.png" alt="Claude Code Hackathon for Opus 4.7 — 賞金 $100K" />
+      </div>
+      <p class="lede">
+        Anthropic と Cerebral Valley 共催の Claude Code ハッカソンが Opus 4.7 向けに復活。Claude Code 開発チームが現地常駐し、賞金 API クレジット計 10万ドル相当。応募締切は今週日曜。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Opus 4.7 を活用した Claude Code 作品が対象</li>
+        <li data-i="02">Claude Code 開発チームが現地常駐</li>
+        <li data-i="03">賞金は API クレジット 10万ドル相当</li>
+        <li data-i="04">応募締切は今週日曜</li>
+      </ul>
+      <div class="pull">
+        VBC 上級者・社員エージェント開発者がコネクトを作るチャンス。応募ハードル次第で社内エンジニアにも勧められる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">9,977</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://cerebralvalley.ai/e/built-with-4-7-hackathon">@claudeai / Cerebral Valley</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 ニュース・動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://cerebralvalley.ai/e/built-with-4-7-hackathon">https://cerebralvalley.ai/e/built-with-4-7-hackathon</a></dd>
+        <dd><a href="https://x.com/claudeai/status/2045248224659644654">x.com/claudeai/status/204524822465964465…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · GDB GREG BROCKMAN </span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 ツール・サービス <span class="sep">/</span> @GDB (GREG BROCKMAN / OPENAI) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Codex がフル agentic IDE 化 — OpenAI gdb の連投宣言</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-20/topic_5.png" data-alt="Codex がフル agentic IDE 化 — OpenAI gdb の連投宣言" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-20/topic_5.png" alt="Codex がフル agentic IDE 化 — OpenAI gdb の連投宣言" />
+      </div>
+      <p class="lede">
+        OpenAI の Greg Brockman が『Codex はフル agentic IDE になりつつある』と明言。同日に複数の連投で『Webアプリ／ゲームを完全自然言語で構築』『codex makes work plain fun』など Cursor / Claude Code 直撃の意思を強調した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">プロダクト方向性の宣言: full agentic IDE</li>
+        <li data-i="02">Webアプリ／ゲームを完全自然言語で構築の実演</li>
+        <li data-i="03">OpenAIDevs も『You can just build things』(1,969likes) で並走</li>
+        <li data-i="04">Cursor / Claude Code に続く第三極として正式参戦</li>
+      </ul>
+      <div class="pull">
+        Cursor / Claude Code 二強に OpenAI Codex が IDE 戦線で参戦。VBC 受講生が併用候補に入れる前提で見ておく必要。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">3,906</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/gdb/status/2045375289560007029">@gdb</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 ツール・サービス</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/gdb/status/2045375289560007029">x.com/gdb/…</a></dd>
+        <dd><a href="https://x.com/OpenAIDevs/status/2045490833005400458">x.com/OpenAIDevs/status/2045490833005400…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · NOTEBOOKLM</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 ツール・サービス <span class="sep">/</span> @NOTEBOOKLM <span class="sep">/</span> NEWS
+      </div>
+      <h2>NotebookLM が Gemini 内で無料ユーザー解放</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-20/topic_6.png" data-alt="NotebookLM が Gemini 内で無料ユーザー解放" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-20/topic_6.png" alt="NotebookLM が Gemini 内で無料ユーザー解放" />
+      </div>
+      <p class="lede">
+        Gemini アプリ内の Notebooks が Web 版の無料ユーザーにも解禁。個人ノートを Gemini ホームから直接操作でき、Gemini との会話自体を新規・既存ノートのソースとして使える双方向統合になった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">無料ユーザー対応（Web）</li>
+        <li data-i="02">個人ノートが Gemini ホームから到達可</li>
+        <li data-i="03">Gemini チャット履歴がそのままノート資料に</li>
+        <li data-i="04">学習ノート運用が追加コスト 0 で組める</li>
+      </ul>
+      <div class="pull">
+        VBC 受講者の学習ノート運用に直結。『LLM チャット → ノート化 → 再利用』のループが追加コスト 0 で完成する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,783</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/NotebookLM/status/2045172109073404312">@NotebookLM</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 ツール・サービス</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/NotebookLM/status/2045172109073404312">x.com/NotebookLM/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · FLADDICT</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 ニュース・動向 <span class="sep">/</span> @FLADDICT (深津貴之) <span class="sep">/</span> NEWS
+      </div>
+      <h2>深津貴之 — 『ドンドン回す』時代論 / メタスキル優先論</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-20/topic_7.png" data-alt="深津貴之 — 『ドンドン回す』時代論 / メタスキル優先論" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-20/topic_7.png" alt="深津貴之 — 『ドンドン回す』時代論 / メタスキル優先論" />
+      </div>
+      <p class="lede">
+        深津貴之が『しばらくデザイン業界は多少粗があってもドンドン出す/ドンドン回すが有利。寡作で一発必中のスナイパー職人型は不遇の時代になる』と警鐘。同日には『学生にはメタスキル（勉強の仕方・意思決定・リスクの取り方・継続の仕方）を優先せよ』(3,522likes) も投稿。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">寡作・職人型 &lt; 多作・回転率（短期予測）</li>
+        <li data-i="02">メタスキル優先という大学講義の運用も並行発信</li>
+        <li data-i="03">Claude Design / nano banana 等の生成AIで『数を撃つ』コストが激減した文脈</li>
+      </ul>
+      <div class="pull">
+        VBC のクリエイター層・社内マーケに直接効く論考。受講生のマインドセット教材として活用可能。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,946</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/fladdict/status/2045302920510668805">@fladdict</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 ニュース・動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/fladdict/status/2045302920510668805">x.com/fladdict/…</a></dd>
+        <dd><a href="https://x.com/fladdict/status/2045486086911394089">x.com/fladdict/status/204548608691139408…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · FUJI / PRESENTATIO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🎨 デザインツール <span class="sep">/</span> FUJI / PRESENTATION DESIGNER (@YOSHIFUJIDESIGN) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Claude Designスライド作成最速レビュー — FUJI</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-20/topic_8.png" data-alt="Claude Designスライド作成最速レビュー — FUJI" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-20/topic_8.png" alt="Claude Designスライド作成最速レビュー — FUJI" />
+      </div>
+      <p class="lede">
+        プレゼンデザイナー FUJI が Claude Design 公開当日にスライド作成機能を実検証。会社ロゴ・過去ポートフォリオを読み込ませてデザインシステムを自動生成→そのままスライドへ拡張する流れを確認し、Tweak（バリエーション切替）等の現状機能と問題点を整理。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">既存ビジュアルデータからのデザインシステム自動構築が最大の特長</li>
+        <li data-i="02">生成スライドはデザインラインを取り込んで拡張される印象（実検証ベース）</li>
+        <li data-i="03">スライド生成専用 UI / Tweak（バリエーション切替）も確認</li>
+        <li data-i="04">現時点の問題点も多数あり、詳細は本人 note へ</li>
+      </ul>
+      <div class="pull">
+        TEKION/VBC のスライド系コンテンツ生成パイプライン（nanobanana 系）と比較するための一次資料。プレゼンデザイナー視点の評価軸が得られる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">106</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/yoshifujidesign/status/2045604338564030521">@yoshifujidesign</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>🎨 デザインツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/yoshifujidesign/status/2045604338564030521">x.com/yoshifujidesign/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-9">
+  <div class="container">
+    <aside class="numeral">09<span class="ord">TOPIC 09 · KHAIRALLAH AL-AWAD</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📖 学習リソース <span class="sep">/</span> KHAIRALLAH AL-AWADY (@ENG_KHAIRALLAH1) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>How to Build a Team of AI Agents (Full Course) — Khairallah</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-20/topic_9.png" data-alt="How to Build a Team of AI Agents (Full Course) — Khairallah" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-20/topic_9.png" alt="How to Build a Team of AI Agents (Full Course) — Khairallah" />
+      </div>
+      <p class="lede">
+        Hub &amp; Spoke 型マルチエージェント・オーケストレーションの完全ガイド。コーディネータ + 専門家構成、最重要バグ『専門家はコーディネータの会話履歴を継承しない』、3大失敗モード（狭い分解／コンテキスト消失／テレフォンエフェクト）を体系化したロングフォーム記事。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Hub &amp; Spoke が標準アーキテクチャ：通信は必ずコーディネータ経由</li>
+        <li data-i="02">専門家エージェントは会話履歴を自動継承しない（要明示渡し）</li>
+        <li data-i="03">失敗モード3種：狭い分解／コンテキスト消失／テレフォンエフェクト</li>
+        <li data-i="04">回避策：分解前にスコープ列挙＋self-check／全段階で原典データも併渡し</li>
+        <li data-i="05">代表構成: Research &amp; Report / Content / Customer Support / Business Analysis</li>
+      </ul>
+      <div class="pull">
+        Jinn の COO→部署→社員型オーケストレーションそのもの。VBC のエージェント開発カリキュラムに、3大失敗モードをそのまま事例化して入れられる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,107</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/eng_khairallah1/status/2045430911257432225">@eng_khairallah1</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-18</dd>
+        <dt>CATEGORY</dt>
+        <dd>📖 学習リソース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/eng_khairallah1/status/2045430911257432225">x.com/eng_khairallah1/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://vercel.com/kb/bulletin/vercel-april-2026-security-incident">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-04-19/">
+      ← 前日 · 2026-04-19
+      <span class="big">Claude Code デスクトップ刷新 — 並列セッション対応</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-04-20/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260420.0725</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

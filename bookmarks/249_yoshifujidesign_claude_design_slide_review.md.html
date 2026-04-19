@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Maestro - モバイル/Web E2Eテスト自動化フレームワーク — Bookmarks · Vibe Coder Bootcamp</title>
-  <meta name="description" content="Maestroは、Android、iOS、WebアプリのUI/E2Eテストをシンプルかつ高速に行うオープンソースフレームワーク。Appium、Espresso、UIAutomator、XCTest、Selenium、Playwrightの学習を基に構築。" />
+  <title>Claude Designスライド作成最速レビュー — Bookmarks · Vibe Coder Bootcamp</title>
+  <meta name="description" content="Anthropic「Claude Design」を使った最速スライド作成レビュー。会社ロゴ/過去ポートフォリオから自動でデザインシステムを生成し、それを使ってスライドが生成できる新機能の実検証。" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
@@ -285,11 +285,11 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №249</span>
+    <span class="tick">BOOKMARK №001</span>
     <span class="sep">/</span>
-    <span>2026-04-20</span>
+    <span>2026-04-19</span>
     <span class="sep">/</span>
-    <span>ARCHIVE</span>
+    <span>@yoshifujidesign</span>
     <span class="sep">/</span>
     <span>293 ITEMS</span>
     <span class="sep">/</span>
@@ -317,50 +317,43 @@
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 日付不明 <span>/</span> №249
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-04-19 <span>/</span> №001
     </div>
     <div class="cat-line">
-      <span>💻 AI/開発</span>
-      <span class="sep">·</span><span>不明（Xブックマークより）</span>
-      
+      <span>🔧 ツール・サービス</span>
+      <span class="sep">·</span><span>FUJI / Presentation designer <span style="opacity:.7">@yoshifujidesign</span></span>
+      <span class="sep">·</span><span>2026-04-19</span>
     </div>
-    <h1 class="title">Maestro - モバイル/Web E2Eテスト自動化フレームワーク</h1>
+    <h1 class="title">Claude Designスライド作成最速レビュー</h1>
     <div class="strap">
-      <span><span class="label">№</span>249 / 293</span>
-      
-      <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/12_maestro_mobile_e2e.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
+      <span><span class="label">№</span>001 / 293</span>
+      <span><span class="label">SRC</span><a href="https://x.com/yoshifujidesign/status/2045604338564030521" target="_blank" rel="noopener noreferrer">x.com/yoshifujidesign ↗</a></span>
+      <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/249_yoshifujidesign_claude_design_slide_review.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
   </div>
 </section>
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">249<span class="ord">BOOKMARK / 293</span></aside>
+    <aside class="numeral">001<span class="ord">BOOKMARK / 293</span></aside>
     <article class="prose">
-<p><strong>リポジトリ:</strong> https://github.com/mobile-dev-inc/Maestro  </p><p><strong>公式サイト:</strong> https://www.maestro.dev  </p><p><strong>ドキュメント:</strong> https://docs.maestro.dev</p><h2>概要</h2><p>Maestroは、Android、iOS、WebアプリのUI/E2Eテストをシンプルかつ高速に行うオープンソースフレームワーク。Appium、Espresso、UIAutomator、XCTest、Selenium、Playwrightの学習を基に構築。</p><h2>特徴</h2><p>| 特徴 | 説明 |</p><p>|------|------|</p><p>| <strong>クロスプラットフォーム</strong> | Android、iOS、Webアプリ（React Native、Flutter、ハイブリッド）対応 |</p><p>| <strong>人間が読めるYAML</strong> | launchApp、tapOn、assertVisibleなどのコマンドで操作を記述 |</p><p>| <strong>耐フレーク性</strong> | 動的UIを自動待機、手動のsleep()不要 |</p><p>| <strong>高速イテレーション</strong> | 解釈実行（コンパイル不要）、インストールは1スクリプト |</p><h2>インストール</h2><pre><code># Java 17以上が必要
-java -version
-
-# macOS、Linux、Windows (WSL)
-curl -fsSL &quot;https://get.maestro.mobile.dev&quot; | bash</code></pre><h2>簡単な例（Androidの連絡先アプリ）</h2><pre><code># flow_contacts_android.yaml
-appId: com.android.contacts
----
-- launchApp
-- tapOn: &quot;Create new contact&quot;
-- tapOn: &quot;First Name&quot;
-- inputText: &quot;John&quot;
-- tapOn: &quot;Last Name&quot;
-- inputText: &quot;Snow&quot;
-- tapOn: &quot;Save&quot;</code></pre><h2>Maestro Studio（テストIDE）</h2><p>視覚的にテストを設計・実行できる軽量IDE。無料で利用可能。</p><p>機能:</p><ul><li>ビジュアルフロービルダー＆インスペクター</li><li>操作の記録、要素の検査</li><li><strong>AI支援（MaestroGPT）</strong> - コマンド生成と質問回答</li></ul><p><a href="https://maestro.dev/#maestro-studio" target="_blank" rel="noopener noreferrer">ダウンロード</a></p><h2>Maestro Cloud（並列実行＆スケーラビリティ）</h2><p>数百のテストを並列実行し、実行時間を最大90%短縮。</p><ul><li>通知機能内蔵</li><li>決定的な環境</li><li>完全なデバッグツール</li></ul><p><a href="https://maestro.dev/cloud" target="_blank" rel="noopener noreferrer">7日間無料トライアル</a></p><h2>なぜMaestroか？</h2><p>従来のツール（Appium、Espresso、UIAutomator、XCTest、Selenium、Playwright）の学習を基に、より簡単にFlowを定義・テスト可能。</p><p>*保存日: 2026-01-30*</p>
+<p><strong>有益度:</strong> ⭐⭐⭐ HIGH</p><h2>概要</h2><blockquote>Anthropic「Claude Design」を使った最速スライド作成レビュー。会社ロゴ/過去ポートフォリオから自動でデザインシステムを生成し、それを使ってスライドが生成できる新機能の実検証。</blockquote><h2>記事詳細</h2><p>プレゼンテーションデザイナー視点で Claude Design のスライド生成機能を検証。最大の特長は「既存ビジュアル資産から直接デザインシステムを構築できる」点。会社ロゴや過去のポートフォリオを取り込ませると、配色・タイポ・レイアウトのトーンを抽出してデザインシステム化し、そのまま新規スライドへ適用できる。スライド専用UI、Tweak（バリエーション切替）など面白い機能がある一方、現状の挙動には課題もあり。実画面キャプチャと実プロンプトを含む詳細レビューはnoteに掲載。</p><h2>関連リンク</h2><ul><li>http://x.com/i/article/2045333796887957504</li></ul><h2>X Article 本文</h2><p><strong>タイトル:</strong> Claude Designスライド作成最速レビュー</p><p>昨日発表されて各方面で話題の「Claude Design」。自分の環境でも早速使えるようになっていたので、なにはともあれスライド作成の検証をやってみました。</p><p>Claude Designの最大の特長は、「既存のビジュアルデータから直接デザインシステムを作成できる」という点です。</p><p>試しに自分の会社ロゴやこれまでのポートフォリオを読み込ませてみました。</p><p>こうした入力データから、デザインシステムを自動で生成。</p><p>デザインシステムができたら、このデザインシステムを使ってスライドを生成。実際に作ってみたものの仕上がりはこんな感じになりました。</p><p>動画だとこう。</p><p>デザインラインをうまく取り込んでスライドに拡張してくれているように感じます。</p><p>Claude Designでは、スライド生成専用のメニューが用意されていたり、切り替え可能なバリエーション（Tweak）を試せたりと面白い機能が多いです。一方で、現時点の問題点もいろいろと。</p><p>noteの方では、実際のUI画面のキャプチャや出力結果を交えながら、使い方の流れや実際の指示出し内容、実践的な所感を最速レビューとしてまとめました。</p><p>手元にデータさえ揃っていれば最初のデザインシステム構築は簡単にできるので、興味ある方は試してみる価値はあると思います。</p><p>note：</p><p>『Claude Designスライド作成最速レビュー』</p>
     </article>
     <aside class="side">
       <dl>
-        <dt>AUTHOR</dt><dd>不明（Xブックマークより）</dd>
+        <dt>AUTHOR</dt><dd>FUJI / Presentation designer</dd>
+        <dt>HANDLE</dt><dd>@yoshifujidesign</dd>
+        <dt>POSTED</dt><dd>2026-04-19</dd>
+        <dt>CATEGORY</dt><dd>🔧 ツール・サービス</dd>
+        <dt>SOURCE</dt><dd><a href="https://x.com/yoshifujidesign/status/2045604338564030521" target="_blank" rel="noopener noreferrer">x.com/yoshifujidesign/status/2045604338564…</a></dd>
+        <dt>MARKDOWN</dt><dd><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/249_yoshifujidesign_claude_design_slide_review.md" target="_blank" rel="noopener noreferrer">GitHub で原文を見る</a></dd>
         
-        
-        <dt>CATEGORY</dt><dd>💻 AI/開発</dd>
-        
-        <dt>MARKDOWN</dt><dd><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/12_maestro_mobile_e2e.md" target="_blank" rel="noopener noreferrer">GitHub で原文を見る</a></dd>
-        
+        <dt>ENGAGEMENT</dt>
+        <dd>
+          <div class="stats">
+            <div class="stat"><span class="num">106</span><span class="lab">LIKES</span></div><div class="stat"><span class="num">7</span><span class="lab">RTS</span></div><div class="stat"><span class="num">255</span><span class="lab">BMARKS</span></div><div class="stat"><span class="num">100K</span><span class="lab">VIEWS</span></div>
+          </div>
+        </dd>
       </dl>
     </aside>
   </div>
@@ -368,13 +361,10 @@ appId: com.android.contacts
 
 <section class="page-nav">
   <div class="container">
-    <a class="btn prev" href="./13_google_adk_deep_research.md.html">
-      <span>← 新しいブックマーク</span>
-      <span class="big">Google ADKで「Deep Research」を自作する</span>
-    </a>
-    <a class="btn next" href="./11_tesla_eq_settings.md.html">
+    <span class="btn" style="opacity:.35;pointer-events:none">← 最新です</span>
+    <a class="btn next" href="./250_eng_khairallah1_team_of_ai_agents_course.md.html">
       <span>古いブックマーク →</span>
-      <span class="big">テスラ Model Y/3 推奨オーディオ設定</span>
+      <span class="big">連携するAIエージェントのチームを構築する方法（完全コース）</span>
     </a>
   </div>
 </section>
@@ -382,8 +372,8 @@ appId: com.android.contacts
 <section class="actions">
   <div class="container">
     <a href="./">← 一覧へ戻る</a>
-    
-    <a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/12_maestro_mobile_e2e.md" target="_blank" rel="noopener noreferrer">GitHub で開く</a>
+    <a class="primary" href="https://x.com/yoshifujidesign/status/2045604338564030521" target="_blank" rel="noopener noreferrer">元ポストを X で見る</a>
+    <a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/249_yoshifujidesign_claude_design_slide_review.md" target="_blank" rel="noopener noreferrer">GitHub で開く</a>
   </div>
 </section>
 

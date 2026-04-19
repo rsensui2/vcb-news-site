@@ -333,10 +333,41 @@ img { max-width: 100%; display: block; }
 .section-head .trail a { border-bottom: 1px solid var(--hair); padding-bottom: 2px; }
 .section-head .trail a:hover { border-bottom-color: var(--accent); color: var(--accent); }
 
-/* ---------- Featured topic (hero story, full-width image on top) ---------- */
+/* ---------- Featured topic (hero story, title → image → body) ---------- */
 .feature {
   display: block;
 }
+.feature .feature-head {
+  max-width: 920px;
+  margin: 0 auto 36px;
+}
+.feature .feature-head .cat {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+.feature .feature-head .cat .rule {
+  display: inline-block;
+  width: 32px;
+  height: 1px;
+  background: var(--accent);
+}
+.feature .feature-head h2 {
+  font-family: "Shippori Mincho B1", "Noto Serif JP", serif;
+  font-weight: 800;
+  font-size: clamp(40px, 4.6vw, 68px);
+  line-height: 1.06;
+  letter-spacing: -0.012em;
+  margin: 0;
+}
+.feature .feature-head h2 a { color: inherit; text-decoration: none; }
+.feature .feature-head h2 a:hover { color: var(--accent); }
 .feature .media {
   position: relative;
   background: var(--ink);
@@ -390,12 +421,8 @@ img { max-width: 100%; display: block; }
   background: var(--accent);
 }
 .feature .body h2 {
-  font-family: "Shippori Mincho B1", "Noto Serif JP", serif;
-  font-weight: 800;
-  font-size: clamp(40px, 4.6vw, 68px);
-  line-height: 1.06;
-  letter-spacing: -0.012em;
-  margin: 0 0 28px;
+  /* legacy selector — title moved to .feature-head, keep in case older builds leak through */
+  display: none;
 }
 .feature .body .lede {
   font-size: 20px;
@@ -1974,4 +2001,73 @@ a.cal-cell--bookmark.cal-cell--news:hover { background: var(--accent); color: va
     justify-content: space-between;
     gap: 16px;
   }
+}
+
+/* ---------- Zoomable slide images (click to open in lightbox) ---------- */
+.zoom-image {
+  cursor: zoom-in;
+}
+.zoom-image:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.zoom-image:hover img {
+  filter: brightness(1.03) saturate(1.02);
+}
+
+/* ---------- Image lightbox modal ---------- */
+.img-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.img-modal[hidden] { display: none; }
+.img-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 19, 17, 0.92);
+  cursor: zoom-out;
+}
+.img-modal-img {
+  position: relative;
+  max-width: min(95vw, 1800px);
+  max-height: 92vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.55);
+  background: var(--paper);
+}
+.img-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--paper);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.15s, color 0.15s;
+}
+.img-modal-close:hover {
+  background: var(--accent);
+  color: var(--paper);
+  border-color: var(--accent);
+}
+html.is-img-modal-open,
+html.is-img-modal-open body {
+  overflow: hidden;
+}
+@media (max-width: 640px) {
+  .img-modal { padding: 12px; }
+  .img-modal-img { max-width: 98vw; max-height: 88vh; }
+  .img-modal-close { top: 12px; right: 14px; width: 40px; height: 40px; }
 }

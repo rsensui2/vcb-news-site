@@ -22,7 +22,7 @@
     <span class="sep">/</span>
     <span>05 ITEMS</span>
     <span class="sep">/</span>
-    <span>BUILD 20260419.2040</span>
+    <span>BUILD 20260419.2241</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -46,7 +46,7 @@
       <a href="../../#about">ABOUT</a>
       <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
     </nav>
-    <div class="meta">JST · 20:40 · SAT</div>
+    <div class="meta">JST · 22:41 · SAT</div>
   </div>
 </header>
 <script>
@@ -86,7 +86,7 @@
         📰 新機能 <span class="sep">/</span> @CLAUDEAI (ANTHROPIC) <span class="sep">/</span> NEWS
       </div>
       <h2>Claude Design by Anthropic Labs 発表</h2>
-      <div class="slide-img">
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-18/topic_1.png" data-alt="Claude Design by Anthropic Labs 発表" role="button" tabindex="0" aria-label="スライド画像を拡大">
         <img src="../../assets/images/2026-04-18/topic_1.png" alt="Claude Design by Anthropic Labs 発表" />
       </div>
       <p class="lede">
@@ -129,7 +129,7 @@
         🔧 ツール <span class="sep">/</span> @CURSOR_AI <span class="sep">/</span> NEWS
       </div>
       <h2>Cursor、Claude Opus 4.7 に即日対応 &amp; Composer 2 週末ダブル枠</h2>
-      <div class="slide-img">
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-18/topic_2.png" data-alt="Cursor、Claude Opus 4.7 に即日対応 &amp; Composer 2 週末ダブル枠" role="button" tabindex="0" aria-label="スライド画像を拡大">
         <img src="../../assets/images/2026-04-18/topic_2.png" alt="Cursor、Claude Opus 4.7 に即日対応 &amp; Composer 2 週末ダブル枠" />
       </div>
       <p class="lede">
@@ -172,7 +172,7 @@
         📰 ニュース <span class="sep">/</span> @GOOGLEDEEPMIND <span class="sep">/</span> NEWS
       </div>
       <h2>Gemini Robotics、Boston Dynamics の Spot に搭載</h2>
-      <div class="slide-img">
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-18/topic_3.png" data-alt="Gemini Robotics、Boston Dynamics の Spot に搭載" role="button" tabindex="0" aria-label="スライド画像を拡大">
         <img src="../../assets/images/2026-04-18/topic_3.png" alt="Gemini Robotics、Boston Dynamics の Spot に搭載" />
       </div>
       <p class="lede">
@@ -215,7 +215,7 @@
         🔧 ツール <span class="sep">/</span> @NOTEBOOKLM <span class="sep">/</span> NEWS
       </div>
       <h2>NotebookLM にカスタムカバーアートと Gemini App Notebooks の Free 開放</h2>
-      <div class="slide-img">
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-18/topic_4.png" data-alt="NotebookLM にカスタムカバーアートと Gemini App Notebooks の Free 開放" role="button" tabindex="0" aria-label="スライド画像を拡大">
         <img src="../../assets/images/2026-04-18/topic_4.png" alt="NotebookLM にカスタムカバーアートと Gemini App Notebooks の Free 開放" />
       </div>
       <p class="lede">
@@ -258,7 +258,7 @@
         📰 ニュース <span class="sep">/</span> 複数ソース（@XAI / @ELONMUSK / @FLADDICT） <span class="sep">/</span> NEWS
       </div>
       <h2>xAI、Grok Build を来週ベータ公開予定</h2>
-      <div class="slide-img">
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-18/topic_5.png" data-alt="xAI、Grok Build を来週ベータ公開予定" role="button" tabindex="0" aria-label="スライド画像を拡大">
         <img src="../../assets/images/2026-04-18/topic_5.png" alt="xAI、Grok Build を来週ベータ公開予定" />
       </div>
       <p class="lede">
@@ -359,10 +359,47 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 20260419.2040</span>
+      <span>BUILD 20260419.2241</span>
     </div>
   </div>
 </footer>
 
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
 </body>
 </html>

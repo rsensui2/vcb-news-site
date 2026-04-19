@@ -22,7 +22,7 @@
     <span class="sep">/</span>
     <span>05 ITEMS</span>
     <span class="sep">/</span>
-    <span>BUILD 20260419.1102</span>
+    <span>BUILD 20260419.2040</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -33,7 +33,12 @@
 <header class="masthead">
   <div class="container row">
     <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
-    <nav>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
       <a href="../../">HOME</a>
       <a href="../../news/2026-04-18/">TODAY</a>
       <a href="../../#bookmarks">BOOKMARKS</a>
@@ -41,9 +46,24 @@
       <a href="../../#about">ABOUT</a>
       <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
     </nav>
-    <div class="meta">JST · 11:02 · SAT</div>
+    <div class="meta">JST · 20:40 · SAT</div>
   </div>
 </header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
 
 <section class="daily-head">
   <div class="container">
@@ -339,7 +359,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 20260419.1102</span>
+      <span>BUILD 20260419.2040</span>
     </div>
   </div>
 </footer>

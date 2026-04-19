@@ -22,7 +22,7 @@
     <span class="sep">/</span>
     <span>08 ITEMS</span>
     <span class="sep">/</span>
-    <span>BUILD 20260419.1102</span>
+    <span>BUILD 20260419.2040</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -33,7 +33,12 @@
 <header class="masthead">
   <div class="container row">
     <a href="./" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
-    <nav>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
       <a href="./">HOME</a>
       <a href="./news/2026-04-19/">TODAY</a>
       <a href="./#bookmarks">BOOKMARKS</a>
@@ -41,9 +46,24 @@
       <a href="./#about">ABOUT</a>
       <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
     </nav>
-    <div class="meta">JST · 11:02 · SAT</div>
+    <div class="meta">JST · 20:40 · SAT</div>
   </div>
 </header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
 
 <section class="hero">
   <div class="container">
@@ -85,12 +105,10 @@
       </div>
     </div>
 
-    <div class="today-grid">
-      <div>
-        <div class="today-sub">
-          <h3>今日の一面</h3>
-          <div class="meta">TOP STORY · 2026-04-19</div>
-        </div>
+    <div class="today-sub today-sub--hero">
+      <h3>今日の一面</h3>
+      <div class="meta">TOP STORY · 2026-04-19</div>
+    </div>
     <article class="feature">
       <a class="media" href="./news/2026-04-19/#topic-1">
         <img src="assets/images/2026-04-19/topic_1.png" alt="Claude Code デスクトップ刷新 — 並列セッション対応">
@@ -117,13 +135,12 @@
         </a>
       </div>
     </article>
-      </div>
-      <aside>
-        <div class="today-sub">
-          <h3>ほかの配信</h3>
-          <div class="meta">08 ITEMS TOTAL</div>
-        </div>
-        <div class="rest">
+
+    <div class="today-sub today-sub--rest">
+      <h3>ほかの配信</h3>
+      <div class="meta">08 ITEMS TOTAL</div>
+    </div>
+    <div class="rest rest--horizontal">
         <a class="rest-item" href="./news/2026-04-19/#topic-2">
           <div class="rest-num">02</div>
           <div class="rest-body">
@@ -187,12 +204,10 @@
           </div>
           <div class="rest-likes">♡ <b>8,055</b></div>
         </a>
-        </div>
-        <a class="rest-read-full" href="./news/2026-04-19/">
-          今日のディスパッチ全文 <span>→</span>
-        </a>
-      </aside>
     </div>
+    <a class="rest-read-full rest-read-full--center" href="./news/2026-04-19/">
+      今日のディスパッチ全文 <span>→</span>
+    </a>
   </div>
 </section>
 
@@ -218,14 +233,14 @@
 
     <div class="xfeed">
 
-      <article class="xcard" data-url="https://x.com/AlexFinn/status/2045164219252035933" data-type="long" tabindex="0" role="button" aria-label="Alex Finn の📜 ロングポストを開く">
+      <article class="xcard" data-url="https://x.com/AlexFinn/status/2045164219252035933" data-type="thread" tabindex="0" role="button" aria-label="Alex Finn の🧵 スレッドを開く">
         <header class="xcard-head">
           <div class="xcard-avatar" style="--c:#556b2f;">A</div>
           <div class="xcard-who">
             <span class="xcard-name">Alex Finn <span class="xcard-cat">🦞OpenClaw</span></span>
             <span class="xcard-handle">@AlexFinn · 4月18日</span>
           </div>
-          <span class="xcard-type xcard-type--long">📜 ロングポスト</span>
+          <span class="xcard-type xcard-type--thread">🧵 スレッド</span>
         </header>
         <div class="xcard-body">
           <p class="xcard-preview">Alex Finn が、OpenClaw のパフォーマンス劣化に悩むユーザー向けに6ステップのトラブルシュート手順を共有。要点は以下：
@@ -240,110 +255,69 @@
           <a class="xcard-x" href="https://x.com/AlexFinn/status/2045164219252035933" target="_blank" rel="noopener noreferrer" aria-label="Xで開く">𝕏 <span aria-hidden="true">↗</span></a>
         </footer>
         <div class="xcard-full" hidden>
-          <div class="xcard-full-meta" data-title="" data-type="long" data-type-label="📜 ロングポスト" data-has-alt="1" data-primary-lang="ja"></div>
+          <div class="xcard-full-meta" data-title="" data-type="thread" data-type-label="🧵 スレッド" data-has-alt="1" data-primary-lang="ja"></div>
           <div class="xcard-full-primary">Alex Finn が、OpenClaw のパフォーマンス劣化に悩むユーザー向けに6ステップのトラブルシュート手順を共有。要点は以下：
 
 - 🔶 セッションをクリアする — 最も効果が大きい。cron ジョブが毎回セッションを生成して蓄積し、レイテンシを悪化させている
 - 残りのステップはキャッシュクリア、モデルルーティング、セッションのライフサイクル管理、cron 運用のクリーンアップなど（詳細はスレッド参照）
 
 コアな気づきは「セッション肥大化こそ長時間運用の最大のレイテンシ税」。</div>
-          <div class="xcard-full-alt" hidden>Alex Finn shares a six-step troubleshooting checklist for OpenClaw users experiencing performance degradation. Headline advice:
+          <div class="xcard-full-alt" hidden>Part 1 (親ポスト)
 
-- 🔶 Clear your sessions — biggest single improvement. Every cron job is creating a session that accumulates and slows things down.
-- Additional steps cover cache clearing, model routing, session lifecycle, and cron hygiene (full list on thread).
+A lot of people saying their OpenClaw has slowed down the last week
 
-The core insight: session bloat is the #1 latency tax on long-running OpenClaw deployments.</div>
+I experienced the same thing. But like the savage I am I found a fix
+
+Do these 6 steps immediately:
+
+🔶 Clear your sessions
+
+Biggest jump in performance was from doing this. Every cron job creates a session
+
+Part 2
+
+o btw literally just send the link to this post to your openclaw</div>
         </div>
       </article>
-      <article class="xcard" data-url="https://x.com/kgsi/status/2045252133814198642" data-type="article" tabindex="0" role="button" aria-label="こぎそ の📄 記事を開く">
+      <article class="xcard" data-url="https://x.com/kgsi/status/2045252133814198642" data-type="thread" tabindex="0" role="button" aria-label="こぎそ の🧵 スレッドを開く">
         <header class="xcard-head">
           <div class="xcard-avatar" style="--c:#a0522d;">こ</div>
           <div class="xcard-who">
             <span class="xcard-name">こぎそ <span class="xcard-cat">🎨 デザイン</span></span>
             <span class="xcard-handle">@kgsi · 4月18日</span>
           </div>
-          <span class="xcard-type xcard-type--article">📄 記事</span>
+          <span class="xcard-type xcard-type--thread">🧵 スレッド</span>
         </header>
         <div class="xcard-body">
-          <h4 class="xcard-title">Claude Designは「デザイン」という行為をどう変えていくのか？ — こぎその考察記事</h4>
-          <p class="xcard-preview">タイトル: Claude Designは&quot;デザイン&quot;という行為をどう変えていくのか？ 
-
-2026年4月17日、AnthropicがClaude Designを発表しました。Claude Opus 4.7を基盤にしたデザイン生成の実験的プレビューで、段階ロールアウトで私のMax環境にも届いたので触ってみました。
- 
-1:16
-1:00
-結論を先に書きます。
-Claude Designはデザインのワークフローを型化してノンデザイナーに開こ…</p>
+          <p class="xcard-preview">【記事詳細】
+こぎそによるX長文記事。Anthropic Labs が発表した Claude Design を題材に、「プロトタイプ・スライド・1枚資料を Claude と会話するだけで作れる」時代において、デザイナーの役割・プロセス・アウトプットの質がどう再定義されるかを論じている。デザインリサーチ、UX、ビジュアルの分業が崩れ、デザイナーは「意図の言語化」と「最後の仕上げ」に集中するようになる、という方向性。</p>
         </div>
         <footer class="xcard-foot">
           <div class="xcard-stats"><span>♡ 712</span><span>🔁 84</span><span>🔖 924</span><span>👁 227K</span></div>
           <a class="xcard-x" href="https://x.com/kgsi/status/2045252133814198642" target="_blank" rel="noopener noreferrer" aria-label="Xで開く">𝕏 <span aria-hidden="true">↗</span></a>
         </footer>
         <div class="xcard-full" hidden>
-          <div class="xcard-full-meta" data-title="Claude Designは「デザイン」という行為をどう変えていくのか？ — こぎその考察記事" data-type="article" data-type-label="📄 記事" data-has-alt="0" data-primary-lang="ja"></div>
-          <div class="xcard-full-primary">タイトル: Claude Designは&quot;デザイン&quot;という行為をどう変えていくのか？ 
+          <div class="xcard-full-meta" data-title="" data-type="thread" data-type-label="🧵 スレッド" data-has-alt="1" data-primary-lang="ja"></div>
+          <div class="xcard-full-primary">【記事詳細】
+こぎそによるX長文記事。Anthropic Labs が発表した Claude Design を題材に、「プロトタイプ・スライド・1枚資料を Claude と会話するだけで作れる」時代において、デザイナーの役割・プロセス・アウトプットの質がどう再定義されるかを論じている。デザインリサーチ、UX、ビジュアルの分業が崩れ、デザイナーは「意図の言語化」と「最後の仕上げ」に集中するようになる、という方向性。</div>
+          <div class="xcard-full-alt" hidden>Part 1 (親ポスト)
 
-2026年4月17日、AnthropicがClaude Designを発表しました。Claude Opus 4.7を基盤にしたデザイン生成の実験的プレビューで、段階ロールアウトで私のMax環境にも届いたので触ってみました。
- 
-1:16
-1:00
-結論を先に書きます。
-Claude Designはデザインのワークフローを型化してノンデザイナーに開こうとする、野心的なツールです。
-Claude Designで何ができるのか
-公式ドキュメントと発表資料から、主要な機能を並べておきます。
-Claude Opus 4.7ベース、Pro/Max/Team/Enterpriseで利用可
-会話でプロトタイプ・スライド・LP・モックアップを生成
-デザインシステムを自動読み込みしてブランド統一
-テキスト / 画像 / DOCX / PPTX / XLSX / コードベース / Webキャプチャから入力可
-インラインコメント、直接編集、調整ノブでライブ編集
-組織内で閲覧・編集権限を分けて共同編集、Claudeとグループ会話
-Canva / PDF / PPTX / HTMLに書き出し、Claude Codeへのハンドオフも一発
-他ツールで20プロンプトかかる工程がClaude Designなら2プロンプト、という事例も紹介されています。
- 
-特に触って効いてきたのは、共同編集の扱いやすさでした。Claude Codeはターミナル中心で他メンバーと画面を覗き合う前提になりづらく、レビューが追いつきにくい場面がありました。Claude Designはブラウザでそのまま権限を分けて見せられるので、デザイナー以外のメンバーと「ここを直したい」を同じ画面で話せるフリクションの低さが効きます。
-Anthropicのプロダクト群で弱かった共同作業の層を、この一本で埋めに来ています。
-デザインシステムへの肩入れも目を引きました。コードベースやデザインファイルからブランドカラー・フォント・コンポーネントを読み込み、出力へ反映する挙動は、組織のトーンから初稿を外さないための歯止めとして機能します。ファウンダーやPMに一次生成を開くなら、ここが効かないと出力は使い物になりません。Anthropicはその答えを機能の中心に据えています。
-加えて、Google Stitchが主に単体ファイルやDESIGN.mdに仕様を書き起こして渡す方式なのに対し、Claude Designはソースフォルダから直接読み込みでき、テイストや判断基準のような言語化しづらい情報をもテキストで吸い上げます。
-非言語を徹底的に言語化して誰でも扱えるようにする思想が透けています。
- 
- 
-ターゲティングは&quot;デザイナー&quot;ではない
-このプロダクトの位置付けは明快です。公式ドキュメントのClaude Designを始めるによれば、対象はファウンダー・PM・マーケター。経験豊富なデザイナーでさえ「探索を節約せざるを得ない」とAnthropicは添えていて、一次生成のコストを下げる側に設計されています。
-見逃せないのは、FigmaやAdobeのようなクリエイターファーストの道具が「つくる人」の表現幅を広げるのに対し、Claude Designがつくる人の手前にいる層に初稿を出させにいく点です。道具の主戦場は、表現の自由度から実務者の底上げへ移っています。Claude Codeがエンジニアのコード作業を一段圧縮したのと同じアプローチを、デザインに持ち込んでいる格好です。
-仕組みの上でも狙いは一貫しています。デザイナーのワークフローを観察して型化し、クエスチョン形式の対話で必要な前提を順に引き出す。紙に描いた粗い線からレイアウトの意図を読み取るスケッチ機能は、言葉では詰めにくい発想をビジュアルで受け渡せる設計です。デザインに苦手意識のある人でも、型に沿って手順を踏めば一定品質に届くように組まれています。
-直列フローという割り切り
-UIモックを1本と、プレゼンスライドを1本つくってみたのですが、触るほどコンテキスト投入 → ワイヤーフレーム → デザイン → 実装の直列フローが前提に置かれていることが見えてきました。
-各ステップの確認を積み上げて進ませる構成は、初稿を出しきるまでの速度には確かに効きます。迷いの余地を減らし、合意を一段ずつ取りながら進めるので、ノンデザイナーでも筋の通ったアウトプットに届きやすくなります。
-一方で、実務は一方向ではなかなか進みません。ワイヤーの途中でブランドの方針が変わったり、実装に入ってから情報設計を戻したりが日常で、発散と収束を何度も行き来するのが通常です。整った直列は初稿の速さに効く一方で、思考の行き来を受け止めにくく、型から外して再探索するような使い方は、あまり想定されていないように見えました。
-裏を返せば、これは意図された割り切りです。誰でも分かりやすいワークフローに落とし込み、型から逸脱しないように歩かせる設計は、ノンデザイナーに開くための対価でもあります。速さと自由度の両立が難しい以上、まずは速さに寄せるプロダクトの立場として筋が通っています。
-既存のデザインエコシステムと、どう向き合うか
-この割り切りは、外部ツールとの繋ぎ方にも表れています。触って気になったのは、既存のキャンバス系デザインツール（Figma）への書き出しが用意されていないことでした。ツール連携は提携先のCanvaと自社のClaude Codeに限られ、生成と共同編集はツール内で完結させ、作り込みはそこへのハンドオフに流す設計です。
-周辺ツールを並べると、この選択の特異さが見えてきます。既存のキャンバス系デザインツールはAI生成機能を取り込んだり、動くコードをキャンバスに引き込んだりと、コードとキャンバスの境界を自ら広げる方向に動いています。同じAI生成ツールでもGoogle Stitchは既存デザインツールへの書き出しで橋渡しを残し、v0やLovableはコード出力で単方向に流します。エコシステムへの距離の取り方は、ツールごとに違っています。
-こうして並べてみると、Claude Designは一歩離れた立ち位置を選んでいます。
-既存のデザインエコシステムには乗らず、提携と自社で固めた自前の出口で完結させる設計です。Claude Codeがコーディングの完結点を自ら引き受けたのとは違い、Claude Designは完結点をツール外へ分散させる一方、生成と議論の入口はツール内に引き寄せています。Anthropicらしい、独立を志向する野心の表れです。
-&quot;デザイナー&quot;の仕事はどこに移るか
-前提として踏まえたいのは、Claude Designがこれまでのデザイン生成の水準を一段引き上げたことです。デザインシステムなどのデザインのインフラと、作りたい成果物のコンテキストを正しく渡せば、デザイナー以外でも筋の通ったデザインに届けるようになったのは間違いありません。
-ただし、現時点でデザイナーの業務を完全に置き換える道具ではありません。私が試した範囲でも、デザインシステム継承の再現度はプロジェクトによってばらつきがあり、ブランドカラーやコンポーネントを読み込ませても細部が崩れる場面がありました。最適化の勘所はまだ未整備で、初稿は速いが、仕上げはまだ人の仕事、という線引きは&quot;まだ&quot;動きません。
-デザイナーの仕事は今回の機能やツールの方向性を見るに、生成の入口を整える側に確実に寄っていきます。また、ノンデザイナーが生成の速さを手にするほど、出力品質を支える条件はAIに渡せるデザインシステムの整備度に寄るでしょう。
+https://t.co/hZkSrJZqbh
 
-ブランドカラーやフォントだけでなく、コンポーネント命名、状態バリエーション、利用コンテキストまで含めて、AI側が解釈しやすい形に揃っているかどうか。私がプロジェクトをまたいで試した範囲では、言語化・構造化が進んだ環境ほど再現度が高く、断片的なスタイルガイドだけでは細部が崩れました。デザインシステムは整える余力のあるときに整える装飾から、生成速度を左右する前提条件へと性格を変えます。
-業務の重心も動きます。PMやマーケターがひとまずの初稿を自分で出せるなら、デザイナーの時間は一次生成から判断と統合、デザインシステムの整備、ブランドトーンの監査、情報設計の再構成へ寄っていきます。
-AnthropicはClaude Codeでエンジニアの作業を一段圧縮し、Claude Designで同じアプローチをデザインに持ち込もうとしています。
-何をつくるかを決める仕事の比重が上がっていく気配を、今回触ってみて少し強く感じています。
- 
-[PR]デザインの判断を身につけるために
-自分が運営するサービス「Parascope」では、普段自分が収集してるデザインの知見やリソースをまとめて紹介しています。今後Claude Designもさらに進化し、各種情報が拡充していく中で、本質的な情報をキュレーションしていけたらと思います。よろしければご覧ください👉
-https://parascope.design/</div>
+Part 2
+
+noteも書きました。こちらもよろしければ。
+https://t.co/ScNWCP5gjF</div>
         </div>
       </article>
-      <article class="xcard" data-url="https://x.com/claudeai/status/2045156267690213649" data-type="short" tabindex="0" role="button" aria-label="Claude の📝 ポストを開く">
+      <article class="xcard" data-url="https://x.com/claudeai/status/2045156267690213649" data-type="thread" tabindex="0" role="button" aria-label="Claude の🧵 スレッドを開く">
         <header class="xcard-head">
           <div class="xcard-avatar" style="--c:#556b2f;">C</div>
           <div class="xcard-who">
             <span class="xcard-name">Claude <span class="xcard-cat">📰 ニュース・動向</span></span>
             <span class="xcard-handle">@claudeai · 4月18日</span>
           </div>
-          <span class="xcard-type xcard-type--short">📝 ポスト</span>
+          <span class="xcard-type xcard-type--thread">🧵 スレッド</span>
         </header>
         <div class="xcard-body">
           <p class="xcard-preview">Anthropic Labs が Claude Design を発表。Claude との会話だけでプロトタイプ・スライド・1枚資料を生成できるツールで、最新のビジョンモデル Claude Opus 4.7 が裏側を駆動している。Pro / Max / Team / Enterprise プランでリサーチプレビュー提供、当日中に段階ロールアウト。10万いいね・3200万ビューを叩き出した今週最大のリリースニュースのひとつ。</p>
@@ -353,29 +327,78 @@ https://parascope.design/</div>
           <a class="xcard-x" href="https://x.com/claudeai/status/2045156267690213649" target="_blank" rel="noopener noreferrer" aria-label="Xで開く">𝕏 <span aria-hidden="true">↗</span></a>
         </footer>
         <div class="xcard-full" hidden>
-          <div class="xcard-full-meta" data-title="" data-type="short" data-type-label="📝 ポスト" data-has-alt="0" data-primary-lang="ja"></div>
+          <div class="xcard-full-meta" data-title="" data-type="thread" data-type-label="🧵 スレッド" data-has-alt="1" data-primary-lang="ja"></div>
           <div class="xcard-full-primary">Anthropic Labs が Claude Design を発表。Claude との会話だけでプロトタイプ・スライド・1枚資料を生成できるツールで、最新のビジョンモデル Claude Opus 4.7 が裏側を駆動している。Pro / Max / Team / Enterprise プランでリサーチプレビュー提供、当日中に段階ロールアウト。10万いいね・3200万ビューを叩き出した今週最大のリリースニュースのひとつ。</div>
+          <div class="xcard-full-alt" hidden>Part 1 (親ポスト)
+
+Introducing Claude Design by Anthropic Labs: make prototypes, slides, and one-pagers by talking to Claude.
+
+Powered by Claude Opus 4.7, our most capable vision model. Available in research preview on the Pro, Max, Team, and Enterprise plans, rolling out throughout the day. https://t.co/2BgBGtgYGX
+
+Part 2
+
+Claude reads your codebase and design files to build your team's design system, then applies it automatically, keeping every project on-brand.
+
+Give it a try: https://t.co/C9iewmyMQs
+Read more: https://t.co/FHQUP6aejg
+
+Part 3
+
+Describe what you want, and Claude builds the first version. Refine through conversation, inline comments, direct edits, or custom sliders.
+
+Export to @canva, as PDF or PPTX, or hand off to Claude Code when the design feels right. https://t.co/EGZ2UmIm6m</div>
         </div>
       </article>
-      <article class="xcard" data-url="https://x.com/ClaudeCode_love/status/2044984781377814940" data-type="short" tabindex="0" role="button" aria-label="Claude Code Studio の📝 ポストを開く">
+      <article class="xcard" data-url="https://x.com/ClaudeCode_love/status/2044984781377814940" data-type="thread" tabindex="0" role="button" aria-label="Claude Code Studio の🧵 スレッドを開く">
         <header class="xcard-head">
           <div class="xcard-avatar" style="--c:#556b2f;">C</div>
           <div class="xcard-who">
             <span class="xcard-name">Claude Code Studio <span class="xcard-cat">💻 技術/AI</span></span>
             <span class="xcard-handle">@ClaudeCode_love · 4月17日</span>
           </div>
-          <span class="xcard-type xcard-type--short">📝 ポスト</span>
+          <span class="xcard-type xcard-type--thread">🧵 スレッド</span>
         </header>
         <div class="xcard-body">
-          <p class="xcard-preview">Anthropic エンジニアによる14分の動画解説を Claude Code Studio が紹介。AIエージェントが「なぜ動かないのか」「どう設計すれば使えるようになるのか」の本質を短時間で理解できる内容、とのこと。ブックマーク数1279と高く保存圧がかかっている投稿。</p>
+          <p class="xcard-preview">Part 1 (親ポスト)
+
+【保存推奨】
+Anthropicのエンジニアが語る「AIエージェント構築の正解」がヤバい😳
+マジでたった14分で、
+ほとんどの開発者が“数ヶ月かけて気づく本質”を一気に理解できる
+https://t.co/iM08AVZIEJ
+・なぜエージェントはうまく動かないのか
+・どう設計すれば“使えるAI”になるのか
+
+Part 2
+
+多くの皆様に見ていただきありがとうございます😭
+この𝗖𝗹𝗮𝘂𝗱𝗲…</p>
         </div>
         <footer class="xcard-foot">
           <div class="xcard-stats"><span>♡ 1,005</span><span>🔁 76</span><span>🔖 1,279</span><span>👁 74.2K</span></div>
           <a class="xcard-x" href="https://x.com/ClaudeCode_love/status/2044984781377814940" target="_blank" rel="noopener noreferrer" aria-label="Xで開く">𝕏 <span aria-hidden="true">↗</span></a>
         </footer>
         <div class="xcard-full" hidden>
-          <div class="xcard-full-meta" data-title="" data-type="short" data-type-label="📝 ポスト" data-has-alt="0" data-primary-lang="ja"></div>
-          <div class="xcard-full-primary">Anthropic エンジニアによる14分の動画解説を Claude Code Studio が紹介。AIエージェントが「なぜ動かないのか」「どう設計すれば使えるようになるのか」の本質を短時間で理解できる内容、とのこと。ブックマーク数1279と高く保存圧がかかっている投稿。</div>
+          <div class="xcard-full-meta" data-title="" data-type="thread" data-type-label="🧵 スレッド" data-has-alt="0" data-primary-lang="ja"></div>
+          <div class="xcard-full-primary">Part 1 (親ポスト)
+
+【保存推奨】
+Anthropicのエンジニアが語る「AIエージェント構築の正解」がヤバい😳
+マジでたった14分で、
+ほとんどの開発者が“数ヶ月かけて気づく本質”を一気に理解できる
+https://t.co/iM08AVZIEJ
+・なぜエージェントはうまく動かないのか
+・どう設計すれば“使えるAI”になるのか
+
+Part 2
+
+多くの皆様に見ていただきありがとうございます😭
+この𝗖𝗹𝗮𝘂𝗱𝗲 𝗖𝗼𝗱𝗲 𝗦𝘁𝘂𝗱𝗶𝗼（@ClaudeCode_love）は、
+Claude Codeガチ勢3人で運営しているアカウントです。
+実務レベルのCLI活用・自動化を毎日発信しています。
+また、現在は上場企業とAIエージェントを共同開発中🧑‍💻
+
+普段の発信内容👇</div>
         </div>
       </article>
       <article class="xcard" data-url="https://x.com/ClaudeCode_love/status/2044672857998016940" data-type="article" tabindex="0" role="button" aria-label="Claude Code Studio の📄 記事を開く">
@@ -527,17 +550,16 @@ Claude Codeガチ勢3人で運営しているアカウントです。
 ご関心のある方は、ぜひフォローしてチェックしてみてください👀有益だと思います！</div>
         </div>
       </article>
-      <article class="xcard" data-url="https://x.com/trq212/status/2044548257058328723" data-type="article" tabindex="0" role="button" aria-label="Thariq の📄 記事を開く">
+      <article class="xcard" data-url="https://x.com/trq212/status/2044548257058328723" data-type="thread" tabindex="0" role="button" aria-label="Thariq の🧵 スレッドを開く">
         <header class="xcard-head">
           <div class="xcard-avatar" style="--c:#a0522d;">T</div>
           <div class="xcard-who">
             <span class="xcard-name">Thariq <span class="xcard-cat">💻Claude Code</span></span>
             <span class="xcard-handle">@trq212 · 4月16日</span>
           </div>
-          <span class="xcard-type xcard-type--article">📄 記事</span>
+          <span class="xcard-type xcard-type--thread">🧵 スレッド</span>
         </header>
         <div class="xcard-body">
-          <h4 class="xcard-title">Using Claude Code: Session Management &amp; 1M Context — Thariq's Deep Dive</h4>
           <p class="xcard-preview">最近、Claude Code ユーザーと話すなかで何度も出てくるテーマがある。1M トークンのコンテキストウィンドウは「諸刃の剣」だという話だ。
 
 これがあるおかげで Claude Code はより長く自律的に動き、タスクを安定して処理できるようになった。しかし同時に、セッション管理を意識しないと「コンテキスト汚染 (context pollution)」への扉も開いてしまう。
@@ -549,7 +571,7 @@ Claude Codeガチ勢3人で運営しているアカウントです。
           <a class="xcard-x" href="https://x.com/trq212/status/2044548257058328723" target="_blank" rel="noopener noreferrer" aria-label="Xで開く">𝕏 <span aria-hidden="true">↗</span></a>
         </footer>
         <div class="xcard-full" hidden>
-          <div class="xcard-full-meta" data-title="Using Claude Code: Session Management &amp; 1M Context — Thariq's Deep Dive" data-type="article" data-type-label="📄 記事" data-has-alt="1" data-primary-lang="ja"></div>
+          <div class="xcard-full-meta" data-title="" data-type="thread" data-type-label="🧵 スレッド" data-has-alt="1" data-primary-lang="ja"></div>
           <div class="xcard-full-primary">最近、Claude Code ユーザーと話すなかで何度も出てくるテーマがある。1M トークンのコンテキストウィンドウは「諸刃の剣」だという話だ。
 
 これがあるおかげで Claude Code はより長く自律的に動き、タスクを安定して処理できるようになった。しかし同時に、セッション管理を意識しないと「コンテキスト汚染 (context pollution)」への扉も開いてしまう。
@@ -631,62 +653,13 @@ Claude Code はサブエージェントを自動で呼び出すこともある�
 要するに、Claude が 1 ターンを終えてあなたが新しいメッセージを送ろうとしている瞬間は、常に意思決定ポイントだということだ。
 
 いずれは Claude 自身がこの判断を支援してくれるようになると期待しているが、いまのところ、これが Claude の出力を導くための主要な手段の 1 つである。</div>
-          <div class="xcard-full-alt" hidden>タイトル: Using Claude Code: Session Management &amp; 1M Context
+          <div class="xcard-full-alt" hidden>Part 1 (親ポスト)
 
-In my recent calls with Claude Code users, one theme keeps coming up: the 1M token context window is a double-edged sword. 
-It lets Claude Code operate autonomously for longer and handle tasks more reliably, but it also opens the door to context pollution if you're not deliberate about managing your sessions.
-Session management matters more than ever and there seem to be a lot of questions about it. Do you keep one session open in a terminal, or two? Start fresh with every prompt? When should you use compact, rewind, or subagents? What causes a bad compact?
-There’s a surprising amount of detail here that can really shape your experience with Claude Code and almost all of it comes from managing your context window.
-A Quick Primer on Context, Compaction &amp; Context Rot
- 
-The context window is everything the model can &quot;see&quot; at once when generating its next response. It includes your system prompt, the conversation so far, every tool call and its output, and every file that's been read. Claude Code has a context window of one million tokens.
-Unfortunately using context has a slight cost, which is often called context rot. Context rot is the observation that model performance degrades as context grows because attention gets spread across more tokens, and older, irrelevant content starts to distract from the current task. For our 1MM context model, we see some level of context rot happen around ~300-400k tokens, but it is highly dependent on the task- not a fast rule.
-Context windows are a hard cutoff, so when you’re nearing the end of the context window, you will need to summarize the task you’ve been working on into a smaller description and continue the work in a new context window, we call this compaction. You can also trigger compaction yourself.
- 
-Every Turn Is a Branching Point
-Say you've just asked Claude to do something and it's finished, you’ve now got some information in your context (tool calls, tool outputs, your instructions) and you have a surprising number of options for what to do next:
-Continue — send another message in the same session
-/rewind (esc esc) — jump back to a previous message and try again from there
-/clear — start a new session, usually with a brief you've distilled from what you just learned
-Compact — summarize the session so far and keep going on top of the summary
-Subagents — delegate the next chunk of work to an agent with its own clean context, and only pull its result back in
-While the most natural is just to continue, the other four options exist to help manage your context.
- 
-When to Start a New Session
-The new 1M context windows means that you can now do longer tasks more reliably, for example to have it build a full-stack app from scratch. But just because your model hasn't run out of context, it doesn't mean you shouldn't start a new session.
-Our general rule of thumb is when you start a new task, you should also start a new session.
-A grey area is when you may want to do related tasks where some of the context is still necessary, but not all. 
-For example, writing the documentation for a feature you just implemented. While you could start a new session, Claude would have to reread the files that you just implemented, which would be slower and more expensive. Since documentation may not be a highly intelligence sensitive task, the extra context is probably worth the efficiency gain of not having to re-read the relevant files again.
-Rewinding Instead of Correcting
- 
-If I had to pick one habit that signals good context management, it’s rewind.
-In Claude Code, double-tapping Esc(or running /rewind) lets you jump back to any previous message and re-prompt from there. The messages after that point are dropped from the context.
-Rewind is often the better approach to correction. For example, Claude reads five files, tries an approach, and it doesn't work. Your instinct may be to type &quot;that didn't work, try X instead.&quot;  but the better move is to rewind to just after the file reads, and re-prompt with what you learned. &quot;Don't use approach A, the foo module doesn't expose that — go straight to B.&quot;
-You can also use “summarize from here” to have Claude summarize its learnings and create a handoff message, kind of like a message to the previous iteration of Claude from its future self that tried something and it didn’t work.
- 
-Compacting vs. Fresh Sessions
-Once a session gets long, you have two ways to shed weight: /compact or /clear (and start fresh). They feel similar but behave very differently.
-Compact asks the model to summarize the conversation so far, then replaces the history with that summary. It's lossy, you're trusting Claude to decide what mattered, but you didn't have to write anything yourself and Claude might be more thorough in including important learnings or files. You can also steer it by passing instructions (/compact focus on the auth refactor, drop the test debugging).
- 
-With /clear you write down what matters (&quot;we're refactoring the auth middleware, the constraint is X, the files that matter are A and B, we've ruled out approach Y&quot;) and start clean. It's more work, but the resulting context is what you decided was relevant.
-What Causes a Bad Compact?
- 
-If you run a lot of long running sessions, you might have noticed times in which compacting might be particularly bad. In this case we’ve often found that bad compacts can happen when the model can’t predict the direction your work is going.
-For example autocompact fires after a long debugging session and summarizes the investigation and your next message is &quot;now fix that other warning we saw in bar.ts.&quot;
-But because the session was focused on debugging, the other warning might have been dropped from the summary.
-This is particularly difficult, because due to context rot, the model is at its least intelligent point when compacting.  With one million context, you have more time to /compact proactively with a description of what you want to do.
-Subagents &amp; Fresh Context Windows
- 
-Subagents are a form of context management, useful for when you know in advance that a chunk of work will produce a lot of intermediate output you won't need again.
-When Claude spawns a subagent via the Agent tool, that subagent gets its own fresh context window. It can do as much work as it needs to, and then synthesize its results so only the final report comes back to the parent.
-The mental test we use: will I need this tool output again, or just the conclusion?
-While Claude Code will automatically call subagents, you may want to tell it to explicitly do this. For example, you may want to tell it to:
-“Spin up a subagent to verify the result of this work based on the following spec file”
-“Spin off a subagent to read through this other codebase and summarize how it implemented the auth flow, then implement it yourself in the same way”
-“Spin off a subagent to write the docs on this feature based on my git changes”
-Summary
-In summary, when Claude has ended a turn and you’re about to send a new message, you have a decision point. 
-Overtime we expect that Claude will help you handle this itself, but for now this is one of the ways you can guide Claude's output.</div>
+https://t.co/Ljzw0lmvao
+
+Part 2
+
+also available on the Claude Blog: https://t.co/cS9RhvOPKp</div>
         </div>
       </article>
       <article class="xcard" data-url="https://x.com/polydao/status/2044317956893471081" data-type="article" tabindex="0" role="button" aria-label="Mr. Buzzoni の📄 記事を開く">
@@ -1602,6 +1575,56 @@ Follow me @polydao for more posts on Claude, AI tools, prediction markets, and w
       </div>
       <div class="trail"><a href="#">全配信を見る →</a></div>
     </div>
+    <div class="calendar" id="calendar">
+  <div class="cal-head">
+    <div class="cal-legend">
+      <span class="cal-lg"><i class="cal-lg-news"></i>配信あり</span>
+      <span class="cal-lg"><i class="cal-lg-bookmark"></i>ブックマーク</span>
+    </div>
+    <div class="cal-nav">
+      <button type="button" class="cal-prev" aria-label="前の月">←</button>
+      <div class="cal-title" id="cal-title">2026年 4月</div>
+      <button type="button" class="cal-next" aria-label="次の月" disabled>→</button>
+    </div>
+  </div>
+  <div class="cal-month" data-month="2026-04">
+    <div class="cal-weekdays"><span>日</span><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span>土</span></div>
+    <div class="cal-grid"><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-04-01" aria-label="2026-04-01 のブックマーク2件"><span class="cal-day">1</span><span class="cal-count">2</span></a><div class="cal-cell cal-cell--inactive"><span class="cal-day">2</span></div><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-04-03" aria-label="2026-04-03 のブックマーク1件"><span class="cal-day">3</span><span class="cal-count">1</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-04-04" aria-label="2026-04-04 のブックマーク2件"><span class="cal-day">4</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-04-05" aria-label="2026-04-05 のブックマーク1件"><span class="cal-day">5</span><span class="cal-count">1</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-04-06" aria-label="2026-04-06 のブックマーク4件"><span class="cal-day">6</span><span class="cal-count">4</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-04-07" aria-label="2026-04-07 のブックマーク6件"><span class="cal-day">7</span><span class="cal-count">6</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-04-08" aria-label="2026-04-08 のブックマーク6件"><span class="cal-day">8</span><span class="cal-count">6</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-04-09" aria-label="2026-04-09 のブックマーク8件"><span class="cal-day">9</span><span class="cal-count">8</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-04-10" aria-label="2026-04-10 のブックマーク7件"><span class="cal-day">10</span><span class="cal-count">7</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-04-11" aria-label="2026-04-11 のブックマーク8件"><span class="cal-day">11</span><span class="cal-count">8</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-04-12" aria-label="2026-04-12 のブックマーク1件"><span class="cal-day">12</span><span class="cal-count">1</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-04-13" aria-label="2026-04-13 のブックマーク4件"><span class="cal-day">13</span><span class="cal-count">4</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-04-14" aria-label="2026-04-14 のブックマーク3件"><span class="cal-day">14</span><span class="cal-count">3</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-04-15" aria-label="2026-04-15 のブックマーク2件"><span class="cal-day">15</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-04-16" aria-label="2026-04-16 のブックマーク2件"><span class="cal-day">16</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-04-17/" aria-label="2026-04-17 の配信を開く (ブックマーク1件)"><span class="cal-day">17</span><span class="cal-count">1</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-04-18/" aria-label="2026-04-18 の配信を開く (ブックマーク3件)"><span class="cal-day">18</span><span class="cal-count">3</span></a><a class="cal-cell cal-cell--news" href="./news/2026-04-19/" aria-label="2026-04-19 の配信を開く"><span class="cal-day">19</span></a><div class="cal-cell cal-cell--inactive"><span class="cal-day">20</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">21</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">22</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">23</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">24</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">25</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">26</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">27</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">28</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">29</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">30</span></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div></div>
+  </div>
+  <div class="cal-month" data-month="2026-03" hidden>
+    <div class="cal-weekdays"><span>日</span><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span>土</span></div>
+    <div class="cal-grid"><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-03-01" aria-label="2026-03-01 のブックマーク1件"><span class="cal-day">1</span><span class="cal-count">1</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-03-02" aria-label="2026-03-02 のブックマーク1件"><span class="cal-day">2</span><span class="cal-count">1</span></a><div class="cal-cell cal-cell--inactive"><span class="cal-day">3</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">4</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">5</span></div><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-03-06" aria-label="2026-03-06 のブックマーク1件"><span class="cal-day">6</span><span class="cal-count">1</span></a><div class="cal-cell cal-cell--inactive"><span class="cal-day">7</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">8</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">9</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">10</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">11</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">12</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">13</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">14</span></div><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-03-15" aria-label="2026-03-15 のブックマーク1件"><span class="cal-day">15</span><span class="cal-count">1</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-03-16" aria-label="2026-03-16 のブックマーク1件"><span class="cal-day">16</span><span class="cal-count">1</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-03-17" aria-label="2026-03-17 のブックマーク1件"><span class="cal-day">17</span><span class="cal-count">1</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-03-18" aria-label="2026-03-18 のブックマーク2件"><span class="cal-day">18</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-03-19" aria-label="2026-03-19 のブックマーク2件"><span class="cal-day">19</span><span class="cal-count">2</span></a><div class="cal-cell cal-cell--inactive"><span class="cal-day">20</span></div><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-03-21" aria-label="2026-03-21 のブックマーク1件"><span class="cal-day">21</span><span class="cal-count">1</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-03-22" aria-label="2026-03-22 のブックマーク2件"><span class="cal-day">22</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-03-23" aria-label="2026-03-23 のブックマーク4件"><span class="cal-day">23</span><span class="cal-count">4</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-03-24" aria-label="2026-03-24 のブックマーク1件"><span class="cal-day">24</span><span class="cal-count">1</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-03-25" aria-label="2026-03-25 のブックマーク4件"><span class="cal-day">25</span><span class="cal-count">4</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-03-26" aria-label="2026-03-26 のブックマーク1件"><span class="cal-day">26</span><span class="cal-count">1</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-03-27" aria-label="2026-03-27 のブックマーク1件"><span class="cal-day">27</span><span class="cal-count">1</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-03-28" aria-label="2026-03-28 のブックマーク3件"><span class="cal-day">28</span><span class="cal-count">3</span></a><div class="cal-cell cal-cell--inactive"><span class="cal-day">29</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">30</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">31</span></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div></div>
+  </div>
+  <div class="cal-month" data-month="2026-02" hidden>
+    <div class="cal-weekdays"><span>日</span><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span>土</span></div>
+    <div class="cal-grid"><div class="cal-cell cal-cell--inactive"><span class="cal-day">1</span></div><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-02-02" aria-label="2026-02-02 のブックマーク2件"><span class="cal-day">2</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-02-03" aria-label="2026-02-03 のブックマーク6件"><span class="cal-day">3</span><span class="cal-count">6</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-02-04" aria-label="2026-02-04 のブックマーク2件"><span class="cal-day">4</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-02-05" aria-label="2026-02-05 のブックマーク1件"><span class="cal-day">5</span><span class="cal-count">1</span></a><div class="cal-cell cal-cell--inactive"><span class="cal-day">6</span></div><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-02-07" aria-label="2026-02-07 のブックマーク5件"><span class="cal-day">7</span><span class="cal-count">5</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-02-08" aria-label="2026-02-08 のブックマーク5件"><span class="cal-day">8</span><span class="cal-count">5</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-02-09" aria-label="2026-02-09 のブックマーク2件"><span class="cal-day">9</span><span class="cal-count">2</span></a><div class="cal-cell cal-cell--inactive"><span class="cal-day">10</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">11</span></div><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-02-12" aria-label="2026-02-12 のブックマーク4件"><span class="cal-day">12</span><span class="cal-count">4</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-02-13" aria-label="2026-02-13 のブックマーク4件"><span class="cal-day">13</span><span class="cal-count">4</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-02-14" aria-label="2026-02-14 のブックマーク4件"><span class="cal-day">14</span><span class="cal-count">4</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-02-15" aria-label="2026-02-15 のブックマーク2件"><span class="cal-day">15</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-02-16" aria-label="2026-02-16 のブックマーク3件"><span class="cal-day">16</span><span class="cal-count">3</span></a><div class="cal-cell cal-cell--inactive"><span class="cal-day">17</span></div><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-02-18" aria-label="2026-02-18 のブックマーク1件"><span class="cal-day">18</span><span class="cal-count">1</span></a><div class="cal-cell cal-cell--inactive"><span class="cal-day">19</span></div><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-02-20" aria-label="2026-02-20 のブックマーク3件"><span class="cal-day">20</span><span class="cal-count">3</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-02-21" aria-label="2026-02-21 のブックマーク1件"><span class="cal-day">21</span><span class="cal-count">1</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-02-22" aria-label="2026-02-22 のブックマーク1件"><span class="cal-day">22</span><span class="cal-count">1</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-02-23" aria-label="2026-02-23 のブックマーク3件"><span class="cal-day">23</span><span class="cal-count">3</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-02-24" aria-label="2026-02-24 のブックマーク2件"><span class="cal-day">24</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-02-25" aria-label="2026-02-25 のブックマーク4件"><span class="cal-day">25</span><span class="cal-count">4</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-02-26" aria-label="2026-02-26 のブックマーク2件"><span class="cal-day">26</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-02-27" aria-label="2026-02-27 のブックマーク6件"><span class="cal-day">27</span><span class="cal-count">6</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-02-28" aria-label="2026-02-28 のブックマーク2件"><span class="cal-day">28</span><span class="cal-count">2</span></a></div>
+  </div>
+  <div class="cal-month" data-month="2026-01" hidden>
+    <div class="cal-weekdays"><span>日</span><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span>土</span></div>
+    <div class="cal-grid"><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">1</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">2</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">3</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">4</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">5</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">6</span></div><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-01-07" aria-label="2026-01-07 のブックマーク1件"><span class="cal-day">7</span><span class="cal-count">1</span></a><div class="cal-cell cal-cell--inactive"><span class="cal-day">8</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">9</span></div><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-01-10" aria-label="2026-01-10 のブックマーク1件"><span class="cal-day">10</span><span class="cal-count">1</span></a><div class="cal-cell cal-cell--inactive"><span class="cal-day">11</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">12</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">13</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">14</span></div><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-01-15" aria-label="2026-01-15 のブックマーク1件"><span class="cal-day">15</span><span class="cal-count">1</span></a><div class="cal-cell cal-cell--inactive"><span class="cal-day">16</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">17</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">18</span></div><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-01-19" aria-label="2026-01-19 のブックマーク1件"><span class="cal-day">19</span><span class="cal-count">1</span></a><div class="cal-cell cal-cell--inactive"><span class="cal-day">20</span></div><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#date-2026-01-21" aria-label="2026-01-21 のブックマーク1件"><span class="cal-day">21</span><span class="cal-count">1</span></a><div class="cal-cell cal-cell--inactive"><span class="cal-day">22</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">23</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">24</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">25</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">26</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">27</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">28</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">29</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">30</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">31</span></div></div>
+  </div>
+</div>
+<script>
+(function(){
+  var cal = document.getElementById('calendar');
+  if (!cal) return;
+  var monthsEl = Array.prototype.slice.call(cal.querySelectorAll('.cal-month'));
+  var prev = cal.querySelector('.cal-prev');
+  var next = cal.querySelector('.cal-next');
+  var title = cal.querySelector('#cal-title');
+  var idx = 0; // 0 = newest
+  function render() {
+    monthsEl.forEach(function(m, i){ m.hidden = (i !== idx); });
+    prev.disabled = (idx >= monthsEl.length - 1);
+    next.disabled = (idx <= 0);
+    var ym = monthsEl[idx].dataset.month.split('-');
+    title.textContent = ym[0] + '年 ' + parseInt(ym[1], 10) + '月';
+  }
+  prev.addEventListener('click', function(){ if (idx < monthsEl.length - 1) { idx++; render(); } });
+  next.addEventListener('click', function(){ if (idx > 0) { idx--; render(); } });
+  render();
+})();
+</script>
     <ul class="archive-list archive-grid">
       <li>
         <span class="date">04.19 SAT</span>
@@ -1725,7 +1748,7 @@ Follow me @polydao for more posts on Claude, AI tools, prediction markets, and w
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 20260419.1102</span>
+      <span>BUILD 20260419.2040</span>
     </div>
   </div>
 </footer>

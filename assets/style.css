@@ -132,6 +132,95 @@ img { max-width: 100%; display: block; }
   border-bottom-color: var(--accent);
 }
 
+/* Hamburger toggle — hidden on desktop, shown on mobile via breakpoint below */
+.nav-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: 1px solid var(--ink);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  flex-shrink: 0;
+}
+.nav-toggle-bar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--ink);
+  transition: transform 0.22s ease, opacity 0.22s ease;
+  transform-origin: center;
+}
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Mobile: hide the black dispatch strap + JST meta, swap nav for hamburger overlay */
+@media (max-width: 768px) {
+  .dispatch { display: none; }
+  .masthead { padding: 18px 0; }
+  .masthead .row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .masthead .meta { display: none; }
+  .masthead .wordmark { font-size: 20px; }
+  .nav-toggle { display: inline-flex; }
+
+  .masthead nav.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--paper);
+    border-bottom: 2px solid var(--ink);
+    padding: 72px 24px 28px;
+    transform: translateY(-110%);
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+    z-index: 90;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .masthead nav.main-nav.is-open {
+    transform: translateY(0);
+    box-shadow: 0 10px 28px rgba(20, 19, 17, 0.14);
+  }
+  .masthead nav.main-nav a {
+    margin-left: 0;
+    padding: 18px 4px;
+    font-size: 14px;
+    border-bottom: 1px solid var(--hair);
+    display: block;
+  }
+  .masthead nav.main-nav a:last-child {
+    border-bottom: none;
+  }
+  .nav-toggle {
+    position: relative;
+    z-index: 100;
+    background: var(--paper);
+  }
+
+  html.is-nav-open,
+  html.is-nav-open body {
+    overflow: hidden;
+  }
+}
+
 /* ---------- Hero ---------- */
 .hero {
   padding: 56px 0 48px;
@@ -244,32 +333,33 @@ img { max-width: 100%; display: block; }
 .section-head .trail a { border-bottom: 1px solid var(--hair); padding-bottom: 2px; }
 .section-head .trail a:hover { border-bottom-color: var(--accent); color: var(--accent); }
 
-/* ---------- Featured topic (hero story) ---------- */
+/* ---------- Featured topic (hero story, full-width image on top) ---------- */
 .feature {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: start;
+  display: block;
 }
 .feature .media {
   position: relative;
   background: var(--ink);
   overflow: hidden;
   aspect-ratio: 16 / 9;
+  width: 100%;
+  margin-bottom: 44px;
+  display: block;
 }
 .feature .media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   filter: contrast(1.02) saturate(0.96);
+  transition: transform 0.5s ease;
 }
-.feature .media .numeral { font-size: 180px; bottom: -20px; }
+.feature .media:hover img { transform: scale(1.015); }
 .feature .media .numeral {
   position: absolute;
-  left: -8px;
-  bottom: -28px;
+  left: -12px;
+  bottom: -44px;
   font-family: "Shippori Mincho B1", "Noto Serif JP", serif;
-  font-size: 240px;
+  font-size: clamp(180px, 20vw, 320px);
   font-weight: 800;
   line-height: 1;
   color: var(--paper);
@@ -277,6 +367,10 @@ img { max-width: 100%; display: block; }
   opacity: 0.96;
   letter-spacing: -0.05em;
   pointer-events: none;
+}
+.feature .body {
+  max-width: 920px;
+  margin: 0 auto;
 }
 .feature .body .cat {
   font-family: "JetBrains Mono", monospace;
@@ -298,16 +392,16 @@ img { max-width: 100%; display: block; }
 .feature .body h2 {
   font-family: "Shippori Mincho B1", "Noto Serif JP", serif;
   font-weight: 800;
-  font-size: clamp(32px, 3.6vw, 52px);
-  line-height: 1.08;
-  letter-spacing: -0.005em;
-  margin: 0 0 24px;
+  font-size: clamp(40px, 4.6vw, 68px);
+  line-height: 1.06;
+  letter-spacing: -0.012em;
+  margin: 0 0 28px;
 }
 .feature .body .lede {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.85;
   color: var(--ink-soft);
-  margin: 0 0 28px;
+  margin: 0 0 32px;
 }
 .feature .body .keypoints li { font-size: 15px; }
 .feature-cta {
@@ -759,11 +853,13 @@ img { max-width: 100%; display: block; }
 }
 .daily-head .date-huge {
   font-family: "Shippori Mincho B1", serif;
-  font-size: clamp(72px, 11vw, 160px);
+  font-size: clamp(44px, 11vw, 160px);
   line-height: 0.9;
   font-weight: 800;
   letter-spacing: -0.02em;
   margin: 0;
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 .daily-head .date-huge .dot { color: var(--accent); }
 .daily-head .strap {
@@ -1054,6 +1150,10 @@ img { max-width: 100%; display: block; }
 .xcard-type--article {
   color: var(--accent);
   border-color: var(--accent);
+}
+.xcard-type--thread {
+  color: #556b2f;
+  border-color: #556b2f;
 }
 .xcard-type--post {
   color: var(--mute);
@@ -1351,12 +1451,182 @@ html.is-modal-open, html.is-modal-open body { overflow: hidden; }
   color: var(--ink);
 }
 
-/* --- Today: featured + rest list --- */
+/* ---------- Archive calendar (news 濃 + bookmarks 薄 overlay) ---------- */
+.calendar {
+  margin: 0 0 48px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--hair);
+}
+.cal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--hair);
+  flex-wrap: wrap;
+}
+.cal-legend {
+  display: flex;
+  gap: 22px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--mute);
+  text-transform: uppercase;
+}
+.cal-lg i {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 6px;
+  vertical-align: -3px;
+}
+.cal-lg-news {
+  background: transparent;
+  border: 2px solid var(--accent);
+  box-sizing: border-box;
+}
+.cal-lg-bookmark {
+  background: #f6ecc8;
+  border: 1px solid var(--hair);
+  box-sizing: border-box;
+}
+.cal-nav {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.cal-nav button {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  padding: 6px 12px;
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--hair);
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+.cal-nav button:hover:not(:disabled) {
+  background: var(--ink);
+  color: var(--paper);
+  border-color: var(--ink);
+}
+.cal-nav button:disabled { opacity: 0.3; cursor: not-allowed; }
+.cal-title {
+  font-family: "Shippori Mincho B1", "Noto Serif JP", serif;
+  font-weight: 800;
+  font-size: 20px;
+  min-width: 110px;
+  text-align: center;
+  letter-spacing: -0.005em;
+}
+.cal-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: var(--mute);
+  padding: 8px 0;
+  border-bottom: 1px solid var(--hair);
+  text-transform: uppercase;
+}
+.cal-weekdays span { text-align: center; }
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  background: var(--hair);
+  border-left: 1px solid var(--hair);
+  border-right: 1px solid var(--hair);
+  border-bottom: 1px solid var(--hair);
+}
+.cal-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 6px 8px;
+  min-height: 60px;
+  background: var(--paper);
+  color: var(--ink);
+  text-decoration: none;
+  position: relative;
+  font-family: "Inter", "Noto Sans JP", sans-serif;
+}
+.cal-cell .cal-day {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+}
+.cal-cell .cal-count {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  color: var(--accent);
+  margin-top: 6px;
+  letter-spacing: 0.04em;
+}
+.cal-cell--empty { background: var(--paper-deep); }
+.cal-cell--inactive .cal-day {
+  color: var(--mute);
+  opacity: 0.5;
+}
+.cal-cell--bookmark {
+  background: #f6ecc8;
+}
+a.cal-cell:hover { background: var(--paper-deep); }
+a.cal-cell--bookmark:hover { background: #eed9a0; }
+.cal-cell--news {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+  font-weight: 700;
+  z-index: 1;
+}
+.cal-cell--news .cal-day { font-weight: 700; }
+a.cal-cell--news:hover {
+  background: var(--accent);
+  color: var(--paper);
+}
+a.cal-cell--news:hover .cal-count { color: var(--paper); }
+.cal-cell--bookmark.cal-cell--news { background: #f2d78a; }
+a.cal-cell--bookmark.cal-cell--news:hover { background: var(--accent); color: var(--paper); }
+
+@media (max-width: 640px) {
+  .cal-cell { min-height: 48px; padding: 6px 2px; }
+  .cal-cell .cal-day { font-size: 12px; }
+  .cal-cell .cal-count { font-size: 9px; margin-top: 3px; }
+  .cal-title { font-size: 17px; min-width: 90px; }
+  .cal-legend { gap: 14px; font-size: 10px; }
+}
+
+/* --- Today: featured (hero) + rest list (horizontal below) --- */
 .today-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
   gap: 56px;
   align-items: start;
+}
+.today-sub--hero {
+  margin-bottom: 32px;
+}
+.today-sub--rest {
+  margin-top: 72px;
+}
+.rest--horizontal {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0 32px;
+  border-top: 1px solid var(--hair);
+}
+.rest--horizontal .rest-item {
+  border-bottom: 1px solid var(--line-soft, #c9c0ab);
+}
+.rest-read-full--center {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
 }
 .today-sub {
   display: flex;
@@ -1693,4 +1963,15 @@ html.is-modal-open, html.is-modal-open body { overflow: hidden; }
   .archive-list.archive-grid .headline, .archive-list.archive-grid .tags { grid-column: 1 / -1; }
   .archive-list.archive-grid .arrow { display: none; }
   .cta { padding: 56px 0; }
+}
+
+/* --- Mobile masthead override (must come AFTER the 980px block that sets
+   .masthead .row { flex-direction: column } — cascade order matters) --- */
+@media (max-width: 768px) {
+  .masthead .row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
 }

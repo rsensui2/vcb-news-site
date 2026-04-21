@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-04-21 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-04-21 の Vibe Coder Bootcamp モーニングディスパッチ — 20本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0421</span>
+    <span class="sep">/</span>
+    <span>2026-04-21</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>20 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260421.0956</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-04-21/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 09:56 · MON</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · MONDAY · APRIL 21, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>04<span class="dot">.</span>21</h1>
+    <div class="strap">
+      <span>Claude · Gemini · NotebookLM · Sam</span>
+      <span><span class="count">20</span>&nbsp;ITEMS · READ 9 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 モデル発表 <span class="sep">/</span> @CLAUDEAI (ANTHROPIC) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Opus 4.7 正式リリース</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-21/topic_1.png" data-alt="Claude Opus 4.7 正式リリース" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-21/topic_1.png" alt="Claude Opus 4.7 正式リリース" />
+      </div>
+      <p class="lede">
+        Anthropicがフラッグシップ推論モデル Claude Opus 4.7 を正式リリース。長時間タスクの堅牢性、指示追従の精度、ビジョン性能が大幅に強化され、SWE-bench でOpus 4.6比でコーディング性能も改善した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">長時間タスクで脱線せず最後まで完遂できる堅牢性</li>
+        <li data-i="02">ビジョン解像度が従来比3倍以上に向上</li>
+        <li data-i="03">Cursor / OpenClaw / Claude Code で即日利用可能</li>
+        <li data-i="04">同日 Claude for Word (Pro/Max向け) も開始</li>
+        <li data-i="05">指示追従の精度が大幅改善（エージェントワークフロー向き）</li>
+      </ul>
+      <div class="pull">
+        Bootcamp課題のエージェント実装・デバッグが一段上の精度で回せるようになり、長時間の自律タスクでも脱線しにくい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">79,461</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/claudeai/status/2044785261393977612">@claudeai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-16</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 モデル発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/claudeai/status/2044785261393977612">x.com/claudeai/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · GOOGLEDEEPMIND</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 ロボティクス <span class="sep">/</span> @GOOGLEDEEPMIND <span class="sep">/</span> NEWS
+      </div>
+      <h2>Gemini Robotics が Boston Dynamics の Spot に搭載</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-21/topic_2.png" data-alt="Gemini Robotics が Boston Dynamics の Spot に搭載" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-21/topic_2.png" alt="Gemini Robotics が Boston Dynamics の Spot に搭載" />
+      </div>
+      <p class="lede">
+        Google DeepMind が Boston Dynamics と提携し、Gemini Robotics を四足ロボット Spot に搭載。自然言語の指示を受けて現実世界で推論・物理タスクを実行する実証事例を公開した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Spot が自然言語指示で物理タスクを自律実行</li>
+        <li data-i="02">Gemini Robotics の現実環境での初の大型実証</li>
+        <li data-i="03">視覚 × 言語 × 物理動作を一貫して推論</li>
+      </ul>
+      <div class="pull">
+        AI × フィジカル領域の参照事例として、ロボティクス起業や物流・警備領域のDX提案の手がかりになる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,575</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://deepmind.google/discover/blog/gemini-robotics-on-spot/">@GoogleDeepMind</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-17</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 ロボティクス</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://deepmind.google/discover/blog/gemini-robotics-on-spot/">https://deepmind.google/discover/blog/gemini-robotics-on-spot/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · NOTEBOOKLM</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 ツール更新 <span class="sep">/</span> @NOTEBOOKLM <span class="sep">/</span> NEWS
+      </div>
+      <h2>NotebookLM カスタムカバーアート＆記述</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-21/topic_3.png" data-alt="NotebookLM カスタムカバーアート＆記述" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-21/topic_3.png" alt="NotebookLM カスタムカバーアート＆記述" />
+      </div>
+      <p class="lede">
+        NotebookLM がノートブックごとに任意のカバーアートと説明文を設定可能になった。併せて Gemini App の Notebooks 機能が Web版 Free ユーザーにも開放され、誰でも知識ベース運用を始められる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">ノートごとに独自カバー画像と説明を設定可能</li>
+        <li data-i="02">Gemini App Notebooks が Free ウェブ版で解放</li>
+        <li data-i="03">知識管理テンプレートの視覚識別性が向上</li>
+      </ul>
+      <div class="pull">
+        Vibe Coder が複数プロジェクト・顧客ごとに知識ベースを分けやすくなる。教材配布パッケージの表紙デザインにも使える。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,084</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://blog.google/technology/google-labs/notebooklm-customization/">@NotebookLM</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-17</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 ツール更新</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://blog.google/technology/google-labs/notebooklm-customization/">https://blog.google/technology/google-labs/notebooklm-customization/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · SAMA OPENAI CEO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 業界動向 <span class="sep">/</span> @SAMA (OPENAI CEO) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Sam Altman: 『Codexへのスイッチ増えてる、Anthropicのレート制限には注意』</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-21/topic_4.png" data-alt="Sam Altman: 『Codexへのスイッチ増えてる、Anthropicのレート制限には注意』" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-21/topic_4.png" alt="Sam Altman: 『Codexへのスイッチ増えてる、Anthropicのレート制限には注意』" />
+      </div>
+      <p class="lede">
+        Sam AltmanがCodexへの開発者移行が加速していることに触れ、Anthropic側のレート制限増強が続けば自社も動くと牽制するツイートを投稿。Claude Code と Codex の競争激化を象徴する発言として注目された。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">開発者のCodex乗り換えが明確に増加中と公式言及</li>
+        <li data-i="02">Anthropic側のレート制限厳格化を牽制</li>
+        <li data-i="03">Claude Code vs Codex の競争が公然化</li>
+      </ul>
+      <div class="pull">
+        開発ツール選定は単体性能ではなく「どのレート制限に縛られるか」の運用リスク比較に移っている。BootcampのツールCUR選定論で重要なシグナル。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/sama/status/2044921348540264614">@sama</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-17</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 業界動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/sama/status/2044921348540264614">x.com/sama/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · SAMA OPENAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 ツール更新 <span class="sep">/</span> @SAMA (OPENAI) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Codex 大型アップデート — Computer Use / Mac アプリ連携</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-21/topic_5.png" data-alt="Codex 大型アップデート — Computer Use / Mac アプリ連携" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-21/topic_5.png" alt="Codex 大型アップデート — Computer Use / Mac アプリ連携" />
+      </div>
+      <p class="lede">
+        Codexに大型アップデートが入り、Computer Use（画面操作）、Macネイティブアプリ連携、追加ツール接続、画像生成、過去ワークスペースからの学習が一挙に統合。Sam Altmanが「feels even more useful than I expected」と評価した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Computer Useで画面操作を自律実行</li>
+        <li data-i="02">Macネイティブアプリ(Slack/ブラウザ等)と直接連携</li>
+        <li data-i="03">画像生成・過去ワークスペース学習を統合</li>
+        <li data-i="04">追加ツール接続でエージェント拡張性向上</li>
+      </ul>
+      <div class="pull">
+        『CLIシェル+画面操作』の統合エージェント像が明確化。Claude Code が狙う領域と正面からぶつかる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/sama/status/2044858862042591378">@sama</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-16</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 ツール更新</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/sama/status/2044858862042591378">x.com/sama/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · CLAUDEAI ANTHROPIC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 ツール更新 <span class="sep">/</span> @CLAUDEAI (ANTHROPIC) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude for Word が Pro/Max プランで利用可能</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-21/topic_6.png" data-alt="Claude for Word が Pro/Max プランで利用可能" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-21/topic_6.png" alt="Claude for Word が Pro/Max プランで利用可能" />
+      </div>
+      <p class="lede">
+        Claude for Word が Anthropic の Pro / Max プランで利用可能に。Opus 4.7 と組み合わせて Word ドキュメント上で直接 Claude を呼び出し、編集・要約・整形ができる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Pro / Max 両プランで Word アドイン利用可</li>
+        <li data-i="02">Opus 4.7 と連携して長文編集に強い</li>
+        <li data-i="03">既存 Office ワークフローに自然に統合</li>
+      </ul>
+      <div class="pull">
+        Word運用が残る企業（法務・行政・士業）へのClaude導入の実質的な入口になる。TEKION顧客提案でも刺さる層。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/claudeai/status/2045222254699511855">@claudeai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-18</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 ツール更新</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/claudeai/status/2045222254699511855">x.com/claudeai/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · DEJAVUCODER</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 コミュニティ <span class="sep">/</span> @DEJAVUCODER <span class="sep">/</span> NEWS
+      </div>
+      <h2>『claude when i throw hard problems at it』— Opus 4.7 体感談ミーム</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-21/topic_7.png" data-alt="『claude when i throw hard problems at it』— Opus 4.7 体感談ミーム" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-21/topic_7.png" alt="『claude when i throw hard problems at it』— Opus 4.7 体感談ミーム" />
+      </div>
+      <p class="lede">
+        開発者が Claude Opus 4.7 に難問を投げたときの体感を表すミームツイートが拡散。Opus 4.7 の『粘り強さ』に対するコミュニティの好意的評価を象徴する投稿。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Opus 4.7 の難問耐性に対する開発者コミュニティの評価</li>
+        <li data-i="02">ミーム形式でリリース週の空気感を反映</li>
+        <li data-i="03">エンゲージメント指標はバイラル拡散中</li>
+      </ul>
+      <div class="pull">
+        技術発表だけでなく、コミュニティの空気を掴むためのシグナル。VBC内のモデル選定議論の温度感にも効く。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/dejavucoder/status/2045371142811377722">@dejavucoder</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-18</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 コミュニティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/dejavucoder/status/2045371142811377722">x.com/dejavucoder/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · CLAUDEAI ANTHROPIC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 イベント <span class="sep">/</span> @CLAUDEAI (ANTHROPIC) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code hackathon が Opus 4 向けに再開催</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-21/topic_8.png" data-alt="Claude Code hackathon が Opus 4 向けに再開催" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-21/topic_8.png" alt="Claude Code hackathon が Opus 4 向けに再開催" />
+      </div>
+      <p class="lede">
+        Anthropicが Claude Code hackathon を Opus 4 世代向けに再開催することを告知。Claude Code / Skills / Managed Agents のエコシステム拡大を狙う公式イベント。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Claude Code hackathon が Opus 4 向けに再始動</li>
+        <li data-i="02">Skills / Managed Agents を使った作品を歓迎</li>
+        <li data-i="03">コミュニティ作品がそのままプロダクト化される可能性</li>
+      </ul>
+      <div class="pull">
+        VBC受講生の『外向きアウトプット機会』として絶好。卒業課題や賞金目当てのチーム参戦を後押しできる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/claudeai/status/2045248224659644654">@claudeai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-18</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 イベント</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/claudeai/status/2045248224659644654">x.com/claudeai/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-9">
+  <div class="container">
+    <aside class="numeral">09<span class="ord">TOPIC 09 · KARPATHY ANDREJ KA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📖 歴史資料 <span class="sep">/</span> @KARPATHY (ANDREJ KARPATHY) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>『Vibe Coding』命名の起源 — Andrej Karpathy</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-21/topic_9.png" data-alt="『Vibe Coding』命名の起源 — Andrej Karpathy" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-21/topic_9.png" alt="『Vibe Coding』命名の起源 — Andrej Karpathy" />
+      </div>
+      <p class="lede">
+        Andrej Karpathyが『vibesに身を委ねてコードの存在すら忘れる』新しいコーディング体験を『Vibe Coding』と命名した歴史的ツイート。Cursor Composer + Sonnet + SuperWhisper の組合せで実演した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">『vibesに身を委ね、コードの存在を忘れる』新スタイルを命名</li>
+        <li data-i="02">Cursor Composer × Sonnet × SuperWhisper の音声駆動開発</li>
+        <li data-i="03">Vibe Coder Bootcamp(VBC) の名称そのものの由来</li>
+        <li data-i="04">6.6M views / 33k likes で業界用語として定着</li>
+      </ul>
+      <div class="pull">
+        VBCの原点であり、受講生に『あなたが学んでいるのは3年前には存在しなかったカテゴリー』と伝えるための一次資料。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">33,126</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/karpathy/status/1886192184808149383">@karpathy</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2025-02-02</dd>
+        <dt>CATEGORY</dt>
+        <dd>📖 歴史資料</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/karpathy/status/1886192184808149383">x.com/karpathy/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-10">
+  <div class="container">
+    <aside class="numeral">10<span class="ord">TOPIC 10 · PBTEJA1998 BHANU T</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📖 アーキテクチャ解説 <span class="sep">/</span> @PBTEJA1998 (BHANU TEJA P / SITEGPT) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Mission Control — 10体のAIエージェントで作る『AI Agent Squad』完全ガイド</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-21/topic_10.png" data-alt="Mission Control — 10体のAIエージェントで作る『AI Agent Squad』完全ガイド" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-21/topic_10.png" alt="Mission Control — 10体のAIエージェントで作る『AI Agent Squad』完全ガイド" />
+      </div>
+      <p class="lede">
+        SiteGPT創業者が、10体のAIエージェントをチーム化して常時走らせる『Mission Control』の構築方法を公開。Clawdbot(現OpenClaw)を基盤に、共有DB・通知・記憶管理で『会話をまたいで覚え続けるAIチーム』を実現した長文ガイド。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">毎回リセットされる会話の連続性問題を真正面から解決</li>
+        <li data-i="02">10体の専門家エージェントが並列動作</li>
+        <li data-i="03">共有DB + 通知 + メモリ管理の設計パターンを公開</li>
+        <li data-i="04">ブックマーク24,775件、256万view</li>
+        <li data-i="05">Clawdbot(OpenClaw)ベースで即再現可能</li>
+      </ul>
+      <div class="pull">
+        Jinn/OpenClawのマルチエージェント運用と直結。VBC『エージェントチーム設計』カリキュラムの一次教材として使える。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">6,337</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/pbteja1998/status/2017662163540971756">@pbteja1998</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-02-01</dd>
+        <dt>CATEGORY</dt>
+        <dd>📖 アーキテクチャ解説</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/pbteja1998/status/2017662163540971756">x.com/pbteja1998/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-11">
+  <div class="container">
+    <aside class="numeral">11<span class="ord">TOPIC 11 · MVANHORN MATT VAN </span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 技術TIPS <span class="sep">/</span> @MVANHORN (MATT VAN HORN) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>/last30days — 過去30日のReddit/X/Webを30秒でリサーチするClaude Code Skill</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-21/topic_11.png" data-alt="/last30days — 過去30日のReddit/X/Webを30秒でリサーチするClaude Code Skill" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-21/topic_11.png" alt="/last30days — 過去30日のReddit/X/Webを30秒でリサーチするClaude Code Skill" />
+      </div>
+      <p class="lede">
+        Matt Van Horn が Claude Code 向けのリサーチ Skill『/last30days』を公開。任意のトピックについて過去30日分の Reddit・X・Web ディスカッションをスキャンし、使えるプロンプトパターン・新リリース・実運用ワークフローを30秒で返す。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Reddit / X / Web を横断し過去30日の最新動向を取得</li>
+        <li data-i="02">プロンプトパターンと新リリースを同時に抽出</li>
+        <li data-i="03">Claude Code Skill として誰でもインストール可能</li>
+        <li data-i="04">『30日分のリサーチを30秒で』がコンセプト</li>
+      </ul>
+      <div class="pull">
+        VBCの受講生がトレンドウォッチを自前で回せるようになる。torty の tech-news-scout とも補完関係。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">4,437</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/mvanhorn/status/2015551849710190697">@mvanhorn</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-01-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 技術Tips</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/mvanhorn/status/2015551849710190697">x.com/mvanhorn/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-12">
+  <div class="container">
+    <aside class="numeral">12<span class="ord">TOPIC 12 · CLOUDFLARE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 インフラ <span class="sep">/</span> @CLOUDFLARE (公式) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Moltworker — Cloudflare WorkersでOpenClaw(旧Moltbot)をセルフホスト</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-21/topic_12.png" data-alt="Moltworker — Cloudflare WorkersでOpenClaw(旧Moltbot)をセルフホスト" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-21/topic_12.png" alt="Moltworker — Cloudflare WorkersでOpenClaw(旧Moltbot)をセルフホスト" />
+      </div>
+      <p class="lede">
+        Cloudflare が公式に、OpenClaw(旧Moltbot/Clawdbot) を自社の Sandbox SDK + Developer Platform APIs 上で走らせるための『Moltworker』ミドルウェアを提供開始。VPS も GPU も不要で AI パーソナルアシスタントをセルフホストできる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">新ハードウェア不要（Cloudflare Workers 上で完結）</li>
+        <li data-i="02">Sandbox SDK でコード実行を隔離</li>
+        <li data-i="03">GPU / VPS / DevOps rabbit holes 不要</li>
+        <li data-i="04">月 $5〜 で個人運用可能</li>
+        <li data-i="05">Cloudflare 公式によるエンドース</li>
+      </ul>
+      <div class="pull">
+        『PCつけっぱ問題』なしに個人AIアシスタントを常時稼働できる。VBC受講生がサーバー運用の学習コストを払わずに Jinn/OpenClaw 相当の体験を得られる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">6,582</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/Cloudflare/status/2016875256393175130">@Cloudflare</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-01-29</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 インフラ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/Cloudflare/status/2016875256393175130">x.com/Cloudflare/…</a></dd>
+        <dd><a href="https://blog.cloudflare.com/introducing-moltworker-self-hosted-ai-agent">blog.cloudflare.com/introducing-moltwork…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-13">
+  <div class="container">
+    <aside class="numeral">13<span class="ord">TOPIC 13 · AIJITAN</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🎨 デザイン <span class="sep">/</span> @AI_JITAN (えーたん) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>NotebookLMスライド生成を100%引き出すGem</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-21/topic_13.png" data-alt="NotebookLMスライド生成を100%引き出すGem" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-21/topic_13.png" alt="NotebookLMスライド生成を100%引き出すGem" />
+      </div>
+      <p class="lede">
+        資料をアップロードするだけでAIが内容を分析し、全20項目のスライドデザインプロンプトを自動生成する『究極のスライドデザインGem』。デザイン素人でも NotebookLM のスライド生成機能を100%引き出せる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">デザインセンス不要で世界観まで自動設計</li>
+        <li data-i="02">無料Gem 2種（デザイン生成/構成自動作成）を公開</li>
+        <li data-i="03">プロ級のデザインプロンプト20項目を自動生成</li>
+        <li data-i="04">日本語UIで使いやすい</li>
+      </ul>
+      <div class="pull">
+        VBC受講生のプレゼン資料品質を底上げ。提案書やLP設計にも転用可能。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">4,204</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ai_jitan/status/2016254957180146082">@ai_jitan</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-01-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>🎨 デザイン</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ai_jitan/status/2016254957180146082">x.com/ai_jitan/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-14">
+  <div class="container">
+    <aside class="numeral">14<span class="ord">TOPIC 14 · ALEXPROMPTER</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 マーケティング <span class="sep">/</span> @ALEX_PROMPTER <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>OpenClaw × マーケティング — 20のゲリラ戦術</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-21/topic_14.png" data-alt="OpenClaw × マーケティング — 20のゲリラ戦術" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-21/topic_14.png" alt="OpenClaw × マーケティング — 20のゲリラ戦術" />
+      </div>
+      <p class="lede">
+        OpenClaw(旧Moltbot) をマーケティング自動化の武器として使う20の戦術集。カレンダー管理やフライト価格チェックに使うだけの『かわいい』使い方を飛び越え、grow stackへのフル自律権限を与えたときに実際に起こる成長手法を列挙。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Self-hosted / Moltworker(Cloudflare) の2デプロイ方式</li>
+        <li data-i="02">5分セットアップで即 growth 用途に使える</li>
+        <li data-i="03">従来5人チームで回していた運用を1人+AIで置換</li>
+        <li data-i="04">合法だが倫理的にグレー寄りの戦術も含む</li>
+        <li data-i="05">ブックマーク7671件の注目度</li>
+      </ul>
+      <div class="pull">
+        マーケティング自動化の最前線事例。TEKIONのマーケ部にも刺さる一次情報だが、倫理面のフィルタは必須。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,540</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/alex_prompter/status/2017044857764688132">@alex_prompter</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-01-30</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 マーケティング</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/alex_prompter/status/2017044857764688132">x.com/alex_prompter/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-15">
+  <div class="container">
+    <aside class="numeral">15<span class="ord">TOPIC 15 · MRNACKNACK CHIRAG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 セキュリティ <span class="sep">/</span> @MRNACKNACK (CHIRAG) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Vibecoderの Clawdbot をハックする10の方法（教育目的）</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-21/topic_15.png" data-alt="Vibecoderの Clawdbot をハックする10の方法（教育目的）" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-21/topic_15.png" alt="Vibecoderの Clawdbot をハックする10の方法（教育目的）" />
+      </div>
+      <p class="lede">
+        Clawdbot(現Moltbot/OpenClaw) の典型的セキュリティ脆弱性10個と防止策を教育目的でまとめたガイド。SSHブルートフォースなど『5分で攻略／5分で防御』の実例が中心。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">10種類の代表的な攻撃手法と対策をセット化</li>
+        <li data-i="02">SSH ブルートフォース / ポート解放 / デフォルト認証などが主</li>
+        <li data-i="03">各手法に『攻撃時間/防止時間/コスト』が併記</li>
+        <li data-i="04">Vibe Codingで雑にVPS立てる層への強い警鐘</li>
+      </ul>
+      <div class="pull">
+        VBC卒業生が自分のOpenClaw/Clawdbot運用を本番化する前の必読チェックリスト。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">3,693</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/mrnacknack/status/2016134416897360212">@mrnacknack</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-01-27</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/mrnacknack/status/2016134416897360212">x.com/mrnacknack/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-16">
+  <div class="container">
+    <aside class="numeral">16<span class="ord">TOPIC 16 · FMDZ387</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 セキュリティ <span class="sep">/</span> @FMDZ387 <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>ClawdBot VPSセキュリティ警告 — 大規模クレデンシャル流出の予兆</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-21/topic_16.png" data-alt="ClawdBot VPSセキュリティ警告 — 大規模クレデンシャル流出の予兆" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-21/topic_16.png" alt="ClawdBot VPSセキュリティ警告 — 大規模クレデンシャル流出の予兆" />
+      </div>
+      <p class="lede">
+        セキュリティリサーチャーが、ClawdBot/Moltbot をVPSにホストしつつドキュメント未読・ポート開放のユーザーが急増していることを警告。このままでは『大規模クレデンシャル流出』が起きると実例スキャン結果とともに発信。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">基本的なネットスキャンだけで認証ゼロのVPSが多数検出</li>
+        <li data-i="02">ClawdBotのデフォ設定を読まずに立ち上げた事例が多発</li>
+        <li data-i="03">クレデンシャル漏洩リスクが業界規模で進行中と警鐘</li>
+        <li data-i="04">160万viewsに到達し業界の空気を変えた投稿</li>
+      </ul>
+      <div class="pull">
+        Jinn/OpenClaw を個人で立てる全員に関係する注意喚起。VBC受講生にも漏れなく共有すべき。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">7,078</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/fmdz387/status/2015551454593896829">@fmdz387</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-01-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/fmdz387/status/2015551454593896829">x.com/fmdz387/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-17">
+  <div class="container">
+    <aside class="numeral">17<span class="ord">TOPIC 17 · BASITDESIGNS BASIT</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🎨 デザイン <span class="sep">/</span> @BASIT_DESIGNS (BASIT A. KHAN) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>ランディングページデザインの威力 — 『デザインがシャープなら数字もシャープに見える』</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-21/topic_17.png" data-alt="ランディングページデザインの威力 — 『デザインがシャープなら数字もシャープに見える』" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-21/topic_17.png" alt="ランディングページデザインの威力 — 『デザインがシャープなら数字もシャープに見える』" />
+      </div>
+      <p class="lede">
+        『デザインがシャープに見えると、投資家は数字もシャープだと思い込む』というメッセージとともに、プレミアムなランディングページの作例を提示した投稿。視覚的第一印象がビジネス評価に与える影響を端的に示す。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">視覚的品質は資金調達シグナルとして作用する</li>
+        <li data-i="02">プレミアムLPの構成要素を作例で提示</li>
+        <li data-i="03">『数字が出る前』の投資判断に効く</li>
+      </ul>
+      <div class="pull">
+        VBC受講生がプロダクトを見せる瞬間に『まずLPを整える』意思決定につながる。TEKIONのLP改善にも直結。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">5,304</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/basit_designs/status/2018287757076869566">@basit_designs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-02-02</dd>
+        <dt>CATEGORY</dt>
+        <dd>🎨 デザイン</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/basit_designs/status/2018287757076869566">x.com/basit_designs/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-18">
+  <div class="container">
+    <aside class="numeral">18<span class="ord">TOPIC 18 · AIJITAN</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 業務効率化 <span class="sep">/</span> @AI_JITAN (えーたん) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>究極のGAS自動生成Gem — NotebookLM × Gemini</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-21/topic_18.png" data-alt="究極のGAS自動生成Gem — NotebookLM × Gemini" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-21/topic_18.png" alt="究極のGAS自動生成Gem — NotebookLM × Gemini" />
+      </div>
+      <p class="lede">
+        GAS(Google Apps Script) の全知識をNotebookLMに学習させ、Gemini Gemの頭脳として連携させる『GAS自動生成Gem』。日本語で業務要件を伝えるだけでプロ級コードが生成され、コピペで即実行できる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">4ステップで業務自動化スクリプトが完成</li>
+        <li data-i="02">NotebookLMを『知識DB』として使うGem設計</li>
+        <li data-i="03">日本語UI＋日本語説明で非エンジニアでも扱える</li>
+        <li data-i="04">無料Gem URL公開</li>
+      </ul>
+      <div class="pull">
+        非エンジニア受講生が『コード書けないけど自動化したい』ニーズをすぐ解決できる。TEKION顧客の業務改善にも直結。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">3,132</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ai_jitan/status/2016617341811929187">@ai_jitan</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-01-29</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 業務効率化</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ai_jitan/status/2016617341811929187">x.com/ai_jitan/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-19">
+  <div class="container">
+    <aside class="numeral">19<span class="ord">TOPIC 19 · BITSAGAROB ROB / B</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 セキュリティ <span class="sep">/</span> @BITSAGAROB (ROB / BITSAGA.BE) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>OpenClaw VPS安全運用ガイド — 30分で素のUbuntuを堅牢化</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-21/topic_19.png" data-alt="OpenClaw VPS安全運用ガイド — 30分で素のUbuntuを堅牢化" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-21/topic_19.png" alt="OpenClaw VPS安全運用ガイド — 30分で素のUbuntuを堅牢化" />
+      </div>
+      <p class="lede">
+        新規UbuntuのVPSから30分でOpenClawを安全運用できるハードン済みサーバーに仕上げる実践ガイド。SSHロックダウン、fail2ban、firewall、ユーザー分離を順を追って構築する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">30分で素のUbuntu→堅牢AIサーバーに変換</li>
+        <li data-i="02">SSHロックダウン・鍵認証・ポート制限</li>
+        <li data-i="03">fail2ban / UFW の設定テンプレ込み</li>
+        <li data-i="04">OpenClawユーザーを一般権限に隔離</li>
+      </ul>
+      <div class="pull">
+        bm-16の警告に対する実践的な処方箋。VBC『本番運用編』の必読リファレンス。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,079</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/BitsagaRob/status/2015757134760202469">@BitsagaRob</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-01-26</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/BitsagaRob/status/2015757134760202469">x.com/BitsagaRob/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-20">
+  <div class="container">
+    <aside class="numeral">20<span class="ord">TOPIC 20 · KOHAKUNFT</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📖 歴史資料 <span class="sep">/</span> @KOHAKU_NFT <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>ChatGPTプラグイン555個時代のベンチマーク付きおすすめ（歴史資料）</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-21/topic_20.png" data-alt="ChatGPTプラグイン555個時代のベンチマーク付きおすすめ（歴史資料）" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-21/topic_20.png" alt="ChatGPTプラグイン555個時代のベンチマーク付きおすすめ（歴史資料）" />
+      </div>
+      <p class="lede">
+        2023年時点でChatGPTプラグインが270→555個に爆増した際の、ベンチマーク付きおすすめリスト。現在はGPTs/Actionsに移行しているため、『プラグイン経済の最盛期』を振り返る歴史資料。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">プラグイン数が短期間で2倍化した時期の記録</li>
+        <li data-i="02">ベンチマーク付きでおすすめが提示されていた</li>
+        <li data-i="03">現在はGPTs/Actionsへ統合済み</li>
+        <li data-i="04">5,546ブックマークで当時の関心の高さを示す</li>
+      </ul>
+      <div class="pull">
+        AIエコシステムが2〜3年で構造転換する実例。今のClaude Skills / Agents SDK が同じ道を辿る可能性を示唆する参考資料。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/Kohaku_NFT">@Kohaku_NFT</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2023</dd>
+        <dt>CATEGORY</dt>
+        <dd>📖 歴史資料</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/Kohaku_NFT">https://x.com/Kohaku_NFT</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/claudeai/status/2044785261393977612">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-04-20/">
+      ← 前日 · 2026-04-20
+      <span class="big">Vercel セキュリティインシデント — サードパーティ製AIツール経由で侵入</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-04-21/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260421.0956</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

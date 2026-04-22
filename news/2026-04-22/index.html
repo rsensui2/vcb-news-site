@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-04-22 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-04-22 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0422</span>
+    <span class="sep">/</span>
+    <span>2026-04-22</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260422.0725</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-04-22/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:25 · TUE</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · TUESDAY · APRIL 22, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>04<span class="dot">.</span>22</h1>
+    <div class="strap">
+      <span>Anthropic · OpenAI · Google · Vercel</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        業界動向 <span class="sep">/</span> @ANTHROPICAI (公式) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic × Amazon — 5GWコンピュート確保と追加$5B投資</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-22/topic_1.png" data-alt="Anthropic × Amazon — 5GWコンピュート確保と追加$5B投資" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-22/topic_1.png" alt="Anthropic × Amazon — 5GWコンピュート確保と追加$5B投資" />
+      </div>
+      <p class="lede">
+        AnthropicがAmazonとの提携を拡大し、Claudeの学習・運用向けに最大5GWのコンピュートを確保する契約を結んだ。供給は今四半期から段階的に始まり、2026年末までに約1GWがオンラインになる見込み。同日Amazonは追加で50億ドルを出資し、将来的に最大200億ドルまで追加投資する可能性を示した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">最大5GWのコンピュート容量を確保（Claude学習・推論用）</li>
+        <li data-i="02">今四半期から供給開始、2026年末までに約1GWが稼働予定</li>
+        <li data-i="03">Amazonが$5Bを追加投資、将来最大$20Bまで可能性</li>
+        <li data-i="04">AnthropicのAWS依存度が更に深化</li>
+      </ul>
+      <div class="pull">
+        OpenAI / Google陣営との計算資源軍拡レースに対し、Anthropicが「AWSからの資金＋計算資源」両輪で追随する姿勢が明確化。Claudeの推論コスト低下と製品拡張余地に直結する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">14,283</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.anthropic.com/news/anthropic-amazon-compute">@AnthropicAI (公式)</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-20</dd>
+        <dt>CATEGORY</dt>
+        <dd>業界動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.anthropic.com/news/anthropic-amazon-compute">https://www.anthropic.com/news/anthropic-amazon-compute</a></dd>
+        <dd><a href="https://x.com/AnthropicAI/status/2046327624092487688">x.com/AnthropicAI/status/204632762409248…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · OPENAIDEVS / GDB</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ツール更新 <span class="sep">/</span> @OPENAIDEVS / @GDB <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI Codex Chronicle — 画面認識でIDE全体を記憶するエージェント</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-22/topic_2.png" data-alt="OpenAI Codex Chronicle — 画面認識でIDE全体を記憶するエージェント" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-22/topic_2.png" alt="OpenAI Codex Chronicle — 画面認識でIDE全体を記憶するエージェント" />
+      </div>
+      <p class="lede">
+        OpenAIがCodexの実験機能「Chronicle」を公開。バックグラウンドエージェントが定期的に画面キャプチャを解析し、直近の作業履歴をCodexのメモリとして保持する。エラー画面やUIを「これ」と指すだけで文脈が通じるようになる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">画面キャプチャから自動でメモリを生成するバックグラウンドエージェント</li>
+        <li data-i="02">内部コード名は『telepathy』（Sam Altmanが言及）</li>
+        <li data-i="03">macOSのPro契約者に先行提供（EU・UK・スイスは除外）</li>
+        <li data-i="04">レート消費が速いため利用に注意喚起</li>
+        <li data-i="05">エラー画面を『this/that』で参照可能</li>
+      </ul>
+      <div class="pull">
+        従来のコードベース参照型エージェントから、開発者のデスクトップ全体を読む方向へ一歩進んだ。Claude Codeの『Just-in-Time retrieval』発想とも共通するが、OpenAIは画面 = 実世界の文脈まで取り込む。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">4,358</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2046288243768082699">@OpenAIDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-20</dd>
+        <dt>CATEGORY</dt>
+        <dd>ツール更新</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2046288243768082699">x.com/OpenAIDevs/…</a></dd>
+        <dd><a href="https://x.com/sama/status/2046330082726384051">x.com/sama/status/2046330082726384051</a></dd>
+        <dd><a href="https://x.com/gdb/status/2046293955009274019">x.com/gdb/status/2046293955009274019</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · GOOGLEDEEPMIND</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        新モデル発表 <span class="sep">/</span> @GOOGLEDEEPMIND <span class="sep">/</span> NEWS
+      </div>
+      <h2>Google Deep Research / Deep Research Max 発表（Gemini 3.1）</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-22/topic_3.png" data-alt="Google Deep Research / Deep Research Max 発表（Gemini 3.1）" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-22/topic_3.png" alt="Google Deep Research / Deep Research Max 発表（Gemini 3.1）" />
+      </div>
+      <p class="lede">
+        GoogleがGemini 3.1ベースの自律リサーチエージェント「Deep Research」と上位版「Deep Research Max」を発表。任意のMCPサーバを接続して自社・サードパーティデータを横断分析できる点が特徴。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Deep Research: 速度/効率型（対話UIに最適）</li>
+        <li data-i="02">Deep Research Max: 深掘り・長時間型</li>
+        <li data-i="03">任意MCPサーバを接続可能（社内データ接続を想定）</li>
+        <li data-i="04">AI Pro / Ultra契約者は利用枠を増量（@GoogleAI告知）</li>
+      </ul>
+      <div class="pull">
+        OpenAI Deep Research / Anthropic Skillsに続く三つ目の大規模エージェント製品。MCPを正面から採用することで、プロトコル標準化が一段進む。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,350</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/GoogleDeepMind/status/2046627042335060342">@GoogleDeepMind</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-21</dd>
+        <dt>CATEGORY</dt>
+        <dd>新モデル発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/GoogleDeepMind/status/2046627042335060342">x.com/GoogleDeepMind/…</a></dd>
+        <dd><a href="https://x.com/GoogleAI/status/2046338574811853069">x.com/GoogleAI/status/204633857481185306…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · VERCEL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ <span class="sep">/</span> @VERCEL <span class="sep">/</span> NEWS
+      </div>
+      <h2>Vercel セキュリティインシデント — AIツール経由のMCPサプライチェーン侵害</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-22/topic_4.png" data-alt="Vercel セキュリティインシデント — AIツール経由のMCPサプライチェーン侵害" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-22/topic_4.png" alt="Vercel セキュリティインシデント — AIツール経由のMCPサプライチェーン侵害" />
+      </div>
+      <p class="lede">
+        Vercelが社内システムへの不正アクセスを公表。原因は数百のMCPサーバから秘密情報を抽出した第三者製AIツール。GitHub / Microsoft / npm / Socketと共同で影響範囲を調査している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">侵害元は外部AIツール経由のMCPサーバ悪用</li>
+        <li data-i="02">影響範囲は数百のMCPサーバ規模</li>
+        <li data-i="03">GitHub / Microsoft / npm / Socket と共同調査</li>
+        <li data-i="04">更新されたセキュリティ情報が随時公開</li>
+      </ul>
+      <div class="pull">
+        MCP普及と表裏一体の『AIツール⇄社内データ連携』サプライチェーンリスクが顕在化した代表事例。今後MCP導入にはスコープ管理と監査ログが実務必須。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">8,703</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/vercel/status/2045865072074035664">@vercel</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/vercel/status/2045865072074035664">x.com/vercel/…</a></dd>
+        <dd><a href="https://x.com/vercel/status/2046400830300172625">x.com/vercel/status/2046400830300172625</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · CLAUDEAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ツール更新 <span class="sep">/</span> @CLAUDEAI <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Cowork に Live Artifacts — 作業をセッション横断で再開</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-22/topic_5.png" data-alt="Claude Cowork に Live Artifacts — 作業をセッション横断で再開" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-22/topic_5.png" alt="Claude Cowork に Live Artifacts — 作業をセッション横断で再開" />
+      </div>
+      <p class="lede">
+        Claude Coworkに『Live Artifacts』タブが追加。作成物はすべてバージョン付きで自動保存され、別日・別セッションからでも続きを編集できる。全有料プランで即日利用可能。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Live Artifactsタブに自動保存＋バージョン履歴</li>
+        <li data-i="02">どのセッションからでも過去成果物を開いて作業再開可能</li>
+        <li data-i="03">全有料プラン対象、Claudeアプリ更新で利用可</li>
+      </ul>
+      <div class="pull">
+        ChatGPT Canvas に続き『成果物中心UI』の長期保存がデフォルト化。対話ログではなく成果物がAI SaaSの永続性単位になっていく流れ。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,103</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/claudeai/status/2046328621611065668">@claudeai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-20</dd>
+        <dt>CATEGORY</dt>
+        <dd>ツール更新</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/claudeai/status/2046328621611065668">x.com/claudeai/…</a></dd>
+        <dd><a href="https://x.com/claudeai/status/2046328622869344429">x.com/claudeai/status/204632862286934442…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · MASAHIROCHAEN  CEO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        教育・チュートリアル <span class="sep">/</span> @MASAHIROCHAEN (デジライズ CEO) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Claude Codeの検索はなぜ正確なのか？ ベクトル検索を捨てた本当の理由</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-22/topic_6.png" data-alt="Claude Codeの検索はなぜ正確なのか？ ベクトル検索を捨てた本当の理由" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-22/topic_6.png" alt="Claude Codeの検索はなぜ正確なのか？ ベクトル検索を捨てた本当の理由" />
+      </div>
+      <p class="lede">
+        Claude Codeが従来型RAG（ベクトル検索）を採用せず、Just-in-Time retrieval（Agentic Search）を選んだ理由を、ベクトル検索の原理から解説するロングフォーム記事。Boris Cherny本人の発言を一次ソースに、精度が高い5つの理由とトレードオフを整理する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">ベクトル検索を捨てた理由: コードは毎日変わる / 完全一致が必要 / インデックス管理が重い</li>
+        <li data-i="02">代替: Glob + Grep + Read の3ツールで実行時にロードする『探偵方式』</li>
+        <li data-i="03">精度が高い5つの理由: ①完全一致 ②常に最新 ③人間と同型 ④モデル改善に自動追従 ⑤Context Rot回避</li>
+        <li data-i="04">弱点: トークンコスト / セマンティック抽象検索 / 超大規模コードベース</li>
+        <li data-i="05">Anthropic自身は『小さな事前検索＋Agentic Search』のハイブリッドも推奨</li>
+      </ul>
+      <div class="pull">
+        多くの企業が入れる『社内コードRAG』設計への再考を迫る材料。Agentic Searchは推論コスト高だが、コード領域では精度面で優位と示す実例。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,034</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/masahirochaen/status/2045730009701400844">@masahirochaen</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>教育・チュートリアル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/masahirochaen/status/2045730009701400844">x.com/masahirochaen/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · ENGKHAIRALLAH1</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        教育・チュートリアル <span class="sep">/</span> @ENG_KHAIRALLAH1 <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>AIエージェントのチーム構築完全ガイド — Hub&amp;Spokeと3大失敗パターン</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-22/topic_7.png" data-alt="AIエージェントのチーム構築完全ガイド — Hub&amp;Spokeと3大失敗パターン" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-22/topic_7.png" alt="AIエージェントのチーム構築完全ガイド — Hub&amp;Spokeと3大失敗パターン" />
+      </div>
+      <p class="lede">
+        マルチエージェント・オーケストレーションの完全ガイド記事。Hub &amp; Spoke（コーディネータ + 専門家）構造、コンテキスト非継承という最頻出バグ、3大失敗パターンとその回避策を体系化している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">『1つの全部入りエージェント』より『特化型のチーム』が強い</li>
+        <li data-i="02">Hub &amp; Spoke: コーディネータがゴールを分解し専門家へ振り分け → 結果を集約</li>
+        <li data-i="03">最重要: 専門家はコーディネータの会話履歴を自動継承しない → 毎回明示的に渡す</li>
+        <li data-i="04">失敗3種: スコープ狭すぎ分解 / コンテキスト消失 / 多段中継による品質劣化（テレフォンエフェクト）</li>
+        <li data-i="05">回避策: 分解時のセルフチェック / 明示的コンテキスト引き渡し / 各段階で原典データも併渡し</li>
+      </ul>
+      <div class="pull">
+        Claude Agent SDK / OpenAI Swarm / LangGraphいずれでも必ず出る設計論点を、短時間で一式学べる。Vibe Coder Bootcamp受講生がエージェント設計する時の教科書になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,107</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/eng_khairallah1/status/2045430911257432225">@eng_khairallah1</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-18</dd>
+        <dt>CATEGORY</dt>
+        <dd>教育・チュートリアル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/eng_khairallah1/status/2045430911257432225">x.com/eng_khairallah1/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · YOSHIFUJIDESIGN</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        デザイン・UI <span class="sep">/</span> @YOSHIFUJIDESIGN (プレゼンテーションデザイナー) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Claude Designスライド作成最速レビュー — デザインシステム自動抽出</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-22/topic_8.png" data-alt="Claude Designスライド作成最速レビュー — デザインシステム自動抽出" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-22/topic_8.png" alt="Claude Designスライド作成最速レビュー — デザインシステム自動抽出" />
+      </div>
+      <p class="lede">
+        Anthropicの『Claude Design』を使ったスライド作成最速レビュー。会社ロゴや過去ポートフォリオを取り込むと、配色・タイポ・レイアウトを抽出してデザインシステム化し、新規スライドに即適用できる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">既存ビジュアル資産（ロゴ/ポートフォリオ）から自動でデザインシステム生成</li>
+        <li data-i="02">スライド専用UI、Tweak（バリエーション切替）機能</li>
+        <li data-i="03">スライド上で修正するとトークン消費が大きい</li>
+        <li data-i="04">デザイナー視点で現状の課題点も率直に指摘</li>
+      </ul>
+      <div class="pull">
+        『自社のデザイン資産をAIに学習させる』が実用段階に入った証拠。既存Canva/Figmaユーザーの選択肢に加わる可能性。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">106</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/yoshifujidesign/status/2045604338564030521">@yoshifujidesign</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>デザイン・UI</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/yoshifujidesign/status/2045604338564030521">x.com/yoshifujidesign/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://www.anthropic.com/news/anthropic-amazon-compute">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-04-21/">
+      ← 前日 · 2026-04-21
+      <span class="big">Claude Opus 4.7 正式リリース</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-04-22/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260422.0725</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

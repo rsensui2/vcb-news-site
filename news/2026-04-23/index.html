@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-04-23 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-04-23 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0423</span>
+    <span class="sep">/</span>
+    <span>2026-04-23</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260423.0734</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-04-23/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:34 · WED</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · WEDNESDAY · APRIL 23, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>04<span class="dot">.</span>23</h1>
+    <div class="strap">
+      <span>ChatGPT · OpenAI · Cursor · OpenAI「Euphony」OSS公開</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 6 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        新モデル発表 <span class="sep">/</span> @OPENAI 公式 / @SAMA / @GDB <span class="sep">/</span> NEWS
+      </div>
+      <h2>ChatGPT Images 2.0 発表 — 文字・UI崩れない&quot;thinking-level&quot;画像モデル</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-23/topic_1.png" data-alt="ChatGPT Images 2.0 発表 — 文字・UI崩れない&quot;thinking-level&quot;画像モデル" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-23/topic_1.png" alt="ChatGPT Images 2.0 発表 — 文字・UI崩れない&quot;thinking-level&quot;画像モデル" />
+      </div>
+      <p class="lede">
+        OpenAIが新世代画像生成モデル「ChatGPT Images 2.0」（内部コード名 &quot;telepathy&quot;）を正式発表。最大2K解像度、細かい文字・UI要素・複雑なレイアウトを崩さずに描画できる推論型モデルで、Sam Altmanは「OpenAI過去最高のリリース」と評価。発表直後からデモが大量拡散し、公式投稿は21,440いいねを記録した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">最大2K解像度、文字・UI・密度の高い構図でも破綻しにくい</li>
+        <li data-i="02">&quot;thinking&quot;（推論）で指示追従性が大幅向上、一発で実用品質</li>
+        <li data-i="03">360度equirectangular、マンガ・ポスター・スライド資料も実用レベル</li>
+        <li data-i="04">ChatGPT（Proプラン200ドル含む）で即日利用可能</li>
+        <li data-i="05">Nanobanana Pro（Google）と真っ向勝負の構図</li>
+        <li data-i="06">UIモック・LP画像・プレゼン図版をプロンプト1本で量産可能</li>
+      </ul>
+      <div class="pull">
+        Vibe Coderにとって即効性の高い「文字が崩れない」ポイントが解消され、スライド素材・LP画像・UIモックを外注せずに完結できる。画像を使った開発ワークフローが今週で一気に塗り替わる可能性がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">21,440</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAI/status/2046670977145372771">@OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>新モデル発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAI/status/2046670977145372771">x.com/OpenAI/…</a></dd>
+        <dd><a href="https://x.com/sama/status/2046598595869331894">x.com/sama/status/2046598595869331894</a></dd>
+        <dd><a href="https://x.com/gdb/status/2046632580527554572">x.com/gdb/status/2046632580527554572</a></dd>
+        <dd><a href="https://x.com/minchoi/status/2046710643479265340">x.com/minchoi/status/2046710643479265340…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · SAM ALTMANOPENAI C</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ツール更新 <span class="sep">/</span> SAM ALTMAN（OPENAI CEO） <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI Codex、MAU 4M突破＋レート上限リセット</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-23/topic_2.png" data-alt="OpenAI Codex、MAU 4M突破＋レート上限リセット" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-23/topic_2.png" alt="OpenAI Codex、MAU 4M突破＋レート上限リセット" />
+      </div>
+      <p class="lede">
+        Sam Altmanが「Codex月間アクティブユーザー400万人に到達、3M到達からわずか2週間弱」と発表。同時に「本日レートリミットをリセット（緩和）する」と即時アクションを告知。Chronicleメモリ・Mac連携・Computer Useなど直近の大型アップデートで利用が垂直に伸びた流れが可視化された。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">MAU 3M → 4M を 2 週間弱で達成</li>
+        <li data-i="02">Chronicle メモリ / Mac連携 / Computer Use のリリースが牽引</li>
+        <li data-i="03">同日に Plus / Pro / Team のレート上限が緩和</li>
+        <li data-i="04">Brockman の「Codexは開発者のユニバーサルアプリ」発言と整合</li>
+        <li data-i="05">Claude Code / Cursor / Codex の三つ巴でCodexが「長時間回せる選択肢」として浮上</li>
+      </ul>
+      <div class="pull">
+        Codexでタスクを中断していた人は今週以降もう一度踏み込めるタイミング。Vibe Coder Bootcamp受講生には「今週はCodexを使い倒すチャンス」として伝えられるタイムセンシティブ情報。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">23,499</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/sama/status/2046604989527912590">@sama</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>ツール更新</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/sama/status/2046604989527912590">x.com/sama/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · CURSORAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        業界動向 <span class="sep">/</span> @CURSOR_AI 公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cursor × SpaceX 提携 — Composerモデルを&quot;現実の難コード&quot;で強化</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-23/topic_3.png" data-alt="Cursor × SpaceX 提携 — Composerモデルを&quot;現実の難コード&quot;で強化" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-23/topic_3.png" alt="Cursor × SpaceX 提携 — Composerモデルを&quot;現実の難コード&quot;で強化" />
+      </div>
+      <p class="lede">
+        Cursorが自社コーディングモデル「Composer」の学習をSpaceXと共同で強化すると発表。SpaceXの航空宇宙系コードベースという「実世界の難コード」でファインチューニングし、Composerの性能を引き上げる狙い。Cursor側はClaude/GPT依存を減らす自社モデル路線を一段階進めた格好。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">提携先は SpaceX（イーロン・マスク傘下）</li>
+        <li data-i="02">対象は Cursor Composer（既定エージェントモデルの一つ）</li>
+        <li data-i="03">SpaceX側は社内開発者の生産性向上が狙い</li>
+        <li data-i="04">Cursorは「外部モデルのラッパー」から「自社モデルも持つ基盤」へシフト</li>
+        <li data-i="05">中期インパクト枠 — 今日すぐ変わるものではない</li>
+      </ul>
+      <div class="pull">
+        Cursor Composerの完成度が上がるとClaude/GPTの従量課金を回避しつつ高速という選択肢が現実になる。Vibe Coderの「どのモデルを主力にするか」判断材料が増え、特にコスト重視派には中期的に重要な材料。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">11,483</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2046726224266043533">@cursor_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>業界動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2046726224266043533">x.com/cursor_ai/…</a></dd>
+        <dd><a href="https://cursor.com/blog/spacex-model-training">cursor.com/blog/spacex-model-training</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · OPENAIDEVS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ツール更新 <span class="sep">/</span> @OPENAIDEVS <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI「Euphony」OSS公開 — Codexセッションログ可視化ツール</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-23/topic_4.png" data-alt="OpenAI「Euphony」OSS公開 — Codexセッションログ可視化ツール" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-23/topic_4.png" alt="OpenAI「Euphony」OSS公開 — Codexセッションログ可視化ツール" />
+      </div>
+      <p class="lede">
+        OpenAI DevsがCodexセッションログ・チャットデータを可視化するOSSツール「Euphony」を公開。公開URLまたはローカルのログファイルを投げ込むと、生ログを読みやすいビューに変換し、翻訳・フィルタ・編集まで対応する。長時間エージェント実行のレビューやバグ報告の土台を整備するツール。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">OSS公開（ライセンスは告知リンク先）</li>
+        <li data-i="02">入力: Codexセッションの公開URL、またはローカルのチャット/ログファイル</li>
+        <li data-i="03">機能: 翻訳、フィルタリング、編集、読みやすい形式への変換</li>
+        <li data-i="04">想定用途: 長時間エージェント実行のレビュー、学習素材化</li>
+      </ul>
+      <div class="pull">
+        Codexを長時間エージェントで回すとログが巨大化して追えない問題が現場で頻発していた。Euphonyはそこを埋めるOSSで、エージェント実行→レビュー→改善ループを高速化したい中〜上級者に刺さる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">4,191</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2046620363568890230">@OpenAIDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>ツール更新</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2046620363568890230">x.com/OpenAIDevs/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · GARRY TAN GARRYTAN</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        教育・チュートリアル <span class="sep">/</span> GARRY TAN (@GARRYTAN) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>AIエージェントに同じミスをさせないための「スキル化」アプローチ — Garry Tan推薦</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-23/topic_5.png" data-alt="AIエージェントに同じミスをさせないための「スキル化」アプローチ — Garry Tan推薦" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-23/topic_5.png" alt="AIエージェントに同じミスをさせないための「スキル化」アプローチ — Garry Tan推薦" />
+      </div>
+      <p class="lede">
+        YC CEOのGarry Tanが紹介した長文記事。筆者は「失敗を二度と起こさないためにはプロンプト微調整ではなく、失敗を恒久的な構造（SKILL.md + 決定論的コード + テスト）に変換する」という&quot;Skillify&quot;手法を提案する。LangChain/LangSmithは評価基盤として精緻だが「何を・どの順に・いつテストするか」を指示するワークフローを提供しないという批判から入り、10段チェックリストを体系化している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">10段チェックリスト: SKILL.md / 決定論コード / ユニットテスト / インテグレーションテスト / LLM評価 / resolver trigger / resolver評価 / 重複監査 / E2E smoke test / brain filing</li>
+        <li data-i="02">判断が必要な仕事（latent）と精度が必要な仕事（deterministic）を分離、後者はスクリプト化してLLMから剥がす</li>
+        <li data-i="03">「skillify」が動詞化し、会話プロトタイピング→永続スキル化のループが日常運用に</li>
+        <li data-i="04">check-resolvableで「到達不可能なスキル」を検出、初回で15%が暗闇だったと報告</li>
+        <li data-i="05">Hermesがスキル作成、GBrainが検証を扱う両輪論</li>
+        <li data-i="06">GBrain SkillPack経由で他ハーネスに移植可能</li>
+      </ul>
+      <div class="pull">
+        VBC受講者が内製エージェントを運用する際の教科書として機能する体系論。Vibe Coder Bootcampの「失敗→スキル化」運用ガイドにそのまま項目追加できる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">940</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/garrytan/status/2046876981711769720">@garrytan</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>教育・チュートリアル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/garrytan/status/2046876981711769720">x.com/garrytan/…</a></dd>
+        <dd><a href="https://x.com/i/article/2046866228703363072">x.com/i/article/2046866228703363072</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · AI EDGE AIEDGE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        デザイン・UI <span class="sep">/</span> AI EDGE (@AIEDGE_) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Claude Design 完全ガイド — AI Edge 徹底レビュー</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-23/topic_6.png" data-alt="Claude Design 完全ガイド — AI Edge 徹底レビュー" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-23/topic_6.png" alt="Claude Design 完全ガイド — AI Edge 徹底レビュー" />
+      </div>
+      <p class="lede">
+        AI Edgeが週末検証を経てまとめたClaude Design（Anthropic Labsが先週リリース）の完全ガイド記事。筆者は「Canva/Figmaを二度と開かない」と断言し、マーケキャンペーン・プレゼン・インフォグラフィック・提案書まで会話指示でフラット化する点を推す。アクセス方法（60秒）・UI解説・実例・Pro Tipsを網羅した&quot;Ultimate Guide&quot;スタイル。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Claude Designは通常のClaudeチャット/Codeとは独立した使用量枠（週次リセット）</li>
+        <li data-i="02">4つの開始オプション: Prototype / Slide Deck / From Template / Other</li>
+        <li data-i="03">「Design Systems」にブランドカラー・フォント・コードベースを登録、Claude Skillsをビジュアル向けに拡張した形</li>
+        <li data-i="04">Pro Tips: Approve/Deny学習、Canvaエクスポート、Tweaks、手描きDraw</li>
+        <li data-i="05">claude.ai/design から直接アクセス可</li>
+        <li data-i="06">Anthropicアナウンス投稿は約6000万ビューを記録</li>
+      </ul>
+      <div class="pull">
+        VBC・リタリコ向けデザインワークショップで「Claude Designを中心に」構成できる実用教材。Figma/Canvaで1-2時間かかっていた作業を数分で処理できる実証は、受講者の生産性に直結する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">624</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/aiedge_/status/2046352285622731011">@aiedge_</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-21</dd>
+        <dt>CATEGORY</dt>
+        <dd>デザイン・UI</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/aiedge_/status/2046352285622731011">x.com/aiedge_/…</a></dd>
+        <dd><a href="https://x.com/i/article/2046256347453497344">x.com/i/article/2046256347453497344</a></dd>
+        <dd><a href="https://claude.ai/design">claude.ai/design</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · KENSUU</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ワークフロー <span class="sep">/</span> けんすう (@KENSUU) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Claude Design 実用ワークフロー — テンプレ生成はDesign、実装はClaude Codeに</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-23/topic_7.png" data-alt="Claude Design 実用ワークフロー — テンプレ生成はDesign、実装はClaude Codeに" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-23/topic_7.png" alt="Claude Design 実用ワークフロー — テンプレ生成はDesign、実装はClaude Codeに" />
+      </div>
+      <p class="lede">
+        起業家けんすう氏によるClaude Designの実戦ノウハウ。Claude Design上で細かい修正を重ねるとトークンを大量消費するため、「テンプレだけDesignで作らせて、あとはClaude Codeでローカル実装」という分業が最適解と結論する。ダウンロード→CSS/JS分離→DESIGN.md整備→新規資料は既存テンプレを流用、という5段ワークフローを提示している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Step1: サイトデザインを放り込みテンプレートだけ生成</li>
+        <li data-i="02">Step2: 各ページの見せ方を生成</li>
+        <li data-i="03">Step3: ダウンロードしてClaude Codeでローカル実装</li>
+        <li data-i="04">Step4: CSS/JS分離 + DESIGN.md / ルールブック整備</li>
+        <li data-i="05">Step5: 新規資料は既存テンプレを元にClaude Code / Cowork / Codexで生成</li>
+        <li data-i="06">Claude Design上での細かい修正はトークン浪費なので避ける</li>
+      </ul>
+      <div class="pull">
+        「Claude Designはプロトタイプ専用、本番実装はCode」という棲み分けを明示することで、VBC受講者の「ツール選び迷子」を回避させられる。nanobanana slide generatorの設計思想とも一致する再現性の高い型。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,312</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/kensuu/status/2046439010663612540">@kensuu</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-21</dd>
+        <dt>CATEGORY</dt>
+        <dd>ワークフロー</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/kensuu/status/2046439010663612540">x.com/kensuu/…</a></dd>
+        <dd><a href="https://claude.com/design">claude.com/design</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · FUJI / PRESENTATIO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ワークフロー <span class="sep">/</span> FUJI / PRESENTATION DESIGNER (@YOSHIFUJIDESIGN) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Claude Designのトークン消費を抑える3段運用ハック — FUJI</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-23/topic_8.png" data-alt="Claude Designのトークン消費を抑える3段運用ハック — FUJI" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-23/topic_8.png" alt="Claude Designのトークン消費を抑える3段運用ハック — FUJI" />
+      </div>
+      <p class="lede">
+        プレゼンテーションデザイナーFUJI氏によるClaude Designのトークン節約ハック記事。Claude Designはリサーチプレビュー中で独自消費率が適用される上、デザインシステム構築のワークロードが重く、ちょっとした修正でもトークンを急速に消費する。対策は「①Designでデザインシステム+初期データを作る → ②ローカルにダウンロード → ③修正はClaude Codeで」の3段運用。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">リサーチプレビューのため通常と違うトークン消費率が適用されている</li>
+        <li data-i="02">デザインシステム構築のワークロード自体が重い</li>
+        <li data-i="03">Claude Designが活きるのは「デザインシステム + 初回の大物生成」まで</li>
+        <li data-i="04">微調整レベルではClaude CodeとDesignの生成物に大きな差はない</li>
+        <li data-i="05">Max週間制限を使い切った実体験ベースの知見</li>
+      </ul>
+      <div class="pull">
+        Maxプラン勢のClaude Design運用ガイドに直接追加できる実務知見。けんすう氏と独立に同じパターンに到達している点が、この分業が実務家合意になりつつある証拠。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">523</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/yoshifujidesign/status/2046123657991250425">@yoshifujidesign</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-20</dd>
+        <dt>CATEGORY</dt>
+        <dd>ワークフロー</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/yoshifujidesign/status/2046123657991250425">x.com/yoshifujidesign/…</a></dd>
+        <dd><a href="https://x.com/i/article/2046117129116872704">x.com/i/article/2046117129116872704</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/OpenAI/status/2046670977145372771">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-04-22/">
+      ← 前日 · 2026-04-22
+      <span class="big">Anthropic × Amazon — 5GWコンピュート確保と追加$5B投資</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-04-23/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260423.0734</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

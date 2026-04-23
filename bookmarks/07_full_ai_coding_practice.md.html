@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №267</span>
+    <span class="tick">BOOKMARK №273</span>
     <span class="sep">/</span>
-    <span>2026-04-23</span>
+    <span>2026-04-24</span>
     <span class="sep">/</span>
     <span>@erukiti</span>
     <span class="sep">/</span>
-    <span>298 ITEMS</span>
+    <span>304 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:20 THU</span>
+    <span>JST 08:55 FRI</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,19 +305,19 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-04-22/">NEWS</a>
+      <a href="../news/2026-04-23/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:20 · THU</div>
+    <div class="meta">JST · 08:55 · FRI</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 日付不明 <span>/</span> №267
+      <a href="./">← BOOKMARKS</a> <span>/</span> 日付不明 <span>/</span> №273
     </div>
     <div class="cat-line">
       <span>💻 AI/開発</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">実践フルAIコーディング</h1>
     <div class="strap">
-      <span><span class="label">№</span>267 / 298</span>
+      <span><span class="label">№</span>273 / 304</span>
       <span><span class="label">SRC</span><a href="https://x.com/erukiti/status/1997852663699128604" target="_blank" rel="noopener noreferrer">x.com/erukiti ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/07_full_ai_coding_practice.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">267<span class="ord">BOOKMARK / 298</span></aside>
+    <aside class="numeral">273<span class="ord">BOOKMARK / 304</span></aside>
     <article class="prose">
 <p><strong>記事URL:</strong> https://zenn.dev/erukiti/articles/2512-full-ai-cofing  </p><p><strong>エンゲージメント:</strong> 143リポスト / 860いいね / 918ブックマーク / 9.4万表示</p><h2>概要</h2><p>9ヶ月間フルAIコーディングを実践してきた著者が、LLMの特性を理解した上での実践ノウハウを凝縮した記事。「AIコーディングにおいて、コードの品質は、人間による不断の努力と、いくつものノウハウによってのみ実現できる」という現実を語る。</p><h2>LLMの本質的な問題点</h2><h3>1. 非決定的振る舞い</h3><ul><li>同じプロンプトでも同じ結果にならない</li><li>同じセッションでも異なるファイルで異なるやり方を採用する</li><li>コメント方針、ファイル名ルール、設計原則への理解度がバラつく</li></ul><p><strong>対処法:</strong></p><ul><li>linterでなんとかする</li><li>MCPでなんとかする</li><li>人間が鉄人の精神と不断の努力で逐一レビュー</li></ul><h3>2. 与えられた情報を全て正とする</h3><ul><li>誤った推論や誤観測データも「絶対に正しい」と思い込む</li><li>「カバレッジは100%です！！！」（実際には98%）</li><li>子プロセスの出力結果取り込みが驚くほど下手</li></ul><p><strong>対処法:</strong></p><ul><li>汚染されたセッションは捨てる</li><li>学習データの多い言語・ライブラリを選定する</li><li>Playwright MCPなどで正しい観測を可能にする</li></ul><h3>3. 矛盾や未知に対して勝手な解釈をしがち</h3><ul><li>「指示が矛盾していたのでいい感じに解釈しました！！」</li><li>デフォルトフォールバックを勝手に実装</li><li>人間では理解しがたい独自思想にたどり着く</li></ul><h3>4. 知識を持っていても活用できない</h3><ul><li>SOLID原則を説明できるが、実際のコードではガン無視</li><li>常識的な推論が失敗することが多い</li><li>確率によってできることもできないこともある</li></ul><h3>5. 要約が下手くそ</h3><ul><li>重要なことがやたら抜け落ちる</li><li>thinking/reasoningで変なことを言い出す</li><li>「目的」や「最初の指示」を忘れる</li></ul><h2>推奨技術スタック</h2><h3>TypeScriptが最善な理由</h3><ul><li>GitHubで最も使われている言語</li><li>学習データが増え続ける</li><li>OpenAI, Google, Anthropicが改善労力を集中投下する</li></ul><h3>推奨スタック</h3><ul><li>TypeScript</li><li>Node.js LTS (v22, v24)</li><li>pnpm</li><li>eslint</li><li>vitest</li><li>husky</li><li>React</li><li>何かしらのResult型（neverthrowなど）</li></ul><p><strong>注意:</strong> bun / bun testは現時点では強く非推奨（将来的には改善される見込み）</p><h2>eslint活用</h2><p>必須設定:</p><ul><li>enum禁止</li><li>class原則禁止</li><li>throw禁止</li><li>Promise返却禁止（ResultAsyncに寄せる）</li><li>try/catch禁止（腐敗防止層のみ許可）</li><li>barrel export厳守</li><li>eslint-plugin-boundaries でimport方向を強制</li></ul><h2>レイヤー構造は必須</h2><ul><li>知識を明確に分離できる設計</li><li>依存の方向を必ず一方向に</li><li>外部パッケージやI/Oに対する腐敗防止レイヤーが最重要</li><li>パッケージ依存は最小限に</li></ul><h2>テスト戦略</h2><ul><li>カバレッジ100%が望ましい</li><li><strong>テスティングトロフィーは忘れる</strong> — 人間がプログラミングしていた時代の考え方</li><li><strong>AIコーディングでは結合テストがすべて</strong></li><li>サーバーはAPI一本ごとに、実際のDB読み書き含めた結合テスト必須</li></ul><h2>コメントとTSDoc</h2><ul><li>めちゃくちゃ強めに言う必要あり（サボりがち）</li><li>TSDocには目的・内容・注意事項を書かせる</li><li>「プロジェクト外の慣れてないエンジニアでも読めるよう書け」と指示</li><li>特にテストは過剰なほど手厚くコメントを書かせる</li></ul><h2>見積もりと設計</h2><p>設計時に必ず見積もりをさせる。以下のようなプロンプトを使う:</p><pre><code>- コーディングエージェントが必要な作業のみを全部見積もれ
 - 編集対象ファイル名と行番号を明示しろ
@@ -396,14 +396,14 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 298 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 304 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-04-22/">TODAY</a></li>
+          <li><a href="../news/2026-04-23/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -430,7 +430,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-04-23</span>
+      <span>BUILD 2026-04-24</span>
     </div>
   </div>
 </footer>

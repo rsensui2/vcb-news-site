@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-04-24 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-04-24 の Vibe Coder Bootcamp モーニングディスパッチ — 5本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0424</span>
+    <span class="sep">/</span>
+    <span>2026-04-24</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>05 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260424.0902</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-04-24/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 09:02 · THU</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · THURSDAY · APRIL 24, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>04<span class="dot">.</span>24</h1>
+    <div class="strap">
+      <span>OpenAI · OpenAI · Anthropic · Claude</span>
+      <span><span class="count">05</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        新モデル発表 <span class="sep">/</span> @OPENAI 公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI が GPT-5.5 を発表 — エージェント時代の新クラスモデル</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-24/topic_1.png" data-alt="OpenAI が GPT-5.5 を発表 — エージェント時代の新クラスモデル" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-24/topic_1.png" alt="OpenAI が GPT-5.5 を発表 — エージェント時代の新クラスモデル" />
+      </div>
+      <p class="lede">
+        OpenAIが新モデルGPT-5.5を発表した。「実務とエージェント駆動のための新クラスの知能」と位置付けられ、複雑ゴールの理解・ツール使用・自己検証・長タスクの完遂能力が強化されている。ChatGPTとCodexで即日利用可能で、『コンピュータ作業を進める新しい方法』と打ち出している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">モデル名はGPT-5.5、ChatGPTとCodexで即日提供</li>
+        <li data-i="02">重点機能は複雑ゴール理解・ツール使用・self-check・長タスク完遂</li>
+        <li data-i="03">エージェント駆動のプラットフォームを下支えする基盤モデルとして設計</li>
+        <li data-i="04">@zento_aiの検証でGPT-5.5+Codexによる画像→UI再現の精度が『何この再現レベル』と高評価</li>
+        <li data-i="05">OpenAI戦略は『モデル性能』と『エージェント運用基盤（Workspace Agents）』の二本立て</li>
+      </ul>
+      <div class="pull">
+        エージェントが長く走るワークフローを最後まで完遂できることを謳う新クラス。画像→コード化の実用ラインに乗った可能性が高く、デザイン→実装のハンズオフが更に縮む。VBC/リタリコの業務自動化の基盤モデル候補として要評価。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAI/status/2047376561205325845">@OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-24</dd>
+        <dt>CATEGORY</dt>
+        <dd>新モデル発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAI/status/2047376561205325845">x.com/OpenAI/…</a></dd>
+        <dd><a href="https://x.com/zento_ai/status/2047382349059698927">x.com/zento_ai/status/204738234905969892…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · OPENAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ツール更新 <span class="sep">/</span> @OPENAI 公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI Workspace Agents — ChatGPTにチーム共有エージェント</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-24/topic_2.png" data-alt="OpenAI Workspace Agents — ChatGPTにチーム共有エージェント" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-24/topic_2.png" alt="OpenAI Workspace Agents — ChatGPTにチーム共有エージェント" />
+      </div>
+      <p class="lede">
+        OpenAIがChatGPT上でWorkspace Agentsを発表。ツール・チームをまたぐ複雑タスクと長時間ワークフローを扱う『共有エージェント』で、個人のChatGPTセッションから組織レベルのエージェント運用への進化を狙っている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">提供場所はChatGPT本体</li>
+        <li data-i="02">複数ツール連携と長時間ワークフローが主用途</li>
+        <li data-i="03">個人単位ではなくチーム単位で共有するエージェント</li>
+        <li data-i="04">Anthropic Managed Agentsと直接競合する位置づけ</li>
+        <li data-i="05">組織における『共有AI作業員』のポジション獲得を意図</li>
+      </ul>
+      <div class="pull">
+        『AI 組織化』のレイヤーで、OpenAI側の標準構築ツールが揃った。VBC/リタリコの部署横断ナレッジエージェントやオペレーション自動化の有力候補。Anthropic Managed Agentsとの比較評価タイミングが到来した。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAI/status/2047008987665809771">@OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>ツール更新</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAI/status/2047008987665809771">x.com/OpenAI/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · CLAUDEDEVS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ツール更新 <span class="sep">/</span> @CLAUDEDEVS 公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic、Claude Code 品質劣化ポストモーテム公開 — v2.1.116+ で修正</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-24/topic_3.png" data-alt="Anthropic、Claude Code 品質劣化ポストモーテム公開 — v2.1.116+ で修正" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-24/topic_3.png" alt="Anthropic、Claude Code 品質劣化ポストモーテム公開 — v2.1.116+ で修正" />
+      </div>
+      <p class="lede">
+        過去1ヶ月間の『Claude Codeの応答品質が落ちた』という報告について、Anthropicが3つの問題を特定したポストモーテムを公開した。全ての問題は v2.1.116+ で修正済みで、全サブスクライバーの使用量制限もリセットされた。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">問題数は3件、公式ポストモーテムが公開された</li>
+        <li data-i="02">修正バージョンは v2.1.116 以降</li>
+        <li data-i="03">補償措置として全サブスクライバーの usage limit をリセット</li>
+        <li data-i="04">品質問題を公式に認めた透明性の高い運用の事例</li>
+        <li data-i="05">Claude Code を業務利用するチームは即アップデート推奨</li>
+      </ul>
+      <div class="pull">
+        『最近Claude Codeが微妙』という肌感覚を持っていた開発者にとって公式の裏付けとなり、v2.1.116+へのアップデートが急務となる。SaaSのポストモーテム運用のベンチマーク事例としても価値が高い。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2047371123185287223">@ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-24</dd>
+        <dt>CATEGORY</dt>
+        <dd>ツール更新</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2047371123185287223">x.com/ClaudeDevs/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · CLAUDEDEVS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ツール更新 <span class="sep">/</span> @CLAUDEDEVS 公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code /ultrareview — クラウドでバグハンター艦隊を並列実行</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-24/topic_4.png" data-alt="Claude Code /ultrareview — クラウドでバグハンター艦隊を並列実行" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-24/topic_4.png" alt="Claude Code /ultrareview — クラウドでバグハンター艦隊を並列実行" />
+      </div>
+      <p class="lede">
+        Claude Codeに /ultrareview（リサーチプレビュー）が追加された。クラウド上で多数のバグハンティング・エージェントを並列起動し、結果をCLIまたはDesktopに自動で返送する。認証やデータマイグレーションなどリスクの高い変更のマージ前利用が推奨され、Pro/Maxユーザーは 5/5 まで3回無料で使える。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">コマンドは /ultrareview（CLI）</li>
+        <li data-i="02">実行場所はクラウドで、並列にエージェント艦隊が走る</li>
+        <li data-i="03">結果は CLI と Desktop の両方に自動返送</li>
+        <li data-i="04">無料枠: Pro/Max ユーザーに 5/5 までの期間 3 回分</li>
+        <li data-i="05">推奨ユース: auth、DBマイグレーションなどクリティカルPRのマージ前ゲート</li>
+      </ul>
+      <div class="pull">
+        『AIは局所バグ検出、人間は設計判断』の棲み分けが公式プロダクトとして実装された。VBC/リタリコのPRマージ前チェックリストに組み込める即戦力機能で、人的レビュー負荷を下げる具体的な一手となる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2046999435239133246">@ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>ツール更新</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2046999435239133246">x.com/ClaudeDevs/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · STITCHBYGOOGLE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        デザイン/UI <span class="sep">/</span> @STITCHBYGOOGLE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Google Stitch、DESIGN.md 仕様をオープンソース化</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-24/topic_5.png" data-alt="Google Stitch、DESIGN.md 仕様をオープンソース化" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-24/topic_5.png" alt="Google Stitch、DESIGN.md 仕様をオープンソース化" />
+      </div>
+      <p class="lede">
+        GoogleのStitchチームがDESIGN.mdのドラフト仕様をオープンソース化した。プロジェクト・ツール・プラットフォームを横断してデザインルール（色・タイポ・コンポーネント意図など）を可搬的に export / import できる共通フォーマットで、AIエージェントが色や意図を推測ではなく参照できるようにする。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">名称は DESIGN.md（ドラフト仕様）</li>
+        <li data-i="02">オープンソース化され、Stitch以外のツールからも利用可能</li>
+        <li data-i="03">export / import でプロジェクト間を持ち運べる</li>
+        <li data-i="04">AIエージェントが色・コンポーネント意図を推測なしに参照可能</li>
+        <li data-i="05">CLAUDE.md / AGENTS.md のデザイン版ポジショニング</li>
+      </ul>
+      <div class="pull">
+        エージェントに『デザイン意図を明示的に渡す』標準ドキュメントが登場した。VBC / リタリコの内製デザインシステムを DESIGN.md 化して Claude / ChatGPT / Stitch から横断参照する運用が次の一手として有望。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/stitchbygoogle/status/2046624729403142320">@stitchbygoogle</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>デザイン/UI</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/stitchbygoogle/status/2046624729403142320">x.com/stitchbygoogle/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/OpenAI/status/2047376561205325845">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-04-23/">
+      ← 前日 · 2026-04-23
+      <span class="big">ChatGPT Images 2.0 発表 — 文字・UI崩れない&quot;thinking-level&quot;画像モデル</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-04-24/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260424.0902</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

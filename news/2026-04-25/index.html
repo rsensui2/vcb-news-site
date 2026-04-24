@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-04-25 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-04-25 の Vibe Coder Bootcamp モーニングディスパッチ — 6本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0425</span>
+    <span class="sep">/</span>
+    <span>2026-04-25</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>06 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260425.0725</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-04-25/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:25 · FRI</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · FRIDAY · APRIL 25, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>04<span class="dot">.</span>25</h1>
+    <div class="strap">
+      <span>Matt · Cursor · Anthropic · OpenAI</span>
+      <span><span class="count">06</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        モデル評価・ベンチマーク <span class="sep">/</span> @MATTSHUMER_ / X ARTICLE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Matt Shumer の GPT-5.5 詳細レビュー — 「日常では実感しにくいが押し込むと別物」</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-25/topic_1.png" data-alt="Matt Shumer の GPT-5.5 詳細レビュー — 「日常では実感しにくいが押し込むと別物」" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-25/topic_1.png" alt="Matt Shumer の GPT-5.5 詳細レビュー — 「日常では実感しにくいが押し込むと別物」" />
+      </div>
+      <p class="lede">
+        Matt Shumer が GPT-5.5 の長文レビューを公開。結論は「明確なアップグレードだが、従来モデルが既に異常な水準だったため日常 eng では実感しにくい」「真の差はデザイン・ネイティブ/モバイル・セキュリティ・低 reasoning モード・ハーネスで現れる」「Pro は速いが書き味と判断にレグレッション」というニュアンス重視の評価。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">セキュリティレビュー用途で Opus / 過去 GPT が見逃した実脆弱性を検出 — 汎用モデル最強クラス</li>
+        <li data-i="02">GPT Image 2 のモック → GPT-5.5 実装の組み合わせが Opus 並みの UI 出力に到達</li>
+        <li data-i="03">Swift / Mac ネイティブ・モバイル開発が一段と安定</li>
+        <li data-i="04">低〜中 reasoning モードでも実用品質、Opus 化した手触り（速くて楽しい）</li>
+        <li data-i="05">Pro は 1文1改行のクセや判断ミスがあり執筆用途は推奨しない</li>
+        <li data-i="06">単体モデル性能は飽和、マルチエージェント・ハーネスが次の伸びしろ</li>
+      </ul>
+      <div class="pull">
+        GPT-5.5 を Codex 置き換えだけで判断するのは過小評価。セキュリティ監査・既存 UI 拡張・ネイティブアプリ開発で明確な優位があり、VBC / TEKION でもコードレビュー工程に GPT-5.5 を組み込む実務価値が高い。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">180</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/mattshumer_/status/2047376179414421957">@mattshumer_</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-24</dd>
+        <dt>CATEGORY</dt>
+        <dd>モデル評価・ベンチマーク</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/mattshumer_/status/2047376179414421957">x.com/mattshumer_/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · CURSORAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ツール統合 <span class="sep">/</span> @CURSOR_AI 公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cursor が GPT-5.5 統合 — CursorBench 首位 72.8%、5/2 まで 50% OFF</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-25/topic_2.png" data-alt="Cursor が GPT-5.5 統合 — CursorBench 首位 72.8%、5/2 まで 50% OFF" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-25/topic_2.png" alt="Cursor が GPT-5.5 統合 — CursorBench 首位 72.8%、5/2 まで 50% OFF" />
+      </div>
+      <p class="lede">
+        Cursor が GPT-5.5 を即日提供開始。CursorBench で 72.8% の首位スコアを獲得し、OpenAI とのパートナーシップで 5 月 2 日まで 50% OFF を提供。Claude Opus / 既存 GPT 系を上回る評価が早期から付いた格好。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Cursor で GPT-5.5 が即日利用可能</li>
+        <li data-i="02">CursorBench で 72.8% の首位スコア</li>
+        <li data-i="03">5 月 2 日まで 50% OFF</li>
+        <li data-i="04">Claude Opus 4.7 を上回るベンチ結果</li>
+        <li data-i="05">Claude Code 併用組には今週中の比較推奨（@Axel_bitblaze69 ほか）</li>
+      </ul>
+      <div class="pull">
+        Codex / ChatGPT の枠を超えて IDE 最大手 Cursor で標準モデル候補に躍り出た。Vibe Coder Bootcamp 推奨スタックでも GPT-5.5 検証は必須。価格期間限定なので試すなら今週。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">3,077</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2047744579127185843">@cursor_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-24</dd>
+        <dt>CATEGORY</dt>
+        <dd>ツール統合</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2047744579127185843">x.com/cursor_ai/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · ANTHROPICAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI研究 <span class="sep">/</span> @ANTHROPICAI 公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic が Project Deal を発表 — Claude にオフィス内マーケットの交渉を任せる研究</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-25/topic_3.png" data-alt="Anthropic が Project Deal を発表 — Claude にオフィス内マーケットの交渉を任せる研究" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-25/topic_3.png" alt="Anthropic が Project Deal を発表 — Claude にオフィス内マーケットの交渉を任せる研究" />
+      </div>
+      <p class="lede">
+        Anthropic が新研究 Project Deal を公開。SF オフィスで社員向けのマーケットプレイスを作り、その売買・交渉を Claude に代理させる実験。エージェントが他の人間（社員）と利害を巡って交渉する状況での挙動を観察する研究で、AI を社会的・経済的アクターとして位置付ける流れ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Anthropic SF オフィスで社員間マーケットを開設</li>
+        <li data-i="02">売買・交渉を Claude が代理</li>
+        <li data-i="03">目的: AI エージェントの交渉挙動・倫理・効率の研究</li>
+        <li data-i="04">GPT-5.5 / Workspace Agents の『タスク完遂』に対し、Anthropic は『他者との交渉』方向に踏み込んだ</li>
+      </ul>
+      <div class="pull">
+        ナレッジ整理を超えて、社内の意思決定・取引フローに AI を入れる際の事前材料。リタリコ・TEKION のような組織で『AI に何を任せるか』の議論に直結する研究。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">3,142</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/AnthropicAI/status/2047728360818696302">@AnthropicAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-24</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI研究</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/AnthropicAI/status/2047728360818696302">x.com/AnthropicAI/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · OPENAINEWSROOM</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI安全・規制 <span class="sep">/</span> @OPENAINEWSROOM 公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI、GPT-5.5 向け Bio Bug Bounty を募集 — バイオセーフティ JB 検証</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-25/topic_4.png" data-alt="OpenAI、GPT-5.5 向け Bio Bug Bounty を募集 — バイオセーフティ JB 検証" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-25/topic_4.png" alt="OpenAI、GPT-5.5 向け Bio Bug Bounty を募集 — バイオセーフティ JB 検証" />
+      </div>
+      <p class="lede">
+        OpenAI が GPT-5.5 のバイオセーフティ機構を強化するため、AI レッドチーム / セキュリティ / バイオセキュリティ研究者を対象に Bio Bug Bounty を開始。5 つのバイオ安全質問を全て突破できるユニバーサル jailbreak の発見が報奨対象。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対象: GPT-5.5</li>
+        <li data-i="02">目的: 高度 AI のバイオセキュリティガードレール強化</li>
+        <li data-i="03">募集: AI red teaming / security / biosecurity 研究者</li>
+        <li data-i="04">報奨: 5 質問全て突破するユニバーサル JB</li>
+        <li data-i="05">Anthropic Project Glasswing と並ぶ『能力 + 安全』両輪リリースの業界標準化</li>
+      </ul>
+      <div class="pull">
+        Frontier モデルのリリースに合わせてハイリスク領域（バイオ）のガードレール検証を商業モデルでも仕組み化。AI 安全に関わる研究者・受講生にとってキャリア機会としても価値ある制度。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,664</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAINewsroom/status/2047670970526175310">@OpenAINewsroom</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-24</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI安全・規制</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAINewsroom/status/2047670970526175310">x.com/OpenAINewsroom/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · OPENCLAW</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ツール更新 <span class="sep">/</span> @OPENCLAW 公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenClaw 2026.4.23 — GPT-5.5 統合 + Forked-context subagents</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-25/topic_5.png" data-alt="OpenClaw 2026.4.23 — GPT-5.5 統合 + Forked-context subagents" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-25/topic_5.png" alt="OpenClaw 2026.4.23 — GPT-5.5 統合 + Forked-context subagents" />
+      </div>
+      <p class="lede">
+        OpenClaw が v2026.4.23 をリリース。GPT-5.5 統合、画像生成・編集（Codex OAuth + OpenRouter）、forked-context subagents、Telegram / Slack / WhatsApp の挙動改善、インストール・更新の修正など。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">GPT-5.5 ネイティブ対応</li>
+        <li data-i="02">Image gen/edit が Codex OAuth + OpenRouter 経由で利用可能</li>
+        <li data-i="03">Forked-context subagents — 親コンテキストを分岐させて並列でサブエージェント実行</li>
+        <li data-i="04">Telegram / Slack / WhatsApp の挙動改善</li>
+        <li data-i="05">GitHub: https://github.com/openclaw/openclaw/releases/tag/v2026.4.23</li>
+      </ul>
+      <div class="pull">
+        OpenClaw でも GPT-5.5 が使える。とくに forked-context subagents はマルチエージェント・オーケストレーションの実装パターンとして重要で、Jinn / Torty のサブエージェント設計の参考になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,093</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/openclaw/status/2047722880939511885">@openclaw</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-24</dd>
+        <dt>CATEGORY</dt>
+        <dd>ツール更新</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/openclaw/status/2047722880939511885">x.com/openclaw/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · KEITOWEBAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ベストプラクティス <span class="sep">/</span> @KEITOWEBAI <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>GPT Image 2 を Codex / Claude Code に組み込む 7 活用法（KEITO）</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-25/topic_6.png" data-alt="GPT Image 2 を Codex / Claude Code に組み込む 7 活用法（KEITO）" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-25/topic_6.png" alt="GPT Image 2 を Codex / Claude Code に組み込む 7 活用法（KEITO）" />
+      </div>
+      <p class="lede">
+        AIディレクター KEITO が GPT Image 2 を単独利用ではなく Codex / Claude Code に組み込むことで価値が 10 倍化すると主張。「画像を作るで止めず、ワークフローに組み込む」7 つの活用法をまとめた投稿。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">GPT Image 2 単体利用はポテンシャルの一部しか使えない</li>
+        <li data-i="02">コーディングエージェントとの接続でワークフロー全体価値が跳ね上がる</li>
+        <li data-i="03">UIモック→実装、ドキュメント素材、テストデータ、モックアセット、エージェント間受け渡しなどへの連鎖利用</li>
+        <li data-i="04">Matt Shumer のレビューで示された Image 2 + GPT-5.5 ベストプラクティスとも整合</li>
+      </ul>
+      <div class="pull">
+        GPT Image 2 を「画像生成の終着点」ではなく「中間成果物」として扱う発想が、コーディングエージェント時代のデザイン→実装パイプラインを再構成する実務的視点。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/keitowebai/status/2047272345455518009">@keitowebai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>ベストプラクティス</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/keitowebai/status/2047272345455518009">x.com/keitowebai/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/mattshumer_/status/2047376179414421957">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-04-24/">
+      ← 前日 · 2026-04-24
+      <span class="big">OpenAI が GPT-5.5 を発表 — エージェント時代の新クラスモデル</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-04-25/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260425.0725</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

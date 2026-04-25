@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-04-26 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-04-26 の Vibe Coder Bootcamp モーニングディスパッチ — 6本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0426</span>
+    <span class="sep">/</span>
+    <span>2026-04-26</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>06 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260426.0726</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-04-26/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:26 · SAT</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SATURDAY · APRIL 26, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>04<span class="dot">.</span>26</h1>
+    <div class="strap">
+      <span>DeepSeek · Cursor · Claude · Claude</span>
+      <span><span class="count">06</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 ニュース・新モデル <span class="sep">/</span> DEEPSEEK 公式 + コミュニティ要約 <span class="sep">/</span> NEWS
+      </div>
+      <h2>DeepSeek V4 Preview リリース — 1Mコンテキストを「標準」にしたOSSフラッグシップ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-26/topic_1.png" data-alt="DeepSeek V4 Preview リリース — 1Mコンテキストを「標準」にしたOSSフラッグシップ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-26/topic_1.png" alt="DeepSeek V4 Preview リリース — 1Mコンテキストを「標準」にしたOSSフラッグシップ" />
+      </div>
+      <p class="lede">
+        DeepSeek が V4 Preview を OSS 公開。フラッグシップ V4-Pro (1.6T総 / 49Bアクティブ MoE) と高速・省コスト V4-Flash (284B / 13B) の2モデル構成で、全公式サービスで1Mトークンコンテキストを標準化した。Token-wise圧縮 + DSA(Sparse Attention)で長コンテキストの計算/メモリコストを大幅に削減し、APIは即日更新、旧モデルは3ヶ月でサンセット。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">V4-Pro: 1.6T総 / 49Bアクティブ。Agentic Codingでオープン界SOTA、世界知識はGemini-3.1-Proに次ぐ2位</li>
+        <li data-i="02">V4-Flash: 284B総 / 13Bアクティブ。V4-Pro並みの推論力で爆速・激安API</li>
+        <li data-i="03">全公式サービスで1Mコンテキストがデフォルト化</li>
+        <li data-i="04">Token-wise圧縮 + DSA、Muon optimizer、On-Policy Distillation、FP4 QAT</li>
+        <li data-i="05">APIは更新済み、旧モデルは3ヶ月でサンセット</li>
+        <li data-i="06">Zhihu解析: もはやベンチ競争でなく『効率的long-context推論』という新戦場</li>
+      </ul>
+      <div class="pull">
+        クローズド勢(GPT-5.5/Opus 4.7/Gemini 3.1 Pro)に肉薄する性能をOSSで提供し、軸を『長コンテキスト効率』に振ったことで、リポジトリ丸ごと読ませる運用や長文ドキュメント業務の前提が変わる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/akira_papa_IT/status/2048145158039089170">@akira_papa_IT</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-24</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 ニュース・新モデル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/akira_papa_IT/status/2048145158039089170">x.com/akira_papa_IT/…</a></dd>
+        <dd><a href="https://x.com/ZhihuFrontier/status/2047533982473150923">x.com/ZhihuFrontier/status/2047533982473…</a></dd>
+        <dd><a href="https://x.com/QuixiAI/status/2047532323315257424">x.com/QuixiAI/status/2047532323315257424…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · CURSORAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 ツール更新 <span class="sep">/</span> @CURSOR_AI <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cursor 3.2 — Agents Window大刷新、並列WorktreesとMulti-rootワークスペース</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-26/topic_2.png" data-alt="Cursor 3.2 — Agents Window大刷新、並列WorktreesとMulti-rootワークスペース" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-26/topic_2.png" alt="Cursor 3.2 — Agents Window大刷新、並列WorktreesとMulti-rootワークスペース" />
+      </div>
+      <p class="lede">
+        Cursor 3.2 が Agents Window を大幅刷新した。並列Worktreesで異なるブランチをbackgroundで同時に走らせワンクリックでforegroundに昇格、さらにMulti-rootワークスペースで1つのAgentセッションが複数フォルダ(クロスリポ)にまたがる作業を扱えるようになった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Worktrees: 複数ブランチでエージェントを同時並列実行、ワンクリックで切替</li>
+        <li data-i="02">Multi-root Workspaces: 1セッションが複数フォルダを同時にスコープ</li>
+        <li data-i="03">GPT-5.5統合 + CursorBench首位の直後に投入された機能強化</li>
+        <li data-i="04">ダウンロード: cursor.com/download</li>
+      </ul>
+      <div class="pull">
+        エージェント並列化(forked-context / parallel worktree)がIDEレイヤーで標準化されつつあり、『同じ依頼を複数ブランチに投げて勝った成果を採用する』運用が現実的に。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">212</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2047764652977958938">@cursor_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-24</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 ツール更新</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2047764652977958938">x.com/cursor_ai/…</a></dd>
+        <dd><a href="https://x.com/cursor_ai/status/2047764654760632725">x.com/cursor_ai/status/20477646547606327…</a></dd>
+        <dd><a href="https://x.com/cursor_ai/status/2047764656165646786">x.com/cursor_ai/status/20477646561656467…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · CLAUDEAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 ツール更新 <span class="sep">/</span> @CLAUDEAI <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Managed Agents Memory が Public Beta — ファイル形式で完全制御可能</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-26/topic_3.png" data-alt="Claude Managed Agents Memory が Public Beta — ファイル形式で完全制御可能" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-26/topic_3.png" alt="Claude Managed Agents Memory が Public Beta — ファイル形式で完全制御可能" />
+      </div>
+      <p class="lede">
+        Claude Managed Agents の Memory が Public Beta に。エージェントがセッション越しに学習する公式メモリ層を提供し、性能と柔軟性を両立する『Intelligence-Optimized Memory Layer』を採用。Memoryはファイルとして保存され、開発者はAPIでエクスポート・管理可能。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">セッション越しに学習する公式メモリ層が Public Beta に</li>
+        <li data-i="02">Memoryはファイル形式で保存、APIでエクスポート/管理可能</li>
+        <li data-i="03">開発者は memory の中身を完全に検査・編集可能</li>
+        <li data-i="04">Managed Agents ユーザー全員に提供</li>
+      </ul>
+      <div class="pull">
+        OpenClaw / Jinn 系の file-based memory アーキテクチャと哲学が一致しており、社内AI設計(Torty/Ryoko等)のmemory設計に直接参考にできる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">8,851</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/claudeai/status/2047421844311949513">@claudeai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 ツール更新</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/claudeai/status/2047421844311949513">x.com/claudeai/…</a></dd>
+        <dd><a href="https://claude.com/blog/claude-managed-agents-memory">claude.com/blog/claude-managed-agents-me…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · CLAUDEAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 ニュース・新機能 <span class="sep">/</span> @CLAUDEAI <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Connectors を全プランで一般提供 — 旅・買い物・予約まで1会話で完結</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-26/topic_4.png" data-alt="Claude Connectors を全プランで一般提供 — 旅・買い物・予約まで1会話で完結" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-26/topic_4.png" alt="Claude Connectors を全プランで一般提供 — 旅・買い物・予約まで1会話で完結" />
+      </div>
+      <p class="lede">
+        Claudeが日常生活向けConnectorsをWeb/Desktop/Mobile (beta)の全プランで公開。1つの会話の中でデッキ作成だけでなく、旅程計画、食材注文、レストラン予約、プレイリスト選曲までこなせるよう、コネクタ群が公式ディレクトリで提供される。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">全プラン (Web / Desktop / Mobile beta) で利用可能</li>
+        <li data-i="02">用途: 旅・買い物・予約・音楽など日常タスクをClaude内で完結</li>
+        <li data-i="03">Connectorディレクトリ: claude.ai/directory/connectors</li>
+        <li data-i="04">OpenAI Workspace Agents が業務向けなのに対し、Claudeは日常向けに棲み分け</li>
+      </ul>
+      <div class="pull">
+        デベロッパ色が強かった Claude を日常使いへ広げる一手。Bootcamp 受講生・社内利用者にとって『Claude 1つで全部』の入口になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">920</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/claudeai/status/2047383767984038093">@claudeai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 ニュース・新機能</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/claudeai/status/2047383767984038093">x.com/claudeai/…</a></dd>
+        <dd><a href="https://claude.com/blog/connectors-for-everyday-life/">claude.com/blog/connectors-for-everyday-…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · OPENAIDEVS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 ツール更新 <span class="sep">/</span> @OPENAIDEVS <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI Codex Auto-review モード公開 — 長時間タスクで承認削減＋安全性チェック2段構成</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-26/topic_5.png" data-alt="OpenAI Codex Auto-review モード公開 — 長時間タスクで承認削減＋安全性チェック2段構成" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-26/topic_5.png" alt="OpenAI Codex Auto-review モード公開 — 長時間タスクで承認削減＋安全性チェック2段構成" />
+      </div>
+      <p class="lede">
+        Codex に Auto-review モードが追加。承認回数を抑えつつ、テスト・ビルド・自動化フロー等の長時間タスクを止めずに進められる。高リスクなステップは別エージェントが文脈付きで安全性をチェックしてから実行する2段構成。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Auto-review: 少ない承認・安全な実行を両立する新モード</li>
+        <li data-i="02">長時間タスク・自動化・テスト・ビルドで止まらず進む</li>
+        <li data-i="03">高リスク差分は別エージェントが文脈で再評価してから実行</li>
+        <li data-i="04">Codex CLI / Codex 環境に適用</li>
+      </ul>
+      <div class="pull">
+        GPT-5.5 + Auto-review でオーバーナイトのテスト＋ビルドを回し切る運用が現実的に。Claude Code の auto-accept や /ultrareview と並ぶ agent guardrail の標準パターンになりつつある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">3,188</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2047436655863464011">@OpenAIDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 ツール更新</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2047436655863464011">x.com/OpenAIDevs/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · SUHSUNANEKO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 AI開発ツール <span class="sep">/</span> @SUH_SUNANEKO <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>GPT-5.5でスライド画像をpptxにほぼ再現するプロンプト — suh_sunaneko</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-26/topic_6.png" data-alt="GPT-5.5でスライド画像をpptxにほぼ再現するプロンプト — suh_sunaneko" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-26/topic_6.png" alt="GPT-5.5でスライド画像をpptxにほぼ再現するプロンプト — suh_sunaneko" />
+      </div>
+      <p class="lede">
+        GPT-5.5のマルチモーダル理解 + Codex系コード生成力を使い、スライド画像から編集可能なPPTXを再現するプロンプトを公開。要点は『分解→再現→レンダリング比較→修正』の4ステップを必ず1サイクル以上回すこと。SVG禁止、全体画像化禁止、テキストは編集可能ボックス、装飾は図形、アイコンはPNG/JPEG切り出し。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">スライド画像→PPTX変換の精度向上には『分解→再現→検証→修正』の4ステップを必ず回す</li>
+        <li data-i="02">SVG禁止、スライド全体の画像貼り付け禁止</li>
+        <li data-i="03">テキストは編集可能テキストボックス、装飾は図形、アイコンはPNG/JPEGで切り出し</li>
+        <li data-i="04">スライドサイズは16:9 (13.333 × 7.5 inch)</li>
+        <li data-i="05">4006ブックマーク・54万表示と高エンゲージメント</li>
+      </ul>
+      <div class="pull">
+        nanobanana slide generator が『ゼロから生成』なのに対し、本プロンプトは『既存スライド再現』のユースケース。顧客提案の競合スライド再現や社内テンプレ移行に活用可能で、検証ステップを組み込むプロンプト設計は他のAIワークフローにも応用できる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,842</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/suh_sunaneko/status/2047821127461069293">@suh_sunaneko</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 AI開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/suh_sunaneko/status/2047821127461069293">x.com/suh_sunaneko/…</a></dd>
+        <dd><a href="https://x.com/suh_sunaneko/status/2047821130011226292">x.com/suh_sunaneko/status/20478211300112…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/akira_papa_IT/status/2048145158039089170">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-04-25/">
+      ← 前日 · 2026-04-25
+      <span class="big">Matt Shumer の GPT-5.5 詳細レビュー — 「日常では実感しにくいが押し込むと別物」</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-04-26/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260426.0726</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

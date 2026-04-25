@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №277</span>
+    <span class="tick">BOOKMARK №278</span>
     <span class="sep">/</span>
-    <span>2026-04-25</span>
+    <span>2026-04-26</span>
     <span class="sep">/</span>
     <span>@_kuroneko_jp</span>
     <span class="sep">/</span>
-    <span>307 ITEMS</span>
+    <span>308 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:16 SAT</span>
+    <span>JST 07:13 SUN</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,19 +305,19 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-04-24/">NEWS</a>
+      <a href="../news/2026-04-25/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:16 · SAT</div>
+    <div class="meta">JST · 07:13 · SUN</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 日付不明 <span>/</span> №277
+      <a href="./">← BOOKMARKS</a> <span>/</span> 日付不明 <span>/</span> №278
     </div>
     <div class="cat-line">
       <span>💻 AI/開発</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">Claude Code の Agent Skills は設定したほうがいい</h1>
     <div class="strap">
-      <span><span class="label">№</span>277 / 307</span>
+      <span><span class="label">№</span>278 / 308</span>
       <span><span class="label">SRC</span><a href="https://x.com/_kuroneko_jp/status/2011490663284818268" target="_blank" rel="noopener noreferrer">x.com/_kuroneko_jp ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/06_agent_skills_guide.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">277<span class="ord">BOOKMARK / 307</span></aside>
+    <aside class="numeral">278<span class="ord">BOOKMARK / 308</span></aside>
     <article class="prose">
 <p><strong>元記事著者:</strong> syu-m-5151 (nwiizo)  </p><p><strong>投稿日時:</strong> 2025年1月15日  </p><p><strong>URL:</strong> https://x.com/_kuroneko_jp/status/2011490663284818268  </p><p><strong>記事URL:</strong> https://syu-m-5151.hatenablog.com/entry/2025/12/19/173309  </p><p><strong>エンゲージメント:</strong> 116リポスト / 1,153いいね / 1,391ブックマーク / 31万表示</p><h2>概要</h2><p>Claude Codeの「Agent Skills」について詳細に解説した記事。「このプロジェクトではpython-pptxを使ってスライドを作って」「SQLは必ずこのフォーマットで」といった説明を毎回繰り返す問題を解決する機能。</p><h2>なぜSkillsが必要か</h2><p>LLMはステートレスで、セッション間で記憶を保持しない。トークン制約とコスト制約があるため、すべての知識を常に保持できない。<strong>Agent Skillsは、必要な時に必要な知識だけを読み込む仕組み</strong>。</p><blockquote>「エージェントにSkillを作ることは、新入社員向けのオンボーディングガイドを作るようなもの」 — Anthropic公式ブログ</blockquote><h2>他の設定との違い</h2><p>| 機能 | 役割 | 例 |</p><p>|-----|------|-----|</p><p>| CLAUDE.md | プロジェクトの文脈を伝える | 「うちはTypeScriptで、こういうアーキテクチャ」 |</p><p>| commands | 手動で呼び出すショートカット | /test-and-commit で一連の作業を実行 |</p><p>| Hooks | 特定のイベントで自動実行 | ファイル保存後に自動フォーマット |</p><p>| Subagents | 専門家を自動で呼び出す | デバッグ時にdebugger subagentが起動 |</p><p>| Rules | パス単位でルールを適用 | src/api/**/*.tsにセキュリティルール |</p><p>| <strong>Agent Skills</strong> | 専門知識をオンボーディング | PDF操作、Excel分析、独自ワークフロー |</p><p><strong>Skillsのポイント</strong>: 「Claudeができること自体を拡張する」。他の設定がClaudeの「使い方」を定義するのに対し、SkillsはClaudeの「専門知識」を拡張する。</p><h2>Tool、Skills、MCPの違い</h2><p>| 概念 | 役割 | たとえ |</p><p>|-----|------|--------|</p><p>| Tool | 何ができるか（Capability） | 店にある道具そのもの |</p><p>| MCP | 道具へのアクセス（Connectivity） | 店の通路に入ること |</p><p>| Skills | どう振る舞うか（Behavior） | 道具の使い方を教える店員 |</p><h2>Progressive Disclosure（段階的開示）</h2><p>すべての情報を最初から渡すのではなく、必要になったタイミングで必要な情報だけを渡す設計原則。</p><h3>3段階での情報開示</h3><ol><li><strong>Level 1: メタデータ（常にロード）</strong> - 約100トークン/Skill</li></ol><p>   - name/descriptionだけ読み込み</p><ol><li><strong>Level 2: 指示（トリガー時にロード）</strong> - 5000トークン以下が目安</li></ol><p>   - SKILL.mdの本文</p><ol><li><strong>Level 3: リソース（必要時にロード）</strong></li></ol><p>   - 追加のファイル、スクリプト、リファレンス</p><h2>SkillsとSubagentsの使い分け</h2><p>| 観点 | Skills | Subagents |</p><p>|-----|--------|-----------|</p><p>| コンテキスト | 親と共有 | 独立 |</p><p>| 向いているタスク | 継続的な作業、TDDなど | 試行錯誤、調査タスク |</p><p>| 状態の引き継ぎ | あり | なし（結果のみ返す） |</p><p><strong>判断基準:</strong></p><ul><li>コンテキストを共有したい → Skills</li><li>コンテキストを独立させたい → Subagents</li><li>タスクの結果が「要約」で十分ならSubagent、「過程」も重要ならSkills</li></ul><h2>カスタムSkillの作成</h2><h3>基本構造</h3><pre><code>---
 name: my-custom-skill
@@ -401,14 +401,14 @@ description: このSkillが何をするか、いつ使うべきかを説明。
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 307 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 308 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-04-24/">TODAY</a></li>
+          <li><a href="../news/2026-04-25/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -435,7 +435,7 @@ description: このSkillが何をするか、いつ使うべきかを説明。
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-04-25</span>
+      <span>BUILD 2026-04-26</span>
     </div>
   </div>
 </footer>

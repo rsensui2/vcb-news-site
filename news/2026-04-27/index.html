@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-04-27 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-04-27 の Vibe Coder Bootcamp モーニングディスパッチ — 5本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0427</span>
+    <span class="sep">/</span>
+    <span>2026-04-27</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>05 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260427.0724</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-04-27/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:24 · SUN</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SUNDAY · APRIL 27, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>04<span class="dot">.</span>27</h1>
+    <div class="strap">
+      <span>DeepSeek · Claude · GPT-5.5 · Boris</span>
+      <span><span class="count">05</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 ニュース・新モデル <span class="sep">/</span> @DEEPSEEK_AI 公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>DeepSeek V4-Pro が 75% OFF — Claude Code から `deepseek-v4-pro[1m]` で 1M コンテキスト解放</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-27/topic_1.png" data-alt="DeepSeek V4-Pro が 75% OFF — Claude Code から `deepseek-v4-pro[1m]` で 1M コンテキスト解放" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-27/topic_1.png" alt="DeepSeek V4-Pro が 75% OFF — Claude Code から `deepseek-v4-pro[1m]` で 1M コンテキスト解放" />
+      </div>
+      <p class="lede">
+        DeepSeek が V4-Pro API を 5/5 まで 75% OFF にする大型値下げを実施。同時に Claude Code・OpenCode・OpenClaw 向けの統合アップデートを公開し、Claude Code は model 指定で 1M コンテキストを直接叩けるようになった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">V4-Pro API 75% OFF (〜2026-05-05 15:59 UTC)</li>
+        <li data-i="02">Claude Code: model=deepseek-v4-pro[1m] で 1M コンテキスト</li>
+        <li data-i="03">OpenCode は v1.14.24+、OpenClaw は v2026.4.24+ にアップデート必要</li>
+        <li data-i="04">公式 API ドキュメントで全機能の詳細を確認可能</li>
+      </ul>
+      <div class="pull">
+        高価な巨大コードベース読み込みや長文タスクを Claude Code に居ながら DeepSeek 側へ逃せる。VBC 受講生のコスト最適化レバーとして即効性が高い。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">8,623</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/deepseek_ai/status/2048062777357750316">@deepseek_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 ニュース・新モデル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/deepseek_ai/status/2048062777357750316">x.com/deepseek_ai/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · CLAUDECODELOG  CHA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 ツール・開発 <span class="sep">/</span> @CLAUDECODELOG 公式 CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code 2.1.120 — `/ultrareview` がヘッドレス化、CI から呼べる</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-27/topic_2.png" data-alt="Claude Code 2.1.120 — `/ultrareview` がヘッドレス化、CI から呼べる" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-27/topic_2.png" alt="Claude Code 2.1.120 — `/ultrareview` がヘッドレス化、CI から呼べる" />
+      </div>
+      <p class="lede">
+        Claude Code 2.1.120 がリリース。22 個の CLI 変更が入り、`claude ultrareview` がヘッドレス実行に対応して CI/スクリプトに組み込めるようになった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">claude ultrareview が headless モードで動作 → CI ログに findings を stdout 出力</li>
+        <li data-i="02">Automated rule reviewer 追加: classifier rule の曖昧さを deploy 前に検出</li>
+        <li data-i="03">DISABLE_TELEMETRY 修正: API/Enterprise の opt-out が再び有効</li>
+        <li data-i="04">22 個の CLI 変更を含む大きめのアップデート</li>
+      </ul>
+      <div class="pull">
+        対話前提だった /ultrareview を CI に組み込めるのは大きい。GitHub Actions から自動レビューを走らせ PR コメントに findings を貼る運用が現実的に。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">500</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeCodeLog/status/2047835469962965463">@ClaudeCodeLog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 ツール・開発</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeCodeLog/status/2047835469962965463">x.com/ClaudeCodeLog/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · SHIFT AI  / HODACH</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📖 体系的解説系 <span class="sep">/</span> SHIFT AI 木内翔大 / HODACHI / DATUSARA / のじ <span class="sep">/</span> NEWS
+      </div>
+      <h2>GPT-5.5 + Codex は『指示』より『任せ方』の時代へ — 国内事例まとめ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-27/topic_3.png" data-alt="GPT-5.5 + Codex は『指示』より『任せ方』の時代へ — 国内事例まとめ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-27/topic_3.png" alt="GPT-5.5 + Codex は『指示』より『任せ方』の時代へ — 国内事例まとめ" />
+      </div>
+      <p class="lede">
+        国内 AI インフルエンサー界隈で GPT-5.5 × Codex を業務委任ツールとして評価する論調が固まった。リサーチ・資料作成・分析・自動化のユースケースが整理され、Claude との数値正確性比較で GPT-5.5 が優勢との実証も出ている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">木内翔大: Codex × GPT-5.5 のユースケースを『リサーチ → 資料 → 分析 → 自動化』で整理</li>
+        <li data-i="02">Hodachi: Web リサーチの数値正確性で GPT-5.5 が Claude を上回ると検証</li>
+        <li data-i="03">datusara: 価値の差は『指示力』から『任せる範囲の判断力』へシフト</li>
+        <li data-i="04">のじ: Claude Code・Higgsfield・Hermes Agent・自社 AI モデルの 4 領域で 1 名 1.5 億円が現実視野</li>
+      </ul>
+      <div class="pull">
+        Bootcamp の指導軸が『プロンプト技法』中心から『タスク分解と委任の判断』中心へ移る合図。Claude Code と Codex を業務に応じて使い分ける議論が必要な段階。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">158</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/shota7180/status/2047923569016078756">@shota7180</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>📖 体系的解説系</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/shota7180/status/2047923569016078756">x.com/shota7180/…</a></dd>
+        <dd><a href="https://x.com/columbus_ceo/status/2047874160949699055">x.com/columbus_ceo/status/20478741609496…</a></dd>
+        <dd><a href="https://x.com/hokazuya/status/2048197953610010932">x.com/hokazuya/status/204819795361001093…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · CLAUDECODELOVE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📖 体系的解説系 <span class="sep">/</span> @CLAUDECODE_LOVE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Boris Cherny の Claude Code 隠し機能 15 個 + 30 Tips 完全版</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-27/topic_4.png" data-alt="Boris Cherny の Claude Code 隠し機能 15 個 + 30 Tips 完全版" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-27/topic_4.png" alt="Boris Cherny の Claude Code 隠し機能 15 個 + 30 Tips 完全版" />
+      </div>
+      <p class="lede">
+        Claude Code 生みの親 Boris Cherny が日々使う『隠し機能 15 個』を公開し、4/25 公開の『30 Tips 完全版』と合わせて運用ベストプラクティスが出揃った。文脈・検証・権限・並列実行・自動化の 5 領域で構成。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Boris 本人による隠し機能 15 個ツリー (4/26)</li>
+        <li data-i="02">前段の note 記事『Claude Code 30 Tips 完全版』(4/25) と組で読まれている</li>
+        <li data-i="03">5 領域: 文脈の持たせ方・検証の自動化・権限の決め方・並列実行設計・自動化</li>
+        <li data-i="04">subagent / hook / skill 連携など既知だが未周知の機能を中心に解説</li>
+      </ul>
+      <div class="pull">
+        生みの親の運用 = ベストプラクティス最短経路。Bootcamp の上級コンテンツに直結する素材で、自分のフローに 1 つ取り込むだけで体感が大きく変わる領域。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">224</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeCode_love/status/2048341354514993299">@ClaudeCode_love</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-26</dd>
+        <dt>CATEGORY</dt>
+        <dd>📖 体系的解説系</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeCode_love/status/2048341354514993299">x.com/ClaudeCode_love/…</a></dd>
+        <dd><a href="https://x.com/ClaudeCode_love/status/2047992961175277791">x.com/ClaudeCode_love/status/20479929611…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · ANTOINERSX</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 ツール・開発 <span class="sep">/</span> @ANTOINERSX <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>OpenClaw V4.24 — AI エージェントが会議参加・ノート取り・タスク実行まで</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-27/topic_5.png" data-alt="OpenClaw V4.24 — AI エージェントが会議参加・ノート取り・タスク実行まで" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-27/topic_5.png" alt="OpenClaw V4.24 — AI エージェントが会議参加・ノート取り・タスク実行まで" />
+      </div>
+      <p class="lede">
+        OpenClaw V4.24 で AI エージェントが会議参加 → ノート取得 → フォローアップ → アサインタスクの実行まで一気通貫でこなせるようになった。既存 AI 議事録ツールが文字起こしに留まっていたのに対し、アクション実行まで踏み込んだ点が差別化。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">会議に自動参加してノート取得</li>
+        <li data-i="02">フォローアップを自動実行</li>
+        <li data-i="03">アサインされた作業を実際にやり切る</li>
+        <li data-i="04">議事録ツールではなく『同僚として動く AI エージェント』の実装</li>
+      </ul>
+      <div class="pull">
+        議事録自動化を超え、決定事項の実行まで委任できる段階に来た。Jinn/Torty 設計でも『会議参加 → アクション』の一気通貫モデルを参考にできる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">396</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/AntoineRSX/status/2048310023407927472">@AntoineRSX</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-26</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 ツール・開発</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/AntoineRSX/status/2048310023407927472">x.com/AntoineRSX/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/deepseek_ai/status/2048062777357750316">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-04-26/">
+      ← 前日 · 2026-04-26
+      <span class="big">DeepSeek V4 Preview リリース — 1Mコンテキストを「標準」にしたOSSフラッグシップ</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-04-27/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260427.0724</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

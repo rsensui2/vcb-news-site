@@ -291,9 +291,9 @@
     <span class="sep">/</span>
     <span>@suh_sunaneko</span>
     <span class="sep">/</span>
-    <span>308 ITEMS</span>
+    <span>311 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:13 SUN</span>
+    <span>JST 07:14 MON</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,12 +305,12 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-04-25/">NEWS</a>
+      <a href="../news/2026-04-26/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:13 · SUN</div>
+    <div class="meta">JST · 07:14 · MON</div>
   </div>
 </header>
 
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">GPT-5.5でスライド画像をpptxにほぼ再現できた — すぅ</h1>
     <div class="strap">
-      <span><span class="label">№</span>001 / 308</span>
+      <span><span class="label">№</span>001 / 311</span>
       <span><span class="label">SRC</span><a href="https://x.com/suh_sunaneko/status/2047821127461069293" target="_blank" rel="noopener noreferrer">x.com/suh_sunaneko ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/260_suh_sunaneko_GPT-5.5%E3%81%A7%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89%E7%94%BB%E5%83%8F%E3%82%92pptx%E3%81%AB%E3%81%BB%E3%81%BC%E5%86%8D%E7%8F%BE%E3%81%A7%E3%81%8D%E3%81%9F_%E3%81%99%E3%81%85.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">001<span class="ord">BOOKMARK / 308</span></aside>
+    <aside class="numeral">001<span class="ord">BOOKMARK / 311</span></aside>
     <article class="prose">
 <p><strong>有益度:</strong> ⭐⭐⭐ HIGH</p><h2>概要</h2><blockquote>GPT-5.5に画像入力でPowerPoint(pptx)スライドをほぼ忠実に再現させるプロンプトとそのコツを共有。スライド画像を要素分解（タイトル・カード・帯・アイコン等）→ PPTXの編集可能要素へマッピング → 1回作って終わりにせず、レンダリング→元画像と比較→修正サイクルを最低1回回す、という運用を組み込んだ点が肝。</blockquote><h2>まとめ</h2><ul><li>入力画像→pptx変換の精度を上げるには「分解→再現→検証→修正」の4ステップを必ず回す</li><li>SVG禁止、スライド全体の画像貼り付け禁止、テキストは編集可能テキストボックス、装飾は図形、アイコンはPNG/JPEGで切り出し</li><li>スライドサイズは16:9 (13.333 × 7.5 inch)</li><li>4006ブックマーク・54万表示と高エンゲージメント。GPT-5.5のマルチモーダル力をslide reproductionに使う流れの代表例</li></ul><h2>関連リンク</h2><ul><li>元ポスト: https://x.com/suh_sunaneko/status/2047821127461069293</li><li>プロンプト全文ポスト (self-thread): https://x.com/suh_sunaneko/status/2047821130011226292</li></ul><h2>スレッド全体</h2><h3>Part 1 (親ポスト)</h3><p>GPT-5.5でスライド画像をpptxにほぼ再現できた。</p><p>ちょっとコツが必要ですが、プロンプト全文はリプに貼っておきます。</p><p>←左　スライド画像　　　ppt変換　右→</p><h3>Part 2</h3><p>Image to pptxプロンプト</p><p>添付したスライド画像を、編集可能なPowerPoint形式（pptx）で再現してください。</p><p>最重要：</p><p>1回作って終わりにしないでください。</p><p>必ず作成後にPPTXをレンダリングして画像化し、元画像と比較して、崩れている箇所を修正してから納品してください。</p><p>作業手順：</p><ol><li>元画像を確認し、スライド全体を以下の要素に分解する</li></ol><p>   - 背景 / タイトル / メッセージボックス / 左カード / 右カード / 見出し / 金額表示 / 箇条書き / 中段の水色バー / 注意喚起バー / 下部の結論ボックス / ページ番号 / アイコン類</p><ol><li>各要素を、次のルールで再現する</li></ol><p>   - テキスト：PowerPointの編集可能なテキストボックス</p><p>   - 枠、線、帯、カード、背景装飾：PowerPointの図形</p><p>   - アイコン、イラスト：元画像からPNG/JPEGで切り出して配置</p><p>   - SVGは使用しない</p><p>   - スライド全体を1枚画像として貼り付けない</p><ol><li>元画像からアイコン部分だけを切り出す（メッセージ／目／目に斜線／書類＋円マーク／検索／メール／更新／時計／電卓／警告）。SVGには変換しない。必要によっては Image2 で画像生成。</li></ol><ol><li>スライドサイズは16:9 (13.333 x 7.5 inch)。元画像比率に合わせる</li></ol><ol><li>テキストを正確に転記。誤字を出さない。全角半角・数字・単位・句読点を元画像に合わせる。折り返しが起きないようにテキストボックス幅を調整</li></ol><ol><li>色・余白・サイズを元画像に近づける（濃紺本文／明るい青強調／薄水色帯／薄グレー背景／角丸カード／細罫線／淡背景装飾）</li></ol><ol><li>PPTX作成後、必ずレンダリング画像を出力（PowerPoint or LibreOffice）し、元画像と目視比較する</li></ol><ol><li>比較時に必ず確認: タイトル位置/サイズ、メッセージ枠、左右カード、見出しアイコン、金額表示、箇条書き行間、中段バー、注意喚起バー、下部結論ボックス、ページ番号、文字折り返し、余白</li></ol><ol><li>崩れていたら修正→再レンダリング。最低1回は修正サイクルを回す</li></ol><ol><li>最後にPPTX内部を確認: SVGなし／全体画像化なし／テキスト編集可能／図形が個別選択可能</li></ol><p>納品物: 編集可能なpptx／SVGなし／1枚画像化なし／テキスト編集可能／元画像と大きな崩れがない状態</p>
     </article>
@@ -387,14 +387,14 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 308 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 311 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-04-25/">TODAY</a></li>
+          <li><a href="../news/2026-04-26/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -421,7 +421,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-04-26</span>
+      <span>BUILD 2026-04-27</span>
     </div>
   </div>
 </footer>

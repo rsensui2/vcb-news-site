@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №263</span>
+    <span class="tick">BOOKMARK №266</span>
     <span class="sep">/</span>
-    <span>2026-04-26</span>
+    <span>2026-04-27</span>
     <span class="sep">/</span>
     <span>ARCHIVE</span>
     <span class="sep">/</span>
-    <span>308 ITEMS</span>
+    <span>311 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:13 SUN</span>
+    <span>JST 07:14 MON</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,19 +305,19 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-04-25/">NEWS</a>
+      <a href="../news/2026-04-26/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:13 · SUN</div>
+    <div class="meta">JST · 07:14 · MON</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 日付不明 <span>/</span> №263
+      <a href="./">← BOOKMARKS</a> <span>/</span> 日付不明 <span>/</span> №266
     </div>
     <div class="cat-line">
       <span>💻 AI/開発</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">Google ADKで「Deep Research」を自作する</h1>
     <div class="strap">
-      <span><span class="label">№</span>263 / 308</span>
+      <span><span class="label">№</span>266 / 311</span>
       
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/13_google_adk_deep_research.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">263<span class="ord">BOOKMARK / 308</span></aside>
+    <aside class="numeral">266<span class="ord">BOOKMARK / 311</span></aside>
     <article class="prose">
 <p><strong>元記事著者:</strong> xxkuboxx (Zenn)  </p><p><strong>投稿日時:</strong> 2025年12月頃  </p><p><strong>記事URL:</strong> https://zenn.dev/xxkuboxx/articles/7c9f7c70987770  </p><p><strong>GitHub:</strong> https://github.com/xxkuboxx/ADK-DeepResearch</p><h2>概要</h2><p>Google Agent Development Kit (ADK) を使用して、ChatGPTやGeminiのDeep Research機能を自作。「深掘り回数を変えたり検索対象を限定したり、もっと挙動を制御したい」というエンジニアの欲求を満たす。</p><h2>なぜADKで自作するのか？</h2><h3>1. Google検索が標準装備</h3><p>Deep Researchタスクでは「検索品質」が命綱。ADKはGoogle検索が標準でサポートされており、現代において最も信頼性が高く広範な検索を、エージェントがツールとして自然に使いこなせる。</p><h3>2. ブラックボックスを開けたい</h3><p>既製品の不満:</p><ul><li>「あと何回深掘りするか」を指定できない</li><li>使用するモデル（Pro/Flash等）を明示的に選べない</li></ul><p>自作すれば、これらのパラメータを完全に制御下に置ける。</p><h3>3. RAGチャットボットのDeep Research化への応用</h3><p>特定のドキュメントのみを参照するRAGチャットボットのDeep Research化が可能に。</p><h2>設計思想：「広さ」より「深さ」</h2><p>「クエリを叩く → 結果を分析する → その結果からさらにクエリを叩く」というシーケンシャルなプロセス。</p><p>人間が本気で調査する時と同じように、一つ判明した事実から次の疑問を見つけ、真相に迫っていく動きを再現。</p><h2>エージェント構成：対立構造を作る</h2><p>| エージェント | 役割 |</p><p>|-------------|------|</p><p>| <strong>Research Agent（調査役）</strong> | 一生懸命情報を探してくる |</p><p>| <strong>Questioner Agent（質問役）</strong> | 調査結果に「ここが足りない」「もっと詳しく」と執拗に深掘りを要求 |</p><p>| <strong>Reporter Agent（報告役）</strong> | 上記2者のやり取りを最終的に綺麗なレポートにまとめる |</p><p>あえて「調査役 vs 質問役」という対立構造を作ることで、妥協のないリサーチ結果を得る。</p><h2>技術的知見</h2><h3>Sub Agent vs Agent as a Tool</h3><ul><li>Sub Agent（Sequential Agent）を採用</li><li>Agent as a Toolは、ADK Web上でツールの内部が見えないためデバッグが難しい</li></ul><h3>Streamlit連携</h3><ul><li>UIから「使用モデル」や「深掘りの回数」を指定可能</li><li>クラス化してリクエストの都度エージェントインスタンスを生成</li><li>ただし、Agent Engineへのデプロイはできなくなる</li></ul><h3>参照元（Citations）の明示</h3><ul><li>「情報のソース」は最重要項目</li><li>eventにgrounding_metadataが存在するときに取り出す</li></ul><h3>rate_limitエラー回避</h3><ul><li>無料版APIはすぐにrate_limitエラーが起きる</li><li>リトライ機構を組み込むことが必須</li></ul><h2>まとめ</h2><p>この「調査役と質問役を戦わせて、深さを追求するアーキテクチャ」は、あらゆるドキュメント検索RAGチャットボットにもそのまま応用できる。</p><h2>参考リンク</h2><ul><li><a href="https://github.com/google/adk" target="_blank" rel="noopener noreferrer">Google ADK GitHub</a></li><li><a href="https://cloud.google.com/blog/ja/products/ai-machine-learning/build-a-deep-research-agent-with-google-adk" target="_blank" rel="noopener noreferrer">Google Cloud公式ブログ: ADKでDeep Research</a></li><li><a href="https://tech.commune.co.jp/entry/google-adk-bigquery-deep-research" target="_blank" rel="noopener noreferrer">社内BigQueryにアクセスしてDeep Research - Commune</a></li></ul><p>*保存日: 2026-01-30*</p>
     </article>
@@ -384,14 +384,14 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 308 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 311 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-04-25/">TODAY</a></li>
+          <li><a href="../news/2026-04-26/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -418,7 +418,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-04-26</span>
+      <span>BUILD 2026-04-27</span>
     </div>
   </div>
 </footer>

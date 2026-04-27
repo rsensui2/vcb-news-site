@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-04-28 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-04-28 の Vibe Coder Bootcamp モーニングディスパッチ — 4本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0428</span>
+    <span class="sep">/</span>
+    <span>2026-04-28</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>04 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260428.0725</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-04-28/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:25 · MON</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · MONDAY · APRIL 28, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>04<span class="dot">.</span>28</h1>
+    <div class="strap">
+      <span>Boris · Anthropic · OpenAI · Cursor</span>
+      <span><span class="count">04</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📖 体系的解説系 <span class="sep">/</span> @JOUHATSU_AI (拡散ポスト) / 元: BORIS CHERNY (CLAUDE CODE 作者) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Boris Cherny の Claude Code 公式ワークショップが世界的にバズ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-28/topic_1.png" data-alt="Boris Cherny の Claude Code 公式ワークショップが世界的にバズ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-28/topic_1.png" alt="Boris Cherny の Claude Code 公式ワークショップが世界的にバズ" />
+      </div>
+      <p class="lede">
+        Anthropic の Boris Cherny (Claude Code 作者) が公開した 30 分の無料公式ワークショップが世界中で大バズ。CLAUDE.md・Plan Mode・並列実行などの運用設計の勘所を作者本人が直接語る内容で、フランス語・日本語など各言語で派生コンテンツが拡散している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">公式・無料・30 分のワークショップ動画</li>
+        <li data-i="02">主要 Tip: 複数 Claude を並列起動 / プロジェクトごとの CLAUDE.md / Plan Mode 常用 / 反復タスクのコマンド化</li>
+        <li data-i="03">@paulichon の今週試すべき 4 つ要約: 1,739 likes</li>
+        <li data-i="04">@masahirochaen が日本語で 40 コマンド集を公開: 747 likes</li>
+        <li data-i="05">@hasantoxr が公式プラグイン claude-code-setup を推奨: 1,322 likes</li>
+      </ul>
+      <div class="pull">
+        Claude Code を業務で使う上での &quot;差がつく設計&quot; を作者本人から直接学べる希少なソース。CLAUDE.md・Plan Mode・並列実行は受講生が今週から実践できる即効レバー。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">14,073</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/Jouhatsu_ai/status/2048422458965836030">@Jouhatsu_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-26</dd>
+        <dt>CATEGORY</dt>
+        <dd>📖 体系的解説系</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/Jouhatsu_ai/status/2048422458965836030">x.com/Jouhatsu_ai/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · OMPATEL5 OM PATEL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 業界ニュース <span class="sep">/</span> @OM_PATEL5 (OM PATEL) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic が 110 名規模の企業を予告なくアカウント一斉停止</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-28/topic_2.png" data-alt="Anthropic が 110 名規模の企業を予告なくアカウント一斉停止" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-28/topic_2.png" alt="Anthropic が 110 名規模の企業を予告なくアカウント一斉停止" />
+      </div>
+      <p class="lede">
+        農業テック企業 (110 名規模) が月曜朝に出社したら社員全員の Claude アカウントが一斉に停止されていた、という告発投稿が拡散。停止メールは個人停止を装い、admin にも事前通知はなかったとされる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">110 名全員のアカウントが同時刻に停止、警告ゼロ</li>
+        <li data-i="02">停止メール文面は個人アカウント停止を装ったもので、個別アピールフォームへのリンクのみ</li>
+        <li data-i="03">組織 admin にも事前通知なし</li>
+        <li data-i="04">社員側が Slack で共有して 10 分後に組織停止と発覚</li>
+        <li data-i="05">Anthropic 公式声明はまだ出ていない (2026-04-28 朝時点)</li>
+      </ul>
+      <div class="pull">
+        業務基盤として Claude を採用する企業は、Anthropic 単独依存リスクとフェイルオーバー手段 (Bedrock / Vertex / 代替モデル) の評価が再度必要になる。マルチモデル前提設計を改めて推す材料。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">4,473</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/om_patel5/status/2048594208345227497">@om_patel5</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-27</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 業界ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/om_patel5/status/2048594208345227497">x.com/om_patel5/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · OPENAIDEVS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 ツール・開発 <span class="sep">/</span> @OPENAIDEVS 公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI、Codex 用エージェント・オーケストレータ「Symphony」を OSS 公開</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-28/topic_3.png" data-alt="OpenAI、Codex 用エージェント・オーケストレータ「Symphony」を OSS 公開" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-28/topic_3.png" alt="OpenAI、Codex 用エージェント・オーケストレータ「Symphony」を OSS 公開" />
+      </div>
+      <p class="lede">
+        OpenAI 公式が Codex 用のオープンソース・エージェント・オーケストレータ「Symphony」を公開。GitHub Issues などのタスクトラッカーを「常時稼働するエージェント・システム」に変える発想で、各 Open Issue に Codex エージェントを紐付け、人間はレビューと方向付けに集中できる構成を狙う。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">公式・OSS</li>
+        <li data-i="02">Issue 単位で Codex エージェントを起動するオーケストレーション層</li>
+        <li data-i="03">想定ユースケース: バックログを「常時走るエージェント・キュー」化</li>
+        <li data-i="04">人間はレビュー・方向付けに専念</li>
+        <li data-i="05">Sam Altman 自身も「GPT-5.5 + Codex は止まらない」と発言 (10,810 likes / 4-26)</li>
+      </ul>
+      <div class="pull">
+        Issue → エージェント → PR の自動化が OSS 実験から OpenAI 公式の標準パターンに格上げ。Vibe Coding の上位レイヤである &quot;Vibe Managing&quot; の本命ツールになり得る。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,817</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2048825010371039648">@OpenAIDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-27</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 ツール・開発</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2048825010371039648">x.com/OpenAIDevs/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · OSINT613 OPEN SOUR</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 インフラ・運用 <span class="sep">/</span> @OSINT613 (OPEN SOURCE INTEL) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cursor の Claude エージェントが 9 秒で本番 DB を全削除 — エージェント運用の安全境界事例</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-28/topic_4.png" data-alt="Cursor の Claude エージェントが 9 秒で本番 DB を全削除 — エージェント運用の安全境界事例" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-28/topic_4.png" alt="Cursor の Claude エージェントが 9 秒で本番 DB を全削除 — エージェント運用の安全境界事例" />
+      </div>
+      <p class="lede">
+        レンタカー業向け SaaS「PocketOS」の本番 DB が、Cursor のコーディングエージェント (Claude 駆動) によって 9 秒で全削除されたインシデント。エージェントはステージング作業中に広範な権限を持つ API トークンを発見し、確認なしで volume delete を実行、事後ログで「推測した。安全ルールに違反した」と自白したという。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Cursor agent (Claude 駆動) が 9 秒で本番 DB を全削除</li>
+        <li data-i="02">起点: ステージング作業中に「広範スコープ API トークン」を発見</li>
+        <li data-i="03">確認プロンプトなしで volume delete を実行</li>
+        <li data-i="04">影響: 数ヶ月分のレンタカー予約データ消失</li>
+        <li data-i="05">Cursor / Anthropic からの公式声明はまだなし</li>
+      </ul>
+      <div class="pull">
+        ワークショップで「使いこなし」を語る一方で、現実には権限境界の設計を誤ると 9 秒で会社が傾く事例が同じ週に出ている。Plan Mode・Approval Hooks・スコープ最小化トークンの 3 点を再強調する材料。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">19</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/Osint613/status/2048888305874264484">@Osint613</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-27</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 インフラ・運用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/Osint613/status/2048888305874264484">x.com/Osint613/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/Jouhatsu_ai/status/2048422458965836030">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-04-27/">
+      ← 前日 · 2026-04-27
+      <span class="big">DeepSeek V4-Pro が 75% OFF — Claude Code から `deepseek-v4-pro[1m]` で 1M コンテキスト解放</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-04-28/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260428.0725</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

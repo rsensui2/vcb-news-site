@@ -291,9 +291,9 @@
     <span class="sep">/</span>
     <span>@eng_khairallah1</span>
     <span class="sep">/</span>
-    <span>311 ITEMS</span>
+    <span>312 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:14 MON</span>
+    <span>JST 07:11 TUE</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,12 +305,12 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-04-26/">NEWS</a>
+      <a href="../news/2026-04-27/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:14 · MON</div>
+    <div class="meta">JST · 07:11 · TUE</div>
   </div>
 </header>
 
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">連携するAIエージェントのチームを構築する方法（完全コース）</h1>
     <div class="strap">
-      <span><span class="label">№</span>007 / 311</span>
+      <span><span class="label">№</span>007 / 312</span>
       <span><span class="label">SRC</span><a href="https://x.com/eng_khairallah1/status/2045430911257432225" target="_blank" rel="noopener noreferrer">x.com/eng_khairallah1 ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/250_eng_khairallah1_team_of_ai_agents_course.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">007<span class="ord">BOOKMARK / 311</span></aside>
+    <aside class="numeral">007<span class="ord">BOOKMARK / 312</span></aside>
     <article class="prose">
 <p><strong>有益度:</strong> ⭐⭐⭐ HIGH</p><h2>概要</h2><blockquote>マルチエージェント・オーケストレーションの完全ガイド。Hub &amp; Spoke（コーディネータ + 専門家）構造、最頻出バグ（コンテキスト非継承）、3大失敗パターンとその回避策を体系化したロングフォーム記事。</blockquote><h2>記事詳細</h2><p>「1つの全部入りエージェント」より「特化型のチーム」が強い、という前提から、Hub &amp; Spoke 型の標準アーキテクチャを解説。コーディネータがゴールを分解し、Research/Analyst/Writer/Reviewer 等の専門家エージェントへ振り分け、結果を集約する。最重要ポイントは「専門家はコーディネータの会話履歴を自動継承しない」こと。コンテキストは毎回明示的に渡す必要がある。失敗モード3種：(1) スコープが狭すぎる分解、(2) コンテキスト消失、(3) 多段中継による品質劣化（テレフォンエフェクト）。回避策として、分解時のセルフチェック、明示的コンテキスト引き渡し、各段階で原典データも併渡しする運用を推奨。</p><h2>関連リンク</h2><ul><li>http://x.com/i/article/2045229264665186304</li></ul><h2>日本語訳全文</h2><p><strong>タイトル:</strong> 連携するAIエージェントのチームを構築する方法（完全コース）</p><p>1つのエージェントは便利だ。エージェントのチームは、競争優位そのものになる。</p><p>これは保存しておいてほしい:)</p><p>単一のAIエージェントは、リサーチか、執筆か、分析か、コーディングのどれかはできる。しかし、それらすべてを同時に高い水準でこなすことはできない。リサーチ・執筆・営業・カスタマーサポートを1人で全部やろうとする社員が、結局すべてを中途半端にしか処理できないのと同じだ。</p><p>解決策は、人類が何世紀も前に見つけたものと同じ —— 専門化だ。</p><p>過負荷の1体ではなく、チームを組む。リサーチしかしないリサーチエージェント。執筆しかしない執筆エージェント。分析しかしない分析エージェント。そしてチームを束ね、タスクを割り振り、最終成果を組み立てるコーディネータエージェント。</p><p>各エージェントは集中している。各エージェントが自分の専門で卓越している。組み合わせれば、単一エージェントには絶対に到達できない品質の成果物が出る。</p><p>これがマルチエージェント・オーケストレーションであり、いま構築されている最強クラスのAIシステムの基盤アーキテクチャだ。</p><h3>アーキテクチャ：Hub and Spoke</h3><p>効果的なマルチエージェントシステムは、すべて同じ基本パターン —— Hub &amp; Spoke に従う。</p><p>ハブ（コーディネータ）が中央に座る。ユーザーから全体ゴールを受け取り、サブタスクへ分解し、どの専門家がどれを担当するかを判断する。専門家間でコンテキストを受け渡し、最終成果を組み立てる。</p><p>スポーク（専門家エージェント）はそれぞれ集中した専門家だ。明確な役割、その役割に最適化された少数のツール、専門領域に縛り込むシステムプロンプトを持つ。</p><p>通信はすべてコーディネータを経由する。専門家同士が直接話すことは絶対にない。コーディネータが唯一のルーティング・品質管理・組み立て地点となる。</p><h3>全員が破る最重要ルール</h3><p>専門家エージェントは、コーディネータの会話履歴を<strong>自動的には継承しない</strong>。</p><p>コーディネータが専門家を起動した瞬間、専門家の文脈は白紙だ。会話履歴を読んでもいない。他の専門家が何を出したかも知らない。プロンプトに明示的に含めたもの以外は、何も知らない。</p><p>「コーディネータが知っているなら専門家も知っているはず」と多くの人が思い込むが、知らない。リサーチデータを書くなら、書く側のプロンプトに研究データを丸ごと入れる必要がある。「リサーチ結果に基づいて書いて」とだけ言っても、書く側はリサーチが何だったか何も知らない。</p><h3>最初のチームを組む：リサーチ＆レポートシステム</h3><ul><li>リサーチ専門家：情報を探し、事実を抽出し、生のリサーチデータをまとめる</li><li>アナリスト専門家：生データからパターンを見つけ、結論を出し、ソース間の矛盾を特定する</li><li>ライター専門家：分析済データを、決まった構成と声で洗練された文章に仕上げる</li><li>レビュワー専門家：完成レポートを生リサーチと照合し、弱い主張を指摘して改善案を出す</li><li>コーディネータ（Agent 0）：ワークフロー全体を管理する</li></ul><h3>自分専用のチームを設計する</h3><ul><li>コンテンツチーム: Researcher → Outline Architect → Draft Writer → Editor → Formatter</li><li>カスタマーサポートチーム: Classifier → KB Searcher → Response Drafter → QA Checker</li><li>ビジネス分析チーム: Data Collector → Trend Analyzer → Risk Assessor → Recommendation Writer</li></ul><p>設計原則は常に同じ：各エージェントには責務を1つ。ツールは3〜5個まで。通信はコーディネータ経由。コンテキストは明示的に渡す（推測しない）。各段階でコーディネータが出力を検証してから次へ渡す。</p><h3>3大失敗モードと予防策</h3><p><strong>失敗1：分解が狭すぎる。</strong> コーディネータが「AIの産業への影響」をソフトウェアと医療だけに分解し、金融・教育・製造・メディア・法務を取りこぼす。</p><p>予防：分解前に全スコープを列挙させ、「主要領域に漏れはないか？」セルフチェックステップを入れる。</p><p><strong>失敗2：コンテキストの消失。</strong> リサーチエージェントが見つけた情報がライターに届かない。</p><p>予防：コーディネータは後段のプロンプトに、それまでの全エージェント出力を必ず含める。明示的コンテキスト引き渡しをワークフローに組み込む。</p><p><strong>失敗3：テレフォンエフェクトによる品質劣化。</strong> 各段階で前段出力のニュアンスが少しずつ失われ、4段経由する頃には重要な細部が薄まる。</p><p>予防：各段階で、前段出力だけでなく<strong>原典データも一緒に</strong>渡す。ライターは「分析だけ」ではなく「生リサーチ＋分析」を受け取る。</p><h3>結論</h3><p>単一エージェントは便利。マルチエージェントチームは強力。</p><p>アーキテクチャはシンプル：コーディネータが専門家を束ね、各専門家は1つのことを上手くやり、コンテキストは明示的に渡し、コーディネータが最終成果を組み立てる。</p><p>今週、最初のチームを組もう。リサーチ＆レポート構成から始め、実際のリサーチ課題でテストしてみる。一度品質差を体感したら、複雑タスクで単一エージェントに戻ることはなくなる。</p><p>AIの未来は、何でもこなす1体のエージェントではない。何でも上手くこなすエージェントの<strong>チーム</strong>だ。</p>
     </article>
@@ -390,14 +390,14 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 311 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 312 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-04-26/">TODAY</a></li>
+          <li><a href="../news/2026-04-27/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -424,7 +424,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-04-27</span>
+      <span>BUILD 2026-04-28</span>
     </div>
   </div>
 </footer>

@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №259</span>
+    <span class="tick">BOOKMARK №260</span>
     <span class="sep">/</span>
-    <span>2026-04-28</span>
+    <span>2026-04-29</span>
     <span class="sep">/</span>
     <span>@pbteja1998</span>
     <span class="sep">/</span>
-    <span>312 ITEMS</span>
+    <span>313 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:11 TUE</span>
+    <span>JST 07:12 WED</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,19 +305,19 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-04-27/">NEWS</a>
+      <a href="../news/2026-04-28/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:11 · TUE</div>
+    <div class="meta">JST · 07:12 · WED</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 日付不明 <span>/</span> №259
+      <a href="./">← BOOKMARKS</a> <span>/</span> 日付不明 <span>/</span> №260
     </div>
     <div class="cat-line">
       <span>💻 AI/開発</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">Mission Control構築完全ガイド: AIエージェント部隊の作り方</h1>
     <div class="strap">
-      <span><span class="label">№</span>259 / 312</span>
+      <span><span class="label">№</span>260 / 313</span>
       <span><span class="label">SRC</span><a href="https://x.com/pbteja1998/status/2017662163540971756" target="_blank" rel="noopener noreferrer">x.com/pbteja1998 ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/15_mission_control_guide.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">259<span class="ord">BOOKMARK / 312</span></aside>
+    <aside class="numeral">260<span class="ord">BOOKMARK / 313</span></aside>
     <article class="prose">
 <h2>概要</h2><p>10体のAIエージェントがチームとして協働するシステム「Mission Control」の構築完全ガイド。Clawdbot（現OpenClaw）を基盤に、複数エージェントの連携、共有データベース、通知システム、メモリ管理などを実現した方法をまとめています。</p><h2>Part 1: なぜこれを作ったのか</h2><h3>AIアシスタントの問題</h3><p>私はカスタマーサポート向けAIチャットボットの @SiteGPT を運営していて、日常的にAIを使っています。でも、どのAIツールにも共通する問題がありました。それは、継続性がないことです。</p><p>会話は毎回ゼロから始まる。昨日の文脈は消えている。先週頼んだ調査は、もう見つけられないチャットのどこかに埋もれている。</p><p>私が欲しかったのは、こういうものです。</p><ul><li>自分が何に取り組んでいるかを覚えているエージェント</li><li>それぞれ違うスキルを持つ複数のエージェントが協働すること</li><li>すべてのコンテキストが集まる共有ワークスペース</li><li>タスクを割り振って進捗を追跡できる仕組み</li></ul><p>要するに、AIを検索ボックスのように使うのではなく、チームのように働かせたかったんです。</p><h3>出発点は Clawdbot</h3><p>私はもともとClawdbotを使っていました。これは永続的なデーモンとして動くオープンソースのAIエージェントフレームワークです。Claudeなどのモデルに接続し、ファイルシステム、シェルコマンド、Webブラウジングなどのツールにアクセスさせられます。</p><p>Clawdbotのインスタンス1つで、TelegramにつながったAIアシスタント1人, つまりJarvisが動いていました。便利ではあるけれど、まだ制約が多かった。</p><p>そこで思いついたんです。各セッションにそれぞれの人格とコンテキストを持たせて、複数のClawdbotセッションを並行で動かしたらどうなるだろう？</p><p>その瞬間、必要なアーキテクチャはすでに揃っていると気づきました。あとはそれをオーケストレーションするだけでした。</p><h2>Part 2: Clawdbotアーキテクチャを理解する, すべての土台</h2><h3>Clawdbotとは何か</h3><p>Clawdbot（現在のOpenClaw）は、大きく3つの役割を持つAIエージェントフレームワークです。</p><ol><li>AIモデルを現実世界につなぐこと。ファイルアクセス、シェルコマンド、Webブラウジング、APIなど。</li><li>永続的なSessionを維持すること。再起動しても会話履歴が残る。</li><li>メッセージをルーティングすること。Telegram、Discord、Slackなど、さまざまなチャネルにAIを接続する。</li></ol><p>サーバー上でデーモン, つまりバックグラウンドサービスとして動き、メッセージを待ち受けて応答します。</p><h3>Gateway</h3><p>Gatewayは中核となるプロセスです。</p><ul><li>サーバー上で24時間365日動く</li><li>すべてのアクティブなSessionを管理する</li><li>cronジョブ, つまりスケジュール実行を処理する</li><li>チャネルとSessionの間でメッセージをルーティングする</li><li>制御用のWebSocket APIを提供する</li></ul><p>起動はこうです。</p><pre><code>clawdbot gateway start</code></pre><p>設定はJSONファイルに置きます。どのAIプロバイダとモデルを使うか、どのチャネルに接続するか、エージェントがどのツールにアクセスできるか、デフォルトのシステムプロンプトやワークスペースのパスなどを定義します。</p><h3>Session, いちばん大事な概念</h3><p>Sessionとは、コンテキストを持った永続的な会話単位です。</p><p>各Sessionは次のものを持っています。</p><ul><li>Session key, たとえば <code>agent:main:main</code> のような一意な識別子</li><li>会話履歴, JSONLファイルとしてディスクに保存される</li><li>モデル, どのAIを使うか</li><li>ツール, AIが何にアクセスできるか</li></ul><p>ここで重要なのは、Session同士が独立していることです。各Sessionはそれぞれ別の履歴、別のコンテキスト、過去の会話に基づく別の「記憶」を持っています。</p><p>複数のエージェントを動かすということは、実際には複数のSessionを動かしているということです。それぞれが固有のアイデンティティを持っている。</p><h3>Sessionはどう動くのか</h3><pre><code>ユーザーがTelegramにメッセージを送る
 ↓
@@ -570,14 +570,14 @@ clawdbot gateway start</code></pre><p><strong>2. まず2体のエージェント
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 312 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 313 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-04-27/">TODAY</a></li>
+          <li><a href="../news/2026-04-28/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -604,7 +604,7 @@ clawdbot gateway start</code></pre><p><strong>2. まず2体のエージェント
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-04-28</span>
+      <span>BUILD 2026-04-29</span>
     </div>
   </div>
 </footer>

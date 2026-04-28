@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-04-29 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-04-29 の Vibe Coder Bootcamp モーニングディスパッチ — 5本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0429</span>
+    <span class="sep">/</span>
+    <span>2026-04-29</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>05 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260429.0728</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-04-29/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:28 · TUE</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · TUESDAY · APRIL 29, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>04<span class="dot">.</span>29</h1>
+    <div class="strap">
+      <span>Adobe · Claude · DeepSeek · OpenAI</span>
+      <span><span class="count">05</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式リリース <span class="sep">/</span> @ADOBE (公式) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Adobe × Claude — Claude から Creative Cloud 50+ ツールを直接操作</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-29/topic_1.png" data-alt="Adobe × Claude — Claude から Creative Cloud 50+ ツールを直接操作" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-29/topic_1.png" alt="Adobe × Claude — Claude から Creative Cloud 50+ ツールを直接操作" />
+      </div>
+      <p class="lede">
+        Adobe が Claude 向けの公式コネクタを公開し、Claude のチャット内から Photoshop / Illustrator / Premiere Pro など 50 以上の Creative Cloud ツールを直接呼び出せるようになった。Claude Connectors directory に Adobe が掲載され、ゴール記述から裏側のワークフローを Claude がオーケストレーションする。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Claude Connectors directory に掲載: claude.ai/directory/connectors/adobe-creativity</li>
+        <li data-i="02">対象は 50+ の Creative Cloud アプリ群</li>
+        <li data-i="03">コマンドではなく『欲しい結果』を伝える Goal-based 呼び出し</li>
+        <li data-i="04">4/26 の Claude Connectors 一般提供化に続く 1 週間以内の大型統合</li>
+        <li data-i="05">クリエイティブ業務の Anthropic 集約化が現実的フェーズへ</li>
+      </ul>
+      <div class="pull">
+        Slide / 画像 / 映像のクリエイティブ業務を Claude 起点でフロー化できる。社内のクリエイティブ系業務を Claude へ寄せる根拠が一気に増えた。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">4,298</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/Adobe/status/2049154741544870369">@Adobe</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式リリース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/Adobe/status/2049154741544870369">x.com/Adobe/…</a></dd>
+        <dd><a href="https://claude.ai/directory/connectors/adobe-creativity">claude.ai/directory/connectors/adobe-cre…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · CLAUDEDEVS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式リリース <span class="sep">/</span> @CLAUDEDEVS (公式) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code がプッシュ通知に対応 — fire-and-forget 運用が現実化</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-29/topic_2.png" data-alt="Claude Code がプッシュ通知に対応 — fire-and-forget 運用が現実化" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-29/topic_2.png" alt="Claude Code がプッシュ通知に対応 — fire-and-forget 運用が現実化" />
+      </div>
+      <p class="lede">
+        Claude Code が、長時間タスクの完了時とユーザーへの入力要求時にスマートフォンへプッシュ通知を送れるようになった。ターミナルから離れていても Claude 側がタスクの完了を知らせるため、エージェント運用の体験が大きく変わる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">通知トリガーは『長時間タスク完了』『ユーザー入力要求』の 2 種類</li>
+        <li data-i="02">並列で複数 Claude を回す運用と相性がよい</li>
+        <li data-i="03">ultrareview のヘッドレス化（4/27）と方向性が一致</li>
+        <li data-i="04">CI 連携・夜間バッチでも有用</li>
+        <li data-i="05">公式動画付きの正式アナウンス</li>
+      </ul>
+      <div class="pull">
+        『投げて忘れる』エージェント運用に必要な最後のピース。Claude Code を非同期ワーカーとして使う設計が現実的になった。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">10,533</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2049154855143649315">@ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式リリース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2049154855143649315">x.com/ClaudeDevs/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · OLLAMA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式リリース <span class="sep">/</span> @OLLAMA (公式) <span class="sep">/</span> NEWS
+      </div>
+      <h2>DeepSeek v4 Pro が Ollama Cloud 公開 — Claude Code から直接呼び出し</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-29/topic_3.png" data-alt="DeepSeek v4 Pro が Ollama Cloud 公開 — Claude Code から直接呼び出し" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-29/topic_3.png" alt="DeepSeek v4 Pro が Ollama Cloud 公開 — Claude Code から直接呼び出し" />
+      </div>
+      <p class="lede">
+        Ollama が DeepSeek v4 Pro をクラウドで提供開始し、`ollama launch claude --model deepseek-v4-pro:cloud` のワンコマンドで Claude Code のフロントエンドから DeepSeek v4 Pro をバックエンドに切り替えられるようになった。Anthropic のレート制限・障害が起きてもフローが断絶しない経路が一つ増えた。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Claude Code をフロント、モデルを差し替え可能なバックエンドとして扱える</li>
+        <li data-i="02">DeepSeek v4 Pro は 4/24 ローンチ、5/5 まで 75% OFF プロモ中</li>
+        <li data-i="03">起動コマンド: ollama launch claude --model deepseek-v4-pro:cloud</li>
+        <li data-i="04">API キー / 自前ホスト不要で Claude Code 体験そのまま</li>
+        <li data-i="05">4/28 にあった Claude AI 一時障害（@status_is_down 報告）への現実的な保険</li>
+      </ul>
+      <div class="pull">
+        Claude Code の UX を維持したまま単一モデル依存を回避できる選択肢が現実になった。コスト最適化と冗長性の両面で価値がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,600</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ollama/status/2048631770283962380">@ollama</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-27</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式リリース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ollama/status/2048631770283962380">x.com/ollama/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · OPENAIDEVS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式リリース <span class="sep">/</span> @OPENAIDEVS (公式) <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI gpt-realtime-1.5 — 音声でアプリ状態を直接制御</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-29/topic_4.png" data-alt="OpenAI gpt-realtime-1.5 — 音声でアプリ状態を直接制御" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-29/topic_4.png" alt="OpenAI gpt-realtime-1.5 — 音声でアプリ状態を直接制御" />
+      </div>
+      <p class="lede">
+        OpenAI が gpt-realtime-1.5 をリリースし、音声でアプリの状態を自然に操作できるインタラクティブ・アプリケーションが構築可能になった。音声入出力にとどまらず state control が主題で、UI 状態と音声が直接結びつく構成が特徴。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">リアルタイム音声 API のメジャーアップデート</li>
+        <li data-i="02">音声から UI / アプリ状態を直接動かす設計</li>
+        <li data-i="03">デモではユーザーが仮想アシスタント Chappy に話しかけると状態が変わる</li>
+        <li data-i="04">ヘッドレスエージェントが会話 UI を持つ第一歩</li>
+        <li data-i="05">コールセンター AI / 対話型エージェントへの応用が見込める</li>
+      </ul>
+      <div class="pull">
+        音声 × エージェントの実用フェーズ入り。会議メモ、対話型ワークフロー、対話型コーチング系プロダクトで採用が一気に増える可能性。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">6,405</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2048871260512473385">@OpenAIDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-27</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式リリース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2048871260512473385">x.com/OpenAIDevs/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · OPENAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式リリース <span class="sep">/</span> @OPENAI (公式) <span class="sep">/</span> NEWS
+      </div>
+      <h2>GPT-5.4 Pro が 60 年来のエルデシュ問題を解く — AI が数学に貢献</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-29/topic_5.png" data-alt="GPT-5.4 Pro が 60 年来のエルデシュ問題を解く — AI が数学に貢献" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-29/topic_5.png" alt="GPT-5.4 Pro が 60 年来のエルデシュ問題を解く — AI が数学に貢献" />
+      </div>
+      <p class="lede">
+        OpenAI が、60 年間未解決だったエルデシュ予想群の 1 問が GPT-5.4 Pro の支援で今月解決されたと発表。AI が数学研究の co-author として実質的な貢献をする時代に入ったことを象徴する事例。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">解決された問題は 60 年来オープンだったエルデシュ予想のうち 1 問</li>
+        <li data-i="02">主役モデルは GPT-5.4 Pro（GPT-5.5 ではない）</li>
+        <li data-i="03">OpenAI は『AI is getting good at math』を公式メッセージとして打ち出し</li>
+        <li data-i="04">研究系・R&amp;D での AI 活用文脈で大きな後押し材料</li>
+        <li data-i="05">学術論文への貢献記述（共同著者問題）に再び注目が集まる</li>
+      </ul>
+      <div class="pull">
+        『AI が研究者の co-author になる』局面が具体例ベースで増えてきた。R&amp;D 部門での AI 活用、特に『自分の問題を AI に投げてみる』習慣が成果に直結し始めるフェーズ。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,464</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAI/status/2049182118069358967">@OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式リリース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAI/status/2049182118069358967">x.com/OpenAI/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/Adobe/status/2049154741544870369">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-04-28/">
+      ← 前日 · 2026-04-28
+      <span class="big">Boris Cherny の Claude Code 公式ワークショップが世界的にバズ</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-04-29/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260429.0728</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

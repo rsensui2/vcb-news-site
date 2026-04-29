@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-04-30 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-04-30 の Vibe Coder Bootcamp モーニングディスパッチ — 6本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0430</span>
+    <span class="sep">/</span>
+    <span>2026-04-30</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>06 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260430.0726</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-04-30/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:26 · WED</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · WEDNESDAY · APRIL 30, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>04<span class="dot">.</span>30</h1>
+    <div class="strap">
+      <span>OpenAI · Codex · Responses · Anthropic</span>
+      <span><span class="count">06</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式リリース <span class="sep">/</span> @OPENAI (公式) <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI DevDay 2026 — 9月29日サンフランシスコ開催発表</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-30/topic_1.png" data-alt="OpenAI DevDay 2026 — 9月29日サンフランシスコ開催発表" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-30/topic_1.png" alt="OpenAI DevDay 2026 — 9月29日サンフランシスコ開催発表" />
+      </div>
+      <p class="lede">
+        OpenAI が次の DevDay を 2026-09-29 サンフランシスコ開催すると発表。同時に GPT-5.5 + Image Gen で playable な作品を作って #OpenAIDevDay2026 で投稿すれば、毎週 2-3 名に DevDay 無料チケットが当たるコンテストも開始した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">開催日: 2026-09-29 (火)、場所: サンフランシスコ</li>
+        <li data-i="02">Codex でコンテスト応募作品を OpenAI チームが審査、毎週 2-3 名選定</li>
+        <li data-i="03">OpenAIDevs アカウントは 'We're so back.' と続報 (1,204 likes)</li>
+        <li data-i="04">DevDay 連動の関連発表が同日集中: Codex 無料 seat / WebSocket Responses API / Figma plugin</li>
+        <li data-i="05">宿泊・渡航は自費、対象は18歳以上</li>
+      </ul>
+      <div class="pull">
+        OpenAI が「モデル単体」から「Codex を中心とした dev ecosystem」を押し出す姿勢が明確化。VBC 受講生にとってもコンテスト経由で渡航が視野に入る教材ネタになる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,171</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAI/status/2049534651702956103">@OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-29</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式リリース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAI/status/2049534651702956103">x.com/OpenAI/…</a></dd>
+        <dd><a href="https://x.com/OpenAI/status/2049535650626785334">x.com/OpenAI/status/2049535650626785334</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · OPENAIDEVS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式リリース <span class="sep">/</span> @OPENAIDEVS (公式) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Codex を全 dev に — ChatGPT Business/Enterprise で『6月末まで $0 seat fee』</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-30/topic_2.png" data-alt="Codex を全 dev に — ChatGPT Business/Enterprise で『6月末まで $0 seat fee』" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-30/topic_2.png" alt="Codex を全 dev に — ChatGPT Business/Enterprise で『6月末まで $0 seat fee』" />
+      </div>
+      <p class="lede">
+        ChatGPT Business / Enterprise の対象顧客は、2026 年 6 月末まで Codex 専用 seat を追加料金ゼロで増やせる。社内の全 dev に Codex を行き渡らせるためのプロモで、既存の ChatGPT 契約を『全員 Codex』化するハードルを一気に下げる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対象: 既存 ChatGPT Business / Enterprise 顧客</li>
+        <li data-i="02">期間: 2026 年 6 月末まで</li>
+        <li data-i="03">Codex-only seat を $0 seat fee で追加可能</li>
+        <li data-i="04">公式詳細: openai.com/index/codex-flexible-pricing-for-teams/</li>
+        <li data-i="05">OpenAIDevs フォローアップ post (113 likes) で『チームに広げて』とプッシュ</li>
+      </ul>
+      <div class="pull">
+        PM/CS 含めた『全社 Codex』を前提にした料金設計。Claude / Cursor との社内 AI 標準化レースで OpenAI が seat 戦略で攻めている。クライアント向けには『6月までに seat 増やしておく』助言が成立する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,914</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2049505143218217048">@OpenAIDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-29</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式リリース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2049505143218217048">x.com/OpenAIDevs/…</a></dd>
+        <dd><a href="https://openai.com/index/codex-flexible-pricing-for-teams/">openai.com/index/codex-flexible-pricing-…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · OPENAIDEVS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 技術更新 <span class="sep">/</span> @OPENAIDEVS (公式) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Responses API が WebSocket 対応 — エージェントが体感40%高速化</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-30/topic_3.png" data-alt="Responses API が WebSocket 対応 — エージェントが体感40%高速化" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-30/topic_3.png" alt="Responses API が WebSocket 対応 — エージェントが体感40%高速化" />
+      </div>
+      <p class="lede">
+        OpenAI の Responses API に WebSocket トランスポートが追加された。Codex 高速化の結果ボトルネックが推論からツール呼び出し時の API 往復へ移っていたため、WebSocket でレスポンス state を warm のまま保ち、エージェントワークフローを end-to-end で最大 40% 高速化する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対象: Responses API</li>
+        <li data-i="02">改善内容: ツール呼び出し間の API 再接続/再水和を排除</li>
+        <li data-i="03">改善幅: end-to-end で最大 40%</li>
+        <li data-i="04">公式技術解説: openai.com/index/speeding-up-agentic-workflows-with-websockets/</li>
+        <li data-i="05">Codex CLI を SDK 経由で組んでいるアプリは即恩恵</li>
+      </ul>
+      <div class="pull">
+        『エージェントは速さがUX』という現実論。Codex API を組み込んだ自前エージェント (Jinn / 受講生プロダクト) で WebSocket に切り替える動機が出てきた。LangChain / OpenClaw の上位フレームワーク側の対応を 1〜2 週でウォッチ。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">329</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2049595890395152728">@OpenAIDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-29</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 技術更新</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2049595890395152728">x.com/OpenAIDevs/…</a></dd>
+        <dd><a href="https://openai.com/index/speeding-up-agentic-workflows-with-websockets/">openai.com/index/speeding-up-agentic-wor…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · ANTHROPICAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 研究 <span class="sep">/</span> @ANTHROPICAI (公式) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic Introspection Adapters — モデルが学習で得た挙動を自己申告</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-30/topic_4.png" data-alt="Anthropic Introspection Adapters — モデルが学習で得た挙動を自己申告" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-30/topic_4.png" alt="Anthropic Introspection Adapters — モデルが学習で得た挙動を自己申告" />
+      </div>
+      <p class="lede">
+        Anthropic Fellows プログラムから『introspection adapters』という研究が公開された。言語モデルが学習中に獲得した挙動 — 潜在的な misalignment も含む — をモデル自身に自己申告させるためのツールで、alignment 研究の中で『ブラックボックス内部に質問する』アプローチが新フェーズへ進んだ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">出元: Anthropic Fellows (社外フェロー研究)</li>
+        <li data-i="02">仕組み: モデルに自己申告させる adapter (詳細は近日論文)</li>
+        <li data-i="03">対象: 学習中に獲得した報告すべき挙動 (misalignment 含む)</li>
+        <li data-i="04">alignment 研究で従来の interpretability と並ぶ新軸</li>
+        <li data-i="05">Codex / GPT-5.5 が『動けば良い』を競う中、Anthropic は引き続き safety で差別化</li>
+      </ul>
+      <div class="pull">
+        Anthropic は『safety を売り物にする』戦略を継続。VBC で safety 文脈を語る際、最新の研究例として引用しやすい。エンタープライズ提案でも『Anthropic を選ぶ理由』を再強化する材料。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">579</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/AnthropicAI/status/2049576143653929153">@AnthropicAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-29</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 研究</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/AnthropicAI/status/2049576143653929153">x.com/AnthropicAI/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · STEIPETE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 運用パターン <span class="sep">/</span> @STEIPETE <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>clawsweeper — 50 並列 codex で issue/PR を1日4000件オートクローズ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-30/topic_5.png" data-alt="clawsweeper — 50 並列 codex で issue/PR を1日4000件オートクローズ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-30/topic_5.png" alt="clawsweeper — 50 並列 codex で issue/PR を1日4000件オートクローズ" />
+      </div>
+      <p class="lede">
+        Peter Steinberger が clawsweeper を公開。50 個の codex を24時間並列で動かし、OSSリポジトリの issue/PR を深くスキャンして既実装・意味不明なものを自動クローズする運用ツール。投稿当日だけで約4000件をクローズ、残り数千件がパイプラインに溜まり、レート制限が現実的ボトルネックになっていると共有した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">50並列 codex を24時間動かす運用例</li>
+        <li data-i="02">1日約4000 issue クローズ、数千件パイプライン待ち</li>
+        <li data-i="03">対象: 既に実装済み or 意味のない issue/PR</li>
+        <li data-i="04">ボトルネック: API レート制限</li>
+        <li data-i="05">OSS メンテナの大規模 issue 整理の実例</li>
+      </ul>
+      <div class="pull">
+        『大量並列 codex でメンテ仕事を吹き飛ばす』という運用パターンの実演。VBC 受講生の自社 GitHub 運用や TEKION の OSS リポでも、issue triage 自動化の参考になる。レート制限が天井という現実も持って帰れる教訓。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">8,604</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/steipete/status/2047982647264059734">@steipete</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 運用パターン</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/steipete/status/2047982647264059734">x.com/steipete/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · CLAUDECODELOVE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📖 体系的解説 <span class="sep">/</span> @CLAUDECODE_LOVE <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Boris Cherny の Claude Code 最強 Tips 30 連発</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-04-30/topic_6.png" data-alt="Boris Cherny の Claude Code 最強 Tips 30 連発" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-04-30/topic_6.png" alt="Boris Cherny の Claude Code 最強 Tips 30 連発" />
+      </div>
+      <p class="lede">
+        Claude Code の生みの親 Boris Cherny の発言とAnthropic公式ドキュメントを元に、Claude Code Studio が運用 Tips 30 個をまとめた長文記事。3つの原則（Plan Mode で調査と実装を分ける / Claude に自己検証させる / 並列セッション前提で働く）を軸に、Plan Mode → 実装 → 自己検証 → PR → Ultrareview → CLAUDE.md/Hook/Skill 還元、というワークフローを提示している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">原則1: Almost always use Plan Mode (調査と実装を分ける)</li>
+        <li data-i="02">原則2: Give Claude a way to verify its output (Claude本人に検証させる)</li>
+        <li data-i="03">原則3: 3〜5 git worktrees の並列セッション前提</li>
+        <li data-i="04">Tip群: hooks, skills, CLAUDE.md, ultrareview などを連携</li>
+        <li data-i="05">唯一の正解はないが、カスタマイズ前提のツールとして使え</li>
+      </ul>
+      <div class="pull">
+        VBC / 社内の Claude Code 運用ベストプラクティスを一気に底上げするまとめ。3原則だけでも掲示すれば、受講生・社内エンジニアの体感が変わる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,208</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeCode_love/status/2047992961175277791">@ClaudeCode_love</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>📖 体系的解説</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeCode_love/status/2047992961175277791">x.com/ClaudeCode_love/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/OpenAI/status/2049534651702956103">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-04-29/">
+      ← 前日 · 2026-04-29
+      <span class="big">Adobe × Claude — Claude から Creative Cloud 50+ ツールを直接操作</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-04-30/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260430.0726</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

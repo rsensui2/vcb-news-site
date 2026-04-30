@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-05-01 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-05-01 の Vibe Coder Bootcamp モーニングディスパッチ — 5本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0501</span>
+    <span class="sep">/</span>
+    <span>2026-05-01</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>05 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260501.0722</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-05-01/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:22 · THU</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · THURSDAY · APRIL 1, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>05<span class="dot">.</span>01</h1>
+    <div class="strap">
+      <span>Gemini · Anthropic · Anthropic · Google</span>
+      <span><span class="count">05</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式リリース <span class="sep">/</span> @GEMINICLI (公式) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Gemini CLI v0.40.0 — tiered memory + 自動 skill 生成</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-01/topic_1.png" data-alt="Gemini CLI v0.40.0 — tiered memory + 自動 skill 生成" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-01/topic_1.png" alt="Gemini CLI v0.40.0 — tiered memory + 自動 skill 生成" />
+      </div>
+      <p class="lede">
+        Gemini CLI が v0.40.0 をリリース。新しい tiered memory system（短期/長期メモリの階層化）と、ユーザー操作履歴から skill を自動生成する仕組みを正式導入した。「使えば使うほど自分専用の手順を覚えていく」エージェント設計に踏み込んだ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">tiered memory: 会話セッションをまたいだ記憶レイヤーを CLI ネイティブで保持</li>
+        <li data-i="02">ユーザー操作パターンから skill を自動生成し、再利用可能な手順を CLI 自身が書く</li>
+        <li data-i="03">v0.40.0 のリリースノートとして @geminicli から公式告知</li>
+      </ul>
+      <div class="pull">
+        Claude Code（skills + memory）/ Cursor SDK / Codex と並ぶ「ハーネスの個人最適化」競争に Google CLI も合流。Anthropic の skills 思想が業界デフォルトに近づきつつあることを示す追加証拠。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">824</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/geminicli/status/2049875287924465715">@geminicli</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-30</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式リリース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/geminicli/status/2049875287924465715">x.com/geminicli/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · TESTINGCATALOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔭 リーク・観測 <span class="sep">/</span> @TESTINGCATALOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic claude-jupiter-v1-p — 次世代 Claude を red team で実機テスト開始</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-01/topic_2.png" data-alt="Anthropic claude-jupiter-v1-p — 次世代 Claude を red team で実機テスト開始" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-01/topic_2.png" alt="Anthropic claude-jupiter-v1-p — 次世代 Claude を red team で実機テスト開始" />
+      </div>
+      <p class="lede">
+        Anthropic が claude-jupiter-v1-p という新モデルを red team 限定で評価中、と TestingCatalog が報じた。命名規則の '-v1-p' は preview を示唆し、次世代 Claude（Opus 4.7 後継 or 別ライン Jupiter）の preview と見られる。red team フェーズに入ったことで公開準備の動きが見えてきた。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">モデル名: claude-jupiter-v1-p（preview suffix）</li>
+        <li data-i="02">状態: Anthropic 内部 red team による評価フェーズ</li>
+        <li data-i="03">TestingCatalog は過去のリークでも実績あり、信頼度はそこそこ</li>
+      </ul>
+      <div class="pull">
+        Opus 4.7 から半年程度のスパンで次世代 Claude が来る可能性。OpenAI DevDay 2026 (9/29 SF) の前後で Anthropic がぶつける動きも警戒。VBC / Tekion で「Claude を選ぶ理由」を継続更新する材料。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">460</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/testingcatalog/status/2049896926997369194">@testingcatalog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-30</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔭 リーク・観測</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/testingcatalog/status/2049896926997369194">x.com/testingcatalog/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · ANTHROPICAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🧪 研究・エビデンス <span class="sep">/</span> @ANTHROPICAI (公式) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic Science Blog — Claude が専門家でも詰まる生物学難問の30%を解く</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-01/topic_3.png" data-alt="Anthropic Science Blog — Claude が専門家でも詰まる生物学難問の30%を解く" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-01/topic_3.png" alt="Anthropic Science Blog — Claude が専門家でも詰まる生物学難問の30%を解く" />
+      </div>
+      <p class="lede">
+        Anthropic が Science Blog に新エントリを公開。実生物学データをもとに 99 個の問題を作成し、Claude と専門家パネルを比較した。専門家パネルが詰まった 23 問のうち、最新 Claude が約 30% を解き、残りもほぼ正答したと報告。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">問題数: 99（実バイオデータに基づく）</li>
+        <li data-i="02">専門家パネルが詰まった問題: 23 / 99</li>
+        <li data-i="03">最新 Claude の正答率: 詰まった 23 問のうち約 30%、それ以外もほぼ全問正答</li>
+        <li data-i="04">一次情報: Anthropic 公式 Science Blog（X で告知）</li>
+      </ul>
+      <div class="pull">
+        「LLM = 知識検索」から「専門家を補完するリサーチ・パートナー」への移行を示す具体エビデンス。バイオ・医療・研究系 B2B SaaS の商談で「Claude がここまで来た」と提示できる素材。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,162</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/AnthropicAI/status/2049624600741560340">@AnthropicAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-29</dd>
+        <dt>CATEGORY</dt>
+        <dd>🧪 研究・エビデンス</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/AnthropicAI/status/2049624600741560340">x.com/AnthropicAI/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · THECYBERNEWS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🛡 セキュリティ <span class="sep">/</span> @THE_CYBER_NEWS <span class="sep">/</span> NEWS
+      </div>
+      <h2>Google Gemini CLI に RCE 級脆弱性 — CLI 型 AI ツールのセキュリティ警鐘</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-01/topic_4.png" data-alt="Google Gemini CLI に RCE 級脆弱性 — CLI 型 AI ツールのセキュリティ警鐘" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-01/topic_4.png" alt="Google Gemini CLI に RCE 級脆弱性 — CLI 型 AI ツールのセキュリティ警鐘" />
+      </div>
+      <p class="lede">
+        Google Gemini CLI に「攻撃者がホスト上で任意コマンドを実行できる」脆弱性が公開された。AI CLI ツールが「エージェントの権限スコープ＋ホスト権限」を直結する構造ゆえの典型例。先週 4/28 の Cursor 本番 DB 全削除インシデントに続き、CLI 型 AI ツール運用のセキュリティが業界課題に。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">影響: Gemini CLI のホスト上で任意コマンド実行が可能</li>
+        <li data-i="02">一次情報は元ソースリンク先の脆弱性レポート本文</li>
+        <li data-i="03">4/28 の Cursor PocketOS インシデント（volume delete を本番 DB に実行）と地続き</li>
+      </ul>
+      <div class="pull">
+        VBC / Tekion で CLI 型 AI ツールを業務導入するなら、最小権限・専用ユーザー・コンテナ分離を運用前提に格上げすべき。業界としても「CLI 内サンドボックス」の仕様標準化を求める圧力が高まる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">70</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/The_Cyber_News/status/2049854455873691919">@The_Cyber_News</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-30</dd>
+        <dt>CATEGORY</dt>
+        <dd>🛡 セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/The_Cyber_News/status/2049854455873691919">x.com/The_Cyber_News/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · CURSORAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 ツール・SDK <span class="sep">/</span> @CURSOR_AI (公式) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Cursor SDK ローンチ — Cursor のランタイム/ハーネス/モデルでエージェントを構築可能に</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-01/topic_5.png" data-alt="Cursor SDK ローンチ — Cursor のランタイム/ハーネス/モデルでエージェントを構築可能に" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-01/topic_5.png" alt="Cursor SDK ローンチ — Cursor のランタイム/ハーネス/モデルでエージェントを構築可能に" />
+      </div>
+      <p class="lede">
+        Cursor が、自社 IDE エージェントを支えるランタイム・ハーネス・モデルを SDK として外部公開。CI/CD・社内自動化・プロダクト埋め込みの 3 ユースケースを想定し、ローカル実行と Cursor クラウド実行の両方をサポート。Rippling、Notion、C3 AI、Faire が先行採用。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Cursor の IDE 体験を支える runtime + harness + models を SDK 化</li>
+        <li data-i="02">想定ユースケース: CI/CD パイプライン、社内ワークフロー自動化、自社プロダクトへの埋め込み</li>
+        <li data-i="03">実行はローカル / Cursor クラウドの両対応</li>
+        <li data-i="04">スターター OSS: コーディング・エージェント CLI、プロト・ツール、エージェント駆動かんばんボード</li>
+        <li data-i="05">採用済み: Rippling、Notion、C3 AI、Faire</li>
+      </ul>
+      <div class="pull">
+        Cursor が「IDE プロダクト」から「エージェント基盤プラットフォーム」へ拡張。Anthropic SDK / OpenAI Agents API / Vercel AI SDK と同じレイヤーで戦う宣言で、VBC 受講生や Tekion クライアントには「Cursor で作ったエージェントを CI に組み込む」が現実的選択肢に。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">8,276</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2049499866217185492">@cursor_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-29</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 ツール・SDK</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2049499866217185492">x.com/cursor_ai/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/geminicli/status/2049875287924465715">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-04-30/">
+      ← 前日 · 2026-04-30
+      <span class="big">OpenAI DevDay 2026 — 9月29日サンフランシスコ開催発表</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-05-01/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260501.0722</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

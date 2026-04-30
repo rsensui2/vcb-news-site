@@ -291,9 +291,9 @@
     <span class="sep">/</span>
     <span>@yoshifujidesign</span>
     <span class="sep">/</span>
-    <span>315 ITEMS</span>
+    <span>316 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:13 THU</span>
+    <span>JST 07:13 FRI</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,12 +305,12 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-04-29/">NEWS</a>
+      <a href="../news/2026-04-30/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:13 · THU</div>
+    <div class="meta">JST · 07:13 · FRI</div>
   </div>
 </header>
 
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">トークン消費が激速いClaude Designの回避ハック — FUJI</h1>
     <div class="strap">
-      <span><span class="label">№</span>005 / 315</span>
+      <span><span class="label">№</span>005 / 316</span>
       <span><span class="label">SRC</span><a href="https://x.com/yoshifujidesign/status/2046123657991250425" target="_blank" rel="noopener noreferrer">x.com/yoshifujidesign ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/259_yoshifujidesign_%E3%83%88%E3%83%BC%E3%82%AF%E3%83%B3%E6%B6%88%E8%B2%BB%E3%81%8C%E6%BF%80%E9%80%9F%E3%81%84Claude_Design%E3%81%AE%E5%9B%9E%E9%81%BF%E3%83%8F%E3%83%83%E3%82%AF_FUJI.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">005<span class="ord">BOOKMARK / 315</span></aside>
+    <aside class="numeral">005<span class="ord">BOOKMARK / 316</span></aside>
     <article class="prose">
 <p><strong>有益度:</strong> ⭐⭐ MEDIUM</p><h2>概要</h2><blockquote>Claude Design はリサーチプレビュー中のため独自消費率に加えデザインシステム生成のワークロードが重く、ちょっとした修正でもトークンを急速に消費する。著者FUJI（プレゼンテーションデザイナー）のハック: ①Claude Designでデザインシステム+初期データを作る → ②ローカルにダウンロード → ③修正は Claude Code でローカル編集。Claude Designは「デザインシステム構築 + 初回生成」だけに絞る運用が有効という知見。</blockquote><h2>まとめ</h2><ul><li>Claude Designはリサーチプレビュー中で独自のトークン消費率が適用される</li><li>デザインシステム構築のワークロードが重く微修正でもトークンを食う</li><li>回避策: Claude Design→ローカルDL→Claude Codeで修正 の 3 段運用</li><li>Claude Designが活きるのは「デザインシステム + 初回大物生成」、微調整はCode で十分</li></ul><h2>関連リンク</h2><ul><li>元ポスト: https://x.com/yoshifujidesign/status/2046123657991250425</li><li>X Article: https://x.com/i/article/2046117129116872704</li></ul><h2>X Article 本文</h2><p><strong>タイトル:</strong> トークン消費が激速いClaude Designの回避ハック</p><p>Claude Designはトークンの消費が本当に速い。</p><p>こういう投稿をして聞いてみたところ、複数の方から同じように消費が速いというコメントをいただきました。</p><p>この原因なのですが、そもそもリサーチプレビュー（試験提供／実験公開）中なのでClaude Design独自のトークンの消費率が適用されているのと、デザインシステムの構築やそれをもとにしたデザインの生成という作業のワークロードがそれなりに重いので、ちょっと修正を加えるだけでもがっつりトークンが消費されてしまうようです。</p><p>自分でいろいろ試してみていて、ひとまずの運用でこの速すぎるトークン消費を多少でも回避する方法をご紹介しようと思います。</p><p>といってもすごく単純で、</p><p>① Claude Designで、デザインシステムと最初のデータを作る</p><p>② できたデータセットをローカルにダウンロードする</p><p>③ 修正作業はClaude codeでローカルデータをいじる</p><p>というふうに、切り分けて使うだけです。</p><p>Claude Designは、これでしかできないデザインシステムを使うフェーズだけにできるだけ絞って、なんでもかんでもClaude Designでやらないようにして修正や微調整をClaude codeにまわすとトークン消費を抑えることができます。</p><p>生成物を比べてみても、Claude Designが活きるのはデザインシステムの構築と、最初の生成物が大きくて、微調整のレベルでは大きな差はないように感じました。</p><p>②と③がポイントで、Claude Designが作ったデータをそのままローカルにダウンロードしておきます。</p><p>このデータフォルダで Claude code を起動すれば、各ファイルをそのまま編集してくれるので簡単です。Claude codeに慣れている人ならこちらの方が楽まである。</p><p>最初からこうやればよかったんですが、自分はMaxプランを週間制限いっぱいまで使った後でこのやり方に思い至りました。もっと早く気がつけばよかった。。と思ったのでせっかくなので記事にしました。</p><p>Claude Designをお使いの方、これから使う方、トークンがあっというまになくなる前に、使いどころを切り分けるやり方を試してみてください。</p>
     </article>
@@ -390,14 +390,14 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 315 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 316 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-04-29/">TODAY</a></li>
+          <li><a href="../news/2026-04-30/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -424,7 +424,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-04-30</span>
+      <span>BUILD 2026-05-01</span>
     </div>
   </div>
 </footer>

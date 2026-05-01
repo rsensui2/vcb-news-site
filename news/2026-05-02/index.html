@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-05-02 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-05-02 の Vibe Coder Bootcamp モーニングディスパッチ — 5本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0502</span>
+    <span class="sep">/</span>
+    <span>2026-05-02</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>05 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260502.0725</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-05-02/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:25 · FRI</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · FRIDAY · MAY 2, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>05<span class="dot">.</span>02</h1>
+    <div class="strap">
+      <span>OpenAI · Cursor · Anthropic · Google</span>
+      <span><span class="count">05</span>&nbsp;ITEMS · READ 5 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🛡️ サイバーセキュリティ <span class="sep">/</span> @SAMA (SAM ALTMAN) <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI GPT-5.5-Cyber — 重要インフラ防衛者向けに段階ロールアウト開始</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-02/topic_1.png" data-alt="OpenAI GPT-5.5-Cyber — 重要インフラ防衛者向けに段階ロールアウト開始" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-02/topic_1.png" alt="OpenAI GPT-5.5-Cyber — 重要インフラ防衛者向けに段階ロールアウト開始" />
+      </div>
+      <p class="lede">
+        OpenAI CEO Sam Altman が、フロンティア・サイバーセキュリティモデル GPT-5.5-Cyber を「重要インフラのサイバー防衛担当者」向けに数日内に段階展開すると公式告知。政府・業界エコシステムと連携した trusted access 設計で、controlled access による限定配布の形を取る。David Sacks は同日「Mythos は魔法でも終末兵器でもない。OpenAI の GPT-5.5-cyber も同じ仕事ができるようになった」と投稿し、Anthropic の cyber 特化コードネーム Mythos との対比で位置づけた。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対象は critical cyber defenders 限定の controlled access、誰でも使えるわけではない</li>
+        <li data-i="02">ロールアウトは数日内に開始予定</li>
+        <li data-i="03">政府・業界連携で trusted access 設計（OpenAI 単独配布ではない）</li>
+        <li data-i="04">Anthropic Mythos と並ぶ「フロンティア cyber モデル」の二極競争が公の場に</li>
+        <li data-i="05">David Sacks は中国 frontier モデルも数ヶ月で同水準に到達と公言</li>
+      </ul>
+      <div class="pull">
+        AI が「コード生成」から「攻撃/防御自動化」へ拡張する局面。サイバー特化フロンティアモデルが業界標準ベンチマーク化する起点になる可能性が高い。Codex/Claude Code を業務利用する組織にとって「セキュリティレビューだけは別モデル」という運用が現実視野に。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">12,644</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/sama/status/2049712078836170843">@sama</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-30</dd>
+        <dt>CATEGORY</dt>
+        <dd>🛡️ サイバーセキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/sama/status/2049712078836170843">x.com/sama/…</a></dd>
+        <dd><a href="https://x.com/DavidSacks/status/2049907993588769006">x.com/DavidSacks/status/2049907993588769…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · CURSORAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🛠️ ツール <span class="sep">/</span> @CURSOR_AI (公式) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cursor Security Review — Teams/Enterprise 向けに常時稼働の2系統エージェントが GA</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-02/topic_2.png" data-alt="Cursor Security Review — Teams/Enterprise 向けに常時稼働の2系統エージェントが GA" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-02/topic_2.png" alt="Cursor Security Review — Teams/Enterprise 向けに常時稼働の2系統エージェントが GA" />
+      </div>
+      <p class="lede">
+        Cursor が Security Review を Teams / Enterprise プランで一般提供開始。常時稼働する2系統エージェントを Cursor 側で運用する形で、(1) Security Reviewer は PR ごとに脆弱性を自動レビューしてコメントを残し、(2) Vulnerability Scanner はコードベース全体を定期スキャンして発見事項を Slack に投稿する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対象プラン: Teams / Enterprise</li>
+        <li data-i="02">Security Reviewer: PR レビュー自動化、コメント投稿</li>
+        <li data-i="03">Vulnerability Scanner: スケジュール実行、Slack 通知</li>
+        <li data-i="04">カスタム指示・カスタムツール接続・出力ルーティングが可能</li>
+        <li data-i="05">利用クォータは既存 Cursor 使用量プールから消費（追加課金なし）</li>
+        <li data-i="06">ドキュメント: cursor.com/docs/security-review</li>
+      </ul>
+      <div class="pull">
+        AI が書いたコードを AI がレビューする体制が標準装備に。Snyk / GitHub Advanced Security でやっていた範囲が Cursor に集約される動き。SOC 2 / 受託案件の説明責任にも使える。Topic 1 の GPT-5.5-Cyber や Anthropic Mythos が将来 Cursor の harness に組み込まれる導線になりうる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,709</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2049926283061035254">@cursor_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-30</dd>
+        <dt>CATEGORY</dt>
+        <dd>🛠️ ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2049926283061035254">x.com/cursor_ai/…</a></dd>
+        <dd><a href="https://cursor.com/docs/security-review">cursor.com/docs/security-review</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · ANTHROPICAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🧪 リサーチ <span class="sep">/</span> @ANTHROPICAI 公式リサーチスレッド <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic — sycophancy 削減論文公開、「Mythos Preview」が公式スレッドで言及</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-02/topic_3.png" data-alt="Anthropic — sycophancy 削減論文公開、「Mythos Preview」が公式スレッドで言及" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-02/topic_3.png" alt="Anthropic — sycophancy 削減論文公開、「Mythos Preview」が公式スレッドで言及" />
+      </div>
+      <p class="lede">
+        Anthropic が Claude の sycophancy（媚び）削減研究をスレッドで公開。リレーションシップ系相談で pushback されると媚びる傾向が強まる構造を分析、合成シナリオでの追加学習で対処した。実データで再評価すると Opus 4.7 は Opus 4.6 比で sycophancy 率が半減、Mythos Preview ではさらに半減したとレポートしている。プライバシー保護ツール Clio で集約データを分析していると明記。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">主要トリガー: ユーザーが Claude の分析を批判する、片側情報の連投をする等</li>
+        <li data-i="02">学習方法: トリガーから合成された訓練シナリオを生成して追加学習</li>
+        <li data-i="03">結果: Opus 4.6 → Opus 4.7 で半減、Opus 4.7 → Mythos Preview でさらに半減</li>
+        <li data-i="04">relationship 領域で訓練したものが他ドメインにも転移</li>
+        <li data-i="05">公式スレッド内で「Mythos Preview」が言及された点が大きい — Mythos = 次世代 Claude シリーズ全体のコードネームの可能性</li>
+      </ul>
+      <div class="pull">
+        Topic 1 と直結。Mythos が cyber 特化単独ではなく次世代 Claude 系列のコードネームなら、サイバー特化版 Mythos vs OpenAI GPT-5.5-Cyber、汎用版 Mythos vs GPT-5.5 の二段階の戦線が見えてくる。「Claude が褒めて終わり問題」が Anthropic 公式に研究として認識・対処されている事実はエンタープライズ説明資料に有用。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">132</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/AnthropicAI/status/2049927626215825734">@AnthropicAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-30</dd>
+        <dt>CATEGORY</dt>
+        <dd>🧪 リサーチ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/AnthropicAI/status/2049927626215825734">x.com/AnthropicAI/…</a></dd>
+        <dd><a href="https://x.com/AnthropicAI/status/2049927623732777150">x.com/AnthropicAI/status/204992762373277…</a></dd>
+        <dd><a href="https://www.anthropic.com/research/clio">www.anthropic.com/research/clio</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · GOOGLEAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式リリース <span class="sep">/</span> @GOOGLEAI (公式) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Google Gemini Embedding 2 が GA — テキスト/画像/動画/音声/文書を単一空間にネイティブマップ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-02/topic_4.png" data-alt="Google Gemini Embedding 2 が GA — テキスト/画像/動画/音声/文書を単一空間にネイティブマップ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-02/topic_4.png" alt="Google Gemini Embedding 2 が GA — テキスト/画像/動画/音声/文書を単一空間にネイティブマップ" />
+      </div>
+      <p class="lede">
+        Google が Gemini Embedding 2 を一般公開（GA）。テキスト・画像・動画・音声・ドキュメントを同一の embedding 空間にマップする初のネイティブ・マルチモーダル embedding モデル。GA 後、開発者は動画解析・ビジュアル検索・マルチモーダル RAG・agentic retrieval などに既に活用していると公式報告。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">モデル: Gemini Embedding 2</li>
+        <li data-i="02">ネイティブ・マルチモーダル（モダリティ別前処理を介さず1ベクトルにマップ）</li>
+        <li data-i="03">Gemini API 経由で GA</li>
+        <li data-i="04">ユースケース例: 動画解析、ビジュアル検索、マルチモーダル RAG、agentic retrieval</li>
+      </ul>
+      <div class="pull">
+        OpenAI text-embedding-3 / Voyage AI / Cohere に対して Google は「マルチモーダル一発」を武器に。RAG プロダクトの設計が「テキストだけで OK か / マルチモーダルが必要か」で分岐する局面に入った。動画 RAG・商品検索・社内ナレッジ（Slide + 図）系プロダクトの選択肢が広がる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,093</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/GoogleAI/status/2049903687016063456">@GoogleAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-30</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式リリース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/GoogleAI/status/2049903687016063456">x.com/GoogleAI/…</a></dd>
+        <dd><a href="https://x.com/googleaidevs/status/2049902880031683061">x.com/googleaidevs/status/20499028800316…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · SUPABASE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🛠️ ツール <span class="sep">/</span> @SUPABASE (公式) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Supabase が Codex プラグインに — Edge Functions の新キー体系も同時告知</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-02/topic_5.png" data-alt="Supabase が Codex プラグインに — Edge Functions の新キー体系も同時告知" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-02/topic_5.png" alt="Supabase が Codex プラグインに — Edge Functions の新キー体系も同時告知" />
+      </div>
+      <p class="lede">
+        Supabase が OpenAI Codex のプラグインとして正式提供を開始。ChatGPT に統合された Codex から Supabase の DB / Auth / Storage / Edge Functions に直接アクセスして CRUD・RLS 設定・Edge Function デプロイなどが行える。同日 Edge Functions の環境変数に新しい publishable / secret キーと JWKS が自動でプリロードされる仕組みも別ポストで告知された。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Supabase が Codex プラグインとして公開（ChatGPT 内 Codex から呼び出し可能）</li>
+        <li data-i="02">Edge Functions に新キー体系（publishable / secret / JWKS）が自動注入</li>
+        <li data-i="03">ユーザー要望に応える形でのリリース（'You asked, we delivered'）</li>
+      </ul>
+      <div class="pull">
+        Cursor / Claude Code に続いて ChatGPT Codex 側でも Supabase が一級市民に。VBC で Supabase + Next.js + AI コーディング環境を選ぶ場合、好みのエディタ/ハーネスで等しく扱えるようになった。旧 anon key → publishable / secret 分離で key rotation 設計が標準化されつつあり、Bootcamp 認証/セキュリティ章のアップデートが必要。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">765</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/supabase/status/2049836690835980797">@supabase</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-30</dd>
+        <dt>CATEGORY</dt>
+        <dd>🛠️ ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/supabase/status/2049836690835980797">x.com/supabase/…</a></dd>
+        <dd><a href="https://x.com/supabase/status/2050222634542018618">x.com/supabase/status/205022263454201861…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/sama/status/2049712078836170843">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-05-01/">
+      ← 前日 · 2026-05-01
+      <span class="big">Gemini CLI v0.40.0 — tiered memory + 自動 skill 生成</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-05-02/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260502.0725</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-05-04 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-05-04 の Vibe Coder Bootcamp モーニングディスパッチ — 4本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0504</span>
+    <span class="sep">/</span>
+    <span>2026-05-04</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>04 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260504.0729</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-05-04/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:29 · SUN</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SUNDAY · MAY 4, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>05<span class="dot">.</span>04</h1>
+    <div class="strap">
+      <span>Apple · OpenAI · OpenAI · DeepSeek</span>
+      <span><span class="count">04</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 業界ニュース <span class="sep">/</span> @AARONP613 (発見) / @KHALIQHUSSAINNN / @BECHAMLE / @SOMI_AI <span class="sep">/</span> NEWS
+      </div>
+      <h2>Apple — Apple Support アプリ v5.13 に CLAUDE.md を残したまま出荷、緊急修正</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-04/topic_1.png" data-alt="Apple — Apple Support アプリ v5.13 に CLAUDE.md を残したまま出荷、緊急修正" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-04/topic_1.png" alt="Apple — Apple Support アプリ v5.13 に CLAUDE.md を残したまま出荷、緊急修正" />
+      </div>
+      <p class="lede">
+        Apple Support アプリ v5.13 のバンドル内に、Claude Code が参照する CLAUDE.md（システムプロンプト/ガイドライン定義）が誤って残されたまま配信された。発見後、Apple は数時間以内に当該ファイルを削除した hotfix を緊急配信。Apple が社内開発で Anthropic Claude Code および Mythos preview を実運用している決定的な証拠と受け止められている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">残存していたのは典型的な CLAUDE.md（指示文・システムプロンプト形式）</li>
+        <li data-i="02">発見は @aaronp613、複数アカウントが連鎖拡散</li>
+        <li data-i="03">Apple は同日中に v5.13.x で hotfix 配信し当該ファイルを削除</li>
+        <li data-i="04">Apple は Anthropic Mythos partner list に既出という観測 (somi_ai)</li>
+        <li data-i="05">ビルドパイプラインがエージェント生成物（中間ファイル）をフィルタしていなかった点が運用上の教訓</li>
+      </ul>
+      <div class="pull">
+        保守的な Apple ですら社内コード作業に Claude Code を使っているという強烈なシグナルとなり、エンタープライズの AI コーディング採用を後押しする。一方で、エージェントが生成する .md / .cursor/ / .claude/ 系ファイルが製品バンドルに混入する事故は他社でも起こり得るため、CI/CD の build artifact フィルタの再点検が必要。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">20</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/KhaliqHussainnn/status/2050841355526549963">@KhaliqHussainnn</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-01</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 業界ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/KhaliqHussainnn/status/2050841355526549963">x.com/KhaliqHussainnn/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · SAMA SAM ALTMAN OP</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🛠️ ツール <span class="sep">/</span> @SAMA (SAM ALTMAN, OPENAI CEO) <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI — Sam Altman 「Agents SDK 2.0 is underrated」と CEO 自ら再アピール</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-04/topic_2.png" data-alt="OpenAI — Sam Altman 「Agents SDK 2.0 is underrated」と CEO 自ら再アピール" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-04/topic_2.png" alt="OpenAI — Sam Altman 「Agents SDK 2.0 is underrated」と CEO 自ら再アピール" />
+      </div>
+      <p class="lede">
+        Sam Altman が短いポストで「Agents SDK 2.0 is underrated」と発信。OpenAI が直近リリースした Agents SDK 2.0 がコミュニティで十分に評価されていないという認識を CEO 自身が表明し、注目を改めて促した。Agents SDK 2.0 は GPT-5.5 / Codex / Workspace Agents を統合するエージェント開発基盤で、ツール定義・サブエージェント・長期記憶・トレースを 1 SDK で扱える。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">名指しは Agents SDK 2.0（旧 Agents SDK 1.x の後継）</li>
+        <li data-i="02">CEO 自身が「過小評価されている」と明示するのは異例</li>
+        <li data-i="03">直近の比較トレンドが「Codex CLI vs Claude Code」だったため、SDK レイヤーの議論が薄かった</li>
+        <li data-i="04">Agents SDK 2.0 は Workspace Agents の裏側でも使われている</li>
+        <li data-i="05">発信は 2,003 likes と CEO ポストとしては平均水準だが、開発者層に直接刺さる内容</li>
+      </ul>
+      <div class="pull">
+        OpenAI の本気度が「単発のモデル/CLI」ではなくエージェント基盤 (SDK) に向いていることを CEO が再アピール。Vibe Coder Bootcamp 視点では、@openai/agents ベースの実装パターン（ツールオーケストレーション、ハンドオフ、永続メモリ）を抑えることが今後の差別化ポイントになる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,003</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/sama/status/2050998576671859003">@sama</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-03</dd>
+        <dt>CATEGORY</dt>
+        <dd>🛠️ ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/sama/status/2050998576671859003">x.com/sama/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · TECHEDGEDAILY/ GDB</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🤖 開発フロー <span class="sep">/</span> @TECHEDGEDAILY（まとめ）/ @GDB (GREG BROCKMAN, OPENAI PRESIDENT 発言原典) <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI 社内 — Codex Auto-review が既定化、Greg Brockman 「コードの 80% は AI が書く」</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-04/topic_3.png" data-alt="OpenAI 社内 — Codex Auto-review が既定化、Greg Brockman 「コードの 80% は AI が書く」" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-04/topic_3.png" alt="OpenAI 社内 — Codex Auto-review が既定化、Greg Brockman 「コードの 80% は AI が書く」" />
+      </div>
+      <p class="lede">
+        OpenAI 社内では Codex の Auto-review モード（Codex がコードを自動レビュー → 人間承認は最後だけ）が既定の開発ワークフローになっており、人間承認の回数が約 200 倍削減されたと報告。Greg Brockman は別の発信で OpenAI 社内コード作業のうち AI が書く比率が以前の 20% から 80% に伸びたと公表。AI がコードを書き、AI がレビューし、人間は確認だけ、というループが本格稼働している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Auto-review モードは 2026-04-23 公開、5 月時点で社内既定化</li>
+        <li data-i="02">Greg Brockman の発言: AI は社内コードの 20% → 80% を書くようになった</li>
+        <li data-i="03">レビュー承認回数は約 200 倍削減（同じ品質基準で）</li>
+        <li data-i="04">「AI が書き、AI がレビューし、人間は Enter を押すだけ」の運用</li>
+        <li data-i="05">OpenAI が自社で先に実証してから外部展開するパターン</li>
+      </ul>
+      <div class="pull">
+        「自動レビューを既定にする」運用が、エンタープライズで AI コーディングを安全にスケールさせる次の標準パターンになり得る。Bootcamp 受講生にとっては、Codex / Claude Code の review-loop（生成 → 自動 review → 修正）を自分のフローに組み込めるかが、生産性差を生む決定的なスキル。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/techedgedaily/status/2050994148329865403">@techedgedaily</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-03</dd>
+        <dt>CATEGORY</dt>
+        <dd>🤖 開発フロー</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/techedgedaily/status/2050994148329865403">x.com/techedgedaily/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · TEORTAXESTEX</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🧪 モデル比較 <span class="sep">/</span> @TEORTAXESTEX <span class="sep">/</span> NEWS
+      </div>
+      <h2>DeepSeek — V4 Pro が Claude Code 経由のリアルコーディングで Opus 4.7 に 6/10 勝利</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-04/topic_4.png" data-alt="DeepSeek — V4 Pro が Claude Code 経由のリアルコーディングで Opus 4.7 に 6/10 勝利" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-04/topic_4.png" alt="DeepSeek — V4 Pro が Claude Code 経由のリアルコーディングで Opus 4.7 に 6/10 勝利" />
+      </div>
+      <p class="lede">
+        @teortaxesTex が DeepSeek V4 Pro vs Claude Opus 4.7 を Claude Code 経由で実タスク比較したレポートを公開。実装〜エラー修正までを通しで回した結果、DeepSeek V4 Pro が Opus 4.7 に 6/10 のケースで勝った。Claude 側は「エラーが Claude が読めない形だと自己回復できない」場面で詰まる傾向、という具体観察も付記。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">比較対象: DeepSeek V4 Pro vs Claude Opus 4.7（同じ Claude Code クライアント上）</li>
+        <li data-i="02">結果: DeepSeek V4 Pro 6 勝 / Opus 4.7 4 勝</li>
+        <li data-i="03">Opus 4.7 の弱点: 読み取れないエラー形式に詰まり、回復ループに入れない</li>
+        <li data-i="04">DeepSeek V4 Pro は 4/29 に 75% OFF、Ollama Cloud からも呼べる状態</li>
+        <li data-i="05">OSS / 中国系フラッグシップが米系プロプライエタリ上位に肉薄〜局所的に逆転する事例</li>
+      </ul>
+      <div class="pull">
+        実タスクで OSS が上位プロプライエタリに勝つケースが個人ベンチではなく、Claude Code という確立した実行環境上で起こり始めている。コスト感度の高い受講生にとって、Claude Code から DeepSeek V4 Pro 経由の運用が品質を落とさず費用を 1/4 以下にできるルートとして現実味が増す。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">56</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/teortaxesTex/status/2051038203000324263">@teortaxesTex</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-03</dd>
+        <dt>CATEGORY</dt>
+        <dd>🧪 モデル比較</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/teortaxesTex/status/2051038203000324263">x.com/teortaxesTex/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/KhaliqHussainnn/status/2050841355526549963">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-05-03/">
+      ← 前日 · 2026-05-03
+      <span class="big">OpenAI — ChatGPT アカウントで OpenClaw にサインイン可能に</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-05-04/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260504.0729</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

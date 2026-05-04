@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-05-05 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-05-05 の Vibe Coder Bootcamp モーニングディスパッチ — 5本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0505</span>
+    <span class="sep">/</span>
+    <span>2026-05-05</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>05 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260505.0721</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-05-05/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:21 · MON</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · MONDAY · MAY 5, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>05<span class="dot">.</span>05</h1>
+    <div class="strap">
+      <span>OpenAI · The · Cursor · Google</span>
+      <span><span class="count">05</span>&nbsp;ITEMS · READ 5 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 業界ニュース <span class="sep">/</span> @SAMA (SAM ALTMAN) / @GDB (GREG BROCKMAN) / @OPENAIDEVS <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI — GPT-5.5 正式ローンチ、Codex は GPT-5.5 ベースに刷新</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-05/topic_1.png" data-alt="OpenAI — GPT-5.5 正式ローンチ、Codex は GPT-5.5 ベースに刷新" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-05/topic_1.png" alt="OpenAI — GPT-5.5 正式ローンチ、Codex は GPT-5.5 ベースに刷新" />
+      </div>
+      <p class="lede">
+        OpenAI が GPT-5.5 を正式ローンチし、サム・アルトマンの GPT-5.5 ローンチパーティ告知が 6,037 likes を獲得。Greg Brockman は『Codex for shipping fast / startup ideas / ergonomics』とユースケース連投で訴求し、Codex を GPT-5.5 ベースの開発エージェントとして再定義した。OpenAIDevs は /hatch で Codex pet を作る Twitter 企画で ChatGPT Pro 30 日プレゼントを実施。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">GPT-5.5 ローンチパーティを SF で開催し応募超過、サム本人が応募者全員にギフトを予告</li>
+        <li data-i="02">内部コードネームは spud、Gemini の対抗ステルスは kartoffeln（ドイツ語の potatoes）と関連付けられる観測</li>
+        <li data-i="03">Greg Brockman が Codex のユースケース連投: startup ideas / shipping fast / ergonomics</li>
+        <li data-i="04">Codex pets キャンペーンで /hatch 企画、ChatGPT Pro 30 日プレゼント</li>
+        <li data-i="05">開発者の体感では『GPT-5.5/Codex が新しい開発環境になった』との声が増加</li>
+        <li data-i="06">ChatGPT Images の利用が really taking off と Greg が報告</li>
+      </ul>
+      <div class="pull">
+        GPT-5.5 はモデル単体ではなく『Codex を基盤とした開発エージェント』として再定義され、Vibe Coder Bootcamp 受講生は Codex CLI / ChatGPT Codex を GPT-5.5 前提で使い直す必要がある。Codex pets のような遊び要素が公式から出ること自体、開発者向け AI がエンタメ寄りに裾野を広げるフェーズに入った象徴。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">6,037</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/sama/status/2051318922805436896">@sama</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-04</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 業界ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/sama/status/2051318922805436896">x.com/sama/…</a></dd>
+        <dd><a href="https://x.com/gdb/status/2050972114077843772">x.com/gdb/status/2050972114077843772</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · FORSYAI THE INFORM</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 業界ニュース <span class="sep">/</span> @FORSY_AI (THE INFORMATION 要約) / @ANOMSIIWA (実体験) <span class="sep">/</span> NEWS
+      </div>
+      <h2>The Information — 開発者は Codex 派と Claude Code 派に二分、競争が本格化</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-05/topic_2.png" data-alt="The Information — 開発者は Codex 派と Claude Code 派に二分、競争が本格化" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-05/topic_2.png" alt="The Information — 開発者は Codex 派と Claude Code 派に二分、競争が本格化" />
+      </div>
+      <p class="lede">
+        The Information が『開発者コミュニティは OpenAI Codex と Anthropic Claude Code で二分された』と報じた。Codex（GPT-5.5、2026-02 リリース）は速度・低トークンコスト・ペアプロ体験で支持を集め、Claude Code は長文計画力・設計で根強い。開発者の生の声では『Claude Code は premium で smart だが leash が短い、Codex はもっと直接的で出荷向き』(@anomsiiwa) という比較が拡散している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Codex の強み（報道）: 速度、低トークン使用量、ペアプロ的フロー</li>
+        <li data-i="02">Claude Code の強み（報道）: 設計力、研究系・複雑タスク</li>
+        <li data-i="03">@shmidtqq の Claude Code 愚痴投稿（『プランを忘れる』『400行の不要コード』）が共感拡散</li>
+        <li data-i="04">AWS が Bedrock 経由で OpenAI モデル提供開始、エージェント基盤の競争が一段と複雑化</li>
+        <li data-i="05">両方を使い分ける開発者が主流派になりつつある</li>
+      </ul>
+      <div class="pull">
+        『どちらか1つに張る』時代は終わり、エージェント開発者は両方を使い分けるのが既定路線になりつつある。Bootcamp としては、Codex / Claude Code の強みと弱みを使い分けるカリキュラム（出荷フェーズは Codex、設計フェーズは Claude Code 等）にアップデートする必要がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/Forsy_AI/status/2050976558798585915">@Forsy_AI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-04</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 業界ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/Forsy_AI/status/2050976558798585915">x.com/Forsy_AI/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · CURSORAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🛠️ ツール <span class="sep">/</span> @CURSOR_AI <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cursor — Composer 2 が SDK で 50% OFF（週末限定）</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-05/topic_3.png" data-alt="Cursor — Composer 2 が SDK で 50% OFF（週末限定）" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-05/topic_3.png" alt="Cursor — Composer 2 が SDK で 50% OFF（週末限定）" />
+      </div>
+      <p class="lede">
+        Cursor 公式が『Composer 2 が SDK で週末 50% OFF』と告知。Composer 2 は Cursor の独自エージェントモデルで、SDK 経由で外部アプリケーションに Cursor のコーディングエージェントを組み込めるレイヤー。週末限定の半額セールで自社製品に組み込んで試す絶好のタイミング。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対象: Cursor Composer 2（独自エージェントモデル）</li>
+        <li data-i="02">形態: Cursor SDK 経由で 50% OFF</li>
+        <li data-i="03">期間: 2026-05-03 週末限定</li>
+        <li data-i="04">1,138 likes と高エンゲージメント</li>
+      </ul>
+      <div class="pull">
+        Cursor がエディタ単体から『組み込み可能な開発エージェント基盤』へ拡張する戦略を明示。Bootcamp 受講生は自分のプロダクトに Cursor の AI を組み込む実験のハードルが下がる。Codex / Claude Code とは別軸の SDK 提供型エージェント が価格競争に入った。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,138</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2050663279962513659">@cursor_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-03</dd>
+        <dt>CATEGORY</dt>
+        <dd>🛠️ ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2050663279962513659">x.com/cursor_ai/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · MRFANDUUUUU / MATC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🚀 新モデル <span class="sep">/</span> @MRFANDUUUUU / @MATCHAMAN11 / @INTHEWORLDOFAI <span class="sep">/</span> NEWS
+      </div>
+      <h2>Google Gemini — ステルス新モデル Spark Robin と Omni、I/O 前の地ならし</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-05/topic_4.png" data-alt="Google Gemini — ステルス新モデル Spark Robin と Omni、I/O 前の地ならし" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-05/topic_4.png" alt="Google Gemini — ステルス新モデル Spark Robin と Omni、I/O 前の地ならし" />
+      </div>
+      <p class="lede">
+        LM Arena に Google の新ステルスモデル Spark Robin が登場し、説明欄に『Rich Visual Response』と書かれている。画像/図解付き回答を返すマルチモーダル出力モデルと推定される。同時に Gemini アプリの動画タブで『Powered by Omni』の記述が漏出、Veo 3.1 の次世代（ネイティブ動画出力）の可能性が指摘されている。別ステルス kartoffeln（独語: じゃがいも複数形）も arena で目撃され、OpenAI の spud（GPT-5.5 内部名）への対抗ネーミングと噂される。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Spark Robin: arena 上のステルス、Rich Visual Response（図解付き回答）</li>
+        <li data-i="02">Omni: Gemini 動画タブの裏側エンジン、ネイティブ動画出力候補</li>
+        <li data-i="03">kartoffeln: arena 上で webdev に強いとの観察</li>
+        <li data-i="04">Google I/O が近いタイミングでリーク連鎖</li>
+        <li data-i="05">OpenAI の spud（じゃがいも）への対抗ネーミングという憶測</li>
+      </ul>
+      <div class="pull">
+        Google の次世代 Gemini は『テキストではなく図解・動画で答える』マルチモーダル出力を狙っている可能性が高く、ChatGPT/Claude が苦手な領域での差別化を狙う。テキスト回答 → 図解付き回答の UX 転換は、Bootcamp 受講生のプレゼン・教材作成ワークフローを根底から変える可能性がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,113</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/mrfanduuuuu/status/2050775453267554606">@mrfanduuuuu</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-03</dd>
+        <dt>CATEGORY</dt>
+        <dd>🚀 新モデル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/mrfanduuuuu/status/2050775453267554606">x.com/mrfanduuuuu/…</a></dd>
+        <dd><a href="https://x.com/matchaman11/status/2050836224563142688">x.com/matchaman11/status/205083622456314…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · THEINFORMATION</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 業界ニュース <span class="sep">/</span> @THEINFORMATION <span class="sep">/</span> NEWS
+      </div>
+      <h2>AWS Bedrock に OpenAI モデルが乗った — エージェント市場の再編</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-05/topic_5.png" data-alt="AWS Bedrock に OpenAI モデルが乗った — エージェント市場の再編" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-05/topic_5.png" alt="AWS Bedrock に OpenAI モデルが乗った — エージェント市場の再編" />
+      </div>
+      <p class="lede">
+        AWS が OpenAI モデルを Amazon Bedrock 経由で提供する取引を発表。Bedrock の AI エージェント機能向け新オファリングとして組み込まれる。一方で既存顧客の中には『競合モデル（Claude / Llama 等）で十分』とする声もあり、OpenAI が AWS という流通チャネルを得たもののコモディティ化圧力にさらされる構図。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">AWS Bedrock 上で OpenAI モデル提供開始（AI エージェント向けオファリング）</li>
+        <li data-i="02">一部顧客は『Claude や他社モデルで足りている』と表明</li>
+        <li data-i="03">AWS / Anthropic / OpenAI のクラウド × モデル提携網が一段と複雑化</li>
+        <li data-i="04">Anthropic の AWS Bedrock 寡占状態に楔</li>
+        <li data-i="05">エージェント基盤・ツール生態系の戦争が本番フェーズへ</li>
+      </ul>
+      <div class="pull">
+        『特定のクラウド = 特定のモデル』の時代は完全に終わり、AWS 上でも OpenAI / Anthropic / Meta が並列提供される世界に。Bootcamp 受講生はクラウド選定とモデル選定を独立した意思決定として扱うべき。モデルプロバイダ側は『クラウドに乗っただけでは差別化にならない』フェーズに入り、エージェント基盤・ツール生態系の戦いが本番。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">26</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/theinformation/status/2050945991226912850">@theinformation</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-04</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 業界ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/theinformation/status/2050945991226912850">x.com/theinformation/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/sama/status/2051318922805436896">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-05-04/">
+      ← 前日 · 2026-05-04
+      <span class="big">Apple — Apple Support アプリ v5.13 に CLAUDE.md を残したまま出荷、緊急修正</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-05-05/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260505.0721</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

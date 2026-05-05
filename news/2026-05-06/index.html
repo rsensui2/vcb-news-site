@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-05-06 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-05-06 の Vibe Coder Bootcamp モーニングディスパッチ — 6本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0506</span>
+    <span class="sep">/</span>
+    <span>2026-05-06</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>06 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260506.0725</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-05-06/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:25 · TUE</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · TUESDAY · MAY 6, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>05<span class="dot">.</span>06</h1>
+    <div class="strap">
+      <span>OpenAI · OpenAI · Anthropic · Cursor</span>
+      <span><span class="count">06</span>&nbsp;ITEMS · READ 7 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 業界ニュース <span class="sep">/</span> @OPENAI / @GDB (GREG BROCKMAN) / @TECHMEME <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI — GPT-5.5 Instant が ChatGPT デフォルトに、無料層 10 億人へ即時展開</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-06/topic_1.png" data-alt="OpenAI — GPT-5.5 Instant が ChatGPT デフォルトに、無料層 10 億人へ即時展開" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-06/topic_1.png" alt="OpenAI — GPT-5.5 Instant が ChatGPT デフォルトに、無料層 10 億人へ即時展開" />
+      </div>
+      <p class="lede">
+        OpenAI が GPT-5.5 Instant を ChatGPT のデフォルトモデルとしてロールアウト開始。GPT-5.3 Instant を置き換え、smarter / clearer / more personalized / warmer / more concise なトーンに改善されたと公式が表明。Greg Brockman も Major ChatGPT upgrade と追認し、@DeryaTR_ は無料層を使う約 10 億人へのインパクトは過小評価されていると指摘。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">GPT-5.5 Instant が ChatGPT の新しい既定モデル（GPT-5.3 Instant を置換）</li>
+        <li data-i="02">公式アップグレード文言: smarter / clearer / more personalized / warmer / more concise</li>
+        <li data-i="03">Engadget・Techmeme・Cointelegraph が一斉に報道</li>
+        <li data-i="04">無料 ChatGPT ユーザー（推定 ~10 億人）にも段階展開</li>
+        <li data-i="05">ハルシネーション抑制 (factuality gains) がユーザー観測の最大の好評ポイント (@haider1)</li>
+      </ul>
+      <div class="pull">
+        Pro / Plus 専用ではなく無料層に降りた瞬間が本当の普及イベント。Bootcamp 受講生のクライアント・友人・家族が今日から GPT-5.5 を触る前提に変わる。Instant 系は常時呼び出される＝レイテンシ重視のフローで使われ、エージェント開発では『速くて factual な軽量モデル』を Tool 呼び出しの前段に挟む構成が標準化していく。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">6,458</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAI/status/2051709028250915275">@OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-05</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 業界ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAI/status/2051709028250915275">x.com/OpenAI/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · VRASERX / AILEENVL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 業界ニュース <span class="sep">/</span> @VRASERX / @AILEENVL / @HEYZARAKHAN <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI Codex — npm 週次 DL が 5.7M → 163M に爆発、Codex Ambassador 制度も始動</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-06/topic_2.png" data-alt="OpenAI Codex — npm 週次 DL が 5.7M → 163M に爆発、Codex Ambassador 制度も始動" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-06/topic_2.png" alt="OpenAI Codex — npm 週次 DL が 5.7M → 163M に爆発、Codex Ambassador 制度も始動" />
+      </div>
+      <p class="lede">
+        @openai/codex の週次 npm ダウンロードが 5.7M から 163M へと約 28 倍に激増、と複数アカウントが観測。GPT-5.5 ローンチに連動した Codex 採用ラッシュとみられる。あわせて OpenAI は Codex Ambassador 制度の展開を開始しており、メキシコ・モンテレイの @aileenvl が初のミートアップを準備。OpenAI エンジニア自身が登壇する 60 分の Codex マスタークラス動画も拡散している（@HeyZaraKhan 経由 2,227 likes）。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">npm @openai/codex: 5.7M → 163M weekly downloads（@VraserX 観測）</li>
+        <li data-i="02">OpenAI 公式エンジニアによる 60 分 Codex マスタークラス動画が公開・拡散</li>
+        <li data-i="03">Codex Ambassador（地域コミュニティリーダー）制度の存在が表面化</li>
+        <li data-i="04">『Codex は単なるコーディングツールではなく完全な software engineering system』というメッセージング</li>
+        <li data-i="05">メキシコ・モンテレイで第1回ミートアップ準備中</li>
+      </ul>
+      <div class="pull">
+        Claude Code が築いた AI ペアプロ CLI 市場を、Codex が GPT-5.5 で一気にコモディティ化しに来ている。npm 28 倍が本物ならエコシステムの重心は数週間で Codex 側に移る。Bootcamp は Codex CLI 前提の教材整備を急ぐべき。Ambassador 制度は受講生コミュニティ運営とも競合するため、自前の差別化（日本語ローカル運営、ハンズオン、案件導線）を明確化する必要。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">147</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/VraserX/status/2051752648815054995">@VraserX</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-05</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 業界ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/VraserX/status/2051752648815054995">x.com/VraserX/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · BUSINESS BLOOMBERG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 業界ニュース <span class="sep">/</span> @BUSINESS (BLOOMBERG) / @CRN / @NICOS_AI <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic — Claude Security が Public Beta、金融エージェント 10 種で投資銀行ジュニア業務を代替</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-06/topic_3.png" data-alt="Anthropic — Claude Security が Public Beta、金融エージェント 10 種で投資銀行ジュニア業務を代替" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-06/topic_3.png" alt="Anthropic — Claude Security が Public Beta、金融エージェント 10 種で投資銀行ジュニア業務を代替" />
+      </div>
+      <p class="lede">
+        Anthropic が Claude Code Security を Claude Security に改称し Public Beta に移行、AI による脆弱性発見・修正を高速化すると CRN が報道。同日 Bloomberg は金融プロフェッショナル向け 10 種のエージェントを発表、2026-02 のリリース時に株式市場で 2,850 億ドル規模のセルオフが起きたことに触れ波乱を予測。CEO は AI が脆弱性を発見する Moment of Danger（攻撃者と防御者のギャップ期）を警告。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Claude Code Security → Claude Security に改称、Public Beta 移行（CRN）</li>
+        <li data-i="02">金融プロフェッショナル向け 10 エージェント発表（Bloomberg）</li>
+        <li data-i="03">投資銀行ジュニア業務（プレゼン作成・財務モデル・KYC・月次クローズ等）を直接代替</li>
+        <li data-i="04">Anthropic CEO が AI 駆動の脆弱性発見ウィンドウについて警告（Decrypt）</li>
+        <li data-i="05">@ClaudeDevs ハブで Claude Code 関連の公式発信を集約</li>
+      </ul>
+      <div class="pull">
+        Anthropic は『コーディング → セキュリティ → 業界特化エージェント』と縦に深掘りする戦略を選択。OpenAI が Codex で水平な開発者ツール化を進めるのと真逆で、両者の棲み分けが明確化。金融ジュニア業務の代替パッケージ化は、Bootcamp の業界特化エージェント開発カリキュラム（医療・法務・福祉領域）に強い追い風。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">6</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/business/status/2051786679275470916">@business</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-05</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 業界ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/business/status/2051786679275470916">x.com/business/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · ERICZAKARIASSON CU</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 業界ニュース <span class="sep">/</span> @ERICZAKARIASSON (CURSOR) / @SHAO__MENG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cursor — Cursor Team Kit を marketplace 公開、社内 CI / PR / Review ワークフローを丸ごと配布</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-06/topic_4.png" data-alt="Cursor — Cursor Team Kit を marketplace 公開、社内 CI / PR / Review ワークフローを丸ごと配布" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-06/topic_4.png" alt="Cursor — Cursor Team Kit を marketplace 公開、社内 CI / PR / Review ワークフローを丸ごと配布" />
+      </div>
+      <p class="lede">
+        Cursor の eric zakariasson が Cursor Team Kit という公式プラグインを marketplace でリリース。Cursor 社員が日々 Cursor を作るために使っている 17 個の Skills + 1 Agent + 2 Rules を 1 コマンド（/add-plugin cursor-team-kit）で導入可能に。CI 監視・PR フロー・コンフリクト解消・週報自動化・コード掃除まで、ドッグフーディングを完全公開した形。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">17 Skills + 1 Agent + 2 Rules、ワンコマンド導入</li>
+        <li data-i="02">CI ループ系: loop-on-ci, fix-ci, check-compiler-errors, fix-merge-conflicts</li>
+        <li data-i="03">PR ライフサイクル系: new-branch-and-pr, review-and-ship</li>
+        <li data-i="04">Cursor 社内のベストプラクティスを完全公開＝学習教材として最高</li>
+        <li data-i="05">Composer 2 / GPT-5.5 / Opus 4.7 1M Max の使い分け事例も拡散（@HiTw93 320 likes）</li>
+      </ul>
+      <div class="pull">
+        Skill の概念が IDE エージェントの標準仕様になることを示すマイルストーン。トルティ／OpenRyoko の skills/ 設計と完全に同じ思想で、業界が同じ方向に収束。Bootcamp 受講生にとっては Cursor 社内のベストプラクティスを直接読める教材として、自分の Skills を書く参考実装に組み込める。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,126</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ericzakariasson/status/2051255780167610522">@ericzakariasson</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-04</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 業界ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ericzakariasson/status/2051255780167610522">x.com/ericzakariasson/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · OFFICIALLOGANK GOO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 業界ニュース <span class="sep">/</span> @OFFICIALLOGANK (GOOGLE AI STUDIO) / @GOOGLEAIDEVS <span class="sep">/</span> NEWS
+      </div>
+      <h2>Google Gemini API — Webhooks 追加 + File Search マルチモーダル / 正確な引用 / メタデータフィルタ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-06/topic_5.png" data-alt="Google Gemini API — Webhooks 追加 + File Search マルチモーダル / 正確な引用 / メタデータフィルタ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-06/topic_5.png" alt="Google Gemini API — Webhooks 追加 + File Search マルチモーダル / 正確な引用 / メタデータフィルタ" />
+      </div>
+      <p class="lede">
+        Google が Gemini API に Webhooks を導入。長時間ジョブで常時ポーリングを廃止し、イベント駆動オーケストレーションが可能に。同日 File Search が Gemini Embedding 2 ベースで 3 大強化された: マルチモーダル（画像と文章を同時推論）、カスタムメタデータフィルタ（key-value タグの pre-filter）、exact citations（正確な出典照合）。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Webhooks: ポーリング不要、長時間エージェント / batch / GenMedia の標準パターン更新</li>
+        <li data-i="02">File Search: Gemini Embedding 2 採用、画像＋テキストの cross-modal RAG 標準化</li>
+        <li data-i="03">メタデータフィルタで『ユーザーごと』『プロジェクトごと』の事前絞り込み</li>
+        <li data-i="04">exact citations は LLM が引用元のチャンクを正確に返す公式機能</li>
+        <li data-i="05">Google I/O 接近のタイミングで DevX アップデート連打</li>
+      </ul>
+      <div class="pull">
+        RAG プラットフォーム自作の意味が薄れるフェーズ。Gemini API File Search が『マルチモーダル + 引用 + メタデータ絞り』を公式提供 → Bootcamp の RAG 教材は『ベクター DB を自前で立てる』から『Gemini File Search / OpenAI File Search を使い分ける』にシフトすべき。Webhooks はトルティの cron ループや active-thread-patrol 系の置き換え候補。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,146</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OfficialLoganK/status/2051434527931953490">@OfficialLoganK</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-04</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 業界ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OfficialLoganK/status/2051434527931953490">x.com/OfficialLoganK/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · SUMANYU / MABUFADD</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 業界ニュース <span class="sep">/</span> @SUMANYU / @MABUFADDA / @AVIPILCER <span class="sep">/</span> NEWS
+      </div>
+      <h2>Google × GM — Gemini を 400 万台超の自動車に標準搭載、Google Assistant を完全置換</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-06/topic_6.png" data-alt="Google × GM — Gemini を 400 万台超の自動車に標準搭載、Google Assistant を完全置換" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-06/topic_6.png" alt="Google × GM — Gemini を 400 万台超の自動車に標準搭載、Google Assistant を完全置換" />
+      </div>
+      <p class="lede">
+        Google が GM 製 4M+ 台（model year 2022 以降の Google built-in 搭載車）に Gemini を順次展開すると発表。これは『より良い音声コマンド』ではなく Google Assistant を Gemini で完全置換する戦略的な動きで、車内インターフェースが command-and-control から会話型エージェントへ切り替わる。同週の Cloudflare × OpenAI Agent Cloud や GPT-5.5 既定化と並べると、2026 年の AI 競争軸は Distribution（流通）にあると @AviPilcer が指摘。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対象: GM の Google built-in 搭載車、model year 2022 以降、合計 4M+ 台</li>
+        <li data-i="02">Google Assistant は段階的廃止 → Gemini に置換</li>
+        <li data-i="03">車内音声 UI が command-and-control から actual conversation へ</li>
+        <li data-i="04">同週の Distribution 勝負: GM、Cloudflare × OpenAI、ChatGPT 既定モデル更新</li>
+        <li data-i="05">関連リーク: Spark Robin / Omni / Teamfood / Gemini 3.2-3.5 A/B、5/19 大型発表予測</li>
+      </ul>
+      <div class="pull">
+        車・家・職場という非ブラウザ面での AI 接点を取った企業が勝つフェーズに入った。Bootcamp の卒業生キャリア設計でも『Web アプリ＋ LLM』だけでなく『物理デバイス × LLM』の事例を扱う必要が出てきた。OpenAI / Anthropic は OS・端末を持っていないため、API 提供側が非ブラウザ面でどう配信するかが 2026 年の最大の戦略テーマ。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/sumanyu/status/2051336060513272286">@sumanyu</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-04</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 業界ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/sumanyu/status/2051336060513272286">x.com/sumanyu/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/OpenAI/status/2051709028250915275">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-05-05/">
+      ← 前日 · 2026-05-05
+      <span class="big">OpenAI — GPT-5.5 正式ローンチ、Codex は GPT-5.5 ベースに刷新</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-05-06/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260506.0725</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

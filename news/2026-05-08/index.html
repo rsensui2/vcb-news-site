@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-05-08 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-05-08 の Vibe Coder Bootcamp モーニングディスパッチ — 6本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0508</span>
+    <span class="sep">/</span>
+    <span>2026-05-08</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>06 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260508.0724</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-05-08/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:24 · THU</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · THURSDAY · MAY 8, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>05<span class="dot">.</span>08</h1>
+    <div class="strap">
+      <span>Claude · Claude · OpenAI · Google</span>
+      <span><span class="count">06</span>&nbsp;ITEMS · READ 5 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 業界ニュース <span class="sep">/</span> @CLAUDEAI <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude for Microsoft 365 が GA — Excel / PowerPoint / Word + Outlook public beta</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-08/topic_1.png" data-alt="Claude for Microsoft 365 が GA — Excel / PowerPoint / Word + Outlook public beta" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-08/topic_1.png" alt="Claude for Microsoft 365 が GA — Excel / PowerPoint / Word + Outlook public beta" />
+      </div>
+      <p class="lede">
+        Anthropic が Claude for Excel / PowerPoint / Word を一般提供（GA）開始、Claude for Outlook は public beta となった。Microsoft 365 アプリ間を移動しても会話のコンテキストを引き継ぐ統合体験を打ち出し、Microsoft Copilot のお膝元で Claude が中で動く AI として正式に並ぶ形になった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対象: Excel / PowerPoint / Word — General Availability</li>
+        <li data-i="02">Outlook は public beta（誰でも参加可）</li>
+        <li data-i="03">アプリ横断で会話コンテキストを保持（Claude moves between your Microsoft apps）</li>
+        <li data-i="04">@DudeWhoInvests のミーム投稿（Microsoft 開発者が Claude のほうが Copilot より統合うまく行ってると眺めてる）が 2,441 likes</li>
+        <li data-i="05">同日 Code with Claude カンファでも Microsoft Build 連携が発信</li>
+      </ul>
+      <div class="pull">
+        「Microsoft 365 = Copilot 一択」だった世界が崩れ、エンタープライズ IT 部門の AI 選定が「Copilot か Claude か」「両方入れるか」の議論に切り替わる。Bootcamp 受講生・経営層に Excel に Claude を入れる手順を見せれば即時に導入相談に化けるレベルの即効性。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">17,844</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/claudeai/status/2052445786651168849">@claudeai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-07</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 業界ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/claudeai/status/2052445786651168849">x.com/claudeai/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · ALEXALBERT ALEX AL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📖 体系的解説系 <span class="sep">/</span> @ALEXALBERT__ (ALEX ALBERT / ANTHROPIC) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Mythos Preview が Firefox セキュリティ修正を激加速 — 4月単月で過去15か月の合計超え</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-08/topic_2.png" data-alt="Claude Mythos Preview が Firefox セキュリティ修正を激加速 — 4月単月で過去15か月の合計超え" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-08/topic_2.png" alt="Claude Mythos Preview が Firefox セキュリティ修正を激加速 — 4月単月で過去15か月の合計超え" />
+      </div>
+      <p class="lede">
+        Anthropic の Alex Albert が、新モデル Claude Mythos Preview の支援によって Firefox チームの 2026年4月単月のセキュリティバグ修正数が直前 15か月の合計を上回ったと公表。AI が実プロダクトの大規模脆弱性修正を定量的に底上げした初の説得力ある事例になっている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">新モデル名: Claude Mythos Preview（次世代 Claude のプレビュー、価格・正式版日付は未公開）</li>
+        <li data-i="02">適用対象: Mozilla Firefox のセキュリティ修正フロー</li>
+        <li data-i="03">数字: 2026-04 単月の修正件数 &gt; 直前 15 か月の合計</li>
+        <li data-i="04">情報源は Anthropic デベロッパー・リレーションズの Alex Albert（公式に近い）</li>
+      </ul>
+      <div class="pull">
+        「AI でコードレビューが速くなる」を超えて、AI でメジャー OSS のセキュリティ姿勢が定量的に変わるフェーズに入った。受講生・経営者に対し自社の脆弱性対応を AI に回す議論を始めるための数字として強い。Mythos という新コードネーム自体も、Anthropic が Opus / Sonnet ラインの上に別系統モデルを温めている兆候として注目に値する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">6,441</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/alexalbert__/status/2052468573516513762">@alexalbert__</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-07</dd>
+        <dt>CATEGORY</dt>
+        <dd>📖 体系的解説系</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/alexalbert__/status/2052468573516513762">x.com/alexalbert__/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · OPENAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 ツール・開発 <span class="sep">/</span> @OPENAI <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI Codex が Chrome 拡張として正式投入 — タブ並列バックグラウンド実行</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-08/topic_3.png" data-alt="OpenAI Codex が Chrome 拡張として正式投入 — タブ並列バックグラウンド実行" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-08/topic_3.png" alt="OpenAI Codex が Chrome 拡張として正式投入 — タブ並列バックグラウンド実行" />
+      </div>
+      <p class="lede">
+        OpenAI が Codex を Chrome 拡張として macOS / Windows に正式リリース。ブラウザを乗っ取らずに複数タブで並列にバックグラウンド実行できる仕様で、Codex アプリから Chrome plugin をインストールするだけで利用開始できる。アプリ・サイトとのインタラクション能力も強化された。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対応 OS: macOS / Windows（Linux は未明示）</li>
+        <li data-i="02">動作: ブラウザを操作せず、バックグラウンドで複数タブを並列処理</li>
+        <li data-i="03">インストール導線: Codex アプリ内から Chrome plugin</li>
+        <li data-i="04">アプリ・サイトとのインタラクション能力が強化</li>
+      </ul>
+      <div class="pull">
+        Anthropic が Mac アプリ / VS Code 拡張で攻めるのに対し、OpenAI はブラウザを抑えに来た。Web アプリ / SaaS の操作は依然 Chrome が圧倒的シェアなので、業務オペを丸投げできる AI の戦場がブラウザに移る。Bootcamp 受講生にとっては Codex Chrome 拡張で SaaS 業務を自動化するが新たな実用テーマになる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">4,809</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAI/status/2052480800004956323">@OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-07</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 ツール・開発</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAI/status/2052480800004956323">x.com/OpenAI/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · GOOGLEAISTUDIO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 ツール・開発 <span class="sep">/</span> @GOOGLEAISTUDIO <span class="sep">/</span> NEWS
+      </div>
+      <h2>Google — Gemini 3.1 Flash-Lite リリース、低コスト・高ボリューム agentic 用途特化</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-08/topic_4.png" data-alt="Google — Gemini 3.1 Flash-Lite リリース、低コスト・高ボリューム agentic 用途特化" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-08/topic_4.png" alt="Google — Gemini 3.1 Flash-Lite リリース、低コスト・高ボリューム agentic 用途特化" />
+      </div>
+      <p class="lede">
+        Google が Gemini 3.1 Flash-Lite を Google AI Studio 経由で公開。Google モデル群で最もコスト効率の高い軽量モデルとして、高ボリュームな agentic タスク・翻訳・シンプルなデータ処理に特化していると公式が位置付けた。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">名称: Gemini 3.1 Flash-Lite</li>
+        <li data-i="02">位置付け: Google モデル群で最安・最軽量</li>
+        <li data-i="03">想定用途: 大量並列 agentic タスク / 翻訳 / 簡易データ処理</li>
+        <li data-i="04">上位モデル（Gemini 3.1 Flash / Pro）と棲み分け</li>
+      </ul>
+      <div class="pull">
+        バッチ処理・大量画像生成の下回りモデル選定にそのまま影響。スライド・画像生成パイプラインで、テキスト前処理だけ Flash-Lite に逃がす構成が現実解になる。各社が安い軽量モデルを競って出す流れ（Anthropic Haiku / OpenAI mini）の続編で、Bootcamp の AI コスト最適化講座のサンプル料金表を全部書き直す必要が出てくる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,923</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/GoogleAIStudio/status/2052453828272812310">@GoogleAIStudio</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-07</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 ツール・開発</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/GoogleAIStudio/status/2052453828272812310">x.com/GoogleAIStudio/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · CURSORAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 ツール・開発 <span class="sep">/</span> @CURSOR_AI <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cursor — /orchestrate スキルで再帰的エージェント生成、SDK 内蔵</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-08/topic_5.png" data-alt="Cursor — /orchestrate スキルで再帰的エージェント生成、SDK 内蔵" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-08/topic_5.png" alt="Cursor — /orchestrate スキルで再帰的エージェント生成、SDK 内蔵" />
+      </div>
+      <p class="lede">
+        Cursor が Cursor SDK 上で動作する新スキル /orchestrate を発表。再帰的にサブエージェントをスポーンして大規模タスクを分解実行する仕組みで、Cursor 自身も社内の skill 自動リサーチに使い、トークン消費 20% 削減 + eval スコア改善、内部バックエンドのコールドスタート 80% 削減を実現したと自社事例を公開した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">スキル名: /orchestrate（Cursor SDK 経由で配布）</li>
+        <li data-i="02">仕組み: ルートエージェントが要件を分解、サブエージェントを再帰的に生成・統括</li>
+        <li data-i="03">自社事例 1: 内部 skills の autoresearch でトークン消費 -20%、eval 改善</li>
+        <li data-i="04">自社事例 2: 内部バックエンドのコールドスタート時間 -80%</li>
+        <li data-i="05">同時期に Cursor 3.3 で context usage 内訳の可視化も提供</li>
+      </ul>
+      <div class="pull">
+        Cursor が 1ファイル編集ツールからエージェント編成プラットフォームに正式移行した日。Claude Code の Task や Codex の sandbox agents と同じ土俵に乗ってきた。reportsTo / provides でエージェント階層を組む Ryoko / Bootcamp 受講生プロジェクトとコンセプトが完全に一致する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,595</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2052432778743210127">@cursor_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-07</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 ツール・開発</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2052432778743210127">x.com/cursor_ai/…</a></dd>
+        <dd><a href="https://x.com/cursor_ai/status/2052059748544249918">x.com/cursor_ai/status/20520597485442499…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · CLAUDEAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表系 <span class="sep">/</span> @CLAUDEAI <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Anthropic — 金融サービス向け Claude Agent Templates 公開（ピッチ作成・バリュエーション・月次決算）</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-08/topic_6.png" data-alt="Anthropic — 金融サービス向け Claude Agent Templates 公開（ピッチ作成・バリュエーション・月次決算）" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-08/topic_6.png" alt="Anthropic — 金融サービス向け Claude Agent Templates 公開（ピッチ作成・バリュエーション・月次決算）" />
+      </div>
+      <p class="lede">
+        Anthropic が金融サービス向けに即実行可能な Claude Agent Templates を公開。ピッチ作成 / バリュエーションレビュー / 月次決算クロージング等の金融業務の典型タスクをカバーしたテンプレート群が、Cowork や Claude Code の plugin として導入でき、本番運用は cookbooks 経由の Managed Agents に載せ替えるパスが用意されている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対象業務: ピッチ資料作成・バリュエーションレビュー・月次クロージング 他</li>
+        <li data-i="02">配布形態: Cowork / Claude Code plugin（個人〜チーム導入）</li>
+        <li data-i="03">本番運用: cookbooks 経由で Managed Agents としてホスト</li>
+        <li data-i="04">各 agent に必要な connectors / skills / subagents が同梱</li>
+        <li data-i="05">各社基準に合わせ as-is でもカスタムでも動く</li>
+      </ul>
+      <div class="pull">
+        「業界別の Agent パッケージ」が公式から出始めた最初の本格事例で、法務・医療・コンサル等への拡大が確実視される。Bootcamp 受講生で金融系 BizDev がそのまま自社用にフォークして仕事に組み込めるフォーマットで、Vibe Coding の業務テンプレを AI に乗せるの最短サンプルとして強い。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">32,346</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/claudeai/status/2051679629488865498">@claudeai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-05</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表系</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/claudeai/status/2051679629488865498">x.com/claudeai/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/claudeai/status/2052445786651168849">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-05-07/">
+      ← 前日 · 2026-05-07
+      <span class="big">Anthropic × xAI/SpaceX Compute 提携 — Claude Code 5h レート上限が即日 2 倍化</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-05-08/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260508.0724</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

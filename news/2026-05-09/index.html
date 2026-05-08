@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-05-09 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-05-09 の Vibe Coder Bootcamp モーニングディスパッチ — 6本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0509</span>
+    <span class="sep">/</span>
+    <span>2026-05-09</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>06 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260509.0728</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-05-09/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:28 · FRI</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · FRIDAY · MAY 9, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>05<span class="dot">.</span>09</h1>
+    <div class="strap">
+      <span>OpenAI · Anthropic · Anthropic · Anthropic</span>
+      <span><span class="count">06</span>&nbsp;ITEMS · READ 5 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📖 体系的解説系 <span class="sep">/</span> @OPENAI <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI が Chain-of-Thought Monitorability の公式分析を公開 — 「CoT 監視は誤整合に対する主要防御層」</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-09/topic_1.png" data-alt="OpenAI が Chain-of-Thought Monitorability の公式分析を公開 — 「CoT 監視は誤整合に対する主要防御層」" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-09/topic_1.png" alt="OpenAI が Chain-of-Thought Monitorability の公式分析を公開 — 「CoT 監視は誤整合に対する主要防御層」" />
+      </div>
+      <p class="lede">
+        OpenAI が公式アカウントで Chain-of-Thought (CoT) Monitorability を AI エージェントの誤整合に対する主要な防御層と位置づけ、RL の段階で誤整合な推論にペナルティを与えない方針を明文化した。同時に、released models に意図せず CoT を採点していた限定的なケースが混入していたと自己開示し、その分析を公開した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">CoT monitorability = 思考過程ログを外から読んでエージェントの意図/不正を検知する防御層</li>
+        <li data-i="02">RL では誤整合な推論にペナルティを与えない（取り繕いを防ぐため）</li>
+        <li data-i="03">released models に accidental CoT grading の混入を transparency report として開示</li>
+        <li data-i="04">5/5 の AIDB 解説（LLM 思考過程は単語制約に従えない研究）と整合する公式声明</li>
+        <li data-i="05">OpenAI / Anthropic / DeepMind 共通の合意形成が進行中</li>
+      </ul>
+      <div class="pull">
+        エージェントの安全性アーキテクチャは「CoT を見せる/見ない」の設計判断に集約しつつあり、ログ層に CoT を含める設計が監査・インシデント検知の前提になる。Vibe Coding 受講生が業務エージェントを組む際も思考過程ログの保存・検索が標準装備に近づく。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,138</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAI/status/2052845764507062349">@OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-08</dd>
+        <dt>CATEGORY</dt>
+        <dd>📖 体系的解説系</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAI/status/2052845764507062349">x.com/OpenAI/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · ROUNDTABLESPACE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 ツール/プロダクト <span class="sep">/</span> @ROUNDTABLESPACE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic が Claude Code 利用上限を全有料プランで倍増 — Opus の API レートも大幅引き上げ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-09/topic_2.png" data-alt="Anthropic が Claude Code 利用上限を全有料プランで倍増 — Opus の API レートも大幅引き上げ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-09/topic_2.png" alt="Anthropic が Claude Code 利用上限を全有料プランで倍増 — Opus の API レートも大幅引き上げ" />
+      </div>
+      <p class="lede">
+        Anthropic が Claude Code の利用上限を Pro / Max / Team / Enterprise 全プランで引き上げた。セッション上限を2倍化、ピーク時間帯のレート縮小（reductions）を撤廃、Opus モデルの API レートを大幅に引き上げる、の3点を同時に実施。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対象: Claude Code の Pro / Max / Team / Enterprise 全プラン</li>
+        <li data-i="02">セッション上限: 2倍化</li>
+        <li data-i="03">ピーク時間帯のレート縮小: 撤廃</li>
+        <li data-i="04">Opus モデル API レート: 大幅引き上げ（数値非公開）</li>
+        <li data-i="05">背景: dev コミュニティで Opus 4.6 以降の compute 制限への不満が拡散していた</li>
+        <li data-i="06">Codex の $0 seat fee（4/30）戦略への応戦という側面</li>
+      </ul>
+      <div class="pull">
+        Codex 派 vs Claude Code 派の二分（5/5 The Information 報道）の中で、Anthropic は自社ハーネスの自由度を上げて押し返しに来た。Vibe Coding 受講生・Tekion 内開発者の作業時間に直接効く改善で、Pro / Max ユーザーは設定変更不要で恩恵を受ける。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">113</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/RoundtableSpace/status/2052210559127556390">@RoundtableSpace</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-07</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 ツール/プロダクト</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/RoundtableSpace/status/2052210559127556390">x.com/RoundtableSpace/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · COINTELEGRAPH</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📖 体系的解説系 <span class="sep">/</span> @COINTELEGRAPH <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic 最新 Claude モデル、エージェント誤整合テストで満点 — 脅迫・サボタージュ防止</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-09/topic_3.png" data-alt="Anthropic 最新 Claude モデル、エージェント誤整合テストで満点 — 脅迫・サボタージュ防止" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-09/topic_3.png" alt="Anthropic 最新 Claude モデル、エージェント誤整合テストで満点 — 脅迫・サボタージュ防止" />
+      </div>
+      <p class="lede">
+        Anthropic が、最新 Claude モデルがエージェント誤整合テスト（agentic misalignment tests、脅迫・サボタージュ等の有害行動を評価）で満点を達成したと発表した。Topic 1 の OpenAI CoT monitorability 自己開示と同日に発表され、両社が安全性指標の可視化を競う局面に入った。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対象: Anthropic の最新 Claude モデル</li>
+        <li data-i="02">テスト名: agentic misalignment tests</li>
+        <li data-i="03">範囲: 脅迫（blackmail）・サボタージュ等の有害行動防止</li>
+        <li data-i="04">スコア: perfect scores（満点）</li>
+        <li data-i="05">5/8 同日に OpenAI も CoT monitorability 分析を公開 — 安全性アピール合戦</li>
+      </ul>
+      <div class="pull">
+        安全性ベンチの可視化競争が始まり、モデル選定軸が「コーディング性能」「コスト」から「エージェント安全性スコア」へ拡張する。エンタープライズ採用で「自社業務で AI を動かしたとき悪意ある指示に従わない保証」が必須要件化する流れ。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">42</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/Cointelegraph/status/2052868695223869444">@Cointelegraph</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-08</dd>
+        <dt>CATEGORY</dt>
+        <dd>📖 体系的解説系</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/Cointelegraph/status/2052868695223869444">x.com/Cointelegraph/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · ROUNDTABLESPACE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🎓 教育/学習 <span class="sep">/</span> @ROUNDTABLESPACE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic が「AI が運営する会社」を作る無料ワークショップを公開</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-09/topic_4.png" data-alt="Anthropic が「AI が運営する会社」を作る無料ワークショップを公開" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-09/topic_4.png" alt="Anthropic が「AI が運営する会社」を作る無料ワークショップを公開" />
+      </div>
+      <p class="lede">
+        Anthropic が AI エージェントによって運営される会社の作り方をテーマにした無料ワークショップを公開した。Code with Claude カンファレンス（5/6）の流れを汲む発信で、Multiagent orchestration / Outcomes / Dreaming といった Managed Agents の機能群を、人間中心の組織設計に置き換えてどう運営するかという観点で解説する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">形式: 無料オンラインワークショップ</li>
+        <li data-i="02">テーマ: company run by AI agents</li>
+        <li data-i="03">発信元: Anthropic 公式</li>
+        <li data-i="04">Code with Claude（5/6）連動コンテンツ</li>
+        <li data-i="05">Managed Agents（Dreaming / Multiagent / Outcomes / Webhooks）の応用編</li>
+      </ul>
+      <div class="pull">
+        AI エージェント組織が公式 enablement コンテンツに昇格し、ベンダーが教科書的な構築手順を提供する段階に入った。Vibe Coding Bootcamp 受講生の卒業制作テーマとして「自社の特定業務を AI エージェント化」が現実的になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">250</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/RoundtableSpace/status/2052346454736318836">@RoundtableSpace</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-07</dd>
+        <dt>CATEGORY</dt>
+        <dd>🎓 教育/学習</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/RoundtableSpace/status/2052346454736318836">x.com/RoundtableSpace/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · OPENAI OPENAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 ツール/プロダクト <span class="sep">/</span> OPENAI (@OPENAI) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>OpenAI GPT-Realtime-2 で音声エージェント時代へ — Translate / Whisper 同時公開</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-09/topic_5.png" data-alt="OpenAI GPT-Realtime-2 で音声エージェント時代へ — Translate / Whisper 同時公開" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-09/topic_5.png" alt="OpenAI GPT-Realtime-2 で音声エージェント時代へ — Translate / Whisper 同時公開" />
+      </div>
+      <p class="lede">
+        OpenAI が API で GPT-Realtime-2（GPT-5級推論を音声エージェントに）と GPT-Realtime-Translate（70+ 言語入力 → 13 言語出力 / $0.034 per minute）と GPT-Realtime-Whisper（ストリーミング書き起こし）を同時公開した。音声エージェントが会話進行中に listen / reason / solve できるリアルタイム協働者として位置づけられた。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">GPT-Realtime-2: 音声エージェントの推論レイヤ、GPT-5 級</li>
+        <li data-i="02">GPT-Realtime-Translate: 70+ 言語入力 / 13 言語出力 / 音声・テキスト両対応 / $0.034 per minute</li>
+        <li data-i="03">GPT-Realtime-Whisper: ストリーミング書き起こし</li>
+        <li data-i="04">ML_Bear が仕様要約（748 likes）— 同時通訳のコモディティ化を指摘</li>
+        <li data-i="05">ZentoAI が当日中に Codex + OpenAI Cookbook (voice_solutions/realtime_translation_guide) で自作翻訳アプリを構築（436 likes）</li>
+      </ul>
+      <div class="pull">
+        音声同時通訳が分単価 $0.034 で API 提供されたことで、コールセンター・会議・ライブ配信の同時通訳ユースケースが一気に現実化する。当日に Codex で動くアプリを作れるエコシステムの完成度が示され、音声エージェントの実装ハードルが大幅に下がった。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">13,906</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAI/status/2052438194625593804">@OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-07</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 ツール/プロダクト</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAI/status/2052438194625593804">x.com/OpenAI/…</a></dd>
+        <dd><a href="https://x.com/MLBear2/status/2052491528011190285">x.com/MLBear2/status/2052491528011190285…</a></dd>
+        <dd><a href="https://x.com/zento_ai/status/2052521952993296451">x.com/zento_ai/status/205252195299329645…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · CLAUDE CLAUDEAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 ツール/プロダクト <span class="sep">/</span> CLAUDE (@CLAUDEAI) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Anthropic Claude Managed Agents — Dreaming + Multiagent + Outcomes + Webhooks 公開</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-09/topic_6.png" data-alt="Anthropic Claude Managed Agents — Dreaming + Multiagent + Outcomes + Webhooks 公開" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-09/topic_6.png" alt="Anthropic Claude Managed Agents — Dreaming + Multiagent + Outcomes + Webhooks 公開" />
+      </div>
+      <p class="lede">
+        Anthropic が Code with Claude カンファレンスで Claude Managed Agents の新機能を一斉公開した。研究プレビューとして Dreaming（過去セッション振り返りでメモリを学習する仕組み）、パブリックベータとして Multiagent orchestration / Outcomes / Webhooks を提供開始した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Dreaming（research preview）: 過去セッションを振り返り、パターン抽出・メモリキュレーションで継続学習</li>
+        <li data-i="02">Multiagent orchestration（public beta）: リードエージェントが並列の専門エージェントに委譲</li>
+        <li data-i="03">Outcomes（public beta）: ルーブリック評価で品質基準到達まで反復</li>
+        <li data-i="04">Webhooks（public beta）: 完了通知の標準化</li>
+        <li data-i="05">本日より Claude Platform で利用可能</li>
+      </ul>
+      <div class="pull">
+        Anthropic が「エージェントの実行・評価・学習を一気通貫で担うランタイム」へ進化した。OpenAI が同日 5-07 に GPT-Realtime-2 で音声エージェント側を攻めたのに対し、Anthropic は運用基盤側で押す対比構造になっており、エージェント運用 OS の主戦場が明確化した。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">14,571</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/claudeai/status/2052067399088664981">@claudeai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-06</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 ツール/プロダクト</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/claudeai/status/2052067399088664981">x.com/claudeai/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/OpenAI/status/2052845764507062349">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-05-08/">
+      ← 前日 · 2026-05-08
+      <span class="big">Claude for Microsoft 365 が GA — Excel / PowerPoint / Word + Outlook public beta</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-05-09/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260509.0728</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

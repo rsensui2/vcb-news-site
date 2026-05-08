@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №256</span>
+    <span class="tick">BOOKMARK №236</span>
     <span class="sep">/</span>
-    <span>2026-05-08</span>
+    <span>2026-01-29</span>
     <span class="sep">/</span>
     <span>@Cloudflare</span>
     <span class="sep">/</span>
     <span>316 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:10 FRI</span>
+    <span>JST 20:11 FRI</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,28 +305,28 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-05-07/">NEWS</a>
+      <a href="../news/2026-05-08/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:10 · FRI</div>
+    <div class="meta">JST · 20:11 · FRI</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 日付不明 <span>/</span> №256
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-01-29 <span>/</span> №236
     </div>
     <div class="cat-line">
       <span>💻 AI/開発</span>
       <span class="sep">·</span><span>Cloudflare <span style="opacity:.7">@Cloudflare</span></span>
-      
+      <span class="sep">·</span><span>2026-01-29</span>
     </div>
     <h1 class="title">Moltworker - CloudflareでMoltbot/OpenClawをセルフホスト</h1>
     <div class="strap">
-      <span><span class="label">№</span>256 / 316</span>
+      <span><span class="label">№</span>236 / 316</span>
       <span><span class="label">SRC</span><a href="https://x.com/Cloudflare/status/2016875256393175130" target="_blank" rel="noopener noreferrer">x.com/Cloudflare ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/18_cloudflare_moltworker.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">256<span class="ord">BOOKMARK / 316</span></aside>
+    <aside class="numeral">236<span class="ord">BOOKMARK / 316</span></aside>
     <article class="prose">
 <p><strong>ブログ記事:</strong> https://blog.cloudflare.com/introducing-moltworker-self-hosted-ai-agent  </p><p><strong>エンゲージメント:</strong> 317返信 / 1,239リポスト / 6,582いいね / 6,391ブックマーク / 223万表示</p><h2>概要</h2><blockquote>Moltworker is a middleware Worker and adapted scripts that allows running Moltbot (formerly Clawdbot) on Cloudflare's Sandbox SDK and our Developer Platform APIs. So you can self-host an AI personal assistant — without any new hardware.</blockquote><p><strong>Moltworker</strong> は、CloudflareのSandbox SDKとDeveloper Platform APIsを使ってMoltbot（旧Clawdbot、現OpenClaw）を実行できるようにするミドルウェアWorkerとスクリプトのセット。</p><p><strong>特徴:</strong></p><ul><li>新しいハードウェア不要でAIパーソナルアシスタントをセルフホスト</li><li>GPUもVPSもDevOps rabbit holesも不要</li></ul><h2>コミュニティの反応</h2><h3>ポジティブな意見</h3><p><strong>Sandboxingの重要性</strong> (by @alexxzay)</p><blockquote>Sandboxing is the real story. Autonomous agent with shell access on your laptop was always terrifying. Container isolation + Zero Trust means IT might actually approve this.</blockquote><p><strong>セキュリティ問題の解決</strong> (by @yrzhe_top)</p><blockquote>Found 796 Moltbot instances on Shodan with zero auth—API keys, OAuth tokens, chat history exposed. Most weren't careless. They just couldn't keep up with the infra complexity. Zero Trust + managed sandboxes closes that gap.</blockquote><p><strong>普及への道</strong> (by @AlecMcCullough)</p><blockquote>The fact that you can now run an AI personal assistant with just Cloudflare infra is wild. No GPUs, no expensive VPS, no DevOps rabbit holes. This is how AI goes from 'tech bro toy' to 'everyone has one.'</blockquote><h3>懸念点・批判</h3><p><strong>コスト</strong> (by @Everlier)</p><blockquote>30 million CPU milliseconds included per month ~8 hrs</blockquote><blockquote>+$0.02 per additional million CPU milliseconds → +$10/month at 20% utilization</blockquote><p><strong>ローカルコントロールの喪失</strong> (by @pitachoi)</p><blockquote>big part of the Moltbot appeal was full local control</blockquote><p><strong>本質的な違い</strong> (by @nj_dawn)</p><blockquote>whole point of moltbot is it can access local filesystem, no? otherwise how is it different than running claude remote with mcp?</blockquote><p><strong>まだ未成熟</strong> (by @dodeja)</p><blockquote>This is not ready for even half serious use, yet. There are bugs with how the backup works and you are going to lose state if the worker misbehaves and restarts.</blockquote><p><strong>バグ報告</strong> (by @orhankurulan)</p><blockquote>Telegram is pairing not working and it's buggy. Many issues on gateway resets and device pairing.</blockquote><h2>名前に関するジョーク</h2><p>(by @WyattxCo)</p><blockquote>anthropic saw this coming when they forced the name change from clawdbot. calling this product clawdflare instead of moltworker would've been too smooth</blockquote><h2>まとめ</h2><p>Moltworkerは、セキュリティ面（サンドボックス、Zero Trust）では大きな進歩。しかし：</p><ul><li>ローカルファイルシステムアクセスという本来の利点が失われる</li><li>コストはまだ検討が必要</li><li>現時点ではバグも多く、本格運用には時期尚早</li></ul><p>「tech bro toy」から「everyone has one」への移行を可能にする可能性を秘めている。</p>
     </article>
@@ -343,7 +343,7 @@
       <dl>
         <dt>AUTHOR</dt><dd>Cloudflare</dd>
         <dt>HANDLE</dt><dd>@Cloudflare</dd>
-        
+        <dt>POSTED</dt><dd>2026-01-29</dd>
         <dt>CATEGORY</dt><dd>💻 AI/開発</dd>
         <dt>SOURCE</dt><dd><a href="https://x.com/Cloudflare/status/2016875256393175130" target="_blank" rel="noopener noreferrer">x.com/Cloudflare/status/201687525639317513…</a></dd>
         <dt>MARKDOWN</dt><dd><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/18_cloudflare_moltworker.md" target="_blank" rel="noopener noreferrer">GitHub で原文を見る</a></dd>
@@ -365,9 +365,9 @@
       <span>← 新しいブックマーク</span>
       <span class="big">Marketing + OpenClaw (Moltbot) = $$$ — 20 Guer…</span>
     </a>
-    <a class="btn next" href="./17_moltbook_openclaw_summary.md.html">
+    <a class="btn next" href="./03_awesome_claude_skills.md.html">
       <span>古いブックマーク →</span>
-      <span class="big">Moltbookの詳細について — Kenn Ejima &amp; 逆瀬川</span>
+      <span class="big">Awesome Claude Skills - スキル集まとめ</span>
     </a>
   </div>
 </section>
@@ -397,7 +397,7 @@
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-05-07/">TODAY</a></li>
+          <li><a href="../news/2026-05-08/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>

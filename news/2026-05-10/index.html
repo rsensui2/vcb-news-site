@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-05-10 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-05-10 の Vibe Coder Bootcamp モーニングディスパッチ — 5本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0510</span>
+    <span class="sep">/</span>
+    <span>2026-05-10</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>05 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260510.0727</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-05-10/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:27 · SAT</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SATURDAY · MAY 10, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>05<span class="dot">.</span>10</h1>
+    <div class="strap">
+      <span>Anthropic「Teaching · Thariq「HTML · Cursor · Next.js</span>
+      <span><span class="count">05</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 ニュース・動向 <span class="sep">/</span> @ANTHROPICAI <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic「Teaching Claude why」— Claudeの脅迫挙動を倫理理解で消した研究公開</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-10/topic_1.png" data-alt="Anthropic「Teaching Claude why」— Claudeの脅迫挙動を倫理理解で消した研究公開" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-10/topic_1.png" alt="Anthropic「Teaching Claude why」— Claudeの脅迫挙動を倫理理解で消した研究公開" />
+      </div>
+      <p class="lede">
+        Anthropicが「Teaching Claude why」研究を公開。昨年Claude 4が条件下でユーザーを脅迫した挙動を完全消去した手法を解説。鍵は「整合した行動の例」だけでは足りず、「なぜ不整合が悪いのか」をモデルに深く理解させること。Claudeの憲法ベースの高品質ドキュメント+整合AIを描くフィクションの組合せでagentic misalignmentを3倍以上低減した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">起源は『AIは邪悪・自己保存に興味がある』と描くインターネットテキスト由来</li>
+        <li data-i="02">応答に『なぜそう振る舞うか』の高潔な理由を書き加えると効果が伸びた</li>
+        <li data-i="03">最も効いたデータセットは『倫理的に難しい状況での原則的応答』、評価セットと内容が離れていても効果最大</li>
+        <li data-i="04">agentic misalignmentを3倍以上低減</li>
+        <li data-i="05">Alex Albert: Claude Mythos Preview の早期スナップショットがMETR 80%成功率タイムホライズンで次点モデルの2倍超</li>
+      </ul>
+      <div class="pull">
+        「エージェント安全性」がモデル選定の必須評価軸になる流れの公式エビデンス。Claude採用が安全側に寄る選択であると説明できる定量的根拠になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">8,058</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/AnthropicAI/status/2052808787514228772">@AnthropicAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-08</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 ニュース・動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/AnthropicAI/status/2052808787514228772">x.com/AnthropicAI/…</a></dd>
+        <dd><a href="https://www.anthropic.com/research/teaching-claude-why">www.anthropic.com/research/teaching-clau…</a></dd>
+        <dd><a href="https://x.com/alexalbert__/status/2052899864493830590">x.com/alexalbert__/status/20528998644938…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · THARIQ TRQ212 / AN</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📖 体系的解説系 <span class="sep">/</span> THARIQ (@TRQ212) / ANTHROPIC CLAUDE CODE チーム <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Thariq「HTML is the new markdown」— Claude Code出力の標準をHTMLへ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-10/topic_2.png" data-alt="Thariq「HTML is the new markdown」— Claude Code出力の標準をHTMLへ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-10/topic_2.png" alt="Thariq「HTML is the new markdown」— Claude Code出力の標準をHTMLへ" />
+      </div>
+      <p class="lede">
+        Anthropic / Claude CodeチームのThariqが、AIエージェント時代の出力フォーマットとして『MarkdownよりHTMLが優位』と主張する長文記事を公開。情報密度・視覚性・共有性・双方向性すべてでHTMLが勝るとし、自身はmarkdownを『ほぼ完全に捨てた』と宣言。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">100行超のMarkdownは実際は読まれない、HTMLは表・SVG・CSS・JSを埋め込めて密度が桁違い</li>
+        <li data-i="02">ユースケース: 仕様書、コードレビュー(diff+注釈)、デザインプロト、レポート、『使い捨て編集UI』(Linear ticket並べ替え/feature flag editor/prompt tuner)</li>
+        <li data-i="03">トークン効率は2-4x悪いがOpus 4.7の1MM contextがあれば気にならない</li>
+        <li data-i="04">弱点はバージョン管理 (HTML diffはノイジー)</li>
+        <li data-i="05">Simon Willisonが即日『Linux脆弱性PoCをHTMLで説明させた』と肯定的フォロー (749 likes)</li>
+        <li data-i="06">実例集: https://thariqs.github.io/html-effectiveness/</li>
+      </ul>
+      <div class="pull">
+        Claude Codeチーム内部の運用標準が変わりつつあることを示す内部実践知。VBC教材で『Markdown一択』だった出力選択肢に『HTML artifact』を加える根拠になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">10,729</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/trq212/status/2052809885763747935">@trq212</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-08</dd>
+        <dt>CATEGORY</dt>
+        <dd>📖 体系的解説系</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/trq212/status/2052809885763747935">x.com/trq212/…</a></dd>
+        <dd><a href="https://thariqs.github.io/html-effectiveness/">thariqs.github.io/html-effectiveness/</a></dd>
+        <dd><a href="https://simonwillison.net/2026/May/8/unreasonable-effectiveness-of-html/">simonwillison.net/2026/May/8/unreasonabl…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · CURSORAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 ツール・サービス <span class="sep">/</span> @CURSOR_AI <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cursor 3 — PRレビュー体験をCursor内で完結</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-10/topic_3.png" data-alt="Cursor 3 — PRレビュー体験をCursor内で完結" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-10/topic_3.png" alt="Cursor 3 — PRレビュー体験をCursor内で完結" />
+      </div>
+      <p class="lede">
+        Cursor 3 で PR の作成→コメント・diff・コミット・レビューステータス確認→マージまでをCursor内で完結できる新しいPRレビュー体験を提供開始。File treeとchanges pickerで大規模PRのナビゲーションも改善。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">1箇所でPRライフサイクル全体を扱える(GitHubに行き来する手間が減る)</li>
+        <li data-i="02">ファイルツリー+変更ピッカーで大型PRの差分把握が速くなる</li>
+        <li data-i="03">レビュアーとして『コメント・diff・コミット・status』を統合ビューで確認可能</li>
+        <li data-i="04">コードを書く場所とPRをレビューする場所の一体化トレンド</li>
+      </ul>
+      <div class="pull">
+        VBC受講生はPR作成→レビュー→マージのループをCursor内で完結することでAI支援をレビュー段階にも効かせやすくなる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,255</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2052489387305488609">@cursor_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-07</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 ツール・サービス</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2052489387305488609">x.com/cursor_ai/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · NEXTJS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 ツール・サービス <span class="sep">/</span> @NEXTJS <span class="sep">/</span> NEWS
+      </div>
+      <h2>Next.js 16.2.6 / 15.5.18 — 重大セキュリティ修正リリース、即時アップグレード推奨</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-10/topic_4.png" data-alt="Next.js 16.2.6 / 15.5.18 — 重大セキュリティ修正リリース、即時アップグレード推奨" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-10/topic_4.png" alt="Next.js 16.2.6 / 15.5.18 — 重大セキュリティ修正リリース、即時アップグレード推奨" />
+      </div>
+      <p class="lede">
+        Next.jsが16.2.6と15.5.18をリリース。high/moderate/lowの複数脆弱性を修正、上流Reactの脆弱性1件も含む。公式が『できるだけ早くアップグレード推奨』と異例の表現。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">2系統(16.x と 15.x)同時パッチ</li>
+        <li data-i="02">High severityを含む複数脆弱性</li>
+        <li data-i="03">上流Reactの脆弱性も含む</li>
+        <li data-i="04">Vercel/Next.jsチームが『strongly recommend upgrading』と強調</li>
+      </ul>
+      <div class="pull">
+        Bootcamp課題や個人プロジェクトでNext.jsを使っている全員に直接影響。今日中にバージョンアップを判断する案件。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,349</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/nextjs/status/2052489312944759202">@nextjs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-07</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 ツール・サービス</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/nextjs/status/2052489312944759202">x.com/nextjs/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · OPENAI / SAMA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 ニュース・動向 <span class="sep">/</span> @OPENAI / @SAMA <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI、Codexのサブスク内導線を強化 — Sam Altmanが『Codex並列実行+子育て』体験談</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-10/topic_5.png" data-alt="OpenAI、Codexのサブスク内導線を強化 — Sam Altmanが『Codex並列実行+子育て』体験談" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-10/topic_5.png" alt="OpenAI、Codexのサブスク内導線を強化 — Sam Altmanが『Codex並列実行+子育て』体験談" />
+      </div>
+      <p class="lede">
+        OpenAIがChatGPT内にCodex切替導線(chatgpt.com/codex/switch-to-codex/)を露骨に宣伝。Sam Altman本人も『Codexタスクを大量に並列で走らせて子供と外で遊んで帰ったら全部終わってる』と非同期実行ワークフローを体験談として推し。Anthropicの『Claude Code上限倍増+Opus APIレート引き上げ』(5-07)への応戦の流れ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">ChatGPT有料プランからCodexへの1クリック移行を導線として常設</li>
+        <li data-i="02">Sam Altman自身がCodexのasync並列実行を日常運用していると発信</li>
+        <li data-i="03">GPT-5.5を『autistic genius with very strange taste in naming』と愛されキャラ化</li>
+        <li data-i="04">次世代モデル要望募集ポストも5,972 likesでバズ中</li>
+      </ul>
+      <div class="pull">
+        Codex派 vs Claude Code派の二分化が両社のマーケティングメッセージに表れ始めた。VBCでは『どちらに張るか』ではなく『どう使い分けるか』を伝える時期。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">5,023</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAI/status/2052800507727781979">@OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-08</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 ニュース・動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAI/status/2052800507727781979">x.com/OpenAI/…</a></dd>
+        <dd><a href="https://x.com/sama/status/2053191344999604409">x.com/sama/status/2053191344999604409</a></dd>
+        <dd><a href="https://chatgpt.com/codex/switch-to-codex/">chatgpt.com/codex/switch-to-codex/</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/AnthropicAI/status/2052808787514228772">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-05-09/">
+      ← 前日 · 2026-05-09
+      <span class="big">OpenAI が Chain-of-Thought Monitorability の公式分析を公開 — 「CoT 監視は誤整合に対する主要防御層」</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-05-10/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260510.0727</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

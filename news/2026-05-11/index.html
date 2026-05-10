@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-05-11 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-05-11 の Vibe Coder Bootcamp モーニングディスパッチ — 5本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0511</span>
+    <span class="sep">/</span>
+    <span>2026-05-11</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>05 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260511.0734</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-05-11/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:34 · SUN</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SUNDAY · MAY 11, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>05<span class="dot">.</span>11</h1>
+    <div class="strap">
+      <span>Codex · Claude · 16人エンジニアチームが · OneBiz:</span>
+      <span><span class="count">05</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 ニュース・動向 <span class="sep">/</span> @CODEXRELEASES (公式) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Codex CLI 0.130.0 — `codex remote-control` でスマホ/外出先から自宅マシンを操作可能に</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-11/topic_1.png" data-alt="Codex CLI 0.130.0 — `codex remote-control` でスマホ/外出先から自宅マシンを操作可能に" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-11/topic_1.png" alt="Codex CLI 0.130.0 — `codex remote-control` でスマホ/外出先から自宅マシンを操作可能に" />
+      </div>
+      <p class="lede">
+        OpenAI が Codex CLI 0.130.0 をリリース。トップレベル新コマンド `codex remote-control` で headless かつ remotely controllable な app-server を起動できる。自宅 Mac で動かす Codex に、外出先のブラウザ（事実上スマホ）から接続して作業継続・追加指示が可能になった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">`codex remote-control` で headless app-server が起動、別端末から接続可能</li>
+        <li data-i="02">プラグイン共有が link metadata + discoverability controls 付きで強化</li>
+        <li data-i="03">Bedrock 認証が AWS console-login profile 経由でサポート</li>
+        <li data-i="04">@Codestudiopjbk が日本語解説で 368L、@hAru_mAki_ch 194L、@neromeron1014 が tailscale+自宅 MacbookPro で `codex_mobile` を自作</li>
+        <li data-i="05">公式 @Codex_Changelog 側でも 1,048L で告知</li>
+      </ul>
+      <div class="pull">
+        「コーディングエージェントを家のマシンで走らせ、移動中のスマホから様子見・追加指示する」運用が純正コマンド化された。VBC や tekion エンジニアにとって長時間タスクを止めずに進める現実解になる。Codex は token 効率・速度に加え「体験」面でも先行し始めた。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,477</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/CodexReleases/status/2052901321230151996">@CodexReleases</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-08</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 ニュース・動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/CodexReleases/status/2052901321230151996">x.com/CodexReleases/…</a></dd>
+        <dd><a href="https://x.com/Codex_Changelog/status/2052892175135068409">x.com/Codex_Changelog/status/20528921751…</a></dd>
+        <dd><a href="https://x.com/Codestudiopjbk/status/2053014144388047030">x.com/Codestudiopjbk/status/205301414438…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · CLAUDE CODE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 ニュース・動向 <span class="sep">/</span> CLAUDE CODE 公式ローンチ（複数の早期解説者で交差検証） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code「Routines」— `/schedule` で定期実行 AI ジョブを 1 行設定</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-11/topic_2.png" data-alt="Claude Code「Routines」— `/schedule` で定期実行 AI ジョブを 1 行設定" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-11/topic_2.png" alt="Claude Code「Routines」— `/schedule` で定期実行 AI ジョブを 1 行設定" />
+      </div>
+      <p class="lede">
+        Claude Code に「Routines」機能が追加。`/schedule` コマンドで cron 風に繰り返し AI ジョブを設定すれば、それ以降 Claude がローカル/リモートで自走する。例: `/schedule PR review daily at 9am`、毎週月曜の CHANGELOG レビュー、毎朝 Slack 情報要約を DM に送る、など。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">`/schedule &lt;prompt&gt;` 1 行で定期実行をセット</li>
+        <li data-i="02">ローカル/リモート両対応</li>
+        <li data-i="03">PR レビュー、リリースノート生成、日次サマリ等のユースケース</li>
+        <li data-i="04">Claude Web 側の Routine (5-08 頃 @zento_ai が「Slack 情報を DM に送る」を実装) と対応する CLI 版</li>
+        <li data-i="05">評価は割れる: 「便利」(@aya_happy_life) vs 「GitHub Actions の方が今は強い、もっとリソース投下を」(@Rames_Jusso)</li>
+      </ul>
+      <div class="pull">
+        これまで Ryoko が cron + child session で実装していた「定期実行 AI ジョブ」が Claude Code 純正機能化。VBC 受講生にとっては YAML や別ツール無しで「毎朝の PR レビュー」「日次レポート」を仕込める。Ryoko の cron 設計と直接比較できるリファレンスになる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/adriano_viana/status/2052366602260107370">@adriano_viana</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-06</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 ニュース・動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/adriano_viana/status/2052366602260107370">x.com/adriano_viana/…</a></dd>
+        <dd><a href="https://x.com/Mlearning_ai/status/2052094752259260483">x.com/Mlearning_ai/status/20520947522592…</a></dd>
+        <dd><a href="https://x.com/aya_happy_life/status/2052587916417978569">x.com/aya_happy_life/status/205258791641…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · MORGANLINTON</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 ニュース・動向 <span class="sep">/</span> @MORGANLINTON <span class="sep">/</span> NEWS
+      </div>
+      <h2>16人エンジニアチームが Anthropic 解約 → Codex+Cursor へ — トークン効率議論が再燃</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-11/topic_3.png" data-alt="16人エンジニアチームが Anthropic 解約 → Codex+Cursor へ — トークン効率議論が再燃" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-11/topic_3.png" alt="16人エンジニアチームが Anthropic 解約 → Codex+Cursor へ — トークン効率議論が再燃" />
+      </div>
+      <p class="lede">
+        Morgan Linton（16 人エンジニアリングチームのリーダー）が Anthropic プランを正式に解約し、Codex + Cursor 中心の運用に切り替えたと公表。理由は純粋にコスト: Anthropic は月 $2,000/人 × 16 人 = $32,000/月 になる構造で支払い切れない。Codex は GPT-5.5 で精度・トークン効率が大幅に向上、Cursor Composer 2 もチーム運用で limit に当たらない。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">16 人 × $2,000/月 = $32,000/月 を支払い切れないという経済性が主因</li>
+        <li data-i="02">「Codex は so good, and so token efficient」「Cursor は limit に当たらない」</li>
+        <li data-i="03">レビューは引き続き人手で多くこなす（最終判断は人前提を維持）</li>
+        <li data-i="04">Droid も並行検証中</li>
+        <li data-i="05">@techedgedaily: 「Anthropic は能力ではなく経済性で負けた」</li>
+        <li data-i="06">@PulkitMehrotra: Codex installs 86.1M / Claude Code 7.2M（5 月初・週次）</li>
+      </ul>
+      <div class="pull">
+        Anthropic は 5-08 に Claude Code 利用上限を倍増したばかりだが「中小チームには高すぎる」声が出始めた。VBC（個人 or 小規模チーム）にとって「Claude / Codex / Cursor をコスト最適で組み合わせる」設計が現実の宿題に。tekion で 16 人前後の開発組織がある場合も同じ計算が当てはまる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,952</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/morganlinton/status/2053165575824887938">@morganlinton</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 ニュース・動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/morganlinton/status/2053165575824887938">x.com/morganlinton/…</a></dd>
+        <dd><a href="https://x.com/techedgedaily/status/2053197886545105220">x.com/techedgedaily/status/2053197886545…</a></dd>
+        <dd><a href="https://x.com/PulkitMehrotra/status/2053161110195573128">x.com/PulkitMehrotra/status/205316111019…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · ONEBIZBY LEVELA ON</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 ツール・実践 <span class="sep">/</span> ONEBIZ（スモビジ研究）BY LEVELA (@ONEBIZ_LEVELA) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>OneBiz: Claude Code でプレゼン資料を 5 ステップで作る — PowerPoint/Slides を捨て HTML+GitHub Pages へ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-11/topic_4.png" data-alt="OneBiz: Claude Code でプレゼン資料を 5 ステップで作る — PowerPoint/Slides を捨て HTML+GitHub Pages へ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-11/topic_4.png" alt="OneBiz: Claude Code でプレゼン資料を 5 ステップで作る — PowerPoint/Slides を捨て HTML+GitHub Pages へ" />
+      </div>
+      <p class="lede">
+        OneBiz が X long-form で「Claude Code を使ったプレゼン資料の作り方 5 ステップ」を公開。PowerPoint/Google Slides は AI 時代の制約になっていると主張し、Claude プロジェクト + システムプロンプトテンプレ → チャット編集（最大 2 回） → Claude Code 仕上げ → GitHub Pages デプロイ という HTML プレゼン制作ワークフローを解説。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">5 ステップ: (1) スクリプト準備 (2) Claude プロジェクトに再利用システムプロンプト+Knowledge (3) チャット編集は 2 回まで (4) Claude Code (`npm i -g @anthropic-ai/claude-code`) で細部仕上げ (5) GitHub Pages で URL 共有</li>
+        <li data-i="02">システムプロンプト推奨要素: 単一HTML/CSS&amp;JSインライン、スライド最大3行、ダークBG(#0a0a0a→#1a1a2e)+アクセントカラー、CSS animation、矢印キー操作</li>
+        <li data-i="03">「構造変更はチャット、細部は Claude Code」の使い分け</li>
+        <li data-i="04">チャット 3 回目以降はコンテキスト汚染で品質劣化するから止める</li>
+        <li data-i="05">GitHub Pages は `index.html` をルート配置 + Settings → Pages → main を選ぶだけ</li>
+      </ul>
+      <div class="pull">
+        Vibe Coder Bootcamp 受講生・社内エンジニアにとって「Claude でプレゼンを作る」を再現可能なワークフロー化した実践メモ。Thariq の「HTML is the new markdown」(5-08) の応用ユースケースで、Claude プロジェクト + Claude Code + GitHub Pages の組み合わせを学ぶ素材として最適。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">641</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OneBiz_Levela/status/2053007794543210979">@OneBiz_Levela</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 ツール・実践</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OneBiz_Levela/status/2053007794543210979">x.com/OneBiz_Levela/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · CHOI ARRAKISAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 ツール・実践 <span class="sep">/</span> CHOI (@ARRAKIS_AI) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Chormex に GPT-Realtime-2 でリアルタイム翻訳 + Codex で同時要約 — 「ブラウザ = リアルタイム AI OS」</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-11/topic_5.png" data-alt="Chormex に GPT-Realtime-2 でリアルタイム翻訳 + Codex で同時要約 — 「ブラウザ = リアルタイム AI OS」" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-11/topic_5.png" alt="Chormex に GPT-Realtime-2 でリアルタイム翻訳 + Codex で同時要約 — 「ブラウザ = リアルタイム AI OS」" />
+      </div>
+      <p class="lede">
+        CHOI が自身の Chrome 拡張「Chormex」に GPT-Realtime-2 を組み込み、Chrome 内で再生される全音声（YouTube / ライブ配信 / 会議 / プレゼン）をリアルタイム翻訳しつつ、同時に Codex で要約・ノート化・整理を行える機能を追加。「ブラウザはリアルタイム AI OS に進化している」「インターネット上の言語の壁が消えつつある」と主張。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">GPT-Realtime-2 を使った低レイテンシ翻訳 + LLM 解析の同時実行</li>
+        <li data-i="02">対象は Chrome 内の音声: YouTube, ライブ配信, 会議, プレゼン</li>
+        <li data-i="03">操作例: 'Summarize this.' / 'What are the key points?' / 'Turn this into notes.' / 'Explain what they mean.' / 'Organize the discussion.'</li>
+        <li data-i="04">GitHub リポジトリも公開（スレッド Part 2 でリンク）</li>
+        <li data-i="05">GPT-Realtime-2 商用ユースケースの 2 件目（OpenAI 公式に続く Chrome 拡張組み込み事例）</li>
+      </ul>
+      <div class="pull">
+        GPT-Realtime-2 を「単なる音声合成」ではなく「ブラウザ拡張で常時走るリアルタイム AI 基盤」として使う設計の参考実装。VBC で「AI を組み込んだブラウザ拡張」の構成例として直接使える。tekion 側でも会議録/翻訳ニーズに転用可能。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">607</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/arrakis_ai/status/2053055460060618805">@arrakis_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 ツール・実践</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/arrakis_ai/status/2053055460060618805">x.com/arrakis_ai/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/CodexReleases/status/2052901321230151996">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-05-10/">
+      ← 前日 · 2026-05-10
+      <span class="big">Anthropic「Teaching Claude why」— Claudeの脅迫挙動を倫理理解で消した研究公開</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-05-11/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260511.0734</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

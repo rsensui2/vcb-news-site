@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-05-13 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-05-13 の Vibe Coder Bootcamp モーニングディスパッチ — 5本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0513</span>
+    <span class="sep">/</span>
+    <span>2026-05-13</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>05 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260513.0722</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-05-13/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:22 · TUE</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · TUESDAY · MAY 13, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>05<span class="dot">.</span>13</h1>
+    <div class="strap">
+      <span>Mini · Claude · Gemini · Karpathy指摘:</span>
+      <span><span class="count">05</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 <span class="sep">/</span> INTERNATIONAL CYBER DIGEST / RYAN CARSON / 阿绎 AYI <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Mini Shai-Hulud — TanStack発の史上最悪npmサプライチェーン攻撃がAI開発者ツールへ拡大</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-13/topic_1.png" data-alt="Mini Shai-Hulud — TanStack発の史上最悪npmサプライチェーン攻撃がAI開発者ツールへ拡大" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-13/topic_1.png" alt="Mini Shai-Hulud — TanStack発の史上最悪npmサプライチェーン攻撃がAI開発者ツールへ拡大" />
+      </div>
+      <p class="lede">
+        TanStackの公式42 npmパッケージ・計84バージョンに毒入りが混入。1日で OpenSearch / Mistral AI / Guardrails AI / UiPath / Squawk など170+パッケージへ拡散し「Mini Shai-Hulud」キャンペーン化。PRのCI実行中にGitHub Actions Cache書き込みトークンを盗み、公式リリースを騙してSLSA 3級署名付きで悪意あるパッケージを公開する新型攻撃。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">TanStack公式42パッケージ・84バージョンが感染（tanstack/react-routerは週1200万DL）</li>
+        <li data-i="02">170+パッケージへ連鎖、OpenSearch / Mistral AI / UiPath / Guardrails AI / Squawk に拡散</li>
+        <li data-i="03">PR CIで Actions Cache 書き込みトークンを窃取→公式リリースに毒注入→SLSA署名済みで配布</li>
+        <li data-i="04">永続化先が `.claude/settings.json` と `.vscode/tasks.json`。npm uninstallでは消えない</li>
+        <li data-i="05">トークン撤回で homeディレクトリ消去のデッドマンスイッチ搭載、2FAも無効</li>
+        <li data-i="06">緊急対応: 全install凍結 / `npx supply-chain-attack` 自査 / 全token・SSH key ローテート</li>
+      </ul>
+      <div class="pull">
+        Claude Code / Codex / Cursor 等を毎日使うVibe Coder層が最大の被害想定。署名検証や2FAで守れない世界線に突入し、AIエージェント駆動の自動インストールが特に危険。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">5,971</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/IntCyberDigest/status/2053983157628596484">@IntCyberDigest</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-11</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/IntCyberDigest/status/2053983157628596484">x.com/IntCyberDigest/…</a></dd>
+        <dd><a href="https://x.com/IntCyberDigest/status/2054166749998661659">x.com/IntCyberDigest/status/205416674999…</a></dd>
+        <dd><a href="https://x.com/ryancarson/status/2054193503211512257">x.com/ryancarson/status/2054193503211512…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · ANTHROPIC CLAUDE C</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 <span class="sep">/</span> ANTHROPIC CLAUDE (@CLAUDEAI) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Claude Codeに「agent view」追加 — 全セッションを1リストで管理するresearch preview</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-13/topic_2.png" data-alt="Claude Codeに「agent view」追加 — 全セッションを1リストで管理するresearch preview" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-13/topic_2.png" alt="Claude Codeに「agent view」追加 — 全セッションを1リストで管理するresearch preview" />
+      </div>
+      <p class="lede">
+        AnthropicがClaude Codeの新機能 agent view を research preview として提供開始。全セッションを1つのリストで横断管理できるUIで、バックグラウンドタスク・並列サブエージェント・長時間ジョブの状況を一覧化できる。同時にClaude Code 2.1.139がリリースされ /goal コマンドを含む50件のCLI変更も提供。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">agent view が research preview として本日公開</li>
+        <li data-i="02">全 Claude Code セッションを1リストで一覧</li>
+        <li data-i="03">並列サブエージェント / バックグラウンド運用の可視化</li>
+        <li data-i="04">Claude Code 2.1.139 同時リリース、`/goal` 含む50件のCLI変更</li>
+      </ul>
+      <div class="pull">
+        Vibe Coder Bootcampの「並列サブエージェント運用」が一気に教えやすくなる。Ryoko自身も並列子セッション管理UIとして活用可能。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/claudeai/status/2053940934736228454">@claudeai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-12</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/claudeai/status/2053940934736228454">x.com/claudeai/…</a></dd>
+        <dd><a href="https://x.com/ClaudeCodeLog/status/2053913625983692979">x.com/ClaudeCodeLog/status/2053913625983…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · CHETASLUA CHETASLU</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 <span class="sep">/</span> CHETASLUA (@CHETASLUA) / @GEMINIAPP <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Gemini Omni — Google新動画モデル、テキスト整合性が破格</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-13/topic_3.png" data-alt="Gemini Omni — Google新動画モデル、テキスト整合性が破格" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-13/topic_3.png" alt="Gemini Omni — Google新動画モデル、テキスト整合性が破格" />
+      </div>
+      <p class="lede">
+        Google Gemini Appが新動画モデル Gemini Omni を発表。chetaslua の初回出力共有によれば、生成動画内のテキスト整合性が他社モデル比で大幅に高く、フレーム間で文字・ロゴ・UI要素が崩れない。Sora2 / Veo3 / Runway系が苦戦していた領域でブレイクスルー。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Gemini App公式チャンネル（@GeminiApp）から発表</li>
+        <li data-i="02">生成動画内のテキスト整合性が極めて高い</li>
+        <li data-i="03">フレーム間でロゴ・UI要素が安定</li>
+        <li data-i="04">Sora2 / Veo3 系へのカウンター</li>
+        <li data-i="05">プロモ動画 / UI解説動画用途で実用域</li>
+      </ul>
+      <div class="pull">
+        TBcare / TEKION のプロモ動画自動生成に組み込み可能なレベル。動画モデル戦線が再加熱。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/chetaslua/status/2053824398503678108">@chetaslua</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-11</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/chetaslua/status/2053824398503678108">x.com/chetaslua/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · ANDREJ KARPATHY / </span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 <span class="sep">/</span> ANDREJ KARPATHY / 阿绎 AYI <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Karpathy指摘: LLM最大ボトルネックは「テキスト」という最低帯域幅の出力フォーマット</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-13/topic_4.png" data-alt="Karpathy指摘: LLM最大ボトルネックは「テキスト」という最低帯域幅の出力フォーマット" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-13/topic_4.png" alt="Karpathy指摘: LLM最大ボトルネックは「テキスト」という最低帯域幅の出力フォーマット" />
+      </div>
+      <p class="lede">
+        Karpathyが「クエリ末尾に structure your response as HTML と書くだけでLLM出力が劇的に読みやすくなる」とTipsを共有。@AYi_AInotesが中国語で長文展開し「現在のAI最大のボトルネックはモデルの賢さではなくテキストという最低帯域幅の出力フォーマット」と指摘、半年分のAIワークフローが覆ったと話題に。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">クエリ末尾に1行「structure your response as HTML」を足すだけ</li>
+        <li data-i="02">見出し・表・リスト・強調を駆使したHTMLが返り、ブラウザで読みやすい</li>
+        <li data-i="03">「出力帯域幅」という設計観点の転換</li>
+        <li data-i="04">より強いモデル待ちより、まず出力チャネル改善</li>
+      </ul>
+      <div class="pull">
+        プロンプト工学の基本テクの再認識。Slack配信に記法上限がある以上、HTMLレポートを別添リンクで提供する設計が直結。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/karpathy/status/2053872850101285137">@karpathy</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-12</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/karpathy/status/2053872850101285137">x.com/karpathy/…</a></dd>
+        <dd><a href="https://x.com/AYi_AInotes/status/2053911048877707443">x.com/AYi_AInotes/status/205391104887770…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · GHUMARE64</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 <span class="sep">/</span> GHUMARE64 <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Agentmemory — Claude Code / Codex に「無料・無限メモリ」を与えるOSSがGitHubトレンド入り</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-13/topic_5.png" data-alt="Agentmemory — Claude Code / Codex に「無料・無限メモリ」を与えるOSSがGitHubトレンド入り" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-13/topic_5.png" alt="Agentmemory — Claude Code / Codex に「無料・無限メモリ」を与えるOSSがGitHubトレンド入り" />
+      </div>
+      <p class="lede">
+        OSSプロジェクト Agentmemory が GitHub で 4000+ stars を獲得しトレンド入り。Hermes / Claude Code / Codex に無料で「無限メモリ」レイヤを付与し、コンテキストウィンドウ制約を回避する長期記憶ストアとして機能する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">GitHub stars 4000+でトレンド入り</li>
+        <li data-i="02">Hermes / Claude Code / Codex に対応</li>
+        <li data-i="03">完全無料</li>
+        <li data-i="04">コンテキストウィンドウ制約を回避する長期記憶ストア</li>
+      </ul>
+      <div class="pull">
+        Ryokoが自前構築する `~/.ryoko/memory/` のOSS代替候補。VCBで「個人エージェントに永続記憶を持たせる」セッションの教材として有用。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ghumare64/status/2053609542273909155">@ghumare64</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-11</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ghumare64/status/2053609542273909155">x.com/ghumare64/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/IntCyberDigest/status/2053983157628596484">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-05-12/">
+      ← 前日 · 2026-05-12
+      <span class="big">OpenAI、PE 連合と「Deployment Company (DeployCo)」を $14B 評価で設立 — Tomoro 買収で FDE 150 名も即調達</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-05-13/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260513.0722</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-05-14 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-05-14 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0514</span>
+    <span class="sep">/</span>
+    <span>2026-05-14</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260514.0726</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-05-14/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:26 · WED</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · WEDNESDAY · MAY 14, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>05<span class="dot">.</span>14</h1>
+    <div class="strap">
+      <span>Anthropic · OpenAI · Anthropic · Cursor</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 7 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 メジャーアップデート <span class="sep">/</span> ANTHROPIC / @CLAUDEDEVS OFFICIAL <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic、Claude Code 週次上限 50% 増 + 6/15 から SDK 専用月次クレジットを新設</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-14/topic_1.png" data-alt="Anthropic、Claude Code 週次上限 50% 増 + 6/15 から SDK 専用月次クレジットを新設" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-14/topic_1.png" alt="Anthropic、Claude Code 週次上限 50% 増 + 6/15 から SDK 専用月次クレジットを新設" />
+      </div>
+      <p class="lede">
+        Anthropic が同日 2 つの大きな改定を発表した。①Pro / Max / Team / Enterprise 全プランで Claude Code の週次上限を 50% 引き上げ（2026-07-13 まで時限、オプトイン不要・自動適用、先週発表の 5 時間ピーク上限 2 倍化と stack 可能）。②6/15 開始で Claude Agent SDK / `claude -p` / Claude Code GitHub Actions / Agent SDK ベースの third-party アプリ（Conductor、OpenClaw 等）のプログラム実行用に専用月次クレジットを発行する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">週次上限 50% 増は 2026-07-13 18:00 PDT までの時限措置</li>
+        <li data-i="02">クレジット額: Pro $20 / Max 5x $100 / Max 20x $200 / Team Standard $20-per-seat / Team Premium $100-per-seat</li>
+        <li data-i="03">クレジットはロールオーバーなし、毎月リセット</li>
+        <li data-i="04">third-party Agent SDK 製品（Conductor、OpenClaw 等）も同じクレジットからカウント</li>
+        <li data-i="05">subscription 枠はインタラクティブ利用専用に分離、プログラム利用と予算が独立</li>
+      </ul>
+      <div class="pull">
+        VBC 受講生・Tekion 全社員が日常で当たる「Claude Code 上限」問題に直接効く改善。SDK で組むエージェント基盤が subscription を共食いせずに持続可能になり、Ryoko / OpenClaw 系 OSS の運用コストモデルが安定する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">10,326</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2054639777685934564">@ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-13</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 メジャーアップデート</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2054639777685934564">x.com/ClaudeDevs/…</a></dd>
+        <dd><a href="https://x.com/ClaudeDevs/status/2054610152817619388">x.com/ClaudeDevs/status/2054610152817619…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · SAM ALTMAN / OPENA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 競合動向 <span class="sep">/</span> SAM ALTMAN / OPENAI OFFICIAL <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI / sama、「Codex に乗り換える企業に 2 ヶ月無料」で Anthropic に同日対抗</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-14/topic_2.png" data-alt="OpenAI / sama、「Codex に乗り換える企業に 2 ヶ月無料」で Anthropic に同日対抗" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-14/topic_2.png" alt="OpenAI / sama、「Codex に乗り換える企業に 2 ヶ月無料」で Anthropic に同日対抗" />
+      </div>
+      <p class="lede">
+        Sam Altman が「Codex はベストの AI コーディング製品で、試しやすくしたい」として、Codex に乗り換える企業に 2 ヶ月分の usage を無料提供するキャンペーンを 30 日間限定で開始。OpenAI 公式アカウントも直後に「Another reason to switch to Codex」と RT で増幅。Anthropic の Claude Code 上限増 + 専用クレジットと同日同時刻の発表で、明白な対抗ムーブ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対象: Codex に乗り換える企業契約（個人ではない）</li>
+        <li data-i="02">申込受付は今後 30 日間、提供は 2 ヶ月分の Codex usage</li>
+        <li data-i="03">sama 同日投稿で「price/intelligence より price/speed の tradeoff にもっと集中すべきかも」とモデル戦略の地ならし</li>
+        <li data-i="04">Anthropic の Claude Code 50% 上限増 + SDK クレジット発表とほぼ同時刻</li>
+      </ul>
+      <div class="pull">
+        AI コーディングは「Codex 派 vs Claude Code 派」の二分（2026-05-05 The Information 報道）から、明確に「現金で殴る企業流通競争」フェーズへ突入した。VBC / Tekion の法人選定でも「2 ヶ月無料」は重い検討材料。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">11,155</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/sama/status/2054626219858293128">@sama</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-13</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 競合動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/sama/status/2054626219858293128">x.com/sama/…</a></dd>
+        <dd><a href="https://x.com/OpenAI/status/2054620621255192719">x.com/OpenAI/status/2054620621255192719</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · ANTHROPIC / CLAUDE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 ツール機能 <span class="sep">/</span> ANTHROPIC / @CLAUDEDEVS OFFICIAL <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic、Claude Code に /goal を正式紹介 — 完了条件まで止まらない「Ralph loop」を純正機能化</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-14/topic_3.png" data-alt="Anthropic、Claude Code に /goal を正式紹介 — 完了条件まで止まらない「Ralph loop」を純正機能化" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-14/topic_3.png" alt="Anthropic、Claude Code に /goal を正式紹介 — 完了条件まで止まらない「Ralph loop」を純正機能化" />
+      </div>
+      <p class="lede">
+        Anthropic 公式が Claude Code の新コマンド `/goal` を 6 ポストのスレッドで実演。完了条件を指定（例: `/goal all tests in test/auth pass and the lint step is clean`）すると、Claude は条件達成までトランスクリプトに対して停止判定を自分で拒否する（Ralph loop）。`/schedule`（cron 風定期実行）、`/loop`（反復実行）、auto モード（shift+tab で人間待ち排除）、stop hook（test 実行や CI ヒットで完了条件をプログラム制御）と組み合わせて長尺タスクが完走する設計。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">/goal &lt;完了条件&gt; で Claude が条件達成までトランスクリプトを自分でチェック</li>
+        <li data-i="02">達成時は「Goal achieved」サマリーが返る</li>
+        <li data-i="03">/schedule で cron 風スケジュール、/loop で反復、auto モードで shift+tab</li>
+        <li data-i="04">stop hook で test スイートや CI エンドポイントを完了条件に組み込み可能</li>
+        <li data-i="05">Claude Code Log によれば Claude Code 2.1.139 リリースに含まれる（[ClaudeCodeLog 解説](https://x.com/ClaudeCodeLog/status/2053913625983692979) ）</li>
+      </ul>
+      <div class="pull">
+        Ryoko の cron + child session 設計と Claude Code 純正機能の使い分け論点がさらに具体化。VBC 受講生にとっては「夜間ジョブを自前で書かずに /goal + /schedule で完走させる」が現実解になる。Topic 1 の上限増と組み合わせて「上限が増えた → 長尺ジョブを /goal で回す」連動ストーリーが描ける。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">11,736</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2054351031279186040">@ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-13</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 ツール機能</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2054351031279186040">x.com/ClaudeDevs/…</a></dd>
+        <dd><a href="https://x.com/ClaudeCodeLog/status/2053913625983692979">x.com/ClaudeCodeLog/status/2053913625983…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · CURSOR OFFICIAL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 ツール機能 <span class="sep">/</span> CURSOR OFFICIAL <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cursor、cloud agents を発表 — フル設定済み開発環境ごとエージェント化</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-14/topic_4.png" data-alt="Cursor、cloud agents を発表 — フル設定済み開発環境ごとエージェント化" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-14/topic_4.png" alt="Cursor、cloud agents を発表 — フル設定済み開発環境ごとエージェント化" />
+      </div>
+      <p class="lede">
+        Cursor が cloud agents を本日リリース。クラウド上の「フル設定済み開発環境」内でエージェントを実行できる。設定はエンジニアの新規ラップトップを用意するのと同じ感覚で、リポジトリ clone 済み・依存インストール済み・toolchain クレデンシャル投入済みの状態を事前構築する。Anthropic Managed Agents / OpenAI workspace agents と並ぶクラウド型エージェントランタイムの新ライン。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">cloud agents inside fully configured development environments</li>
+        <li data-i="02">クレデンシャル含めて事前構築可能（ローカルマシン依存をなくす）</li>
+        <li data-i="03">エージェントは事前構築済み環境を「borrow」する形で動作</li>
+        <li data-i="04">Anthropic Managed Agents / OpenAI workspace agents と 3 ベンダー横並びの新ラント</li>
+      </ul>
+      <div class="pull">
+        「ローカル PC をエージェントに開放する」モデルから「クラウド上の使い捨て環境でエージェントを走らせる」モデルへの転換。Topic 7 の npm 攻撃のような local 汚染リスクへの構造的回答にもなる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">776</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2054651526715502998">@cursor_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-13</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 ツール機能</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2054651526715502998">x.com/cursor_ai/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · WINDSURF OFFICIAL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 ツール機能 <span class="sep">/</span> WINDSURF OFFICIAL <span class="sep">/</span> NEWS
+      </div>
+      <h2>Windsurf、Claude Opus 4.7 fast mode を統合 — 同じ知能で 2.5 倍の出力速度</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-14/topic_5.png" data-alt="Windsurf、Claude Opus 4.7 fast mode を統合 — 同じ知能で 2.5 倍の出力速度" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-14/topic_5.png" alt="Windsurf、Claude Opus 4.7 fast mode を統合 — 同じ知能で 2.5 倍の出力速度" />
+      </div>
+      <p class="lede">
+        Windsurf が Claude Opus 4.7 fast mode を統合。フル Opus 4.7 知能のまま約 2.5 倍の出力速度。同日 Anthropic 側でも Claude Code 用 fast mode が research preview として API と CLI に登場（[@ClaudeDevs 5-12](https://x.com/ClaudeDevs/status/2054299058718798198) ）。sama が同日「price/intelligence より price/speed の tradeoff にもっと集中すべき」と発言した文脈と直結する業界共通の動き。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Opus 4.7 と同じ知能で 2.5x の throughput</li>
+        <li data-i="02">Windsurf は IDE 側、Anthropic は API + Claude Code に同タイミングで展開</li>
+        <li data-i="03">「同じ知能で速い」が業界共通の次の競争軸に</li>
+      </ul>
+      <div class="pull">
+        Topic 1 の Claude Code 上限増、Topic 2 の Codex 2 ヶ月無料と合わせて、AI コーディングが「容量・価格・速度」の 3 軸で同時に競合し始めた。VBC 受講生・Tekion 開発者の実作業時間に直接効く改善。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">205</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/windsurf/status/2054268947705536705">@windsurf</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-12</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 ツール機能</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/windsurf/status/2054268947705536705">x.com/windsurf/…</a></dd>
+        <dd><a href="https://x.com/ClaudeDevs/status/2054299058718798198">x.com/ClaudeDevs/status/2054299058718798…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · POLYMARKET / DOTCS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 業界動向 <span class="sep">/</span> POLYMARKET / @DOTCSV <span class="sep">/</span> NEWS
+      </div>
+      <h2>Polymarket、Gemini 3.2 リリースを「来週中に 88%」と予測 — DeepMind は直前デモを連発</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-14/topic_6.png" data-alt="Polymarket、Gemini 3.2 リリースを「来週中に 88%」と予測 — DeepMind は直前デモを連発" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-14/topic_6.png" alt="Polymarket、Gemini 3.2 リリースを「来週中に 88%」と予測 — DeepMind は直前デモを連発" />
+      </div>
+      <p class="lede">
+        予測市場 Polymarket で「Gemini 3.2 が今日から 1 週間以内にリリース」が 88% の確率に達した。Google DeepMind 側は同日「Gemini 駆動の intelligent cursor プロトタイプ」をデモ公開（@DotCSV / 538 likes）し、リリース直前のお披露目モードに入っている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Polymarket オッズ 88%（2026-05-12 時点）</li>
+        <li data-i="02">DeepMind が直前にデモを連発、リリース準備姿勢が明確</li>
+        <li data-i="03">Anthropic / OpenAI / Cursor の同日攻勢に対し、Google も来週合流の見込み</li>
+      </ul>
+      <div class="pull">
+        AI コーディング戦線は 5 月後半に Anthropic / OpenAI / Google / Cursor の 4 大陣営が同時にアップデートする稀な局面に入る。来週何が来るかのシグナルとして配信先で共有しておく価値が高い。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">716</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/Polymarket/status/2054245369836457993">@Polymarket</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-12</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 業界動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/Polymarket/status/2054245369836457993">x.com/Polymarket/…</a></dd>
+        <dd><a href="https://x.com/DotCSV/status/2054248942456754687">x.com/DotCSV/status/2054248942456754687</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · BOOTOSHI KINGBOOTO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 セキュリティ <span class="sep">/</span> BOOTOSHI (@KINGBOOTOSHI) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>BOOTOSHI、npm サプライチェーン攻撃の即時防御プロンプトを公開 — Codex/Claude Code に貼るだけで 4 ステップ実行</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-14/topic_7.png" data-alt="BOOTOSHI、npm サプライチェーン攻撃の即時防御プロンプトを公開 — Codex/Claude Code に貼るだけで 4 ステップ実行" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-14/topic_7.png" alt="BOOTOSHI、npm サプライチェーン攻撃の即時防御プロンプトを公開 — Codex/Claude Code に貼るだけで 4 ステップ実行" />
+      </div>
+      <p class="lede">
+        TanStack 起点で 170+ パッケージ・週 DL 1 億+ に拡大した npm「Mini Shai-Hulud」攻撃を受け、BOOTOSHI が Codex / Claude Code にそのまま貼って実行できる防御プロンプトを公開。`~/.npmrc` / `~/.bunfig.toml` に最小公開待機日数 7 日を設定し、`package.json` の全依存をピン留め、lockfile を git commit する 4 ステップ構成。「直近 7 日に出たバージョンを全 package manager が拒否する」クールダウン戦略で、攻撃チェーンが通常数時間で消えるバッファを上回る。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">`~/.npmrc` に `min-release-age=7` / `minimum-release-age=10080` / `save-exact=true` を追加（npm 全体クールダウン）</li>
+        <li data-i="02">`~/.bunfig.toml` に `[install] minimumReleaseAge = 604800` を追加（bun も同様）</li>
+        <li data-i="03">`package.json` の全依存から `^` `~` を剥がして完全一致バージョンに固定</li>
+        <li data-i="04">lockfile（bun.lock / package-lock.json / pnpm-lock.yaml）を git commit</li>
+        <li data-i="05">Mini Shai-Hulud は CI パイプライン乗っ取りで SLSA 3 級署名済みのまま配布される（[詳細解説 by AYi](https://x.com/AYi_AInotes/status/2054225365548036576) ）</li>
+        <li data-i="06">AI Agent 経由の自動 install が最大被害層</li>
+      </ul>
+      <div class="pull">
+        従来の「公式署名なら信頼」ロジックが崩れた中、AI 中心開発者ほど自動 install 頻度が高く被害確率が高い。VBC / Tekion 開発者に即時配布できる「コピペで効く」防御策が公開された意義は大きい。Cursor cloud agents（Topic 4）のような「使い捨て環境」も中長期の構造的回答だが、今すぐ効くのはこのプロンプト。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,441</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/KingBootoshi/status/2054025614798295530">@KingBootoshi</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-12</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/KingBootoshi/status/2054025614798295530">x.com/KingBootoshi/…</a></dd>
+        <dd><a href="https://x.com/AYi_AInotes/status/2054225365548036576">x.com/AYi_AInotes/status/205422536554803…</a></dd>
+        <dd><a href="https://x.com/IntCyberDigest/status/2054166749998661659">x.com/IntCyberDigest/status/205416674999…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/ClaudeDevs/status/2054639777685934564">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-05-13/">
+      ← 前日 · 2026-05-13
+      <span class="big">Mini Shai-Hulud — TanStack発の史上最悪npmサプライチェーン攻撃がAI開発者ツールへ拡大</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-05-14/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260514.0726</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

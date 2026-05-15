@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-05-16 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-05-16 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0516</span>
+    <span class="sep">/</span>
+    <span>2026-05-16</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260516.0722</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-05-16/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:22 · FRI</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · FRIDAY · MAY 16, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>05<span class="dot">.</span>16</h1>
+    <div class="strap">
+      <span>Next.js · Anthropic · npm「Mini · Karpathy「LLM</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 6 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 セキュリティ <span class="sep">/</span> STAR_KNIGHT12 (SECURITY RESEARCHER) / MODAT_MAGNIFY <span class="sep">/</span> NEWS
+      </div>
+      <h2>Next.js 過去最悪の脆弱性 CVE-2026-44578 — WebSocket Upgrade SSRF (CVSS 8.6)</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-16/topic_1.png" data-alt="Next.js 過去最悪の脆弱性 CVE-2026-44578 — WebSocket Upgrade SSRF (CVSS 8.6)" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-16/topic_1.png" alt="Next.js 過去最悪の脆弱性 CVE-2026-44578 — WebSocket Upgrade SSRF (CVSS 8.6)" />
+      </div>
+      <p class="lede">
+        Next.js に CVSS 8.6 の SSRF 脆弱性 CVE-2026-44578 が判明。13.4.13+ / 14.x / 15.x / 16.0.0–16.2.4 が影響を受け、WebSocket Upgrade リクエストを介したサーバサイドリクエストフォージェリで、認証不要・単発リクエストで内部サービス / クラウド認証情報 / API キー / 管理パネルへのリクエストを攻撃者が強制可能。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">CVE-2026-44578、CVSS 8.6 (High)</li>
+        <li data-i="02">影響範囲: Next.js 13.4.13 以降の全 14/15 系、および 16.0.0–16.2.4</li>
+        <li data-i="03">攻撃手法: WebSocket Upgrade ヘッダ経由の SSRF</li>
+        <li data-i="04">認証不要、1 つの細工リクエストで成立</li>
+        <li data-i="05">クラウド資格情報・内部 API・管理画面の流出リスク</li>
+        <li data-i="06">Vercel ホストは影響軽微、セルフホスト (Cloud Run / ECS / EC2) は即時対応案件</li>
+      </ul>
+      <div class="pull">
+        VBC 受講生・Tekion 系プロダクトで Next.js セルフホストしているサービスは今すぐ 16.2.5 以上にアップグレードすべき緊急案件。AI 駆動開発で量産している Next.js アプリ全数の棚卸し機会。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/Star_Knight12/status/2054960952559501621">@Star_Knight12</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-14</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/Star_Knight12/status/2054960952559501621">x.com/Star_Knight12/…</a></dd>
+        <dd><a href="https://x.com/modat_magnify/status/2054848379339837850">x.com/modat_magnify/status/2054848379339…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · ANTHROPIC / CLAUDE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 プラットフォーム動向 <span class="sep">/</span> ANTHROPIC / @CLAUDEDEVS OFFICIAL + WESWINDER / GYAKUSE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic、Claude Code SDK のプログラム的利用を「専用月次クレジット」制度に分離 (6/15 開始)</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-16/topic_2.png" data-alt="Anthropic、Claude Code SDK のプログラム的利用を「専用月次クレジット」制度に分離 (6/15 開始)" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-16/topic_2.png" alt="Anthropic、Claude Code SDK のプログラム的利用を「専用月次クレジット」制度に分離 (6/15 開始)" />
+      </div>
+      <p class="lede">
+        6/15 から Claude 有料プラン全種で `claude -p` / Claude Agent SDK / Claude Code GitHub Actions / Agent SDK 製サードパーティ製品 (Conductor / Ryoko / OpenClaw 等) のプログラム的利用が専用月次クレジット制に分離。同時にサブスク本体での Agent SDK 利用は規約上完全に閉鎖。海外開発者 weswinder は「以前は通常レートを共有して 5-10 倍のディスカウントだったので事実上の値上げ」と指摘。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">開始日: 2026-06-15</li>
+        <li data-i="02">対象: Claude Agent SDK / `claude -p` / Claude Code GitHub Actions / Agent SDK 製アプリ</li>
+        <li data-i="03">クレジット額: Pro $20 / Max 5x $100 / Max 20x $200 / Team Standard $20/seat / Team Premium $100/seat</li>
+        <li data-i="04">ロールオーバーなし、毎月リセット</li>
+        <li data-i="05">1 セッションで $20 を簡単に超える Opus 利用は事実上値上げ</li>
+        <li data-i="06">サブスクとプログラム利用の境界が明確化、規約上 SDK 利用がサブスク枠から完全分離</li>
+      </ul>
+      <div class="pull">
+        Ryoko / OpenClaw 系 OSS エージェント基盤を Claude サブスクで回している層は事実上の値上げ。Bootcamp 受講生で `claude -p` を cron で回している人は 6/15 までに月間消費見積もりを取り、Pro→Max のアップグレードか API 課金移行を判断する必要あり。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2054610152817619388">@ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-13</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 プラットフォーム動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2054610152817619388">x.com/ClaudeDevs/…</a></dd>
+        <dd><a href="https://x.com/weswinder/status/2054625972746424669">x.com/weswinder/status/20546259727464246…</a></dd>
+        <dd><a href="https://x.com/gyakuse/status/2054636358141092239">x.com/gyakuse/status/2054636358141092239…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · INTERNATIONAL CYBE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 セキュリティ <span class="sep">/</span> INTERNATIONAL CYBER DIGEST / RYAN CARSON / 阿绎 AYI <span class="sep">/</span> NEWS
+      </div>
+      <h2>npm「Mini Shai-Hulud」攻撃が AI 開発者ツール標的に拡大 — TanStack 42 公式パッケージ感染、デッドマンスイッチ実装</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-16/topic_3.png" data-alt="npm「Mini Shai-Hulud」攻撃が AI 開発者ツール標的に拡大 — TanStack 42 公式パッケージ感染、デッドマンスイッチ実装" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-16/topic_3.png" alt="npm「Mini Shai-Hulud」攻撃が AI 開発者ツール標的に拡大 — TanStack 42 公式パッケージ感染、デッドマンスイッチ実装" />
+      </div>
+      <p class="lede">
+        npm 史上最大規模の供給チェーン攻撃「Mini Shai-Hulud」が AI 開発者ツール (Claude Code / VS Code 拡張) を標的に拡大。TanStack の 42 公式パッケージが感染、84 バージョンが正規署名付きで公開された。攻撃経路は通常の PR 経由で GitHub Actions Cache を毒入れし、CI 上で SLSA 署名済みのまま改ざんパッケージを発行。新キャンペーンには「ペイロード除去操作で逆に拡散するデッドマンスイッチ」が実装されており、削除しようとすると感染が広がる構造。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">TanStack の公式 42 パッケージ・84 バージョンが SLSA 署名済みで感染</li>
+        <li data-i="02">攻撃経路: 通常 PR → GitHub Actions Cache 毒入れ → CI から自動発行</li>
+        <li data-i="03">標的: Claude Code / VS Code 拡張など AI 開発者ツール</li>
+        <li data-i="04">デッドマンスイッチ: ペイロード除去で逆に拡散する逆転構造</li>
+        <li data-i="05">Ryan Carson (@ryancarson): 「全パッケージ npm install を一旦停止せよ」と緊急呼びかけ</li>
+        <li data-i="06">BOOTOSHI 氏が Codex / Claude Code 用の防御プロンプトを公開</li>
+      </ul>
+      <div class="pull">
+        AI 駆動開発で `npm install` を agent に任せている全員に影響。SLSA 署名済みでも信頼できないため、ロックファイル固定・古い lockfile 復元・サンドボックス実行が必須。Bootcamp 受講生・Tekion 全社員へ「今日は npm install を打つ前にバージョン確認」の周知が必要。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">3,087</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/IntCyberDigest/status/2054166749998661659">@IntCyberDigest</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-13</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/IntCyberDigest/status/2054166749998661659">x.com/IntCyberDigest/…</a></dd>
+        <dd><a href="https://x.com/IntCyberDigest/status/2053991878777798865">x.com/IntCyberDigest/status/205399187877…</a></dd>
+        <dd><a href="https://x.com/ryancarson/status/2054148717813473734">x.com/ryancarson/status/2054148717813473…</a></dd>
+        <dd><a href="https://x.com/AYi_AInotes/status/2054241814068191696">x.com/AYi_AInotes/status/205424181406819…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · ANDREJ KARPATHY / </span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📖 プロンプト技法 <span class="sep">/</span> ANDREJ KARPATHY / 阿绎 AYI (解説) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Karpathy「LLM の問いに『HTML で構造化して』を足すだけで体験激変」— 半年分のワークフローを覆す Tips</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-16/topic_4.png" data-alt="Karpathy「LLM の問いに『HTML で構造化して』を足すだけで体験激変」— 半年分のワークフローを覆す Tips" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-16/topic_4.png" alt="Karpathy「LLM の問いに『HTML で構造化して』を足すだけで体験激変」— 半年分のワークフローを覆す Tips" />
+      </div>
+      <p class="lede">
+        Andrej Karpathy が「LLM への問いの末尾に『structure the output as HTML』を足すだけで体験が劇的に変わる」と投稿。Markdown より HTML の方がリッチな構造化が可能で、Claude / GPT 系で同じ問いでもアウトプット品質が大幅向上する。阿绎 AYi (@AYi_AInotes) はこのツイートを受けて「過去半年分の AI ワークフローを全部覆された」と解説スレッドを投稿、モデル待ちより出力形式変更の方が ROI が高いと主張。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">末尾に「structure the output as HTML」を追加するだけ</li>
+        <li data-i="02">Markdown より HTML の方が表・カード・タブ等の表現力が高い</li>
+        <li data-i="03">Claude / GPT 系で品質差を体感できるレベル</li>
+        <li data-i="04">「より強いモデルを待つ」より「今のモデルで出力形式を変える」方が ROI 高い (AYi)</li>
+        <li data-i="05">Thariq (@trq212): 「HTML is the new markdown」と同期投稿</li>
+      </ul>
+      <div class="pull">
+        Bootcamp 受講生が普段書いているプロンプトに 1 行足すだけで成果物の質が上がる即効性 Tips。スライド・レポート・社内ドキュメントの自動生成で特に効く。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/karpathy/status/2054488432123456789">@karpathy</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-13</dd>
+        <dt>CATEGORY</dt>
+        <dd>📖 プロンプト技法</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/karpathy/status/2054488432123456789">x.com/karpathy/…</a></dd>
+        <dd><a href="https://x.com/AYi_AInotes/status/2054511234567890123">x.com/AYi_AInotes/status/205451123456789…</a></dd>
+        <dd><a href="https://x.com/trq212/status/2054497654321098765">x.com/trq212/status/2054497654321098765</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · CLAUDE CODE CHANGE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 ツール機能 <span class="sep">/</span> CLAUDE CODE CHANGELOG (@CLAUDECODELOG) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code 2.1.139 リリース — /goal コマンド追加など 50 変更 + 1 system prompt 変更</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-16/topic_5.png" data-alt="Claude Code 2.1.139 リリース — /goal コマンド追加など 50 変更 + 1 system prompt 変更" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-16/topic_5.png" alt="Claude Code 2.1.139 リリース — /goal コマンド追加など 50 変更 + 1 system prompt 変更" />
+      </div>
+      <p class="lede">
+        Claude Code 2.1.139 が公開。CLI に 50 の変更、システムプロンプトに 1 つの変更。目玉は前々日に正式紹介された `/goal` コマンドの正式リリースで、完了条件を指定すると Claude が条件達成まで止まらない「Ralph loop」を純正機能化。同時に push 通知 (長時間タスク完了時にスマホへ通知)・agent view (全セッションを一覧表示) も追加。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">/goal &lt;完了条件&gt; で Claude が条件達成までトランスクリプトを自分でチェック</li>
+        <li data-i="02">達成時は「Goal achieved」サマリーが返る</li>
+        <li data-i="03">push 通知: 長時間タスク完了時にスマホへ Push (@ClaudeDevs 別ポスト)</li>
+        <li data-i="04">agent view: 全セッションを 1 画面に並べて見られる新 UI</li>
+        <li data-i="05">Cline CLI 2.0 (ターミナル AI agent) の存在感台頭と並行リリース</li>
+      </ul>
+      <div class="pull">
+        Topic 2 の SDK クレジット制度と組み合わせると、「夜間ジョブを /goal + /schedule で完走させて、消費は専用クレジットから引かれる」というクリーンな運用モデルが描ける。Ryoko の cron 設計を再検討する好機。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeCodeLog/status/2054501234567890123">@ClaudeCodeLog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-13</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 ツール機能</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeCodeLog/status/2054501234567890123">x.com/ClaudeCodeLog/…</a></dd>
+        <dd><a href="https://x.com/claudeai/status/2054321456789012345">x.com/claudeai/status/205432145678901234…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · ANTHROPIC / CLAUDE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📖 開発 TIPS <span class="sep">/</span> ANTHROPIC / @CLAUDEDEVS OFFICIAL <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude API プロンプトキャッシュ「事前ウォーム」Tips — TTFT を大幅短縮</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-16/topic_6.png" data-alt="Claude API プロンプトキャッシュ「事前ウォーム」Tips — TTFT を大幅短縮" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-16/topic_6.png" alt="Claude API プロンプトキャッシュ「事前ウォーム」Tips — TTFT を大幅短縮" />
+      </div>
+      <p class="lede">
+        Anthropic 公式 ClaudeDevs が長文プロンプトの TTFT (Time To First Token) を削減するキャッシュ事前ウォーム手法を紹介。先に system プロンプトのみ送信して Claude にキャッシュ書き込みさせ (出力はスキップ)、実際のユーザリクエストを送る時にキャッシュヒットさせることで TTFT が大幅短縮できる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">手法: system プロンプト先送り → user プロンプト後追い</li>
+        <li data-i="02">初回呼び出しは出力スキップ、キャッシュ書き込みのみ</li>
+        <li data-i="03">2 回目以降は warm cache でレイテンシ短縮</li>
+        <li data-i="04">5K+ tokens の長尺 system プロンプトで効果大</li>
+        <li data-i="05">実装は API 呼び出しを 2 段階に分けるだけで完了</li>
+      </ul>
+      <div class="pull">
+        Ryoko / 自前 Agent SDK で長文 IDENTITY.md / SOUL.md を毎回読ませている設計に直接効く最適化。Bootcamp 受講生が作る AI チャットアプリでも、UX の体感速度に直結する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">3,606</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2055069548672631218">@ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-14</dd>
+        <dt>CATEGORY</dt>
+        <dd>📖 開発 Tips</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2055069548672631218">x.com/ClaudeDevs/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · NOTIONDEVS OFFICIA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 ツール機能 <span class="sep">/</span> NOTIONDEVS OFFICIAL <span class="sep">/</span> NEWS
+      </div>
+      <h2>Notion 公式 CLI `ntn` リリース — Notion API がターミナルから操作可能に、AI エージェント前提設計</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-16/topic_7.png" data-alt="Notion 公式 CLI `ntn` リリース — Notion API がターミナルから操作可能に、AI エージェント前提設計" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-16/topic_7.png" alt="Notion 公式 CLI `ntn` リリース — Notion API がターミナルから操作可能に、AI エージェント前提設計" />
+      </div>
+      <p class="lede">
+        Notion 公式が `ntn` という CLI ツールをリリース。Notion API 全機能をターミナルから呼べる上、Notion Workers (Notion 上のサーバレス機能) の構築・デプロイも CLI 完結。人間と AI コーディングエージェントの両方を想定して設計されており、Claude Code / Cursor / Codex から `ntn` を叩いて Notion 操作を自動化できる。インストールは `curl -fsSL ntn.so/install | sh` の 1 行。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Notion API 全機能を CLI で操作可能</li>
+        <li data-i="02">Notion Workers (サーバレス) の開発・デプロイも対応</li>
+        <li data-i="03">AI コーディングエージェント (Claude Code / Cursor / Codex) からの呼び出しを明示的に想定</li>
+        <li data-i="04">インストール: `curl -fsSL ntn.so/install | sh` の 1 行</li>
+        <li data-i="05">MCP サーバ経由よりも軽量に統合できるポジショニング</li>
+      </ul>
+      <div class="pull">
+        VBC 受講生で「Notion DB を Claude Code から操作したい」「議事録を Notion に自動投稿したい」というニーズに即対応。社内ナレッジ管理を Notion + Claude Code で完結させる構成が現実的に。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/NotionDevs/status/2054594852818764178">@NotionDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-13</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 ツール機能</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/NotionDevs/status/2054594852818764178">x.com/NotionDevs/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/Star_Knight12/status/2054960952559501621">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-05-14/">
+      ← 前日 · 2026-05-14
+      <span class="big">Anthropic、Claude Code 週次上限 50% 増 + 6/15 から SDK 専用月次クレジットを新設</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-05-16/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260516.0722</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

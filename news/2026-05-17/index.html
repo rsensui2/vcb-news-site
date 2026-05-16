@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-05-17 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-05-17 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0517</span>
+    <span class="sep">/</span>
+    <span>2026-05-17</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260517.0732</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-05-17/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:32 · SAT</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SATURDAY · MAY 17, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>05<span class="dot">.</span>17</h1>
+    <div class="strap">
+      <span>xAI · OpenAI · Gemini · Hermes</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 業界動向 <span class="sep">/</span> @XAI (OFFICIAL) / @VAIBHAVSISINTY / @MARK_K <span class="sep">/</span> NEWS
+      </div>
+      <h2>xAI Grok Build — 4社目の本格 agentic CLI、SuperGrok Heavy ($300/月) で early beta 開始</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-17/topic_1.png" data-alt="xAI Grok Build — 4社目の本格 agentic CLI、SuperGrok Heavy ($300/月) で early beta 開始" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-17/topic_1.png" alt="xAI Grok Build — 4社目の本格 agentic CLI、SuperGrok Heavy ($300/月) で early beta 開始" />
+      </div>
+      <p class="lede">
+        xAI が 5/14 に「Grok Build」を SuperGrok Heavy ($300/月) 限定の early beta としてリリース。agentic CLI で、コーディング・アプリ構築・ワークフロー自動化を CLI から実行。並列サブエージェント、skills/plugins カスタマイズ、`/dream` という offline memory consolidation コマンドを備える。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">x.ai/cli からインストール、SuperGrok Heavy ($300/月) 必須</li>
+        <li data-i="02">並列サブエージェントが研究・構築・レビューを同時実行</li>
+        <li data-i="03">skills / plugins でワークフローをカスタマイズ可能</li>
+        <li data-i="04">`/dream` コマンド = オフラインのメモリ統合パス (Hermes Curator 的設計)</li>
+        <li data-i="05">公式発表は 10,084 likes、24h で 800万トークン消費したユーザー報告も</li>
+        <li data-i="06">Claude Code / Codex / Cursor に続く 4 社目の主要 agentic CLI</li>
+      </ul>
+      <div class="pull">
+        AI コーディングエージェント市場が「4 社並立」体制へ移行。価格帯 ($300) は Claude Max ($200) を上回るが、並列サブエージェント・Curator 型メモリ管理で差別化を狙う。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">10,084</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/xai/status/2054993285152989373">@xai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-14</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 業界動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/xai/status/2054993285152989373">x.com/xai/…</a></dd>
+        <dd><a href="https://x.ai/cli">x.ai/cli</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · OPENAIDEVS OFFICIA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 ツール・サービス <span class="sep">/</span> @OPENAIDEVS (OFFICIAL) <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI Codex 大型アップデート — Mobile + Hooks + Programmatic Tokens + 性能 10-50倍</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-17/topic_2.png" data-alt="OpenAI Codex 大型アップデート — Mobile + Hooks + Programmatic Tokens + 性能 10-50倍" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-17/topic_2.png" alt="OpenAI Codex 大型アップデート — Mobile + Hooks + Programmatic Tokens + 性能 10-50倍" />
+      </div>
+      <p class="lede">
+        Codex がこの 3 日で複数の大型機能を投入。ChatGPT モバイルアプリ内で Codex を継続できる Codex Mobile (2,964 likes)、Hooks (タスクのキーポイントで任意スクリプト実行)、Business/Enterprise 向け Programmatic Access Tokens、カスタマイズ可能なキーボードショートカット、大規模リポでの Git 操作 10-50 倍高速化など。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Codex Mobile: ChatGPT モバイル + Codex on macOS の組合せでフォン操作</li>
+        <li data-i="02">Hooks: validator / secret scanner / 内部ログ / repo・directory ごとのカスタム動作</li>
+        <li data-i="03">Programmatic Access Tokens: スコープ付きクレデンシャル (Business / Enterprise)</li>
+        <li data-i="04">カスタムショートカット: settings から個別キー割当て可</li>
+        <li data-i="05">性能: 大規模リポの Git 操作 10-50倍、スレッド切替再レンダ 75% 削減</li>
+        <li data-i="06">Claude Code Push Notifications (4/28) + Anthropic Remote Control と並ぶ「スマホ動線」標準化</li>
+      </ul>
+      <div class="pull">
+        Hooks は Anthropic settings.json hooks と同型でエコシステム収斂の兆し。「スマホでエージェントに ping される」体験が業界全体の標準 UX に。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,964</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2055016926213181608">@OpenAIDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-16</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 ツール・サービス</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2055016926213181608">x.com/OpenAIDevs/…</a></dd>
+        <dd><a href="https://x.com/OpenAIDevs/status/2055032115964870838">x.com/OpenAIDevs/status/2055032115964870…</a></dd>
+        <dd><a href="https://x.com/OpenAIDevs/status/2055717793841221796">x.com/OpenAIDevs/status/2055717793841221…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · TESTINGCATALOG / L</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 業界動向 <span class="sep">/</span> @TESTINGCATALOG / @LENTILS80 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Gemini Spark / Gemini 3.5 リーク — Google I/O 5/19 直前、Skills 思想が Google にも伝播</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-17/topic_3.png" data-alt="Gemini Spark / Gemini 3.5 リーク — Google I/O 5/19 直前、Skills 思想が Google にも伝播" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-17/topic_3.png" alt="Gemini Spark / Gemini 3.5 リーク — Google I/O 5/19 直前、Skills 思想が Google にも伝播" />
+      </div>
+      <p class="lede">
+        Google I/O 2026 (5/19) を 4 日後に控え、Gemini Spark および Gemini 3.5 (旧 3.2 からリネーム) のリークが相次ぐ。Gemini Spark は Agent + Chat モード、Skills 作成フローを内蔵。Gemini 3.5 は 「Cappuccino」 コードネームの強力チェックポイントが目撃されている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Gemini Spark: Agent mode / Chat mode、advanced tool use、Skills 作成 UI</li>
+        <li data-i="02">SKILL.md ファイルのインポートはコピペのみ (Anthropic Skills とは別系統)</li>
+        <li data-i="03">Browser / Computer Use の証拠は現時点なし</li>
+        <li data-i="04">Gemini 3.2 → 3.5 にリネーム、'Cappuccino' チェックポイント発見</li>
+        <li data-i="05">Google I/O 2026: 2026-05-19 開催</li>
+        <li data-i="06">Polymarket 予測市場は来週リリースを 88% で織り込み</li>
+      </ul>
+      <div class="pull">
+        Anthropic Skills の発想を Google も追随。Spark の Agent mode が agentic AI の OS 級基盤を狙う動きかどうかが I/O での焦点。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">428</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/testingcatalog/status/2055217411427549414">@testingcatalog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-15</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 業界動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/testingcatalog/status/2055217411427549414">x.com/testingcatalog/…</a></dd>
+        <dd><a href="https://x.com/Lentils80/status/2055097216163819771">x.com/Lentils80/status/20550972161638197…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · AKSHAY  AKSHAYPACH</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📖 体系的解説 <span class="sep">/</span> AKSHAY 🚀 (@AKSHAY_PACHAAR) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Hermes Agent マスタークラス — Nous Research OSS、GitHub 90k stars、三層メモリ + 自己進化 + GEPA</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-17/topic_4.png" data-alt="Hermes Agent マスタークラス — Nous Research OSS、GitHub 90k stars、三層メモリ + 自己進化 + GEPA" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-17/topic_4.png" alt="Hermes Agent マスタークラス — Nous Research OSS、GitHub 90k stars、三層メモリ + 自己進化 + GEPA" />
+      </div>
+      <p class="lede">
+        Nous Research の OSS Hermes Agent を全方位解説した X Article。2ヶ月で GitHub 90,000 stars。三層メモリ + 自己進化スキル + GEPA オフライン最適化を兼ね備える唯一の OSS との位置づけ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">三層メモリ: MEMORY.md (2,200 chars) + USER.md (1,375 chars) / SQLite + FTS / 外部プロバイダ 8 種</li>
+        <li data-i="02">自己進化スキル: `skill_manage` ツールで agent が SKILL.md を create/patch/edit/delete</li>
+        <li data-i="03">Curator: 7日 + 2h アイドルで起動、stale 30日 / archive 90日、bundled には触らない、auto-delete なし</li>
+        <li data-i="04">GEPA: ICLR 2026 Oral、実行トレース → 失敗分析 → 進化的探索 → PR 提案、$2-10/run</li>
+        <li data-i="05">Profiles: 完全分離インスタンス、Designer / Programmer / Researcher を同時運用</li>
+        <li data-i="06">OpenClaw 対比: 「Hermes はゲートウェイの周りに学習エージェント、OpenClaw はメッセージングゲートウェイの周りにエージェント」</li>
+      </ul>
+      <div class="pull">
+        Ryoko/OpenClaw の延長線上にあるエージェント基盤の OSS 競合。Curator や GEPA の発想は自分の運用にも応用可能。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">4,723</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/akshay_pachaar/status/2054564519280804028">@akshay_pachaar</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-13</dd>
+        <dt>CATEGORY</dt>
+        <dd>📖 体系的解説</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/akshay_pachaar/status/2054564519280804028">x.com/akshay_pachaar/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · AI EDGE AIEDGE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 技術TIPS <span class="sep">/</span> AI EDGE (@AIEDGE_) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>/goal 完全ガイド — Anthropic / OpenAI / Hermes 横断で Ralph loop が標準化</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-17/topic_5.png" data-alt="/goal 完全ガイド — Anthropic / OpenAI / Hermes 横断で Ralph loop が標準化" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-17/topic_5.png" alt="/goal 完全ガイド — Anthropic / OpenAI / Hermes 横断で Ralph loop が標準化" />
+      </div>
+      <p class="lede">
+        `/goal` スラッシュコマンドの完全ガイド。Anthropic、OpenAI、その他主要 AI ベンダーが同時期に `/goal` を投入したのは偶然ではなく、Ralph loop ベースの自走エージェント設計が業界標準として確立しつつあることを示す。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">構文: `/goal [do the work] until [measurable end state] without [constraints that must hold]`</li>
+        <li data-i="02">例: `/goal fix every failing test until npm test exits 0 without modifying any file outside the /auth directory.`</li>
+        <li data-i="03">Codex / Claude Code / Hermes Agent 全てで動作</li>
+        <li data-i="04">ループ判定は小型モデルが行うため安価</li>
+        <li data-i="05">同時に 1 個まで、`/plan` とペアで使うのが定番、`/pause` / `/goal clear` で制御</li>
+        <li data-i="06">Codex desktop / CLI、Claude Code CLI 全対応</li>
+      </ul>
+      <div class="pull">
+        VBC 受講生に Ralph loop を教えるための実用ガイドが揃った。サブスク中立、即明日から実践可能。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">964</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/aiedge_/status/2054569766418108797">@aiedge_</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-13</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 技術Tips</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/aiedge_/status/2054569766418108797">x.com/aiedge_/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · 0XFENE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 技術TIPS <span class="sep">/</span> ふぇね | 山中裕貴 (@0XFENE) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>育てる Claude Code から勝手に育つ Claude Code へ — リポジトリ汚染への新陳代謝 4 本柱</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-17/topic_6.png" data-alt="育てる Claude Code から勝手に育つ Claude Code へ — リポジトリ汚染への新陳代謝 4 本柱" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-17/topic_6.png" alt="育てる Claude Code から勝手に育つ Claude Code へ — リポジトリ汚染への新陳代謝 4 本柱" />
+      </div>
+      <p class="lede">
+        Claude Code を半年使い込んだ全員が直面する「リポジトリ汚染・処理速度低下」問題への処方箋。'育てる' から '勝手に育つ' への転換、4 本柱: 摂取 / 代謝 / 排泄 / そもそも汚れにくい体質。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">① 摂取: X 投稿 URL を渡すと自動で要約・分類・スキル追記候補・新スキル草案を作る取込パイプライン</li>
+        <li data-i="02">② 代謝 (Gotcha): 各スキル末尾に「過去にハマったケース」セクション、1 回フィードバックで永久に賢くなる</li>
+        <li data-i="03">② 代謝 (Dreams): 横断パターンを週次抽出して `context/dreams.md` に蓄積</li>
+        <li data-i="04">③ 排泄: 月 1 で Claude Code に 3 つの問い (未使用スキル / 古い context / 遅延原因)</li>
+        <li data-i="05">④ 体質: SSoT (Single Source of Truth) + フロー (work/) とストック (context/) の物理分離</li>
+        <li data-i="06">法人向け Claude Code 研修サービスも同時リリース</li>
+      </ul>
+      <div class="pull">
+        Vibe Coder Bootcamp 受講者層に直接刺さる運用設計論。Gotcha は新人教育の暗黙知形式化としても応用可。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">555</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/0xfene/status/2054141757047320835">@0xfene</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-12</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 技術Tips</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/0xfene/status/2054141757047320835">x.com/0xfene/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · ANTHROPICAI OFFICI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 業界動向 <span class="sep">/</span> @ANTHROPICAI (OFFICIAL) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic Gates Foundation $200M パートナーシップ — 社会課題セクター展開</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-17/topic_7.png" data-alt="Anthropic Gates Foundation $200M パートナーシップ — 社会課題セクター展開" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-17/topic_7.png" alt="Anthropic Gates Foundation $200M パートナーシップ — 社会課題セクター展開" />
+      </div>
+      <p class="lede">
+        Anthropic が 5/14、Gates Foundation と $200M 規模のパートナーシップを発表。Grant + Claude クレジット + 技術支援を、グローバルヘルス、ライフサイエンス、教育、農業、経済的モビリティの 5 領域に投入。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">合計 $200M (Grant + Claude credits + 技術支援)</li>
+        <li data-i="02">対象 5 領域: グローバルヘルス / ライフサイエンス / 教育 / 農業 / 経済的モビリティ</li>
+        <li data-i="03">OpenAI の Deployment Company 設立 (5/11) と対照的な配分戦略</li>
+        <li data-i="04">Claude Skills + Managed Agents を NPO セクターに展開する地ならし</li>
+      </ul>
+      <div class="pull">
+        Anthropic は社会課題セクター、OpenAI は企業導入と方向性が分岐。AI 業界の主導権争いが「技術 + 配分先」の組合せ競争へ。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,735</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/AnthropicAI/status/2054941901900611787">@AnthropicAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-14</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 業界動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/AnthropicAI/status/2054941901900611787">x.com/AnthropicAI/…</a></dd>
+        <dd><a href="https://www.anthropic.com/news/gates-foundation-partnership">www.anthropic.com/news/gates-foundation-…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/xai/status/2054993285152989373">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-05-16/">
+      ← 前日 · 2026-05-16
+      <span class="big">Next.js 過去最悪の脆弱性 CVE-2026-44578 — WebSocket Upgrade SSRF (CVSS 8.6)</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-05-17/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260517.0732</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

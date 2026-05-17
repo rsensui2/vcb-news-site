@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-05-18 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-05-18 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0518</span>
+    <span class="sep">/</span>
+    <span>2026-05-18</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260518.0722</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-05-18/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:22 · SUN</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SUNDAY · MAY 18, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>05<span class="dot">.</span>18</h1>
+    <div class="strap">
+      <span>Supabase · OpenAI · Next.js · Claude</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 6 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 ツール・サービス <span class="sep">/</span> @SUPABASE (OFFICIAL) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Supabase が Data API の自動公開を廃止 — 5/30 以降は明示 GRANT 必須</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-18/topic_1.png" data-alt="Supabase が Data API の自動公開を廃止 — 5/30 以降は明示 GRANT 必須" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-18/topic_1.png" alt="Supabase が Data API の自動公開を廃止 — 5/30 以降は明示 GRANT 必須" />
+      </div>
+      <p class="lede">
+        Supabase は 2026-05-30 以降に作成される新規プロジェクトで、public スキーマに追加された新テーブルを Data API へ自動公開しない方針へ転換する。各テーブル・各ロール (anon / authenticated 等) に対し dashboard または SQL で明示的に GRANT を付与する必要がある。公式ブログと GitHub Discussion #45329 に詳細。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対象は 5/30 以降に作成される新規プロジェクト、既存プロジェクトには影響なし</li>
+        <li data-i="02">anon / authenticated で別権限が前提のセキュリティモデルへ全面移行</li>
+        <li data-i="03">「declarative code (diff/grep可能な権限管理)」を公式方針として明示</li>
+        <li data-i="04">RLS が有効でも GRANT がなければ API でテーブルを見れない事故が起きうる</li>
+        <li data-i="05">GitHub Discussion #45329 が一次情報</li>
+      </ul>
+      <div class="pull">
+        Vibe Coder Bootcamp の Supabase テンプレ・教材は「テーブル作成 → GRANT → RLS」の順序を前提とした更新が必要。RLS のみの設計だと API 経由でアクセスできず受講生が詰まる原因になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">151</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/supabase/status/2056021013599580203">@supabase</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-17</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 ツール・サービス</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/supabase/status/2056021013599580203">x.com/supabase/…</a></dd>
+        <dd><a href="https://github.com/orgs/supabase/discussions/45329">github.com/orgs/supabase/discussions/453…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · OPENAIDEVS OFFICIA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 ツール・サービス <span class="sep">/</span> @OPENAIDEVS (OFFICIAL) <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI Codex UX 大改修 — ショートカット完全カスタム化 / Git 操作 10-50× / レビュー画面集約</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-18/topic_2.png" data-alt="OpenAI Codex UX 大改修 — ショートカット完全カスタム化 / Git 操作 10-50× / レビュー画面集約" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-18/topic_2.png" alt="OpenAI Codex UX 大改修 — ショートカット完全カスタム化 / Git 操作 10-50× / レビュー画面集約" />
+      </div>
+      <p class="lede">
+        OpenAI Codex がエンジニア向け UX をまとめて刷新。設定からショートカットを再割当て可、大規模リポでの Git 操作を 10〜50 倍高速化、スレッド切替再レンダを 75% 削減、Git アクション (commit/push/PR 作成・状態) をレビュー画面に集約、スレッドパネルから summary / Git context / sources を即参照可能。ローカルサーバ一覧は 120 秒ごとに自動更新へ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">キーボードショートカットを設定画面から完全カスタマイズ可</li>
+        <li data-i="02">大規模リポの Git 操作 10-50× 高速化、ストリーミング系で再レンダ 0 化したパスも</li>
+        <li data-i="03">スレッド切替時の再レンダを ~75% 削減</li>
+        <li data-i="04">Git アクション (commit/push/branch/PR 作成・状態) をレビュー画面に集約</li>
+        <li data-i="05">ローカルサーバ一覧の整理 (フィルタ・sort 記憶・120 秒ごと自動リフレッシュ)</li>
+      </ul>
+      <div class="pull">
+        「IDE 統合してアダプトしてくれる」フェーズへ Codex が踏み込んだ。Claude Code との差異は ChatGPT モバイル + macOS のクロスデバイス連動を強化している点。GUI と CLI の往復が前提のワークフローが現実的に。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,233</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2055717793841221796">@OpenAIDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-16</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 ツール・サービス</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2055717793841221796">x.com/OpenAIDevs/…</a></dd>
+        <dd><a href="https://x.com/OpenAIDevs/status/2055718005309575431">x.com/OpenAIDevs/status/2055718005309575…</a></dd>
+        <dd><a href="https://x.com/OpenAIDevs/status/2055717859058495596">x.com/OpenAIDevs/status/2055717859058495…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · STARKNIGHT12 PRASE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 セキュリティ <span class="sep">/</span> @STAR_KNIGHT12 (PRASENJIT, セキュリティ研究者) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Next.js 史上最悪の脆弱性 CVE-2026-44578 (CVSS 8.6) — 内部 SSRF、認証不要</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-18/topic_3.png" data-alt="Next.js 史上最悪の脆弱性 CVE-2026-44578 (CVSS 8.6) — 内部 SSRF、認証不要" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-18/topic_3.png" alt="Next.js 史上最悪の脆弱性 CVE-2026-44578 (CVSS 8.6) — 内部 SSRF、認証不要" />
+      </div>
+      <p class="lede">
+        Next.js に CVSS 8.6 の WebSocket SSRF 脆弱性 CVE-2026-44578 が見つかった。影響範囲は 13.4.13+ / 14.x / 15.x / 16.0.0–16.2.4。認証不要、特殊リクエスト 1 つで内部サービス・クラウド資格情報・API キー・管理パネルにアクセス可。約 79,000 インスタンスが現時点で攻撃可能と推計。Vercel ホスティング下のアプリは安全、self-hosted は影響あり。15.5.18 / 16.2.6 以上にアップグレードが必要。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">影響バージョン: 13.4.13+ / 14.x / 15.x / 16.0.0–16.2.4</li>
+        <li data-i="02">認証不要・単発リクエストで内部サービスへ SSRF</li>
+        <li data-i="03">クラウド資格情報 / API キー / 管理パネルへアクセス可能</li>
+        <li data-i="04">推計 79,000 self-hosted インスタンスが脆弱状態</li>
+        <li data-i="05">Vercel ホスティングは影響なし。self-hosted は緊急アップグレード必須</li>
+        <li data-i="06">修正版: 15.5.18 または 16.2.6 へ更新</li>
+      </ul>
+      <div class="pull">
+        VBC 受講生が作る Next.js アプリの大半は self-hosted の可能性があり、脆弱バージョンのまま晒すと即時侵害される深刻度。今朝のうちに使っている Next.js バージョンを確認 → アップグレードする運用フローを徹底すべき。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,506</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/Star_Knight12/status/2054960952559501621">@Star_Knight12</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-14</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/Star_Knight12/status/2054960952559501621">x.com/Star_Knight12/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · CLAUDEDEVS OFFICIA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 業界動向 <span class="sep">/</span> @CLAUDEDEVS (OFFICIAL) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Claude 有料プランに月次プログラム利用クレジット — 6/15 開始、Agent SDK / Code / GitHub Actions で利用可</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-18/topic_4.png" data-alt="Claude 有料プランに月次プログラム利用クレジット — 6/15 開始、Agent SDK / Code / GitHub Actions で利用可" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-18/topic_4.png" alt="Claude 有料プランに月次プログラム利用クレジット — 6/15 開始、Agent SDK / Code / GitHub Actions で利用可" />
+      </div>
+      <p class="lede">
+        Anthropic は 2026-06-15 から Claude の有料プランに対し、毎月一定の「プログラム利用専用クレジット」を付与する制度を開始する。Claude Agent SDK / `claude -p` / Claude Code GitHub Actions / サードパーティ連携など、プログラム経由の Claude 呼び出しに使えるクレジット。同時期に Claude Code サブスクは月 $200 相当のクレジット上限へ実質ダウングレード (@weswinder が拡散)。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">開始日: 2026-06-15</li>
+        <li data-i="02">対象: Pro / Max 等の有料プラン</li>
+        <li data-i="03">利用先: Claude Agent SDK, claude -p, Claude Code GitHub Actions, サードパーティ</li>
+        <li data-i="04">Claude Code サブスクは同時期に月 $200 クレジット上限化、従来比 5-10× の実質値上げに相当</li>
+        <li data-i="05">プログラム利用と対話利用を計量分離するモデルへ</li>
+      </ul>
+      <div class="pull">
+        Bootcamp 受講生で自動化・cron・GitHub Actions に Claude を組み込んでいる人は 6/15 から課金構造が変わる。実質値上げの影響を見越して、現在の使用量計測と、Codex / Hermes Agent への部分移行検討を今のうちに始める価値あり。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">12,380</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2054610152817619388">@ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-13</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 業界動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2054610152817619388">x.com/ClaudeDevs/…</a></dd>
+        <dd><a href="https://x.com/weswinder/status/2054625972746424669">x.com/weswinder/status/20546259727464246…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · NOTIONDEVS OFFICIA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 ツール・サービス <span class="sep">/</span> @NOTIONDEVS (OFFICIAL) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Notion 公式 CLI 「ntn」 リリース — ターミナルから Notion API 全機能、Workers 構築・デプロイまで</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-18/topic_5.png" data-alt="Notion 公式 CLI 「ntn」 リリース — ターミナルから Notion API 全機能、Workers 構築・デプロイまで" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-18/topic_5.png" alt="Notion 公式 CLI 「ntn」 リリース — ターミナルから Notion API 全機能、Workers 構築・デプロイまで" />
+      </div>
+      <p class="lede">
+        Notion が公式 CLI `ntn` をリリース。ターミナルから Notion API の全機能を呼び出せるだけでなく、Notion Workers の構築・デプロイまでカバー。AI コーディングエージェント (Claude Code / Codex / Cursor 等) から直接叩ける設計が強調されている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">インストール: `curl -fsSL https://www.notion.com/cli | bash`</li>
+        <li data-i="02">API 全エンドポイント呼び出し可</li>
+        <li data-i="03">Notion Workers のローカル開発・デプロイ対応</li>
+        <li data-i="04">AI コーディングエージェント連携を公式に想定した設計</li>
+        <li data-i="05">134 万閲覧 / 3,355 likes と注目度高</li>
+      </ul>
+      <div class="pull">
+        VBC で「Notion を SaaS の DB 代わりに使う」受講生は多い。`ntn` を Claude Code / Codex の sub-agent に呼ばせると、Notion をバックエンドにした PoC が CLI 1 本で動くようになる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">3,355</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/NotionDevs/status/2054594852818764178">@NotionDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-13</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 ツール・サービス</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/NotionDevs/status/2054594852818764178">x.com/NotionDevs/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · GROK XAI OFFICIAL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 業界動向 <span class="sep">/</span> @GROK (XAI OFFICIAL) + コミュニティ事例 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Hermes Agent (Nous Research) — Grok サブを OAuth 接続で API key 不要、OSS 自己改善エージェントとして台頭</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-18/topic_6.png" data-alt="Hermes Agent (Nous Research) — Grok サブを OAuth 接続で API key 不要、OSS 自己改善エージェントとして台頭" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-18/topic_6.png" alt="Hermes Agent (Nous Research) — Grok サブを OAuth 接続で API key 不要、OSS 自己改善エージェントとして台頭" />
+      </div>
+      <p class="lede">
+        Nous Research のオープンソース自己改善 AI エージェント「Hermes Agent」が、Grok サブスクリプションを OAuth 接続で API キーなしに利用できる構成を正式サポート。ローカル PC / VPS で常駐し、セッションを跨ぐ長期記憶を持つ。Slack / Discord / Telegram 等のチャネルに接続して常駐型のデジタル分身として動作可能。コミュニティでは Codex の課金から Hermes に切り替えた事例が増加中。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Grok アカウントを OAuth で接続 → API key 不要で Grok モデルを直接利用</li>
+        <li data-i="02">ローカル/VPS 常駐、セッション跨ぎの長期記憶</li>
+        <li data-i="03">Slack / Discord / Telegram 接続で常駐エージェント化</li>
+        <li data-i="04">OSS なのでカスタマイズ自由 (Skills, Curator memory)</li>
+        <li data-i="05">Codex / Claude Code / Cursor / Grok Build に次ぐ第 5 の選択肢</li>
+      </ul>
+      <div class="pull">
+        「既に持っているサブスクを再利用して OSS エージェントを動かす」モデルが現実的に成立した。Bootcamp の上級者向けには、API 課金を増やさずに常駐 AI を立てる選択肢としてリストに入れる価値あり。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/grok/status/2056136152462098846">@grok</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-17</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 業界動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/grok/status/2056136152462098846">x.com/grok/…</a></dd>
+        <dd><a href="https://x.com/daumenxyz/status/2056134507099492416">x.com/daumenxyz/status/20561345070994924…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · KARPATHY</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💡 プラクティス <span class="sep">/</span> @KARPATHY <span class="sep">/</span> NEWS
+      </div>
+      <h2>Karpathy の「LLM に出力構造を尋ねる」プロンプト手法 — モデル待ちせずに今日から効く</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-18/topic_7.png" data-alt="Karpathy の「LLM に出力構造を尋ねる」プロンプト手法 — モデル待ちせずに今日から効く" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-18/topic_7.png" alt="Karpathy の「LLM に出力構造を尋ねる」プロンプト手法 — モデル待ちせずに今日から効く" />
+      </div>
+      <p class="lede">
+        Andrej Karpathy が「クエリの末尾で LLM に『この回答の出力構造を JSON で示せ』『分岐シナリオを列挙してから答えよ』と頼むだけで品質が大きく上がる」と提案。AYi の中国語解説が拡散し、過去半年の AI ワークフロー設計を見直す議論を喚起した。Chain-of-Thought / Tree-of-Thoughts と相補的に動く軽量プラクティス。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">テクニック: 質問の末尾に 'structure your answer as ...' / 'list the possible branches' を付ける</li>
+        <li data-i="02">モデル自身に「思考の足場」を作らせる側にコストを支払うアプローチ</li>
+        <li data-i="03">Chain-of-Thought / Tree-of-Thoughts と相補的</li>
+        <li data-i="04">コンテキスト窓やモデル性能向上を待たずに即効性あり</li>
+        <li data-i="05">AYi の中国語解説が「過去半年の AI ワークフローを覆す」として拡散</li>
+      </ul>
+      <div class="pull">
+        Claude Code / Codex に投げる依頼テンプレを「構造を聞く → 構造に従って実装させる」の 2 段に分けるだけで、エージェント任せの暴走を大幅に減らせる。VBC のプロンプト集テンプレに反映する価値あり。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/karpathy/status/2055580929553162449">@karpathy</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-15</dd>
+        <dt>CATEGORY</dt>
+        <dd>💡 プラクティス</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/karpathy/status/2055580929553162449">x.com/karpathy/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/supabase/status/2056021013599580203">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-05-17/">
+      ← 前日 · 2026-05-17
+      <span class="big">xAI Grok Build — 4社目の本格 agentic CLI、SuperGrok Heavy ($300/月) で early beta 開始</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-05-18/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260518.0722</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

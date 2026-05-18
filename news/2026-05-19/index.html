@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-05-19 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-05-19 の Vibe Coder Bootcamp モーニングディスパッチ — 6本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0519</span>
+    <span class="sep">/</span>
+    <span>2026-05-19</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>06 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260519.0718</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-05-19/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:18 · MON</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · MONDAY · MAY 19, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>05<span class="dot">.</span>19</h1>
+    <div class="strap">
+      <span>npm · Next.js · Anthropic · OpenAI</span>
+      <span><span class="count">06</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        SECURITY <span class="sep">/</span> @INTCYBERDIGEST / @RYANCARSON / @AYI_AINOTES <span class="sep">/</span> NEWS
+      </div>
+      <h2>npm 史上最大級のサプライチェーン攻撃 &quot;Mini Shai-Hulud&quot; が TanStack を直撃</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-19/topic_1.png" data-alt="npm 史上最大級のサプライチェーン攻撃 &quot;Mini Shai-Hulud&quot; が TanStack を直撃" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-19/topic_1.png" alt="npm 史上最大級のサプライチェーン攻撃 &quot;Mini Shai-Hulud&quot; が TanStack を直撃" />
+      </div>
+      <p class="lede">
+        TanStack のメンテナアカウント乗っ取りを起点に、npm レジストリ全体で大規模なサプライチェーン攻撃 &quot;Mini Shai-Hulud&quot; が拡散している。普通の見た目の PR を装って依存に紛れ込み、postinstall から AWS / GitHub / 環境変数を窃取する。一定期間アクセスが途切れると公開リポへ機密をリークする dead-man's switch 型ペイロードが特徴。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">起点は著名な React 系 OSS TanStack のメンテナアカウント乗っ取り</li>
+        <li data-i="02">postinstall 経由で AWS / GitHub / 環境変数 / npm token を窃取</li>
+        <li data-i="03">dead-man's switch ペイロードで時限的に公開リポへ機密リーク</li>
+        <li data-i="04">Ryan Carson らが「いますぐ npm install を止めろ」と全業界に警告</li>
+        <li data-i="05">BOOTOSHI が Codex / Claude Code 向けの監査プロンプトを公開</li>
+      </ul>
+      <div class="pull">
+        VBC 受講生は毎日 Next.js + Supabase 構成で npm install を回している。今日からは lockfile 固定 + 依存最小化 + AI による postinstall 監査を運用に組み込む。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/IntCyberDigest/status/1859854316710993013">@IntCyberDigest</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-18</dd>
+        <dt>CATEGORY</dt>
+        <dd>security</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/IntCyberDigest/status/1859854316710993013">x.com/IntCyberDigest/…</a></dd>
+        <dd><a href="https://x.com/ryancarson/status/1859745829221904533">x.com/ryancarson/status/1859745829221904…</a></dd>
+        <dd><a href="https://x.com/AYi_AInotes/status/1859754113219842275">x.com/AYi_AInotes/status/185975411321984…</a></dd>
+        <dd><a href="https://x.com/KingBootoshi/status/1859806254175125643">x.com/KingBootoshi/status/18598062541751…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · MODATMAGNIFY / STA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        SECURITY <span class="sep">/</span> @MODAT_MAGNIFY / @STAR_KNIGHT12 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Next.js CVE-2026-44578 — WebSocket Upgrade SSRF (CVSS 8.6) で即パッチ必須</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-19/topic_2.png" data-alt="Next.js CVE-2026-44578 — WebSocket Upgrade SSRF (CVSS 8.6) で即パッチ必須" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-19/topic_2.png" alt="Next.js CVE-2026-44578 — WebSocket Upgrade SSRF (CVSS 8.6) で即パッチ必須" />
+      </div>
+      <p class="lede">
+        Next.js の WebSocket Upgrade ハンドラに SSRF 脆弱性が発見され、CVE-2026-44578 として CVSS 8.6 (High) が採番された。攻撃者は WebSocket リクエストを通じて内部ネットワーク資源へのアクセスを誘発できる。Next.js 13.x 以降が影響範囲で、Vercel デプロイのプロジェクトは即時パッチ適用が必要。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">CVE-2026-44578 / CVSS 8.6 (High) — Next.js 史上でも特に深刻な部類</li>
+        <li data-i="02">攻撃ベクトル: WebSocket Upgrade リクエスト経由の SSRF</li>
+        <li data-i="03">影響: Next.js 13.x 以降の WebSocket ハンドラを使う構成</li>
+        <li data-i="04">公式 release で修正版が配布済み、即時アップデート推奨</li>
+      </ul>
+      <div class="pull">
+        VBC で Next.js は事実上の標準。Vercel + Supabase 構成の VBC 卒業生プロジェクト全部が対象なので、今日中にバージョン固定 + パッチ適用を回す。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/modat_magnify/status/1859830148233171034">@modat_magnify</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-18</dd>
+        <dt>CATEGORY</dt>
+        <dd>security</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/modat_magnify/status/1859830148233171034">x.com/modat_magnify/…</a></dd>
+        <dd><a href="https://x.com/Star_Knight12/status/1859825106101989456">x.com/Star_Knight12/status/1859825106101…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · CLAUDEDEVS  / GYAK</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI_PLATFORM <span class="sep">/</span> @CLAUDEDEVS (公式) / @GYAKUSE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic、Claude 有料プランに「プログラム実行用クレジット」を 6/15 から付与へ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-19/topic_3.png" data-alt="Anthropic、Claude 有料プランに「プログラム実行用クレジット」を 6/15 から付与へ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-19/topic_3.png" alt="Anthropic、Claude 有料プランに「プログラム実行用クレジット」を 6/15 から付与へ" />
+      </div>
+      <p class="lede">
+        Anthropic は 2026-06-15 から、Claude の有料プラン (Pro / Max) に対して、`claude -p` や Claude Agent SDK 経由のプログラム実行用の月次専用クレジットを付与する仕様変更を発表。これまで境界が曖昧だった「サブスク = 対話型 / API = 別課金」の区分を明確化する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">開始日: 2026-06-15</li>
+        <li data-i="02">対象: Claude Pro / Max の `claude -p` および Claude Agent SDK 経由の利用</li>
+        <li data-i="03">プログラム実行用のクレジット枠が月次で別途付与される</li>
+        <li data-i="04">対話型 Claude Code の利用にはそのまま影響なし</li>
+        <li data-i="05">一部ユーザは「以前は無制限的に使えた枠が縮小」と認識し downgrade と表現</li>
+      </ul>
+      <div class="pull">
+        VBC 受講生で Claude Code を CI / 自動化に組み込んでいる人は、サブスク 1 本で全部賄うスタイルから API 課金との併用に再設計する必要が出てくる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/1859916872091627644">@ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-18</dd>
+        <dt>CATEGORY</dt>
+        <dd>ai_platform</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/1859916872091627644">x.com/ClaudeDevs/…</a></dd>
+        <dd><a href="https://x.com/gyakuse/status/1859918432309174441">x.com/gyakuse/status/1859918432309174441…</a></dd>
+        <dd><a href="https://x.com/weswinder/status/1859915036899610998">x.com/weswinder/status/18599150368996109…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · OPENAI / MLBEAR2 /</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI_MODEL <span class="sep">/</span> @OPENAI / @MLBEAR2 / @JXNLCO <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI が GPT-Realtime-2 と 70+ 言語対応の Realtime-Translate を同時発表</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-19/topic_4.png" data-alt="OpenAI が GPT-Realtime-2 と 70+ 言語対応の Realtime-Translate を同時発表" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-19/topic_4.png" alt="OpenAI が GPT-Realtime-2 と 70+ 言語対応の Realtime-Translate を同時発表" />
+      </div>
+      <p class="lede">
+        OpenAI は API 経由で利用可能な最新音声モデル GPT-Realtime-2 と、70+ 言語に対応するリアルタイム翻訳特化モデル GPT-Realtime-Translate を同時発表。低レイテンシ音声→音声翻訳が API レイヤーで実現可能になり、発表当日中に複数の個人開発者が実装デモを公開した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">GPT-Realtime-2: OpenAI 史上最も賢い voice モデル (API)</li>
+        <li data-i="02">GPT-Realtime-Translate: 70+ 言語対応のリアルタイム翻訳特化</li>
+        <li data-i="03">発表当日に Tauri / Web ベースの実装デモが複数登場</li>
+        <li data-i="04">CHOI 氏は Chormex (Chrome 拡張) にリアルタイム AI 翻訳を組み込み</li>
+        <li data-i="05">「翻訳コンニャク」が API で実装可能というレベル感</li>
+      </ul>
+      <div class="pull">
+        日本人エンジニアが英語ミーティングに同期参加する/グローバル受講生に同時通訳する、というユースケースが API レイヤーで現実的になった。VBC のグローバル展開や採用面接サポートに直結する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAI/status/1859895821244571786">@OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-18</dd>
+        <dt>CATEGORY</dt>
+        <dd>ai_model</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAI/status/1859895821244571786">x.com/OpenAI/…</a></dd>
+        <dd><a href="https://x.com/jxnlco/status/1859908443225047040">x.com/jxnlco/status/1859908443225047040</a></dd>
+        <dd><a href="https://x.com/swarmai_quantum/status/1859900812537851957">x.com/swarmai_quantum/status/18599008125…</a></dd>
+        <dd><a href="https://x.com/MLBear2/status/1859901932849197506">x.com/MLBear2/status/1859901932849197506…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · KARPATHY / AYIAINO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        PROMPTING <span class="sep">/</span> @KARPATHY / @AYI_AINOTES <span class="sep">/</span> NEWS
+      </div>
+      <h2>Karpathy「出力構造を先に聞く」プロンプト手法が AI ワークフロー再設計議論を呼ぶ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-19/topic_5.png" data-alt="Karpathy「出力構造を先に聞く」プロンプト手法が AI ワークフロー再設計議論を呼ぶ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-19/topic_5.png" alt="Karpathy「出力構造を先に聞く」プロンプト手法が AI ワークフロー再設計議論を呼ぶ" />
+      </div>
+      <p class="lede">
+        Andrej Karpathy が「クエリの末尾で『この回答の出力構造を最初に示して』と LLM に頼むだけで品質が大きく向上する」と提案。AYi が中文圏で『これは過去半年の AI ワークフローを根本から覆す』と長文解説して爆発拡散し、ワークフロー再設計の議論を喚起している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">手法: 質問末尾に &quot;structure your answer as ...&quot; / &quot;list the possible branches before answering&quot; を付ける</li>
+        <li data-i="02">モデルに思考の足場を作らせる側にコストを払うアプローチ</li>
+        <li data-i="03">Chain-of-Thought / Tree-of-Thoughts と相補的、コンテキスト窓を待たない</li>
+        <li data-i="04">中文圏で「強モデル待ち・長コンテキスト待ちは無駄だった」と議論が拡大</li>
+      </ul>
+      <div class="pull">
+        コンテキスト窓やモデル性能を待たずに今日から効く。VBC 受講生が Claude Code / Codex に投げる依頼テンプレを「構造を聞く → 構造に従って実装させる」の 2 段に分けるだけでエージェント任せの暴走が大幅に減る。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/karpathy/status/1859734258376196530">@karpathy</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-17</dd>
+        <dt>CATEGORY</dt>
+        <dd>prompting</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/karpathy/status/1859734258376196530">x.com/karpathy/…</a></dd>
+        <dd><a href="https://x.com/AYi_AInotes/status/1859808529354621077">x.com/AYi_AInotes/status/185980852935462…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · CURSORAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AGENTIC_DEV <span class="sep">/</span> @CURSOR_AI (公式) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cursor SDK 登場 — Cursor と同じランタイムで agent を作れる第 4 の SDK 勢力</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-19/topic_6.png" data-alt="Cursor SDK 登場 — Cursor と同じランタイムで agent を作れる第 4 の SDK 勢力" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-19/topic_6.png" alt="Cursor SDK 登場 — Cursor と同じランタイムで agent を作れる第 4 の SDK 勢力" />
+      </div>
+      <p class="lede">
+        Cursor は、自社 IDE と同じランタイムで AI エージェントを構築できる Cursor SDK を発表。これまで Cursor は IDE 単体プロダクトの位置づけだったが、SDK 化により他のアプリケーションに Cursor のエージェント体験を組み込める。Claude Agent SDK / OpenAI Codex / Gemini CLI に続く第 4 の agentic SDK 基盤。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Cursor SDK 公式発表 — Cursor と同じランタイムで動く</li>
+        <li data-i="02">Cursor の UX をプログラマブルに再利用可能</li>
+        <li data-i="03">Claude Agent SDK / Codex / Gemini CLI に並ぶ位置づけ</li>
+        <li data-i="04">VBC 上級者向けには「IDE 派と CLI 派の使い分け」がより現実的に</li>
+      </ul>
+      <div class="pull">
+        agentic CLI/SDK 競争が一段加速。VBC 受講生で IDE 派の人は Claude Code / Codex / Cursor を目的別に使い分ける運用が現実的になってきた。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/cursor_ai/status/1859895214681452833">@cursor_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-18</dd>
+        <dt>CATEGORY</dt>
+        <dd>agentic_dev</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/cursor_ai/status/1859895214681452833">x.com/cursor_ai/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/IntCyberDigest/status/1859854316710993013">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-05-18/">
+      ← 前日 · 2026-05-18
+      <span class="big">Supabase が Data API の自動公開を廃止 — 5/30 以降は明示 GRANT 必須</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-05-19/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260519.0718</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

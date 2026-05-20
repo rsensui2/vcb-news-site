@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-05-21 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-05-21 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0521</span>
+    <span class="sep">/</span>
+    <span>2026-05-21</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260521.0728</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-05-21/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:28 · WED</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · WEDNESDAY · MAY 21, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>05<span class="dot">.</span>21</h1>
+    <div class="strap">
+      <span>Andrej · Google · Gemini · OpenAI</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 6 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🏢 業界動向 <span class="sep">/</span> @KARPATHY / @CLAUDEDEVS (公式) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Andrej Karpathy が Anthropic に参画 — フロンティア LLM 人材争奪戦が過熱</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-21/topic_1.png" data-alt="Andrej Karpathy が Anthropic に参画 — フロンティア LLM 人材争奪戦が過熱" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-21/topic_1.png" alt="Andrej Karpathy が Anthropic に参画 — フロンティア LLM 人材争奪戦が過熱" />
+      </div>
+      <p class="lede">
+        OpenAI 共同創業者で Tesla の AI 部門も率いた Andrej Karpathy が Anthropic への参画を発表した。本人は「フロンティア LLM の今後数年は especially formative（特に形成期）になる」とし、R&amp;D に戻ることへの強い意欲を表明。Anthropic 公式は「Welcome to the team, Andrej!」と歓迎した。発表が Google I/O 当日に重なったタイミングも話題を呼んだ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Karpathy 本人がポストで Anthropic 参画を表明、IC（個人貢献者）としての参加と報じられる</li>
+        <li data-i="02">「次の数年はフロンティア LLM の形成期」「R&amp;D に戻りたい」と動機を説明</li>
+        <li data-i="03">教育への情熱は継続し、関連活動も並行予定</li>
+        <li data-i="04">発表は Google I/O 2026 開幕直前のタイミングで、各社の人材獲得競争の象徴として受け止められた</li>
+      </ul>
+      <div class="pull">
+        トップ研究者の所属はモデルの方向性と業界の勢力図に直結する。Claude を主力ツールに据える Vibe Coder にとって、Anthropic の R&amp;D 体制強化は今後のモデル品質への期待材料。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">143,772</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/karpathy/status/2056753169888334312">@karpathy</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>🏢 業界動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/karpathy/status/2056753169888334312">x.com/karpathy/…</a></dd>
+        <dd><a href="https://x.com/ClaudeDevs/status/2056753265346564259">x.com/ClaudeDevs/status/2056753265346564…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · GOOGLEAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🛠️ 新ツール・新モデル <span class="sep">/</span> @GOOGLEAI (公式) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Google I/O 2026 — Gemini 3.5 のインテリジェント検索と 24/7 エージェント Gemini Spark</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-21/topic_2.png" data-alt="Google I/O 2026 — Gemini 3.5 のインテリジェント検索と 24/7 エージェント Gemini Spark" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-21/topic_2.png" alt="Google I/O 2026 — Gemini 3.5 のインテリジェント検索と 24/7 エージェント Gemini Spark" />
+      </div>
+      <p class="lede">
+        Google I/O 2026 で Google は検索とエージェントの大型刷新を発表。最上位の Gemini 3.5 を組み込んだ「インテリジェント検索ボックス」を投入し、検索体験を会話的・能動的なものへ拡張。あわせて「Gemini Spark」を発表 — ユーザーの指示のもとで実際に行動を代行する 24 時間稼働のパーソナル AI エージェントで、Gemini アプリに統合される。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">インテリジェント検索ボックス: Gemini 3.5 を採用、検索 UX をエージェント的に再設計</li>
+        <li data-i="02">Gemini Spark: 「24/7 のパーソナル AI エージェント」、ユーザーの監督下で行動を代行</li>
+        <li data-i="03">Gemini アプリ全体のアップグレードの一環として提供</li>
+        <li data-i="04">メルカリ社員ハヤカワ五味氏は「Spark が Google Workspace（Slides/Sheets）に統合されれば、セキュリティ理由でエージェントツールを導入できない企業に刺さる」と現場目線で評価</li>
+      </ul>
+      <div class="pull">
+        検索という最大トラフィックの入口がエージェント化に踏み出した。AI エージェントを設計・提案する受講者にとって、Google 規模の「エージェント常駐 UX」は重要なベンチマーク。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">453</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/GoogleAI/status/2056845506601718271">@GoogleAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>🛠️ 新ツール・新モデル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/GoogleAI/status/2056845506601718271">x.com/GoogleAI/…</a></dd>
+        <dd><a href="https://x.com/GoogleAI/status/2056859455833473091">x.com/GoogleAI/status/205685945583347309…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · GOOGLEAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🛠️ 新ツール・新モデル <span class="sep">/</span> @GOOGLEAI (公式) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Gemini Omni Flash — 動画起点の「あらゆる入力→あらゆる出力」生成モデル</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-21/topic_3.png" data-alt="Gemini Omni Flash — 動画起点の「あらゆる入力→あらゆる出力」生成モデル" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-21/topic_3.png" alt="Gemini Omni Flash — 動画起点の「あらゆる入力→あらゆる出力」生成モデル" />
+      </div>
+      <p class="lede">
+        Google I/O で発表された Gemini Omni / Omni Flash は、「あらゆる入力からあらゆるものを生成する」ことを掲げた新モデル。まず動画生成を起点に展開する。GoogleAI は開発した DeepMind チームへの舞台裏インタビューも公開した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Gemini Omni: 任意の入力モダリティから任意の出力を生成するコンセプト、動画から着手</li>
+        <li data-i="02">Omni Flash は軽量・高速版の位置づけ</li>
+        <li data-i="03">DeepMind 開発チームの制作秘話インタビューを公開</li>
+        <li data-i="04">動画・画像生成系は「インフレ気味でお腹いっぱい感」というユーザー視点の声も</li>
+      </ul>
+      <div class="pull">
+        マルチモーダル生成の統合が進むと、スライド・動画・画像を別ツールで作る現状のワークフローが 1 モデルに集約されうる。制作系の受講者は早期にキャッチアップしておきたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,411</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/GoogleAI/status/2056816653770625406">@GoogleAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>🛠️ 新ツール・新モデル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/GoogleAI/status/2056816653770625406">x.com/GoogleAI/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · OPENAI  / SAMA / G</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🏢 業界動向 <span class="sep">/</span> @OPENAI (公式) / @SAMA / @GDB <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI が「Guaranteed Capacity」を発表 — 長期コミットで計算資源を確保する新オファリング</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-21/topic_4.png" data-alt="OpenAI が「Guaranteed Capacity」を発表 — 長期コミットで計算資源を確保する新オファリング" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-21/topic_4.png" alt="OpenAI が「Guaranteed Capacity」を発表 — 長期コミットで計算資源を確保する新オファリング" />
+      </div>
+      <p class="lede">
+        OpenAI は法人向けに「Guaranteed Capacity（保証付きキャパシティ）」を発表。1〜3 年の長期コミットと引き換えに、割引トークンと計算資源の確保確実性を顧客へ提供する。Sam Altman は「モデルが良くなるほど世界は当面 capacity-constrained（計算資源制約）になる」と述べ、需要逼迫を前提にした施策であることを示した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">顧客は 1〜3 年のコミットで「計算資源へのアクセス確実性」を確保できる</li>
+        <li data-i="02">見返りとして割引トークンを提供</li>
+        <li data-i="03">Altman「モデルが良くなるほど、世界は当面 capacity-constrained」</li>
+        <li data-i="04">OpenAI 側はインフラへの長期投資を背景にこの提供を可能にしたと説明</li>
+      </ul>
+      <div class="pull">
+        AI コストと供給の予見性は、AI を業務に組み込む企業の事業計画に直結する。大量利用を見込む受講者・事業者にとって「容量を買う」発想は今後の調達判断の参考になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,628</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAI/status/2056823271774101907">@OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>🏢 業界動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAI/status/2056823271774101907">x.com/OpenAI/…</a></dd>
+        <dd><a href="https://x.com/sama/status/2056827105401614656">x.com/sama/status/2056827105401614656</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · OPENAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 ニュース・動向 <span class="sep">/</span> @OPENAI (公式) <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI、AI 生成画像の出所表示を強化 — SynthID と C2PA Content Credentials を画像に付与</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-21/topic_5.png" data-alt="OpenAI、AI 生成画像の出所表示を強化 — SynthID と C2PA Content Credentials を画像に付与" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-21/topic_5.png" alt="OpenAI、AI 生成画像の出所表示を強化 — SynthID と C2PA Content Credentials を画像に付与" />
+      </div>
+      <p class="lede">
+        OpenAI は ChatGPT で生成される画像の「出所」を識別しやすくする仕組みを追加。従来の C2PA Content Credentials に加え、画像に SynthID（電子透かし）を埋め込み、その画像が OpenAI によって生成されたかを後から確認できるようにする。背景には ChatGPT で週あたり 15 億枚以上の画像が生成されているという規模がある。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">C2PA Content Credentials に加え SynthID（透かし）を画像へ付与</li>
+        <li data-i="02">生成画像が OpenAI 由来かを検証できる手段を提供</li>
+        <li data-i="03">ChatGPT での画像生成は週 15 億枚超という規模</li>
+        <li data-i="04">gdb も「画像が OpenAI 生成かを SynthID でチェックできる」と言及</li>
+      </ul>
+      <div class="pull">
+        生成画像の真正性・透明性は、制作物を納品・公開する場面でのリスク管理に直結する。スライドや素材を AI で量産する受講者は、出所表示の標準化動向を押さえておくべき。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">4,021</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAI/status/2056793648571011232">@OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 ニュース・動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAI/status/2056793648571011232">x.com/OpenAI/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · CURSORAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🛠️ 新ツール・新モデル <span class="sep">/</span> @CURSOR_AI (公式) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cursor 3.5 リリース — エージェントの Automations 登場、複数リポ横断とリポなし運用に対応</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-21/topic_6.png" data-alt="Cursor 3.5 リリース — エージェントの Automations 登場、複数リポ横断とリポなし運用に対応" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-21/topic_6.png" alt="Cursor 3.5 リリース — エージェントの Automations 登場、複数リポ横断とリポなし運用に対応" />
+      </div>
+      <p class="lede">
+        Cursor 3.5 がリリースされ、目玉は「Automations」。エージェントと同じワークスペースで自動化を作成・管理でき、Agents Window から扱える。1 つの Automation に複数リポジトリを紐付けてコードベース横断でタスクを実行・テスト・検証できるほか、リポジトリを一切付けない Automation（例: 未読スレッド/DM を優先度づけする毎日の Slack ダイジェスト）も作成可能。あわせて Cursor が Jira に統合され、作業項目への Cursor アサインや `@Cursor` メンションでクラウドエージェントを起動できる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Cursor 3.5 で Automations を Agents Window に追加、新規 Automation のエージェント実行は 7 日間無料</li>
+        <li data-i="02">1 つの Automation に複数リポを添付し、コードベース横断で実行・テスト・検証</li>
+        <li data-i="03">リポなし Automation も可能（毎日の Slack ダイジェスト等の非コードタスク）</li>
+        <li data-i="04">Cursor in Jira: 作業項目への Cursor アサイン / `@Cursor` メンションでクラウドエージェント起動（changelog 05-19-26）</li>
+      </ul>
+      <div class="pull">
+        コーディング以外の定常業務までエージェントの「Automation」に載せられるようになり、Vibe Coding の対象が開発タスクから業務オートメーション全般へ広がる。受講者の自動化テーマの幅が増す。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">754</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2057167359593603471">@cursor_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-20</dd>
+        <dt>CATEGORY</dt>
+        <dd>🛠️ 新ツール・新モデル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2057167359593603471">x.com/cursor_ai/…</a></dd>
+        <dd><a href="https://x.com/cursor_ai/status/2056803731367456993">x.com/cursor_ai/status/20568037313674569…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · CLAUDEDEVS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📖 体系的解説系 <span class="sep">/</span> @CLAUDEDEVS (公式) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Computer Use を本番投入する実践ガイド — クリック精度と thinking effort の最適化</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-21/topic_7.png" data-alt="Claude Computer Use を本番投入する実践ガイド — クリック精度と thinking effort の最適化" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-21/topic_7.png" alt="Claude Computer Use を本番投入する実践ガイド — クリック精度と thinking effort の最適化" />
+      </div>
+      <p class="lede">
+        Anthropic は Computer Use（Claude が実際の UI を操作するエージェント機能）を本番環境で安定稼働させるための新ブログを公開。クリック精度の高め方、タスクに応じた thinking effort の選び方など、プロダクション運用での信頼性向上の実践知をまとめた。あわせて Claude Managed Agents には、ライブセッションのツール/MCP サーバ/Vault ID を再起動なしで差し替えられる改善や、100k トークン超の MCP ツール出力を自動で Sandbox ファイルへ退避する機能も加わった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Computer Use を本番で信頼性高く動かすための公式ガイドを公開</li>
+        <li data-i="02">クリック精度の改善、thinking effort の選択がポイント</li>
+        <li data-i="03">Managed Agents: ライブセッションのツール/MCP/Vault を無停止で差し替え可能に</li>
+        <li data-i="04">100k トークン超の MCP ツール出力は自動で Sandbox ファイルへオフロード</li>
+      </ul>
+      <div class="pull">
+        ブラウザ・GUI 操作を自動化するエージェントは受講者の関心が高い領域。「動く PoC」から「本番で壊れない運用」へ橋渡しする実践ノウハウは即戦力になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,926</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2056835339193561170">@ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>📖 体系的解説系</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2056835339193561170">x.com/ClaudeDevs/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · GITHUB</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 セキュリティ <span class="sep">/</span> @GITHUB (公式) <span class="sep">/</span> NEWS
+      </div>
+      <h2>GitHub 内部リポジトリへの不正アクセス — 汚染された VS Code 拡張機能が侵入経路</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-21/topic_8.png" data-alt="GitHub 内部リポジトリへの不正アクセス — 汚染された VS Code 拡張機能が侵入経路" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-21/topic_8.png" alt="GitHub 内部リポジトリへの不正アクセス — 汚染された VS Code 拡張機能が侵入経路" />
+      </div>
+      <p class="lede">
+        GitHub が内部リポジトリへの不正アクセスインシデントの調査詳細を公開した。前日に従業員端末の侵害を検知・封じ込め。侵入経路は「汚染された VS Code 拡張機能（poisoned extension）」で、悪性バージョンを削除し端末を隔離、即座にインシデント対応を開始した。現時点の評価では流出は GitHub 内部リポジトリのみで、攻撃者が主張する約 3,800 リポジトリという数字とも方向性が一致するとしている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">侵入経路は汚染された VS Code 拡張機能を介した従業員端末の compromise</li>
+        <li data-i="02">流出は GitHub 内部リポジトリのみ、攻撃者は約 3,800 リポジトリ取得を主張</li>
+        <li data-i="03">クリティカルなシークレットは前日から夜間にかけて優先度順にローテーション済み</li>
+        <li data-i="04">ログ分析・ローテーション検証・追跡活動の監視を継続中、調査完了後に詳細レポートを公開予定</li>
+      </ul>
+      <div class="pull">
+        エディタ拡張機能がサプライチェーン攻撃の入口になりうることを GitHub 自身のインシデントが示した。VS Code / Cursor / Claude Code など拡張を多用する受講者は、拡張のソース・更新元・権限を意識し、シークレットの即時ローテーション体制を備える必要がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">9,916</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/github/status/2056949168208552080">@github</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-20</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/github/status/2056949168208552080">x.com/github/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/karpathy/status/2056753169888334312">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-05-20/">
+      ← 前日 · 2026-05-20
+      <span class="big">Cursor Composer 2.5 リリース — SpaceXAI と提携、10倍効率へ</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-05-21/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260521.0728</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

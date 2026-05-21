@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Interactions API × Google ADK で10行Deep Research — Bookmarks · Vibe Coder Bootcamp</title>
-  <meta name="description" content="GoogleのInteractions APIは、従来のgenerateContent APIの代替として、マルチターン・ステートフルなエージェントワークフローに最適化されている。ADK（Agent Development Kit）と組み合わせることで、カスタムツールを持つDee" />
+  <title>Karpathy の &quot;LLM Wiki&quot; — RAG の限界を超える知識パラダイム — Bookmarks · Vibe Coder Bootcamp</title>
+  <meta name="description" content="RAG（Retrieval-Augmented Generation）には「何も学習しない」という根本的な欠陥がある、と指摘する解説記事。RAG はクエリのたびにチャンクを取得し回答を生成しては破棄するため、知識が蓄積されない。Andrej Karpathy が提唱する「LLM " />
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
@@ -285,11 +285,11 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №287</span>
+    <span class="tick">BOOKMARK №019</span>
     <span class="sep">/</span>
-    <span>2025-12-11</span>
+    <span>2026-05-09</span>
     <span class="sep">/</span>
-    <span>@na0fu3y</span>
+    <span>@Suryanshti777</span>
     <span class="sep">/</span>
     <span>346 ITEMS</span>
     <span class="sep">/</span>
@@ -317,51 +317,41 @@
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2025-12-11 <span>/</span> №287
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-05-09 <span>/</span> №019
     </div>
     <div class="cat-line">
-      <span>💻 技術Tips</span>
-      <span class="sep">·</span><span>na0 <span style="opacity:.7">@na0fu3y</span></span>
-      <span class="sep">·</span><span>2025-12-11</span>
+      <span>📖 技術解説 / アーキテクチャ</span>
+      <span class="sep">·</span><span>Suryansh Tiwari <span style="opacity:.7">@Suryanshti777</span></span>
+      <span class="sep">·</span><span>2026-05-09</span>
     </div>
-    <h1 class="title">Interactions API × Google ADK で10行Deep Research</h1>
+    <h1 class="title">Karpathy の &quot;LLM Wiki&quot; — RAG の限界を超える知識パラダイム</h1>
     <div class="strap">
-      <span><span class="label">№</span>287 / 346</span>
-      <span><span class="label">SRC</span><a href="https://x.com/na0fu3y/status/1999184173425393973" target="_blank" rel="noopener noreferrer">x.com/na0fu3y ↗</a></span>
-      <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/34_na0fu3y_interactions_api_adk.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
+      <span><span class="label">№</span>019 / 346</span>
+      <span><span class="label">SRC</span><a href="https://x.com/Suryanshti777/status/2053144730108829706" target="_blank" rel="noopener noreferrer">x.com/Suryanshti777 ↗</a></span>
+      <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/278_Suryanshti777_karpathy_llm_wiki_rag.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
   </div>
 </section>
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">287<span class="ord">BOOKMARK / 346</span></aside>
+    <aside class="numeral">019<span class="ord">BOOKMARK / 346</span></aside>
     <article class="prose">
-<p><strong>有益度:</strong> ⭐⭐⭐ HIGH</p><h2>概要</h2><blockquote>Interactions API×Google ADK を使えば、カスタムツール付き Deep Research を、たった 10 行のソースコードでつくれる</blockquote><h2>まとめ</h2><p>GoogleのInteractions APIは、従来のgenerateContent APIの代替として、マルチターン・ステートフルなエージェントワークフローに最適化されている。ADK（Agent Development Kit）と組み合わせることで、カスタムツールを持つDeep Researchエージェントを簡単に構築可能。</p><h2>記事詳細</h2><p><strong>Pattern 1: ADKエージェントの推論エンジンとして使用</strong></p><ul><li><code>use_interactions_api=True</code>を指定するだけ</li><li>統一されたモデル＆エージェントアクセス</li><li>サーバーサイドでの状態管理（previous_interaction_id）</li><li>バックグラウンド実行モード対応</li><li>Thoughtsの明示的なハンドリング</li></ul><p><strong>Pattern 2: A2Aプロトコルでリモートエージェントとして接続</strong></p><ul><li>InteractionsApiTransportでA2Aプロトコルにマッピング</li><li>既存のA2Aクライアントからそのまま接続可能</li><li>Gemini Deep Research Agentを通常のリモートエージェントとして扱える</li></ul><pre><code>from google.adk.agents.llm_agent import Agent
-from google.adk.models.google_llm import Gemini
-
-root_agent = Agent(
-    model=Gemini(
-        model=&quot;gemini-2.5-flash&quot;,
-        use_interactions_api=True,
-    ),
-    name=&quot;interactions_test_agent&quot;,
-    tools=[GoogleSearchTool(), get_current_weather],
-)</code></pre><h2>関連リンク</h2><ul><li><a href="https://developers.googleblog.com/building-agents-with-the-adk-and-the-new-interactions-api/" target="_blank" rel="noopener noreferrer">Google Developers Blog</a></li><li><a href="https://ai.google.dev/gemini-api/docs/interactions" target="_blank" rel="noopener noreferrer">Gemini Interactions API Docs</a></li><li><a href="https://github.com/google/adk-python/tree/main/contributing/samples/interactions_api" target="_blank" rel="noopener noreferrer">ADK Python Samples</a></li></ul>
+<p><strong>有益度:</strong> ⭐⭐⭐</p><h2>概要</h2><p>RAG（Retrieval-Augmented Generation）には「何も学習しない」という根本的な欠陥がある、と指摘する解説記事。RAG はクエリのたびにチャンクを取得し回答を生成しては破棄するため、知識が蓄積されない。Andrej Karpathy が提唱する「LLM Wiki」パターンは、モデルが知識を都度取得するのではなく「維持・更新」する設計を提案する。</p><h2>ハイライト</h2><ul><li>RAG はモデルが賢く見えても、毎クエリごとに理解をゼロから再構築する「ステートレス」な仕組み</li><li>NotebookLM、PDF チャット、エンタープライズ copilot もこの天井に当たっている</li><li>LLM Wiki は raw ソースとユーザーの間に「永続的な wiki レイヤー」を構築する</li><li>ドキュメントを再スキャンするのではなく、synthesis（統合された理解）を持続させる</li><li>知識が「複利的」に蓄積し、構造が進化していく</li></ul><h2>なぜ Vibe Coder Bootcamp に重要か</h2><p>「AI にドキュメントを読ませる」系プロダクトを作る受講者にとって、RAG をそのまま採用すると知識が蓄積しない設計上の限界に当たる。永続的な synthesis レイヤー（wiki 型）を持つことで、長期運用するナレッジベースが質的に変わる。Ryoko 自身の wiki ingest パイプラインもこの思想に近い。</p><h2>X Article 本文</h2><p>RAG has a fatal flaw nobody talks about: it never actually learns anything.</p><p>Every time you upload documents into an AI system, the same cycle happens: retrieve chunks, generate answer, discard synthesis, repeat forever.</p><p>The model may sound intelligent. But underneath, it's rebuilding understanding from scratch on every query. No persistent synthesis. No evolving structure. No compounding knowledge. Just temporary reasoning over raw context windows.</p><p>That's the ceiling of almost every &quot;chat with your docs&quot; product today. NotebookLM. PDF chat apps. Most enterprise AI copilots. Even ChatGPT uploads. Useful? Absolutely. But fundamentally stateless.</p><p>Andrej Karpathy's &quot;LLM Wiki&quot; pattern introduces a much more important idea: what if the model maintained knowledge instead of repeatedly retrieving it?</p><p>The distinction sounds small. It completely changes the architecture. Instead of treating documents as something to continuously re-scan, the system builds a persistent wiki layer between the user and the raw sources.</p><h2>日本語訳全文</h2><p>RAG には、誰も語らない致命的な欠陥がある——それは「決して何も学習しない」ことだ。</p><p>AI システムにドキュメントをアップロードするたびに、同じサイクルが繰り返される。チャンクを取得し、回答を生成し、統合（synthesis）を破棄し、それを永遠に繰り返す。</p><p>モデルは賢く聞こえるかもしれない。しかしその内側では、クエリのたびに理解をゼロから再構築しているだけだ。永続的な synthesis もなく、進化する構造もなく、複利的に積み上がる知識もない。あるのは raw なコンテキストウィンドウ上での一時的な推論だけだ。</p><p>それが、今日のほぼすべての「ドキュメントとチャットする」系プロダクトの天井である。NotebookLM、PDF チャットアプリ、大半のエンタープライズ AI copilot、ChatGPT のアップロード機能でさえ同じだ。役に立つか？　もちろん役に立つ。だが本質的にステートレスなのだ。</p><p>Andrej Karpathy の「LLM Wiki」パターンは、はるかに重要なアイデアを提示する——モデルが知識を繰り返し取得するのではなく、知識を「維持」したらどうなるか？</p><p>この違いは小さく聞こえる。だがアーキテクチャを完全に変える。ドキュメントを継続的に再スキャンする対象として扱うのではなく、システムはユーザーと raw ソースの間に「永続的な wiki レイヤー」を構築する。</p>
     </article>
     <aside class="side">
       <dl>
-        <dt>AUTHOR</dt><dd>na0</dd>
-        <dt>HANDLE</dt><dd>@na0fu3y</dd>
-        <dt>POSTED</dt><dd>2025-12-11</dd>
-        <dt>CATEGORY</dt><dd>💻 技術Tips</dd>
-        <dt>SOURCE</dt><dd><a href="https://x.com/na0fu3y/status/1999184173425393973" target="_blank" rel="noopener noreferrer">x.com/na0fu3y/status/1999184173425393973</a></dd>
-        <dt>MARKDOWN</dt><dd><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/34_na0fu3y_interactions_api_adk.md" target="_blank" rel="noopener noreferrer">GitHub で原文を見る</a></dd>
+        <dt>AUTHOR</dt><dd>Suryansh Tiwari</dd>
+        <dt>HANDLE</dt><dd>@Suryanshti777</dd>
+        <dt>POSTED</dt><dd>2026-05-09</dd>
+        <dt>CATEGORY</dt><dd>📖 技術解説 / アーキテクチャ</dd>
+        <dt>SOURCE</dt><dd><a href="https://x.com/Suryanshti777/status/2053144730108829706" target="_blank" rel="noopener noreferrer">x.com/Suryanshti777/status/205314473010882…</a></dd>
+        <dt>MARKDOWN</dt><dd><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/278_Suryanshti777_karpathy_llm_wiki_rag.md" target="_blank" rel="noopener noreferrer">GitHub で原文を見る</a></dd>
         
         <dt>ENGAGEMENT</dt>
         <dd>
           <div class="stats">
-            <div class="stat"><span class="num">412</span><span class="lab">LIKES</span></div><div class="stat"><span class="num">45</span><span class="lab">RTS</span></div><div class="stat"><span class="num">598</span><span class="lab">BMARKS</span></div><div class="stat"><span class="num">141K</span><span class="lab">VIEWS</span></div>
+            <div class="stat"><span class="num">289</span><span class="lab">LIKES</span></div><div class="stat"><span class="num">52</span><span class="lab">RTS</span></div><div class="stat"><span class="num">595</span><span class="lab">BMARKS</span></div><div class="stat"><span class="num">928K</span><span class="lab">VIEWS</span></div>
           </div>
         </dd>
       </dl>
@@ -371,13 +361,13 @@ root_agent = Agent(
 
 <section class="page-nav">
   <div class="container">
-    <a class="btn prev" href="./08_visual_expression_words.md.html">
+    <a class="btn prev" href="./2026-05-11_2053609542273909155.md.html">
       <span>← 新しいブックマーク</span>
-      <span class="big">ビジュアル表現を引き出す言葉</span>
+      <span class="big">ghumare64: Agentmemory — Hermes / Claude Code …</span>
     </a>
-    <a class="btn next" href="./35_yoshifujidesign_yaml_notebooklm.md.html">
+    <a class="btn next" href="./2026-05-09_2053116311132155938.md.html">
       <span>古いブックマーク →</span>
-      <span class="big">NotebookLMスライドをYAMLで完全制御する方法</span>
+      <span class="big">Mnimiy: Karpathy式 CLAUDE.md 4ルールを30コードベースで検証、1…</span>
     </a>
   </div>
 </section>
@@ -385,8 +375,8 @@ root_agent = Agent(
 <section class="actions">
   <div class="container">
     <a href="./">← 一覧へ戻る</a>
-    <a class="primary" href="https://x.com/na0fu3y/status/1999184173425393973" target="_blank" rel="noopener noreferrer">元ポストを X で見る</a>
-    <a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/34_na0fu3y_interactions_api_adk.md" target="_blank" rel="noopener noreferrer">GitHub で開く</a>
+    <a class="primary" href="https://x.com/Suryanshti777/status/2053144730108829706" target="_blank" rel="noopener noreferrer">元ポストを X で見る</a>
+    <a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/278_Suryanshti777_karpathy_llm_wiki_rag.md" target="_blank" rel="noopener noreferrer">GitHub で開く</a>
   </div>
 </section>
 

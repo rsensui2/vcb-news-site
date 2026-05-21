@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-05-22 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-05-22 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0522</span>
+    <span class="sep">/</span>
+    <span>2026-05-22</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260522.0732</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-05-22/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:32 · THU</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · THURSDAY · MAY 22, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>05<span class="dot">.</span>22</h1>
+    <div class="strap">
+      <span>OpenAI · OpenAI · Google「Gemini · Google</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 7 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔬 AI 研究 <span class="sep">/</span> OPENAI 公式 / @SAMA・@GDB・@HONGXUNWU <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI の汎用推論モデルがエルデシュ予想を反証 — AI が初の未解決数学問題を自力解決</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-22/topic_1.png" data-alt="OpenAI の汎用推論モデルがエルデシュ予想を反証 — AI が初の未解決数学問題を自力解決" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-22/topic_1.png" alt="OpenAI の汎用推論モデルがエルデシュ予想を反証 — AI が初の未解決数学問題を自力解決" />
+      </div>
+      <p class="lede">
+        OpenAI の内部推論モデル（数学特化ではない汎用モデル）が、離散幾何学で約 80 年未解決だったエルデシュの「平面単位距離予想」を反証する証明を生成した。1946 年に Paul Erdős が提起した「平面上に n 点を置いたとき距離ちょうど 1 のペアは最大いくつ作れるか」という問題で、長年最適とされた格子配置に反例を与えた。証明は代数的整数論の手法を幾何学に持ち込んだ独創的なもので、3 名の独立した数学者が正しさを検証済み。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">数学特化ではない汎用推論モデルが、文献の焼き直しではない新規の証明を自律生成</li>
+        <li data-i="02">対象は離散幾何学で最も有名な未解決問題（Erdős 単位距離問題、1946 年提起）</li>
+        <li data-i="03">証明 PDF が公開され、図版なしのテキストのみで構成</li>
+        <li data-i="04">3 名の独立した数学者が証明の正しさを確認</li>
+        <li data-i="05">Sam Altman は「AI が研究を加速する大きなマイルストーン」「複雑な気持ちもある」と言及</li>
+      </ul>
+      <div class="pull">
+        「AI は既存知識の組み合わせしかできない」という見方を覆し、未知の領域で検証可能な新規成果を出せることを示した。Vibe Coder にとっては AI 出力をどう検証・監査するか（レビューループ・専門家 audit）が次の競争力になるという示唆。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">7,878</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://openai.com/index/model-disproves-discrete-geometry-conjecture/">OpenAI 公式 / @sama・@gdb・@HongxunWu</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-20</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔬 AI 研究</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://openai.com/index/model-disproves-discrete-geometry-conjecture/">https://openai.com/index/model-disproves-discrete-geometry-conjecture/</a></dd>
+        <dd><a href="https://cdn.openai.com/pdf/74c24085-19b0-4534-9c90-465b8e29ad73/unit-distance-proof.pdf">cdn.openai.com/pdf/74c24085-19b0-4534-9c…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · OPENAIDEVS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 開発ツール <span class="sep">/</span> @OPENAIDEVS (公式) <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI Codex「Appshots」と画面ロック時のコンピュータ操作 — Mac の文脈をワンタッチでエージェントへ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-22/topic_2.png" data-alt="OpenAI Codex「Appshots」と画面ロック時のコンピュータ操作 — Mac の文脈をワンタッチでエージェントへ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-22/topic_2.png" alt="OpenAI Codex「Appshots」と画面ロック時のコンピュータ操作 — Mac の文脈をワンタッチでエージェントへ" />
+      </div>
+      <p class="lede">
+        「Codex Thursday」恒例アップデートで OpenAI Codex に複数機能が追加された。目玉は「Appshots」— Mac で Command キーを 2 回押すと作業中のアプリウィンドウを Codex スレッドに添付でき、スクリーンショットに加え画面外も含むウィンドウのテキストを取得する。あわせて Mac の画面がロック・オフ状態でもスマホから Codex が Mac 上のアプリを安全に操作できるようになった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Appshots: Mac で Command 2 回押しでアプリウィンドウを Codex に添付、画面外テキストも取得（全プランの Mac で利用可）</li>
+        <li data-i="02">画面ロック/オフ状態でもスマホから Codex が Mac のアプリを操作可能（locked use）</li>
+        <li data-i="03">in-app browser に高度な注釈モード追加 — 要素を直接調整しコメントをバッチ送信、即時プレビュー</li>
+        <li data-i="04">チーム間でカスタムプラグインを配布・再利用（Business 向け）</li>
+        <li data-i="05">Codex Analytics 強化（アクティブユーザー / クレジット / トークン / 実行数 / コード行数など）</li>
+      </ul>
+      <div class="pull">
+        「いま見ている画面の文脈を最小操作でエージェントに渡す」「外出先からも自宅 Mac を稼働させ続ける」という非同期エージェント運用が実用段階に。受講者が Codex を日常作業に組み込む際の摩擦が大きく下がる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">3,761</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2057530207976989179">@OpenAIDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-21</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2057530207976989179">x.com/OpenAIDevs/…</a></dd>
+        <dd><a href="https://developers.openai.com/codex/app/computer-use#locked-use">developers.openai.com/codex/app/computer…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · GOOGLEDEEPMIND</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🤖 新モデル <span class="sep">/</span> @GOOGLEDEEPMIND (公式) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Google「Gemini 3.5 Flash」が一般提供開始 — 軽量・高速・低コストの agentic 向けライン</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-22/topic_3.png" data-alt="Google「Gemini 3.5 Flash」が一般提供開始 — 軽量・高速・低コストの agentic 向けライン" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-22/topic_3.png" alt="Google「Gemini 3.5 Flash」が一般提供開始 — 軽量・高速・低コストの agentic 向けライン" />
+      </div>
+      <p class="lede">
+        Google I/O 2026 で予告されていた Gemini 3.5 系のうち、軽量・高速モデル「Gemini 3.5 Flash」が一般提供を開始した。低レイテンシ・低コストを重視した位置づけで、agentic ワークフローや高ボリューム用途に向く。一方で Ethan Mollick は軽量モデルゆえの精度限界（単語中の文字数カウントを誤る例など）も実例で指摘している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Gemini 3.5 Flash が GA（I/O 2026 で予告された 3.5 系の Flash ライン）</li>
+        <li data-i="02">軽量・高速・低コスト志向、agentic / 高ボリューム用途向け</li>
+        <li data-i="03">上位の Gemini 3.5 Pro は安全性テストのため公開を控えているとの観測</li>
+        <li data-i="04">Mollick は「文字数カウントを外す」など軽量モデルの精度限界も実例で指摘</li>
+      </ul>
+      <div class="pull">
+        高頻度・大量呼び出しの自動化やエージェントでは「速くて安い」モデルの選択がコストを大きく左右する。受講者がツール内のモデル選択をする際、用途に応じて Flash 系を使い分ける判断材料になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,337</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/GoogleDeepMind/status/2057191598421836253">@GoogleDeepMind</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-20</dd>
+        <dt>CATEGORY</dt>
+        <dd>🤖 新モデル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/GoogleDeepMind/status/2057191598421836253">x.com/GoogleDeepMind/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · GOOGLEDEEPMIND / G</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 開発ツール <span class="sep">/</span> @GOOGLEDEEPMIND / @GEMINICLI (公式) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Google Antigravity が拡張 — Gemini CLI を統合し「Science Skills」で研究ワークフローも対象に</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-22/topic_4.png" data-alt="Google Antigravity が拡張 — Gemini CLI を統合し「Science Skills」で研究ワークフローも対象に" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-22/topic_4.png" alt="Google Antigravity が拡張 — Gemini CLI を統合し「Science Skills」で研究ワークフローも対象に" />
+      </div>
+      <p class="lede">
+        Google が AI 開発基盤を「Antigravity」に一本化する動きを進めている。Gemini CLI ユーザーは Go で再構築された「Antigravity CLI」へ移行し、Antigravity は 2.0 / CLI / SDK / IDE の 4 surface に集約される。あわせて DeepMind は Antigravity 向けに「Science Skills」を発表 — UniProt や AlphaFold Database を含む 30 以上の生命科学データ源を統合し、研究ワークフローに専門ツールキットを与える。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Gemini CLI を含む取り組みを単一 harness「Google Antigravity」に統合（2.0 / CLI / SDK / IDE の 4 surface）</li>
+        <li data-i="02">Antigravity CLI は Go で再構築、ターミナルでマルチエージェント・オーケストレーションと非同期ワークフローに対応</li>
+        <li data-i="03">Antigravity 向け「Science Skills」を発表 — UniProt / AlphaFold Database など 30 以上の生命科学データ源を統合</li>
+        <li data-i="04">実証例: AK2 変異の希少遺伝性疾患の構造解析を通常より高速に実施し新知見を獲得</li>
+        <li data-i="05">Claude Code / Cursor の「Skills」同様、ドメイン特化の知識パックをエージェントに差し込む設計が各社に拡大</li>
+      </ul>
+      <div class="pull">
+        Anthropic（Claude Code）・OpenAI（Codex）に続き Google も CLI ベースのエージェント基盤に本腰を入れた。Gemini CLI 利用者は移行が必要。「Skill」でドメイン知識をエージェントに注入する発想は受講者の今後の汎用スキルになる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">4,334</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/GoogleDeepMind/status/2057256257153884161">@GoogleDeepMind</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-21</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/GoogleDeepMind/status/2057256257153884161">x.com/GoogleDeepMind/…</a></dd>
+        <dd><a href="https://x.com/geminicli/status/2056796084790304833">x.com/geminicli/status/20567960847903048…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · GDB OPENAI PRESIDE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🛠️ プロダクティビティ <span class="sep">/</span> @GDB (OPENAI PRESIDENT) <span class="sep">/</span> NEWS
+      </div>
+      <h2>ChatGPT for PowerPoint — ChatGPT から PowerPoint のスライドを直接生成・編集</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-22/topic_5.png" data-alt="ChatGPT for PowerPoint — ChatGPT から PowerPoint のスライドを直接生成・編集" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-22/topic_5.png" alt="ChatGPT for PowerPoint — ChatGPT から PowerPoint のスライドを直接生成・編集" />
+      </div>
+      <p class="lede">
+        OpenAI が ChatGPT と Microsoft PowerPoint を連携させる「ChatGPT for PowerPoint」アプリを公開した。PowerPoint 内で新規スライドを作成し、デッキ全体に対して質問し、PowerPoint 上で直接更新を反映できる。Greg Brockman は「もうひとつの非常に興味深いビルド」と紹介している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">ChatGPT アプリとして PowerPoint と連携（chatgpt.com/apps/powerpoint/）</li>
+        <li data-i="02">新規スライド作成、デッキ全体への横断的な質問、PowerPoint 上での直接編集が可能</li>
+        <li data-i="03">Office 連携系プロダクトの一環として OpenAI が拡充中</li>
+      </ul>
+      <div class="pull">
+        受講者の多くが資料作成に PowerPoint を使う中、AI がスライド生成から既存デッキの編集まで一貫して扱えると制作時間が大きく削減される。スライド系ワークフローを設計するうえでの選択肢が増える。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">345</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/gdb/status/2057556336003416553">@gdb</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-21</dd>
+        <dt>CATEGORY</dt>
+        <dd>🛠️ プロダクティビティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/gdb/status/2057556336003416553">x.com/gdb/…</a></dd>
+        <dd><a href="https://chatgpt.com/apps/powerpoint/">chatgpt.com/apps/powerpoint/</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · KINOPEEAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 開発ツール <span class="sep">/</span> @KINOPEE_AI <span class="sep">/</span> NEWS
+      </div>
+      <h2>Devin が Windows VM をサポート — Windows アプリの Computer Use・ビルド・QA まで一気通貫</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-22/topic_6.png" data-alt="Devin が Windows VM をサポート — Windows アプリの Computer Use・ビルド・QA まで一気通貫" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-22/topic_6.png" alt="Devin が Windows VM をサポート — Windows アプリの Computer Use・ビルド・QA まで一気通貫" />
+      </div>
+      <p class="lede">
+        非同期クラウドエージェント「Devin」が Windows VM のサポートを追加した。Devin セッションの設定で VM の OS を Ubuntu / Windows から選択でき、Windows 上での Computer Use にも対応する。Windows アプリのビルド・テスト・QA まで一気通貫で Devin に任せられる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Devin セッションで VM OS を Ubuntu / Windows から選択可能、デフォルト OS も設定可</li>
+        <li data-i="02">Windows 上での Computer Use に対応 — Windows ネイティブアプリの操作を自動化</li>
+        <li data-i="03">ビルド・テスト・QA をクラウドエージェントに一括委任できる</li>
+        <li data-i="04">現状 macOS VM は未対応（要望として挙がっている）</li>
+      </ul>
+      <div class="pull">
+        Windows 専用の業務アプリは AI エージェントの自動化対象から漏れがちだったが、Windows VM 対応でその空白が埋まる。業務システムが Windows 中心の受講者・企業にとってエージェント活用の幅が広がる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/kinopee_ai/status/2057501799582695658">@kinopee_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-21</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/kinopee_ai/status/2057501799582695658">x.com/kinopee_ai/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · CLAUDECODELOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 開発ツール <span class="sep">/</span> @CLAUDECODELOG <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Claude Code 2.1.146 リリース — /simplify が /code-review に、金融・法務特化モデルも追加</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-22/topic_7.png" data-alt="Claude Code 2.1.146 リリース — /simplify が /code-review に、金融・法務特化モデルも追加" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-22/topic_7.png" alt="Claude Code 2.1.146 リリース — /simplify が /code-review に、金融・法務特化モデルも追加" />
+      </div>
+      <p class="lede">
+        Claude Code CLI 2.1.146 がリリースされ、16 件の変更が入った。`/simplify` が `/code-review` にリネームされ、`/code-review high` のように effort level を指定してレビューの深さを調整できるようになった。Auto モードや backgrounded session の権限まわりの挙動も改善されている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">`/simplify` → `/code-review` にリネーム。`/code-review high` で effort level（レビュー粒度）を指定可能</li>
+        <li data-i="02">Auto モードが、ユーザーやスキルが依存する AskUserQuestion を保持し必須プロンプトを必ず表示</li>
+        <li data-i="03">Backgrounded session が「don't ask again」指定済みツールで再プロンプトしなくなり権限を保持</li>
+        <li data-i="04">新環境変数 CLAUDE_BG_SESSION_PERMISSION_RULES・CLAUDE_CODE_WORKFLOWS を追加</li>
+        <li data-i="05">新モデル claude-for-financial-services・claude-for-legal を追加</li>
+        <li data-i="06">Windows PowerShell ツールの不具合、MCP の resources/prompts list の不具合を修正</li>
+      </ul>
+      <div class="pull">
+        Claude Code を日常的に使う受講者は `/simplify` がもう存在しない点に注意（`/code-review` に置き換わった）。effort level 指定でレビュー粒度を制御でき、バックグラウンドセッションの権限保持で長時間タスクの体験が改善する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">541</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeCodeLog/status/2057281277884031016">@ClaudeCodeLog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-21</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeCodeLog/status/2057281277884031016">x.com/ClaudeCodeLog/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · KKAWSB / X ARTICLE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🏢 業界動向 <span class="sep">/</span> @KKAWSB / X ARTICLE <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Karpathy の Anthropic 加入を「分水嶺」と読む — 中文圏の深掘り解説</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-22/topic_8.png" data-alt="Karpathy の Anthropic 加入を「分水嶺」と読む — 中文圏の深掘り解説" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-22/topic_8.png" alt="Karpathy の Anthropic 加入を「分水嶺」と読む — 中文圏の深掘り解説" />
+      </div>
+      <p class="lede">
+        Andrej Karpathy の Anthropic 加入（5/19 発表）を「2026 年で最重要の分水嶺イベント」と位置づける中文圏の深掘り解説記事。Karpathy は Anthropic の pretraining チームに加わり、ミッションは「Claude を使って次世代 Claude の事前学習研究を加速する」= AI で AI を進化させること。記事はこれを①AI 競争の核心が算力量から「AI で賢く AI を訓練する力」へ移る、②顶级人材が Anthropic へ「用脚投票」している、③Anthropic の上昇局面、の 3 層で読み解く。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Karpathy は Anthropic の pretraining（事前学習）チームに加入、上司は元 OpenAI の Nick Joseph</li>
+        <li data-i="02">ミッションは「Claude で次世代 Claude を訓練する」— AI で AI を進化させる賭け</li>
+        <li data-i="03">Nick Joseph・Ross Nordeen・Chris Rohlf ら顶级人材の Anthropic 集中も同じ潮流</li>
+        <li data-i="04">4 月の Ramp AI Index でエンタープライズ採用率 34.4% と OpenAI（32.3%）を史上初逆転</li>
+        <li data-i="05">Karpathy 自身の「get back to R&amp;D」発言が、近年の自分の仕事を「もう研究ではなかった」と振り返る重い告白</li>
+      </ul>
+      <div class="pull">
+        「AI で AI を訓練する」パラダイムが検証されれば、Claude の能力が今後 12 か月で非線形に向上しうる。受講者が日常使う Claude / Claude Code の進化スピードを占う材料であり、AI ツール選定の新基準（背後の研究チームの質）を示唆する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">90</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/KKaWSB/status/2056956230833512725">@KKaWSB</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-20</dd>
+        <dt>CATEGORY</dt>
+        <dd>🏢 業界動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/KKaWSB/status/2056956230833512725">x.com/KKaWSB/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://openai.com/index/model-disproves-discrete-geometry-conjecture/">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-05-21/">
+      ← 前日 · 2026-05-21
+      <span class="big">Andrej Karpathy が Anthropic に参画 — フロンティア LLM 人材争奪戦が過熱</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-05-22/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260522.0732</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

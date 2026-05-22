@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-05-23 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-05-23 の Vibe Coder Bootcamp モーニングディスパッチ — 6本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0523</span>
+    <span class="sep">/</span>
+    <span>2026-05-23</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>06 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260523.0729</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-05-23/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:29 · FRI</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · FRIDAY · MAY 23, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>05<span class="dot">.</span>23</h1>
+    <div class="strap">
+      <span>Anthropic「Project · Anthropic · コンサル大手の · 初心者向け</span>
+      <span><span class="count">06</span>&nbsp;ITEMS · READ 5 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ <span class="sep">/</span> ANTHROPIC 公式リサーチ <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic「Project Glasswing」初回アップデート — AI が OSS の重大脆弱性を大量発見</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-23/topic_1.png" data-alt="Anthropic「Project Glasswing」初回アップデート — AI が OSS の重大脆弱性を大量発見" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-23/topic_1.png" alt="Anthropic「Project Glasswing」初回アップデート — AI が OSS の重大脆弱性を大量発見" />
+      </div>
+      <p class="lede">
+        Anthropic は AI による協調的サイバー防衛イニシアチブ「Project Glasswing」の初回アップデートを公開した。新しい脆弱性発見モデル「Mythos Preview」を投入し、稼働1か月で初期パートナー各社が高・重大深刻度の脆弱性を合計1万件超発見、複数社がバグ発見レートの10倍以上の向上を報告している。OSS 1,000超のスキャンでも推定6,202件の高・重大脆弱性を検出した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">初期パートナーが1か月で高・重大深刻度の脆弱性を合計10,000件超発見、発見レートは10倍以上に向上</li>
+        <li data-i="02">Cloudflare はクリティカルパス系で2,000件のバグ（うち高・重大400件）を発見、誤検知率は人間のテスターより良好と評価</li>
+        <li data-i="03">Mythos Preview で1,000超の OSS プロジェクトをスキャンし高・重大深刻度の脆弱性を推定6,202件検出（全深刻度では23,019件）</li>
+        <li data-i="04">暗号ライブラリ wolfSSL に偽証明書を偽造可能な脆弱性を発見し実証エクスプロイトを構築</li>
+        <li data-i="05">Mozilla は Firefox 150 のテストで271件の脆弱性を特定・修正、Claude Opus 4.6 を使った過去の検査より効果的とコメント</li>
+        <li data-i="06">今後は米国・同盟国政府を含む重要パートナーへ拡大、安全策強化後に Mythos クラスモデルの一般提供を予定</li>
+      </ul>
+      <div class="pull">
+        「AI がコードを書く」段階から「AI がコードの欠陥を人間より速く正確に見つける」段階への移行を示す事例。Vibe Coder にとっては、AI が生成したコードを AI で監査する防御ループ（セキュリティレビュー）が現実的な標準になりつつあることを意味する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.anthropic.com/research/glasswing-initial-update">Anthropic 公式リサーチ</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.anthropic.com/research/glasswing-initial-update">https://www.anthropic.com/research/glasswing-initial-update</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · ANTHROPIC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        業界動向 <span class="sep">/</span> ANTHROPIC 公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic が Stainless を買収 — エージェント接続性と公式 SDK 基盤を取り込み</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-23/topic_2.png" data-alt="Anthropic が Stainless を買収 — エージェント接続性と公式 SDK 基盤を取り込み" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-23/topic_2.png" alt="Anthropic が Stainless を買収 — エージェント接続性と公式 SDK 基盤を取り込み" />
+      </div>
+      <p class="lede">
+        Anthropic は SDK / MCP サーバ生成ツールを手がける Stainless（2022年創業）の買収を発表した。Stainless は Anthropic API の開始当初から全ての公式 SDK を生成しており、数百社の SDK・CLI・MCP サーバ生成を支援してきた。両チームはすでに Claude Platform で協業しており、買収でエージェントの接続性と開発者体験を強化する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Stainless は TypeScript / Python / Go / Java など多言語の SDK・CLI・MCP サーバ生成基盤を提供</li>
+        <li data-i="02">Anthropic の公式 SDK は API 開始当初から全て Stainless が生成してきた</li>
+        <li data-i="03">買収理由は「エージェントは接続できる先の有用性で決まる」(Head of Platform Engineering, Katelyn Lesse)</li>
+        <li data-i="04">Stainless は数百社の SDK・CLI・MCP サーバ生成を支援してきた実績を持つ</li>
+      </ul>
+      <div class="pull">
+        MCP を軸にしたエージェントのツール接続レイヤーを、Anthropic が自社プラットフォームに取り込む動き。受講者が Claude API / MCP で外部ツール連携を作る際の SDK 体験が今後さらに洗練される見込み。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.anthropic.com/news/anthropic-acquires-stainless">Anthropic 公式</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-18</dd>
+        <dt>CATEGORY</dt>
+        <dd>業界動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.anthropic.com/news/anthropic-acquires-stainless">https://www.anthropic.com/news/anthropic-acquires-stainless</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · ANTHROPIC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        業界動向 <span class="sep">/</span> ANTHROPIC 公式ニュース <span class="sep">/</span> NEWS
+      </div>
+      <h2>コンサル大手の Claude 全社導入が加速 — KPMG が27.6万人規模で統合</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-23/topic_3.png" data-alt="コンサル大手の Claude 全社導入が加速 — KPMG が27.6万人規模で統合" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-23/topic_3.png" alt="コンサル大手の Claude 全社導入が加速 — KPMG が27.6万人規模で統合" />
+      </div>
+      <p class="lede">
+        Anthropic は KPMG が Claude を中核業務と従業員276,000人超に横断統合する戦略的提携を発表した。直前の5月14日には PwC も Claude を技術構築・ディール実行・クライアント業務の再設計に展開する提携を拡大しており、コンサル大手による全社規模の Claude 導入が短期間で連続している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">KPMG が Claude を中核業務と従業員276,000人超に統合する戦略的提携（2026-05-19）</li>
+        <li data-i="02">PwC も Claude を技術構築・ディール実行・エンタープライズ機能の再設計に展開（2026-05-14）</li>
+        <li data-i="03">いずれも個別ツール導入ではなく全社規模の業務統合という位置づけ</li>
+      </ul>
+      <div class="pull">
+        「AI を試す」段階を終え、巨大プロフェッショナルファームが業務インフラとして Claude を全社採用するフェーズに入った。受講者が学ぶ Claude / Claude Code のスキルが、そのまま大企業の実務標準と地続きであることを示す。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.anthropic.com/news">Anthropic 公式ニュース</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>業界動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.anthropic.com/news">https://www.anthropic.com/news</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · TAIYAKIAI3</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発者ツール <span class="sep">/</span> たい焼き（@TAIYAKI_AI3） <span class="sep">/</span> NEWS
+      </div>
+      <h2>初心者向け — Claude Code と Codex は「性能比較」ではなく「作業場所」で選ぶ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-23/topic_4.png" data-alt="初心者向け — Claude Code と Codex は「性能比較」ではなく「作業場所」で選ぶ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-23/topic_4.png" alt="初心者向け — Claude Code と Codex は「性能比較」ではなく「作業場所」で選ぶ" />
+      </div>
+      <p class="lede">
+        「Claude Code と Codex のどちらが上か」で悩むより普段の作業環境で使い分けた方が早い、という初心者向けの実践ガイド連投。ChatGPT 中心なら Codex、Claude 中心なら Claude Code、エディタ中心なら Cursor / Copilot、と「自分の作業場所に合うか」で選ぶことを勧めている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">普段 ChatGPT を使う人 → Codex が入りやすい（手元ファイルの権限・範囲は毎回確認）</li>
+        <li data-i="02">普段 Claude を使う人 → Claude Code が自然（長い文脈→手順整理→ファイル修正の流れを作りやすい）</li>
+        <li data-i="03">非エンジニアの業務整理 → Claude Code（議事録・投稿候補・CSV・HTML・手順書など「ファイル整理」から入る）</li>
+        <li data-i="04">コードレビューはどちらも可。初心者は「問題点を日本語で説明して」「見る順番を教えて」を添える</li>
+        <li data-i="05">結論: 性能ランキングより「自分の作業場所に合うか」で選んだ方が続く</li>
+      </ul>
+      <div class="pull">
+        Vibe Coder Bootcamp 受講者が最初に詰まる「どのツールを使うべきか」に対する、性能論争に巻き込まれない実用的な判断軸。受講者へそのまま共有できる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/taiyaki_ai3/status/2057949468935549137">@taiyaki_ai3</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発者ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/taiyaki_ai3/status/2057949468935549137">x.com/taiyaki_ai3/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · GEMINI CLIGEMINICL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発者ツール <span class="sep">/</span> GEMINI CLI（@GEMINICLI） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Gemini CLI、Antigravity CLI へ統合 — Google が AI 開発基盤を一本化</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-23/topic_5.png" data-alt="Gemini CLI、Antigravity CLI へ統合 — Google が AI 開発基盤を一本化" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-23/topic_5.png" alt="Gemini CLI、Antigravity CLI へ統合 — Google が AI 開発基盤を一本化" />
+      </div>
+      <p class="lede">
+        Google が Gemini CLI ユーザーを Antigravity CLI へ移行すると発表した。harness とプラットフォームを「Google Antigravity」に一本化し、Antigravity 2.0 / CLI / SDK / IDE の4つの surface に集約する。Antigravity CLI は Go で再構築され、ターミナル上でのマルチエージェント・オーケストレーションと非同期ワークフローを提供する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Gemini CLI を含む取り組みを単一の harness「Google Antigravity」へ統合</li>
+        <li data-i="02">4 surface 構成: Antigravity 2.0、Antigravity CLI、Antigravity SDK、Antigravity IDE</li>
+        <li data-i="03">Antigravity CLI は速度重視で Go により再構築</li>
+        <li data-i="04">ターミナルから堅牢なマルチエージェント・オーケストレーションと非同期ワークフローが可能に</li>
+        <li data-i="05">Google AI Pro 等の Google one アカウント経由で Gemini CLI を使うユーザーは移行対象</li>
+      </ul>
+      <div class="pull">
+        Anthropic（Claude Code）・OpenAI（Codex）に続き Google も「ターミナル上のマルチエージェント基盤」に本腰を入れた形で、CLI ベースのエージェント開発が業界標準になりつつある。Gemini CLI 利用中の受講者は移行対応が必要。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">4,334</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/geminicli/status/2056796084790304833">@geminicli</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発者ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/geminicli/status/2056796084790304833">x.com/geminicli/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · CLAUDE CODE CHANGE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発者ツール <span class="sep">/</span> CLAUDE CODE CHANGELOG（@CLAUDECODELOG） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Claude Code 2.1.147 リリース — 決定論的マルチエージェント用「Workflow ツール」追加</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-23/topic_6.png" data-alt="Claude Code 2.1.147 リリース — 決定論的マルチエージェント用「Workflow ツール」追加" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-23/topic_6.png" alt="Claude Code 2.1.147 リリース — 決定論的マルチエージェント用「Workflow ツール」追加" />
+      </div>
+      <p class="lede">
+        Claude Code 2.1.147 がリリースされ、35件の CLI 変更が入った。目玉は決定論的なマルチエージェント・オーケストレーション用の「Workflow ツール」追加（デフォルト無効、CLAUDE_CODE_WORKFLOWS=1 で有効化）。/code-review が GitHub PR にインラインコメントを投稿できるようになり、REPL と Workflow のサンドボックスが堅牢化された。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Workflow ツール追加: 決定論的なマルチエージェント・オーケストレーション用。デフォルト無効、CLAUDE_CODE_WORKFLOWS=1 で有効化</li>
+        <li data-i="02">2.1.146 で予約された環境変数 CLAUDE_CODE_WORKFLOWS が機能として実装された</li>
+        <li data-i="03">/simplify から改名された /code-review が GitHub PR にインラインコメントを投稿可能に</li>
+        <li data-i="04">REPL と Workflow のサンドボックスを prototype-pollution・thenable エスケープに対し堅牢化</li>
+        <li data-i="05">--config オプション、環境変数 CLAUDE_BG_MEMORY_TOGGLED_OFF・CLAUDE_BRIDGE_REATTACH_OUTBOUND_ONLY を追加</li>
+      </ul>
+      <div class="pull">
+        Workflow ツールは subagent の自律的な分解に任せず、再現性のあるパイプラインとしてエージェント連携を組めるようにする。受講者がエージェントを「決定論的に動く仕組み」として設計する新しい選択肢になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">477</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeCodeLog/status/2057564555174113732">@ClaudeCodeLog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-21</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発者ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeCodeLog/status/2057564555174113732">x.com/ClaudeCodeLog/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://www.anthropic.com/research/glasswing-initial-update">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-05-22/">
+      ← 前日 · 2026-05-22
+      <span class="big">OpenAI の汎用推論モデルがエルデシュ予想を反証 — AI が初の未解決数学問題を自力解決</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-05-23/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260523.0729</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

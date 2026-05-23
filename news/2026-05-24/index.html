@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-05-24 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-05-24 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0524</span>
+    <span class="sep">/</span>
+    <span>2026-05-24</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260524.0722</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-05-24/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:22 · SAT</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SATURDAY · MAY 24, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>05<span class="dot">.</span>24</h1>
+    <div class="strap">
+      <span>OpenAI · Anthropic · Cursor · Gemini</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 5 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ツール更新 <span class="sep">/</span> @OPENAIDEVS / @OPENAI / @SAMA <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI Codex Thursday — ロック中Macもスマホから操作可能に</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-24/topic_1.png" data-alt="OpenAI Codex Thursday — ロック中Macもスマホから操作可能に" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-24/topic_1.png" alt="OpenAI Codex Thursday — ロック中Macもスマホから操作可能に" />
+      </div>
+      <p class="lede">
+        OpenAIが「Codex Thursday」と称してCodexアプリの大型アップデートを連発。最大の目玉は、Macが画面ロック・スクリーンオフのままでもスマホからCodex経由でMacのアプリを安全に操作できる機能。同時に作業中アプリのコンテキストを丸ごとCodexに渡せる「Appshots」、差分マーカー設定、法人向けanalytics拡充も発表された。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Mac unlock 不要のリモート computer use（developers.openai.com/codex/app/computer-use#locked-use）</li>
+        <li data-i="02">Appshots: Cmd-Cmd で画面スクショ＋オフスクリーン含むテキストをCodexに添付</li>
+        <li data-i="03">diff marker 設定（古典的 +/- 表示を選べる）</li>
+        <li data-i="04">法人向け analytics 拡充（active users / credits / users 内訳）</li>
+        <li data-i="05">sama「new codex ships today!」(3,411 likes) / gdb「Codexがあった頃のコーディングを思い出せない」(2,945 likes)</li>
+      </ul>
+      <div class="pull">
+        「ロック中Macリモート操作」は実質「いつでもどこからでもCodexが手元のMacを使える」状態を意味し、外出先からのスマホ運用が現実化する。Appshotsで「いま見てる画面そのもの」を渡せるのも開発体験を一段変える。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">8,156</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2057536706778378692">@OpenAIDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>ツール更新</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2057536706778378692">x.com/OpenAIDevs/…</a></dd>
+        <dd><a href="https://developers.openai.com/codex/app/computer-use">developers.openai.com/codex/app/computer…</a></dd>
+        <dd><a href="https://x.com/OpenAIDevs/status/2057530207976989179">x.com/OpenAIDevs/status/2057530207976989…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · ANTHROPICAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        新モデル発表 <span class="sep">/</span> @ANTHROPICAI <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic Project Glasswing — Claudeが重大脆弱性10,000件超を発見</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-24/topic_2.png" data-alt="Anthropic Project Glasswing — Claudeが重大脆弱性10,000件超を発見" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-24/topic_2.png" alt="Anthropic Project Glasswing — Claudeが重大脆弱性10,000件超を発見" />
+      </div>
+      <p class="lede">
+        Anthropicが2026-04に立ち上げたAIサイバーセキュリティ共同イニシアチブ「Project Glasswing」が、開始からわずか1ヶ月で重要ソフトウェアからhigh/critical severityの脆弱性を10,000件以上発見したと初回レポートを公開。「Claude Mythos Preview」級のモデルが見つける脆弱性を業界がパッチで吸収できるかが新たな課題。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">パートナーと共同で essential software をスキャン</li>
+        <li data-i="02">high / critical severity の脆弱性だけで 10,000+ 件</li>
+        <li data-i="03">次世代モデル &quot;Claude Mythos Preview&quot; がコードネームとして公開</li>
+        <li data-i="04">ソフトウェア業界はパッチ生成・配布のスループットを上げる必要</li>
+        <li data-i="05">AnthropicAI 本ツイート 7,372 likes / 続報ツイート 1,379 likes</li>
+      </ul>
+      <div class="pull">
+        AIが「脆弱性を見つける速度」がパッチ供給を超えると、未パッチの既知脆弱性が積み上がり攻撃面が逆に拡大する。Bootcamp勢にとっては「自分のコードもAIに対して透明」と捉え、依存パッケージ管理と SAST 自動化を真面目にやる時期。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">7,372</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.anthropic.com/research/glasswing-initial-update">@AnthropicAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>新モデル発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.anthropic.com/research/glasswing-initial-update">https://www.anthropic.com/research/glasswing-initial-update</a></dd>
+        <dd><a href="https://x.com/AnthropicAI/status/2057909102542549503">x.com/AnthropicAI/status/205790910254254…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · CURSORAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ツール更新 <span class="sep">/</span> @CURSOR_AI <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cursor SDK + Composer 2.5 — 独自エージェントをPython/TSで構築</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-24/topic_3.png" data-alt="Cursor SDK + Composer 2.5 — 独自エージェントをPython/TSで構築" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-24/topic_3.png" alt="Cursor SDK + Composer 2.5 — 独自エージェントをPython/TSで構築" />
+      </div>
+      <p class="lede">
+        Cursorが「Cursor SDK」を一般提供開始。Cursor内蔵のCoding agent (Composer 2.5) と同じランタイムを Python / TypeScript から叩いて独自エージェントを構築可能に。週末限定でSDK経由のComposer利用が90% OFFキャンペーン。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対応言語: Python / TypeScript</li>
+        <li data-i="02">ランタイム: Composer 2.5（Cursor IDE 内臓と同等）</li>
+        <li data-i="03">ローンチ記念で連休中の課金 90% OFF</li>
+        <li data-i="04">想定用途: CI内コード変更bot、社内ナレッジ統合agent、独自IDE体験</li>
+        <li data-i="05">OpenAI Codex SDK / Claude Code SDK と直接競合する立ち位置</li>
+      </ul>
+      <div class="pull">
+        「Cursor は IDE」から「Cursor は agent ランタイム」への明確なシフト。OpenAI Codex / Claude Code / Cursor SDK が同じスタックでcompetingする構図に。チュートリアル系課題が真っ先にここで安く動かせる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,457</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2057913121558413770">@cursor_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>ツール更新</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2057913121558413770">x.com/cursor_ai/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · EMOLLICK ETHAN MOL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        新モデル発表 <span class="sep">/</span> @EMOLLICK (ETHAN MOLLICK) / @GEMINIAPP <span class="sep">/</span> NEWS
+      </div>
+      <h2>Gemini Omni — フルマルチモーダルでネイティブ動画編集</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-24/topic_4.png" data-alt="Gemini Omni — フルマルチモーダルでネイティブ動画編集" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-24/topic_4.png" alt="Gemini Omni — フルマルチモーダルでネイティブ動画編集" />
+      </div>
+      <p class="lede">
+        Google発表のGemini Omniについて、Ethan Mollickが「他社の動画AIと違うのはfully multimodalで動画をネイティブ編集できる点」と解説。1896年の &quot;train&quot; 映像にLEGO・新幹線・タイムトラベラー・ムカデ・マペットを追加するデモが拡散。反射光まで自然に整合させた合成を示した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">text / image / audio / video を1モデルで in/out できる &quot;Omni&quot; 設計</li>
+        <li data-i="02">既存映像へのキャラ追加・スタイル変換が単一プロンプトで可能</li>
+        <li data-i="03">反射・光源まで整合した編集をデモで提示</li>
+        <li data-i="04">Chetaslua「Holy @GeminiApp cooked」も拡散</li>
+        <li data-i="05">動画AI市場が「生成」から「編集」フェーズに移行</li>
+      </ul>
+      <div class="pull">
+        動画は「生成」ではなく「編集」フェーズに入った。Bootcampでもショート動画や説明動画のプロダクションをLLMに完全に任せる選択肢が現実化。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,574</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/emollick/status/2057874739817808223">@emollick</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>新モデル発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/emollick/status/2057874739817808223">x.com/emollick/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · KARPATHY / AYIAINO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ベストプラクティス <span class="sep">/</span> @KARPATHY / @AYI_AINOTES（拡散） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Karpathy: LLM活用は『構造化要求』が9割</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-24/topic_5.png" data-alt="Karpathy: LLM活用は『構造化要求』が9割" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-24/topic_5.png" alt="Karpathy: LLM活用は『構造化要求』が9割" />
+      </div>
+      <p class="lede">
+        Andrej Karpathyが「LLMへのクエリの最後に 'structure your response as X' を必ず付ける」だけで品質が劇的に上がると投稿。AYi が日本語で「Karpathyのこのスレッドが過去半年の自分のAIワークフローを全否定した」と続け、『より強いモデル』ではなく『より良い要求の構造化』を優先すべきと拡散している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">&quot;structure your response as ...&quot; を毎クエリ末尾に追加するだけで効果</li>
+        <li data-i="02">業務系プロンプトは特に効く（reasoning, list, decision rationale 等）</li>
+        <li data-i="03">AYi の日本語フォローアップが日本AI界で拡散</li>
+        <li data-i="04">「モデル強化待ち」「コンテキスト窓待ち」を批判する文脈</li>
+        <li data-i="05">プロンプトエンジニアリングの基礎技に再注目</li>
+      </ul>
+      <div class="pull">
+        コンテキスト窓やモデル待ちより、requirement engineering 寄りのプロンプト技術が直近の伸びしろという主張。Vibe Coderの基礎レッスンに直接組み込める。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/karpathy">@karpathy / @AYi_AInotes（拡散）</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>ベストプラクティス</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/karpathy">https://x.com/karpathy</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · GDB GREG BROCKMAN</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        業界動向 <span class="sep">/</span> @GDB (GREG BROCKMAN) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Greg Brockman: &quot;the model alone is no longer the product&quot;</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-24/topic_6.png" data-alt="Greg Brockman: &quot;the model alone is no longer the product&quot;" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-24/topic_6.png" alt="Greg Brockman: &quot;the model alone is no longer the product&quot;" />
+      </div>
+      <p class="lede">
+        Greg Brockman が一文だけ投稿:「the model alone is no longer the product（モデル単体はもはやプロダクトではない）」。同日 OpenAI が「OpenAI Deployment Company」発表 + Codex Thursday 連発 + Singapore とのパートナーシップ拡張、と一連の動きを束ねる宣言として読まれている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">同日発表: OpenAI Deployment Company（企業のAI実装支援）</li>
+        <li data-i="02">同日発表: Codex 大型アップデート（Topic 1）</li>
+        <li data-i="03">同日発表: Singapore とAIスケール展開のパートナーシップ拡大</li>
+        <li data-i="04">産業のフェーズが「モデル開発競争」から「実装・運用・国家規模配備」へ</li>
+        <li data-i="05">Anthropic も同じ方向（Managed Agents / Glasswing 等）</li>
+      </ul>
+      <div class="pull">
+        プレイヤーの収益源が &quot;API 切り売り&quot; から &quot;deployment + agent + ops&quot; に移る兆候。Bootcamp受講生が選ぶべきスキルの重みも、モデル選定よりも実装 / RAG / agent運用 / ガバナンスに移る。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">7,165</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/gdb/status/2057670776803996110">@gdb</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>業界動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/gdb/status/2057670776803996110">x.com/gdb/…</a></dd>
+        <dd><a href="https://x.com/OpenAI/status/2057536706778378692">x.com/OpenAI/status/2057536706778378692</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · TAKAHIROANNO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        業界動向 <span class="sep">/</span> @TAKAHIROANNO（チームみらい） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>党首討論：日本のトップにAIを使い倒すよう提言（安野貴博）</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-24/topic_7.png" data-alt="党首討論：日本のトップにAIを使い倒すよう提言（安野貴博）" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-24/topic_7.png" alt="党首討論：日本のトップにAIを使い倒すよう提言（安野貴博）" />
+      </div>
+      <p class="lede">
+        チームみらい・安野貴博氏が党首討論にて「政治家はAIの影響を過小評価すべきでない、トップ自らAIを使い倒すべき」と提言。シンガポール・ヴィヴィアン外相がNanoClawというオープンソースで自作AIエージェントを業務活用している例を紹介し、総理から「AIを使い倒さなければ発展はない」「家庭教師お願いしたい」との応答を得た。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">意思決定者の &quot;AI素振り&quot; 不足が政治の論点に</li>
+        <li data-i="02">シンガポール政府高官がオープンソースAIエージェントを自作・業務活用</li>
+        <li data-i="03">総理大臣が「AI = 重要政治課題」と明言</li>
+        <li data-i="04">国家レベルでもオープンソースAIエージェント基盤の活用が進む</li>
+        <li data-i="05">安野氏が「家庭教師として日本のAI活用に貢献」と提案</li>
+      </ul>
+      <div class="pull">
+        「AIをツールとして触るリーダー vs 触らないリーダー」の差が政策にも反映され始めた。受講生が経営層やクライアントにAI活用を提案する際の社会的追い風として使える材料。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">4,608</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/takahiroanno/status/2057104936593449182">@takahiroanno</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-20</dd>
+        <dt>CATEGORY</dt>
+        <dd>業界動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/takahiroanno/status/2057104936593449182">x.com/takahiroanno/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/OpenAIDevs/status/2057536706778378692">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-05-23/">
+      ← 前日 · 2026-05-23
+      <span class="big">Anthropic「Project Glasswing」初回アップデート — AI が OSS の重大脆弱性を大量発見</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-05-24/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260524.0722</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

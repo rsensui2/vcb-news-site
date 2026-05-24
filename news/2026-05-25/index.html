@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-05-25 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-05-25 の Vibe Coder Bootcamp モーニングディスパッチ — 6本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0525</span>
+    <span class="sep">/</span>
+    <span>2026-05-25</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>06 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260525.0719</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-05-25/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:19 · SUN</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SUNDAY · MAY 25, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>05<span class="dot">.</span>25</h1>
+    <div class="strap">
+      <span>Anthropic「Claude · OpenAI · TrapDoor: · xAI</span>
+      <span><span class="count">06</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        新モデル発表 <span class="sep">/</span> @TESTINGCATALOG / @KIMMONISMUS <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic「Claude Mythos 1 Preview」が Claude Code / Security 向けに準備中</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-25/topic_1.png" data-alt="Anthropic「Claude Mythos 1 Preview」が Claude Code / Security 向けに準備中" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-25/topic_1.png" alt="Anthropic「Claude Mythos 1 Preview」が Claude Code / Security 向けに準備中" />
+      </div>
+      <p class="lede">
+        TestingCatalog がコードベースに「claude-mythos-1-preview」の参照を発見し、Claude Code および Claude Security 向け次世代モデルとして準備中とリーク。kimmonismus も Trusted Access モデルとして静かに展開中と続報。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">モデルID候補: claude-mythos-1-preview</li>
+        <li data-i="02">ターゲット: Claude Code（コーディング）+ Claude Security（脆弱性発見/防御）</li>
+        <li data-i="03">配布形態: 一部 'verified defenders' に先行付与（Teknium 等が確認）</li>
+        <li data-i="04">Anthropic Project Glasswing（10,000+脆弱性発見）の延長線上の製品化</li>
+      </ul>
+      <div class="pull">
+        Claude Code 次世代モデルが「セキュリティ専用ライン」を併設する流れ。Vibe Coder には「コーディング AI = 脆弱性レビュー兼任」の選択肢が現実化する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/testingcatalog/status/2058322222297518498">@testingcatalog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-24</dd>
+        <dt>CATEGORY</dt>
+        <dd>新モデル発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/testingcatalog/status/2058322222297518498">x.com/testingcatalog/…</a></dd>
+        <dd><a href="https://x.com/kimmonismus/status/2058327095839756299">x.com/kimmonismus/status/205832709583975…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · KIMMONISMUS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        新モデル発表 <span class="sep">/</span> @KIMMONISMUS <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI が GPT-5.5-Cyber を Trusted Access 限定で段階展開、GPT-5.6 も間近</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-25/topic_2.png" data-alt="OpenAI が GPT-5.5-Cyber を Trusted Access 限定で段階展開、GPT-5.6 も間近" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-25/topic_2.png" alt="OpenAI が GPT-5.5-Cyber を Trusted Access 限定で段階展開、GPT-5.6 も間近" />
+      </div>
+      <p class="lede">
+        OpenAI が GPT-5.5-Cyber を「verified defenders」向けの Trusted Access 枠で慎重に提供開始。同時に GPT-5.6 のリリースが近いと観測され、汎用とサイバー特化の両軸で Anthropic と並走する構図に。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">提供モデル名: GPT-5.5-Cyber</li>
+        <li data-i="02">配布: Trusted Access（事前審査制）</li>
+        <li data-i="03">想定ユーザ: 防御側研究者・SOC アナリスト</li>
+        <li data-i="04">GPT-5.6 の本リリースも近い見込み</li>
+      </ul>
+      <div class="pull">
+        両社が同時に「サイバー専用 LLM」を別枠で出すことで、新セグメントが生まれた。受講生は「セキュリティ用途では汎用モデルではなく専用 API を選ぶ」前提を持っておくべき時期。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/kimmonismus/status/2058327095839756299">@kimmonismus</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-24</dd>
+        <dt>CATEGORY</dt>
+        <dd>新モデル発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/kimmonismus/status/2058327095839756299">x.com/kimmonismus/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · SOCKETSECURITY</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ <span class="sep">/</span> @SOCKETSECURITY <span class="sep">/</span> NEWS
+      </div>
+      <h2>TrapDoor: npm / PyPI / Crates.io を横断する暗号資産窃取マルウェア</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-25/topic_3.png" data-alt="TrapDoor: npm / PyPI / Crates.io を横断する暗号資産窃取マルウェア" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-25/topic_3.png" alt="TrapDoor: npm / PyPI / Crates.io を横断する暗号資産窃取マルウェア" />
+      </div>
+      <p class="lede">
+        Socket が「TrapDoor」と命名したサプライチェーン攻撃を npm・PyPI・Crates.io の 3 レジストリで同時に検出。Shai-Hulud に続く 2026 年級の事案で、初の本格的なクロスエコシステム型攻撃と位置づけ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対象レジストリ: npm + PyPI + Crates.io（3言語横断）</li>
+        <li data-i="02">ペイロード: 暗号資産窃取（wallet drainer 系）</li>
+        <li data-i="03">検出元: Socket の自動スキャナ</li>
+        <li data-i="04">手法: タイポスクワット + メンテナアカウント乗っ取りの組み合わせ</li>
+      </ul>
+      <div class="pull">
+        言語横断攻撃が始まった。Node / Python / Rust を行き来する Vibe Coder の開発機は「1 つのエコシステムだけ警戒」では守れず、CI で Socket / Snyk / Dependabot を全レイヤに入れる必要が出てきた。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/SocketSecurity/status/2058565153138844043">@SocketSecurity</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/SocketSecurity/status/2058565153138844043">x.com/SocketSecurity/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · GROK / XFREEZE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ツール更新 <span class="sep">/</span> @GROK / @XFREEZE <span class="sep">/</span> NEWS
+      </div>
+      <h2>xAI Grok が Vercel / Canva / Gamma など主要 SaaS コネクタを一括追加</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-25/topic_4.png" data-alt="xAI Grok が Vercel / Canva / Gamma など主要 SaaS コネクタを一括追加" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-25/topic_4.png" alt="xAI Grok が Vercel / Canva / Gamma など主要 SaaS コネクタを一括追加" />
+      </div>
+      <p class="lede">
+        xAI が Grok 公式から新コネクタ群を発表。Vercel（サイト構築）/ Canva / Gamma / market data などを Grok チャットから直接呼び出せるようになり、ChatGPT の Apps / Claude の MCP に対抗する「AI ワークステーション」像が明確化。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">追加コネクタ: Vercel, Canva, Gamma, market data ほか</li>
+        <li data-i="02">統合方式: Grok チャットからのワンクリック起動</li>
+        <li data-i="03">競合: ChatGPT Apps / Claude MCP / Grok Connectors の三つ巴へ</li>
+      </ul>
+      <div class="pull">
+        AI が外部 SaaS をオーケストレーションするレイヤを 3 社が奪い合うフェーズに突入。「どの AI に自分の SaaS をぶら下げるか」が今後の生産性を決める論点になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/grok/status/2057896014992871747">@grok</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>ツール更新</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/grok/status/2057896014992871747">x.com/grok/…</a></dd>
+        <dd><a href="https://x.com/XFreeze/status/2057904001312846203">x.com/XFreeze/status/2057904001312846203…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · PANKAJKUMARDEV</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ <span class="sep">/</span> @PANKAJKUMAR_DEV <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Sonnet 4.8 の内部 debug source map（51万行）が公開バンドルに混入</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-25/topic_5.png" data-alt="Claude Sonnet 4.8 の内部 debug source map（51万行）が公開バンドルに混入" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-25/topic_5.png" alt="Claude Sonnet 4.8 の内部 debug source map（51万行）が公開バンドルに混入" />
+      </div>
+      <p class="lede">
+        Anthropic が誤って Claude Sonnet 4.8 の内部デバッグソースマップ（約 512,000 行）を公開バンドルに同梱したとリーク。内部ツール仕様・プロンプトテンプレ・モデル制御ロジックが読める状態で出回り、差し替え対応中とされる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対象モデル: Claude Sonnet 4.8</li>
+        <li data-i="02">漏洩物: 512,000 行規模の debug source map</li>
+        <li data-i="03">含まれる可能性: 内部プロンプト・ツール仕様・ガードレール構成</li>
+        <li data-i="04">観測者: @pankajkumar_dev ほか複数の reverse engineer</li>
+      </ul>
+      <div class="pull">
+        主力モデルでこの規模の sourcemap 漏洩は異例。受講生レベルでも「自社プロダクトの公開バンドルに sourcemap が混入していないか」を今日中に確認する好機。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/pankajkumar_dev/status/2057832457655959664">@pankajkumar_dev</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/pankajkumar_dev/status/2057832457655959664">x.com/pankajkumar_dev/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · LEVELSIO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ベストプラクティス <span class="sep">/</span> @LEVELSIO <span class="sep">/</span> NEWS
+      </div>
+      <h2>levelsio: 全サイトを staging 抜きで本番 VPS に Claude Code で直接デプロイ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-25/topic_6.png" data-alt="levelsio: 全サイトを staging 抜きで本番 VPS に Claude Code で直接デプロイ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-25/topic_6.png" alt="levelsio: 全サイトを staging 抜きで本番 VPS に Claude Code で直接デプロイ" />
+      </div>
+      <p class="lede">
+        Pieter Levels が自分の全サイトの新機能・バグ修正を staging 環境なしで本番 VPS に Claude Code から直接流し込むワークフローを公開。「Claude Code が完了まで責任を持つ前提なら中間環境はノイズ」と主張し議論を呼んでいる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">実践者: @levelsio（複数 SaaS 運営者）</li>
+        <li data-i="02">実行環境: 本番 VPS へ直接 SSH + Claude Code</li>
+        <li data-i="03">主張: staging はもう要らない</li>
+        <li data-i="04">反応: 賛否両論、特に SRE 系から強い反発</li>
+      </ul>
+      <div class="pull">
+        Vibe Coding の極北的ワークフロー。Bootcamp 受講生にとっては「個人サイト/小規模 SaaS なら本当に staging を省略していいか」を判断する好題材。本格運用なら preview deploy + Claude Code 自動 PR が現実的解。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/levelsio/status/2058149083001286829">@levelsio</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-24</dd>
+        <dt>CATEGORY</dt>
+        <dd>ベストプラクティス</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/levelsio/status/2058149083001286829">x.com/levelsio/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/testingcatalog/status/2058322222297518498">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-05-24/">
+      ← 前日 · 2026-05-24
+      <span class="big">OpenAI Codex Thursday — ロック中Macもスマホから操作可能に</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-05-25/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260525.0719</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

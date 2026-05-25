@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-05-26 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-05-26 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0526</span>
+    <span class="sep">/</span>
+    <span>2026-05-26</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260526.0719</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-05-26/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:19 · MON</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · MONDAY · MAY 26, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>05<span class="dot">.</span>26</h1>
+    <div class="strap">
+      <span>TrapDoor: · Next.js · Cursor · Claude</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ <span class="sep">/</span> SOCKET / FEROSS <span class="sep">/</span> NEWS
+      </div>
+      <h2>TrapDoor: npm / PyPI / Crates.io 横断の供給網攻撃が拡大</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-26/topic_1.png" data-alt="TrapDoor: npm / PyPI / Crates.io 横断の供給網攻撃が拡大" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-26/topic_1.png" alt="TrapDoor: npm / PyPI / Crates.io 横断の供給網攻撃が拡大" />
+      </div>
+      <p class="lede">
+        Socket が TrapDoor と呼ぶクロスエコシステム型の暗号資産窃取キャンペーンを検出。npm、PyPI、Crates.io にまたがる 34+ 悪性パッケージ / 384+ バージョンが報告され、開発者のウォレットや認証情報を狙う供給網攻撃として警戒されている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対象は npm / PyPI / Crates.io の複数レジストリ</li>
+        <li data-i="02">Socket は 34+ malicious packages / 384+ versions and artifacts と報告</li>
+        <li data-i="03">install 時スクリプト、typosquatting、資格情報窃取が主なリスク</li>
+        <li data-i="04">Feross も同キャンペーンを active supply chain attack として注意喚起</li>
+      </ul>
+      <div class="pull">
+        AI coding で依存追加をエージェントに任せるほど、危険な install を見落としやすい。lockfile diff、postinstall 有無、Socket/Snyk/Dependabot の検査を標準化する必要がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/SocketSecurity/status/2058565153138844043">@SocketSecurity</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/SocketSecurity/status/2058565153138844043">x.com/SocketSecurity/…</a></dd>
+        <dd><a href="https://x.com/feross/status/2058666464241213498">x.com/feross/status/2058666464241213498</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · SONICWALL / NETLIF</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ <span class="sep">/</span> SONICWALL / NETLIFY SECURITY CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Next.js WebSocket Upgrade SSRF (CVE-2026-44578) に注意</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-26/topic_2.png" data-alt="Next.js WebSocket Upgrade SSRF (CVE-2026-44578) に注意" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-26/topic_2.png" alt="Next.js WebSocket Upgrade SSRF (CVE-2026-44578) に注意" />
+      </div>
+      <p class="lede">
+        Next.js の WebSocket upgrade 処理に関する SSRF 脆弱性 CVE-2026-44578 が継続して注意喚起されている。自己ホスト環境やクラウド上の Next.js サーバーでは、攻撃者が内部メタデータエンドポイントや管理 API への到達を狙える構成が問題になる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">問題は WebSocket upgrade handler 経由の SSRF</li>
+        <li data-i="02">影響範囲は Next.js 13.4.13 以降の一部構成として報告</li>
+        <li data-i="03">Netlify は May 2026 security release として React/Next.js 更新を案内</li>
+        <li data-i="04">自己ホストやクラウドメタデータに到達できる構成ではリスクが高い</li>
+      </ul>
+      <div class="pull">
+        Bootcamp 受講者の多くが Next.js を使う。AI に生成させたアプリでも、フレームワーク更新と内部 API の露出確認は人間側の責務として残る。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.sonicwall.com/it-it/blog/next-js-websocket-upgrade-handler-ssrf">SonicWall / Netlify security changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-21</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.sonicwall.com/it-it/blog/next-js-websocket-upgrade-handler-ssrf">https://www.sonicwall.com/it-it/blog/next-js-websocket-upgrade-handler-ssrf</a></dd>
+        <dd><a href="https://www.netlify.com/changelog/2026-05-08-react-nextjs-security-vulnerabilities/">www.netlify.com/changelog/2026-05-08-rea…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · CURSOR CHANGELOG /</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI開発ツール <span class="sep">/</span> CURSOR CHANGELOG / DEVELOPER REPORTS <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cursor SDK が IDE 内の Composer runtime を外部エージェント化</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-26/topic_3.png" data-alt="Cursor SDK が IDE 内の Composer runtime を外部エージェント化" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-26/topic_3.png" alt="Cursor SDK が IDE 内の Composer runtime を外部エージェント化" />
+      </div>
+      <p class="lede">
+        Cursor が SDK を公開し、Cursor IDE / CLI / web app と同じ Composer runtime をコードから呼び出せるようにした。X では PR Agent、Flight Recorder、既存コードベース内への組み込みなど、単発プロンプトではなく運用可能な agent workflow へ寄せる実験が増えている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">公式 SDK は `@cursor/sdk` から agent runtime を利用可能</li>
+        <li data-i="02">Cursor と同じ runtime / harness / models を外部プログラムから扱える</li>
+        <li data-i="03">CI、PR レビュー、ローカルファイル処理、cloud agents への展開が想定される</li>
+        <li data-i="04">X では Cursor SDK を使った Flight Recorder や PR Agent の事例が投稿されている</li>
+      </ul>
+      <div class="pull">
+        AI coding は IDE 内の手作業から、既存の開発フローにエージェントを組み込む段階へ移る。レビュー、テスト生成、技術負債監視のような反復作業は SDK 化の恩恵が大きい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://cursor.com/changelog/sdk-release">Cursor changelog / developer reports</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-04-29</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://cursor.com/changelog/sdk-release">https://cursor.com/changelog/sdk-release</a></dd>
+        <dd><a href="https://x.com/Vik_vanGogh/status/2058673383902990525">x.com/Vik_vanGogh/status/205867338390299…</a></dd>
+        <dd><a href="https://x.com/PennarEng/status/2058693959665262969">x.com/PennarEng/status/20586939596652629…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · CLAUDE / ANTHROPIC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI開発ツール <span class="sep">/</span> CLAUDE / ANTHROPIC <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code の Agent View が複数セッション管理を標準機能化</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-26/topic_4.png" data-alt="Claude Code の Agent View が複数セッション管理を標準機能化" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-26/topic_4.png" alt="Claude Code の Agent View が複数セッション管理を標準機能化" />
+      </div>
+      <p class="lede">
+        Anthropic は Claude Code に Agent View を追加し、複数の coding agent セッションを一覧で管理できるようにした。Claude Code v2.1.139 以降の research preview として提供され、長時間タスクや並列タスクの状態確認に使える。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Claude Code v2.1.139 以降で利用可能な research preview</li>
+        <li data-i="02">複数 agent sessions の一覧管理が主目的</li>
+        <li data-i="03">管理者は organization policy で Agent View を無効化できる</li>
+        <li data-i="04">長時間タスク・並列実行・状態監視の運用が前提になっている</li>
+      </ul>
+      <div class="pull">
+        『AI に任せる』だけでなく『複数 AI 作業をどう監督するか』が開発者のスキルになる。Bootcamp でも単体プロンプトより agent orchestration / review の訓練価値が上がる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://claude.com/blog/agent-view-in-claude-code">Claude / Anthropic</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-11</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://claude.com/blog/agent-view-in-claude-code">https://claude.com/blog/agent-view-in-claude-code</a></dd>
+        <dd><a href="https://code.claude.com/docs/en/agent-view">code.claude.com/docs/en/agent-view</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · OPENAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        音声AI <span class="sep">/</span> OPENAI <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI GPT-Realtime-2 と Realtime Translate で音声エージェント開発が前進</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-26/topic_5.png" data-alt="OpenAI GPT-Realtime-2 と Realtime Translate で音声エージェント開発が前進" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-26/topic_5.png" alt="OpenAI GPT-Realtime-2 と Realtime Translate で音声エージェント開発が前進" />
+      </div>
+      <p class="lede">
+        OpenAI は API 向けに GPT-Realtime-2、GPT-Realtime-Translate、streaming transcription 系の新モデルを発表した。GPT-Realtime-2 は GPT-5 class reasoning を持つ音声モデルとして位置づけられ、多言語リアルタイム翻訳用途も示されている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">GPT-Realtime-2 は speech-to-speech 用の新モデル</li>
+        <li data-i="02">GPT-5 class reasoning を持つ音声モデルとして説明されている</li>
+        <li data-i="03">GPT-Realtime-Translate は多言語リアルタイム翻訳向け</li>
+        <li data-i="04">Realtime API 上で音声対話・翻訳・文字起こしの開発選択肢が増えた</li>
+      </ul>
+      <div class="pull">
+        音声 UI は『文字起こし後に LLM』から『リアルタイム対話・翻訳・処理』へ寄っている。営業、講義、通訳、問い合わせ対応では、テキスト bot ではなく音声 agent を前提に設計する場面が増える。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/">OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-07</dd>
+        <dt>CATEGORY</dt>
+        <dd>音声AI</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/">https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/</a></dd>
+        <dd><a href="https://techcrunch.com/2026/05/07/openai-launches-new-voice-intelligence-features-in-its-api/">techcrunch.com/2026/05/07/openai-launche…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · / THE GUILD NOTE F</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI開発・組織設計 <span class="sep">/</span> 深津貴之 / THE GUILD, NOTE (@FLADDICT) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>AIコードを理解できないまま委託する視点</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-26/topic_6.png" data-alt="AIコードを理解できないまま委託する視点" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-26/topic_6.png" alt="AIコードを理解できないまま委託する視点" />
+      </div>
+      <p class="lede">
+        深津貴之氏は、エンジニアが AI 生成コードに抱く『動くが理解できず、いざという時に直せない』不安を、経営者が専門職へ仕事を委託する構図と比較した。続く投稿では、医療・建築・金融・法律のように、専門的すぎて自力レビューできないが失敗できない仕事は社会で既に外部委託されていると指摘している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">AI コードへの不安を、非エンジニア経営者がエンジニアにコードを委託する構造と重ねている</li>
+        <li data-i="02">医療・建築・金融・法律も『自力レビューできないが重要な専門仕事』として外部委託されている</li>
+        <li data-i="03">アプリ設計やコード生成も、パラダイムが変われば委託可能な専門仕事になるという見立て</li>
+        <li data-i="04">投稿は 2,278 likes / 429 reposts / 703 bookmarks / 362,700 views と高反応</li>
+      </ul>
+      <div class="pull">
+        Vibe Coding では『人間が全コードを理解する』前提から、『成果物とリスクをどう検収・運用するか』へ重心が移る。責任分界・監査・保険・標準化の設計が重要になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,278</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/fladdict/status/2058672057639145765">@fladdict</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI開発・組織設計</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/fladdict/status/2058672057639145765">x.com/fladdict/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · TAKAHIROANNO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI政策・リーダーシップ <span class="sep">/</span> 安野貴博＠チームみらい (@TAKAHIROANNO) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>党首討論で『トップがAIを使い倒すべき』と提言</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-26/topic_7.png" data-alt="党首討論で『トップがAIを使い倒すべき』と提言" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-26/topic_7.png" alt="党首討論で『トップがAIを使い倒すべき』と提言" />
+      </div>
+      <p class="lede">
+        チームみらいの安野貴博氏は党首討論で、AI が安全保障・経済・エネルギー・教育・外交・医療など広範な領域に影響するため、政治家がAIの影響を過小評価すべきではないと提言した。シンガポールのヴィヴィアン外相が NanoClaw で自作 AI エージェントを業務活用している例を挙げ、トップ自身が使い倒して解像度を上げる必要があると述べた。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">AI を安全保障・経済・教育・外交・医療など広範な政治課題として提示</li>
+        <li data-i="02">シンガポールのヴィヴィアン外相が NanoClaw で自作 AI エージェントを活用している事例を紹介</li>
+        <li data-i="03">総理からは AI を重要課題と捉え、使い倒さなければ発展はないという趣旨の回答があった</li>
+        <li data-i="04">投稿は 4,608 likes / 288 reposts / 91 bookmarks / 210,215 views</li>
+      </ul>
+      <div class="pull">
+        AI 活用は現場担当者だけでなく、組織トップの体験量と判断力に左右される。企業や教育現場でも、リーダー自身が AI agent を使うことが導入速度を決める。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">4,608</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/takahiroanno/status/2057104936593449182">@takahiroanno</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-20</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI政策・リーダーシップ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/takahiroanno/status/2057104936593449182">x.com/takahiroanno/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="#" aria-disabled="true">📄 PDFをダウンロード</a>
+    <a href="https://x.com/SocketSecurity/status/2058565153138844043">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-05-25/">
+      ← 前日 · 2026-05-25
+      <span class="big">Anthropic「Claude Mythos 1 Preview」が Claude Code / Security 向けに準備中</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-05-26/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260526.0719</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

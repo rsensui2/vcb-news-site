@@ -14,15 +14,15 @@
 
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">DISPATCH №0526</span>
+    <span class="tick">DISPATCH №0527</span>
     <span class="sep">/</span>
-    <span>2026-05-26</span>
+    <span>2026-05-27</span>
     <span class="sep">/</span>
     <span>MORNING EDITION</span>
     <span class="sep">/</span>
-    <span>07 ITEMS</span>
+    <span>06 ITEMS</span>
     <span class="sep">/</span>
-    <span>BUILD 20260526.0719</span>
+    <span>BUILD 20260527.0724</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -40,13 +40,13 @@
     </button>
     <nav class="main-nav" id="main-nav">
       <a href="./">HOME</a>
-      <a href="./news/2026-05-26/">TODAY</a>
+      <a href="./news/2026-05-27/">TODAY</a>
       <a href="./#bookmarks">BOOKMARKS</a>
       <a href="./#archive">ARCHIVE</a>
       <a href="./#about">ABOUT</a>
       <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
     </nav>
-    <div class="meta">JST · 07:19 · MON</div>
+    <div class="meta">JST · 07:24 · TUE</div>
   </div>
 </header>
 <script>
@@ -70,7 +70,7 @@
     <div class="grid">
       <div>
         <div class="eyebrow">
-          MORNING DISPATCH <span class="dot">·</span> MONDAY, MAY 26, 2026 <span class="dot">·</span> ISSUE N°0526
+          MORNING DISPATCH <span class="dot">·</span> TUESDAY, MAY 27, 2026 <span class="dot">·</span> ISSUE N°0527
         </div>
         <h1>
           VCB News<br>
@@ -83,10 +83,10 @@
       </aside>
     </div>
     <div class="hero-strap">
-      <span><span class="k">07</span>TODAY</span>
-      <span><span class="k">09</span>BOOKMARKS / 7D</span>
-      <span><span class="k">372</span>ARCHIVE</span>
-      <span><span class="k">550</span>DELIVERED</span>
+      <span><span class="k">06</span>TODAY</span>
+      <span><span class="k">06</span>BOOKMARKS / 7D</span>
+      <span><span class="k">373</span>ARCHIVE</span>
+      <span><span class="k">556</span>DELIVERED</span>
       <span>SINCE 2026-04-17</span>
       <span>07:15 JST DAILY</span>
     </div>
@@ -101,38 +101,38 @@
         今朝の配信
       </div>
       <div class="trail">
-        <a href="./news/2026-05-26/">全07件を詳細ページで読む →</a>
+        <a href="./news/2026-05-27/">全06件を詳細ページで読む →</a>
       </div>
     </div>
 
     <div class="today-sub today-sub--hero">
       <h3>今日の一面</h3>
-      <div class="meta">TOP STORY · 2026-05-26</div>
+      <div class="meta">TOP STORY · 2026-05-27</div>
     </div>
     <article class="feature">
       <header class="feature-head">
-        <div class="cat"><span class="rule"></span>セキュリティ · Socket / Feross</div>
-        <h2><a href="./news/2026-05-26/#topic-1">TrapDoor: npm / PyPI / Crates.io 横断の供給網攻撃が拡大</a></h2>
+        <div class="cat"><span class="rule"></span>🛡️ エージェント安全設計 · Anthropic Engineering</div>
+        <h2><a href="./news/2026-05-27/#topic-1">Anthropic、Claude製品横断のcontainment設計を公開</a></h2>
       </header>
-      <div class="media zoom-image" data-src="assets/images/2026-05-26/topic_1.png" data-alt="TrapDoor: npm / PyPI / Crates.io 横断の供給網攻撃が拡大" role="button" tabindex="0" aria-label="スライド画像を拡大">
-        <img src="assets/images/2026-05-26/topic_1.png" alt="TrapDoor: npm / PyPI / Crates.io 横断の供給網攻撃が拡大">
+      <div class="media zoom-image" data-src="assets/images/2026-05-27/topic_1.png" data-alt="Anthropic、Claude製品横断のcontainment設計を公開" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="assets/images/2026-05-27/topic_1.png" alt="Anthropic、Claude製品横断のcontainment設計を公開">
       </div>
       <div class="body">
         <p class="lede">
-          Socket が TrapDoor と呼ぶクロスエコシステム型の暗号資産窃取キャンペーンを検出。npm、PyPI、Crates.io にまたがる 34+ 悪性パッケージ / 384+ バージョンが報告され、開発者のウォレットや認証情報を狙う供給網攻撃として警戒されている。
+          Anthropicは、AI agentのリスクをユーザー誤用、モデル誤動作、外部攻撃に分け、環境・モデル・外部コンテンツの3層で守るcontainment設計を公開した。人間の承認だけではapproval fatigueが起きるため、sandbox、VM、egress control、tool result inspectionなど、agentが触れる範囲そのものを制限する設計を重視している。
         </p>
         <ul class="keypoints">
-          <li data-i="K.01">対象は npm / PyPI / Crates.io の複数レジストリ</li>
-          <li data-i="K.02">Socket は 34+ malicious packages / 384+ versions and artifacts と報告</li>
-          <li data-i="K.03">install 時スクリプト、typosquatting、資格情報窃取が主なリスク</li>
-          <li data-i="K.04">Feross も同キャンペーンを active supply chain attack として注意喚起</li>
+          <li data-i="K.01">claude.aiはサーバー側の隔離コンテナ、Claude Codeはローカルsandbox、Claude CoworkはローカルVMという異なる隔離パターンを採用している。</li>
+          <li data-i="K.02">Claude Codeでは許可ダイアログだけに頼ると承認疲れが起きるため、OSレベルsandboxやauto modeを組み合わせる設計が説明された。</li>
+          <li data-i="K.03">許可済みドメインでも、Files APIのような機能がデータ持ち出し経路になり得るため、allowlistは宛先ではなくcapability grantとして扱うべきだと整理している。</li>
+          <li data-i="K.04">multi-agent systemでは、sub-agentの出力を高信頼として扱うことでtrust escalationが起きる可能性も指摘している。</li>
         </ul>
         <div class="footline">
-          
-          <span><span class="label">SRC</span> <a href="https://x.com/SocketSecurity/status/2058565153138844043">@SocketSecurity</a></span>
-          <span><span class="label">TOPIC</span> 01 / 07</span>
+          <span><span class="label">♡</span> 793 likes</span>
+          <span><span class="label">SRC</span> <a href="https://www.anthropic.com/engineering/how-we-contain-claude">Anthropic Engineering</a></span>
+          <span><span class="label">TOPIC</span> 01 / 06</span>
         </div>
-        <a class="feature-cta" href="./news/2026-05-26/#topic-1">
+        <a class="feature-cta" href="./news/2026-05-27/#topic-1">
           続きを読む <span class="arrow">→</span>
         </a>
       </div>
@@ -140,65 +140,56 @@
 
     <div class="today-sub today-sub--rest">
       <h3>ほかの配信</h3>
-      <div class="meta">07 ITEMS TOTAL</div>
+      <div class="meta">06 ITEMS TOTAL</div>
     </div>
     <div class="rest rest--horizontal">
-        <a class="rest-item" href="./news/2026-05-26/#topic-2">
+        <a class="rest-item" href="./news/2026-05-27/#topic-2">
           <div class="rest-num">02</div>
           <div class="rest-body">
-            <div class="cat">セキュリティ · SonicWall / Netlify security changelog</div>
-            <h4 class="rest-title">Next.js WebSocket Upgrade SSRF (CVE-2026-44578) に注意</h4>
-            <p class="rest-note">Bootcamp 受講者の多くが Next.js を使う。AI に生成させたアプリでも、フレームワーク更新と内部 API の露出確認は人間側の責務として残る。</p>
+            <div class="cat">⚡ 開発Tips · Supabase</div>
+            <h4 class="rest-title">Supabase、getUser()からgetClaims()への置換で認証確認を高速化</h4>
+            <p class="rest-note">SupabaseはBootcamp作品で頻出するため、認証確認の実装パターンはそのまま体感速度とランニングコストに効く。AIに生成させたコードでも、getUser()連打を見つけて置換するレビュー観点として使える。</p>
           </div>
-          <div class="rest-likes"></div>
+          <div class="rest-likes">♡ <b>509</b></div>
         </a>
-        <a class="rest-item" href="./news/2026-05-26/#topic-3">
+        <a class="rest-item" href="./news/2026-05-27/#topic-3">
           <div class="rest-num">03</div>
           <div class="rest-body">
-            <div class="cat">AI開発ツール · Cursor changelog / developer reports</div>
-            <h4 class="rest-title">Cursor SDK が IDE 内の Composer runtime を外部エージェント化</h4>
-            <p class="rest-note">AI coding は IDE 内の手作業から、既存の開発フローにエージェントを組み込む段階へ移る。レビュー、テスト生成、技術負債監視のような反復作業は SDK 化の恩恵が大きい。</p>
+            <div class="cat">🤖 AIエージェント活用 · Greg Brockman / OpenAI Codex</div>
+            <h4 class="rest-title">Codex、コード外の整理・調査・運用タスクにも用途が拡大</h4>
+            <p class="rest-note">Codexはコード生成ツールから、ローカル環境や業務データを読み、必要なスクリプトを書いて片付けるagentへ広がっている。Bootcampでは「アプリを作る」だけでなく、調査・整理・検証をagentに任せる型として教えられる。</p>
           </div>
-          <div class="rest-likes"></div>
+          <div class="rest-likes">♡ <b>3,938</b></div>
         </a>
-        <a class="rest-item" href="./news/2026-05-26/#topic-4">
+        <a class="rest-item" href="./news/2026-05-27/#topic-4">
           <div class="rest-num">04</div>
           <div class="rest-body">
-            <div class="cat">AI開発ツール · Claude / Anthropic</div>
-            <h4 class="rest-title">Claude Code の Agent View が複数セッション管理を標準機能化</h4>
-            <p class="rest-note">『AI に任せる』だけでなく『複数 AI 作業をどう監督するか』が開発者のスキルになる。Bootcamp でも単体プロンプトより agent orchestration / review の訓練価値が上がる。</p>
+            <div class="cat">💻 実践ワークフロー · Thariq (@trq212)</div>
+            <h4 class="rest-title">Claude Code非技術業務の型は「ファイル + スクリプト + HTML」</h4>
+            <p class="rest-note">受講者が欲しいのはコード生成だけではなく、既存業務をAIで片付ける実務力。フォルダ・スクリプト・HTMLという型は、講義資料、請求、議事録、調査レポートの自動化にそのまま使える。</p>
           </div>
-          <div class="rest-likes"></div>
+          <div class="rest-likes">♡ <b>933</b></div>
         </a>
-        <a class="rest-item" href="./news/2026-05-26/#topic-5">
+        <a class="rest-item" href="./news/2026-05-27/#topic-5">
           <div class="rest-num">05</div>
           <div class="rest-body">
-            <div class="cat">音声AI · OpenAI</div>
-            <h4 class="rest-title">OpenAI GPT-Realtime-2 と Realtime Translate で音声エージェント開発が前進</h4>
-            <p class="rest-note">音声 UI は『文字起こし後に LLM』から『リアルタイム対話・翻訳・処理』へ寄っている。営業、講義、通訳、問い合わせ対応では、テキスト bot ではなく音声 agent を前提に設計する場面が増える。</p>
+            <div class="cat">🧩 マルチエージェント基盤 · Dhruv (@dhruvtwt_)</div>
+            <h4 class="rest-title">AI agent orchestration tools、harness aggregatorレイヤーに注目</h4>
+            <p class="rest-note">AI codingの競争軸は、単体モデルやIDEから複数agentを安全に走らせるorchestration基盤へ移りつつある。Bootcampでも「どのagentを使うか」だけでなく「どう束ねて検証するか」を教える価値がある。</p>
           </div>
-          <div class="rest-likes"></div>
+          <div class="rest-likes">♡ <b>400</b></div>
         </a>
-        <a class="rest-item" href="./news/2026-05-26/#topic-6">
+        <a class="rest-item" href="./news/2026-05-27/#topic-6">
           <div class="rest-num">06</div>
           <div class="rest-body">
-            <div class="cat">AI開発・組織設計 · 深津貴之 / THE GUILD, note (@fladdict)</div>
-            <h4 class="rest-title">AIコードを理解できないまま委託する視点</h4>
-            <p class="rest-note">Vibe Coding では『人間が全コードを理解する』前提から、『成果物とリスクをどう検収・運用するか』へ重心が移る。責任分界・監査・保険・標準化の設計が重要になる。</p>
-          </div>
-          <div class="rest-likes">♡ <b>2,278</b></div>
-        </a>
-        <a class="rest-item" href="./news/2026-05-26/#topic-7">
-          <div class="rest-num">07</div>
-          <div class="rest-body">
-            <div class="cat">AI政策・リーダーシップ · 安野貴博＠チームみらい (@takahiroanno)</div>
-            <h4 class="rest-title">党首討論で『トップがAIを使い倒すべき』と提言</h4>
-            <p class="rest-note">AI 活用は現場担当者だけでなく、組織トップの体験量と判断力に左右される。企業や教育現場でも、リーダー自身が AI agent を使うことが導入速度を決める。</p>
+            <div class="cat">🏛️ AIリーダーシップ · 安野貴博＠チームみらい (@takahiroanno)</div>
+            <h4 class="rest-title">政治トップもAIを使い倒すべき、安野貴博氏が党首討論で提言</h4>
+            <p class="rest-note">AI活用は現場ツール導入だけでなく、意思決定者自身の体験値に左右される。企業でも行政でも、トップがagentを使って業務解像度を上げることが導入の前提になりつつある。</p>
           </div>
           <div class="rest-likes">♡ <b>4,608</b></div>
         </a>
     </div>
-    <a class="rest-read-full rest-read-full--center" href="./news/2026-05-26/">
+    <a class="rest-read-full rest-read-full--center" href="./news/2026-05-27/">
       今日のディスパッチ全文 <span>→</span>
     </a>
   </div>
@@ -211,7 +202,7 @@
         <span class="en">§02 · Latest Bookmarks</span>
         最新ブックマーク
       </div>
-      <div class="trail"><a href="./bookmarks/">直近7日間 · 9件 · 全件を見る →</a></div>
+      <div class="trail"><a href="./bookmarks/">直近7日間 · 6件 · 全件を見る →</a></div>
     </div>
 
     <div class="bk-filter">
@@ -504,7 +495,7 @@ Karpathy的履历：OpenAI联合创始人、Tesla前AI总监（主导Autopilot�
   </div>
   <div class="cal-month" data-month="2026-05">
     <div class="cal-weekdays"><span>日</span><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span>土</span></div>
-    <div class="cal-grid"><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><a class="cal-cell cal-cell--news" href="./news/2026-05-01/" aria-label="2026-05-01 の配信を開く"><span class="cal-day">1</span></a><a class="cal-cell cal-cell--news" href="./news/2026-05-02/" aria-label="2026-05-02 の配信を開く"><span class="cal-day">2</span></a><a class="cal-cell cal-cell--news" href="./news/2026-05-03/" aria-label="2026-05-03 の配信を開く"><span class="cal-day">3</span></a><a class="cal-cell cal-cell--news" href="./news/2026-05-04/" aria-label="2026-05-04 の配信を開く"><span class="cal-day">4</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-05-05/" aria-label="2026-05-05 の配信を開く (ブックマーク2件)"><span class="cal-day">5</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-05-06/" aria-label="2026-05-06 の配信を開く (ブックマーク1件)"><span class="cal-day">6</span><span class="cal-count">1</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-05-07/" aria-label="2026-05-07 の配信を開く (ブックマーク4件)"><span class="cal-day">7</span><span class="cal-count">4</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-05-08/" aria-label="2026-05-08 の配信を開く (ブックマーク2件)"><span class="cal-day">8</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-05-09/" aria-label="2026-05-09 の配信を開く (ブックマーク4件)"><span class="cal-day">9</span><span class="cal-count">4</span></a><a class="cal-cell cal-cell--news" href="./news/2026-05-10/" aria-label="2026-05-10 の配信を開く"><span class="cal-day">10</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-05-11/" aria-label="2026-05-11 の配信を開く (ブックマーク6件)"><span class="cal-day">11</span><span class="cal-count">6</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-05-12/" aria-label="2026-05-12 の配信を開く (ブックマーク10件)"><span class="cal-day">12</span><span class="cal-count">10</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-05-13/" aria-label="2026-05-13 の配信を開く (ブックマーク3件)"><span class="cal-day">13</span><span class="cal-count">3</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-05-14/" aria-label="2026-05-14 の配信を開く (ブックマーク1件)"><span class="cal-day">14</span><span class="cal-count">1</span></a><div class="cal-cell cal-cell--inactive"><span class="cal-day">15</span></div><a class="cal-cell cal-cell--news" href="./news/2026-05-16/" aria-label="2026-05-16 の配信を開く"><span class="cal-day">16</span></a><a class="cal-cell cal-cell--news" href="./news/2026-05-17/" aria-label="2026-05-17 の配信を開く"><span class="cal-day">17</span></a><a class="cal-cell cal-cell--news" href="./news/2026-05-18/" aria-label="2026-05-18 の配信を開く"><span class="cal-day">18</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-05-19/" aria-label="2026-05-19 の配信を開く (ブックマーク3件)"><span class="cal-day">19</span><span class="cal-count">3</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-05-20/" aria-label="2026-05-20 の配信を開く (ブックマーク3件)"><span class="cal-day">20</span><span class="cal-count">3</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-05-21/" aria-label="2026-05-21 の配信を開く (ブックマーク2件)"><span class="cal-day">21</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--news" href="./news/2026-05-22/" aria-label="2026-05-22 の配信を開く"><span class="cal-day">22</span></a><a class="cal-cell cal-cell--news" href="./news/2026-05-23/" aria-label="2026-05-23 の配信を開く"><span class="cal-day">23</span></a><a class="cal-cell cal-cell--news" href="./news/2026-05-24/" aria-label="2026-05-24 の配信を開く"><span class="cal-day">24</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-05-25/" aria-label="2026-05-25 の配信を開く (ブックマーク1件)"><span class="cal-day">25</span><span class="cal-count">1</span></a><a class="cal-cell cal-cell--news" href="./news/2026-05-26/" aria-label="2026-05-26 の配信を開く"><span class="cal-day">26</span></a><div class="cal-cell cal-cell--inactive"><span class="cal-day">27</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">28</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">29</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">30</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">31</span></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div></div>
+    <div class="cal-grid"><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><a class="cal-cell cal-cell--news" href="./news/2026-05-01/" aria-label="2026-05-01 の配信を開く"><span class="cal-day">1</span></a><a class="cal-cell cal-cell--news" href="./news/2026-05-02/" aria-label="2026-05-02 の配信を開く"><span class="cal-day">2</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-05-03/" aria-label="2026-05-03 の配信を開く (ブックマーク1件)"><span class="cal-day">3</span><span class="cal-count">1</span></a><a class="cal-cell cal-cell--news" href="./news/2026-05-04/" aria-label="2026-05-04 の配信を開く"><span class="cal-day">4</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-05-05/" aria-label="2026-05-05 の配信を開く (ブックマーク2件)"><span class="cal-day">5</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-05-06/" aria-label="2026-05-06 の配信を開く (ブックマーク1件)"><span class="cal-day">6</span><span class="cal-count">1</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-05-07/" aria-label="2026-05-07 の配信を開く (ブックマーク4件)"><span class="cal-day">7</span><span class="cal-count">4</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-05-08/" aria-label="2026-05-08 の配信を開く (ブックマーク2件)"><span class="cal-day">8</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-05-09/" aria-label="2026-05-09 の配信を開く (ブックマーク4件)"><span class="cal-day">9</span><span class="cal-count">4</span></a><a class="cal-cell cal-cell--news" href="./news/2026-05-10/" aria-label="2026-05-10 の配信を開く"><span class="cal-day">10</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-05-11/" aria-label="2026-05-11 の配信を開く (ブックマーク6件)"><span class="cal-day">11</span><span class="cal-count">6</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-05-12/" aria-label="2026-05-12 の配信を開く (ブックマーク10件)"><span class="cal-day">12</span><span class="cal-count">10</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-05-13/" aria-label="2026-05-13 の配信を開く (ブックマーク3件)"><span class="cal-day">13</span><span class="cal-count">3</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-05-14/" aria-label="2026-05-14 の配信を開く (ブックマーク1件)"><span class="cal-day">14</span><span class="cal-count">1</span></a><div class="cal-cell cal-cell--inactive"><span class="cal-day">15</span></div><a class="cal-cell cal-cell--news" href="./news/2026-05-16/" aria-label="2026-05-16 の配信を開く"><span class="cal-day">16</span></a><a class="cal-cell cal-cell--news" href="./news/2026-05-17/" aria-label="2026-05-17 の配信を開く"><span class="cal-day">17</span></a><a class="cal-cell cal-cell--news" href="./news/2026-05-18/" aria-label="2026-05-18 の配信を開く"><span class="cal-day">18</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-05-19/" aria-label="2026-05-19 の配信を開く (ブックマーク3件)"><span class="cal-day">19</span><span class="cal-count">3</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-05-20/" aria-label="2026-05-20 の配信を開く (ブックマーク3件)"><span class="cal-day">20</span><span class="cal-count">3</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-05-21/" aria-label="2026-05-21 の配信を開く (ブックマーク2件)"><span class="cal-day">21</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--news" href="./news/2026-05-22/" aria-label="2026-05-22 の配信を開く"><span class="cal-day">22</span></a><a class="cal-cell cal-cell--news" href="./news/2026-05-23/" aria-label="2026-05-23 の配信を開く"><span class="cal-day">23</span></a><a class="cal-cell cal-cell--news" href="./news/2026-05-24/" aria-label="2026-05-24 の配信を開く"><span class="cal-day">24</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-05-25/" aria-label="2026-05-25 の配信を開く (ブックマーク1件)"><span class="cal-day">25</span><span class="cal-count">1</span></a><a class="cal-cell cal-cell--news" href="./news/2026-05-26/" aria-label="2026-05-26 の配信を開く"><span class="cal-day">26</span></a><a class="cal-cell cal-cell--news" href="./news/2026-05-27/" aria-label="2026-05-27 の配信を開く"><span class="cal-day">27</span></a><div class="cal-cell cal-cell--inactive"><span class="cal-day">28</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">29</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">30</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">31</span></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div></div>
   </div>
   <div class="cal-month" data-month="2026-04" hidden>
     <div class="cal-weekdays"><span>日</span><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span>土</span></div>
@@ -545,6 +536,13 @@ Karpathy的履历：OpenAI联合创始人、Tesla前AI总监（主导Autopilot�
 })();
 </script>
     <ul class="archive-list archive-grid">
+      <li>
+        <span class="date">05.27 TUE</span>
+        <span class="count">06 ITEMS</span>
+        <span class="headline"><a href="./news/2026-05-27/">Anthropic、Claude製品横断のcontainment設計を公開、Supabase、getUser()からgetClaims()への置換で認証確認を高速化 / Codex、コード外の整理・調査・運用タスクにも用途が拡大</a></span>
+        <span class="tags">Anthropic Engineering / Supabase / Greg Brockman / OpenAI Codex / Thariq (@trq212)</span>
+        <span class="arrow">→</span>
+      </li>
       <li>
         <span class="date">05.26 MON</span>
         <span class="count">07 ITEMS</span>
@@ -841,15 +839,15 @@ Karpathy的履历：OpenAI联合创始人、Tesla前AI总监（主导Autopilot�
       </div>
       <div class="about-stats">
         <div class="about-stat">
-          <div class="num">39</div>
+          <div class="num">40</div>
           <div class="lbl">Issues Published</div>
         </div>
         <div class="about-stat">
-          <div class="num">252</div>
+          <div class="num">258</div>
           <div class="lbl">Items Curated</div>
         </div>
         <div class="about-stat">
-          <div class="num">550</div>
+          <div class="num">556</div>
           <div class="lbl">Delivered</div>
         </div>
         <div class="about-stat">
@@ -866,7 +864,7 @@ Karpathy的履历：OpenAI联合创始人、Tesla前AI总监（主导Autopilot�
     <h3>毎朝、<em>続きを。</em></h3>
     <p>毎朝 07:15 JST に最新の配信が並びます。</p>
     <div class="cta-row">
-      <a class="primary" href="./news/2026-05-26/">📄 今日のディスパッチを読む</a>
+      <a class="primary" href="./news/2026-05-27/">📄 今日のディスパッチを読む</a>
       <a href="#archive">📅 過去のアーカイブ</a>
       <a href="#bookmarks">🔖 ブックマーク</a>
     </div>
@@ -889,7 +887,7 @@ Karpathy的履历：OpenAI联合创始人、Tesla前AI总监（主导Autopilot�
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="./">HOME</a></li>
-          <li><a href="./news/2026-05-26/">TODAY</a></li>
+          <li><a href="./news/2026-05-27/">TODAY</a></li>
           <li><a href="./#bookmarks">BOOKMARKS</a></li>
           <li><a href="./#archive">ARCHIVE</a></li>
           <li><a href="./#about">About</a></li>
@@ -906,7 +904,7 @@ Karpathy的履历：OpenAI联合创始人、Tesla前AI总监（主导Autopilot�
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 20260526.0719</span>
+      <span>BUILD 20260527.0724</span>
     </div>
   </div>
 </footer>

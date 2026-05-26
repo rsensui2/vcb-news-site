@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-05-27 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-05-27 の Vibe Coder Bootcamp モーニングディスパッチ — 6本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0527</span>
+    <span class="sep">/</span>
+    <span>2026-05-27</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>06 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260527.0724</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-05-27/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:24 · TUE</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · TUESDAY · MAY 27, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>05<span class="dot">.</span>27</h1>
+    <div class="strap">
+      <span>Anthropic · Supabase · Codex · Claude</span>
+      <span><span class="count">06</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🛡️ エージェント安全設計 <span class="sep">/</span> ANTHROPIC ENGINEERING <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic、Claude製品横断のcontainment設計を公開</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-27/topic_1.png" data-alt="Anthropic、Claude製品横断のcontainment設計を公開" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-27/topic_1.png" alt="Anthropic、Claude製品横断のcontainment設計を公開" />
+      </div>
+      <p class="lede">
+        Anthropicは、AI agentのリスクをユーザー誤用、モデル誤動作、外部攻撃に分け、環境・モデル・外部コンテンツの3層で守るcontainment設計を公開した。人間の承認だけではapproval fatigueが起きるため、sandbox、VM、egress control、tool result inspectionなど、agentが触れる範囲そのものを制限する設計を重視している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">claude.aiはサーバー側の隔離コンテナ、Claude Codeはローカルsandbox、Claude CoworkはローカルVMという異なる隔離パターンを採用している。</li>
+        <li data-i="02">Claude Codeでは許可ダイアログだけに頼ると承認疲れが起きるため、OSレベルsandboxやauto modeを組み合わせる設計が説明された。</li>
+        <li data-i="03">許可済みドメインでも、Files APIのような機能がデータ持ち出し経路になり得るため、allowlistは宛先ではなくcapability grantとして扱うべきだと整理している。</li>
+        <li data-i="04">multi-agent systemでは、sub-agentの出力を高信頼として扱うことでtrust escalationが起きる可能性も指摘している。</li>
+      </ul>
+      <div class="pull">
+        Vibe codingを実務に入れるほど、重要なのはモデル性能だけでなく、agentにどこまで触らせるかの境界設計になる。Bootcampでもsandbox、egress、credential分離、承認疲れを前提にした運用設計を扱う価値が高い。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">793</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.anthropic.com/engineering/how-we-contain-claude">Anthropic Engineering</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>🛡️ エージェント安全設計</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.anthropic.com/engineering/how-we-contain-claude">https://www.anthropic.com/engineering/how-we-contain-claude</a></dd>
+        <dd><a href="https://x.com/AnthropicAI/status/2059351260243919269">x.com/AnthropicAI/status/205935126024391…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · SUPABASE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ⚡ 開発TIPS <span class="sep">/</span> SUPABASE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Supabase、getUser()からgetClaims()への置換で認証確認を高速化</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-27/topic_2.png" data-alt="Supabase、getUser()からgetClaims()への置換で認証確認を高速化" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-27/topic_2.png" alt="Supabase、getUser()からgetClaims()への置換で認証確認を高速化" />
+      </div>
+      <p class="lede">
+        Supabaseは、多くのコードベースで`getUser()`を`getClaims()`に置き換えることで、アプリを高速化しDB/Auth負荷を減らせると案内した。公式ドキュメントでは、`getClaims()`はJWTをJWKSで検証し、JWKSレスポンスがキャッシュされるため、各JWTでAuthサーバーへ問い合わせる`getUser()`より高速になりやすいと説明されている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">`getClaims()`はaccess token内のJWT claimsを`/.well-known/jwks.json`で検証する。</li>
+        <li data-i="02">JWKSレスポンスがキャッシュされるため、毎回Authサーバーへリクエストする`getUser()`より高速になる場面がある。</li>
+        <li data-i="03">asymmetric JWT signing keyを使っていないプロジェクトでは、`getUser()`同様にAuthサーバーへ検証リクエストを送る。</li>
+        <li data-i="04">Next.jsのmiddlewareやserver componentsでユーザー確認が何度も走る構成では効果が出やすい。</li>
+      </ul>
+      <div class="pull">
+        SupabaseはBootcamp作品で頻出するため、認証確認の実装パターンはそのまま体感速度とランニングコストに効く。AIに生成させたコードでも、`getUser()`連打を見つけて置換するレビュー観点として使える。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">509</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/supabase/status/2058919774051053834">@supabase</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-26</dd>
+        <dt>CATEGORY</dt>
+        <dd>⚡ 開発Tips</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/supabase/status/2058919774051053834">x.com/supabase/…</a></dd>
+        <dd><a href="https://supabase.com/docs/reference/javascript/auth-getclaims">supabase.com/docs/reference/javascript/a…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · GREG BROCKMAN / OP</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🤖 AIエージェント活用 <span class="sep">/</span> GREG BROCKMAN / OPENAI CODEX <span class="sep">/</span> NEWS
+      </div>
+      <h2>Codex、コード外の整理・調査・運用タスクにも用途が拡大</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-27/topic_3.png" data-alt="Codex、コード外の整理・調査・運用タスクにも用途が拡大" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-27/topic_3.png" alt="Codex、コード外の整理・調査・運用タスクにも用途が拡大" />
+      </div>
+      <p class="lede">
+        Greg Brockmanは、Codexの自己改善プロンプト、ノートPCの空き容量調査、Slackの分析・整理、iPadでの利用など、コーディング以外の使い方を複数紹介した。OpenAIのCodex CLIはGitHubで公開されており、ローカル端末で動くcoding agentとして、コードだけでなくファイル・ログ・業務データの整理にも使われ始めている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">`self improvement prompt for codex`は3,938 likes / 348 repostsを集め、Codex自身の作業改善ループとして注目された。</li>
+        <li data-i="02">Gregは「laptopの空き容量を探す」「Slackを分析・整理する」「iPadでCodexを使う」といったコード外ユースケースも投稿している。</li>
+        <li data-i="03">`openai/codex`はApache-2.0ライセンスのOSSで、terminalで動くlightweight coding agentと説明されている。</li>
+        <li data-i="04">GitHubリポジトリは2026-05-27時点で85k+ stars規模。</li>
+      </ul>
+      <div class="pull">
+        Codexはコード生成ツールから、ローカル環境や業務データを読み、必要なスクリプトを書いて片付けるagentへ広がっている。Bootcampでは「アプリを作る」だけでなく、調査・整理・検証をagentに任せる型として教えられる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">3,938</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/gdb/status/2058598608224858442">@gdb</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>🤖 AIエージェント活用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/gdb/status/2058598608224858442">x.com/gdb/…</a></dd>
+        <dd><a href="https://github.com/openai/codex">github.com/openai/codex</a></dd>
+        <dd><a href="https://x.com/gdb/status/2059301458873659819">x.com/gdb/status/2059301458873659819</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · THARIQ TRQ212</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 実践ワークフロー <span class="sep">/</span> THARIQ (@TRQ212) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code非技術業務の型は「ファイル + スクリプト + HTML」</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-27/topic_4.png" data-alt="Claude Code非技術業務の型は「ファイル + スクリプト + HTML」" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-27/topic_4.png" alt="Claude Code非技術業務の型は「ファイル + スクリプト + HTML」" />
+      </div>
+      <p class="lede">
+        Thariqは、Claude Codeを非技術業務に使う基本は、フォルダに関連ファイルを置き、スクリプトを書かせ、HTMLで出力させることだと整理した。画像・動画編集、財務/税務、医療相談、書類作成、レポート、計画づくりなども、PDFやデータをフォルダに集めて処理させる形が有効だとしている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">非技術業務でも、agentに十分なファイルコンテキストを渡すことが重要。</li>
+        <li data-i="02">MarkdownよりHTMLで出す方が、構造化・視認性・成果物化に向く場面がある。</li>
+        <li data-i="03">GmailやGoogle Calendarなどのconnectorを加えると、業務文脈をさらに渡せる。</li>
+        <li data-i="04">現状では、agentの動き方を想像できる技術者ほどこの型を使いやすいという留保もある。</li>
+      </ul>
+      <div class="pull">
+        受講者が欲しいのはコード生成だけではなく、既存業務をAIで片付ける実務力。フォルダ・スクリプト・HTMLという型は、講義資料、請求、議事録、調査レポートの自動化にそのまま使える。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">933</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/trq212/status/2059363113963540788">@trq212</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-27</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 実践ワークフロー</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/trq212/status/2059363113963540788">x.com/trq212/…</a></dd>
+        <dd><a href="https://x.com/trq212/status/2059363115146395965">x.com/trq212/status/2059363115146395965</a></dd>
+        <dd><a href="https://x.com/trq212/status/2059363116316598739">x.com/trq212/status/2059363116316598739</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · DHRUV DHRUVTWT</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🧩 マルチエージェント基盤 <span class="sep">/</span> DHRUV (@DHRUVTWT_) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>AI agent orchestration tools、harness aggregatorレイヤーに注目</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-27/topic_5.png" data-alt="AI agent orchestration tools、harness aggregatorレイヤーに注目" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-27/topic_5.png" alt="AI agent orchestration tools、harness aggregatorレイヤーに注目" />
+      </div>
+      <p class="lede">
+        Dhruvは、Superset、DP Code、Emdash、Letta、Conductor、Airを「一度は試す価値があるAI agent orchestration tools」として紹介した。これらは既存のAIツールの上に載るharness aggregator / Agentic Development Environmentとして、複数agent workflowの実行・管理・比較を担うレイヤーに位置づけられる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">紹介されたツールはSuperset、DP Code、Emdash、Letta、Conductor、Airの6つ。</li>
+        <li data-i="02">単体のcoding assistantではなく、複数agentを束ねるorchestration / harnessレイヤーの話題。</li>
+        <li data-i="03">Claude Code Workflow、Cursor /orchestrate、Anthropic Managed Agentsと同じ「複数agentをどう運用するか」の文脈に接続する。</li>
+        <li data-i="04">関連リンクとしてsuperset.sh、dpcode.cc、emdash.sh、letta.com、conductor.buildが挙げられている。</li>
+      </ul>
+      <div class="pull">
+        AI codingの競争軸は、単体モデルやIDEから複数agentを安全に走らせるorchestration基盤へ移りつつある。Bootcampでも「どのagentを使うか」だけでなく「どう束ねて検証するか」を教える価値がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">400</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/dhruvtwt_/status/2050966491731038598">@dhruvtwt_</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-03</dd>
+        <dt>CATEGORY</dt>
+        <dd>🧩 マルチエージェント基盤</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/dhruvtwt_/status/2050966491731038598">x.com/dhruvtwt_/…</a></dd>
+        <dd><a href="https://superset.sh">superset.sh</a></dd>
+        <dd><a href="https://letta.com">letta.com</a></dd>
+        <dd><a href="https://conductor.build">conductor.build</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · TAKAHIROANNO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🏛️ AIリーダーシップ <span class="sep">/</span> 安野貴博＠チームみらい (@TAKAHIROANNO) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>政治トップもAIを使い倒すべき、安野貴博氏が党首討論で提言</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-27/topic_6.png" data-alt="政治トップもAIを使い倒すべき、安野貴博氏が党首討論で提言" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-27/topic_6.png" alt="政治トップもAIを使い倒すべき、安野貴博氏が党首討論で提言" />
+      </div>
+      <p class="lede">
+        安野貴博氏は党首討論で、AIは安全保障、経済、エネルギー、教育、外交、医療など広範な領域に影響するため、政治家が過小評価すべきではないと提言した。シンガポールのヴィヴィアン外相がNanoClawで自作AIエージェントを業務活用している例を挙げ、トップ自身がAIを使い倒して解像度を上げる必要があると述べた。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">安野氏は、政治家自身がAIを使い倒して体感する必要があると主張。</li>
+        <li data-i="02">例として、シンガポールのヴィヴィアン外相がNanoClawで自作AIエージェントを構築し業務活用している事例を紹介。</li>
+        <li data-i="03">総理からは、AIを検索や翻訳に活用しており、AIを重要な政治課題と捉えているという回答があった。</li>
+        <li data-i="04">トップのAIリテラシーが、組織や国のAI導入速度を左右するという示唆がある。</li>
+      </ul>
+      <div class="pull">
+        AI活用は現場ツール導入だけでなく、意思決定者自身の体験値に左右される。企業でも行政でも、トップがagentを使って業務解像度を上げることが導入の前提になりつつある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">4,608</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/takahiroanno/status/2057104936593449182">@takahiroanno</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-20</dd>
+        <dt>CATEGORY</dt>
+        <dd>🏛️ AIリーダーシップ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/takahiroanno/status/2057104936593449182">x.com/takahiroanno/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="#" aria-disabled="true">📄 PDFをダウンロード</a>
+    <a href="https://www.anthropic.com/engineering/how-we-contain-claude">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-05-26/">
+      ← 前日 · 2026-05-26
+      <span class="big">TrapDoor: npm / PyPI / Crates.io 横断の供給網攻撃が拡大</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-05-27/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260527.0724</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-05-28 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-05-28 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0528</span>
+    <span class="sep">/</span>
+    <span>2026-05-28</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260528.0725</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-05-28/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:25 · WED</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · WEDNESDAY · MAY 28, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>05<span class="dot">.</span>28</h1>
+    <div class="strap">
+      <span>Merge · OpenAI: · OpenAI · OpenRouter:</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 5 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 AIインフラ/LLMルーティング <span class="sep">/</span> MERGE / SHENSI DING <span class="sep">/</span> NEWS
+      </div>
+      <h2>Merge Gateway: LLMルーティングを自社ロジックで制御</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-28/topic_1.png" data-alt="Merge Gateway: LLMルーティングを自社ロジックで制御" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-28/topic_1.png" alt="Merge Gateway: LLMルーティングを自社ロジックで制御" />
+      </div>
+      <p class="lede">
+        Merge は Merge Gateway の Build Your Own Router を発表し、LLM の選択ロジックを開発者が自社要件に合わせて定義できるようにした。公式ブログでは、法務文書の要約とリアルタイム coding assistant では最適なモデルが違う例を挙げ、用途別 routing の必要性を説明している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Merge Gateway は production AI の control plane として位置づけられている</li>
+        <li data-i="02">Build Your Own Router により、モデル選択や経路選択の logic を開発者が制御できる</li>
+        <li data-i="03">用途・コスト・遅延・品質に応じて LLM を切り替える前提の設計</li>
+        <li data-i="04">coding assistant / agentic workflow が複数モデル前提になり、router / gateway の重要性が上がっている</li>
+      </ul>
+      <div class="pull">
+        Vibe coding の実務では、強いモデルを常時使うより、タスクごとに速い・安い・強いモデルを切り替える方が現実的になる。モデル選択をプロンプトではなくインフラ設計として扱う流れが強まっている。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,046</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.merge.dev/blog/gateway-build-your-own-router">Merge / Shensi Ding</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-26</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 AIインフラ/LLMルーティング</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.merge.dev/blog/gateway-build-your-own-router">https://www.merge.dev/blog/gateway-build-your-own-router</a></dd>
+        <dd><a href="https://x.com/shensi/status/2059273388871516650">x.com/shensi/status/2059273388871516650</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · OPENAI DEVELOPERS </span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔐 MCP/ENTERPRISE SECURITY <span class="sep">/</span> OPENAI DEVELOPERS / OPENAI HELP CENTER <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI: Private MCP と enterprise 管理機能を拡張</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-28/topic_2.png" data-alt="OpenAI: Private MCP と enterprise 管理機能を拡張" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-28/topic_2.png" alt="OpenAI: Private MCP と enterprise 管理機能を拡張" />
+      </div>
+      <p class="lede">
+        OpenAI Developers は、Private MCP servers、Workload Identity Federation、Admin API 拡張を同日に案内した。OpenAI Help Center では、Secure MCP Tunnel により private network、on-premises、developer machine 上の MCP server を公開インターネットに出さずに OpenAI products と接続できると説明している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Enterprise / Edu の developer mode では非公開 MCP apps をアップロード・テストできる</li>
+        <li data-i="02">Secure MCP Tunnel により private MCP server を public exposure なしで接続できる</li>
+        <li data-i="03">Workload Identity Federation は OpenAI API platform に cloud-based identity を持ち込む方向の機能</li>
+        <li data-i="04">Admin API 拡張は enterprise が OpenAI projects を programmatic に管理する用途に効く</li>
+        <li data-i="05">MCP は便利な連携ではなく、IAM・監査・ネットワーク境界の設計対象になっている</li>
+      </ul>
+      <div class="pull">
+        社内ツールを agent に触らせると、MCP server の配置、認証、権限、監査がそのままセキュリティ設計になる。VBC でも MCP を「つなぐ」だけでなく「どこまで触らせるか」まで教える必要がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,377</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2059703536825565499">@OpenAIDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-27</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔐 MCP/Enterprise Security</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2059703536825565499">x.com/OpenAIDevs/…</a></dd>
+        <dd><a href="https://help.openai.com/en/articles/12584461-developer-mode-and-mcp-apps-in-chatgpt">help.openai.com/en/articles/12584461-dev…</a></dd>
+        <dd><a href="https://platform.openai.com/docs/mcp/">platform.openai.com/docs/mcp/</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · OPENAI / THRIVE HO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 CODEX/業務AGENT <span class="sep">/</span> OPENAI / THRIVE HOLDINGS <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI / Thrive: Codexで自己改善する Tax AI を構築</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-28/topic_3.png" data-alt="OpenAI / Thrive: Codexで自己改善する Tax AI を構築" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-28/topic_3.png" alt="OpenAI / Thrive: Codexで自己改善する Tax AI を構築" />
+      </div>
+      <p class="lede">
+        OpenAI は Thrive Holdings と共同で、Crete の会計士向け Tax AI を構築した事例を公開した。記事では、税務実務者の専門知識と Codex-driven loop を組み合わせ、eval-backed engineering systems で改善を本番投入前に検証する self-improving flow を説明している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Tax AI は税務専門家の知見と Codex-driven loop を組み合わせて作られた</li>
+        <li data-i="02">改善は eval-backed engineering systems で検証されてから production に入る</li>
+        <li data-i="03">agent-powered loop により、システムが継続的に改善される設計</li>
+        <li data-i="04">OpenAI と Thrive Holdings の enterprise AI adoption 文脈に接続する実装事例</li>
+        <li data-i="05">単発生成ではなく、専門家レビュー・eval・改善ループを含む業務 agent の例になっている</li>
+      </ul>
+      <div class="pull">
+        業務 agent は「作って終わり」ではなく、評価と改善ループを持つことで実運用に近づく。Bootcamp の卒業制作でも、業務知識をどう検証し続けるかを設計に入れるべき。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">779</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://openai.com/index/building-self-improving-tax-agents-with-codex/">OpenAI / Thrive Holdings</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-27</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 Codex/業務Agent</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://openai.com/index/building-self-improving-tax-agents-with-codex/">https://openai.com/index/building-self-improving-tax-agents-with-codex/</a></dd>
+        <dd><a href="https://x.com/OpenAIDevs/status/2059638868983562640">x.com/OpenAIDevs/status/2059638868983562…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · TECHCRUNCH / OPENR</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 AIインフラ/資金調達 <span class="sep">/</span> TECHCRUNCH / OPENROUTER <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenRouter: $113M調達、AI gateway市場がユニコーン級へ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-28/topic_4.png" data-alt="OpenRouter: $113M調達、AI gateway市場がユニコーン級へ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-28/topic_4.png" alt="OpenRouter: $113M調達、AI gateway市場がユニコーン級へ" />
+      </div>
+      <p class="lede">
+        TechCrunch は、OpenRouter が CapitalG lead の Series B で $113M を調達し、評価額が約 $1.3B になったと報じた。OpenRouter は複数モデルにアクセスする gateway / marketplace として使われ、AI 利用が inference と agent に広がる中で、モデル横断レイヤーがインフラとして評価されている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">調達額は $113M Series B、lead は Alphabet の growth fund である CapitalG</li>
+        <li data-i="02">New York Times 報道ベースで post-money valuation は約 $1.3B</li>
+        <li data-i="03">2025年6月の Series A 後の推定 $547M valuation から約 1 年で 2 倍超</li>
+        <li data-i="04">OpenRouter は 400+ models を扱う gateway / marketplace として言及されている</li>
+        <li data-i="05">複数モデルを束ねる router / marketplace が独立した事業価値を持ち始めている</li>
+      </ul>
+      <div class="pull">
+        frontier model そのものだけでなく、モデルを選び、ルーティングし、フォールバックする層が事業化している。VBC でも「どのモデルか」より「どう選び、観測し、切り替えるか」が重要になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">94</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://techcrunch.com/2026/05/26/openrouter-more-than-doubles-valuation-to-1-3b-in-a-year/">TechCrunch / OpenRouter</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-26</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 AIインフラ/資金調達</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://techcrunch.com/2026/05/26/openrouter-more-than-doubles-valuation-to-1-3b-in-a-year/">https://techcrunch.com/2026/05/26/openrouter-more-than-doubles-valuation-to-1-3b-in-a-year/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · FARSTEP FARSTEP</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 DB設計/イベントモデリング <span class="sep">/</span> FARSTEP (@FARSTEP_) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>DB設計: 状態カラムではなく出来事を保存する</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-28/topic_5.png" data-alt="DB設計: 状態カラムではなく出来事を保存する" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-28/topic_5.png" alt="DB設計: 状態カラムではなく出来事を保存する" />
+      </div>
+      <p class="lede">
+        farstep 氏は、RDB で status、退会フラグ、論理削除フラグのような「状態」を上書き保存すると、いつ・なぜ状態が変わったかの事実が失われると整理した。代替案として、入会・停止・復帰・退会などの出来事をイベントテーブルに INSERT する設計、または状態ごとにテーブルを分ける設計を挙げている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">状態は事実そのものではなく、出来事から導出される加工情報</li>
+        <li data-i="02">status を UPDATE すると、停止・復帰・退会などの経緯が失われる</li>
+        <li data-i="03">退会や公開停止はドメイン上の出来事であり、論理削除という業務用語ではない</li>
+        <li data-i="04">イベントテーブル方式は履歴を残せるが、最新状態取得の性能設計が必要</li>
+        <li data-i="05">状態別テーブル方式は絞り込みを単純にできるが、排他性と遷移履歴の担保が必要</li>
+      </ul>
+      <div class="pull">
+        受講者作品では status カラムや論理削除が雑に増えがち。運用・監査・問い合わせ対応を考えるなら、状態ではなく事実を残す設計を早い段階で教える価値がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">6,947</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/farstep_/status/2059407531869675888">@farstep_</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-26</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 DB設計/イベントモデリング</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/farstep_/status/2059407531869675888">x.com/farstep_/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · BEKUAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 AI活用/NOTEBOOKLM <span class="sep">/</span> ベク (@BEKU_AI) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>NotebookLM: 出力深度・参照範囲・ノートソース化で化ける</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-28/topic_6.png" data-alt="NotebookLM: 出力深度・参照範囲・ノートソース化で化ける" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-28/topic_6.png" alt="NotebookLM: 出力深度・参照範囲・ノートソース化で化ける" />
+      </div>
+      <p class="lede">
+        ベク氏は、NotebookLM の出力品質を上げるための実務 Tips として、出力の深度指定、参照ソースのドラッグ&amp;ドロップ指定、チャット経由の Studio 起動、資料同士の比較、ノートのソース化を整理した。NotebookLM を単なる要約ツールではなく、資料比較や提案最適化まで行う調査基盤として扱う内容になっている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">「長く書いて」ではなく、見出し・引用元・網羅性など構造と粒度を指定する</li>
+        <li data-i="02">ソースが多い時は、対象ソースをチャット欄へドラッグ&amp;ドロップして参照範囲を絞れる</li>
+        <li data-i="03">Studio 機能はボタンだけでなく、チャット指示からターゲットやトーンつきで起動できる</li>
+        <li data-i="04">立場の違う資料を入れて矛盾点を洗い出す比較用途に向く</li>
+        <li data-i="05">保存したノートをソース化すると、過去の分析を次の質問に積み上げられる</li>
+      </ul>
+      <div class="pull">
+        NotebookLM を「資料を入れて要約する箱」で終わらせず、出力設計と参照設計を教えると、調査・教材化・提案準備の品質が上がる。VBC の資料読解ワークにもそのまま使える。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">732</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/beku_AI/status/2059408611043082624">@beku_AI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-26</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 AI活用/NotebookLM</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/beku_AI/status/2059408611043082624">x.com/beku_AI/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · SHINAI SHINSASAKI1</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📖 AIワークフロー/レビュー <span class="sep">/</span> SHIN丨AI×プロダクト開発の専門家 (@SHIN_SASAKI19) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>AI活用: 出力役とレビュー役を分ける</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-28/topic_7.png" data-alt="AI活用: 出力役とレビュー役を分ける" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-28/topic_7.png" alt="AI活用: 出力役とレビュー役を分ける" />
+      </div>
+      <p class="lede">
+        Shin 氏は、AI に生成と自己評価を同じ文脈で同時に任せると、自分の直前の出力を肯定しやすくなると指摘した。まず生成に集中させ、その後に別スレッド・別役割・別評価軸で厳しくレビューさせることで、前提ズレや根拠不足を見つけやすくなるという実務論だ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">生成とレビューは思考の向きが反対で、人間でも AI でも同時実行に弱い</li>
+        <li data-i="02">レビュー時は新しい文脈で「第三者の厳しいレビュアー」として役割を与える</li>
+        <li data-i="03">評価軸は怪しい前提、根拠の十分性、読者がつまずく箇所などを明示する</li>
+        <li data-i="04">要件定義では、ユーザー発話という事実と AI が補った解釈の境界を引ける</li>
+        <li data-i="05">エージェント設計では生成役と批評役の分離が品質担保の基本形になる</li>
+      </ul>
+      <div class="pull">
+        AI で作業が速くなるほど、流暢だが前提がズレた成果物のリスクが増える。出力とレビューを分ける型は、個人のプロンプトから複数 agent の設計まで使える基本動作になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">159</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/shin_sasaki19/status/2059211948131328399">@shin_sasaki19</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-26</dd>
+        <dt>CATEGORY</dt>
+        <dd>📖 AIワークフロー/レビュー</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/shin_sasaki19/status/2059211948131328399">x.com/shin_sasaki19/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · GHUNTLEY / DAN KOR</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🎓 AGENT開発教材 <span class="sep">/</span> GHUNTLEY / DAN KORNAS <span class="sep">/</span> NEWS
+      </div>
+      <h2>coding agent を loop から作る OSS 教材が再注目</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-28/topic_8.png" data-alt="coding agent を loop から作る OSS 教材が再注目" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-28/topic_8.png" alt="coding agent を loop から作る OSS 教材が再注目" />
+      </div>
+      <p class="lede">
+        Dan Kornas が、ghuntley/how-to-build-a-coding-agent を「高レベルな説明ではなく loop から始める教材」として紹介した。リポジトリは、Go と Claude API を使い、チャットからファイル操作、コード検索、shell 実行へ段階的に coding agent を作る workshop として参照されている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">how-to-build-a-coding-agent は coding agent を自作する workshop リポジトリ</li>
+        <li data-i="02">中心は agent loop、tool integration、file system access、code search、shell execution</li>
+        <li data-i="03">SourcePulse では 4,500+ stars、Trendshift では 5,600+ stars 規模として観測されている</li>
+        <li data-i="04">Roo Code、Cline、Amp、Cursor、Windsurf、OpenCode など既存 coding assistant の構造理解に使える</li>
+        <li data-i="05">coding agent を「使う人」から「harness を設計できる人」へ進む教材になる</li>
+      </ul>
+      <div class="pull">
+        AI coding agent をブラックボックスで使うだけでは、失敗時に設計を直せない。loop と tool call の構造を自作で理解する教材は、VBC の上級カリキュラムに向いている。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">27</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/ghuntley/how-to-build-a-coding-agent">ghuntley / Dan Kornas</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-26</dd>
+        <dt>CATEGORY</dt>
+        <dd>🎓 Agent開発教材</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/ghuntley/how-to-build-a-coding-agent">https://github.com/ghuntley/how-to-build-a-coding-agent</a></dd>
+        <dd><a href="https://www.sourcepulse.org/projects/12782495">www.sourcepulse.org/projects/12782495</a></dd>
+        <dd><a href="https://trendshift.io/repositories/24704">trendshift.io/repositories/24704</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://www.merge.dev/blog/gateway-build-your-own-router">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-05-27/">
+      ← 前日 · 2026-05-27
+      <span class="big">Anthropic、Claude製品横断のcontainment設計を公開</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-05-28/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260528.0725</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

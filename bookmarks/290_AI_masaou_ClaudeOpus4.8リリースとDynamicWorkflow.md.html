@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ClaudeOpus4.8がリリース！更に『Dynamic Workflow』の新機能など — まさお@AI駆動開発 — Bookmarks · Vibe Coder Bootcamp</title>
+  <meta name="description" content="Opus 4.8 のリリースを日本語で詳説した X Article。結論は「同じ料金で賢くなった Opus 4.7」。新機能の effort control / dynamic workflows / fast mode、ベンチマーク改善、そして「正直さ」（虚偽の進捗報告の抑制）" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+  /* Archive page — day sections */
+  .bm-archive { padding: 0 0 40px; background: var(--paper); }
+  .bm-day {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--hair);
+  }
+  .bm-day:first-of-type { padding-top: 40px; }
+  .bm-day-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+  .bm-day-head .date {
+    font-family: "Shippori Mincho B1", "Noto Serif JP", serif;
+    font-weight: 800;
+    font-size: clamp(40px, 6vw, 72px);
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin: 0;
+  }
+  .bm-day-head .date .sep { color: var(--accent); margin: 0 2px; }
+  .bm-day-head .count {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding: 8px 14px;
+    border: 1px solid var(--accent);
+    white-space: nowrap;
+  }
+  /* active nav underline */
+  .masthead nav a.is-active { border-bottom-color: var(--accent); color: var(--accent); }
+
+  /* Article page — prose */
+  .bm-article-head {
+    padding: 48px 0 40px;
+    border-bottom: 1px solid var(--hair);
+  }
+  .bm-article-head .breadcrumb {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mute);
+    margin-bottom: 18px;
+  }
+  .bm-article-head .breadcrumb a { color: var(--ink); border-bottom: 1px solid var(--hair); padding-bottom: 1px; }
+  .bm-article-head .breadcrumb a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  .bm-article-head .cat-line {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .bm-article-head .cat-line .sep { color: var(--mute); }
+  .bm-article-head h1.title {
+    font-family: "Shippori Mincho B1", "Noto Serif JP", serif;
+    font-weight: 800;
+    font-size: clamp(32px, 4.4vw, 58px);
+    line-height: 1.12;
+    letter-spacing: -0.005em;
+    margin: 0 0 24px;
+    color: var(--ink);
+  }
+  .bm-article-head .strap {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--mute);
+  }
+  .bm-article-head .strap span .label { color: var(--accent); margin-right: 6px; }
+  .bm-article-head .strap a { border-bottom: 1px solid var(--hair); padding-bottom: 2px; }
+  .bm-article-head .strap a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  .bm-body { padding: 72px 0; border-bottom: 1px solid var(--hair); }
+  .bm-body .container {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr) 300px;
+    gap: 48px;
+  }
+  .bm-body .numeral {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 96px;
+    font-weight: 800;
+    line-height: 0.85;
+    color: var(--ink);
+    position: sticky;
+    top: 40px;
+    align-self: start;
+    letter-spacing: -0.03em;
+  }
+  .bm-body .numeral .ord {
+    display: block;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.14em;
+    margin-top: 14px;
+    font-weight: 500;
+  }
+  .bm-body .prose {
+    font-size: 16px;
+    line-height: 1.9;
+    color: var(--ink-soft);
+    font-family: "Inter", "Noto Sans JP", sans-serif;
+  }
+  .bm-body .prose > *:first-child { margin-top: 0; }
+  .bm-body .prose h1 {
+    font-family: "Shippori Mincho B1", serif;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 1.25;
+    margin: 40px 0 18px;
+    color: var(--ink);
+  }
+  .bm-body .prose h2 {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 40px 0 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+  }
+  .bm-body .prose h2::before {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: var(--accent);
+  }
+  .bm-body .prose h3 {
+    font-family: "Shippori Mincho B1", serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.35;
+    margin: 32px 0 14px;
+    color: var(--ink);
+  }
+  .bm-body .prose p { margin: 0 0 18px; }
+  .bm-body .prose ul, .bm-body .prose ol {
+    border-left: 2px solid var(--ink);
+    padding: 4px 0 4px 24px;
+    margin: 18px 0 24px;
+    list-style: none;
+  }
+  .bm-body .prose ul li, .bm-body .prose ol li {
+    position: relative;
+    padding: 4px 0 4px 18px;
+    font-size: 15px;
+  }
+  .bm-body .prose ul li::before {
+    content: "·";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1;
+  }
+  .bm-body .prose blockquote {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 19px;
+    line-height: 1.6;
+    padding: 18px 0 18px 24px;
+    border-left: 4px solid var(--accent);
+    margin: 28px 0;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .bm-body .prose pre {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 18px 20px;
+    overflow-x: auto;
+    margin: 20px 0;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    line-height: 1.65;
+  }
+  .bm-body .prose code {
+    background: var(--paper-deep);
+    border: 1px solid var(--hair);
+    padding: 1px 6px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.9em;
+  }
+  .bm-body .prose pre code { background: transparent; border: 0; padding: 0; color: inherit; font-size: 13px; }
+  .bm-body .prose a { color: var(--accent); border-bottom: 1px solid rgba(200,52,31,0.25); }
+  .bm-body .prose a:hover { border-bottom-color: var(--accent); }
+
+  .bm-body .side {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: var(--mute);
+    border-top: 1px solid var(--hair);
+    padding-top: 24px;
+    position: sticky;
+    top: 40px;
+    align-self: start;
+  }
+  .bm-body .side dl { margin: 0; }
+  .bm-body .side dt {
+    color: var(--accent);
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-top: 18px;
+    margin-bottom: 6px;
+  }
+  .bm-body .side dt:first-child { margin-top: 0; }
+  .bm-body .side dd {
+    margin: 0 0 4px;
+    color: var(--ink);
+    word-break: break-all;
+    font-size: 12.5px;
+    line-height: 1.6;
+  }
+  .bm-body .side dd a { border-bottom: 1px solid var(--hair); padding-bottom: 1px; }
+  .bm-body .side dd a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  .bm-body .side .stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 18px;
+    margin-top: 8px;
+  }
+  .bm-body .side .stats .stat .num {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 24px;
+    color: var(--ink);
+    line-height: 1;
+    font-weight: 800;
+    display: block;
+  }
+  .bm-body .side .stats .stat .lab {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--mute);
+    margin-top: 4px;
+    display: block;
+    text-transform: uppercase;
+  }
+
+  /* card: stretched-link target must be local nav, not external */
+  .xcard .xcard-main-link { cursor: pointer; }
+
+  @media (max-width: 980px) {
+    .bm-body .container { grid-template-columns: 1fr; gap: 24px; }
+    .bm-body .numeral { position: static; font-size: 64px; }
+    .bm-body .side { position: static; }
+    .bm-day-head .date { font-size: 36px; }
+  }
+</style>
+</head>
+<body>
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">BOOKMARK №003</span>
+    <span class="sep">/</span>
+    <span>2026-05-28</span>
+    <span class="sep">/</span>
+    <span>@AI_masaou</span>
+    <span class="sep">/</span>
+    <span>356 ITEMS</span>
+    <span class="sep">/</span>
+    <span>JST 08:42 FRI</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+<header class="masthead">
+  <div class="container row">
+    <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
+    <nav>
+      <a href="../">HOME</a>
+      <a href="../news/2026-05-28/">NEWS</a>
+      <a href="./" class="is-active">BOOKMARKS</a>
+      <a href="../#archive">ARCHIVE</a>
+      <a href="../#about">ABOUT</a>
+    </nav>
+    <div class="meta">JST · 08:42 · FRI</div>
+  </div>
+</header>
+
+<section class="bm-article-head">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-05-28 <span>/</span> №003
+    </div>
+    <div class="cat-line">
+      <span>💻 AI/開発ツール</span>
+      <span class="sep">·</span><span>まさお@AI駆動開発 <span style="opacity:.7">@AI_masaou</span></span>
+      <span class="sep">·</span><span>2026-05-28</span>
+    </div>
+    <h1 class="title">ClaudeOpus4.8がリリース！更に『Dynamic Workflow』の新機能など — まさお@AI駆動開発</h1>
+    <div class="strap">
+      <span><span class="label">№</span>003 / 356</span>
+      <span><span class="label">SRC</span><a href="https://x.com/AI_masaou/status/2060065099197689973" target="_blank" rel="noopener noreferrer">x.com/AI_masaou ↗</a></span>
+      <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/290_AI_masaou_ClaudeOpus4.8%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%81%A8DynamicWorkflow.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
+    </div>
+  </div>
+</section>
+
+<section class="bm-body">
+  <div class="container">
+    <aside class="numeral">003<span class="ord">BOOKMARK / 356</span></aside>
+    <article class="prose">
+<p><strong>記事URL:</strong> https://x.com/i/article/2060061191821733888</p><p><strong>エンゲージメント:</strong> 1返信 / 15リポスト / 128いいね / 109ブックマーク / 32,359表示</p><p><strong>カテゴリ:</strong> 💻 AI/開発ツール</p><p><strong>有益度:</strong> ⭐⭐⭐⭐</p><h2>概要</h2><p>Opus 4.8 のリリースを日本語で詳説した X Article。結論は「同じ料金で賢くなった Opus 4.7」。新機能の effort control / dynamic workflows / fast mode、ベンチマーク改善、そして「正直さ」（虚偽の進捗報告の抑制）の向上を解説している。</p><h2>X Article 本文</h2><p>ClaudeOpus4.8がリリース！更に『Dynamic Workflow』の新機能など</p><p>まず 結論から言うと、Opus 4.8 は「同じ料金で賢くなった Opus 4.7」。</p><p>コーディング・自律タスク・専門知識作業の全方位で benchmark が上がり、長時間回り続ける仕事 (= long-running、夜通しの移行作業のような長丁場) を最後までやり切る一貫性が増した。</p><p>公式も、控えめだが確かな改善と言い切っている。</p><p>今回新しくなったのは ① effort control (Claude にどれだけ考えさせるか選べる) ② dynamic workflows (数百のサブエージェントを並列で走らせる) ③ fast mode (2.5 倍速モードが従来の 3 分の 1 の価格に)</p><p>前世代 Opus 4.7 を全項目で上回る。たとえば実務寄りのコーディング (SWE-Bench Pro) は 64.3% から 69.2% へ、知識作業の総合スコア (GDPval-AA) は 1753 から 1890 へ伸びた。</p><p>一番の進化は「正直さ」</p><p>AI の一番こわい失敗は「嘘の進捗報告」。証拠が薄いのに自信ありげに「直しました」と言い切るこの癖を 4.8 は明確に減らした。公式の評価では、自分が書いたコードの欠陥を見逃して素通りさせる確率が、前世代の約 4 分の 1 になった。不確実なところには自分から旗を立て、断定を避けるようになっている。</p><p>安全性の事前評価でも、人をだます・悪用に手を貸すといった誤った振る舞いが 4.7 より大幅に少なく、最も整った社内モデル (Claude Mythos Preview) に並ぶ水準だった。</p><p>Dynamic workflows</p><p>計画する — 大仕事を小タスクへ自分で分解する。</p><p>並列で走らせる — 数百のサブエージェントが同時に処理する (4.8 ではより長く回り続けられる)。</p><p>自分で検証する — 結果をまとめる前に出力を点検する。</p><p>報告する — 検証を通ったものだけを人に返す。</p><p>Claude Code の新機能 dynamic workflows は、これまで人が手で分割していた大仕事を Claude 自身に任せる仕組み。例えば deep-research コマンドも登場している。</p><p>effort control</p><p>「Claude にどれだけ考えさせるか」を選ぶつまみ。claude.ai と Cowork でモデル選択の隣に現れ、全プランで使える。default は high で、品質と体感のいちばん良いバランス。コーディングでは Opus 4.7 の default とほぼ同じトークン量で性能だけ上がる。</p><p>開発者向けには Messages API がやり取りの途中に system エントリを差し込めるようになり、prompt cache を壊さず権限・トークン予算・環境の前提を途中更新できる。</p><p>価格</p><p>Opus 4.7 から据え置き。fast mode は 2.5 倍速で従来モデルの 3 分の 1 の価格。</p><p>筆者の感想（要約）</p><p>メタ認知能力が高く、今までと問題解決の思考が違う。議論が強く、token は溶けるのでコスパは別問題。opus が好きだった人がさらに好きになる印象。</p>
+    </article>
+    <aside class="side">
+      <dl>
+        <dt>AUTHOR</dt><dd>まさお@AI駆動開発</dd>
+        <dt>HANDLE</dt><dd>@AI_masaou</dd>
+        <dt>POSTED</dt><dd>2026-05-28</dd>
+        <dt>CATEGORY</dt><dd>💻 AI/開発ツール</dd>
+        <dt>SOURCE</dt><dd><a href="https://x.com/AI_masaou/status/2060065099197689973" target="_blank" rel="noopener noreferrer">x.com/AI_masaou/status/2060065099197689973…</a></dd>
+        <dt>MARKDOWN</dt><dd><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/290_AI_masaou_ClaudeOpus4.8%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%81%A8DynamicWorkflow.md" target="_blank" rel="noopener noreferrer">GitHub で原文を見る</a></dd>
+        
+        <dt>ENGAGEMENT</dt>
+        <dd>
+          <div class="stats">
+            <div class="stat"><span class="num">128</span><span class="lab">LIKES</span></div><div class="stat"><span class="num">15</span><span class="lab">RTS</span></div><div class="stat"><span class="num">109</span><span class="lab">BMARKS</span></div><div class="stat"><span class="num">32.4K</span><span class="lab">VIEWS</span></div>
+          </div>
+        </dd>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn prev" href="./291_claudeai_Claude_Opus_4.8%E3%82%92%E7%99%BA%E8%A1%A8.md.html">
+      <span>← 新しいブックマーク</span>
+      <span class="big">Claude Opus 4.8 を発表 — Claude (公式)</span>
+    </a>
+    <a class="btn next" href="./289_MLBear2_Opus4.8%E5%90%91%E3%81%91%E3%83%97%E3%83%AD%E3%83%B3%E3%83%97%E3%83%88%E3%82%AC%E3%82%A4%E3%83%89%E3%81%AE%E7%89%B9%E6%80%A7%E3%81%BE%E3%81%A8%E3%82%81.md.html">
+      <span>古いブックマーク →</span>
+      <span class="big">Opus 4.8 向けプロンプトガイドの特性まとめ — ML_Bear</span>
+    </a>
+  </div>
+</section>
+
+<section class="actions">
+  <div class="container">
+    <a href="./">← 一覧へ戻る</a>
+    <a class="primary" href="https://x.com/AI_masaou/status/2060065099197689973" target="_blank" rel="noopener noreferrer">元ポストを X で見る</a>
+    <a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/290_AI_masaou_ClaudeOpus4.8%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%81%A8DynamicWorkflow.md" target="_blank" rel="noopener noreferrer">GitHub で開く</a>
+  </div>
+</section>
+
+<footer class="foot" id="about">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">Vibe Coder Bootcamp</div>
+        <p>
+          AI の新しい動きを毎朝整理して、Vibe Coder が今日使える形で届けるフィード。
+          運営は泉水亮介。Slackコミュニティと連動した公開ログです。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          BOOKMARKS ARCHIVE · 356 ITEMS · EN+JP
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../">HOME</a></li>
+          <li><a href="../news/2026-05-28/">TODAY</a></li>
+          <li><a href="./">BOOKMARKS</a></li>
+          <li><a href="../#archive">ARCHIVE</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>SUBSCRIBE</h5>
+        <ul>
+          <li><a href="#">Slack に参加</a></li>
+          <li><a href="#">RSS</a></li>
+          <li><a href="#">X で購読</a></li>
+          <li><a href="#">メール通知</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://github.com/rsensui2/vibe-coder-demo">GitHub</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Colophon</a></li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 2026-05-29</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-05-29 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-05-29 の Vibe Coder Bootcamp モーニングディスパッチ — 5本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0529</span>
+    <span class="sep">/</span>
+    <span>2026-05-29</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>05 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260529.0853</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-05-29/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 08:53 · THU</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · THURSDAY · MAY 29, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>05<span class="dot">.</span>29</h1>
+    <div class="strap">
+      <span>Claude · Opus · Cursor · エージェント時代は</span>
+      <span><span class="count">05</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        新モデル発表 <span class="sep">/</span> CLAUDE (@CLAUDEAI) / CLAUDEDEVS / まさお@AI駆動開発 <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Claude Opus 4.8 発表 — 同価格で全方位向上、fast mode / dynamic workflows も</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-29/topic_1.png" data-alt="Claude Opus 4.8 発表 — 同価格で全方位向上、fast mode / dynamic workflows も" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-29/topic_1.png" alt="Claude Opus 4.8 発表 — 同価格で全方位向上、fast mode / dynamic workflows も" />
+      </div>
+      <p class="lede">
+        Anthropic は Claude Opus 4.8 を発表し、Opus 4.7 と同価格のまま全方位で性能を底上げした。コーディング指標 SWE-bench Pro は 64.3% から 69.2% に伸び、自分が書いたコードの欠陥を見逃す確率は前世代の約4分の1に低下。証拠が薄いのに「直した」と断定する“嘘の進捗報告”を明確に減らし、自律作業の持続時間も延びた。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Opus 4.7 と同価格・本日提供開始。Web / Claude Platform / 主要クラウドで利用可</li>
+        <li data-i="02">SWE-bench Pro 64.3%→69.2%、コード欠陥の見逃しは前世代の約1/4に減少</li>
+        <li data-i="03">fast mode：同モデルを約2.5倍速・従来比1/3価格で。Claude Code は /fast でオン</li>
+        <li data-i="04">dynamic workflows（研究プレビュー）：計画→数百の並列サブエージェント→自己検証→報告。数百ファイル規模の移行を想定</li>
+        <li data-i="05">effort control：考えさせる量を選べるつまみ。デフォルトは high。Messages API は途中で system を差し込んでも prompt cache を壊さない</li>
+      </ul>
+      <div class="pull">
+        値段据え置きで“賢く・正直に・長く回る”方向に進化したため、Vibe Coder Bootcamp 受講生はモデルを 4.8 に切り替えるだけで体感品質が上がる。特に「直しました」の虚偽報告が減ったことは、レビュー工数の削減に直結する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">53,056</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/claudeai/status/2060042702150930686">@claudeai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>新モデル発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/claudeai/status/2060042702150930686">x.com/claudeai/…</a></dd>
+        <dd><a href="https://x.com/ClaudeDevs/status/2060043208277811437">x.com/ClaudeDevs/status/2060043208277811…</a></dd>
+        <dd><a href="https://x.com/i/article/2060061191821733888">x.com/i/article/2060061191821733888</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · MLBEAR MLBEAR2</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        プロンプト・知見 <span class="sep">/</span> ML_BEAR (@MLBEAR2) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Opus 4.8 のプロンプト特性まとめ — 指示は文字通り・effort 重要・ツール呼び出しは強めに</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-29/topic_2.png" data-alt="Opus 4.8 のプロンプト特性まとめ — 指示は文字通り・effort 重要・ツール呼び出しは強めに" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-29/topic_2.png" alt="Opus 4.8 のプロンプト特性まとめ — 指示は文字通り・effort 重要・ツール呼び出しは強めに" />
+      </div>
+      <p class="lede">
+        ML_Bear が、Claude 公式プロンプトガイドに追加された Opus 4.8 向け記述を斜め読みして箇条書きで紹介。基本的に従来のプロンプトでそのまま動くが、ユーザーの指示をより文字通りに解釈するようになり、effort 設定の影響が大きく、ツール使用が控えめになったため呼び出してほしければ強めに指示する必要がある、といった特性を整理している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">基本的には今までのプロンプトでそのまま動く</li>
+        <li data-i="02">ユーザーの指示を“文字通り”解釈する傾向が強まった（曖昧な指示は曖昧なまま受け取られやすい）</li>
+        <li data-i="03">effort 設定が出力品質・トークン量に効くため意識して使い分ける</li>
+        <li data-i="04">ツール使用が控えめになったので、ツールを使ってほしい場面では明示的・強めに指示する</li>
+      </ul>
+      <div class="pull">
+        モデルが賢くなるほど“何となく察してくれる”前提が崩れ、指示の明確さがそのまま結果に効く。Bootcamp 受講生にとって、プロンプトを曖昧にしない・必要なツール利用を明記する、という基本がより重要になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">101</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/MLBear2/status/2060056572286701752">@MLBear2</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>プロンプト・知見</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/MLBear2/status/2060056572286701752">x.com/MLBear2/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · CURSOR CURSORAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> CURSOR (@CURSOR_AI) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cursor が Claude Opus 4.8 を即日サポート — 4.7 より効率的・難タスクで粘り強い</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-29/topic_3.png" data-alt="Cursor が Claude Opus 4.8 を即日サポート — 4.7 より効率的・難タスクで粘り強い" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-29/topic_3.png" alt="Cursor が Claude Opus 4.8 を即日サポート — 4.7 より効率的・難タスクで粘り強い" />
+      </div>
+      <p class="lede">
+        Anthropic の Opus 4.8 発表と同日に、Cursor が同モデルを利用可能にしたと告知。自社ベンチ CursorBench では Opus 4.7 より大幅に効率的に作業でき、難しいタスクでもより粘り強い（persistent）と報告している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Claude Opus 4.8 が発表当日に Cursor 上で選択可能に</li>
+        <li data-i="02">CursorBench で Opus 4.7 より「はるかに効率的」と評価</li>
+        <li data-i="03">難易度の高いタスクでより粘り強く取り組むと報告</li>
+      </ul>
+      <div class="pull">
+        新モデルが出た当日に主要 AI エディタが追従する速度が、いまの開発ツール競争のスピードを物語る。Claude Code だけでなく Cursor でも最新モデルを選べるという実務上の選択肢の話。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,731</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2060044920237469872">@cursor_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2060044920237469872">x.com/cursor_ai/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · CURSOR CURSORAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        プロンプト・知見 <span class="sep">/</span> CURSOR (@CURSOR_AI) <span class="sep">/</span> NEWS
+      </div>
+      <h2>エージェント時代は input トークンがコストの主役 — Cursor の知見</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-29/topic_4.png" data-alt="エージェント時代は input トークンがコストの主役 — Cursor の知見" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-29/topic_4.png" alt="エージェント時代は input トークンがコストの主役 — Cursor の知見" />
+      </div>
+      <p class="lede">
+        Cursor が AI 利用のコスト構造に関する知見を投稿。エージェントが扱うコンテキストが増えるにつれ、価格換算では input トークンがコストの大半を占めるようになったと指摘。あわせて AI 利用はパワーユーザーに大きく偏っており、その差は広がり続けているとも述べている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">コンテキスト増加で input トークンが price-equivalent コストの過半に</li>
+        <li data-i="02">意識されがちな output より input 側が支配的になりつつある</li>
+        <li data-i="03">AI 活動はごく一部のパワーユーザーに集中し、格差は拡大中</li>
+      </ul>
+      <div class="pull">
+        賢いモデルを長時間回す運用が普通になると、課金の効きどころは出力ではなく入力（渡すコンテキスト量）になる。無駄な長文を毎回流さない・キャッシュを効かせるコスト設計が実務スキルになる。Opus 4.8 の prompt cache 改善とも文脈が繋がる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">97</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2060025076947521984">@cursor_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>プロンプト・知見</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2060025076947521984">x.com/cursor_ai/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · XINGXINGLI45573</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        デザイン・ツール <span class="sep">/</span> 刘醒 (@XINGXINGLI45573) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Taste Skill — AI 生成 UI を高級感ある見た目にする GitHub スキル（20.3k Star）</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-29/topic_5.png" data-alt="Taste Skill — AI 生成 UI を高級感ある見た目にする GitHub スキル（20.3k Star）" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-29/topic_5.png" alt="Taste Skill — AI 生成 UI を高級感ある見た目にする GitHub スキル（20.3k Star）" />
+      </div>
+      <p class="lede">
+        GitHub で 20.3k Star を獲得している「Taste Skill」の紹介。インストールすると AI が生成するフロントエンド UI（レイアウト・フォント・アニメーション・余白）が明確に向上し高級感が出る。汎用高級感・ミニマル・ブルータリズムなど複数のデザイン方向を選べ、既存プロジェクトを改善する監査・修正スキルや、先にデザイン案を生成する画像系スキルも含む。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">AI 生成フロントエンドの見た目（レイアウト/フォント/動き/余白）を底上げするスキル</li>
+        <li data-i="02">汎用高級感・ミニマル・ブルータリズムなど複数のデザイン方向を選択可能</li>
+        <li data-i="03">既存ページをアップグレードする監査・修正スキルを同梱</li>
+        <li data-i="04">先に AI にデザイン案を生成させてから実装に落とす画像系スキルもあり</li>
+        <li data-i="05">GitHub で 20.3k Star を獲得</li>
+      </ul>
+      <div class="pull">
+        Vibe coding の弱点になりがちな“見た目の安っぽさ”を、追加スキルの導入だけで底上げできる。Bootcamp 受講生が作るプロダクトの第一印象を手早く高められる実用ツール。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">3,217</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/xingxingli45573/status/2059258034820706541">@xingxingli45573</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-26</dd>
+        <dt>CATEGORY</dt>
+        <dd>デザイン・ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/xingxingli45573/status/2059258034820706541">x.com/xingxingli45573/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/claudeai/status/2060042702150930686">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-05-28/">
+      ← 前日 · 2026-05-28
+      <span class="big">Merge Gateway: LLMルーティングを自社ロジックで制御</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-05-29/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260529.0853</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

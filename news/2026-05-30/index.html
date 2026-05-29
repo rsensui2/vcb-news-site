@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-05-30 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-05-30 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0530</span>
+    <span class="sep">/</span>
+    <span>2026-05-30</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260530.0728</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-05-30/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:28 · FRI</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · FRIDAY · MAY 30, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>05<span class="dot">.</span>30</h1>
+    <div class="strap">
+      <span>富士通が · Sakana · MIT · Microsoft</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 6 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 業界ニュース <span class="sep">/</span> 富士通 (@FUJITSUOFFICIAL) / ITMEDIA AI＋ <span class="sep">/</span> NEWS
+      </div>
+      <h2>富士通が OpenAI と連携開始、Anthropic とも「ミュトス」早期アクセスで協業</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-30/topic_1.png" data-alt="富士通が OpenAI と連携開始、Anthropic とも「ミュトス」早期アクセスで協業" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-30/topic_1.png" alt="富士通が OpenAI と連携開始、Anthropic とも「ミュトス」早期アクセスで協業" />
+      </div>
+      <p class="lede">
+        富士通が OpenAI との連携を正式開始し、AI 活用を PoC 段階から『変革の実装』へ進めると発表した。同じ時期に Anthropic とも協業しており、ITmedia の取材では Anthropic が段階公開を進める上位モデル『ミュトス』への早期アクセスを確保していることが明らかになった。日本の大手 SIer が OpenAI と Anthropic の双方と同時に手を組む構図になっている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">富士通が OpenAI と連携開始、企業変革の『実装』フェーズを掲げる</li>
+        <li data-i="02">並行して Anthropic とも協業し、最新モデル『ミュトス』への早期アクセスを確保</li>
+        <li data-i="03">単一ベンダー依存ではなく複数フロンティアモデルを併用する戦略</li>
+        <li data-i="04">ミュトスは Anthropic が安全性確保を条件に段階公開している上位モデル群</li>
+      </ul>
+      <div class="pull">
+        日本のエンタープライズ AI が『試験導入』から『業務変革の実装』へ移ったことの象徴。特定ベンダーに賭けず用途で使い分ける構えは、VBC 受講生が案件でモデルを選ぶ現実的な姿勢と重なる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">539</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/FujitsuOfficial/status/2059514961898979806">@FujitsuOfficial</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-27</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 業界ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/FujitsuOfficial/status/2059514961898979806">x.com/FujitsuOfficial/…</a></dd>
+        <dd><a href="https://www.itmedia.co.jp/aiplus/article/2605/27/2000000030/">www.itmedia.co.jp/aiplus/article/2605/27…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · SAKANA AI SAKANAAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📖 研究 <span class="sep">/</span> SAKANA AI (@SAKANAAILABS) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Sakana AI『DiffusionBlocks』— ネットワークをブロック単位で分割学習しメモリ要件を削減</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-30/topic_2.png" data-alt="Sakana AI『DiffusionBlocks』— ネットワークをブロック単位で分割学習しメモリ要件を削減" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-30/topic_2.png" alt="Sakana AI『DiffusionBlocks』— ネットワークをブロック単位で分割学習しメモリ要件を削減" />
+      </div>
+      <p class="lede">
+        日本拠点の Sakana AI が『DiffusionBlocks』を発表した。ニューラルネットワークを拡散（diffusion）として捉え直し、全層を一度にメモリへ載せずにブロックごとへ分割して独立に学習できるようにする手法で、大規模モデル学習のメモリ要件を下げることを狙う。論文と詳細は pub.sakana.ai で公開されている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">ネットワークを『拡散過程のブロック』として捉え、ブロック単位で分割学習</li>
+        <li data-i="02">全層を同時にメモリ保持する必要をなくし学習時のメモリ要件を削減</li>
+        <li data-i="03">限られたリソースで大規模モデルを訓練するアプローチの一つ</li>
+        <li data-i="04">論文・詳細は pub.sakana.ai/diffusionblocks で公開</li>
+      </ul>
+      <div class="pull">
+        モデルの『賢さ』競争とは別軸で、学習・運用コストを下げる効率化研究が活発化している。推論側のトークン経済とあわせ、AI 実用化の主戦場が『どれだけ安く回せるか』に移りつつあることを示す。日本発のフロンティア研究という点でも注目。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">461</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/SakanaAILabs/status/2059766095154668008">@SakanaAILabs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-27</dd>
+        <dt>CATEGORY</dt>
+        <dd>📖 研究</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/SakanaAILabs/status/2059766095154668008">x.com/SakanaAILabs/…</a></dd>
+        <dd><a href="http://pub.sakana.ai/diffusionblocks">pub.sakana.ai/diffusionblocks</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · ALPHA SIGNAL ALPHA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📖 研究 <span class="sep">/</span> ALPHA SIGNAL (@ALPHASIGNALAI) <span class="sep">/</span> NEWS
+      </div>
+      <h2>MIT・Stanford・DeepMind・MS 論文：エージェントは chat の約1000倍トークン消費、同タスクで最大30倍コスト差</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-30/topic_3.png" data-alt="MIT・Stanford・DeepMind・MS 論文：エージェントは chat の約1000倍トークン消費、同タスクで最大30倍コスト差" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-30/topic_3.png" alt="MIT・Stanford・DeepMind・MS 論文：エージェントは chat の約1000倍トークン消費、同タスクで最大30倍コスト差" />
+      </div>
+      <p class="lede">
+        MIT・Stanford・Google DeepMind・Microsoft の共同研究が『トークン単価が下がれば AI も安くなる』という前提を覆した、という紹介。AI エージェントはチャット利用の約1000倍のトークンを消費し、コストの主因は生成するコードではなくループごとに毎回コンテキストを読み直すことにある。同じモデル・同じタスクでも実装設計次第でコストが最大30倍変動するという。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">エージェントはチャットの約1000倍のトークンを消費</li>
+        <li data-i="02">コストの主役は出力（生成コード）ではなくループ毎の context 再読み込み</li>
+        <li data-i="03">同一タスク・同一モデルでも実装設計でコストが最大30倍変動</li>
+        <li data-i="04">トークン単価の低下だけでは AI 運用コストは下がらない</li>
+      </ul>
+      <div class="pull">
+        前日の Cursor『input トークンがコストの主役』という指摘を学術的に裏付ける内容。VBC のエージェント開発では、毎ループで無駄な長文を渡さない・キャッシュを効かせる・コンテキストを圧縮する設計がそのまま請求額に直結する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">20</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/AlphaSignalAI/status/2059520393103512039">@AlphaSignalAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-27</dd>
+        <dt>CATEGORY</dt>
+        <dd>📖 研究</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/AlphaSignalAI/status/2059520393103512039">x.com/AlphaSignalAI/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · MICROSOFT 365 MICR</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 AI/開発ツール <span class="sep">/</span> MICROSOFT 365 (@MICROSOFT365) / VERCEL (@VERCEL_DEV) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Microsoft 365 Copilot が Claude Opus 4.8 を追加、Vercel AI Gateway でも即日提供</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-30/topic_4.png" data-alt="Microsoft 365 Copilot が Claude Opus 4.8 を追加、Vercel AI Gateway でも即日提供" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-30/topic_4.png" alt="Microsoft 365 Copilot が Claude Opus 4.8 を追加、Vercel AI Gateway でも即日提供" />
+      </div>
+      <p class="lede">
+        Anthropic の Claude Opus 4.8 発表当日、Microsoft が Microsoft 365 Copilot にモデル選択肢として Opus 4.8 を追加すると発表した。まず Copilot Cowork（Frontier）で利用可能になり、Copilot Chat・Excel・PowerPoint・Copilot Studio へ順次展開される。同日 Vercel も AI Gateway 上で anthropic/claude-opus-4.8 をルーティング対象に加えた。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Microsoft 365 Copilot が Anthropic Claude Opus 4.8 を選択モデルに追加</li>
+        <li data-i="02">Copilot Cowork (Frontier) で即時利用可、Chat / Excel / PowerPoint / Studio へ順次展開</li>
+        <li data-i="03">OpenAI と密接な Microsoft が Anthropic モデルを併載する点が注目</li>
+        <li data-i="04">Vercel AI Gateway も同日 Opus 4.8 をルーティング対象に追加</li>
+      </ul>
+      <div class="pull">
+        新モデルが出たその日に Microsoft・Vercel など主要プラットフォームが一斉に載せる速度感が標準になりつつある。OpenAI の最大パートナー Microsoft が Anthropic モデルを併載する事実は、ユーザーが『アプリ単位ではなくモデル単位で選ぶ』時代を裏付ける。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">260</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/MSTCommunity/status/2060074627032838438">@MSTCommunity</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 AI/開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/MSTCommunity/status/2060074627032838438">x.com/MSTCommunity/…</a></dd>
+        <dd><a href="https://x.com/vercel_dev/status/2060045753201086816">x.com/vercel_dev/status/2060045753201086…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · GIGAZINE GIGAZINE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📖 研究 <span class="sep">/</span> GIGAZINE (@GIGAZINE) <span class="sep">/</span> NEWS
+      </div>
+      <h2>「AIモデルには睡眠が必要」という研究結果</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-30/topic_5.png" data-alt="「AIモデルには睡眠が必要」という研究結果" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-30/topic_5.png" alt="「AIモデルには睡眠が必要」という研究結果" />
+      </div>
+      <p class="lede">
+        AI モデルにも人間の睡眠に相当する『休息・再編成』の工程が性能維持に必要だとする研究結果を GIGAZINE が紹介した。連続学習や長時間稼働でモデルの内部表現が劣化・偏向していく現象に対し、定期的にオフラインで整理するフェーズを挟むことで安定性や性能を取り戻せるという考え方で、継続学習（continual learning）や破滅的忘却の問題と関連する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">連続学習・長時間稼働でモデル内部の表現が劣化／偏る現象を扱う</li>
+        <li data-i="02">人間の睡眠に相当する『整理・再編成』工程が性能維持に寄与しうる</li>
+        <li data-i="03">継続学習（continual learning）や破滅的忘却の研究テーマと関連</li>
+      </ul>
+      <div class="pull">
+        『常時オンで学習し続けるエージェント』を作るとき、無制限に回し続けると劣化しうるという示唆。実運用でも定期的なリセット・再評価・再学習サイクルの設計が必要になる可能性を示す、運用設計に効く話題。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">260</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://gigazine.net/news/20260527-ai-need-sleep/">GIGAZINE (@gigazine)</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-27</dd>
+        <dt>CATEGORY</dt>
+        <dd>📖 研究</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://gigazine.net/news/20260527-ai-need-sleep/">https://gigazine.net/news/20260527-ai-need-sleep/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · SAFEDEP SAFEDEPIO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 セキュリティ <span class="sep">/</span> SAFEDEP (@SAFEDEPIO) <span class="sep">/</span> NEWS
+      </div>
+      <h2>164個の npm パッケージが oob[.]moika[.]tech 経由で認証情報を窃取する新キャンペーン</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-30/topic_6.png" data-alt="164個の npm パッケージが oob[.]moika[.]tech 経由で認証情報を窃取する新キャンペーン" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-30/topic_6.png" alt="164個の npm パッケージが oob[.]moika[.]tech 経由で認証情報を窃取する新キャンペーン" />
+      </div>
+      <p class="lede">
+        SafeDep が、クラウド・金融分野を標的にした 164 個の悪性 npm パッケージによる依存関係混乱（dependency confusion）キャンペーンを報告した。インストール時に process.env を丸ごと外部（oob[.]moika[.]tech）へ送信し、API キー・トークン・各種シークレットや CI 環境の認証情報を窃取する。先日の Shai-Hulud 系とは別系統の新たな攻撃波となる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">164 個の悪性 npm パッケージがクラウド・金融領域を標的化</li>
+        <li data-i="02">インストール時に process.env 全体を外部へ送信し認証情報を窃取</li>
+        <li data-i="03">狙いは API キー・トークン・CI 環境のシークレット</li>
+        <li data-i="04">社内名と同名パッケージを公開する dependency confusion を悪用</li>
+      </ul>
+      <div class="pull">
+        npm のサプライチェーン攻撃が単発でなく波状で続いている現実。VBC 受講生も npm install 前のパッケージ検証・最小権限の env 管理・CI シークレット分離が必須。『自分のコードは安全』でも依存先で抜かれるという依存管理の基本リスク。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">16</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/safedepio/status/2059981492219174958">@safedepio</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/safedepio/status/2059981492219174958">x.com/safedepio/…</a></dd>
+        <dd><a href="https://safedep.io/oob-moika-tech-dependency-confusion-campaign/">safedep.io/oob-moika-tech-dependency-con…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · JUMPERZ JUMPERZ</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 AI/開発ツール <span class="sep">/</span> JUMPERZ (@JUMPERZ) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Opus 4.8 vs GPT-5.5 — もう『賢さ』ではなく用途で選ぶ時代の使い分けチートシート</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-30/topic_7.png" data-alt="Opus 4.8 vs GPT-5.5 — もう『賢さ』ではなく用途で選ぶ時代の使い分けチートシート" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-30/topic_7.png" alt="Opus 4.8 vs GPT-5.5 — もう『賢さ』ではなく用途で選ぶ時代の使い分けチートシート" />
+      </div>
+      <p class="lede">
+        Opus 4.8 はリーダーボードを追わず『トークン効率』（稼働コスト約61%減・fast mode 3倍安）に振ったリリースだという考察。4.8 と GPT-5.5 はもはや知性勝負ではなく用途で選ぶ段階とし、Opus 向き＝リポジトリ規模コーディング・長時間の無人エージェント・自己ミス検出が要る作業・computer use、Codex(GPT-5.5) 向き＝ターミナル中心作業・Web リサーチ・大量処理パイプライン・速度重視、と整理する。純粋な推論力と TTFT はほぼ互角という。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">4.8 はスコアより稼働コスト約61%減・fast mode 3倍安のトークン効率に注力</li>
+        <li data-i="02">Opus 向き: リポジトリ規模コーディング / 長時間無人エージェント / 自己ミス検出 / computer use</li>
+        <li data-i="03">Codex(GPT-5.5) 向き: ターミナル中心作業 / Web リサーチ / 大量処理パイプライン / 速度重視</li>
+        <li data-i="04">純粋な推論力と初回トークンまでの時間（TTFT）はほぼ互角</li>
+      </ul>
+      <div class="pull">
+        モデル選択に迷ったときの実務的な指針。『どちらが賢いか』ではなく『何に使うか』で選ぶ視点は、コスト最適化を含むエージェント運用設計に直結する。VBC 受講生がツールを選ぶ際のそのまま使える早見表になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">523</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/jumperz/status/2060050697052148221">@jumperz</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 AI/開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/jumperz/status/2060050697052148221">x.com/jumperz/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/FujitsuOfficial/status/2059514961898979806">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-05-29/">
+      ← 前日 · 2026-05-29
+      <span class="big">Claude Opus 4.8 発表 — 同価格で全方位向上、fast mode / dynamic workflows も</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-05-30/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260530.0728</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

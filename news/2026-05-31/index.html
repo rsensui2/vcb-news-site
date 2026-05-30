@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-05-31 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-05-31 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0531</span>
+    <span class="sep">/</span>
+    <span>2026-05-31</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260531.0727</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-05-31/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:27 · SAT</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SATURDAY · MAY 31, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>05<span class="dot">.</span>31</h1>
+    <div class="strap">
+      <span>AIコーディングエージェントの「セキュリティ」が新たな主戦場に · Cognition（Devin · StepFun · Claude</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 6 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 セキュリティ <span class="sep">/</span> OPENAI / VENTUREBEAT / 各社X <span class="sep">/</span> NEWS
+      </div>
+      <h2>AIコーディングエージェントの「セキュリティ」が新たな主戦場に — OpenAIが公式ガイダンス、脆弱性・防御ツールも続々</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-31/topic_1.png" data-alt="AIコーディングエージェントの「セキュリティ」が新たな主戦場に — OpenAIが公式ガイダンス、脆弱性・防御ツールも続々" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-31/topic_1.png" alt="AIコーディングエージェントの「セキュリティ」が新たな主戦場に — OpenAIが公式ガイダンス、脆弱性・防御ツールも続々" />
+      </div>
+      <p class="lede">
+        OpenAI が『プロンプトインジェクションに耐えるエージェント設計』の公式ガイダンスを公開し、完全な検知は期待せず影響範囲を限定する現実的な構えを打ち出した。同時期に Johns Hopkins が Claude Code / GitHub Copilot を騙して内部情報を漏らさせる脆弱性を報告し、依存ライブラリにプロンプトインジェクションを仕込む手口や、Keeper Security のシークレット安全取得フレームワーク『Agent Kit』など、攻撃と防御の両面が一気に表面化した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">OpenAI 公式: 防御は入力フィルタだけに頼れず、最小権限・タスク単位のアクセス制限・重要操作の二段階承認・検知重視を推奨</li>
+        <li data-i="02">OpenAI は『プロンプトインジェクションは（ブラウザ/エージェントで）完全には解決しないかもしれない』と明言</li>
+        <li data-i="03">Johns Hopkins が Claude Code / Copilot を操作して内部情報を漏洩させる脆弱性を公表</li>
+        <li data-i="04">依存ライブラリにプロンプトインジェクションを埋め込み、AI 生成コードの出力を無言で破壊する PoC が話題に</li>
+        <li data-i="05">Keeper Security が『Agent Kit』を提供開始、コーディングエージェントが認証情報を安全に取得する枠組み</li>
+      </ul>
+      <div class="pull">
+        コーディングエージェントが本番コードを書く前提になった今、『速く書ける』より『安全に動かせるか』が次の論点。OpenAI の公式スタンスが『検知重視・最小権限』に振れたことで、VBC 受講生がエージェントを業務に組み込む際の設計指針が明確になった。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://openai.com/index/designing-agents-to-resist-prompt-injection/">OpenAI / VentureBeat / 各社X</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-29</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://openai.com/index/designing-agents-to-resist-prompt-injection/">https://openai.com/index/designing-agents-to-resist-prompt-injection/</a></dd>
+        <dd><a href="https://venturebeat.com/security/openai-admits-that-prompt-injection-is-here-to-stay">venturebeat.com/security/openai-admits-t…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · TECHCRUNCH / BLOOM</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 業界ニュース <span class="sep">/</span> TECHCRUNCH / BLOOMBERG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cognition（Devin 開発元）が約10億ドルを調達、評価額260億ドルに — 自社コードの89%を Devin が記述</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-31/topic_2.png" data-alt="Cognition（Devin 開発元）が約10億ドルを調達、評価額260億ドルに — 自社コードの89%を Devin が記述" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-31/topic_2.png" alt="Cognition（Devin 開発元）が約10億ドルを調達、評価額260億ドルに — 自社コードの89%を Devin が記述" />
+      </div>
+      <p class="lede">
+        自律ソフトウェアエンジニアリングエージェント『Devin』を開発する Cognition が、Lux Capital・General Catalyst・8VC 主導で10億ドル超を調達し、調達後評価額は260億ドルと前回（昨年9月）から倍以上になった。創業者 Scott Wu は『Devin はプログラマを置き換えるためではなく支援するためのもの』と強調する一方、Cognition は自社エンジニアがコミットするコードの89%は Devin によるものだと明かした。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">調達額10億ドル超、評価額260億ドル（前回比2倍超）</li>
+        <li data-i="02">主導は Lux Capital / General Catalyst / 8VC、Founders Fund・Ribbit なども参加</li>
+        <li data-i="03">売上は1年で13倍の4.92億ドル、顧客に Goldman Sachs や Mercedes-Benz</li>
+        <li data-i="04">自社コミットコードの89%を Devin が記述</li>
+        <li data-i="05">Scott Wu『エージェントは人間を置き換えるものではなく支援するもの』</li>
+      </ul>
+      <div class="pull">
+        コーディングエージェント市場への資金流入が止まらないことを示す象徴的なラウンド。『89%のコードを AI が書く』は VBC が掲げる Vibe Coding の到達点を地で行く数字であり、エージェント前提の開発組織が現実になっている証拠。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://techcrunch.com/2026/05/27/ai-coding-startup-cognition-raises-1b-at-25b-pre-money-valuation/">TechCrunch / Bloomberg</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-27</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 業界ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://techcrunch.com/2026/05/27/ai-coding-startup-cognition-raises-1b-at-25b-pre-money-valuation/">https://techcrunch.com/2026/05/27/ai-coding-startup-cognition-raises-1b-at-25b-pre-money-valuation/</a></dd>
+        <dd><a href="https://www.bloomberg.com/news/articles/2026-05-27/ai-coding-startup-cognition-raises-1-billion-at-26-billion-value">www.bloomberg.com/news/articles/2026-05-…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · STEPFUN HUGGING FA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 LLMモデル <span class="sep">/</span> STEPFUN (HUGGING FACE) / MARKTECHPOST <span class="sep">/</span> NEWS
+      </div>
+      <h2>StepFun が「Step 3.7 Flash」をオープンウェイトで公開 — 198B MoE・Apache 2.0・最大400トークン/秒</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-31/topic_3.png" data-alt="StepFun が「Step 3.7 Flash」をオープンウェイトで公開 — 198B MoE・Apache 2.0・最大400トークン/秒" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-31/topic_3.png" alt="StepFun が「Step 3.7 Flash」をオープンウェイトで公開 — 198B MoE・Apache 2.0・最大400トークン/秒" />
+      </div>
+      <p class="lede">
+        中国の StepFun が高効率モデル『Step 3.7 Flash』をオープンウェイトで公開した。196B の言語バックボーンと1.8B のビジョンエンコーダからなる198BパラメータのスパースMoE（推論時アクティブ約11B）で、256Kコンテキスト・マルチモーダル・エージェント型ツール利用に対応する。ライセンスは Apache 2.0、生成速度は最大400トークン/秒で、SWE-bench Pro などのベンチでオープンモデル最高水準を主張している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">198BパラメータMoE、アクティブ約11B/トークン、最大400トークン/秒</li>
+        <li data-i="02">256Kコンテキスト、画像・動画理解に対応するビジョン言語モデル</li>
+        <li data-i="03">ライセンスは Apache 2.0（商用利用可のオープンウェイト）</li>
+        <li data-i="04">エージェント型コーディング・ツール利用・長文推論・検索を主用途に設計</li>
+        <li data-i="05">提供先: StepFun Open Platform / OpenRouter / NVIDIA NIM、vLLM・SGLang・llama.cpp で動作</li>
+      </ul>
+      <div class="pull">
+        クローズドな Opus 4.8 / GPT-5.5 / Gemini が話題を独占する裏で、オープンウェイト陣営も速度と効率で実用ラインに到達しつつある。Apache 2.0 で自己ホスト可能な agentic coding モデルは、機密データを外に出せない企業やコストを抑えたい VBC 受講生に有力な選択肢。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://huggingface.co/stepfun-ai/Step-3.7-Flash">StepFun (Hugging Face) / MarkTechPost</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-29</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 LLMモデル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://huggingface.co/stepfun-ai/Step-3.7-Flash">https://huggingface.co/stepfun-ai/Step-3.7-Flash</a></dd>
+        <dd><a href="https://www.marktechpost.com/2026/05/29/stepfun-releases-step-3-7-flash-a-198b-moe-vision-language-model-for-coding-agents-and-search-workflows/">www.marktechpost.com/2026/05/29/stepfun-…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · X</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 開発ツール <span class="sep">/</span> 各開発者 X <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code「Dynamic Workflows」が実戦で高評価 — Opus 4.8 の目玉機能</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-31/topic_4.png" data-alt="Claude Code「Dynamic Workflows」が実戦で高評価 — Opus 4.8 の目玉機能" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-31/topic_4.png" alt="Claude Code「Dynamic Workflows」が実戦で高評価 — Opus 4.8 の目玉機能" />
+      </div>
+      <p class="lede">
+        Opus 4.8 と同時に発表された Claude Code の『Dynamic Workflows』（計画→数百の並列サブエージェント→自己検証→報告を動的に組む研究プレビュー機能）が、公開直後から開発者の間で『久々に最も価値あるアップデート』と高評価を集めている。あわせて『タスク途中で Claude の指示を差し替えてもプロンプトキャッシュを壊さない』改善も実装の妙として注目された。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Dynamic Workflows は計画→並列サブエージェント→自己検証→報告を動的に構成する研究プレビュー機能</li>
+        <li data-i="02">『ここ最近の Claude Code で最も価値あるアップデート』との実戦評価が複数</li>
+        <li data-i="03">タスク途中で system 指示を差し込んでも prompt cache が壊れない設計が好評</li>
+        <li data-i="04">effort control（思考量の制御）と組み合わせた長時間タスクの安定運用が狙い</li>
+      </ul>
+      <div class="pull">
+        単体モデルの賢さ競争から『エージェントの実行ハーネスをどう組むか』へ関心が移っている象徴。VBC で教えるマルチエージェント設計（Hub &amp; Spoke、自己検証）をツール側が標準機能化したもので、受講生が手で組んでいた構造を Claude Code が肩代わりし始めている。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/TylerWDreher/status/2060506698767614268">@TylerWDreher</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-29</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/TylerWDreher/status/2060506698767614268">x.com/TylerWDreher/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · CLAUDE CLAUDEAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 AI/開発ツール <span class="sep">/</span> CLAUDE (@CLAUDEAI) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Opus 4.8 は経験豊富なエンジニアのように、逐一の確認なしで判断する（Claude 公式）</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-31/topic_5.png" data-alt="Opus 4.8 は経験豊富なエンジニアのように、逐一の確認なしで判断する（Claude 公式）" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-31/topic_5.png" alt="Opus 4.8 は経験豊富なエンジニアのように、逐一の確認なしで判断する（Claude 公式）" />
+      </div>
+      <p class="lede">
+        Anthropic 公式が Opus 4.8 の自律性を訴求した投稿。Claude Code 上で経験豊富なエンジニアのように逐一の確認なしで判断し、長時間に及ぶセッションでも軌道を外さずリポジトリ内のタスクを最後までやり遂げると説明する。機能追加やバグ一掃を丸ごと任せ、人間は次の作業に集中できると打ち出している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Claude Code で Opus 4.8 は『経験豊富なエンジニアのように』逐一の確認なしで判断</li>
+        <li data-i="02">長時間セッションでも軌道を外さずリポジトリ内の作業を完遂</li>
+        <li data-i="03">機能追加やバグ一掃を丸ごとハンドオフできる自律性を強調</li>
+      </ul>
+      <div class="pull">
+        無人実行（unattended agent）の実用化メッセージ。人が張り付かずに大きめのタスクをエージェントへ任せる設計の根拠になり、Kenn 氏の『Opus は頭脳役』という実践論とも符合する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">3,564</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/claudeai/status/2060042709209928018">@claudeai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 AI/開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/claudeai/status/2060042709209928018">x.com/claudeai/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · CLAUDE CLAUDEAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 AI/開発ツール <span class="sep">/</span> CLAUDE (@CLAUDEAI) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Opus 4.8 に Fast モード登場 — 同じモデルで約2.5倍速・従来比3倍安（Claude 公式）</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-31/topic_6.png" data-alt="Opus 4.8 に Fast モード登場 — 同じモデルで約2.5倍速・従来比3倍安（Claude 公式）" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-31/topic_6.png" alt="Opus 4.8 に Fast モード登場 — 同じモデルで約2.5倍速・従来比3倍安（Claude 公式）" />
+      </div>
+      <p class="lede">
+        Anthropic 公式が Opus 4.8 の Fast モードを発表した投稿。モデル自体は同一で速度が約2.5倍、価格は従来比3倍安になる。Claude Code では /fast で即座に切り替えられ、API 利用はアカウントマネージャー経由かウェイトリスト登録が必要となる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Fast モードは Opus 4.8 で利用可能、同一モデルのまま約2.5倍速・従来比3倍安</li>
+        <li data-i="02">Claude Code では /fast で即切替</li>
+        <li data-i="03">API はアカウントマネージャー連絡 or ウェイトリスト登録（claude.com/fast-mode）</li>
+      </ul>
+      <div class="pull">
+        『精度を落とさず速度と価格だけ改善』という珍しい改善軸。レイテンシが効くインタラクティブ作業や大量並列エージェントのコスト計算を変える。VBC 受講生にも即案内できる実用情報。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">3,534</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/claudeai/status/2060042706844315866">@claudeai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 AI/開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/claudeai/status/2060042706844315866">x.com/claudeai/…</a></dd>
+        <dd><a href="http://claude.com/fast-mode">claude.com/fast-mode</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · KENN EJIMA KENN</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 AI/開発ツール <span class="sep">/</span> KENN EJIMA (@KENN) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>大規模開発は「人間 ←→ Opus ←→ Codex」の多重下請け構造がおすすめ（Kenn Ejima）</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-05-31/topic_7.png" data-alt="大規模開発は「人間 ←→ Opus ←→ Codex」の多重下請け構造がおすすめ（Kenn Ejima）" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-05-31/topic_7.png" alt="大規模開発は「人間 ←→ Opus ←→ Codex」の多重下請け構造がおすすめ（Kenn Ejima）" />
+      </div>
+      <p class="lede">
+        Kenn Ejima 氏が大規模開発でのマルチエージェント開発フローを self-thread で整理した投稿。『人間 ←→ Opus ←→ Codex』の多重下請け構造を勧め、Opus を意図理解・レビュー・リファクタ指摘の頭脳、Codex を実装の手と役割分担する。プランは Codex に書かせて Claude にレビューさせ、実装は Codex に戻す。Claude は『読んで考えるだけ、docs 以外は書かせない』のが肝だとする。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">大規模開発は『人間 ←→ Opus ←→ Codex (←→ Cursor)』の多重下請け構造が有効</li>
+        <li data-i="02">Opus は意図・本質をつかむのが得意だがコードを書かせると手戻りが多い／Codex は実装が漏れない反面、細部にとらわれ本質を見落とす</li>
+        <li data-i="03">プランは Codex に書かせ Claude にレビューさせる（Claude のプランは詳細に踏み込みすぎるのでツッコミ役に徹させる）</li>
+        <li data-i="04">Codex の『安全だが汚い』コードは最後に Claude がリファクタを指摘し、実作業は Codex 本人に戻す</li>
+        <li data-i="05">結論: Claude は読んで考えるだけ、docs 以外は書かせない</li>
+      </ul>
+      <div class="pull">
+        『1体のAIに全部やらせる』から『複数AIを役割分担させる』への転換点になる実践知。手戻りを減らす再現性の高いテクニックで、Opus 4.8 のレビュー精度向上や Dynamic Workflows とも整合する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,406</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/kenn/status/2060157012818985422">@kenn</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-29</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 AI/開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/kenn/status/2060157012818985422">x.com/kenn/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://openai.com/index/designing-agents-to-resist-prompt-injection/">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-05-30/">
+      ← 前日 · 2026-05-30
+      <span class="big">富士通が OpenAI と連携開始、Anthropic とも「ミュトス」早期アクセスで協業</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-05-31/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260531.0727</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

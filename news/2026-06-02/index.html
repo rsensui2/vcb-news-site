@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-06-02 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-06-02 の Vibe Coder Bootcamp モーニングディスパッチ — 6本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0602</span>
+    <span class="sep">/</span>
+    <span>2026-06-02</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>06 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260602.0727</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-06-02/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:27 · MON</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · MONDAY · JUNE 2, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>06<span class="dot">.</span>02</h1>
+    <div class="strap">
+      <span>Anthropic · Anthropic · OpenAI · Codex</span>
+      <span><span class="count">06</span>&nbsp;ITEMS · READ 5 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 業界ニュース <span class="sep">/</span> DATACENTERDYNAMICS / WIRED / REUTERS <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic が $65B 調達・評価額 $965B で OpenAI を初めて逆転、米IPOを極秘申請</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-02/topic_1.png" data-alt="Anthropic が $65B 調達・評価額 $965B で OpenAI を初めて逆転、米IPOを極秘申請" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-02/topic_1.png" alt="Anthropic が $65B 調達・評価額 $965B で OpenAI を初めて逆転、米IPOを極秘申請" />
+      </div>
+      <p class="lede">
+        Claude を開発する Anthropic が Series H で $65B を調達し評価額 $965B に到達、3月時点の OpenAI の $852B を上回って初めて世界で最も価値の高い AI スタートアップになった（2月の $380B から3ヶ月で約2.5倍）。直後の6/1 には米国でのIPOを極秘（confidential）申請したと発表し、主要 AI 専業企業として先頭で上場へ動く。売上ランレートは約 $47B と報じられる一方、両社とも依然黒字化前である点も併記された。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Series H で $65B 調達、評価額 $965B（2月の $380B から約2.5倍）</li>
+        <li data-i="02">OpenAI の $852B（3月）を上回り AI スタートアップ評価額で初の首位に</li>
+        <li data-i="03">リード投資家は Sequoia / Altimeter / Dragoneer、上場前最後の private round とみられる</li>
+        <li data-i="04">6/1 に米国で IPO を confidential filing したと発表</li>
+        <li data-i="05">売上ランレート約 $47B、ただし未黒字（月間10億ドル超を消費との指摘）</li>
+      </ul>
+      <div class="pull">
+        資金規模・評価額・上場スピードのいずれでも Anthropic が前に出た節目で、Claude / Claude Code を主力に据える方針の追い風になる。AI 専業の上場第一号の評価は業界全体の資金循環を左右する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.datacenterdynamics.com/en/news/anthropic-raises-65bn-overtakes-openai-to-965bn-valuation/">DatacenterDynamics / WIRED / Reuters</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-01</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 業界ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.datacenterdynamics.com/en/news/anthropic-raises-65bn-overtakes-openai-to-965bn-valuation/">https://www.datacenterdynamics.com/en/news/anthropic-raises-65bn-overtakes-openai-to-965bn-valuation/</a></dd>
+        <dd><a href="https://x.com/WIRED/status/2061497702307754048">x.com/WIRED/status/2061497702307754048</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · CLAUDEDEVS/ GYAKUS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 業界ニュース <span class="sep">/</span> CLAUDEDEVS（公式）/ 逆瀬川（@GYAKUSE） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic、6/15 から Claude エージェント実行を別課金へ — Sonnet 4 / Opus 4 は API 退役、サブスクにプログラム利用クレジット付与</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-02/topic_2.png" data-alt="Anthropic、6/15 から Claude エージェント実行を別課金へ — Sonnet 4 / Opus 4 は API 退役、サブスクにプログラム利用クレジット付与" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-02/topic_2.png" alt="Anthropic、6/15 から Claude エージェント実行を別課金へ — Sonnet 4 / Opus 4 は API 退役、サブスクにプログラム利用クレジット付与" />
+      </div>
+      <p class="lede">
+        Anthropic が 6/15 からの課金体系変更を案内。Claude のエージェント型ワークフロー（agent workflows）がチャット利用と分離して別課金になり、旧世代の Sonnet 4 / Opus 4 は API から退役する。一方で Pro / Max などの有料サブスクには `claude -p` や Claude Agent SDK 経由のプログラム利用に充てられる月次クレジットが新たに付与され、「対話の枠」と「自動実行の枠」が明確に分けられる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">6/15 から Claude のエージェント型ワークフローを別課金に分離</li>
+        <li data-i="02">Sonnet 4 / Opus 4 を API から退役（モデルラインの世代整理）</li>
+        <li data-i="03">有料プランに `claude -p` / Claude Agent SDK 等のプログラム利用向け月次クレジットを付与</li>
+        <li data-i="04">従来『Claude Code サブスク枠で programmatic 利用』だった扱いを見直し</li>
+      </ul>
+      <div class="pull">
+        エージェントを常時自動実行する使い方が一般化し、ベンダ側も『対話』と『自動実行』を別コストとして設計し始めた。自動化を回す現場は 6/15 以降の課金区分とクレジット枠を前提にコスト設計を見直す必要がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2061361530306773297">@ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-01</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 業界ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2061361530306773297">x.com/ClaudeDevs/…</a></dd>
+        <dd><a href="https://x.com/gyakuse/status/2060253037818744947">x.com/gyakuse/status/2060253037818744947…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · CODEX RELEASES</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 開発者ツール <span class="sep">/</span> CODEX RELEASES（公式） <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI Codex が Amazon Bedrock をモデルプロバイダとしてサポート</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-02/topic_3.png" data-alt="OpenAI Codex が Amazon Bedrock をモデルプロバイダとしてサポート" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-02/topic_3.png" alt="OpenAI Codex が Amazon Bedrock をモデルプロバイダとしてサポート" />
+      </div>
+      <p class="lede">
+        OpenAI Codex が Amazon Bedrock をモデルプロバイダとして利用できるようになった。対応する OpenAI モデルを AWS の Bedrock 経由で実行でき、すでに AWS にワークロードを置く企業が自社のクラウド・課金・ガバナンスの枠内で Codex を組み込みやすくなる。コーディングエージェントが特定ベンダの API 直叩きだけでなく、企業の既存クラウド基盤の上で動く選択肢が広がった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Codex が Amazon Bedrock をモデルプロバイダとして追加</li>
+        <li data-i="02">対応 OpenAI モデルを Bedrock 経由で実行可能に</li>
+        <li data-i="03">AWS 上のネットワーク・課金・IAM の枠内で完結させやすくなる</li>
+      </ul>
+      <div class="pull">
+        エンタープライズ採用の障壁は『データとモデル呼び出しが自社クラウドの統制内に収まるか』。Bedrock 対応は AWS 利用企業の導入ハードルを下げ、Codex を既存のセキュリティ・コスト管理の中に置けるようにする。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/CodexReleases/status/2061573011057311863">@CodexReleases</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-01</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 開発者ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/CodexReleases/status/2061573011057311863">x.com/CodexReleases/…</a></dd>
+        <dd><a href="https://developers.openai.com/codex/">developers.openai.com/codex/</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · SIMON SMITHSIMONSM</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 業界知見 <span class="sep">/</span> SIMON SMITH（@_SIMONSMITH） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Codex が 500 万ユーザー到達、それでも ChatGPT の 0.6% — 「まだ超初期」</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-02/topic_4.png" data-alt="Codex が 500 万ユーザー到達、それでも ChatGPT の 0.6% — 「まだ超初期」" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-02/topic_4.png" alt="Codex が 500 万ユーザー到達、それでも ChatGPT の 0.6% — 「まだ超初期」" />
+      </div>
+      <p class="lede">
+        OpenAI Codex のユーザー数が 500 万に到達したが、これは ChatGPT の約 9 億ユーザーのわずか 0.6% に過ぎないという指摘。AI コーディング／自動化はまだ『超初期』段階で、大多数の人は今 AI で何ができるかをまだ知らず、ごく一部の少数派だけが私生活と仕事を自動化している、と論じる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Codex ユーザー約 500 万＝ChatGPT 約 9 億の 0.6%</li>
+        <li data-i="02">大多数の人は AI で今できることをまだ知らない</li>
+        <li data-i="03">ごく一部の少数派だけが私生活・仕事を自動化している</li>
+        <li data-i="04">『我々はまだ本当に初期段階にいる』</li>
+      </ul>
+      <div class="pull">
+        『コーディングエージェントは普及した』という錯覚への冷や水。実際にはチャット利用者の 1% 未満しか自動化に踏み込んでおらず、市場はこれから。VBC のような『自動化できる側』を増やす取り組みの追い風になる数字。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,285</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/_simonsmith/status/2061085217113120796">@_simonsmith</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-31</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 業界知見</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/_simonsmith/status/2061085217113120796">x.com/_simonsmith/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · CLAUDEDEVS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 AI/開発ツール <span class="sep">/</span> CLAUDEDEVS（公式） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Claude が Pro/Max のレート制限をリセット — 並列サブエージェント暴走バグを修正</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-02/topic_5.png" data-alt="Claude が Pro/Max のレート制限をリセット — 並列サブエージェント暴走バグを修正" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-02/topic_5.png" alt="Claude が Pro/Max のレート制限をリセット — 並列サブエージェント暴走バグを修正" />
+      </div>
+      <p class="lede">
+        Anthropic 公式が Pro / Max プラン全ユーザーの 5 時間枠・週次レート制限をリセットしたと告知。原因は一部の Claude Code セッションが過剰な並列サブエージェントを生成し想定より早く利用枠を消費していたバグで、Opus 4.8 のリクエスト処理に起因しモデルが意図より多くの並列ツール呼び出しをトリガーしていた（dynamic workflows とは無関係と明言）。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Pro / Max 全ユーザーの 5 時間枠・週次レート制限をリセット</li>
+        <li data-i="02">一部 Claude Code セッションが過剰な並列サブエージェントを spawn し利用枠を急速消費</li>
+        <li data-i="03">原因は Opus 4.8 のリクエスト処理（意図より多くの並列ツール呼び出し）</li>
+        <li data-i="04">dynamic workflows とは無関係と明言</li>
+      </ul>
+      <div class="pull">
+        エージェント並列実行は強力だが、暴走するとコストと利用枠を一気に食い潰すという実例。マルチエージェント設計では並列度の上限とコスト監視を組み込むことが必須だと示す。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">12,733</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2061501787769893055">@ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-01</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 AI/開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2061501787769893055">x.com/ClaudeDevs/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · AOTATSUTOMU/ X ART</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 業界知見 <span class="sep">/</span> 青田努（@AOTATSUTOMU）/ X ARTICLE <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>メルカリの CTO→CHRO・CAIO 人事から考える「AIは組織OSの再設計」</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-02/topic_6.png" data-alt="メルカリの CTO→CHRO・CAIO 人事から考える「AIは組織OSの再設計」" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-02/topic_6.png" alt="メルカリの CTO→CHRO・CAIO 人事から考える「AIは組織OSの再設計」" />
+      </div>
+      <p class="lede">
+        メルカリが 6/1 に発表した CTO→CHRO・CAIO の人事をきっかけに、『AI導入はツール配布ではなく組織OSの再設計である』という論点を6つの示唆にまとめた考察記事。AI推進と人事戦略の分断、ガバナンス整備の順序、評価制度のアップデート、AI-Native人材の採用競争など、多くの企業に共通する経営課題を提示している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">AIは『組織OSの再設計』の問題。業務が速くなっても承認フロー・組織構造が旧来のままだとボトルネック</li>
+        <li data-i="02">AI戦略と人事戦略の責任者が別だと変革が構造的に分断する</li>
+        <li data-i="03">土台の順序: ①100名規模の専任チーム→②業務プロセス分解とAI化可視化→③AIガバナンス整備→④利用率100%</li>
+        <li data-i="04">効果測定（開発量1.9倍など）を数字で提示</li>
+        <li data-i="05">HR部門が自らAI実践者になってから全社展開する</li>
+        <li data-i="06">AIで成果を出す個人・チームを正当に評価する仕組みの整備が必要</li>
+      </ul>
+      <div class="pull">
+        複数組織を経営する立場や AI研修を受ける企業にとって『AIをどう組織に実装するか』の実例フレーム。特に『推進部門が自分で使っていない問題』『AIで成果を出した人をどう評価するか』はカリキュラム設計でも繰り返し使える論点。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/AotaTsutomu/status/2061281161998180664">@AotaTsutomu</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-01</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 業界知見</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/AotaTsutomu/status/2061281161998180664">x.com/AotaTsutomu/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://www.datacenterdynamics.com/en/news/anthropic-raises-65bn-overtakes-openai-to-965bn-valuation/">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-05-31/">
+      ← 前日 · 2026-05-31
+      <span class="big">AIコーディングエージェントの「セキュリティ」が新たな主戦場に — OpenAIが公式ガイダンス、脆弱性・防御ツールも続々</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-06-02/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260602.0727</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

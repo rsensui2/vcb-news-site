@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-06-03 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-06-03 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0603</span>
+    <span class="sep">/</span>
+    <span>2026-06-03</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260603.0736</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-06-03/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:36 · TUE</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · TUESDAY · JUNE 3, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>06<span class="dot">.</span>03</h1>
+    <div class="strap">
+      <span>OpenAI · Anthropic · OpenAI · Google:</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 6 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 ツール・サービス <span class="sep">/</span> OPENAI 公式（@OPENAI / @OPENAIDEVS） <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI Codex「Sites」+ ロール別プラグイン6種 — Codexが全職種の業務エージェントへ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-03/topic_1.png" data-alt="OpenAI Codex「Sites」+ ロール別プラグイン6種 — Codexが全職種の業務エージェントへ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-03/topic_1.png" alt="OpenAI Codex「Sites」+ ロール別プラグイン6種 — Codexが全職種の業務エージェントへ" />
+      </div>
+      <p class="lede">
+        OpenAI が Codex に2つの大型機能を追加した。「Sites」は仕事・アイデア・計画を、チームが探索・利用しURLで共有できるインタラクティブなWebサイト/アプリに変換する機能で、Business / Enterprise プランから展開する。あわせて単一インストールでCodexを特定職種の専門家に変える「ロール別プラグイン」を公開し、sales・data analytics・creative production・product design・public equity investing の領域に対応する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Sites: 作業内容を共有可能なインタラクティブWebサイト/アプリへ変換しURLで配布（Business / Enterprise から）</li>
+        <li data-i="02">ロール別プラグイン6種（sales / data analytics / creative production / product design / public equity investing 等）、コード不要・単一インストール</li>
+        <li data-i="03">Codex が 62 の人気アプリと 110 のスキルにアクセス可能</li>
+        <li data-i="04">「codex-for-every-role」のメッセージで非エンジニア職への展開を打ち出し</li>
+      </ul>
+      <div class="pull">
+        Codex を「開発者ツール」から「全社員の業務エージェント」へ位置づけ直す動き。Sites で成果物を即共有でき、非エンジニア部門にも活用の入口が広がる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">9,882</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAI/status/2061845949170045346">@OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-02</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 ツール・サービス</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAI/status/2061845949170045346">x.com/OpenAI/…</a></dd>
+        <dd><a href="https://x.com/OpenAI/status/2061887650391625870">x.com/OpenAI/status/2061887650391625870</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · ANTHROPIC ANTHROPI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 ニュース・動向 <span class="sep">/</span> ANTHROPIC 公式（@ANTHROPICAI） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic、Project Glasswing を拡大 — Claude Mythos Preview を約150機関へ追加開放</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-03/topic_2.png" data-alt="Anthropic、Project Glasswing を拡大 — Claude Mythos Preview を約150機関へ追加開放" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-03/topic_2.png" alt="Anthropic、Project Glasswing を拡大 — Claude Mythos Preview を約150機関へ追加開放" />
+      </div>
+      <p class="lede">
+        Anthropic が最上位モデル「Claude Mythos Preview」への限定アクセスプログラム「Project Glasswing」を拡大し、新たに約150の機関へアクセスを開放した。Mythos は当初『一般公開せず限られた企業・研究者のみが Glasswing 経由で利用』とされていたが、Anthropic は『数週間内に Mythos クラスのモデルを全顧客へ提供できる見込み』とコメントしており、広域リリースへ動き出している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Project Glasswing のアクセスを約150機関へ拡大（Anthropic 公式）</li>
+        <li data-i="02">Mythos Preview は初期は Microsoft / Apple / Google / Nvidia / Amazon / JP Morgan 等の限定機関のみと報道</li>
+        <li data-i="03">公式は『数週間内に Mythos クラスを全顧客へ提供できる見込み』と説明</li>
+        <li data-i="04">報道価格は $25/百万入力トークン・$125/百万出力トークン（Opus 4.8 の $5/$25 より大幅高）</li>
+      </ul>
+      <div class="pull">
+        Opus 4.8 の上位に控える Mythos クラスが『限定プレビュー』から『広域提供』へ動き出した節目。最上位モデルの性能と価格をめぐる競争が次の主戦場になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">3,043</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/AnthropicAI/status/2061796327986454883">@AnthropicAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-02</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 ニュース・動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/AnthropicAI/status/2061796327986454883">x.com/AnthropicAI/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · OPENAI OPENAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 ニュース・動向 <span class="sep">/</span> OPENAI 公式（@OPENAI） <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI frontier models と Codex が AWS Bedrock で一般提供（GA）開始</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-03/topic_3.png" data-alt="OpenAI frontier models と Codex が AWS Bedrock で一般提供（GA）開始" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-03/topic_3.png" alt="OpenAI frontier models と Codex が AWS Bedrock で一般提供（GA）開始" />
+      </div>
+      <p class="lede">
+        OpenAI の frontier models（GPT-5.5 / GPT-5.4）と Codex が Amazon Bedrock で一般提供（GA）になった。企業は既に使っている AWS のセキュリティ・コンプライアンス・ガバナンスのワークフロー内で OpenAI を組み込め、データレジデンシー制御や従量課金を Bedrock のマネージドAPI経由で使える。OpenAI は『AWS 上での能力拡張の始まり』とし、サイバー機能『Daybreak』の将来提供にも言及した。前日のBedrockサポート発表の正式GA版にあたる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">GPT-5.5 / GPT-5.4 / Codex が AWS Bedrock で GA</li>
+        <li data-i="02">企業の既存 AWS セキュリティ/コンプラ/ガバナンス枠内で利用可、データレジデンシー制御・従量課金</li>
+        <li data-i="03">将来的にサイバー機能『Daybreak』も AWS で提供予定</li>
+        <li data-i="04">6/1 の Bedrock サポート発表の正式一般提供版</li>
+      </ul>
+      <div class="pull">
+        OpenAI が『モデル単体』から『企業の既存クラウド統制の中で動くAI』へ踏み込む動き。AWS利用企業は IAM・監査・課金を変えずに Codex を本番に組み込める。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">5,088</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAI/status/2061564502160892138">@OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-02</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 ニュース・動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAI/status/2061564502160892138">x.com/OpenAI/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · NOTEBOOKLM  / GOOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 ツール・サービス <span class="sep">/</span> NOTEBOOKLM 公式 / GOOGLE DEEPMIND 公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Google: NotebookLM モバイルで資料作成可能に + Co-Scientist を個人研究者へ開放</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-03/topic_4.png" data-alt="Google: NotebookLM モバイルで資料作成可能に + Co-Scientist を個人研究者へ開放" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-03/topic_4.png" alt="Google: NotebookLM モバイルで資料作成可能に + Co-Scientist を個人研究者へ開放" />
+      </div>
+      <p class="lede">
+        Google が知識・研究作業向けの2つのアップデートを公開した。NotebookLM のモバイルアプリで briefing docs・study guides・blog posts を外出先でも作成できるようになり、従来の閲覧・音声中心から『作る』用途へ広がった。あわせて Google DeepMind が Gemini ベースのマルチエージェント『Co-Scientist』を Hypothesis Generation 機能として個人研究者にも開放した（Gemini for Science の一環）。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">NotebookLM モバイル: briefing docs / study guides / blog posts をモバイルで生成可能に</li>
+        <li data-i="02">Co-Scientist: Gemini ベースの複数エージェントが仮説の生成・議論・改良を反復</li>
+        <li data-i="03">推論・マルチモーダル・長文脈・ツール利用を活用、Hypothesis Generation として個人研究者へ提供</li>
+        <li data-i="04">Gemini for Science の一部、ブログで詳細公開</li>
+      </ul>
+      <div class="pull">
+        知識作業のAI化が『チャット』から『成果物生成』『研究の仮説出し』へ用途を広げている例。移動中の資料準備やマルチエージェントによる発想支援が実用フェーズに入った。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">718</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/NotebookLM/status/2061916823860174980">@NotebookLM</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-02</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 ツール・サービス</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/NotebookLM/status/2061916823860174980">x.com/NotebookLM/…</a></dd>
+        <dd><a href="https://x.com/GoogleDeepMind/status/2061857553076920643">x.com/GoogleDeepMind/status/206185755307…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · CURSOR CURSORAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📖 体系的解説系 <span class="sep">/</span> CURSOR 公式（@CURSOR_AI） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cursor「優れたクラウドエージェント体験は、ローカルagentをサーバに移すだけではない」</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-03/topic_5.png" data-alt="Cursor「優れたクラウドエージェント体験は、ローカルagentをサーバに移すだけではない」" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-03/topic_5.png" alt="Cursor「優れたクラウドエージェント体験は、ローカルagentをサーバに移すだけではない」" />
+      </div>
+      <p class="lede">
+        Cursor がクラウドエージェント（Cloud Agents）の設計思想を公式に発信し、『優れたクラウドエージェント体験は、ローカルのエージェントを単にサーバへ移す以上のものを必要とする』と述べた。クラウドで非同期にタスクを任せる体験には、環境の再現性・並列実行・結果のレビュー導線など、ローカルとは別の設計が要るという主張。国内でも非同期で『任せて寝る』運用が実演されている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Cursor が Cloud Agents の設計思想を公式表明</li>
+        <li data-i="02">『ローカルagentをサーバに移すだけでは不十分』— 環境再現・並列・レビュー導線の設計が必要</li>
+        <li data-i="03">非同期で『タスクを任せて寝る』運用が実用フェーズ（@kinopee_ai 実演）</li>
+        <li data-i="04">Codex remote-control / Claude Code 等と同じ『非同期でタスクを回す』UX競争の文脈</li>
+      </ul>
+      <div class="pull">
+        AIコーディングが『手元で対話しながら書く』から『クラウドに投げて非同期で完了させる』へ移行する流れの中で、各社が体験の質で競い始めた。長時間タスクを離席中に回す運用設計の判断材料になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">271</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2061878340265656620">@cursor_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-02</dd>
+        <dt>CATEGORY</dt>
+        <dd>📖 体系的解説系</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2061878340265656620">x.com/cursor_ai/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · N8N  AIAIYOROZUYA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📖 体系的解説系 <span class="sep">/</span> こま｜N8N × AI（@AI_YOROZUYA） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>9割が知らないChatGPTの検索術 — Pulse / GPT-5.5 / shopping research でリサーチを丸投げ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-03/topic_6.png" data-alt="9割が知らないChatGPTの検索術 — Pulse / GPT-5.5 / shopping research でリサーチを丸投げ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-03/topic_6.png" alt="9割が知らないChatGPTの検索術 — Pulse / GPT-5.5 / shopping research でリサーチを丸投げ" />
+      </div>
+      <p class="lede">
+        ChatGPT のエージェント型 GPT-5.5、夜間に自動リサーチして朝にブリーフを届ける Pulse、比較を丸投げできる shopping research の3機能で、調べ物そのものをAIに肩代わりさせる実践術を解説した記事。指示は『何を知りたいか』より『どんな作業をしてほしいか（調べる/比較する/要約する/出典をつける）』で渡すのがコツとする。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">GPT-5.5（エージェント型）は複数情報源を当たって調べ・まとめ・確認まで一気に行う</li>
+        <li data-i="02">Pulse: 履歴/メモリをもとに夜間自動リサーチ→朝にカード形式ブリーフ、Gmail/カレンダー連携可（Pro先行→Plus→全員へ）</li>
+        <li data-i="03">shopping research: 言葉で伝えると買い方ガイドを生成、無料プランでも利用可</li>
+        <li data-i="04">事実（数字・固有名詞・日付）は必ず出典を出させ、人間がリンク先を確認し最終判断する</li>
+      </ul>
+      <div class="pull">
+        AIが『質問に答える道具』から『調べる作業そのものを肩代わりする道具』へ変化。これからは『何を任せるかを決められる人』が強い。VBC受講者のAIリサーチ指導にそのまま使えるフレーム。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">305</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ai_yorozuya/status/2061386615738835075">@ai_yorozuya</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-31</dd>
+        <dt>CATEGORY</dt>
+        <dd>📖 体系的解説系</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ai_yorozuya/status/2061386615738835075">x.com/ai_yorozuya/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · PANKAJ KUMARPANKAJ</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 ニュース・動向 <span class="sep">/</span> PANKAJ KUMAR（@PANKAJKUMAR_DEV） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>GPT-5.6 は『Mythos級を2〜3倍安く』? — 今週リリース説のリーク（未確定）</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-03/topic_7.png" data-alt="GPT-5.6 は『Mythos級を2〜3倍安く』? — 今週リリース説のリーク（未確定）" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-03/topic_7.png" alt="GPT-5.6 は『Mythos級を2〜3倍安く』? — 今週リリース説のリーク（未確定）" />
+      </div>
+      <p class="lede">
+        OpenAI の次期モデル GPT-5.6 に関する X 上のリーク投稿。今週にもリリースされ Codex の大型アップデートも同時に来る見込みで、Anthropic の最上位 Mythos レベルに約2〜3倍安い価格で並びうる、という内容。推論・フロントエンド生成・人格・エージェント型ワークフローで大幅改善し、主眼は efficiency（速く・安く・長時間ワークフロー実用化）とされる。あくまで未確定のリーク情報。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">GPT-5.6 が今週リリース見込み、Codex 大型アップデート同時との観測</li>
+        <li data-i="02">Anthropic Mythos レベルに約2〜3倍安い価格で並びうる</li>
+        <li data-i="03">推論 / フロントエンド生成 / personality / agentic workflows で大幅改善</li>
+        <li data-i="04">主眼は efficiency（エージェントを速く・安く・長時間ワークフローで実用化）</li>
+        <li data-i="05">⚠️ OpenAI 公式発表ではなく未確定のリーク情報</li>
+      </ul>
+      <div class="pull">
+        Anthropic が Mythos を広域提供へ動かす一方、OpenAI は『Mythos級を大幅に安く』という価格攻勢で対抗する構図が噂段階で見える。確報が出れば最上位モデルのコスト競争の節目になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,006</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/pankajkumar_dev/status/2061452513111658740">@pankajkumar_dev</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-31</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 ニュース・動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/pankajkumar_dev/status/2061452513111658740">x.com/pankajkumar_dev/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/OpenAI/status/2061845949170045346">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-06-02/">
+      ← 前日 · 2026-06-02
+      <span class="big">Anthropic が $65B 調達・評価額 $965B で OpenAI を初めて逆転、米IPOを極秘申請</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-06-03/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260603.0736</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

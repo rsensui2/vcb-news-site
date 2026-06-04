@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>RAGは壊れる, スタンフォード研究が示した「Semantic Collapse」とは何か — Bookmarks · Vibe Coder Bootcamp</title>
-  <meta name="description" content="このブックマークは、RAGが大規模化したときに性能劣化する根本原因として「Semantic Collapse」を紹介している。参照した元記事では、スタンフォードの研究をもとに、ベクトル検索が文書数の増加とともに意味的な距離を保てなくなり、関連文書の取り違えが起こる構造的問題を説明" />
+  <title>バイブコーディング時代のセキュリティ — 「不完全なコードを周囲でサンドボックス的に守る」防御論 (tomoyuki@AIシャイン) — Bookmarks · Vibe Coder Bootcamp</title>
+  <meta name="description" content="Vibe Coding（AI に書かせる開発）ではセキュリティの考え方が従来と変わる、という実践論。従来は「ソースコードが完璧であること」を前提に守るが、AI 生成コードは不完全である前提に立ち、コードの内側ではなく周囲をサンドボックス的に固めるのがポイントだとする。具体策は4点" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
@@ -285,11 +285,11 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №094</span>
+    <span class="tick">BOOKMARK №002</span>
     <span class="sep">/</span>
-    <span>2026-04-14</span>
+    <span>2026-06-03</span>
     <span class="sep">/</span>
-    <span>@HowToAI_</span>
+    <span>@sarukun99</span>
     <span class="sep">/</span>
     <span>373 ITEMS</span>
     <span class="sep">/</span>
@@ -317,43 +317,37 @@
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-04-14 <span>/</span> №094
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-06-03 <span>/</span> №002
     </div>
     <div class="cat-line">
-      <span>💻 AI/開発</span>
-      <span class="sep">·</span><span>How To AI <span style="opacity:.7">@HowToAI_</span></span>
-      <span class="sep">·</span><span>2026-04-14</span>
+      <span>🔧 セキュリティ / アーキテクチャ（Vibe Coding × 防御設計）</span>
+      <span class="sep">·</span><span>tomoyuki@AIシャイン <span style="opacity:.7">@sarukun99</span></span>
+      <span class="sep">·</span><span>2026-06-03</span>
     </div>
-    <h1 class="title">RAGは壊れる, スタンフォード研究が示した「Semantic Collapse」とは何か</h1>
+    <h1 class="title">バイブコーディング時代のセキュリティ — 「不完全なコードを周囲でサンドボックス的に守る」防御論 (tomoyuki@AIシャイン)</h1>
     <div class="strap">
-      <span><span class="label">№</span>094 / 373</span>
-      <span><span class="label">SRC</span><a href="https://x.com/HowToAI_/status/2043713987171492224" target="_blank" rel="noopener noreferrer">x.com/HowToAI_ ↗</a></span>
-      <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/04_HowToAI__rag_is_broken_and_nobody_s_talking_about_it.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
+      <span><span class="label">№</span>002 / 373</span>
+      <span><span class="label">SRC</span><a href="https://x.com/sarukun99/status/2062187169847103567" target="_blank" rel="noopener noreferrer">x.com/sarukun99 ↗</a></span>
+      <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/310_sarukun99_%E3%83%90%E3%82%A4%E3%83%96%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E9%98%B2%E5%BE%A1%E8%AB%96.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
   </div>
 </section>
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">094<span class="ord">BOOKMARK / 373</span></aside>
+    <aside class="numeral">002<span class="ord">BOOKMARK / 373</span></aside>
     <article class="prose">
-<h2>要約</h2><p>このブックマークは、RAGが大規模化したときに性能劣化する根本原因として「Semantic Collapse」を紹介している。参照した元記事では、スタンフォードの研究をもとに、ベクトル検索が文書数の増加とともに意味的な距離を保てなくなり、関連文書の取り違えが起こる構造的問題を説明している。特に、1つの巨大なベクトル空間にすべての文書を押し込む設計は、数万件規模を超えると検索精度が崩れやすい。対策としては、ドメインや時系列ごとにコーパスを分割し、ルーティング層を設けて、検索前に探索範囲を絞るアーキテクチャが重要だとされる。</p><h2>本文</h2><p>生成AIの実務導入では、RAGは「幻覚を減らし、社内文書やナレッジベースを読ませるための王道手法」と見なされてきた。しかし、元記事が指摘するのは、RAGの問題はモデルの言い回しやプロンプト品質ではなく、*検索そのものが規模拡大で壊れる* ことにあるという点だ。</p><p>記事によれば、初期のRAGシステムはかなりうまく見える。社内デモや小規模テストでは、回答はもっともらしく、根拠もあるように見える。ところが本番投入後に文書数が増えるにつれ、回答が「一見もっともらしいのに、微妙に古い、欠けている、文脈がずれている」という壊れ方を始める。つまり、文章生成の自然さは保たれているのに、検索された文脈が正確ではない。</p><p>元記事は、スタンフォード大学の法務AI領域の研究をもとに、この現象を説明している。RAGでは通常、文書を高次元ベクトルに埋め込み、クエリに近いベクトルを検索して、その近傍文書をLLMに渡す。小規模な集合では、関連文書同士がきれいにまとまり、似た内容が近くに配置されるので機能する。だが、文書集合が大きくなってくると、ベクトル空間が混み合い、距離の差が潰れていく。</p><p>このとき起こるのが *Semantic Collapse* である。意味的に本来は区別されるべき文書群が、ベクトル空間上では十分に分離されなくなり、異なる領域、異なる時期、異なる制度圏の文書が「なんとなく似ているもの」として近くに並んでしまう。記事では、概ね1万文書を超えたあたりから精度低下が見え始め、5万文書を超えると意味検索の精度が大きく崩れ、場合によってはキーワード検索以下になると説明している。</p><p>この問題が危険なのは、出力が露骨に破綻しないことだ。LLMはランダムな嘘をつくのではなく、「意味的にはそれっぽいが、実際には誤った」文書群を元に整った回答を作る。法務分野なら、別の法域の判例を正しい文脈のように扱う。企業内ナレッジなら、古いポリシーや暫定メモを現行ルールのように要約してしまう。つまり、幻覚というより、*取得段階で間違った証拠が渡されることによる系統的誤答* が起きる。</p><p>元記事は、多くのRAGプロダクトが共有している前提, すなわち「全ドキュメントを単一の巨大ベクトルインデックスに入れておけばよい」という設計思想こそが問題だと指摘する。データが増えれば増えるほどノイズは増え、長いコンテキストウィンドウや大きなモデルで覆い隠すことはできない。モデルが流暢になるだけで、検索精度は戻らない。</p><p>対策として提案されているのは、コーパスを複数の有界グループに分割することだ。記事では、1グループあたりおよそ1万文書程度に抑えると、意味距離の有効性を保ちやすいとしている。分割軸は、法域、事業部、プロダクトライン、時期、文書種別など、実世界の構造に沿って設計するべきだとされる。重要なのは、最初から無関係な文書同士を競わせないことにある。</p><p>さらに、分割だけでは不十分で、検索前にどのグループを探索すべきかを決める *routing layer* が必要だと述べている。クエリに対して、どのドメインか、どの時間帯の情報か、どのカテゴリかといった制約を推定し、該当グループだけ検索する。これにより検索空間が狭まり、関連性の高いコンテキストだけをLLMに渡せるようになる。</p><p>元記事全体のメッセージは一貫している。RAGの本質的な品質は、生成の上手さではなく、検索の設計で決まる。強いメタデータ、コーパス分割、探索範囲のルーティング、そして検索精度そのものの計測が不可欠である。回答が流暢かどうかで評価していては、壊れたRAGを見抜けない。</p><h2>なぜ重要か</h2><p>RAGを「とりあえずベクターストアに全部入れればよい」と捉える実装はかなり多く、そのまま本番拡大すると静かに誤答率が上がる。AI検索や社内ナレッジQAを実運用するなら、生成より先に検索アーキテクチャを設計し直す必要がある。</p>
+<p><strong>有益度:</strong> ⭐⭐⭐⭐</p><p><strong>エンゲージメント:</strong> RT 3 / Likes 57 / Bookmarks 64 / Views 7,162</p><h2>本文 (X Post)</h2><blockquote>バイブコーディングだとセキュリティが、今までのソフトウェアと防御の仕方がちょっと違うんですよね。</blockquote><blockquote></blockquote><blockquote>ソースコードが完璧であるのが今までだとするなら、ソースコードは不完全でその周囲でサンドボックス的に守るのがポイントです。</blockquote><blockquote></blockquote><blockquote>認証周りは、リバースプロキシを前段に置きそこでチェックします。ALBでGoogleログイン済をチェックするのと似た感じですね。</blockquote><blockquote></blockquote><blockquote>リバースプロキシの先にデプロイされたバイブコーディングされたシステムは認証を考えなくてよくなります。</blockquote><blockquote></blockquote><blockquote>APIもリバプロで認証かかり、セキュアに公開できるようになります。</blockquote><blockquote></blockquote><blockquote>次に外部送信も同様に、outboundの送信先を絞ります。LLMのAPIか認可されたwebhook以外塞いじゃいます。</blockquote><blockquote></blockquote><blockquote>DBはマルチテナントからシングルテナントにして、ロールに関係なく全データ見れる前提(スプシと同じ)で、workerにbindします。</blockquote><blockquote></blockquote><blockquote>プログラムのバグによるデータロストはこれまで通り、ポイントリカバリを使う感じになります。</blockquote><h2>概要</h2><p>Vibe Coding（AI に書かせる開発）ではセキュリティの考え方が従来と変わる、という実践論。従来は「ソースコードが完璧であること」を前提に守るが、AI 生成コードは不完全である前提に立ち、コードの内側ではなく<strong>周囲をサンドボックス的に固める</strong>のがポイントだとする。具体策は4点: (1) 認証はリバースプロキシを前段に置いてそこでチェックする（ALB の Google ログイン済みチェックと同様）。プロキシ配下のアプリ／API は認証ロジックを持たなくてよくなる。(2) outbound（外部送信）も絞り、LLM API か認可済み webhook 以外の送信先を塞ぐ。(3) DB はマルチテナントをやめてシングルテナント化し、「ロール無関係に全データが見える前提（スプレッドシートと同じ）」で Worker に bind する。(4) プログラムのバグによるデータロストは従来どおりポイントインタイムリカバリで対応。</p>
     </article>
     <aside class="side">
       <dl>
-        <dt>AUTHOR</dt><dd>How To AI</dd>
-        <dt>HANDLE</dt><dd>@HowToAI_</dd>
-        <dt>POSTED</dt><dd>2026-04-14</dd>
-        <dt>CATEGORY</dt><dd>💻 AI/開発</dd>
-        <dt>SOURCE</dt><dd><a href="https://x.com/HowToAI_/status/2043713987171492224" target="_blank" rel="noopener noreferrer">x.com/HowToAI_/status/2043713987171492224…</a></dd>
-        <dt>MARKDOWN</dt><dd><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/04_HowToAI__rag_is_broken_and_nobody_s_talking_about_it.md" target="_blank" rel="noopener noreferrer">GitHub で原文を見る</a></dd>
+        <dt>AUTHOR</dt><dd>tomoyuki@AIシャイン</dd>
+        <dt>HANDLE</dt><dd>@sarukun99</dd>
+        <dt>POSTED</dt><dd>2026-06-03</dd>
+        <dt>CATEGORY</dt><dd>🔧 セキュリティ / アーキテクチャ（Vibe Coding × 防御設計）</dd>
+        <dt>SOURCE</dt><dd><a href="https://x.com/sarukun99/status/2062187169847103567" target="_blank" rel="noopener noreferrer">x.com/sarukun99/status/2062187169847103567…</a></dd>
+        <dt>MARKDOWN</dt><dd><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/310_sarukun99_%E3%83%90%E3%82%A4%E3%83%96%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E9%98%B2%E5%BE%A1%E8%AB%96.md" target="_blank" rel="noopener noreferrer">GitHub で原文を見る</a></dd>
         
-        <dt>ENGAGEMENT</dt>
-        <dd>
-          <div class="stats">
-            <div class="stat"><span class="num">2,785</span><span class="lab">LIKES</span></div><div class="stat"><span class="num">588</span><span class="lab">RTS</span></div><div class="stat"><span class="num">2,640</span><span class="lab">BMARKS</span></div><div class="stat"><span class="num">303K</span><span class="lab">VIEWS</span></div>
-          </div>
-        </dd>
       </dl>
     </aside>
   </div>
@@ -361,13 +355,13 @@
 
 <section class="page-nav">
   <div class="container">
-    <a class="btn prev" href="./05_openclaw_openclaw_2026_4_14.md.html">
+    <a class="btn prev" href="./309_googlegemma_Gemma4_12B%E7%99%BA%E8%A1%A8.md.html">
       <span>← 新しいブックマーク</span>
-      <span class="big">OpenClaw 2026.4.14 🦞</span>
+      <span class="big">Gemma 4 12B 発表 — エンコーダ不要・ラップトップで動く統合マルチモーダルモデル…</span>
     </a>
-    <a class="btn next" href="./03_DeRonin__https_t_co_pouik6acsd.md.html">
+    <a class="btn next" href="./308_AGI%E3%83%A9%E3%83%9C_Codex_Sites%E9%80%9F%E5%A0%B1%E3%81%BE%E3%81%A8%E3%82%81.md.html">
       <span>古いブックマーク →</span>
-      <span class="big">https://t.co/pOUiK6ACsd</span>
+      <span class="big">【速報】OpenAI、Codex の新機能「Sites」を発表 — 要点まとめ (AGIラボ…</span>
     </a>
   </div>
 </section>
@@ -375,8 +369,8 @@
 <section class="actions">
   <div class="container">
     <a href="./">← 一覧へ戻る</a>
-    <a class="primary" href="https://x.com/HowToAI_/status/2043713987171492224" target="_blank" rel="noopener noreferrer">元ポストを X で見る</a>
-    <a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/04_HowToAI__rag_is_broken_and_nobody_s_talking_about_it.md" target="_blank" rel="noopener noreferrer">GitHub で開く</a>
+    <a class="primary" href="https://x.com/sarukun99/status/2062187169847103567" target="_blank" rel="noopener noreferrer">元ポストを X で見る</a>
+    <a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/310_sarukun99_%E3%83%90%E3%82%A4%E3%83%96%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E9%98%B2%E5%BE%A1%E8%AB%96.md" target="_blank" rel="noopener noreferrer">GitHub で開く</a>
   </div>
 </section>
 

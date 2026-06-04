@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-06-05 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-06-05 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0605</span>
+    <span class="sep">/</span>
+    <span>2026-06-05</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260605.0727</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-06-05/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:27 · THU</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · THURSDAY · JUNE 5, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>06<span class="dot">.</span>05</h1>
+    <div class="strap">
+      <span>Anthropic「Dynamic · Google「Gemma · Anthropic「ant · OpenAI「Codex</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 5 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📖 開発ツール / エージェント設計 <span class="sep">/</span> MILES DEUTSCHER (@MILESDEUTSCHER) ほかコミュニティ解説 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic「Dynamic Workflows」— Claude Code が自前の harness を書き、並列サブエージェントを束ねる</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-05/topic_1.png" data-alt="Anthropic「Dynamic Workflows」— Claude Code が自前の harness を書き、並列サブエージェントを束ねる" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-05/topic_1.png" alt="Anthropic「Dynamic Workflows」— Claude Code が自前の harness を書き、並列サブエージェントを束ねる" />
+      </div>
+      <p class="lede">
+        Anthropic が Claude Code に「Dynamic Workflows」を投入した。Claude がタスクごとにその場で独自の JavaScript harness を書き、複数のサブエージェントを隔離されたコンテキストで起動・検証・統合する仕組み。単一コンテキストで長時間タスクを回すと生じる手抜き（agentic laziness）・自己バイアス・目標のズレを、モデルを大きくするのではなくアーキテクチャ側で解く狙い。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Claude が「分解・サブエージェント編成・検証・統合」をタスクごとに自動設計</li>
+        <li data-i="02">対応パターン: fan-out+synthesize / 敵対的検証 / トーナメント / classify-and-act / loop-until-done</li>
+        <li data-i="03">最大100超の並列サブエージェントまでスケール可能と説明</li>
+        <li data-i="04">用途: ディープリサーチ、大規模リファクタ/マイグレーション、検証、トリアージ、eval</li>
+        <li data-i="05">Opus 4.8 と同時期の打ち手。トークン消費は増えるが長尺タスクの信頼性が上がる</li>
+      </ul>
+      <div class="pull">
+        「harness 論争は終わった、Claude が自分で harness を書くようになった」と評される転換。1会話に全部やらせて品質が劣化する典型的失敗を、複数エージェントへの分解で回避できる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">600</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/milesdeutscher/status/2062216995383488744">@milesdeutscher</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-04</dd>
+        <dt>CATEGORY</dt>
+        <dd>📖 開発ツール / エージェント設計</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/milesdeutscher/status/2062216995383488744">x.com/milesdeutscher/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · GOOGLE GEMMA GOOGL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 LLMモデル発表 <span class="sep">/</span> GOOGLE GEMMA 公式（@GOOGLEGEMMA） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Google「Gemma 4 12B」発表 — エンコーダ不要・16GBメモリのラップトップで動く統合マルチモーダル</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-05/topic_2.png" data-alt="Google「Gemma 4 12B」発表 — エンコーダ不要・16GBメモリのラップトップで動く統合マルチモーダル" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-05/topic_2.png" alt="Google「Gemma 4 12B」発表 — エンコーダ不要・16GBメモリのラップトップで動く統合マルチモーダル" />
+      </div>
+      <p class="lede">
+        Google が Gemma 4 12B を発表。encoder-free（エンコーダ不要）の統合マルチモーダルアーキテクチャを採用し、画像などのマルチモーダルトークンを LLM バックボーンに直接流す。視覚エンコーダは 35M パラメータの軽量モジュールに置換し、空間情報を token embedding に注入。16GB の VRAM/ユニファイドメモリで動き、一回り大きい 26B モデルに迫る性能を半分以下のメモリで実現する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">encoder-free: マルチモーダルトークンを LLM バックボーンに直接統合、追加エンコーダ不要</li>
+        <li data-i="02">視覚エンコーダを 35M パラメータの軽量モジュールに置換</li>
+        <li data-i="03">16GBメモリでローカル実行可、26Bモデルに迫る性能を半分以下のメモリで</li>
+        <li data-i="04">Apache 2.0 ライセンス、Hugging Face / Kaggle で重み配布</li>
+        <li data-i="05">llama.cpp / MLX / LM Studio / vLLM / SGLang / ollama が初日対応</li>
+      </ul>
+      <div class="pull">
+        ローカルLLMの実用ラインがまた一段下がった。受講者が手元のマシンで完結するマルチモーダルAIアプリを作る選択肢として現実味があり、API課金回避・オフライン・プライバシー制約の用途に向く。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">11,559</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/googlegemma/status/2062202706882883696">@googlegemma</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-04</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 LLMモデル発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/googlegemma/status/2062202706882883696">x.com/googlegemma/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · MIKEL ECHEVERRIA M</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📖 開発者ツール <span class="sep">/</span> MIKEL ECHEVERRIA (@MIKELECHEVE) ほか <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic「ant CLI」— Claude Platform 全体をターミナルから1行で叩ける</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-05/topic_3.png" data-alt="Anthropic「ant CLI」— Claude Platform 全体をターミナルから1行で叩ける" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-05/topic_3.png" alt="Anthropic「ant CLI」— Claude Platform 全体をターミナルから1行で叩ける" />
+      </div>
+      <p class="lede">
+        Anthropic が `ant` CLI を公開した。Messages API をはじめ Claude Platform のリソースをシェルから直接呼べるツールで、リクエストはフラグまたは YAML で組み立て、`@path` でファイルを pipe、リスト系 API は自動ページネーション、出力整形は jq 不要で完結する。Claude Code がネイティブに認識する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Messages API を1行で実行、Claude Managed Agents もシェルから起動</li>
+        <li data-i="02">`@path` でファイル添付、結果をそのまま pipe で次工程へ</li>
+        <li data-i="03">リスト API は auto-paginate、出力 transform に jq を使わなくてよい</li>
+        <li data-i="04">Claude Code が `ant` を native に認識</li>
+      </ul>
+      <div class="pull">
+        AI統合の最小単位が「ターミナル1行」まで下がった。受講者がAPIを学ぶ際、SDKを書く前にCLIで挙動を試せるので学習コストが下がり、シェル/cronとの接続も容易。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/MikelEcheve/status/2062188207026962513">@MikelEcheve</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-03</dd>
+        <dt>CATEGORY</dt>
+        <dd>📖 開発者ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/MikelEcheve/status/2062188207026962513">x.com/MikelEcheve/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · TOMOYUKIAISARUKUN9</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 業界ニュース / 開発ツール <span class="sep">/</span> TOMOYUKI@AIシャイン（@SARUKUN99）/ AGIラボ（@CTGPTLB） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>OpenAI「Codex Sites」— ローカル開発から本番公開まで1時間、「SaaSは死んだ」論争</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-05/topic_4.png" data-alt="OpenAI「Codex Sites」— ローカル開発から本番公開まで1時間、「SaaSは死んだ」論争" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-05/topic_4.png" alt="OpenAI「Codex Sites」— ローカル開発から本番公開まで1時間、「SaaSは死んだ」論争" />
+      </div>
+      <p class="lede">
+        OpenAI が Codex の新機能「Sites」を発表。Codex アプリ内で作った Web サイト/アプリをワークスペース内に公開・URL共有できる。これを受けて @sarukun99 は「ローカルで作る段階は既に実現済みで、ネックだった本番公開のピースを Sites が埋めた。ネットワーク効果を必要としない大半の SaaS は1時間で作って公開できる」と主張し『SaaSは死んだ』論争を呼んだ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Sites: Codexアプリ内でWebサイト/アプリをワークスペースに公開・URL共有</li>
+        <li data-i="02">従来 Cloudflare D1/Turso+Workers で安価公開できた手段をラップして誰でも使えるように</li>
+        <li data-i="03">@sarukun99:「個別最適で作るコストが共有SaaSより安くなり、上流工程（業務整理）の価値が上がる」</li>
+        <li data-i="04">Lovable / Replit / Wix がローンチパートナーかつ競合という構図</li>
+      </ul>
+      <div class="pull">
+        「アイデア→ローカル実装→本番公開」の最後の摩擦が消えると、受講者が学んだコードをそのまま公開物に変えやすくなる。ただし『SaaSは死んだ』は煽りで、ネットワーク効果のあるプロダクトは別という留保つき。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,160</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/sarukun99/status/2061970701146550681">@sarukun99</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-03</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 業界ニュース / 開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/sarukun99/status/2061970701146550681">x.com/sarukun99/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · TOMOYUKIAISARUKUN9</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 セキュリティ / アーキテクチャ <span class="sep">/</span> TOMOYUKI@AIシャイン（@SARUKUN99） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>バイブコーディング時代のセキュリティ — 「不完全なコードを境界で囲う」防御論</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-05/topic_5.png" data-alt="バイブコーディング時代のセキュリティ — 「不完全なコードを境界で囲う」防御論" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-05/topic_5.png" alt="バイブコーディング時代のセキュリティ — 「不完全なコードを境界で囲う」防御論" />
+      </div>
+      <p class="lede">
+        AI に書かせたコードを安全に本番運用するための設計論。「ソースコードが完璧」前提を捨て、コードは不完全である前提でその周囲を境界（サンドボックス）で囲って守る。認証はリバースプロキシで外出しし、outbound送信先を絞り、DBはシングルテナント化して防御面を単純化する、という4点の実践パターンを提示する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">認証はリバースプロキシで外出し（ALBのGoogleログイン済みチェックと同様）、配下アプリは認証ロジック不要</li>
+        <li data-i="02">outbound を絞り、LLM API か認可済み webhook 以外の送信先を塞ぐ</li>
+        <li data-i="03">DBをマルチテナントからシングルテナント化し「全データ見える前提」でWorkerにbind</li>
+        <li data-i="04">プログラムのバグによるデータロストはポイントインタイムリカバリで対応</li>
+      </ul>
+      <div class="pull">
+        受講者が陥りがちな「AIが書いたコードをそのまま公開して脆弱性を残す」問題への現実的処方箋。Codex Sites の『1時間で公開』議論とセットで『では安全はどう担保するか』を埋める。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">57</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/sarukun99/status/2062187169847103567">@sarukun99</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-03</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 セキュリティ / アーキテクチャ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/sarukun99/status/2062187169847103567">x.com/sarukun99/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · POPIKEDA/ KAZUYAMA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📖 開発ツール / ワークフロー <span class="sep">/</span> POP_IKEDA（解説）/ KAZUYAMANO（実践） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Codex を公式 ChatGPT アプリ＋スマホから遠隔操作 — `codex remote-control`</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-05/topic_6.png" data-alt="Codex を公式 ChatGPT アプリ＋スマホから遠隔操作 — `codex remote-control`" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-05/topic_6.png" alt="Codex を公式 ChatGPT アプリ＋スマホから遠隔操作 — `codex remote-control`" />
+      </div>
+      <p class="lede">
+        OpenAI が Codex を ChatGPT モバイルへ統合する流れの中で、`codex remote-control` でローカルサーバーを起動すれば公式 ChatGPT アプリからスマホ経由で Codex CLI を操作できることが確認された。PCで動くAIエージェントを移動中にスマホから監視・承認・操作でき、サードパーティ製の遠隔ツールが不要になる。Anthropic も Claude Code で同様の遠隔機能を提供済み。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">`codex remote-control` でローカルサーバー起動 → 公式ChatGPTアプリから操作（実証あり）</li>
+        <li data-i="02">移動中もエージェント開発を監視・承認・継続できる</li>
+        <li data-i="03">「AIが自律で働き、人間が指揮する」遠隔指揮スタイルが標準化の兆し</li>
+        <li data-i="04">ChatGPT×Codex のアプリ統合（スーパーアプリ化）は community で議論先行・一部は憶測</li>
+      </ul>
+      <div class="pull">
+        開発の物理的拘束（PC前にいる必要）が外れる。受講者が外出先から長時間タスクを承認・軌道修正する運用が現実的になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">16</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/pop_ikeda/status/2062370003039699155">@pop_ikeda</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-04</dd>
+        <dt>CATEGORY</dt>
+        <dd>📖 開発ツール / ワークフロー</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/pop_ikeda/status/2062370003039699155">x.com/pop_ikeda/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · DAN MCATEER DANIEL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 業界動向（噂・未確定） <span class="sep">/</span> DAN MCATEER (@DANIEL_MAC8) ほか <span class="sep">/</span> NEWS
+      </div>
+      <h2>GPT-5.6 リリース間近の観測 — OpenAI の約60日リリースサイクル（⚠️未確定）</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-05/topic_7.png" data-alt="GPT-5.6 リリース間近の観測 — OpenAI の約60日リリースサイクル（⚠️未確定）" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-05/topic_7.png" alt="GPT-5.6 リリース間近の観測 — OpenAI の約60日リリースサイクル（⚠️未確定）" />
+      </div>
+      <p class="lede">
+        GPT-5.6 が近日中にリリースされるとの観測が広がっている。GPT-5.4(3/5)→5.5(4/23)→5.6(6/4?) と約6週間間隔でメジャーモデルが出るパターン、Codexログに名前が出現、賭け市場 Polymarket で『6/30までにリリース』確率が80〜89%といった状況証拠が根拠。ただしモデルカード・ベンチマーク・正式リリース日はまだ無い。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">モデルカード・ベンチマーク・正式日は未公開（名前のみCodexログで観測）</li>
+        <li data-i="02">リリースサイクルが約60日に短縮しているという指摘</li>
+        <li data-i="03">Polymarket で6月末までのリリースに高確率（80〜89%）</li>
+      </ul>
+      <div class="pull">
+        モデル更新の高速化はスタック選定に直結する。受講者には『最新を追い続ける』より『乗り換えコストを意識して使う』観点を持たせたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">251</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/daniel_mac8/status/2062208626098409951">@daniel_mac8</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-04</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 業界動向（噂・未確定）</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/daniel_mac8/status/2062208626098409951">x.com/daniel_mac8/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/milesdeutscher/status/2062216995383488744">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-06-03/">
+      ← 前日 · 2026-06-03
+      <span class="big">OpenAI Codex「Sites」+ ロール別プラグイン6種 — Codexが全職種の業務エージェントへ</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-06-05/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260605.0727</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

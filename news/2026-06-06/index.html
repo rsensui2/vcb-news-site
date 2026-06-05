@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-06-06 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-06-06 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0606</span>
+    <span class="sep">/</span>
+    <span>2026-06-06</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260606.0731</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-06-06/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:31 · FRI</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · FRIDAY · JUNE 6, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>06<span class="dot">.</span>06</h1>
+    <div class="strap">
+      <span>Anthropic「Claude · Anthropic · NotebookLM「Source · Cursor「Canvases」強化</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 6 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AIモデル・研究 <span class="sep">/</span> ANTHROPICAI 公式 / ALEX ALBERT（ANTHROPIC INSTITUTE） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic「Claude が AI 開発を加速」— 社内コードの80%超を Claude が記述、再帰的自己改善の可能性</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-06/topic_1.png" data-alt="Anthropic「Claude が AI 開発を加速」— 社内コードの80%超を Claude が記述、再帰的自己改善の可能性" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-06/topic_1.png" alt="Anthropic「Claude が AI 開発を加速」— 社内コードの80%超を Claude が記述、再帰的自己改善の可能性" />
+      </div>
+      <p class="lede">
+        Anthropic Institute が「Claude による AI 開発の加速」の内部データを公開した。社内でマージされるコードの80%超を Claude が書き、多くの研究者は数か月コードを手書きしていない。エンジニア1人あたりの四半期コード量は2024年比で8倍。モデル高速化テストでは Opus 4（2024/5）の約3倍から Mythos Preview（2026/4）の約52倍へ伸び、研究の行き詰まり場面での次手提案では人間を64%上回った（2024年は22%）。Anthropic はこれを再帰的自己改善への一経路と位置づけつつ、研究の問題選定能力は未実証で保証はないと留保し、実現時はアライメント問題深刻化や制御喪失リスクも併記した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">社内でマージされるコードの80%超を Claude が記述</li>
+        <li data-i="02">エンジニア1人あたりの四半期コード量は2024年比 8倍</li>
+        <li data-i="03">オープンエンドなコーディング課題の成功率が6か月で約26%→76%（+50pt）</li>
+        <li data-i="04">モデル高速化テスト: Opus 4 約3倍 → Mythos Preview 約52倍</li>
+        <li data-i="05">行き詰まり場面の次手提案で人間を64%上回る（2024年は22%）</li>
+      </ul>
+      <div class="pull">
+        「AIがAIを作る」段階が想定より速く進む現実を当事者が定量開示した点が重い。受講者には「Claude にコードを書かせるのは最前線では既に主流」という現実を、同時に再帰的自己改善・制御喪失リスクを併記する姿勢は『任せきりにせず検証する』リテラシーの重要性を示す。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">25,635</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/AnthropicAI/status/2062568862479208923">@AnthropicAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-05</dd>
+        <dt>CATEGORY</dt>
+        <dd>AIモデル・研究</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/AnthropicAI/status/2062568862479208923">x.com/AnthropicAI/…</a></dd>
+        <dd><a href="https://www.anthropic.com/institute/recursive-self-improvement">www.anthropic.com/institute/recursive-se…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · ANTHROPICAI SCIENC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI研究・ドメイン応用 <span class="sep">/</span> ANTHROPICAI 公式（SCIENCE BLOG） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic Science Blog「Making Claude a chemist」— NMR で分子構造解析を支援</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-06/topic_2.png" data-alt="Anthropic Science Blog「Making Claude a chemist」— NMR で分子構造解析を支援" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-06/topic_2.png" alt="Anthropic Science Blog「Making Claude a chemist」— NMR で分子構造解析を支援" />
+      </div>
+      <p class="lede">
+        Anthropic が新しい Science Blog で、Claude を化学の分子構造解析に使う取り組みを公開した。分子を操作するにはまず構造を理解する必要があり、その主要ツールが NMR（核磁気共鳴）分光法。Claude が NMR スペクトルの読み解きを支援することで、分子構造の同定という専門性の高い作業を AI が補助できることを示している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">化学の分子構造同定（NMR スペクトル解釈）に Claude を適用</li>
+        <li data-i="02">「Claude を chemist にする」という科学ドメイン特化の研究系発信</li>
+        <li data-i="03">専門ツール（NMR）を読み解く作業の AI 補助を実証</li>
+      </ul>
+      <div class="pull">
+        コーディングや事務だけでなく、自然科学の専門領域でも汎用 LLM がドメインツール化しつつあることを示す事例。受講者・TEKION 部門にとって「自分の専門分野の解釈タスクを AI に補助させる」発想の参考になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,379</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/AnthropicAI/status/2062979607448682731">@AnthropicAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-06</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI研究・ドメイン応用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/AnthropicAI/status/2062979607448682731">x.com/AnthropicAI/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · NOTEBOOKLM</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発者ツール・AIツール <span class="sep">/</span> NOTEBOOKLM 公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>NotebookLM「Source Attribution（出典表示）」を正式リリース</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-06/topic_3.png" data-alt="NotebookLM「Source Attribution（出典表示）」を正式リリース" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-06/topic_3.png" alt="NotebookLM「Source Attribution（出典表示）」を正式リリース" />
+      </div>
+      <p class="lede">
+        NotebookLM が要望の多かった機能「Source Attribution」を公開した。各成果物を生成する際に使われた『正確なレシピ（プロンプト＋ソース）』を確認でき、何を根拠にその出力が作られたかが追える。さらに「Iterate」をタップすれば、その生成過程をベースに調整・カスタマイズができる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">生成物ごとに『使用プロンプト＋ソース』の組み合わせを可視化</li>
+        <li data-i="02">「Iterate」で生成レシピを引き継いで微調整できる</li>
+        <li data-i="03">AI 出力の根拠追跡（traceability）を標準機能化</li>
+      </ul>
+      <div class="pull">
+        AI 出力の『根拠を追える』は今朝のブックマーク（AI Ready データ基盤の5要素）でも挙がった論点。NotebookLM がそれを標準機能に落とし込んだことで、受講者が調査・教材作成で使う際の信頼性が上がる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,105</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/NotebookLM/status/2062653124326863077">@NotebookLM</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-05</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発者ツール・AIツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/NotebookLM/status/2062653124326863077">x.com/NotebookLM/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · CURSORAI  / CHANGE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発者ツール <span class="sep">/</span> CURSOR_AI 公式 / CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cursor「Canvases」強化 — 公開・URL共有、Design Mode、Context Explorer</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-06/topic_4.png" data-alt="Cursor「Canvases」強化 — 公開・URL共有、Design Mode、Context Explorer" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-06/topic_4.png" alt="Cursor「Canvases」強化 — 公開・URL共有、Design Mode、Context Explorer" />
+      </div>
+      <p class="lede">
+        Cursor が canvases 関連を一括強化した。canvas でダッシュボード・レポート・社内ツールを作成し、公開して URL でチーム共有できる。「Design Mode」では canvas 上の UI 要素を直接選択・注釈して Cursor の編集を誘導でき、「Context Explorer」ではエージェントのコンテキスト使用量をインタラクティブなレポートとして可視化し、システム全体でトークンがどこに消費されているかを分解表示する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">canvas を公開し URL でチーム共有（ダッシュボード/レポート/社内ツール）</li>
+        <li data-i="02">Design Mode: UI 要素を直接注釈してエージェントの編集を誘導</li>
+        <li data-i="03">Context Explorer: トークン消費の内訳をインタラクティブに可視化</li>
+      </ul>
+      <div class="pull">
+        「自然言語で社内ツールを作って即共有」が Cursor でも具体化。Context Explorer はエージェント運用でコストの主役になりつつある input トークンの可視化ニーズに応え、受講者が『なぜトークンを食うのか』を学ぶ実地教材になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,803</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2062611883249783083">@cursor_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-05</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発者ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2062611883249783083">x.com/cursor_ai/…</a></dd>
+        <dd><a href="https://cursor.com/changelog/canvas-improvements">cursor.com/changelog/canvas-improvements…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · CLAUDEAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AIツール・プロダクト <span class="sep">/</span> CLAUDEAI 公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Cowork、使用上限を1か月限定で2倍に（全有料プラン・7/5まで）</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-06/topic_5.png" data-alt="Claude Cowork、使用上限を1か月限定で2倍に（全有料プラン・7/5まで）" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-06/topic_5.png" alt="Claude Cowork、使用上限を1か月限定で2倍に（全有料プラン・7/5まで）" />
+      </div>
+      <p class="lede">
+        Anthropic が Claude Cowork の使用上限を今後1か月間、倍増すると発表した。より大きく複雑なタスクを Claude に委任できるようにする狙いで、全有料プランで7月5日まで有効。利用は Claude デスクトップアプリ経由。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Claude Cowork の使用上限を1か月間2倍に</li>
+        <li data-i="02">全有料プラン対象、2026年7月5日まで</li>
+        <li data-i="03">利用は Claude デスクトップアプリ経由</li>
+      </ul>
+      <div class="pull">
+        Cowork（委任型の自律作業）の上限緩和は、重いタスクを丸ごとエージェントに任せる使い方を後押しする実務的インセンティブ。期間限定なので、受講者が『重いタスク委任』を試すなら今がコスト的に有利。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,044</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/claudeai/status/2063018337567670285">@claudeai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-06</dd>
+        <dt>CATEGORY</dt>
+        <dd>AIツール・プロダクト</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/claudeai/status/2063018337567670285">x.com/claudeai/…</a></dd>
+        <dd><a href="https://claude.com/product/cowork">claude.com/product/cowork</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · OPENAIDEVS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発者ツール <span class="sep">/</span> OPENAIDEVS 公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI Codex、操作性アップデート — 設定検索・作業状態の復元・全画面 side chat</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-06/topic_6.png" data-alt="OpenAI Codex、操作性アップデート — 設定検索・作業状態の復元・全画面 side chat" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-06/topic_6.png" alt="OpenAI Codex、操作性アップデート — 設定検索・作業状態の復元・全画面 side chat" />
+      </div>
+      <p class="lede">
+        OpenAI が Codex アプリの操作性改善（quality-of-life）を一括公開した。設定をカテゴリ別に検索でき、全セクションを見渡さずに目的の項目へ到達できる。再起動をまたいで作業状態（未読・プロンプト下書き・ズーム・無効化ホットキー・アーカイブ状態・worktree コンテキスト）が復元され、全画面時も side chat が見え続け通知・AppShots・音声モードが正しいコンテキストへルーティングされる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">設定をカテゴリ別に検索可能に</li>
+        <li data-i="02">再起動後も作業状態（下書き・worktree 等）を復元</li>
+        <li data-i="03">全画面でも side chat 維持、Esc が意図したチャットを停止</li>
+      </ul>
+      <div class="pull">
+        派手な新機能ではないが、日常的に Codex を回す人ほど効く摩擦低減の積み重ね。受講者が Codex を常用ツールとして定着させるうえでの体験改善。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,002</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2062987643286438337">@OpenAIDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-06</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発者ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2062987643286438337">x.com/OpenAIDevs/…</a></dd>
+        <dd><a href="https://x.com/OpenAIDevs/status/2062987730448216067">x.com/OpenAIDevs/status/2062987730448216…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · MINICOOHEIETHMINIC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        データ基盤・AIアーキテクチャ <span class="sep">/</span> MINICOOHEI.ETH（@MINICOOHEI）/ X ARTICLE <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>「AI Readyなデータ基盤とは何か」整理 — データ量ではなくコンテキスト（@minicoohei）</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-06/topic_7.png" data-alt="「AI Readyなデータ基盤とは何か」整理 — データ量ではなくコンテキスト（@minicoohei）" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-06/topic_7.png" alt="「AI Readyなデータ基盤とは何か」整理 — データ量ではなくコンテキスト（@minicoohei）" />
+      </div>
+      <p class="lede">
+        AI Ready なデータ基盤を「AIが安全に参照でき、正しく解釈でき、業務アクションに使える状態」と定義した X Article。①データ整備（Bronze/Silver/Gold のメダリオンアーキテクチャ）と②コンテキスト提供（セマンティックモデル/オントロジーで業務文脈を与える）の2軸を示し、必要5要素（整備済みデータ／KPI・業務用語定義／構造化×非構造化の接続／権限管理／根拠追跡）を挙げる。次のBIは AI が異変検知→原因調査→次アクション提案まで行う Push BI で、データ基盤は『見える化』から AIエージェントの『業務OS』へ近づくと締める。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">「AIがSQLを書ける」と「ビジネスの問いに正しく答えられる」は別物</li>
+        <li data-i="02">AI Ready = データ整備 ＋ コンテキスト提供（意味・関係・業務ルール）</li>
+        <li data-i="03">鍵は『データ量ではなくコンテキスト』。商談メモ・Slack・仕様書など非構造化ナレッジが重要</li>
+        <li data-i="04">必要5要素: 整備済みデータ/KPI定義/構造化×非構造化接続/権限管理/根拠追跡</li>
+        <li data-i="05">次のBIは Push BI、データ基盤は AIエージェントの『業務OS』へ</li>
+      </ul>
+      <div class="pull">
+        受講者が業務エージェントを作る段階で必ずぶつかる壁を言語化。『LLMにテーブルを渡せば賢く答える』という誤解を解き、コンテキスト設計（業務定義・非構造化ナレッジ・権限・根拠追跡）こそが AI の実用性を決めると示す実践フレーム。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">925</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/minicoohei/status/2062252685701841152">@minicoohei</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-03</dd>
+        <dt>CATEGORY</dt>
+        <dd>データ基盤・AIアーキテクチャ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/minicoohei/status/2062252685701841152">x.com/minicoohei/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/AnthropicAI/status/2062568862479208923">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-06-05/">
+      ← 前日 · 2026-06-05
+      <span class="big">Anthropic「Dynamic Workflows」— Claude Code が自前の harness を書き、並列サブエージェントを束ねる</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-06-06/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260606.0731</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

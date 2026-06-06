@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-06-07 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-06-07 の Vibe Coder Bootcamp モーニングディスパッチ — 6本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0607</span>
+    <span class="sep">/</span>
+    <span>2026-06-07</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>06 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260607.0724</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-06-07/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:24 · SAT</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SATURDAY · JUNE 7, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>06<span class="dot">.</span>07</h1>
+    <div class="strap">
+      <span>Claude · npm/PyPI · Google · Windsurf</span>
+      <span><span class="count">06</span>&nbsp;ITEMS · READ 6 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ・AI監査 <span class="sep">/</span> TAYLOR HORNBY（独立セキュリティ研究者）/ COIN BUREAU / GENFINITY <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Opus 4.8 が Zcash の「4年越し」致命的バグを発見・修正 — 無制限の偽造 ZEC を生成可能だった</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-07/topic_1.png" data-alt="Claude Opus 4.8 が Zcash の「4年越し」致命的バグを発見・修正 — 無制限の偽造 ZEC を生成可能だった" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-07/topic_1.png" alt="Claude Opus 4.8 が Zcash の「4年越し」致命的バグを発見・修正 — 無制限の偽造 ZEC を生成可能だった" />
+      </div>
+      <p class="lede">
+        独立セキュリティ研究者 Taylor Hornby が、プライバシーコイン Zcash の「Orchard」シールドプールの監査に Claude Opus 4.8 を使ったところ、約1日で世界トップクラスの暗号学者が4年見逃していた健全性（soundness）バグを発見した。バグは2022年5月から存在し、無制限かつ検出不能な偽造 ZEC を発行できる恐れがあった。動作するエクスプロイトも作成・検証され、6月1日に修正された（Zcash 創設者も確認）。報道後 ZEC は一時約50%下落した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">監査対象は Zcash の Orchard シールドプール（該当バグは2022年5月から存在）</li>
+        <li data-i="02">Claude Opus 4.8 が約1日で soundness バグを発見、PoC エクスプロイトも作成・検証</li>
+        <li data-i="03">影響: 無制限・検出不能な偽造 ZEC の発行が理論上可能だった</li>
+        <li data-i="04">6月1日にパッチ適用済み（Zcash 創設者が確認）</li>
+        <li data-i="05">報道を受け ZEC 価格は一時約50%急落</li>
+      </ul>
+      <div class="pull">
+        AI がプロダクションの暗号実装から、人間の専門家が4年見逃した本物の脆弱性を発見した具体例。LLM が監査・レビュー役として実戦投入できる段階に来たこと、そしてAIによる脆弱性発見が市場価格を直接動かすほどの攻守両面のインパクトを持つことを示す。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,193</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/solarious_us/status/2062956311764172982">@solarious_us</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-05</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ・AI監査</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/solarious_us/status/2062956311764172982">x.com/solarious_us/…</a></dd>
+        <dd><a href="https://x.com/coinbureau/status/2062701722422964580">x.com/coinbureau/status/2062701722422964…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · GITHUB  / RAMIMACI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ・サプライチェーン <span class="sep">/</span> GITHUB 公式 / RAMIMACISABIRD / SAFEDEP.IO <span class="sep">/</span> NEWS
+      </div>
+      <h2>npm/PyPI を狙う「Shai-Hulud」サプライチェーン攻撃が Microsoft 系まで波及 — GitHub が調査詳細を公開</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-07/topic_2.png" data-alt="npm/PyPI を狙う「Shai-Hulud」サプライチェーン攻撃が Microsoft 系まで波及 — GitHub が調査詳細を公開" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-07/topic_2.png" alt="npm/PyPI を狙う「Shai-Hulud」サプライチェーン攻撃が Microsoft 系まで波及 — GitHub が調査詳細を公開" />
+      </div>
+      <p class="lede">
+        自己増殖型のサプライチェーン攻撃「Shai-Hulud（別名 Miasma worm）」が拡大し、Microsoft / Azure / Azure-Samples の GitHub リポジトリ49件が規約違反として削除される事態に発展した。攻撃者は窃取した認証情報を再利用してパッケージ間を横展開し、GitHub Actions の PR コメント悪用で110万DL規模の PyPI パッケージ（elementary-data）も汚染。AIコーディングエージェントの設定(config)へのインジェクションも攻撃経路に使われている。GitHub は不正アクセス調査の追加詳細を公式に開示した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Microsoft / Azure / Azure-Samples の GitHub リポジトリ49件が規約違反で削除</li>
+        <li data-i="02">窃取した認証情報を再利用してパッケージ間を自己増殖的に横展開（worm 型）</li>
+        <li data-i="03">GitHub Actions の PR コメント悪用で PyPI の elementary-data（110万DL）を汚染</li>
+        <li data-i="04">AIコーディングエージェントの config へのインジェクションも攻撃経路に</li>
+        <li data-i="05">GitHub が不正アクセス調査の追加詳細を公式に開示</li>
+      </ul>
+      <div class="pull">
+        AIで開発速度を上げるほど OSS 依存とサプライチェーンのリスクが拡大する構図を象徴。特に『AIエージェントの設定ファイルに悪意ある指示を仕込む』手口はエージェントを日常使いする受講者全員に直結する脅威で、依存追加・skill/MCP 導入時の出所確認、認証情報の権限最小化とローテーションの重要性を裏づける。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">272</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ramimacisabird/status/2062998489357865121">@ramimacisabird</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-05</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ・サプライチェーン</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ramimacisabird/status/2062998489357865121">x.com/ramimacisabird/…</a></dd>
+        <dd><a href="https://safedep.io/miasma-worm-ai-coding-agent-config-injection/">safedep.io/miasma-worm-ai-coding-agent-c…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · GOOGLE DEVELOPERS </span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> GOOGLE DEVELOPERS BLOG / GEMINI CLI 公式 / THE NEW STACK <span class="sep">/</span> NEWS
+      </div>
+      <h2>Google、Gemini CLI を「Antigravity CLI」へ統合移行 — Gemini CLI は6/18で終了</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-07/topic_3.png" data-alt="Google、Gemini CLI を「Antigravity CLI」へ統合移行 — Gemini CLI は6/18で終了" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-07/topic_3.png" alt="Google、Gemini CLI を「Antigravity CLI」へ統合移行 — Gemini CLI は6/18で終了" />
+      </div>
+      <p class="lede">
+        Google が、オープンソースの Gemini CLI を後継の「Antigravity CLI（コマンド agy）」へ統合・移行すると発表した。Pro / Ultra / 無料ユーザーを含め集約し、Gemini CLI は2026年6月18日で動作を停止する。Antigravity は IDE 部分を切り離して『エージェント・マネージャ』へ舵を切り、スキル・フック・MCP サーバの移行手順や動的サブエージェント、成果物のプラン・レビュー機能を提供する。課金一本化で安くなったとの声がある一方、オープンソースからクローズドソースへの移行という指摘も出ている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Gemini CLI → Antigravity CLI（コマンド agy）へ統合移行</li>
+        <li data-i="02">Gemini CLI は 2026年6月18日 でサポート終了</li>
+        <li data-i="03">スキル / フック / MCP サーバの移行手順、動的サブエージェントを提供</li>
+        <li data-i="04">オープンソース→クローズドソースへの移行という指摘</li>
+        <li data-i="05">Gemini Code Assist と一般サブスクの課金が一本化される利用者も</li>
+      </ul>
+      <div class="pull">
+        Claude Code・Codex・Gemini と続く『ターミナル発のエージェント』競争で Google が CLI 戦略を一本化した動き。複数の AI CLI を併用する受講者は 6/18 の期限と移行手順（skills/hooks/MCP の引っ越し）を把握すべき。各社が IDE から『エージェント・フリート管理』へ重心を移す潮流の一例。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">211</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/">Google Developers Blog / Gemini CLI 公式 / The New Stack</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-04</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/">https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/</a></dd>
+        <dd><a href="https://x.com/thenewstack/status/2062962683830231146">x.com/thenewstack/status/206296268383023…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · COGNITION / THURSD</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> COGNITION / THURSDAI_POD / コミュニティ <span class="sep">/</span> NEWS
+      </div>
+      <h2>Windsurf が「Devin Desktop」へリブランド（Cognition）— 1画面で全エージェントを束ねる運用基盤へ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-07/topic_4.png" data-alt="Windsurf が「Devin Desktop」へリブランド（Cognition）— 1画面で全エージェントを束ねる運用基盤へ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-07/topic_4.png" alt="Windsurf が「Devin Desktop」へリブランド（Cognition）— 1画面で全エージェントを束ねる運用基盤へ" />
+      </div>
+      <p class="lede">
+        Devin の開発元 Cognition が、買収済みの AI コードエディタ Windsurf を「Devin Desktop」へリブランドした（6月2日、OTA 適用）。単なる IDE ではなく Kanban ビュー・共有 Spaces・Devin Local を備え、オープンな Agent Client Protocol(ACP) 経由で Codex・Claude Agent・OpenCode・Cursor・カスタムエージェントまで1画面で扱える『エージェント・コマンドセンター』へ位置づけを変えた。一方、多くのユーザーが使っていた既存エージェント Cascade は7月1日で提供終了(EOL)となる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Windsurf → Devin Desktop へリブランド（6月2日、OTA 適用）</li>
+        <li data-i="02">Kanban ビュー / 共有 Spaces / Devin Local を搭載</li>
+        <li data-i="03">Agent Client Protocol(ACP) で Codex・Claude Agent・OpenCode・Cursor 等を一元管理</li>
+        <li data-i="04">既存エージェント Cascade は7月1日で EOL</li>
+      </ul>
+      <div class="pull">
+        Antigravity 同様、『IDE が自律エージェントのフリート管理基盤へ進化する』流れの代表例。複数のコーディングエージェントを横断利用する受講者にとって ACP のような共通プロトコルで一画面集約できる体験は実用性が高い。反面 Cascade EOL のように『依存ツールが突然終わる』リスクも学べる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/thursdai_pod/status/2062960546849452090">@thursdai_pod</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-05</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/thursdai_pod/status/2062960546849452090">x.com/thursdai_pod/…</a></dd>
+        <dd><a href="https://x.com/s_breitenother/status/2062966523027657046">x.com/s_breitenother/status/206296652302…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · LEONXLNX/ LLMPSYCH</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        TIPS・スキル <span class="sep">/</span> LEONXLNX（作者）/ LLMPSYCHO / コミュニティ <span class="sep">/</span> NEWS
+      </div>
+      <h2>「Taste Skill」が GitHub 33k★ — AI が作るフロントエンドの“審美”を底上げするスキル集</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-07/topic_5.png" data-alt="「Taste Skill」が GitHub 33k★ — AI が作るフロントエンドの“審美”を底上げするスキル集" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-07/topic_5.png" alt="「Taste Skill」が GitHub 33k★ — AI が作るフロントエンドの“審美”を底上げするスキル集" />
+      </div>
+      <p class="lede">
+        AIコーディングエージェント向けに『フロントエンドの視覚的センス(taste)』を底上げするスキル集 Taste Skill が GitHub で33,000★を超え話題に。レイアウト・タイポグラフィ・余白・モーション・画像のリファレンスボードなど再利用可能なスキルを Claude Code・Codex・Cursor などに追加することで、AI が生成しがちな『テンプレ感のある汎用UI』から脱却し質感の高い画面を作れるという。導入は npx skills add Leonxlnx/taste-skill のワンコマンド。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">AIのフロントエンド審美を強化する再利用可能スキル集（GitHub 33k★超）</li>
+        <li data-i="02">対象: レイアウト / タイポグラフィ / 余白 / モーション / 画像リファレンスボード</li>
+        <li data-i="03">対応ツール: Claude Code・Codex・Cursor など</li>
+        <li data-i="04">導入: npx skills add Leonxlnx/taste-skill</li>
+      </ul>
+      <div class="pull">
+        『AIで作ったUIがどれも同じテンプレ顔になる』問題は受講者が必ずぶつかる壁。Skill を足すだけでデザイン品質を一段引き上げられる実用Tipsで、Skill ベースで自分のエージェントを拡張する発想の好例。今日からすぐ試せる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,354</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/Leonxlnx/taste-skill">Leonxlnx（作者）/ LLMpsycho / コミュニティ</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-03</dd>
+        <dt>CATEGORY</dt>
+        <dd>Tips・スキル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/Leonxlnx/taste-skill">https://github.com/Leonxlnx/taste-skill</a></dd>
+        <dd><a href="https://x.com/LLMpsycho/status/2062188564150997447">x.com/LLMpsycho/status/20621885641509974…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · CLAUDE CODE CHANGE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> CLAUDE CODE CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code、立て続けにアップデート（2.1.144〜2.1.147）— Workflow tooling と Edit ツール強化</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-07/topic_6.png" data-alt="Claude Code、立て続けにアップデート（2.1.144〜2.1.147）— Workflow tooling と Edit ツール強化" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-07/topic_6.png" alt="Claude Code、立て続けにアップデート（2.1.144〜2.1.147）— Workflow tooling と Edit ツール強化" />
+      </div>
+      <p class="lede">
+        Claude Code がこの数日で 2.1.144 → 2.1.147 まで立て続けにリリースされ、合計100件超の CLI 変更が入った。ハイライトは Workflow ツーリングの拡充、Edit ツールの改善、スラッシュコマンドのリネームなど。Opus 4.8 世代の目玉である Dynamic Workflows（エージェントが自前の harness を書いて並列サブエージェントをオーケストレーションする）周りの作り込みが継続している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">2.1.144〜2.1.147 を数日で連続リリース（合計100超の CLI 変更）</li>
+        <li data-i="02">Workflow ツーリングの拡充（Dynamic Workflows 系の継続強化）</li>
+        <li data-i="03">Edit ツールの改善、スラッシュコマンドのリネーム等の QoL 改善</li>
+      </ul>
+      <div class="pull">
+        受講者の多くが日常的に使う Claude Code 本体の更新。Workflow 周りの強化は『1つの指示から複数サブエージェントを並列で走らせる』運用に直結する。アップデート頻度の速さ自体が、ツール選定で常に最新を追う必要性を示している。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeCodeLog">Claude Code Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-06</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeCodeLog">https://x.com/ClaudeCodeLog</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/solarious_us/status/2062956311764172982">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-06-06/">
+      ← 前日 · 2026-06-06
+      <span class="big">Anthropic「Claude が AI 開発を加速」— 社内コードの80%超を Claude が記述、再帰的自己改善の可能性</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-06-07/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260607.0724</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

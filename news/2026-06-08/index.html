@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-06-08 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-06-08 の Vibe Coder Bootcamp モーニングディスパッチ — 6本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0608</span>
+    <span class="sep">/</span>
+    <span>2026-06-08</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>06 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260608.0723</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-06-08/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:23 · SUN</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SUNDAY · JUNE 8, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>06<span class="dot">.</span>08</h1>
+    <div class="strap">
+      <span>Anthropic · Claude · NousResearch · NVIDIA「Skillspector」が</span>
+      <span><span class="count">06</span>&nbsp;ITEMS · READ 6 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        教育・学習 <span class="sep">/</span> ANTHROPIC ACADEMY / MIDUDEV / 0XTRIA <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic、Claude 公式アカデミーで無料コースを大量公開（修了証つき・有料Claude不要）</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-08/topic_1.png" data-alt="Anthropic、Claude 公式アカデミーで無料コースを大量公開（修了証つき・有料Claude不要）" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-08/topic_1.png" alt="Anthropic、Claude 公式アカデミーで無料コースを大量公開（修了証つき・有料Claude不要）" />
+      </div>
+      <p class="lede">
+        Anthropic が公式の学習プラットフォーム（Academy）で、Claude・Claude Code・API・MCP・サブエージェント・Agent Skills を網羅する無料・自習式コースを公開した。投稿者により「13本」「17本」と数え方は割れるが、いずれも修了証つきで有料の Claude アカウントは不要。新作の「Agent Skills」コースは動画10本・約2時間で、skill の作り方とベストプラクティス、Tools / MCP との違い、Claude Code・VS Code での使い方を扱う。DeepLearning.AI と共同の「Agent Skills with Anthropic」も同時展開されている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Claude 公式アカデミーで無料・自習式コースを一括公開（修了証あり、有料プラン不要）</li>
+        <li data-i="02">カバー範囲: Claude 101 / AI Fluency / Claude API / MCP / サブエージェント / Agent Skills</li>
+        <li data-i="03">新「Agent Skills」コースは動画10本・約2時間（skill作成、Tools・MCPとの違い、Claude Code/VS Code）</li>
+        <li data-i="04">DeepLearning.AI との共同コース「Agent Skills with Anthropic」も提供</li>
+        <li data-i="05">教育者・学生・非営利向けの AI Fluency トラックも含む</li>
+      </ul>
+      <div class="pull">
+        Vibe Coder Bootcamp 受講者にとって、Anthropic 本家が体系立てた skill / MCP / サブエージェントの教材を無料で出した意義は大きい。VBC のカリキュラムと直結し、受講者へ『公式の一次教材』として案内できる。学習の重心がプロンプト単発から『再利用可能な skill を組む』段階へ移っていることを示す。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">820</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/midudev/status/2063245003250344113">@midudev</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-06</dd>
+        <dt>CATEGORY</dt>
+        <dd>教育・学習</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/midudev/status/2063245003250344113">x.com/midudev/…</a></dd>
+        <dd><a href="https://x.com/0xTria/status/2063301511682142694">x.com/0xTria/status/2063301511682142694</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · TESTINGCATALOG / H</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        プロダクト更新 <span class="sep">/</span> TESTINGCATALOG / HQMANK / ROBINEBERS <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Cowork の使用上限が7/5まで「2倍」に — ただし対象は5時間ウィンドウのみで誤解を招くと批判も</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-08/topic_2.png" data-alt="Claude Cowork の使用上限が7/5まで「2倍」に — ただし対象は5時間ウィンドウのみで誤解を招くと批判も" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-08/topic_2.png" alt="Claude Cowork の使用上限が7/5まで「2倍」に — ただし対象は5時間ウィンドウのみで誤解を招くと批判も" />
+      </div>
+      <p class="lede">
+        Anthropic が、Claude Cowork の使用上限を2026年7月5日まで「2倍」に引き上げると告知した。1セッションでより大きなタスクを任せられるようになる一方、ユーザーから「2倍になったのは5時間ウィンドウの上限だけで、Claude プラン全体の総量が2倍になったわけではない」「Claude.ai・Claude Code・Desktop は同じ使用プールを共有したまま」という指摘が出た。Opus 4.8 を長時間回す用途を後押しする期間限定の施策とみられる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Claude Cowork の使用上限を 2026/7/5 まで一時的に2倍に</li>
+        <li data-i="02">対象は『5時間ウィンドウの上限』であり、プラン全体の総量上限ではない</li>
+        <li data-i="03">Claude.ai / Claude Code / Desktop は引き続き同一の使用プールを共有</li>
+        <li data-i="04">『2倍』表記が誤解を招くとの批判（robinebers ら）が発生</li>
+        <li data-i="05">Opus 4.8 を長時間セッションで使う用途を意識した施策</li>
+      </ul>
+      <div class="pull">
+        Cowork や Claude Code を長時間使う VBC 受講者・実務ユーザーに直接効く施策。ただし『2倍』を額面どおり受け取ると総量を読み違えるため、5時間ウィンドウ単位の話だという但し書きを添えて共有する価値がある。各社が『エージェントを一日中走らせる』ワークロード前提で上限設計を見直し始めている流れの一例。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">887</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/testingcatalog/status/2063195692969984232">@testingcatalog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-06</dd>
+        <dt>CATEGORY</dt>
+        <dd>プロダクト更新</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/testingcatalog/status/2063195692969984232">x.com/testingcatalog/…</a></dd>
+        <dd><a href="https://x.com/hqmank/status/2063130460239397123">x.com/hqmank/status/2063130460239397123</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · NOUSRESEARCH TEKNI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> NOUSRESEARCH (TEKNIUM) / SIRSHIBANINJA / AGENTNATIVE <span class="sep">/</span> NEWS
+      </div>
+      <h2>NousResearch の OSS エージェント「Hermes」がネイティブ・デスクトップアプリを公開 — Claude Code / Codex に対抗</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-08/topic_3.png" data-alt="NousResearch の OSS エージェント「Hermes」がネイティブ・デスクトップアプリを公開 — Claude Code / Codex に対抗" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-08/topic_3.png" alt="NousResearch の OSS エージェント「Hermes」がネイティブ・デスクトップアプリを公開 — Claude Code / Codex に対抗" />
+      </div>
+      <p class="lede">
+        NousResearch（Teknium ら）のオープンソース・エージェント『Hermes Agent』が、ネイティブのデスクトップアプリをリリースした。5月28日に『1ターンあたりの関数呼び出しを47%削減』を打ち出してから、6月5日のデスクトップアプリ着地まで約8日間で874コミット・542マージPRという急速な開発サイクルを見せている。Claude Code・Codex といった商用ターミナル系エージェントに対する OSS 側の対抗馬として注目され、Expo 経由で接続できる非公式モバイルアプリも登場している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">NousResearch の OSS エージェント Hermes がネイティブ・デスクトップアプリを公開</li>
+        <li data-i="02">5/28→6/5 の約8日で 874 コミット / 542 マージPR の高速開発</li>
+        <li data-i="03">5/28 時点で『1ターンあたりの関数呼び出し 47% 削減』を訴求</li>
+        <li data-i="04">Claude Code / Codex に対する OSS 側の対抗プロダクトとして位置づけ</li>
+        <li data-i="05">コミュニティ製の非公式モバイルアプリ（Expo 経由接続）も登場</li>
+      </ul>
+      <div class="pull">
+        商用エージェント（Claude Code・Codex・Antigravity）に対し、重みを公開する OSS 陣営が『デスクトップアプリ＋高速反復』で食い込んできた構図。ベンダーロックインを避けたい層や、ローカル/自前モデルでエージェントを組みたい VBC 受講者にとって選択肢が増える。エージェント競争が API だけでなく『配布形態（デスクトップ/モバイル）』にも広がっていることを示す。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">94</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/sirshibaninja/status/2063257683134976022">@sirshibaninja</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-05</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/sirshibaninja/status/2063257683134976022">x.com/sirshibaninja/…</a></dd>
+        <dd><a href="https://x.com/agentnative_/status/2063406421996081351">x.com/agentnative_/status/20634064219960…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · DANIAVILA7 CLAUDE-</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ <span class="sep">/</span> DANI_AVILA7 (CLAUDE-CODE-TEMPLATES メンテナ) / NVIDIA SKILLSPECTOR <span class="sep">/</span> NEWS
+      </div>
+      <h2>NVIDIA「Skillspector」が Claude Code Templates に統合 — AIエージェント skill のセキュリティスキャナ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-08/topic_4.png" data-alt="NVIDIA「Skillspector」が Claude Code Templates に統合 — AIエージェント skill のセキュリティスキャナ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-08/topic_4.png" alt="NVIDIA「Skillspector」が Claude Code Templates に統合 — AIエージェント skill のセキュリティスキャナ" />
+      </div>
+      <p class="lede">
+        NVIDIA の『Skillspector』が、人気の Claude Code Templates リポジトリに統合された。これにより新しく追加される skill の PR はすべてこのセキュリティスキャナで自動チェックされ、AIエージェント向け skill に悪意ある指示やリスクが仕込まれていないかが取り込み前に検証されるようになる。skill / MCP / config への悪意あるインジェクションがサプライチェーン攻撃の経路として現実化するなか、エージェント拡張の『取り込みゲート』を自動化する防御側の動きにあたる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">NVIDIA の skill セキュリティスキャナ Skillspector が claude-code-templates に統合</li>
+        <li data-i="02">新規 skill の PR を取り込み前に自動スキャン（PR #623）</li>
+        <li data-i="03">対象は AIエージェント用 skill に潜む悪意ある指示・リスク</li>
+        <li data-i="04">skill / MCP / config へのインジェクションを供給網攻撃経路とみなす流れへの対抗</li>
+        <li data-i="05">エージェント拡張のレビューを人手から自動ゲートへ</li>
+      </ul>
+      <div class="pull">
+        直近続いている『AIエージェントの設定・skill に悪意ある指示を仕込む』型の供給網攻撃に対する、具体的な防御ツールの実装例。skill や MCP を外部から導入することが当たり前になった VBC 受講者にとって、『出所不明の skill を入れる前にスキャンする』習慣と仕組みが要ることを示す。攻撃に対する守りのエコシステムが立ち上がりつつある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">24</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/dani_avila7/status/2063099370375880765">@dani_avila7</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-06</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/dani_avila7/status/2063099370375880765">x.com/dani_avila7/…</a></dd>
+        <dd><a href="https://github.com/davila7/claude-code-templates/pull/623">github.com/davila7/claude-code-templates…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · UNDERCODEUPDATE / </span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ <span class="sep">/</span> UNDERCODEUPDATE / C0RI / 各種セキュリティ解説 <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI「ChatGPT Lockdown Mode」— データ持ち出しは抑えるがプロンプトインジェクションは止められない</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-08/topic_5.png" data-alt="OpenAI「ChatGPT Lockdown Mode」— データ持ち出しは抑えるがプロンプトインジェクションは止められない" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-08/topic_5.png" alt="OpenAI「ChatGPT Lockdown Mode」— データ持ち出しは抑えるがプロンプトインジェクションは止められない" />
+      </div>
+      <p class="lede">
+        OpenAI が ChatGPT に『Lockdown Mode』を導入した。ツール経由でのデータ持ち出し（exfiltration）を起きにくくする防御機能だが、セキュリティ解説では『データ流出は抑えられても、プロンプトインジェクションそのものは止められない』と指摘されている。OpenAI 自身が以前から『プロンプトインジェクションは当面なくならない』と認めてきた流れの延長で、攻撃を完全に防ぐのではなく被害を起きにくくする・早期に検知する方向の緩和策と位置づけられる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">OpenAI が ChatGPT に『Lockdown Mode』を追加</li>
+        <li data-i="02">主眼はツール経由のデータ持ち出し（exfiltration）の抑制</li>
+        <li data-i="03">プロンプトインジェクション自体は防げないとセキュリティ側が指摘</li>
+        <li data-i="04">OpenAI は『プロンプトインジェクションは当面残る』と従来から認識</li>
+        <li data-i="05">完全防御ではなく被害低減・早期検知型の緩和策</li>
+      </ul>
+      <div class="pull">
+        エージェントにツールやデータアクセスを与えるほど『乗っ取られたときの被害』が問題になる、という構図への各社の回答の一つ。VBC 受講者が自前エージェントに権限を渡す際、『インジェクションは前提として残る／持ち出し経路を絞る・検知する』という設計思想を学べる実例。セキュリティは防げる/防げないの二択でなく被害最小化の設計問題だと再確認させる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/UndercodeUpdate/status/2063409455698419907">@UndercodeUpdate</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-06</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/UndercodeUpdate/status/2063409455698419907">x.com/UndercodeUpdate/…</a></dd>
+        <dd><a href="https://x.com/c0ri/status/2063410038581113041">x.com/c0ri/status/2063410038581113041</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · TOMDOERR / ALPHABA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> TOM_DOERR / ALPHABATCHER / GAURAVJAIN2410 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code 周辺の実践リソースが急増 — CLAUDE.md「3層」活用やキュレーション集が人気</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-08/topic_6.png" data-alt="Claude Code 周辺の実践リソースが急増 — CLAUDE.md「3層」活用やキュレーション集が人気" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-08/topic_6.png" alt="Claude Code 周辺の実践リソースが急増 — CLAUDE.md「3層」活用やキュレーション集が人気" />
+      </div>
+      <p class="lede">
+        Claude Code を使いこなすための実践リソースが一気に増えている。`claude-howto`（ビジュアルガイド）や `awesome-claude-skills`（skill・リソースのキュレーション集）といった GitHub リポジトリが数百いいねを集め、同じ指示を3回打ったら CLAUDE.md に書く『3層構成』のワークフローTipsなども拡散している。30分の初期設定で以降のセッションが同じルールを読み直さずに済む、といった運用知が体系化されつつある。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">ビジュアルガイド `claude-howto` が拡散（Likes 544 / RT 84）</li>
+        <li data-i="02">skill・リソース集 `awesome-claude-skills` も人気（Likes 150 / RT 25）</li>
+        <li data-i="03">『同じ指示を3回打ったら CLAUDE.md に書く』3層構成のワークフローTips</li>
+        <li data-i="04">初期設定（CLAUDE.md/ルール整備）で以降のセッションの再説明コストを削減</li>
+        <li data-i="05">skill・hooks・memory を横断する運用ノウハウの体系化が進む</li>
+      </ul>
+      <div class="pull">
+        ツールの新機能だけでなく『使いこなしの作法』が共有資産として固まってきた段階。VBC 受講者にとって、CLAUDE.md の書き方・skill の整理・コンテキスト管理は今日から真似できる実践知。Ryoko 自身の運用（CLAUDE.md / skills / memory 分離）とも合致しており、受講者へ具体的な型として渡せる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">544</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/tom_doerr/status/2063119467626779039">@tom_doerr</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-06</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/tom_doerr/status/2063119467626779039">x.com/tom_doerr/…</a></dd>
+        <dd><a href="https://x.com/alphabatcher/status/2063269566935957589">x.com/alphabatcher/status/20632695669359…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/midudev/status/2063245003250344113">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-06-07/">
+      ← 前日 · 2026-06-07
+      <span class="big">Claude Opus 4.8 が Zcash の「4年越し」致命的バグを発見・修正 — 無制限の偽造 ZEC を生成可能だった</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-06-08/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260608.0723</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

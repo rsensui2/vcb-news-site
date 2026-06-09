@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-06-10 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-06-10 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0610</span>
+    <span class="sep">/</span>
+    <span>2026-06-10</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260610.0729</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-06-10/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:29 · TUE</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · TUESDAY · JUNE 10, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>06<span class="dot">.</span>10</h1>
+    <div class="strap">
+      <span>Claude · Fable · OpenAI · Apple</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        新モデル発表 <span class="sep">/</span> @CLAUDEAI / @CLAUDEDEVS <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Fable 5 一般提供開始 — Mythos級初、SWE-bench Pro 80.3%でSOTA</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-10/topic_1.png" data-alt="Claude Fable 5 一般提供開始 — Mythos級初、SWE-bench Pro 80.3%でSOTA" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-10/topic_1.png" alt="Claude Fable 5 一般提供開始 — Mythos級初、SWE-bench Pro 80.3%でSOTA" />
+      </div>
+      <p class="lede">
+        Anthropic が新モデル「Claude Fable 5」を一般提供開始した。Opusの上位「Mythos級」が一般提供されるのは初で、Claude 5ファミリーの第1弾。上位の Mythos 5 は当面 Glasswing パートナー限定。APIモデル名は claude-fable-5 で、Claude API・AWS・Google Cloud・Microsoft Foundry で利用できる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">SWE-bench Pro 80.3%でSOTA。Opus 4.8(69.2%)・GPT-5.5(58.6%)・Gemini 3.1 Pro(54.2%)を上回る</li>
+        <li data-i="02">Stripe検証で5,000万行のRubyコードベース移行を1日で完了（従来チームで2か月超）</li>
+        <li data-i="03">Claude Codeで1Mトークンのコンテキストウィンドウに対応（Pro/Max/Team/Enterprise）</li>
+        <li data-i="04">価格は $10/$50（入力/出力・100万トークン）、プロンプトキャッシュ入力90%割引適用</li>
+        <li data-i="05">thinking常時ON、effortで思考量制御（high推奨、最難問のみxhigh）。Claude Codeは /model claude-fable-5 で切替</li>
+        <li data-i="06">サイバー/生物化学/蒸留の質問は分類器が検知しOpus 4.8が代理応答（セッションの5%未満、通知あり）</li>
+      </ul>
+      <div class="pull">
+        VBC受講者が日常的に使う Claude Code / API の最上位が Opus 4.8 から Fable 5 世代へ更新される。既存プロンプトやスキルは Fable には過剰指示になりがちで、デフォルト性能が良ければ削る運用が推奨されている。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">70,556</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.anthropic.com/news/claude-fable-5-mythos-5">@claudeai / @ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>新モデル発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.anthropic.com/news/claude-fable-5-mythos-5">https://www.anthropic.com/news/claude-fable-5-mythos-5</a></dd>
+        <dd><a href="https://x.com/claudeai/status/2064394146916229443">x.com/claudeai/status/206439414691622944…</a></dd>
+        <dd><a href="https://x.com/ClaudeDevs/status/2064394919549210774">x.com/ClaudeDevs/status/2064394919549210…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · CURSORAI / KINOPEE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ツール・業界動向 <span class="sep">/</span> @CURSOR_AI / @KINOPEE_AI / @EMOLLICK <span class="sep">/</span> NEWS
+      </div>
+      <h2>Fable 5 のエコシステム反応 — Cursor 初日統合（CursorBench 72.9%）、実務者レビュー、6/22課金切替に批判</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-10/topic_2.png" data-alt="Fable 5 のエコシステム反応 — Cursor 初日統合（CursorBench 72.9%）、実務者レビュー、6/22課金切替に批判" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-10/topic_2.png" alt="Fable 5 のエコシステム反応 — Cursor 初日統合（CursorBench 72.9%）、実務者レビュー、6/22課金切替に批判" />
+      </div>
+      <p class="lede">
+        Fable 5 発表と同時に主要ツールと実務者の反応が出揃った。Cursor は当日から Fable 5 を統合し CursorBench 72.9%（前ベスト比+8pt）のSOTAを記録。一方、サブスク無料利用が6/22までで6/23以降は使用量クレジットが必要になる点に研究者 Ethan Mollick らが批判している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Cursor: Fable 5 を初日統合、CursorBench 72.9%でSOTA（cursor.com/evals で全モデル比較公開）</li>
+        <li data-i="02">実務者 @kinopee_ai: 「調査系・分析系のタスクは明らかに強い、思考力も深い」「二重実装を即検出して修正」</li>
+        <li data-i="03">@kinopee_ai: 「壁打ちは手強い」「Opus 4.8の約2倍の価格」</li>
+        <li data-i="04">Anthropic は Fable ローンチ記念で全プロダクトの5時間・週次の使用上限をリセット</li>
+        <li data-i="05">課金切替: サブスクは6/22まで追加費用なし、6/23以降は使用量クレジット（容量が整い次第プラン標準へ復帰予定）</li>
+      </ul>
+      <div class="pull">
+        モデル単体の性能だけでなく IDE統合・価格・サブスク扱いまで含めて「いつ・どこで・いくらで使えるか」が判断材料になる。特に「6/22まで無料→その後クレジット」の時限は早めの試用を促す。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">4,211</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2064394824313376787">@cursor_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-10</dd>
+        <dt>CATEGORY</dt>
+        <dd>ツール・業界動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2064394824313376787">x.com/cursor_ai/…</a></dd>
+        <dd><a href="https://x.com/kinopee_ai/status/2064445750172635180">x.com/kinopee_ai/status/2064445750172635…</a></dd>
+        <dd><a href="https://x.com/emollick/status/2064471456914772172">x.com/emollick/status/206447145691477217…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · OPENAIDEVS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発者ツール <span class="sep">/</span> @OPENAIDEVS <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI、Responses API の Web 検索が「画像結果」に対応</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-10/topic_3.png" data-alt="OpenAI、Responses API の Web 検索が「画像結果」に対応" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-10/topic_3.png" alt="OpenAI、Responses API の Web 検索が「画像結果」に対応" />
+      </div>
+      <p class="lede">
+        OpenAI の Responses API に搭載された Web 検索ツールが、テキスト結果に加えて画像結果も返せるようになった。アプリから直接ウェブ画像を検索・取得できる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Responses API の web_search ツールが image search results をサポート</li>
+        <li data-i="02">ドキュメント: developers.openai.com/api/docs/guides/tools-web-search#image-search-results</li>
+        <li data-i="03">別途画像検索基盤を組まずに、API一本でテキスト＋画像のウェブ検索が完結</li>
+      </ul>
+      <div class="pull">
+        Fable 5 一色の中でも OpenAI は地味だが実用的な API 拡張を継続。画像を扱うエージェント/アプリを作る受講者は検索→画像取得の実装が簡素化される。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,363</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2064395155688616153">@OpenAIDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発者ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2064395155688616153">x.com/OpenAIDevs/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · TAISHIYADE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        業界動向 <span class="sep">/</span> @TAISHIYADE ほか <span class="sep">/</span> NEWS
+      </div>
+      <h2>Apple、WWDCで Siri を大幅AI刷新 — 音声インターフェース時代へ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-10/topic_4.png" data-alt="Apple、WWDCで Siri を大幅AI刷新 — 音声インターフェース時代へ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-10/topic_4.png" alt="Apple、WWDCで Siri を大幅AI刷新 — 音声インターフェース時代へ" />
+      </div>
+      <p class="lede">
+        Apple が WWDC で Siri の大幅な AI アップデートと新しい Apple Intelligence 機能を発表。デバイス横断の深い統合で音声でできることを広げる方向。期待と「競合比で遅れ」との辛口評の両方が出ている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Siri の UI/対話を AI で大幅刷新、Apple Intelligence をデバイス横断で強化</li>
+        <li data-i="02">音声インターフェースを軸にした操作体系へのシフト</li>
+        <li data-i="03">評価は割れる（深い端末統合への期待 vs. 競合比の遅れへの批判）</li>
+      </ul>
+      <div class="pull">
+        モデル競争の裏でエンドユーザー接点（音声UI・OS統合）の主戦場が動いている。プロダクトのUXを設計する受講者に「テキストチャット以外のAI接点」を考える材料になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/taishiyade/status/2064130423844663765">@taishiyade</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>業界動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/taishiyade/status/2064130423844663765">x.com/taishiyade/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · NEWS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        業界動向 <span class="sep">/</span> 複数の観測筋 <span class="sep">/</span> NEWS
+      </div>
+      <h2>6月はモデル豪雨 — GPT-5.6 / Gemini 3.5 Pro が来週観測、Mythos 5 も続く</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-10/topic_5.png" data-alt="6月はモデル豪雨 — GPT-5.6 / Gemini 3.5 Pro が来週観測、Mythos 5 も続く" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-10/topic_5.png" alt="6月はモデル豪雨 — GPT-5.6 / Gemini 3.5 Pro が来週観測、Mythos 5 も続く" />
+      </div>
+      <p class="lede">
+        Fable 5 の一般提供に続き、来週にも GPT-5.6 と Gemini 3.5 Pro が登場するとの観測が複数出ている。Glasswing 限定の Claude Mythos 5 も信頼アクセス拡大が予告され、6月はフロンティアモデル発表が立て込む見込み。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">GPT-5.6・Gemini 3.5 Pro が来週にも登場との leaks（未確定）</li>
+        <li data-i="02">Claude Mythos 5 は Glasswing パートナー限定 → 信頼アクセスプログラム拡大を予告</li>
+        <li data-i="03">「リークが半分でも本当なら6月は最大級の月」との声</li>
+      </ul>
+      <div class="pull">
+        短期間で各社最上位モデルが更新されるため、特定モデルへの作り込みより「モデル差し替えに強い設計」が重要になる。乗り換え前提のプロンプト/スキル設計を勧める文脈。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">131</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/Amank1412/status/2064015428024963164">@Amank1412</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>業界動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/Amank1412/status/2064015428024963164">x.com/Amank1412/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · CLAUDEAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        イベント <span class="sep">/</span> @CLAUDEAI <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Code with Claude — 東京開催（ツアー最終地）</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-10/topic_6.png" data-alt="Code with Claude — 東京開催（ツアー最終地）" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-10/topic_6.png" alt="Code with Claude — 東京開催（ツアー最終地）" />
+      </div>
+      <p class="lede">
+        Anthropic の開発者向けイベント「Code with Claude」ツアーの最終地として東京開催が告知された。Claude を作るチームから直接話を聞ける登録制イベント。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Code with Claude ツアーの最終地が東京</li>
+        <li data-i="02">Claudeを作るチームから直接聞ける登録制イベント</li>
+        <li data-i="03">Fable 5 発表直後のタイミングで最新モデルの実運用知見が得られる可能性</li>
+      </ul>
+      <div class="pull">
+        国内で Claude チームと直接接点を持てる貴重な機会。Claude Code を本格活用する VBC関係者には案内価値が高い。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">4,458</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="http://claude.com/code-with-claude/tokyo">@claudeai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>イベント</dd>
+        <dt>LINKS</dt>
+        <dd><a href="http://claude.com/code-with-claude/tokyo">http://claude.com/code-with-claude/tokyo</a></dd>
+        <dd><a href="https://x.com/claudeai/status/2064139073590104402">x.com/claudeai/status/206413907359010440…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · QUMAIU / X ARTICLE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        技術組織論 <span class="sep">/</span> @QUMAIU / X ARTICLE <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>CTO・社内SEがAI駆動開発で「社内SIer」になっていないか — 作らない判断こそ最高の技術力</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-10/topic_7.png" data-alt="CTO・社内SEがAI駆動開発で「社内SIer」になっていないか — 作らない判断こそ最高の技術力" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-10/topic_7.png" alt="CTO・社内SEがAI駆動開発で「社内SIer」になっていないか — 作らない判断こそ最高の技術力" />
+      </div>
+      <p class="lede">
+        AIでコーディングが容易になり、CTO・社内SEが事業部門の要望を即実装する「社内SIer」化する問題を論じた X Article。野良システム/野良DBの乱立で技術サイロ化が桁違いに進み、データ非統合でAI活用が頭打ちになると警鐘を鳴らす。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">作れてしまうがゆえに野良システム・野良DBが高速で乱立 → 技術サイロ化</li>
+        <li data-i="02">AIの価値はデータの統合度に比例。部門最適の積み重ねが全社最適を永久に失わせる</li>
+        <li data-i="03">処方箋: CTO・社内SEは「作る人」から「設計する人・切断する人」へ</li>
+        <li data-i="04">「作らない判断」こそAI時代の最高の技術力。何を作り何を作らないかの判断はAIにできない</li>
+      </ul>
+      <div class="pull">
+        社内でAI内製を推進する受講者（情シス・CTO・テックリード）に直球で刺さる。ツールを量産できる時代だからこそ全体最適の番人が必要という自戒。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">548</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/i/article/2063928635262984192">@qumaiu / X Article</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>技術組織論</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/i/article/2063928635262984192">https://x.com/i/article/2063928635262984192</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://www.anthropic.com/news/claude-fable-5-mythos-5">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-06-09/">
+      ← 前日 · 2026-06-09
+      <span class="big">Anthropic、Series H で $650億調達・評価額 $9650億で OpenAI を抜き世界最高額に</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-06-10/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260610.0729</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

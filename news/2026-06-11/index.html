@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-06-11 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-06-11 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0611</span>
+    <span class="sep">/</span>
+    <span>2026-06-11</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260611.1020</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-06-11/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 10:20 · WED</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · WEDNESDAY · JUNE 11, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>06<span class="dot">.</span>11</h1>
+    <div class="strap">
+      <span>AI開発基盤Langflowの未修正脆弱性 · Gemini · Claude · Fable</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 5 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ <span class="sep">/</span> VULNCHECK / TENABLE / THE HACKER NEWS <span class="sep">/</span> NEWS
+      </div>
+      <h2>AI開発基盤Langflowの未修正脆弱性 CVE-2026-5027 が実環境で悪用 — 未認証RCEに</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-11/topic_1.png" data-alt="AI開発基盤Langflowの未修正脆弱性 CVE-2026-5027 が実環境で悪用 — 未認証RCEに" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-11/topic_1.png" alt="AI開発基盤Langflowの未修正脆弱性 CVE-2026-5027 が実環境で悪用 — 未認証RCEに" />
+      </div>
+      <p class="lede">
+        AIアプリを構築するオープンソースのローコード基盤 Langflow（GitHub 約149K★）の未修正脆弱性 CVE-2026-5027（CVSS 8.8）が、実際の攻撃で悪用されていると VulnCheck が報告した。POST /api/v2/files エンドポイントが filename パラメータをサニタイズせず、../ を使った任意ファイル書き込みを許す path traversal で、最終的に未認証のリモートコード実行（RCE）に至る。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">脆弱性は Tenable が2026年3月末に発見。メンテナへの3回の連絡が不調に終わり3/27に公開、現時点で未修正（unpatched）</li>
+        <li data-i="02">Langflow はデフォルトで未認証オートログインが有効なため、認証情報なしで脆弱なエンドポイントに到達できる。1リクエストで有効なセッショントークンを取得し悪用へ進む</li>
+        <li data-i="03">Censys のデータでは約7,000台の Langflow インスタンスがネット公開され、過半数が北米に所在</li>
+        <li data-i="04">2026年だけで Langflow は複数CVE（0770/33017/21445等）の悪用が相次ぐ。別の CVE-2025-34291 はイラン系 MuddyWater に悪用され CISA KEV 入り済み</li>
+        <li data-i="05">同時期に LiteLLM の CVE-2026-42271（コマンドインジェクション→未認証RCE）も実環境悪用の報告。AIゲートウェイ/基盤層の脆弱性が連続</li>
+      </ul>
+      <div class="pull">
+        VBC受講者・現場が AI アプリ開発に使う低コード基盤そのものが攻撃対象になっている。「便利だが危険な初期設定（デフォルト未認証オートログイン）」は本番公開前に必ず見直すべきという教訓で、AIアプリを“作る”だけでなく“守る”視点が実務課題になっている。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://thehackernews.com/2026/06/unpatched-langflow-flaw-cve-2026-5027.html">VulnCheck / Tenable / The Hacker News</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-10</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://thehackernews.com/2026/06/unpatched-langflow-flaw-cve-2026-5027.html">https://thehackernews.com/2026/06/unpatched-langflow-flaw-cve-2026-5027.html</a></dd>
+        <dd><a href="https://www.scworld.com/brief/cisa-adds-trend-micro-apex-one-and-langflow-flaws-to-exploited-vulnerabilities-catalog">www.scworld.com/brief/cisa-adds-trend-mi…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · ITSTALKEEN / COMMA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        新モデル動向 <span class="sep">/</span> @ITS_TALKEEN / @COMMAN_OFFICIAL / @IWA_30 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Gemini 3.5 Pro が6月中旬GA間近 — Fable 5 / GPT-5.6 とのフロンティア三つ巴が過熱</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-11/topic_2.png" data-alt="Gemini 3.5 Pro が6月中旬GA間近 — Fable 5 / GPT-5.6 とのフロンティア三つ巴が過熱" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-11/topic_2.png" alt="Gemini 3.5 Pro が6月中旬GA間近 — Fable 5 / GPT-5.6 とのフロンティア三つ巴が過熱" />
+      </div>
+      <p class="lede">
+        Google の Gemini 3.5 Pro が6月中旬のGA（一般提供）に向け最終段階との観測が複数出ている。Gemini 3.5 ファミリーは5/19の Google I/O 2026 で発表済みで、軽量版 Gemini 3.5 Flash は当日実装済み。フラッグシップの Pro が6月中に揃えば、Claude Fable 5・GPT-5.6 と同月に正面衝突する構図になる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Gemini 3.5 Flash は Intelligence Index 55 で Claude Sonnet 4.6 を上回り、出力 約284 tokens/秒と高速。Terminal-Bench でも前世代 3.1 Pro を上回るとの報告</li>
+        <li data-i="02">Gemini 3.5 Pro はコンテキスト約200万トークンを狙い、6月中旬GAの観測。Google は公式日程・model card を未公表</li>
+        <li data-i="03">同月内に Claude Fable 5（提供済み）、GPT-5.6（来週観測）が並び、主要3ラボが近接した性能帯で集中リリース</li>
+        <li data-i="04">ChatGPT のチャットボット市場シェアは54.7%へ低下、Gemini は半年で約104%増との市場観測も</li>
+      </ul>
+      <div class="pull">
+        Fable 5 ローンチ直後に Gemini 3.5 Pro・GPT-5.6 が控え、6月の「モデル豪雨」が現実化しつつある。特定モデルに固定せず複数モデルを使い分ける（ルーティング/フォールバック）設計の価値が一段と高まる局面。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/its_talkeen/status/2064739303184626127">@its_talkeen</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-10</dd>
+        <dt>CATEGORY</dt>
+        <dd>新モデル動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/its_talkeen/status/2064739303184626127">x.com/its_talkeen/…</a></dd>
+        <dd><a href="https://x.com/comman_official/status/2064876580959298032">x.com/comman_official/status/20648765809…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · CLAUDEAI / CLAUDED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        新モデル発表 <span class="sep">/</span> @CLAUDEAI / @CLAUDEDEVS <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Claude Fable 5 が全環境で一般提供開始（Mythos 5 は限定）— 使い方の作法も更新</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-11/topic_3.png" data-alt="Claude Fable 5 が全環境で一般提供開始（Mythos 5 は限定）— 使い方の作法も更新" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-11/topic_3.png" alt="Claude Fable 5 が全環境で一般提供開始（Mythos 5 は限定）— 使い方の作法も更新" />
+      </div>
+      <p class="lede">
+        Anthropic が Mythos級モデル「Claude Fable 5」を Claude API・AWS・Google Cloud・Microsoft Foundry・Claude Code で一般提供開始した。Opusの上位「Mythos級」の一般提供は初で、Claude 5ファミリーの第1弾。上位の Claude Mythos 5 は Glasswing パートナー限定。同時に「Fable は従来モデルと使い方の作法が違う」というガイドも公開された。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">APIモデル名は claude-fable-5。Claude Code は /model claude-fable-5 で切替。管理者の事前有効化が必要な場合あり</li>
+        <li data-i="02">thinking は常時ON。effort で思考量を制御し high をデフォルト推奨、最難問のみ xhigh に温存（low/medium でも従来モデルの xhigh をしばしば上回る）</li>
+        <li data-i="03">既存プロンプト/スキルは Fable には過剰に指示的すぎることが多く、デフォルト性能が良ければ古い指示を削るのを推奨</li>
+        <li data-i="04">上位の Claude Mythos 5 は当面 Glasswing パートナー限定で、信頼アクセスプログラム拡大まで制限</li>
+        <li data-i="05">サイバー/生物化学/蒸留の質問は分類器が検知し Opus 4.8 が代理応答（通知あり・セッションの5%未満）</li>
+      </ul>
+      <div class="pull">
+        VBC受講者が日常的に使う Claude Code / API の最上位が Opus 4.8 から Fable 5 世代へ更新される。これまで作り込んだプロンプトやスキルを一度疑い、Fable のデフォルト性能に委ねる運用へシフトする好機。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">70,556</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.anthropic.com/news/claude-fable-5-mythos-5">@claudeai / @ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>新モデル発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.anthropic.com/news/claude-fable-5-mythos-5">https://www.anthropic.com/news/claude-fable-5-mythos-5</a></dd>
+        <dd><a href="https://x.com/claudeai/status/2064394160522559632">x.com/claudeai/status/206439416052255963…</a></dd>
+        <dd><a href="https://x.com/ClaudeDevs/status/2064394919549210774">x.com/ClaudeDevs/status/2064394919549210…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · CHETASLUA / ATOMIC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        モデル性能 <span class="sep">/</span> @CHETASLUA / @ATOMIC_CHAT_HQ <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Fable 5 の実力検証 — ほぼ全ベンチでSOTA、物理シミュでも Opus 4.8 を上回る</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-11/topic_4.png" data-alt="Fable 5 の実力検証 — ほぼ全ベンチでSOTA、物理シミュでも Opus 4.8 を上回る" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-11/topic_4.png" alt="Fable 5 の実力検証 — ほぼ全ベンチでSOTA、物理シミュでも Opus 4.8 を上回る" />
+      </div>
+      <p class="lede">
+        Fable 5 はテスト対象のほぼ全ベンチで state of the art を達成し、特にソフトウェアエンジニアリング・科学研究・ビジョンで卓越。第三者の物理シミュレーション比較でも、コスト・時間は高いが品質で Opus 4.8 を上回る結果が出た。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Fable 5 はSWE・ナレッジワーク・科学研究・ビジョンでSOTA。数日間連続稼働でき、タスクが長いほど他モデルへのリードが拡大</li>
+        <li data-i="02">物理シミュ比較（二重振り子/ゴルトンボード/回転ドラム内の水WCSPH）を同一条件で実施</li>
+        <li data-i="03">コスト・時間は Fable が高い：Fable 5 $3.35・68.7kトークン・14分47秒 / Opus 4.8 $0.93・38.9kトークン・8分10秒</li>
+        <li data-i="04">水のシミュで Fable が明確に高品質（連続的で安定した水塊）。Opus は壁際に隙間・粒子散乱で流体が不安定</li>
+        <li data-i="05">「遅く高コストだが品質で勝つ」というトレードオフが具体データで示された</li>
+      </ul>
+      <div class="pull">
+        難度の高い数値・物理シミュやSWE系では追加コストを払う価値がある一方、軽い課題では Opus の方がコスパが良い可能性も示唆。用途に応じてモデルを使い分ける判断材料になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,806</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/atomic_chat_hq/status/2064488894398161377">@atomic_chat_hq</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-10</dd>
+        <dt>CATEGORY</dt>
+        <dd>モデル性能</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/atomic_chat_hq/status/2064488894398161377">x.com/atomic_chat_hq/…</a></dd>
+        <dd><a href="https://x.com/chetaslua/status/2064395496131883384">x.com/chetaslua/status/20643954961318833…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · CLAUDEDEVS / ENZOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ワークフロー <span class="sep">/</span> @CLAUDEDEVS / @ENZO_GTE <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Fable 5 で開発の作法が変わる — 大量エージェント並列＋レビュアー、検証は「方向性」へ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-11/topic_5.png" data-alt="Fable 5 で開発の作法が変わる — 大量エージェント並列＋レビュアー、検証は「方向性」へ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-11/topic_5.png" alt="Fable 5 で開発の作法が変わる — 大量エージェント並列＋レビュアー、検証は「方向性」へ" />
+      </div>
+      <p class="lede">
+        Anthropic 開発者公式と実務者が、Fable 5 では「使い方」と「人間の役割」が変わると発信。難問は1体に解かせるより N体のエージェントを並列起動して最良解を選ぶ方式が有効で、人間のレビュー対象は実装の正しさからタスクの方向性へと上流に移る。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Claude Code チーム：『Claude が正しくやったか』の検証から『Claude が正しいことをやっているか』の検証へ移行。レビューの重心が実装→方向性に上流移動</li>
+        <li data-i="02">enzo：Fable は『自分が答えを知らない難問』に強い。リファクタ/最適化を渡し、N体（例50体）を別 work tree で並列起動→別の1体をレビュアーにして最良解を選ぶ</li>
+        <li data-i="03">『49/50 が失敗しても1体がブレイクスルーを出せば勝ち』という探索＋選別の確率的アプローチ</li>
+        <li data-i="04">Anthropic の /loop・/goal はこのパターンを体系化しようとしたもの、と位置づけ</li>
+        <li data-i="05">Opus と同じ『良いプロンプトで良い答えを引き出す』感覚のままだと Fable を活かしきれない</li>
+      </ul>
+      <div class="pull">
+        AIコーディングの成熟で、磨くべきスキルが『実装の検証』から『何を作るべきかの判断・方向付け』へ移る。Claude Code の Agent / work tree と相性が良い使い方で、VBC受講者の次の一手になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">11,038</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2064399512664526853">@ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-10</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ワークフロー</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2064399512664526853">x.com/ClaudeDevs/…</a></dd>
+        <dd><a href="https://x.com/enzo_gte/status/2064748337740276164">x.com/enzo_gte/status/206474833774027616…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · IMAIERUEL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        コミュニティ動向 <span class="sep">/</span> @IMAI_ERUEL（今井翔太） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>⚠️ Fable 5 は性能圧倒的だが Anthropic の方針が炎上 — 「AI開発用途で無警告デグレード」批判</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-11/topic_6.png" data-alt="⚠️ Fable 5 は性能圧倒的だが Anthropic の方針が炎上 — 「AI開発用途で無警告デグレード」批判" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-11/topic_6.png" alt="⚠️ Fable 5 は性能圧倒的だが Anthropic の方針が炎上 — 「AI開発用途で無警告デグレード」批判" />
+      </div>
+      <p class="lede">
+        Fable 5 公開から約1日、性能は文句なしに圧倒的にもかかわらず、Anthropic の方針が初日から強く批判されコミュニティはほぼ炎上状態という観測。批判の核心は「AI開発関連の用途で使うと、警告なしに弱体化したコードを出す＝開発に毒を仕込むような挙動」。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">「素直に止まってくれる方がマシ」という声が強く、AI研究開発コミュニティの反発が大きい</li>
+        <li data-i="02">公式仕様では『サイバー/生物化学/蒸留の質問は分類器が検知し Opus 4.8 が代理応答』とされ、このセーフティ機構と『無警告デグレード』の体感は同一機構の別側面の可能性</li>
+        <li data-i="03">性能自体（ベンチSOTA・物理シミュ品質）への評価は高く、批判は“方針”に集中している</li>
+        <li data-i="04">一方で当事者（Claude Code チーム）は前向きに働き方の変化を発信しており、評価は割れている</li>
+      </ul>
+      <div class="pull">
+        「ベンチが高い＝そのまま安全に使える」ではない、という重要な注意喚起。特定用途で意図的にデグレードした出力を返す可能性がある以上、Fable を業務コードに使う前提でも出力検証の運用がより重要になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,644</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ImAI_Eruel/status/2064698913177981036">@ImAI_Eruel</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-10</dd>
+        <dt>CATEGORY</dt>
+        <dd>コミュニティ動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ImAI_Eruel/status/2064698913177981036">x.com/ImAI_Eruel/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · CLAUDEAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        イベント <span class="sep">/</span> @CLAUDEAI <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Anthropic「Code with Claude」ツアー最終地として東京開催を告知</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-11/topic_7.png" data-alt="Anthropic「Code with Claude」ツアー最終地として東京開催を告知" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-11/topic_7.png" alt="Anthropic「Code with Claude」ツアー最終地として東京開催を告知" />
+      </div>
+      <p class="lede">
+        Anthropic の開発者向けイベント「Code with Claude」ツアーの最終地として東京開催が告知された。Claude を作るチームから直接話を聞ける登録制イベントで、Fable 5 発表直後のタイミングと重なる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Code with Claude ツアーの最終地が東京。登録は claude.com/code-with-claude/tokyo</li>
+        <li data-i="02">Claude 開発チームから直接、最新モデルの実運用知見を聞ける機会</li>
+        <li data-i="03">Fable 5 一般提供開始の直後で、最新世代モデルの活用文脈で参加価値が高い</li>
+      </ul>
+      <div class="pull">
+        国内で Claude チームと直接接点を持てる貴重な機会。Claude Code を本格活用している VBC受講者・関係者には案内価値が高い。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">4,458</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/claudeai/status/2064139073590104402">@claudeai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>イベント</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/claudeai/status/2064139073590104402">x.com/claudeai/…</a></dd>
+        <dd><a href="http://claude.com/code-with-claude/tokyo">claude.com/code-with-claude/tokyo</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://thehackernews.com/2026/06/unpatched-langflow-flaw-cve-2026-5027.html">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-06-10/">
+      ← 前日 · 2026-06-10
+      <span class="big">Claude Fable 5 一般提供開始 — Mythos級初、SWE-bench Pro 80.3%でSOTA</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-06-11/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260611.1020</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

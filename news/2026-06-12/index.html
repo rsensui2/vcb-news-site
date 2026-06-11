@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-06-12 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-06-12 の Vibe Coder Bootcamp モーニングディスパッチ — 6本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0612</span>
+    <span class="sep">/</span>
+    <span>2026-06-12</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>06 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260612.0730</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-06-12/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:30 · THU</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · THURSDAY · JUNE 12, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>06<span class="dot">.</span>12</h1>
+    <div class="strap">
+      <span>「プロンプトを書くな · Cursor · Vercel · Garry</span>
+      <span><span class="count">06</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        エージェント設計 <span class="sep">/</span> @SAIRAHUL1（RAHUL） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>「プロンプトを書くな、ループを書け」— 2026年のAIエンジニアの新常識</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-12/topic_1.png" data-alt="「プロンプトを書くな、ループを書け」— 2026年のAIエンジニアの新常識" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-12/topic_1.png" alt="「プロンプトを書くな、ループを書け」— 2026年のAIエンジニアの新常識" />
+      </div>
+      <p class="lede">
+        OpenClaw作者で現OpenAIのPeter Steinbergerと、AnthropicでClaude Codeを率いるBoris Chernyが、ほぼ同時に独立して「もうエージェントにプロンプトを打つな。エージェントにプロンプトを打つループを設計しろ」と発言。@sairahul1がこの『ループ・エンジニアリング』とは何かを噛み砕いた長文解説と導入ポストが、合わせてBM約2万・閲覧480万超で拡散した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">旧来＝人間がループ役（prompt→出力→レビュー→修正→繰り返し）、新しい＝ゴールを渡してエージェントがdiscover→plan→execute→verify→iterateを自走</li>
+        <li data-i="02">『プロンプトはエージェントに指示を与えるが、ループはエージェントに仕事を与える』</li>
+        <li data-i="03">最大の障壁は知能ではなくトークン消費：単一ループ5〜20万トークン、フリート（司令塔＋専門3体）50〜200万、毎朝走るスケジュールループは週に数百万</li>
+        <li data-i="04">ループには記憶が要る（過去の実行・エラー・アーキ文書・テスト結果・コードベース文脈を同時保持）。大コンテキスト窓が長時間ループの一貫性を保つ</li>
+        <li data-i="05">だからこそDeepSeek V4等の低単価・大コンテキストモデルが『ループを安く回す』選択肢として注目される</li>
+      </ul>
+      <div class="pull">
+        2大AIラボが独立に同じパターンへ収束したのは注目すべきシグナル。VBC受講者にとっては『人間がループを回す』段階から『ループを設計する側』へ移る発想転換の教材になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,252</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/sairahul1/status/2064277888216555684">@sairahul1</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>エージェント設計</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/sairahul1/status/2064277888216555684">x.com/sairahul1/…</a></dd>
+        <dd><a href="https://x.com/sairahul1/status/2064343621130932644">x.com/sairahul1/status/20643436211309326…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · CURSOR CHANGELOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発者ツール <span class="sep">/</span> CURSOR CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cursor、Bugbotを3倍高速化＋push前レビューの /review コマンドを追加</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-12/topic_2.png" data-alt="Cursor、Bugbotを3倍高速化＋push前レビューの /review コマンドを追加" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-12/topic_2.png" alt="Cursor、Bugbotを3倍高速化＋push前レビューの /review コマンドを追加" />
+      </div>
+      <p class="lede">
+        CursorがAIコードレビュー機能『Bugbot』を大型更新。Composer 2.5採用で「3倍以上高速・22%安く・検出バグ10%増」、平均レビュー時間は約5分から約90秒に短縮した。新たに /review コマンドが加わり、pushする前にBugbotとSecurity Reviewを手元で走らせられる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Bugbotは Composer 2.5 駆動に切替、平均レビュー約90秒（旧 約5分）</li>
+        <li data-i="02">公式が『3x高速・22%低コスト・バグ検出+10%』と明記</li>
+        <li data-i="03">/reviewでpush前にレビュー実行、『前回レビュー以降の差分だけ』に限定する設定も可能</li>
+        <li data-i="04">同changelogでDesign Modeのマルチセレクト/音声入力（v3.7）、Cursor SDKのカスタムツール、Enterprise向けOrganizationsも更新</li>
+      </ul>
+      <div class="pull">
+        『AIが書く→AIがレビューする』ループが標準ワークフローに組み込まれつつある。push前に脆弱性とバグを自動チェックする /review は、品質担保をループに回す具体例。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://cursor.com/changelog">Cursor Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-10</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発者ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://cursor.com/changelog">https://cursor.com/changelog</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · VERCEL CHANGELOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        インフラ／ゲートウェイ <span class="sep">/</span> VERCEL CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Vercel AI Gatewayがコスト統制を強化 — APIキー単位の予算上限・閾値請求、DeepSeek V4をAzure経由で追加</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-12/topic_3.png" data-alt="Vercel AI Gatewayがコスト統制を強化 — APIキー単位の予算上限・閾値請求、DeepSeek V4をAzure経由で追加" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-12/topic_3.png" alt="Vercel AI Gatewayがコスト統制を強化 — APIキー単位の予算上限・閾値請求、DeepSeek V4をAzure経由で追加" />
+      </div>
+      <p class="lede">
+        VercelがAI Gatewayに複数のコスト統制機能を投入。任意のAPIキーに支出上限を設定でき、超過分のリクエストはゲートウェイが自動拒否する。Proチーム向けには閾値到達で期中に部分請求を出す『Threshold billing』も開始。プロバイダ面ではDeepSeek V4 Pro/V4 FlashがAzure経由で追加され、コード変更なしのフェイルオーバー経路が増えた。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Budgets for API keys：キー単位で支出キャップ、超過リクエストは即拒否（06-09）</li>
+        <li data-i="02">Threshold billing：Proチームは閾値到達で期中に部分請求（06-10）</li>
+        <li data-i="03">DeepSeek V4 Pro/FlashをAzureプロバイダで提供、無変更フェイルオーバー（06-11）</li>
+        <li data-i="04">Claude Fable 5もAI Gatewayで提供開始（06-09）、vercel domains search CLIも追加</li>
+      </ul>
+      <div class="pull">
+        エージェントループの最大障壁は『トークン消費＝コスト』。キー単位の予算上限や閾値請求は、暴走ループの青天井課金を仕組みで止める実務的な防具。DeepSeek V4の選択肢拡大も『ループを安く回す』潮流と直結する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog">Vercel Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-11</dd>
+        <dt>CATEGORY</dt>
+        <dd>インフラ／ゲートウェイ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog">https://vercel.com/changelog</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · CHENZELING4 GITHUB</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        実践／ワークフロー <span class="sep">/</span> @CHENZELING4 ほか（GITHUB: GSTACK） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Garry TanのClaude CodeセットアップがOSS公開 — 「23ツール＝役割別エージェント」のgstack</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-12/topic_4.png" data-alt="Garry TanのClaude CodeセットアップがOSS公開 — 「23ツール＝役割別エージェント」のgstack" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-12/topic_4.png" alt="Garry TanのClaude CodeセットアップがOSS公開 — 「23ツール＝役割別エージェント」のgstack" />
+      </div>
+      <p class="lede">
+        Y Combinatorを率いるGarry Tanが、自身が60日で本番サービス3本・機能40以上を出荷したClaude CodeのセットアップをOSS公開した。『gstack』は23個のopinionatedなClaude Codeツールを、CEO・デザイナー・エンジニアリングマネージャ・リリースマネージャ・ドキュメントエンジニア・QAといった役割に整理したもの。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">gstack＝23のツールを役割（CEO/Designer/Eng Manager/Release Manager/Doc Engineer/QA）にマッピング</li>
+        <li data-i="02">Garry TanはYC運営と並行し60日で本番3サービス・40+機能を出荷、ピーク日は数万行規模のコード生成との投稿も</li>
+        <li data-i="03">設定一式がGitHubで公開され、そのまま自分のClaude Codeに流用可能</li>
+      </ul>
+      <div class="pull">
+        『1人＋AIで組織のように動く』具体的テンプレート。役割ごとにツールを束ねる発想は、Claude Codeを個人の作業補助から擬似チーム運用へ引き上げるのに直結する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/">@chenzeling4 ほか（GitHub: gstack）</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-11</dd>
+        <dt>CATEGORY</dt>
+        <dd>実践／ワークフロー</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/">https://github.com/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · QUMAIU</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        組織／経営 <span class="sep">/</span> @QUMAIU <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>CTO・社内SEがAI駆動開発で「社内SIer」になっていないか？ — AI時代の最高の技術力は「作らない判断」</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-12/topic_5.png" data-alt="CTO・社内SEがAI駆動開発で「社内SIer」になっていないか？ — AI時代の最高の技術力は「作らない判断」" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-12/topic_5.png" alt="CTO・社内SEがAI駆動開発で「社内SIer」になっていないか？ — AI時代の最高の技術力は「作らない判断」" />
+      </div>
+      <p class="lede">
+        AI駆動開発でコーディングのハードルが激減した結果、CTO・社内SEが事業部門の要望をそのまま形にする『社内SIer』に陥っている、という警鐘記事。作れてしまうがゆえに野良システム・野良DBが乱立し、技術サイロ化が従来より遥かに速く進む。AIの価値はデータの統合度に比例するため、サイロ化はAI時代に致命的だと説く。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">従来は開発コストの高さが歯止めだったが、AIでその歯止めが外れ『作れるから作る』で野良システムが増殖</li>
+        <li data-i="02">AIの価値はデータの統合度に比例 → 部門最適の乱立は全社的AI活用を永久に阻む</li>
+        <li data-i="03">CTO・社内SEは『作る人』ではなく『設計する人・切断する人』へ。時に『個別に作るべきでない』と言い切る</li>
+        <li data-i="04">AI時代の最高の技術力は皮肉にも『作らない判断』</li>
+        <li data-i="05">SaaS is Dead論争には『どちらに賭けるかでなく、どちらに転んでも動ける疎結合・標準化データ基盤を設計する』スタンスを推奨</li>
+      </ul>
+      <div class="pull">
+        コーディングはAIがやるが『何を作り、何を作らないか』の判断はAIにはできない。経営とエンジニアリングの両面を持つVBC受講者・CTO層に刺さる組織アーキ論。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">587</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/qumaiu/status/2063932749623513186">@qumaiu</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-08</dd>
+        <dt>CATEGORY</dt>
+        <dd>組織／経営</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/qumaiu/status/2063932749623513186">x.com/qumaiu/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · ANTHROPIC NEWS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        業界動向 <span class="sep">/</span> ANTHROPIC NEWS <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic、Claude Corpsを始動＋DXCが規制業界の基幹システムにClaudeを統合</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-12/topic_6.png" data-alt="Anthropic、Claude Corpsを始動＋DXCが規制業界の基幹システムにClaudeを統合" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-12/topic_6.png" alt="Anthropic、Claude Corpsを始動＋DXCが規制業界の基幹システムにClaudeを統合" />
+      </div>
+      <p class="lede">
+        Anthropicが若手人材向けの全国フェローシップ『Claude Corps』を発表し、AIの便益を全米の地域コミュニティに届けることを狙う。同日、ITサービス大手DXCとの提携も公表し、銀行・航空・その他の規制業界が依拠する基幹システムへClaudeを組み込む方針を示した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Claude Corps：early-career人材を対象にした国家規模のフェローシップ</li>
+        <li data-i="02">DXC提携：規制業界（銀行・航空など）の基幹システムにClaudeを統合</li>
+        <li data-i="03">直近はFable 5/Mythos 5発表（06-09）、『Policy on the AI Exponential』（06-10）と矢継ぎ早</li>
+      </ul>
+      <div class="pull">
+        フロンティアモデル競争の裏で、Anthropicは人材育成と規制業界への実装という社会実装レイヤーを同時に押さえに来ている。エンプラ導入の信頼づくりがモデル性能と並ぶ競争軸になっている。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.anthropic.com/news">Anthropic News</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-11</dd>
+        <dt>CATEGORY</dt>
+        <dd>業界動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.anthropic.com/news">https://www.anthropic.com/news</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/sairahul1/status/2064277888216555684">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-06-11/">
+      ← 前日 · 2026-06-11
+      <span class="big">AI開発基盤Langflowの未修正脆弱性 CVE-2026-5027 が実環境で悪用 — 未認証RCEに</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-06-12/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260612.0730</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-06-13 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-06-13 の Vibe Coder Bootcamp モーニングディスパッチ — 5本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0613</span>
+    <span class="sep">/</span>
+    <span>2026-06-13</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>05 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260613.0723</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-06-13/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:23 · FRI</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · FRIDAY · JUNE 13, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>06<span class="dot">.</span>13</h1>
+    <div class="strap">
+      <span>GitHub · Anthropic · Claude · 深津貴之「理解できないコードを委託する」—</span>
+      <span><span class="count">05</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発者ツール <span class="sep">/</span> GITHUB BLOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>GitHub Copilot CLI が「言語サーバ」で本物のコード知能を獲得＋カスタムエージェント対応</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-13/topic_1.png" data-alt="GitHub Copilot CLI が「言語サーバ」で本物のコード知能を獲得＋カスタムエージェント対応" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-13/topic_1.png" alt="GitHub Copilot CLI が「言語サーバ」で本物のコード知能を獲得＋カスタムエージェント対応" />
+      </div>
+      <p class="lede">
+        GitHub が Copilot CLI を 2 本の更新で強化した。言語サーバ(LSP)連携により、ターミナル上のエージェントが「定義へジャンプ」「参照検索」「型情報」など IDE 並みのコード知能を使い、推測ではなく実際のシンボル解決に基づいて編集できる。さらにカスタムエージェント機能で、単発プロンプトの繰り返しを、役割や手順を定義した再利用可能なワークフローとして設計できるようになった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">言語サーバ統合で go-to-definition / find-references / 型情報をエージェントが参照（推測編集を削減）</li>
+        <li data-i="02">カスタムエージェントで「one-off prompts → workflows」へ。役割・手順を定義し再利用</li>
+        <li data-i="03">いずれもターミナル常駐の Copilot CLI が対象（IDE を開かないエージェント運用を強化）</li>
+        <li data-i="04">同時期に Copilot code review の新設定(6/12)、GitHub Enterprise Server 3.21 GA(6/11) も公開</li>
+      </ul>
+      <div class="pull">
+        「ターミナルのエージェントは IDE のコード理解を持たない」という弱点を LSP 連携で解消。Claude Code / Codex と同じく、CLI エージェントが正確なシンボル情報で動く流れで、大規模リファクタを任せる際の編集精度に直結する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/ai-and-ml/github-copilot/give-github-copilot-cli-real-code-intelligence-with-language-servers/">GitHub Blog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-10</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発者ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/ai-and-ml/github-copilot/give-github-copilot-cli-real-code-intelligence-with-language-servers/">https://github.blog/ai-and-ml/github-copilot/give-github-copilot-cli-real-code-intelligence-with-language-servers/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · SAIRAHUL1RAHUL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        エンジニアリング知見 <span class="sep">/</span> @SAIRAHUL1（RAHUL） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Anthropic も OpenAI も「ループを書け」— 2026 は loop engineering の時代へ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-13/topic_2.png" data-alt="Anthropic も OpenAI も「ループを書け」— 2026 は loop engineering の時代へ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-13/topic_2.png" alt="Anthropic も OpenAI も「ループを書け」— 2026 は loop engineering の時代へ" />
+      </div>
+      <p class="lede">
+        「Anthropic と OpenAI が揃ってエンジニアに『ループを書け』と言っている。プロンプトでもエージェントでもなく、ループだ」という問題提起が大きく拡散した。最重要の 2 ラボが独立に同じパターンへ収束したことを「注目すべきシグナル」とし、single call(入力→モデル→出力)思考から、出力が入力に戻りモデルが自己評価して正しくなるまで回す「サイクル思考」への転換を説く。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">主張: 2026 に勝つエンジニアは single call ではなく cycle（自己評価して反復）で考える</li>
+        <li data-i="02">設計の核: 出力→入力→自己評価→修正 を正しくなるまで回す</li>
+        <li data-i="03">1.49M views / 10,529 bookmarks と高関心。loop engineering を象徴</li>
+        <li data-i="04">Anthropic の Dynamic Workflows・自前 harness と OpenAI のエージェント設計指針が同方向</li>
+      </ul>
+      <div class="pull">
+        VBC で繰り返し扱ってきた「エージェントにループを回させる」設計が業界の共通言語になりつつある。1 回の生成で終わらせず検証・自己修正を組み込む発想は受講者がすぐ取り入れられる実践。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">3,984</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/sairahul1/status/2064343621130932644">@sairahul1</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>エンジニアリング知見</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/sairahul1/status/2064343621130932644">x.com/sairahul1/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · ENZOGTE  ANTHROPIC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI開発ツール <span class="sep">/</span> @ENZO_GTE ほか（公式: ANTHROPIC.COM/NEWS/CLAUDE-FABLE-5-MYTHOS-5） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Claude Fable 5 の“正しい使い方” = 大量エージェント並列＋レビュアー方式</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-13/topic_3.png" data-alt="Claude Fable 5 の“正しい使い方” = 大量エージェント並列＋レビュアー方式" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-13/topic_3.png" alt="Claude Fable 5 の“正しい使い方” = 大量エージェント並列＋レビュアー方式" />
+      </div>
+      <p class="lede">
+        6/10 に一般提供が始まった Mythos 級モデル Claude Fable 5 について、徹夜検証したチームが「Opus と同じ感覚で使うと損をする」と指摘。Opus は『良いプロンプトで良い答えを引き出す』モデルだったが、Fable は『自分が答えを知らない難問』にこそ強い。最適解はリファクタや最適化などの難題を渡し、N 体のエージェントを別々の work tree で並列起動させ、別の Fable をレビュアーに置いて最良解を選ばせる方式だという。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Fable 5 は 6/10 一般提供開始（API / AWS / Google Cloud / Microsoft Foundry）</li>
+        <li data-i="02">性能: ほぼ全ベンチで SOTA、「長く走らせるほどリード拡大」（数日連続実行可）</li>
+        <li data-i="03">推奨運用: 難問→N体を別 work tree で並列→別エージェントがレビューし最良解→反復</li>
+        <li data-i="04">「50体のIQ150が同じ問題を解き、1体がブレイクスルーを出せば勝ち」という探索型の発想</li>
+        <li data-i="05">Anthropic の /loop /goal が体系化しようとする型だが「説明が複雑」との批判も</li>
+      </ul>
+      <div class="pull">
+        1 発の精緻なプロンプトに頼る使い方から、多数の試行を生成して選別する「探索型」へ。Claude Code の Agent / work tree 機能と相性が良く、VBC受講者が Fable を“じっくり並列で走らせる”難題に当てるための実践指針になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,813</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/enzo_gte/status/2064748337740276164">@enzo_gte</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-11</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/enzo_gte/status/2064748337740276164">x.com/enzo_gte/…</a></dd>
+        <dd><a href="https://www.anthropic.com/news/claude-fable-5-mythos-5">www.anthropic.com/news/claude-fable-5-my…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · FLADDICT / THE GUI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        組織・働き方 <span class="sep">/</span> @FLADDICT（深津貴之 / THE GUILD） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>深津貴之「理解できないコードを委託する」— AIコードレビュー観の転換</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-13/topic_4.png" data-alt="深津貴之「理解できないコードを委託する」— AIコードレビュー観の転換" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-13/topic_4.png" alt="深津貴之「理解できないコードを委託する」— AIコードレビュー観の転換" />
+      </div>
+      <p class="lede">
+        「AIコードは動くけど理解不能で自分で直せない」というエンジニアの不安に対し、深津貴之が「経営者は部下エンジニアのコードも同様に理解できないが委託できている」と指摘。医療・建築・金融・法律のように、専門的すぎて自力レビューできないが失敗が許されない仕事は、既に責任分界・監査・保険・標準化を伴う委託モデルで社会に組み込まれている、と論じた。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">論点: 「全コードを人間が理解する」前提は専門職への委託モデルでは既に崩れている</li>
+        <li data-i="02">AIコードレビューも検収・責任分界・監査・保険・標準化を含む委託へ移行しうる</li>
+        <li data-i="03">重心が「コードを理解する」から「成果物とリスクをどう検収・運用するか」へ</li>
+        <li data-i="04">36万 view と高関心。AI Agent Creator 時代の組織設計議論として広く参照</li>
+      </ul>
+      <div class="pull">
+        Vibe Coding の「人間が全部読まなくていい」を、無責任ではなく『委託の作法』として捉え直す視点。受講者が顧客や経営に AI コードの品質保証を説明する際のフレームになる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,278</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/fladdict/status/2058672057639145765">@fladdict</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>組織・働き方</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/fladdict/status/2058672057639145765">x.com/fladdict/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · DHRUVTWTDHRUV</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発者ツール <span class="sep">/</span> @DHRUVTWT_（DHRUV） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>AIエージェント・オーケストレーションツール 6 選 — ハーネス集約レイヤーの台頭</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-13/topic_5.png" data-alt="AIエージェント・オーケストレーションツール 6 選 — ハーネス集約レイヤーの台頭" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-13/topic_5.png" alt="AIエージェント・オーケストレーションツール 6 選 — ハーネス集約レイヤーの台頭" />
+      </div>
+      <p class="lede">
+        複数の AI コーディングエージェントを束ねて実行・管理・比較する「オーケストレーション / Agentic Development Environment」系ツールとして、Superset・DP Code・Emdash・Letta・Conductor・Air の 6 つを紹介した投稿。個々のコーディングエージェントの上に載る『ハーネス集約』レイヤーへの関心の高まりを示す。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Superset (superset.sh) / DP Code (dpcode.cc) / Emdash (emdash.sh)</li>
+        <li data-i="02">Letta (letta.com) / Conductor (conductor.build) / Air</li>
+        <li data-i="03">用途: 複数エージェントの並列実行・タスク振り分け・結果比較</li>
+        <li data-i="04">単体エージェント(Claude Code / Codex)の『上位レイヤー』を担う製品カテゴリが形成中</li>
+      </ul>
+      <div class="pull">
+        エージェントを 1 体ずつ手で回す段階から、複数を束ねて任せる段階へ。Fable 5 の並列＋レビュアー方式とも通じ、『どのエージェントに何をやらせ、どう統合するか』を考える時の選択肢になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">400</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/dhruvtwt_/status/2050966491731038598">@dhruvtwt_</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-05-03</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発者ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/dhruvtwt_/status/2050966491731038598">x.com/dhruvtwt_/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://github.blog/ai-and-ml/github-copilot/give-github-copilot-cli-real-code-intelligence-with-language-servers/">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-06-12/">
+      ← 前日 · 2026-06-12
+      <span class="big">「プロンプトを書くな、ループを書け」— 2026年のAIエンジニアの新常識</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-06-13/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260613.0723</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-06-16 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-06-16 の Vibe Coder Bootcamp モーニングディスパッチ — 4本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0616</span>
+    <span class="sep">/</span>
+    <span>2026-06-16</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>04 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260616.0725</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-06-16/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:25 · MON</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · MONDAY · JUNE 16, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>06<span class="dot">.</span>16</h1>
+    <div class="strap">
+      <span>米政府がClaude · Satya · Garry · Google</span>
+      <span><span class="count">04</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 AI業界・規制・地政学 <span class="sep">/</span> ANTHROPIC公式 / @NUKONUKO 解説 <span class="sep">/</span> NEWS
+      </div>
+      <h2>米政府がClaude Fable 5 / Mythos 5の「非米国籍アクセス停止」を指示 → 実質全停止、AIモデルが戦略インフラ化</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-16/topic_1.png" data-alt="米政府がClaude Fable 5 / Mythos 5の「非米国籍アクセス停止」を指示 → 実質全停止、AIモデルが戦略インフラ化" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-16/topic_1.png" alt="米政府がClaude Fable 5 / Mythos 5の「非米国籍アクセス停止」を指示 → 実質全停止、AIモデルが戦略インフラ化" />
+      </div>
+      <p class="lede">
+        アメリカ政府がAnthropicに対し、Claude Fable 5とMythos 5への「アメリカ人以外（外国籍）のアクセス停止」を指示した。ET 17:21に受領した指令は『米国内外を問わず、Anthropic社員を含む米国籍以外の人物に両モデルへアクセスさせるな』というもの。外国籍ユーザーだけを技術的に選別停止するのは困難なため、結果的に全ユーザーへの両モデル提供停止に至り、現在は全員が利用不可になっている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">発端は米政府からの直接指令（ET 6/13 17:21 に Anthropic が受領）</li>
+        <li data-i="02">「外国籍のみ停止」が技術的に困難なため、副作用として実質全ユーザー停止に</li>
+        <li data-i="03">一次情報は Anthropic 公式告知（anthropic.com/news/fable-mythos-access）、ぬこぬこ氏が AI Safety 文脈で人力整理</li>
+        <li data-i="04">フロンティアモデルが先端ハードウェア同様の輸出管理・安全保障の対象になった初の具体例</li>
+        <li data-i="05">「怒りの矛先は Anthropic ではなく米政府」と状況の正確な理解を促す論調</li>
+      </ul>
+      <div class="pull">
+        フロンティアモデルが地政学・規制の対象となり、アクセスが突然絶たれるリスクが現実化した。AIを業務基盤に組み込む企業にとって、単一モデル依存の地政学リスクとフォールバック経路の必要性を突きつける事件。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,402</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.anthropic.com/news/fable-mythos-access">Anthropic公式 / @nukonuko 解説</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-13</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 AI業界・規制・地政学</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.anthropic.com/news/fable-mythos-access">https://www.anthropic.com/news/fable-mythos-access</a></dd>
+        <dd><a href="https://x.com/nukonuko/status/2065640176299516404">x.com/nukonuko/status/206564017629951640…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · SATYA NADELLAMICRO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 AI業界・経営戦略 <span class="sep">/</span> SATYA NADELLA（MICROSOFT CEO） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Satya Nadella「エコシステムなきフロンティアは安定しない」— AI時代の企業は human capital と token capital を築け</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-16/topic_2.png" data-alt="Satya Nadella「エコシステムなきフロンティアは安定しない」— AI時代の企業は human capital と token capital を築け" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-16/topic_2.png" alt="Satya Nadella「エコシステムなきフロンティアは安定しない」— AI時代の企業は human capital と token capital を築け" />
+      </div>
+      <p class="lede">
+        Microsoft CEO Satya Nadella が、AI駆動経済における「企業の未来」を論じた長文エッセイを公開した。全企業が human capital（人の知識・判断・関係・独創性・パターン認識）と token capital（自社が構築・所有するAIケイパビリティ）の両方を築く必要があると主張。鍵は最良モデル選びではなく、モデルの上に両資本が複利で積み上がる「学習ループ（hill climbing machine）を自社所有すること」=これが企業の新しいIPになる、と説く。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">human capital は token capital が育っても価値が下がらず、むしろ高まる（人間の主体性が token capital 成長の原動力）</li>
+        <li data-i="02">構成要素はプライベート evals（外部ベンチでなく自社成果で測る）、プライベート RL 環境、クエリ可能なナレッジベース</li>
+        <li data-i="03">ジェネラリストモデルを差し替えても「社内ベテラン」の専門性を失わない状態が、来たる時代の支配権・主権のテスト</li>
+        <li data-i="04">「フロンティアモデル単体でなくフロンティアエコシステムを築け。価値が少数モデルに集中すれば政治経済が許容しない」</li>
+        <li data-i="05">グローバル化の産業空洞化を引き合いに、価値が広く流れる設計の必要性を警鐘</li>
+      </ul>
+      <div class="pull">
+        「どのモデルを使うか」より「自社の学習ループをどう所有・内製するか」が経営の問いになる、という大局観。AI時代の組織設計を考える経営層・VBC受講者に有益な戦略フレーム。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">37,033</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/satyanadella/status/2066182223213293753">@satyanadella</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-15</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 AI業界・経営戦略</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/satyanadella/status/2066182223213293753">x.com/satyanadella/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · CHENZELING4 GITHUB</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📖 開発ワークフロー・体系的解説 <span class="sep">/</span> @CHENZELING4 ほか（GITHUB: GSTACK） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Garry Tan の Claude Code セットアップ「gstack」が OSS 公開 — 23ツールを役割別エージェントに整理</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-16/topic_3.png" data-alt="Garry Tan の Claude Code セットアップ「gstack」が OSS 公開 — 23ツールを役割別エージェントに整理" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-16/topic_3.png" alt="Garry Tan の Claude Code セットアップ「gstack」が OSS 公開 — 23ツールを役割別エージェントに整理" />
+      </div>
+      <p class="lede">
+        Y Combinator を率いる Garry Tan が、自身が60日で本番サービス3本・機能40以上を出荷した Claude Code のセットアップ「gstack」を OSS 公開した。23個の opinionated な Claude Code ツールを、CEO・デザイナー・エンジニアリングマネージャ・リリースマネージャ・ドキュメントエンジニア・QA といった『役割』に整理したもので、設定一式が GitHub でそのまま流用可能になっている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">gstack = 23 のツールを役割（CEO / Designer / Eng Manager / Release Manager / Doc Engineer / QA）にマッピング</li>
+        <li data-i="02">Garry Tan は YC 運営と並行し60日で本番3サービス・40+機能を出荷（ピーク日は3.7万行規模のコード生成との投稿も）</li>
+        <li data-i="03">設定一式が GitHub で公開され、自分の Claude Code にそのまま流用できる</li>
+        <li data-i="04">「1人＋AIで組織のように動く」具体的テンプレートとして拡散</li>
+      </ul>
+      <div class="pull">
+        役割ごとにツールを束ねる発想は、Claude Code を『個人の作業補助』から『擬似チーム運用』へ引き上げる実践テンプレート。Ryoko の org システム（employee 役割分担）とも思想が重なり、VBC受講者がすぐ取り入れられる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/chenzeling4/status/2064600000000000000">@chenzeling4</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-11</dd>
+        <dt>CATEGORY</dt>
+        <dd>📖 開発ワークフロー・体系的解説</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/chenzeling4/status/2064600000000000000">x.com/chenzeling4/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · GEMINICLI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 開発ツール・業界動向 <span class="sep">/</span> @GEMINICLI（公式） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Google が Gemini CLI を廃止し Antigravity CLI へ統合 — 開発者ツールの集約フェーズへ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-16/topic_4.png" data-alt="Google が Gemini CLI を廃止し Antigravity CLI へ統合 — 開発者ツールの集約フェーズへ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-16/topic_4.png" alt="Google が Gemini CLI を廃止し Antigravity CLI へ統合 — 開発者ツールの集約フェーズへ" />
+      </div>
+      <p class="lede">
+        Google の公式アカウント @geminicli が、Gemini CLI ユーザーを Antigravity CLI へ移行させると発表した。「取り組みを統一する（unifying our efforts）」として独立した Gemini CLI を畳み、AI開発環境 Antigravity 配下の CLI に集約する方向を示した。既存ユーザーには Antigravity（継続利用には Gemini Enterprise / AI Ultra）への案内が出ている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Gemini CLI は Antigravity CLI へ統合・移行（公式アナウンス）</li>
+        <li data-i="02">Google の AI 開発者ツールを Antigravity ブランドへ一本化する動き</li>
+        <li data-i="03">既存ユーザーからは「潮時か」「Enterprise を案内された」と移行コストへの戸惑いの声</li>
+        <li data-i="04">4-6月に launch した Antigravity（IDE/開発環境）への集約フェーズ</li>
+      </ul>
+      <div class="pull">
+        大手が乱立した CLI / 開発ツールを単一ブランドへ集約し始めた象徴例。Anthropic（Claude Code）・OpenAI（Codex）・Google（Antigravity）の三極が各々エコシステムを固めるフェーズで、VBC受講者はツール統廃合を前提に移行設計を考える必要がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/geminicli">@geminicli（公式）</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-14</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 開発ツール・業界動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/geminicli">https://x.com/geminicli</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://www.anthropic.com/news/fable-mythos-access">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-06-13/">
+      ← 前日 · 2026-06-13
+      <span class="big">GitHub Copilot CLI が「言語サーバ」で本物のコード知能を獲得＋カスタムエージェント対応</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-06-16/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260616.0725</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-06-18 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-06-18 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0618</span>
+    <span class="sep">/</span>
+    <span>2026-06-18</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260618.0729</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-06-18/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:29 · WED</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · WEDNESDAY · JUNE 18, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>06<span class="dot">.</span>18</h1>
+    <div class="strap">
+      <span>SpaceX · Cursor「Origin」発表 · Claude · OpenAI</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        業界ニュース <span class="sep">/</span> @CURSOR_AI 公式 / ITMEDIA <span class="sep">/</span> NEWS
+      </div>
+      <h2>SpaceX が Cursor を約600億ドルで買収</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-18/topic_1.png" data-alt="SpaceX が Cursor を約600億ドルで買収" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-18/topic_1.png" alt="SpaceX が Cursor を約600億ドルで買収" />
+      </div>
+      <p class="lede">
+        SpaceX が AI コーディングツール Cursor の開発元 Anysphere を約600億ドルで買収する。SpaceX は今年4月時点で Anysphere と契約し、Cursor の上場後に全株式を取得するオプションを確保していた。買収完了は IPO 実施から約4か月後の見込みで、Cursor 共同創業者の Michael Truell CEO は SpaceX との連携継続と最先端 AI 機能の共同開発に期待を示した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">買収額は報道ベースで約600億ドル（約9.6兆円相当との表記）</li>
+        <li data-i="02">SpaceX は4月に Anysphere と契約済み、Cursor の IPO 後に全株取得するオプションを行使する形</li>
+        <li data-i="03">背景に xAI（Grok 開発、SpaceX に合流）のインフラ。SpaceX は AI 向けデータセンター2拠点を建設中</li>
+        <li data-i="04">Cursor 公式アカウントの発表ポストは Likes 約29,000 と大きな反響</li>
+      </ul>
+      <div class="pull">
+        開発者が日常使う AI コーディングツールが宇宙・AI インフラ大手の傘下に入る大型再編。モデル供給・計算資源・将来のツール方針に影響しうるため、Cursor を業務利用する受講者・企業は中長期動向を注視したい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">29,194</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2066875698346954891">@cursor_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-17</dd>
+        <dt>CATEGORY</dt>
+        <dd>業界ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2066875698346954891">x.com/cursor_ai/…</a></dd>
+        <dd><a href="https://www.itmedia.co.jp/news/articles/2606/17/news066.html">www.itmedia.co.jp/news/articles/2606/17/…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · CURSORAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> @CURSOR_AI 公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cursor「Origin」発表 — AI 時代のコードホスティング / Git</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-18/topic_2.png" data-alt="Cursor「Origin」発表 — AI 時代のコードホスティング / Git" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-18/topic_2.png" alt="Cursor「Origin」発表 — AI 時代のコードホスティング / Git" />
+      </div>
+      <p class="lede">
+        Cursor がコードストレージと Git ホスティング『Origin』を発表した。チームとエージェントの双方がコードをホスト・レビュー・コラボレーションできる場を提供し、エディタを超えて GitHub 的なホスティングレイヤーまで踏み込む。同時期に、ローカルのエージェントをクラウドへ移して隔離実行する /in-cloud も発表された。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Origin は『チームとエージェント』両方の利用を前提にしたコードホスティング/Git 基盤</li>
+        <li data-i="02">エディタ → ホスティングへとプロダクト範囲を拡張し、開発の習慣ごと囲い込む方向</li>
+        <li data-i="03">あわせて /in-cloud でサブエージェントを専用クラウド VM に隔離して長時間タスクを実行可能に</li>
+      </ul>
+      <div class="pull">
+        AI コーディングツールが『モデル配布レイヤー』になりつつある流れの象徴。コード管理・レビュー・エージェント実行をどこに集約するかの選択肢が増え、開発フローの設計に影響する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">13,338</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2067012220832329782">@cursor_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-17</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2067012220832329782">x.com/cursor_ai/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · CLAUDE CLAUDEAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        デザイン <span class="sep">/</span> CLAUDE (@CLAUDEAI) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Claude Design 大幅アップデート — デザインシステム連携 &amp; Claude Code 双方向同期</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-18/topic_3.png" data-alt="Claude Design 大幅アップデート — デザインシステム連携 &amp; Claude Code 双方向同期" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-18/topic_3.png" alt="Claude Design 大幅アップデート — デザインシステム連携 &amp; Claude Code 双方向同期" />
+      </div>
+      <p class="lede">
+        Claude Design が更新され、リポジトリ/デザインファイル/コードベースから自社デザインシステムをインポートできるようになった。Claude が実コンポーネントでビルドし、ユーザーに見せる前に出力をデザインシステムと自己照合する。Claude Code との双方向同期、PDF/PowerPoint エクスポート、キャンバス上のドラッグ・リサイズ・整列に対応し、全有料プランで web/desktop のベータとして提供される。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">デザインシステムをインポート → ブランドを崩さず一貫生成し、表示前に自己照合</li>
+        <li data-i="02">Claude Code と双方向（デザイン→ビルド／Claude Code→デザイン同期、本日ロールアウト）</li>
+        <li data-i="03">PDF / PowerPoint エクスポートに対応</li>
+        <li data-i="04">再設計エディタ＋キャンバス上のレイアウトコントロール（ドラッグ/リサイズ/整列）</li>
+        <li data-i="05">全有料プランで web/desktop のベータ提供</li>
+      </ul>
+      <div class="pull">
+        デザイン→実装を Claude エコシステム内で一気通貫にでき、デザインシステムを持つ組織では『ブランドを崩さない自動生成』が実用的になる。資料・スライド作成の品質担保にも効く。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">4,900</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/claudeai/status/2067325887909884315">@claudeai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-18</dd>
+        <dt>CATEGORY</dt>
+        <dd>デザイン</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/claudeai/status/2067325887909884315">x.com/claudeai/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · OPENAIDEVS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> @OPENAIDEVS 公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI Codex 欧州展開拡大 — Computer use / Chrome 拡張</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-18/topic_4.png" data-alt="OpenAI Codex 欧州展開拡大 — Computer use / Chrome 拡張" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-18/topic_4.png" alt="OpenAI Codex 欧州展開拡大 — Computer use / Chrome 拡張" />
+      </div>
+      <p class="lede">
+        OpenAI が Codex の機能を今週からさらに欧州で展開すると発表した。Computer use（PC 操作）や Codex の Chrome 拡張などを欧州ユーザーへ順次提供する。地域ごとの段階的ロールアウトで利用可能範囲が広がっている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Computer use（コンピュータ操作）と Codex Chrome 拡張を欧州に展開</li>
+        <li data-i="02">地域ごとの段階ロールアウトで提供範囲が拡大中</li>
+        <li data-i="03">コーディングを超えたブラウザ・PC 操作のエージェント利用が前進</li>
+      </ul>
+      <div class="pull">
+        Codex の利用面（ブラウザ・PC 操作）が広がり、純粋なコード生成以外のエージェント的作業にも適用範囲が伸びている。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">3,490</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2066916479438930166">@OpenAIDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-17</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2066916479438930166">x.com/OpenAIDevs/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · ANTHROPICAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        リサーチ <span class="sep">/</span> @ANTHROPICAI 公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic 経済リサーチ — Claude Code のスケールを追跡</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-18/topic_5.png" data-alt="Anthropic 経済リサーチ — Claude Code のスケールを追跡" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-18/topic_5.png" alt="Anthropic 経済リサーチ — Claude Code のスケールを追跡" />
+      </div>
+      <p class="lede">
+        Anthropic が Claude Code のスケールを追跡する経済リサーチを公開した。プライバシー保護分析ツールで2025年10月〜2026年4月の40万セッションを分析し、誰がどんな仕事に使っているかを整理。1セッションあたりの仕事の価値が高まっていること、そして『ドメインエキスパート』ほど検証可能なタスクでの成功率が高いことを示した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">40万セッション（2025-10〜2026-04）をプライバシー保護のまま分析</li>
+        <li data-i="02">Claude Code のタスク単価（仕事の価値）が時間とともに上昇</li>
+        <li data-i="03">その分野の語彙・問いの質で判定したドメイン精通者ほど、厳しい成功基準でも成功率が高い</li>
+        <li data-i="04">仕事の性質の変化を継続的に追跡するフレームワークとして提示</li>
+      </ul>
+      <div class="pull">
+        『AI に丸投げ』ではなく、領域知識を持つ人が AI を使うほど成果が出るという定量的示唆。自分の専門領域 × AI を磨く方向づけの裏付けになる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">3,241</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/AnthropicAI/status/2066969532380721386">@AnthropicAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-17</dd>
+        <dt>CATEGORY</dt>
+        <dd>リサーチ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/AnthropicAI/status/2066969532380721386">x.com/AnthropicAI/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · CLAUDEDEVS APPLIED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AIエージェント <span class="sep">/</span> @CLAUDEDEVS 公式（APPLIED AI） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic「Claude Managed Agents」本番投入の事例ブログ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-18/topic_6.png" data-alt="Anthropic「Claude Managed Agents」本番投入の事例ブログ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-18/topic_6.png" alt="Anthropic「Claude Managed Agents」本番投入の事例ブログ" />
+      </div>
+      <p class="lede">
+        Anthropic の Applied AI チームが、Claude Managed Agents をどのように本番投入するかをまとめたブログを公開した。チームが Managed Agents を選ぶ理由、複数のケーススタディ、エージェントを production に乗せるための知見を整理している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Managed Agents を選定する典型的な理由と複数のケーススタディを提示</li>
+        <li data-i="02">エージェントの本番運用（運用・監視・既存システムとの統合）に踏み込む</li>
+        <li data-i="03">『デモは動くが本番に乗らない』を越える実装知見を共有</li>
+      </ul>
+      <div class="pull">
+        AI エージェントを組織で運用する立場に直結する実践知。本番化のハードルを下げる具体例として参考になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">3,283</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2066926619714007115">@ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-17</dd>
+        <dt>CATEGORY</dt>
+        <dd>AIエージェント</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2066926619714007115">x.com/ClaudeDevs/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · CHETASLUA CHETASLU</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        画像生成AI <span class="sep">/</span> CHETASLUA (@CHETASLUA) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Google 新画像モデル「Instant-ramen」準備中（nano-banana 後継、噂）</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-18/topic_7.png" data-alt="Google 新画像モデル「Instant-ramen」準備中（nano-banana 後継、噂）" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-18/topic_7.png" alt="Google 新画像モデル「Instant-ramen」準備中（nano-banana 後継、噂）" />
+      </div>
+      <p class="lede">
+        Google の新しい画像生成モデルがコードネーム『Instant-ramen』として準備中との情報が出ている。高評価だった『nano-banana』の後継にあたるとされ、投稿者は『まもなく提供、入手次第すぐ結果を共有する』と予告した。投稿時点では一般提供前の段階。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">『Instant-ramen』は nano-banana 後継にあたる Google の新画像モデルのコードネーム</li>
+        <li data-i="02">まだ一般提供前で、投稿時点では結果待ち</li>
+        <li data-i="03">コードネーム段階の情報で、公式発表・ベンチマークは未確認</li>
+      </ul>
+      <div class="pull">
+        画像生成パイプライン（スライド・サムネ生成など）の品質・速度が上がる可能性があり、続報を追う価値がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">849</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/chetaslua/status/2067197698542084427">@chetaslua</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-17</dd>
+        <dt>CATEGORY</dt>
+        <dd>画像生成AI</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/chetaslua/status/2067197698542084427">x.com/chetaslua/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/cursor_ai/status/2066875698346954891">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-06-17/">
+      ← 前日 · 2026-06-17
+      <span class="big">Zhipu/Zai が「GLM-5.2」をオープンウェイトで公開 — 1Mコンテキスト・MITライセンス・NVIDIA非依存学習</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-06-18/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260618.0729</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

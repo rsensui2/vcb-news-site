@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-06-19 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-06-19 の Vibe Coder Bootcamp モーニングディスパッチ — 4本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0619</span>
+    <span class="sep">/</span>
+    <span>2026-06-19</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>04 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260619.0730</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-06-19/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:30 · THU</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · THURSDAY · JUNE 19, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>06<span class="dot">.</span>19</h1>
+    <div class="strap">
+      <span>npm · Transformer · Claude · 複数のコーディングエージェントを1セッションで束ねる「Omnigent」</span>
+      <span><span class="count">04</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ <span class="sep">/</span> GITHUB CHANGELOG 公式 / THE HACKER NEWS / REVERSINGLABS <span class="sep">/</span> NEWS
+      </div>
+      <h2>npm v12 が install スクリプトをデフォルト無効化 — サプライチェーン攻防が前進</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-19/topic_1.png" data-alt="npm v12 が install スクリプトをデフォルト無効化 — サプライチェーン攻防が前進" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-19/topic_1.png" alt="npm v12 が install スクリプトをデフォルト無効化 — サプライチェーン攻防が前進" />
+      </div>
+      <p class="lede">
+        GitHub が npm v12 で preinstall/install/postinstall などのライフサイクルスクリプトをデフォルトで実行しない破壊的変更を予告した。これは近年のワーム型サプライチェーン攻撃（Shai-Hulud 系・Miasma）が利用していた『依存を入れた瞬間にコードが走る』第一の侵入面を無効化するもの。同時期に、乗っ取られた開発者アカウント経由で npm・PyPI・GitHub Actions・AI コーディングエージェントの設定までを標的にする攻撃ツールキットが OSS 公開されたとの報告もあり、防御と攻撃が同時に高度化している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">npm v12 はインストール時のライフサイクルスクリプトを既定で実行しなくなる（破壊的変更）</li>
+        <li data-i="02">Shai-Hulud / Miasma などワームが利用した最大の自動コード実行面を封鎖する防御策</li>
+        <li data-i="03">自前パッケージが postinstall に依存している場合は本番反映前に挙動確認が必要</li>
+        <li data-i="04">一方で npm・PyPI・GitHub Actions・AI エージェント設定まで狙う攻撃ツールキットの OSS 公開も報告され、AI 開発環境自体が標的化</li>
+        <li data-i="05">一次情報は github.blog の changelog（2026-06-09）</li>
+      </ul>
+      <div class="pull">
+        VBC 受講者は npm install を多用する。デフォルト無効化は安全性の前進だが、ビルド自動化や一部パッケージが壊れる可能性があるため、自分のプロジェクトが postinstall に依存していないか今のうちに点検する価値がある。AI エージェント設定が標的化され始めた点も CLAUDE.md や MCP 設定の扱いに直結する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-06-09-upcoming-breaking-changes-for-npm-v12/">GitHub Changelog 公式 / The Hacker News / ReversingLabs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-18</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-06-09-upcoming-breaking-changes-for-npm-v12/">https://github.blog/changelog/2026-06-09-upcoming-breaking-changes-for-npm-v12/</a></dd>
+        <dd><a href="https://thehackernews.com/2026/06/github-to-disable-npm-install-scripts.html">thehackernews.com/2026/06/github-to-disa…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · NOAMSHAZEER</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        業界ニュース <span class="sep">/</span> @NOAMSHAZEER 本人発表 <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Transformer 共著者 Noam Shazeer が Google を離れ OpenAI へ移籍</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-19/topic_2.png" data-alt="Transformer 共著者 Noam Shazeer が Google を離れ OpenAI へ移籍" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-19/topic_2.png" alt="Transformer 共著者 Noam Shazeer が Google を離れ OpenAI へ移籍" />
+      </div>
+      <p class="lede">
+        Transformer 論文『Attention Is All You Need』の共著者で、Character.AI を創業し、その後 Google に戻って Gemini 開発を率いていた Noam Shazeer が、Google を離れ OpenAI に参画すると本人が発表した。『難しい決断だった』『Google のチームと築いたものを誇りに思う』と述べつつの移籍で、Views 760 万・Likes 1.4 万の大反響となった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Noam Shazeer は現代 LLM の基盤である Transformer の主要発明者の一人</li>
+        <li data-i="02">2024 年に Character.AI から Google へ復帰し、Gemini 開発の中核を担っていた</li>
+        <li data-i="03">今回 Google を離れ OpenAI へ移籍することを本人ポストで表明</li>
+        <li data-i="04">Google ↔ OpenAI 間のトップ研究者の流動が改めて鮮明に</li>
+      </ul>
+      <div class="pull">
+        フロンティアモデル競争が『モデル性能』だけでなく『キーパーソンの獲得』の局面に入ったことを示す象徴的な移籍。受講者が日々使う Gemini / GPT 系の今後の開発方針・速度に影響しうる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">14,529</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/NoamShazeer/status/2067400851438932297">@NoamShazeer</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-18</dd>
+        <dt>CATEGORY</dt>
+        <dd>業界ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/NoamShazeer/status/2067400851438932297">x.com/NoamShazeer/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · MARCOS12345RICO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        プロダクト <span class="sep">/</span> @MARCOS12345RICO 公式（スレッド） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Claude が編集できる OSS 動画エディタ「Palmier」が登場</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-19/topic_3.png" data-alt="Claude が編集できる OSS 動画エディタ「Palmier」が登場" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-19/topic_3.png" alt="Claude が編集できる OSS 動画エディタ「Palmier」が登場" />
+      </div>
+      <p class="lede">
+        Claude が直接編集できる AI ネイティブな動画エディタ『Palmier』がローンチされた。タイムライン上で AI が編集・素材整理・フッテージ生成を行い、Mac ネイティブかつオープンソースで Premiere 級の編集体験を無料で提供する。画像・動画・音楽の主要生成モデル（nb pro, gpt image, krea 2, recraft v4.1, seedance 2.0, kling v3, 11labs ほか）をタイムラインに統合している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">自前の Anthropic API キー、または MCP 経由で Claude を接続して編集アシスタント化できる</li>
+        <li data-i="02">メディア横断のセマンティック検索と文字起こしはオンデバイスで無料</li>
+        <li data-i="03">オープンソース化により Premiere 級エディタが無料、プランは有料（ローンチ時半額）</li>
+        <li data-i="04">画像/動画/音楽の主要生成モデルをタイムライン内に統合</li>
+      </ul>
+      <div class="pull">
+        LLM エージェント（Claude）を動画編集という非コード領域のワークフローに組み込む具体例。MCP / API キー連携で『自分の Claude を専門ツールの操作役にする』設計は VBC のエージェント活用の好例で、OSS かつオンデバイス処理のためコスト・プライバシー面でも検証しやすい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">10,274</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/Marcos12345rico/status/2067264877463261400">@Marcos12345rico</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-17</dd>
+        <dt>CATEGORY</dt>
+        <dd>プロダクト</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/Marcos12345rico/status/2067264877463261400">x.com/Marcos12345rico/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · YUCHENJUW</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> @YUCHENJ_UW <span class="sep">/</span> NEWS
+      </div>
+      <h2>複数のコーディングエージェントを1セッションで束ねる「Omnigent」</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-19/topic_4.png" data-alt="複数のコーディングエージェントを1セッションで束ねる「Omnigent」" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-19/topic_4.png" alt="複数のコーディングエージェントを1セッションで束ねる「Omnigent」" />
+      </div>
+      <p class="lede">
+        『これからのコーディングは1体のエージェントではなく AI チーム』という主張のもと、Claude Code・Codex・Cursor・Pi などの異なるコーディングエージェントと自前エージェントを、1つのライブセッション内でチームとして同時に走らせられるツール『Omnigent』が紹介された。ベンダーをまたいで各エージェントの強みを混在運用する発想のオーケストレーション層。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">単一のライブセッションで Claude Code・Codex・Cursor・Pi＋独自エージェントを並走</li>
+        <li data-i="02">ベンダー横断でエージェントを『チーム』として扱うオーケストレーション層</li>
+        <li data-i="03">『1エージェント最強』ではなく『混成チーム』へという潮流の一例</li>
+      </ul>
+      <div class="pull">
+        VBC でも『どのエージェントを使うか』より『複数をどう束ねるか』が論点になりつつある。ベンダー横断のマルチエージェント運用を試したい層に新たな選択肢を提供する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/Yuchenj_UW/status/2067273020352380950">@Yuchenj_UW</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-17</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/Yuchenj_UW/status/2067273020352380950">x.com/Yuchenj_UW/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://github.blog/changelog/2026-06-09-upcoming-breaking-changes-for-npm-v12/">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-06-18/">
+      ← 前日 · 2026-06-18
+      <span class="big">SpaceX が Cursor を約600億ドルで買収</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-06-19/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260619.0730</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

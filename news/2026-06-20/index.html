@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-06-20 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-06-20 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0620</span>
+    <span class="sep">/</span>
+    <span>2026-06-20</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260620.0726</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-06-20/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:26 · FRI</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · FRIDAY · JUNE 20, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>06<span class="dot">.</span>20</h1>
+    <div class="strap">
+      <span>Claude · OpenAI · OpenAI · OpenAI『LifeSciBench』+</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ツール更新 <span class="sep">/</span> @CLAUDEAI 公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code に「Artifacts」登場 — セッションから対話的ページを自動生成</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-20/topic_1.png" data-alt="Claude Code に「Artifacts」登場 — セッションから対話的ページを自動生成" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-20/topic_1.png" alt="Claude Code に「Artifacts」登場 — セッションから対話的ページを自動生成" />
+      </div>
+      <p class="lede">
+        Anthropic が Claude Code に Artifacts を追加した。作業セッションのフルコンテキスト（コードベース・plugins・skills・接続済みツール）を踏まえて、PR ウォークスルーのような『対話的なページ』をその場で生成する機能。セッションが進むと artifact もライブで更新され、共有相手は常に最新の状態を見られる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">セッションのフルコンテキスト（codebase / plugins / skills / connected tools）を参照して生成</li>
+        <li data-i="02">PR ウォークスルー等のインタラクティブなページを自動生成</li>
+        <li data-i="03">作業を続けると artifact が自動リフレッシュ → 共有先も常に最新を閲覧</li>
+        <li data-i="04">公式投稿は ❤16,000 超で当日最大級の反応</li>
+      </ul>
+      <div class="pull">
+        コーディング作業の『成果物』を、説明用の対話的ページとして即チーム共有できる。レビュー・引き継ぎ・受講生への説明が、別途ドキュメントを書かずに回せるようになる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">16,367</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/claudeai/status/2067671912038240487">@claudeai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>ツール更新</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/claudeai/status/2067671912038240487">x.com/claudeai/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · OPENAIDEVS  / GDBD</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ツール更新 <span class="sep">/</span> @OPENAIDEVS 公式 / @GDB（DOCS: DEVELOPERS.OPENAI.COM/CODEX/RECORD-AND-REPLAY） <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI Codex「Record &amp; Replay」— 実演して教えればスキルになる</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-20/topic_2.png" data-alt="OpenAI Codex「Record &amp; Replay」— 実演して教えればスキルになる" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-20/topic_2.png" alt="OpenAI Codex「Record &amp; Replay」— 実演して教えればスキルになる" />
+      </div>
+      <p class="lede">
+        OpenAI が Codex に Record &amp; Replay を追加した。繰り返し行うワークフローを一度『お手本』として実演（demonstration）して見せると、それを再利用可能な skill として記録できる。Greg Brockman は『デモでCodexに教えられる（teach Codex by demonstration）』と表現している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">ワークフローを一度実演 → 再利用可能な skill として保存</li>
+        <li data-i="02">コードを書くのではなく『操作を見せて教える』方式</li>
+        <li data-i="03">公式docsに /codex/record-and-replay ページが追加され正式機能</li>
+        <li data-i="04">@OpenAIDevs ❤12,000超 / gdb の補足投稿も ❤2,700超</li>
+      </ul>
+      <div class="pull">
+        定型作業の自動化ハードルが『一回やって見せるだけ』に下がる。非エンジニアでも自分用の自動化スキルを量産でき、Claude Code Artifacts と並びエージェント機能競争が一段加速した。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">12,043</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2067681320281723113">@OpenAIDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>ツール更新</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2067681320281723113">x.com/OpenAIDevs/…</a></dd>
+        <dd><a href="https://x.com/gdb/status/2067700691062464887">x.com/gdb/status/2067700691062464887</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · OPENAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        新モデル・研究 <span class="sep">/</span> @OPENAI 公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI、長時間・高ステークスのタスク向けに『望ましく安全な挙動』をRL学習</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-20/topic_3.png" data-alt="OpenAI、長時間・高ステークスのタスク向けに『望ましく安全な挙動』をRL学習" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-20/topic_3.png" alt="OpenAI、長時間・高ステークスのタスク向けに『望ましく安全な挙動』をRL学習" />
+      </div>
+      <p class="lede">
+        OpenAI は、AI がより長く高ステークスなタスクを担う流れを踏まえ、現実的な会話データを用いた強化学習でモデルに『有益で安全な挙動』を定着させる手法を発表した。少量の学習データでも、訓練シナリオを超えた広範な改善（汎化）が得られたとしている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">realistic conversations を使った RL で beneficial/safe behavior を強化</li>
+        <li data-i="02">少量データで訓練外シナリオにも効果が波及（broad gains）</li>
+        <li data-i="03">長時間・高ステークスな自律タスクを見据えた安全設計</li>
+      </ul>
+      <div class="pull">
+        エージェントが自律的に長い作業を実行する時代に、『暴走させない／安全側に倒す』ための学習手法の最前線。AIに業務を任せる側にとって信頼性の土台になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,400</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAI/status/2067722688165232654">@OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>新モデル・研究</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAI/status/2067722688165232654">x.com/OpenAI/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · OPENAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        新モデル・研究 <span class="sep">/</span> @OPENAI 公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI『LifeSciBench』+ GPT-Rosalind — GPT-5.4 が創薬研究を駆動</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-20/topic_4.png" data-alt="OpenAI『LifeSciBench』+ GPT-Rosalind — GPT-5.4 が創薬研究を駆動" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-20/topic_4.png" alt="OpenAI『LifeSciBench』+ GPT-Rosalind — GPT-5.4 が創薬研究を駆動" />
+      </div>
+      <p class="lede">
+        OpenAI が、実世界のライフサイエンス研究をどれだけ支援できるかを測る新ベンチマーク『LifeSciBench』を公開した。専用モデル GPT-Rosalind は7つのワークフロー全てで GPT-5.5 を上回った。別途、GPT-5.4 が文献レビューから検証済み実験までの医薬化学プロジェクトを約2.5ヶ月で推進した事例も示された。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">LifeSciBench は知識クイズでなく『実タスクの遂行』を評価する設計</li>
+        <li data-i="02">GPT-Rosalind が全7ワークフローで GPT-5.5 を上回る</li>
+        <li data-i="03">GPT-5.4 が文献レビュー→提案ランク付け→実験設計→検証まで医薬化学を駆動</li>
+        <li data-i="04">プロセスは約2.5ヶ月 + 人間化学者の執筆に半月</li>
+      </ul>
+      <div class="pull">
+        LLM が『知識を答える』段階から『実際の研究を実行する』段階へ移りつつあることを示す。科学AIの実用フェーズ突入の象徴的な発表。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">3,057</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAI/status/2067346916929937827">@OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-18</dd>
+        <dt>CATEGORY</dt>
+        <dd>新モデル・研究</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAI/status/2067346916929937827">x.com/OpenAI/…</a></dd>
+        <dd><a href="https://x.com/OpenAI/status/2067293745075442171">x.com/OpenAI/status/2067293745075442171</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · ANTHROPICAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        安全・研究 <span class="sep">/</span> @ANTHROPICAI 公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic Frontier Red Team『Project Fetch』Phase 2 — 物理世界での能力評価</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-20/topic_5.png" data-alt="Anthropic Frontier Red Team『Project Fetch』Phase 2 — 物理世界での能力評価" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-20/topic_5.png" alt="Anthropic Frontier Red Team『Project Fetch』Phase 2 — 物理世界での能力評価" />
+      </div>
+      <p class="lede">
+        Anthropic の Frontier Red Team が Project Fetch の Phase 2 を公開した。Claude が物理世界のタスク（ロボット犬の操作実験を含む）でどこまで能力を発揮しうるかを、赤チーム（攻撃者視点）でストレステストする安全研究の続報。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Frontier Red Team による危険能力（dangerous capability）評価の続報</li>
+        <li data-i="02">robodog を用いた実地実験のデモ映像を公開</li>
+        <li data-i="03">フロンティアモデルの物理世界への波及をリスク側から測定</li>
+      </ul>
+      <div class="pull">
+        高能力モデルが物理・実世界へ影響を及ぼす可能性を、能力デモではなく安全評価の枠組みで先回りして検証する取り組み。AIガバナンスの実例として重要。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,989</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/AnthropicAI/status/2067651699486200091">@AnthropicAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>安全・研究</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/AnthropicAI/status/2067651699486200091">x.com/AnthropicAI/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · CURSORAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ツール更新 <span class="sep">/</span> @CURSOR_AI 公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cursor、background agent に GitHub トリガー + computer use を追加</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-20/topic_6.png" data-alt="Cursor、background agent に GitHub トリガー + computer use を追加" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-20/topic_6.png" alt="Cursor、background agent に GitHub トリガー + computer use を追加" />
+      </div>
+      <p class="lede">
+        Cursor が background agent 向けに、GitHub の issue / review / workflow run をトリガーにする連携と、computer use（ブラウザ操作などPC操作）を追加した。リポジトリ上のイベントに反応してエージェントが自動で動くイベント駆動の運用が組めるようになる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">GitHub triggers: issues / reviews / workflow runs に反応</li>
+        <li data-i="02">エージェントの computer use 対応（ブラウザ等の操作）</li>
+        <li data-i="03">イベント駆動で自走するエージェント運用が可能に</li>
+      </ul>
+      <div class="pull">
+        CI失敗・レビュー依頼・Issue 起票といったイベントに反応して自動でエージェントが動く構成は、開発ワークフローの自動化を一段進める。VBC受講者のチーム開発演習にも応用できる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">107</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2067683818488930393">@cursor_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>ツール更新</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2067683818488930393">x.com/cursor_ai/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · EMOLLICKETHAN MOLL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        業界知見 <span class="sep">/</span> @EMOLLICK（ETHAN MOLLICK / 研究紹介） <span class="sep">/</span> NEWS
+      </div>
+      <h2>大規模研究（中国）: AIは『思考を肩代わり』させると学習を阻害する</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-20/topic_7.png" data-alt="大規模研究（中国）: AIは『思考を肩代わり』させると学習を阻害する" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-20/topic_7.png" alt="大規模研究（中国）: AIは『思考を肩代わり』させると学習を阻害する" />
+      </div>
+      <p class="lede">
+        Ethan Mollick が、中国での大規模研究を引いて、AIが学習者の思考を『下支え（support）』するときは有益だが、思考を『肩代わり（undermine）』するときは学習を損なうという証拠を紹介した。学生はつい宿題をAIに丸投げしがちで、たとえ意図せずとも学びが削られる、という指摘も添えている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">AIが thinking を support する使い方 → 学習にプラス</li>
+        <li data-i="02">AIが thinking を undermine（肩代わり）する使い方 → 学習にマイナス</li>
+        <li data-i="03">学生の初期衝動は『丸投げ』に傾きやすい</li>
+        <li data-i="04">大規模スタディに基づく実証的知見</li>
+      </ul>
+      <div class="pull">
+        Vibe Coding 教育の核心に直結する。『AIに考えさせる』のではなく『AIで自分の思考を加速する』使い方を設計することが、受講者が本当に力をつける条件だと示すデータ。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">476</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/emollick/status/2067988324984217626">@emollick</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>業界知見</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/emollick/status/2067988324984217626">x.com/emollick/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/claudeai/status/2067671912038240487">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-06-19/">
+      ← 前日 · 2026-06-19
+      <span class="big">npm v12 が install スクリプトをデフォルト無効化 — サプライチェーン攻防が前進</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-06-20/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260620.0726</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

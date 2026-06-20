@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-06-21 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-06-21 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0621</span>
+    <span class="sep">/</span>
+    <span>2026-06-21</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260621.0742</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-06-21/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:42 · SAT</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SATURDAY · JUNE 21, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>06<span class="dot">.</span>21</h1>
+    <div class="strap">
+      <span>AlphaFoldのジョン · Anthropic · Claude · vibe-codingツールが多極化</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 5 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        業界・人材 <span class="sep">/</span> @JOHNJUMPERSCI 本人 <span class="sep">/</span> NEWS
+      </div>
+      <h2>AlphaFoldのジョン・ジャンパーがGoogle DeepMindを離れAnthropicへ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-21/topic_1.png" data-alt="AlphaFoldのジョン・ジャンパーがGoogle DeepMindを離れAnthropicへ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-21/topic_1.png" alt="AlphaFoldのジョン・ジャンパーがGoogle DeepMindを離れAnthropicへ" />
+      </div>
+      <p class="lede">
+        タンパク質構造予測AI『AlphaFold』を率い、その業績で2024年のノーベル化学賞を受賞したJohn Jumperが、約9年在籍したGoogle DeepMindを離れ、充電期間を経てAnthropicに参画すると本人がXで発表した。博士課程修了からわずか半年でAlphaFoldチームを任せてくれたDemis Hassabisと古巣への感謝を述べつつの移籍で、トップ科学者の大型移動として大きな反響を呼んでいる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">John JumperはAlphaFoldチームのリーダーで2024年ノーベル化学賞受賞者</li>
+        <li data-i="02">約9年在籍したGoogle DeepMindを離れ、リチャージ期間の後にAnthropicへ</li>
+        <li data-i="03">「博士課程修了から半年でチームを率いさせてくれたDemis Hassabisに感謝」と古巣に敬意</li>
+        <li data-i="04">Noam Shazeer（Google→OpenAI）に続くフロンティアラボ間のトップ人材流動の象徴</li>
+        <li data-i="05">本人ポストは❤1.3万超・閲覧530万超</li>
+      </ul>
+      <div class="pull">
+        AI for Scienceの象徴的人物がAnthropicを選んだことは、同社の研究の方向性と採用力を測る材料になる。自分たちが使うモデルの背後にいるキーパーソンの動きを把握する文脈として重要。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">13,402</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/JohnJumperSci/status/2068001285173834106">@JohnJumperSci</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-20</dd>
+        <dt>CATEGORY</dt>
+        <dd>業界・人材</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/JohnJumperSci/status/2068001285173834106">x.com/JohnJumperSci/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · CLAUDEDEVS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        CLAUDE CODE 運用 <span class="sep">/</span> @CLAUDEDEVS 公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic、全プランで5時間・週次の利用上限をリセット（週次上限バグ対応）</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-21/topic_2.png" data-alt="Anthropic、全プランで5時間・週次の利用上限をリセット（週次上限バグ対応）" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-21/topic_2.png" alt="Anthropic、全プランで5時間・週次の利用上限をリセット（週次上限バグ対応）" />
+      </div>
+      <p class="lede">
+        6月19日にClaude CodeのMax/Proユーザー約3%で『誤った週次利用上限』が表示され、一部で実際に制限がかかるバグが発生した。Anthropicはその対応として、6月20日に全プランの5時間ウィンドウと週次の利用上限を全ユーザー一律でリセットした。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">6/19: 約3%のMax/Proユーザーに誤った週次上限が表示され、一部で実際に制限がかかった</li>
+        <li data-i="02">6/20: 全プラン対象に5-hour／weeklyの使用枠を一律リセット</li>
+        <li data-i="03">原因はバグと明言、「週末を楽しんで」と告知</li>
+        <li data-i="04">上限到達でブロックされていたユーザーは枠が回復している</li>
+      </ul>
+      <div class="pull">
+        Claude Codeを業務で常用するVBC受講者やチームに直接影響する。利用枠が回復しているため、上限で止まっていた作業を再開できる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">12,798</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2068122937308426676">@ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-20</dd>
+        <dt>CATEGORY</dt>
+        <dd>Claude Code 運用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2068122937308426676">x.com/ClaudeDevs/…</a></dd>
+        <dd><a href="https://x.com/ClaudeDevs/status/2067802163498352929">x.com/ClaudeDevs/status/2067802163498352…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · DATACURVE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        モデル性能 <span class="sep">/</span> @DATACURVE（ベンチ運営）ほか <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Fable 5、コーディングベンチDeepSWEで首位（70% pass@1）</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-21/topic_3.png" data-alt="Claude Fable 5、コーディングベンチDeepSWEで首位（70% pass@1）" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-21/topic_3.png" alt="Claude Fable 5、コーディングベンチDeepSWEで首位（70% pass@1）" />
+      </div>
+      <p class="lede">
+        6/9公開のMythosクラスモデルClaude Fable 5が、実コーディングベンチDeepSWEで#1にデビューした。70% pass@1で従来ベストを約3%上回りSOTAを更新。default high effortではGPT-5.5とコストパフォーマンスが拮抗し、Kimi K2.7もリーダーボードに参入したとされる。一方で『GPT-5.5比で実質1%程度では』という懐疑的な声もある。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">DeepSWEで70% pass@1、SOTAを約3%更新して首位デビュー</li>
+        <li data-i="02">default high effortでGPT-5.5とコストパフォーマンスは同水準</li>
+        <li data-i="03">Kimi K2.7もリーダーボードにランクイン</li>
+        <li data-i="04">スコア差の解釈には賛否（『実質1%程度』との指摘も）</li>
+      </ul>
+      <div class="pull">
+        6/9公開のFable 5の実コーディング性能を独立ベンチで確認できる最新データ。モデル選定や、どのタスクを最上位モデルに回すかの判断材料になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,589</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/datacurve/status/2067781320013668727">@datacurve</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>モデル性能</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/datacurve/status/2067781320013668727">x.com/datacurve/…</a></dd>
+        <dd><a href="https://x.com/bridgemindai/status/2067978619574792349">x.com/bridgemindai/status/20679786195747…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · TESTINGCATALOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> @TESTINGCATALOG ほか速報 <span class="sep">/</span> NEWS
+      </div>
+      <h2>vibe-codingツールが多極化 — Mistral「Code on Vibe」とXiaomi「MiMo Code」</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-21/topic_4.png" data-alt="vibe-codingツールが多極化 — Mistral「Code on Vibe」とXiaomi「MiMo Code」" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-21/topic_4.png" alt="vibe-codingツールが多極化 — Mistral「Code on Vibe」とXiaomi「MiMo Code」" />
+      </div>
+      <p class="lede">
+        Claude Code／Codexに続き、他社のvibe-codingツール参入が相次いでいる。Mistral AIはvibe-coding機能『Code on Vibe』をProユーザー向けにリリースし、デスクトップアプリの提供も確認された（速報）。中国のXiaomiは自社AIモデルをバンドルした無料のvibe-codingツール『MiMo Code』を公開したと報じられている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Mistral『Code on Vibe』をProユーザーに提供、デスクトップアプリも確認（速報）</li>
+        <li data-i="02">Xiaomi『MiMo Code』は自社モデルバンドルの無料ツール</li>
+        <li data-i="03">欧州勢・中国の大手ハードウェア企業もvibe-coding市場に本格参入</li>
+        <li data-i="04">コーディングエージェントのコモディティ化・多極化が加速</li>
+      </ul>
+      <div class="pull">
+        vibe-codingの選択肢が一気に広がっている。VBC受講者にとってはClaude Code/Codex以外の代替・無料手段が増え、ツール比較の視点が重要になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">253</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/testingcatalog/status/2067963034006384987">@testingcatalog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/testingcatalog/status/2067963034006384987">x.com/testingcatalog/…</a></dd>
+        <dd><a href="https://x.com/beamnxw/status/2067974074131763712">x.com/beamnxw/status/2067974074131763712…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · 0XMOVEZ / 0XRICKER</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        エージェント設計 <span class="sep">/</span> @0XMOVEZ / @0XRICKER <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>『自己改善ループ』は作る側の標準に — Boris証言と自己検証ループの実装</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-21/topic_5.png" data-alt="『自己改善ループ』は作る側の標準に — Boris証言と自己検証ループの実装" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-21/topic_5.png" alt="『自己改善ループ』は作る側の標準に — Boris証言と自己検証ループの実装" />
+      </div>
+      <p class="lede">
+        Claude Codeの生みの親Boris Chernyが、ポッドキャストで『Anthropicではエンジニアのほぼ100%が自己改善ループ付きの100体以上のエージェントを動かしている』と語った。鍵はClaude＋loops＋routines＋dynamic workflows。同じ思想を具体化した別記事では、スウォーム（大量並列）をループの1ステージに据え、Opus 4.8が各出力を出典と照合して却下→再実行し、却下がゼロになるまで止めない『自己検証ループ』をKimi K2.6スウォームで実装する例が示されている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Boris: Anthropicのエンジニアはほぼ全員が100+の自己改善ループを運用</li>
+        <li data-i="02">自己改善ループ＝実行のたびに学びを蓄積し次回を賢くする仕組み（モデルは凍結、環境が鋭くなる）</li>
+        <li data-i="03">鍵は Claude + loops + routines + dynamic workflows</li>
+        <li data-i="04">自己検証ループ実装例: 計画と検証をOpus 4.8、実行をKimi K2.6スウォームが担当</li>
+        <li data-i="05">検証なしスウォームの品質＝最悪のエージェントの品質。出典照合で却下→再実行して幻覚を潰す</li>
+      </ul>
+      <div class="pull">
+        ループは一部の先進ユーザーの話ではなく、AIを作る側の標準的な働き方になりつつある。VBC受講者が複数エージェントを回す際、『writerとcheckerを分け、客観gateで却下し、ゼロになるまで回す』設計はそのまま転用できる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,722</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/0xMovez/status/2067642452991717790">@0xMovez</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-18</dd>
+        <dt>CATEGORY</dt>
+        <dd>エージェント設計</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/0xMovez/status/2067642452991717790">x.com/0xMovez/…</a></dd>
+        <dd><a href="https://x.com/0xRicker/status/2067584599509651652">x.com/0xRicker/status/206758459950965165…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · HORIZONTRADEX</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        知見・ノウハウ <span class="sep">/</span> @HORIZON_TRADE_X <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>ループ工学の応用と落とし穴 — out-of-sampleゲートが過学習を防ぐ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-21/topic_6.png" data-alt="ループ工学の応用と落とし穴 — out-of-sampleゲートが過学習を防ぐ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-21/topic_6.png" alt="ループ工学の応用と落とし穴 — out-of-sampleゲートが過学習を防ぐ" />
+      </div>
+      <p class="lede">
+        ループ工学をクオンツ（定量取引）の因子探索に応用したフレームワーク解説。『生成→検証→スコアリング→失敗をフィードバック→未見データで生き残るまで反復』という形を、スコア関数（IC／ICIR）や半減期チェックまで含めて示す。核心は、同じデータで最適化するループは『綺麗なノイズ』を速く作るだけで、見たことのないデータでも指標が保つかを試すout-of-sampleゲートだけが研究エンジンに変える、という点。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">one-shotプロンプトは1推測で終わり何も蓄積しない。価値は反復にある</li>
+        <li data-i="02">ループを閉じる指標: 情報係数ICと、その一貫性ICIR = mean(IC)/std(IC)</li>
+        <li data-i="03">因子の半減期 t½ = -ln(2)/ln(ρ) で持続性をチェック（短命な信号は弾く）</li>
+        <li data-i="04">edgeと過学習を分けるのはout-of-sampleゲート。試行回数が増えるほど合格ラインを上げる</li>
+        <li data-i="05">良いモデルは生成を速くするだけ。alphaを生むのはloop・scoring・gate</li>
+      </ul>
+      <div class="pull">
+        ドメインは金融寄りだが『客観的なスコア(gate)を先に定義し、本番相当の未見データで必ず検証する』という規律は、コード生成・コンテンツ生成・調査いずれにも転用できる分野非依存の教訓。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">656</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/horizon_trade_x/status/2067638109416657259">@horizon_trade_x</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-18</dd>
+        <dt>CATEGORY</dt>
+        <dd>知見・ノウハウ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/horizon_trade_x/status/2067638109416657259">x.com/horizon_trade_x/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · VOXYZAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        デザイン <span class="sep">/</span> @VOXYZ_AI <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Claude Code/Codexに『デザインシステム』を与える8つのプロンプト</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-21/topic_7.png" data-alt="Claude Code/Codexに『デザインシステム』を与える8つのプロンプト" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-21/topic_7.png" alt="Claude Code/Codexに『デザインシステム』を与える8つのプロンプト" />
+      </div>
+      <p class="lede">
+        『色が変・フォントがダサい・余白が変』とAIに毎回言うのをやめろ。そもそもデザインシステムを与えていないからdefaultsを出力するのだ、という指摘から始まるコピペ可能な8プロンプト集。中でもGoogle Stitch由来のDESIGN.md（色・タイプスケール・余白・角丸・影・コンポーネント規則をplain textで明記）をUIビルド前に毎回読ませることで、スタイルのドリフトを止める発想が中心。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">出力がイマイチなのはモデルでなくデザインシステム不在が原因</li>
+        <li data-i="02">DESIGN.mdをUIビルド前に毎回読ませてスタイルのブレを止める（AGENTS.mdは作り方、DESIGN.mdは見た目）</li>
+        <li data-i="03">8プロンプト: デザインシステム化／アクセシビリティ／DESIGN.md／UX監査／Linear・Stripe級の作り直し／状態の作り込み／LPの構成／フォーム改善</li>
+        <li data-i="04">そのままコピペして自分のプロジェクトに導入できる</li>
+      </ul>
+      <div class="pull">
+        VBC受講者の『Vibe Codingで見た目が安定しない』という最頻出の悩みに直接効く。DESIGN.mdを先に置く発想は、コンテキストを先に与えるハーネス論のデザイン版で即効性が高い。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,957</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/Voxyz_ai/status/2068011987200786733">@Voxyz_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>デザイン</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/Voxyz_ai/status/2068011987200786733">x.com/Voxyz_ai/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/JohnJumperSci/status/2068001285173834106">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-06-20/">
+      ← 前日 · 2026-06-20
+      <span class="big">Claude Code に「Artifacts」登場 — セッションから対話的ページを自動生成</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-06-21/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260621.0742</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

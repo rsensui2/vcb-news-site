@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-06-22 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-06-22 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0622</span>
+    <span class="sep">/</span>
+    <span>2026-06-22</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260622.0737</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-06-22/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:37 · SUN</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SUNDAY · JUNE 22, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>06<span class="dot">.</span>22</h1>
+    <div class="strap">
+      <span>Xiaomi · shadcn-labs · Anthropic · 自己検証ループ</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 5 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発者ツール <span class="sep">/</span> @BEAMNXW / X（速報） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Xiaomi、無料の vibe-coding ツール「MiMo Code」を公開</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-22/topic_1.png" data-alt="Xiaomi、無料の vibe-coding ツール「MiMo Code」を公開" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-22/topic_1.png" alt="Xiaomi、無料の vibe-coding ツール「MiMo Code」を公開" />
+      </div>
+      <p class="lede">
+        Xiaomi が自社の無料 vibe-coding ツール「MiMo Code」を公開したとの速報。自社開発の AI モデルをバンドルしている点が注目され、Claude Code / Codex / Mistral に続く新規参入として扱われている。中国の大手ハードウェア企業がコーディングエージェントを無料で投入する流れを象徴する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Xiaomi 製の無料 vibe-coding ツール「MiMo Code」</li>
+        <li data-i="02">自社 AI モデル（MiMo）をバンドル</li>
+        <li data-i="03">Claude Code / Codex / Mistral に続くコーディングエージェント市場への新規参入</li>
+        <li data-i="04">中国ハード大手による無料投入＝ツールのコモディティ化の一例</li>
+      </ul>
+      <div class="pull">
+        コーディングエージェントの選択肢が欧米勢だけでなく中国ハード大手まで多極化し、無料・自社モデル同梱という competitive な条件が増えている。ツール選定の地図が変わる兆し。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">244</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/beamnxw/status/2067974074131763712">@beamnxw</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発者ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/beamnxw/status/2067974074131763712">x.com/beamnxw/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · ALAYMANGUYSHADCN-L</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発者ツール <span class="sep">/</span> @ALAYMANGUY（SHADCN-LABS）/ @SHADCN <span class="sep">/</span> NEWS
+      </div>
+      <h2>shadcn-labs、AIエージェント版「agentcn」を公開 — ワンコマンドでエージェント雛形</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-22/topic_2.png" data-alt="shadcn-labs、AIエージェント版「agentcn」を公開 — ワンコマンドでエージェント雛形" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-22/topic_2.png" alt="shadcn-labs、AIエージェント版「agentcn」を公開 — ワンコマンドでエージェント雛形" />
+      </div>
+      <p class="lede">
+        shadcn/ui で知られる shadcn-labs が、AIエージェントをワンコマンド・ゼロコンフィグで導入できる「agentcn」を公開した。Vercel の Eve と Flue を土台に、production-ready なエージェント・レシピを shadcn/ui と同じ「コピーして自分で所有する」流儀で配布する。shadcn 本人は「エージェントとは instructions / tools / skills / subagents / channels / schedules / config の合成物」と定義し、それを部品として組み立て可能にする思想を示している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">agentcn = shadcn/ui のエージェント版。ワンコマンドで雛形を取得し自分のコードに「所有」する方式</li>
+        <li data-i="02">Vercel の Eve と Flue 上に構築、shadcn/ui 互換、ゼロコンフィグ</li>
+        <li data-i="03">shadcn の定義: エージェント＝指示・ツール・スキル・サブエージェント・チャンネル・スケジュール・設定の合成物</li>
+        <li data-i="04">リポジトリ公開: github.com/shadcn-labs/agentcn</li>
+      </ul>
+      <div class="pull">
+        エージェントを「スクラッチで書く」段階から「実証済みレシピを取り込んで所有・改変する」段階へ移す試み。shadcn/ui が UI で起こした標準化を、エージェント構築でも狙う動き。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">660</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/alaymanguy/status/2068382433599439282">@alaymanguy</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-20</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発者ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/alaymanguy/status/2068382433599439282">x.com/alaymanguy/…</a></dd>
+        <dd><a href="https://github.com/shadcn-labs/agentcn">github.com/shadcn-labs/agentcn</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · ANTHROPIC SAIRAHUL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        学習・教育 <span class="sep">/</span> ANTHROPIC 公式動画（@SAIRAHUL1 ほかが紹介） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic 公式、Claude プロンプト術の24分ワークショップを無料公開</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-22/topic_3.png" data-alt="Anthropic 公式、Claude プロンプト術の24分ワークショップを無料公開" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-22/topic_3.png" alt="Anthropic 公式、Claude プロンプト術の24分ワークショップを無料公開" />
+      </div>
+      <p class="lede">
+        Anthropic が「Claude のプロンプトを実際どう書くか」を解説する約24分のワークショップ動画を無料公開した。Claude を作っているプロンプト担当者本人が教える内容で、抽象論ではなく実演ベースでプロンプト設計を扱う。複数の著名アカウントが一次情報として紹介し拡散している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">約24分のプロンプト・ワークショップ、Anthropic 公式・無料</li>
+        <li data-i="02">「Claude を作った人たち」が教える一次情報寄りの教材</li>
+        <li data-i="03">実際のプロンプトの組み立て方・直し方にフォーカス（実演ベース）</li>
+      </ul>
+      <div class="pull">
+        VBC 受講者にそのまま渡せる公式の学習素材。我流プロンプトを公式の型で上書きでき、メモリファイル（CLAUDE.md に何を書くか）と合わせれば「文脈ファイル＋プロンプト」の両輪が揃う。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">112</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/sairahul1/status/2068397035955630384">@sairahul1</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-20</dd>
+        <dt>CATEGORY</dt>
+        <dd>学習・教育</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/sairahul1/status/2068397035955630384">x.com/sairahul1/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · 0XRICKER / X ARTIC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ループ・検証 <span class="sep">/</span> @0XRICKER / X ARTICLE <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>自己検証ループ — スウォームを「ループの1ステージ」にして幻覚を潰す</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-22/topic_4.png" data-alt="自己検証ループ — スウォームを「ループの1ステージ」にして幻覚を潰す" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-22/topic_4.png" alt="自己検証ループ — スウォームを「ループの1ステージ」にして幻覚を潰す" />
+      </div>
+      <p class="lede">
+        「エージェント・スウォーム（大量並列）は自信満々のゴミを返す」という前提に立ち、スウォームをゴールではなく検証ループの1ステージにする設計を解説した X Article。Opus 4.8 が計画と検証、Kimi K2.6 スウォームが実行を担い、Opus が各出力を出典と突き合わせ、合わない数値・解決しない引用を却下してキューに戻す。却下がゼロになるまでループが止まらない。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">検証なしスウォームの品質＝最悪のエージェントの品質。97体が正しくても3体が幻覚すれば完成物は完璧版と見分けがつかない</li>
+        <li data-i="02">4ステージのサイクル: ①Opus が計画 ②スウォームが実行 ③Opus が出典照合で検証 ④却下分を理由付きで再実行</li>
+        <li data-i="03">実行ログ: 1回目で100社中12社却下 → 2回目3社 → 3回目ゼロでループ自律停止</li>
+        <li data-i="04">厳格な検証は Binance / Yahoo Finance / World Bank / IMF / ライブ株式の5フィードと実数照合で成立</li>
+        <li data-i="05">結論「スウォーム＝速さ、ループ＝信頼できる速さ」。差分は verify ステップ</li>
+      </ul>
+      <div class="pull">
+        並列エージェントを実務に入れる核心＝「量を増やすと誤りも同率で増える、価値を生むのは独立した検証ステージ」を具体例で示す。writer と checker を分け、却下ゼロまで回すパターンはそのまま流用できる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">951</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/0xRicker/status/2067584599509651652">@0xRicker</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-18</dd>
+        <dt>CATEGORY</dt>
+        <dd>ループ・検証</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/0xRicker/status/2067584599509651652">x.com/0xRicker/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · SAIRAHUL1 / X ARTI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        エージェント設計 <span class="sep">/</span> @SAIRAHUL1 / X ARTICLE <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>メモリファイルで「忘れない」AIエージェントを作る — 5つのファイル構成</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-22/topic_5.png" data-alt="メモリファイルで「忘れない」AIエージェントを作る — 5つのファイル構成" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-22/topic_5.png" alt="メモリファイルで「忘れない」AIエージェントを作る — 5つのファイル構成" />
+      </div>
+      <p class="lede">
+        AIエージェントが失敗するのはモデルが悪いからではなく「毎セッション記憶喪失で目覚める」から、という問題提起。CLAUDE.md・AGENTS.md・CLAUDE.local.md・MEMORY.md・README.md の5ファイルでエージェントに永続的な文脈を与える設計を解説する。結論は『Model + Memory + Retrieval + Feedback = 有用なエージェント』で、記憶こそ複利で効く変数だと位置づける。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">CLAUDE.md=Claude 専用 briefing（文脈/コード規約/コマンド/アーキの4節、目標300行未満）</li>
+        <li data-i="02">AGENTS.md=ベンダー横断標準（Cursor / Copilot / Gemini CLI / Windsurf / Aider / Zed が読む）</li>
+        <li data-i="03">CLAUDE.local.md=個人の好み（git 非コミット）、MEMORY.md=AI が自分で書く auto-memory</li>
+        <li data-i="04">@imports で巨大1枚岩を回避（最大5階層）、`/init` で生成→大半を削るワークフロー</li>
+        <li data-i="05">結論の式: Model + Memory + Retrieval + Feedback = 有用なエージェント。記憶は複利、モデルの賢さは複利でない</li>
+      </ul>
+      <div class="pull">
+        Claude Code を「使い捨てツール」から「昨日を覚えるチームメイト」に変える最初の一歩。CLAUDE.md / AGENTS.md / MEMORY.md の書き分けは初心者がつまずく典型ポイントで、そのまま実務テンプレになる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">253</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/sairahul1/status/2067903018931257483">@sairahul1</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>エージェント設計</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/sairahul1/status/2067903018931257483">x.com/sairahul1/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · OMARSAR0DAIRAI/ X </span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ループ・検証 <span class="sep">/</span> @OMARSAR0（DAIR.AI）/ X ARTICLE <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>プロンプトから「ループ工学」へ — 本番で動くエージェントループの実戦ガイド</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-22/topic_6.png" data-alt="プロンプトから「ループ工学」へ — 本番で動くエージェントループの実戦ガイド" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-22/topic_6.png" alt="プロンプトから「ループ工学」へ — 本番で動くエージェントループの実戦ガイド" />
+      </div>
+      <p class="lede">
+        「もうプロンプトを打つな、エージェントにプロンプトを打つループを設計しろ」(Steinberger / Cherny) という主張を本番設計に落とした実戦ガイド。ループを構成する6部品と、Claude Code の /goal を契約として書く方法、そして『コストの所在が単発呼び出しからループの周回数へ移った』ことを具体例で示す。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">ループは5つの意味を持つ: ReAct→AutoGPT→ralph loop→/loop・/goal→orchestration</li>
+        <li data-i="02">ループの6部品: trigger / isolation(git worktree) / 書き留めた context / tools への reach / 独立した検証者 / disk上の state</li>
+        <li data-i="03">具体例『PR babysitter』: 15分毎・1試行5分10ファイル・CI緑か予算切れで停止</li>
+        <li data-i="04">/goal は終了状態・証拠・制約・予算の4つを契約のように明示する</li>
+        <li data-i="05">コストは iterations が予算項目。弱い検証者が最も高コストなバグ、早く失敗するのがコスト管理</li>
+      </ul>
+      <div class="pull">
+        「プロンプト職人」を卒業した受講者が次に登る階段の地図。/loop と /goal の違い、6部品、PR babysitter の具体パラメータがそのまま課題テンプレになる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">911</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/omarsar0/status/2068008743153832264">@omarsar0</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>ループ・検証</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/omarsar0/status/2068008743153832264">x.com/omarsar0/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · VOXYZAI / X</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        デザイン <span class="sep">/</span> @VOXYZ_AI / X <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>DESIGN.md をエージェントに先に与えて UI のスタイル崩れを防ぐ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-22/topic_7.png" data-alt="DESIGN.md をエージェントに先に与えて UI のスタイル崩れを防ぐ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-22/topic_7.png" alt="DESIGN.md をエージェントに先に与えて UI のスタイル崩れを防ぐ" />
+      </div>
+      <p class="lede">
+        AI に UI を作らせると毎回スタイルが微妙にズレる問題への処方箋として、Google Stitch 由来の DESIGN.md を紹介する。color / type scale / spacing / radius / shadow / コンポーネント規則を plain text 化したデザインシステムを、UI ビルド前に毎回読ませてドリフトを止める手法。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">DESIGN.md = 色・タイプスケール・余白・角丸・影・コンポーネント規則を平文化したデザインシステム</li>
+        <li data-i="02">役割分担: AGENTS.md=どう作るか(how to build)、DESIGN.md=どう見えるべきか(how it should look)</li>
+        <li data-i="03">Stripe / Linear / Airbnb / Vercel など実在73個を集めたリポジトリを雛形に流用できる</li>
+        <li data-i="04">ルートに1枚置いて「全UIを DESIGN.md に従わせろ」と指示するだけ</li>
+      </ul>
+      <div class="pull">
+        Claude Code / v0 / Cursor で UI を作ると画面ごとに余白も角丸もバラバラになりがちな典型課題への即効薬。メモリファイル論と同じ「エージェントに読ませる文脈ファイル」の引き出しが増える。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">163</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/Voxyz_ai/status/2068012127978205351">@Voxyz_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>デザイン</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/Voxyz_ai/status/2068012127978205351">x.com/Voxyz_ai/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/beamnxw/status/2067974074131763712">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-06-21/">
+      ← 前日 · 2026-06-21
+      <span class="big">AlphaFoldのジョン・ジャンパーがGoogle DeepMindを離れAnthropicへ</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-06-22/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260622.0737</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

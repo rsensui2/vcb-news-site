@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-06-23 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-06-23 の Vibe Coder Bootcamp モーニングディスパッチ — 5本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0623</span>
+    <span class="sep">/</span>
+    <span>2026-06-23</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>05 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260623.0740</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-06-23/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:40 · MON</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · MONDAY · JUNE 23, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>06<span class="dot">.</span>23</h1>
+    <div class="strap">
+      <span>OpenAI · YC · DeepSeek · OSS化された</span>
+      <span><span class="count">05</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ <span class="sep">/</span> SILICONANGLE / OPENAI（@SAMA） <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI、GPT-5.5-Cyber 正式版を公開 — OSS を一斉パッチする「Patch the Planet」始動</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-23/topic_1.png" data-alt="OpenAI、GPT-5.5-Cyber 正式版を公開 — OSS を一斉パッチする「Patch the Planet」始動" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-23/topic_1.png" alt="OpenAI、GPT-5.5-Cyber 正式版を公開 — OSS を一斉パッチする「Patch the Planet」始動" />
+      </div>
+      <p class="lede">
+        OpenAI が防御特化モデル「GPT-5.5-Cyber」の正式版を公開した。脆弱性を再現できるか測る CyberGym で 85.6%（標準 GPT-5.5 は 81.8%）を記録し、アクセスは審査済みの防御者向け Trusted Access for Cyber に限定される。同時に Daybreak を拡張し、専門研究者に Codex Security と OpenAI モデルを与えて主要 OSS の保守者と直接修正に当たる「Patch the Planet」を Trail of Bits・HackerOne と共同で立ち上げた。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">GPT-5.5-Cyber は CyberGym で 85.6%（標準 GPT-5.5: 81.8%）。利用は Trusted Access for Cyber 審査済み防御者に限定</li>
+        <li data-i="02">Patch the Planet＝OSS 横断の修正プログラム。cURL / Go / Python / Sigstore / pyca/cryptography など 30+ プロジェクトが参加表明</li>
+        <li data-i="03">全ての検出は人間のセキュリティエンジニアがレビューしてから保守者へ。初回5日スプリントで数百件検出・数十パッチをマージ</li>
+        <li data-i="04">Codex Security plugin は3月以降、3万超のコードベース・3000万コミット超をスキャン、7万件超を修正済みとマーク</li>
+        <li data-i="05">Daybreak Cyber Partner Program に Accenture / Cisco / CrowdStrike / IBM / Okta / Palo Alto Networks / Wiz が参加</li>
+      </ul>
+      <div class="pull">
+        「AI が攻撃を作る」議論が続く中で、AI を OSS の防御と自動パッチに大規模投入する逆向きの動き。VBC 受講者が日々依存する OSS の安全性に直結し、近年のサプライチェーン攻防（npm 等）の防御サイド最新形と言える。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://siliconangle.com/2026/06/22/openai-expands-daybreak-patch-planet-full-gpt-5">SiliconANGLE / OpenAI（@sama）</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://siliconangle.com/2026/06/22/openai-expands-daybreak-patch-planet-full-gpt-5">https://siliconangle.com/2026/06/22/openai-expands-daybreak-patch-planet-full-gpt-5</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · GARRY TANGARRYTAN/</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発者ツール <span class="sep">/</span> GARRY TAN（@GARRYTAN）/ GITHUB <span class="sep">/</span> NEWS
+      </div>
+      <h2>YC 社長 Garry Tan、自前の Claude Code 設定「gstack」を OSS 公開 — 23の専門役で1人を仮想チーム化</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-23/topic_2.png" data-alt="YC 社長 Garry Tan、自前の Claude Code 設定「gstack」を OSS 公開 — 23の専門役で1人を仮想チーム化" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-23/topic_2.png" alt="YC 社長 Garry Tan、自前の Claude Code 設定「gstack」を OSS 公開 — 23の専門役で1人を仮想チーム化" />
+      </div>
+      <p class="lede">
+        Y Combinator 社長の Garry Tan が、自分が実際に使っている Claude Code のスキルセット「gstack」をオープンソース公開した。CEO・EM・QA・Security・Release など 23 の「専門役」スラッシュコマンドで構成され、一人の開発を仮想エンジニアリングチームのように回せるのが特徴。GitHub では公開後すぐにスター 11 万超を集め、ファウンダーが AI 開発フローをどう設計しているかの教材としても注目された。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">23 の slash command 専門役（CEO=プロダクト方向 / デザイナー=UI 細部 / EM=アーキ / QA=実ブラウザでテスト / Release=ワンクリック ship / retro・docs・security audit まで）</li>
+        <li data-i="02">代表コマンド: /office-hours（作る前に問いを再構成）、/review（CI を通過するバグを捕まえる）、/qa（実ブラウザ QA）</li>
+        <li data-i="03">リポジトリ github.com/garrytan/gstack、GitHub スター 11 万超</li>
+        <li data-i="04">「インストールしなくても、ファウンダーの AI 開発フロー設計を読む教材として価値がある」と評される</li>
+        <li data-i="05">エージェントを skills/subagents/commands の部品で組み立てる『文脈ファイル＋専門役』思想の実例</li>
+      </ul>
+      <div class="pull">
+        『エージェントに与える文脈ファイル』論やループの6部品（skills/subagents）と同じ「部品で開発組織を組む」発想の具体テンプレ。VBC 受講者が「1人を仮想チーム化する」やり方をそのまま試せる即戦力教材になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/garrytan/gstack">Garry Tan（@garrytan）/ GitHub</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-21</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発者ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/garrytan/gstack">https://github.com/garrytan/gstack</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · X</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        業界動向 <span class="sep">/</span> X 速報（複数報道） <span class="sep">/</span> NEWS
+      </div>
+      <h2>DeepSeek、初の外部調達で約74億ドル — 評価額500億ドル超で中国最大級のAIスタートアップに</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-23/topic_3.png" data-alt="DeepSeek、初の外部調達で約74億ドル — 評価額500億ドル超で中国最大級のAIスタートアップに" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-23/topic_3.png" alt="DeepSeek、初の外部調達で約74億ドル — 評価額500億ドル超で中国最大級のAIスタートアップに" />
+      </div>
+      <p class="lede">
+        中国の AI スタートアップ DeepSeek が、初の外部資金調達で約 74 億ドルを確保したと複数のアカウントが報じた。これにより評価額は 500 億ドル超（一部報道では最大 590 億ドル）に達し、中国で最も価値の高い AI スタートアップ級に位置づけられる。GLM-5.2（Zhipu/Zai）と並ぶ「中国オープンモデル攻勢」を資金面から裏づける動きとして注目された。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">調達額 約 $7.4B、初の外部ラウンド</li>
+        <li data-i="02">評価額 $50B超（報道により最大 $59B）</li>
+        <li data-i="03">中国で最も価値の高い AI スタートアップ級に</li>
+        <li data-i="04">DeepSeek / Zhipu / Moonshot ら中国オープンモデル勢の資金的厚みを示す</li>
+        <li data-i="05">⚠️ 現時点では「reportedly」段階の報道。出資者・正式条件は要追確認</li>
+      </ul>
+      <div class="pull">
+        オープンウェイトの中国勢が資金面でも厚みを増す流れ。ローカル/低コストモデルでループを回す経済（トークンコスト論）に直結する地政学・資金トレンドで、モデル選定の地図に影響する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/search?q=DeepSeek%20%247.4%20billion%20funding">X 速報（複数報道）</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>業界動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/search?q=DeepSeek%20%247.4%20billion%20funding">https://x.com/search?q=DeepSeek%20%247.4%20billion%20funding</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · VAIBHAVSISINTY / X</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        オープンソースLLM <span class="sep">/</span> @VAIBHAVSISINTY / X（スレッド） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>OSS化された GLM 5.2 で作られた「ヤバい」7作例まとめ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-23/topic_4.png" data-alt="OSS化された GLM 5.2 で作られた「ヤバい」7作例まとめ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-23/topic_4.png" alt="OSS化された GLM 5.2 で作られた「ヤバい」7作例まとめ" />
+      </div>
+      <p class="lede">
+        中国発の LLM「GLM 5.2」がオープンソース公開されてから5日で、コミュニティが作ったデモを7件まとめた連投スレッド。Mac Studio 上での2bit量子化ローカル実行、ランディングページや UI/UX の生成、3D 腕時計など、公開直後のオープンウェイトモデルが実際に何を作れるかを実例で示している。各作例は引用ツイートとして埋め込まれており、ローカル運用とフロントエンド生成の両面で実用デモが出揃った点が話題になった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Mac Studio で GLM 5.2 を2bit量子化してローカル実行（ハイエンド GPU 不要、Apple Silicon のメモリ帯域を活用）</li>
+        <li data-i="02">GLM 5.2 単体でランディングページ全体・インタラクティブな UI/UX デザインを生成</li>
+        <li data-i="03">テキスト→3D（3D 腕時計）の作例も</li>
+        <li data-i="04">前世代 GLM 5.1 との比較投稿も含む</li>
+        <li data-i="05">⚠️ 各デモは作者の主張ベースで、ベンチではなく作例の寄せ集め</li>
+      </ul>
+      <div class="pull">
+        「Claude / GPT に課金しなくても、オープンウェイトで現実的なアウトプットが出せる」流れを具体イメージで示す。特にローカル量子化で動く点は、コストやデータを外に出せない案件での代替手段として価値がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">636</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/VaibhavSisinty/status/2068613808470606031">@VaibhavSisinty</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-21</dd>
+        <dt>CATEGORY</dt>
+        <dd>オープンソースLLM</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/VaibhavSisinty/status/2068613808470606031">x.com/VaibhavSisinty/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · SAKANAAILABS / X</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AIモデル <span class="sep">/</span> @SAKANAAILABS / X（スレッド） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Sakana AI、オーケストレーション特化LLM「Fugu」を発表</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-23/topic_5.png" data-alt="Sakana AI、オーケストレーション特化LLM「Fugu」を発表" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-23/topic_5.png" alt="Sakana AI、オーケストレーション特化LLM「Fugu」を発表" />
+      </div>
+      <p class="lede">
+        日本発の Sakana AI が、単一モデル API の裏で複数 LLM を再帰的に束ねるマルチエージェント・オーケストレーション・システム「Fugu」を発表した。Fugu 自体がエージェントプール内の各種 LLM（自分自身の再帰インスタンスを含む）を呼び分けるよう訓練された LLM で、最上位の Fugu Ultra は Fable / Mythos 同等性能をうたう。モデルを大きくする路線ではなく、複数モデルを動的に呼び分ける「オーケストレーションモデル」を次のフロンティアと位置づけている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Fugu 自体が LLM で、エージェントプール内の各種 LLM（自己の再帰インスタンス含む）を動的に呼び分ける</li>
+        <li data-i="02">Fugu Ultra は工学・科学・推論の主要ベンチで Fable / Mythos 同等を主張、「輸出規制リスクなしのフロンティア能力」を訴求</li>
+        <li data-i="03">500ユーザーのベータで、データサイエンス〜サイバーセキュリティ評価まで完全自動タスクで進捗を確認</li>
+        <li data-i="04">公開ユースケース: 自律ML研究（単一H100で14時間・100回超の実験を自走）、金融時系列予測、ブラインドフォールド・チェス、CADでの機械式アイリス設計</li>
+        <li data-i="05">⚠️ 性能主張はベンダー発表段階で第三者ベンチは未確認</li>
+      </ul>
+      <div class="pull">
+        「単体の巨大モデル vs オーケストレーション」という設計思想の対比を象徴。これからは1つの最強モデルを選ぶのではなく、役割ごとにモデルを呼び分けるアーキテクチャを設計する時代、という潮流の代表例になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">32,785</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/SakanaAILabs/status/2068861630327443966">@SakanaAILabs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>AIモデル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/SakanaAILabs/status/2068861630327443966">x.com/SakanaAILabs/…</a></dd>
+        <dd><a href="https://sakana.ai/fugu">sakana.ai/fugu</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://siliconangle.com/2026/06/22/openai-expands-daybreak-patch-planet-full-gpt-5">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-06-22/">
+      ← 前日 · 2026-06-22
+      <span class="big">Xiaomi、無料の vibe-coding ツール「MiMo Code」を公開</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-06-23/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260623.0740</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

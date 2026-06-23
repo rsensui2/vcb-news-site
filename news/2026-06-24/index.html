@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-06-24 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-06-24 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0624</span>
+    <span class="sep">/</span>
+    <span>2026-06-24</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260624.0729</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-06-24/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:29 · TUE</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · TUESDAY · JUNE 24, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>06<span class="dot">.</span>24</h1>
+    <div class="strap">
+      <span>JetBrains · Mastra · 中島聡「Vibe · Vibe</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 5 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> JETBRAINS 公式ブログ / @JETBRAINS <span class="sep">/</span> NEWS
+      </div>
+      <h2>JetBrains の AI コーディングエージェント「Junie」が正式版（GA）に — IDE のデバッガで自律デバッグ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-24/topic_1.png" data-alt="JetBrains の AI コーディングエージェント「Junie」が正式版（GA）に — IDE のデバッガで自律デバッグ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-24/topic_1.png" alt="JetBrains の AI コーディングエージェント「Junie」が正式版（GA）に — IDE のデバッガで自律デバッグ" />
+      </div>
+      <p class="lede">
+        JetBrains は AI コーディングエージェント Junie を 6/17 に正式版（GA）化した。IntelliJ・PyCharm・WebStorm 等の全 IDE と Junie CLI（ターミナル/CI/CD）で動き、IDE 連携を ACP(Agent Communication Protocol) で作り直した。コード生成前に仕様書を作る Plan モード、IDE の実デバッガを使った自律デバッグ、DataGrip 経由の実 DB 操作までを 1 セッションでこなす。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Plan モード: 生成前に PRD/技術設計/デリバリ段階/テスト戦略をタブ化した構造ドキュメントを `.junie/plans` に保存（コミット可能な&quot;生きた仕様書&quot;）</li>
+        <li data-i="02">自律デバッグ: println でなく IDE と同じデバッガでブレークポイント・変数 inspect・ステップ実行して修正をイテレート</li>
+        <li data-i="03">深い IDE 統合: セマンティックインデックス/ビルド設定/テストランナー/DB(DataGrip) を流用し、SQL の生成・修正・検証も同一セッションで</li>
+        <li data-i="04">SWE-Rebench で coding agent 首位（resolved 61.6% / pass@5 72.7%）</li>
+        <li data-i="05">LLM 非依存・BYOK はプロバイダ料金のみ（JetBrains 上乗せなし）。中国では当面非提供</li>
+      </ul>
+      <div class="pull">
+        Cursor/Claude Code 系の&quot;ターミナル/エディタ&quot;型に対し、IDE 全機能（デバッガ・DB・テストランナー）をエージェントに使わせる方向の完成形。JetBrains IDE を使う VBC 受講者に直結する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">43</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://blog.jetbrains.com/junie/2026/06/junie-coding-agent-out-of-beta/">JetBrains 公式ブログ / @jetbrains</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-17</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://blog.jetbrains.com/junie/2026/06/junie-coding-agent-out-of-beta/">https://blog.jetbrains.com/junie/2026/06/junie-coding-agent-out-of-beta/</a></dd>
+        <dd><a href="https://x.com/jetbrains/status/2069491532143456363">x.com/jetbrains/status/20694915321434563…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · MICROSOFT SECURITY</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ <span class="sep">/</span> MICROSOFT SECURITY BLOG / THE HACKER NEWS <span class="sep">/</span> NEWS
+      </div>
+      <h2>Mastra npm サプライチェーン攻撃の全貌 — 北朝鮮 Sapphire Sleet が 88 分で 144 パッケージを汚染</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-24/topic_2.png" data-alt="Mastra npm サプライチェーン攻撃の全貌 — 北朝鮮 Sapphire Sleet が 88 分で 144 パッケージを汚染" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-24/topic_2.png" alt="Mastra npm サプライチェーン攻撃の全貌 — 北朝鮮 Sapphire Sleet が 88 分で 144 パッケージを汚染" />
+      </div>
+      <p class="lede">
+        AI エージェント構築フレームワーク Mastra（@mastra スコープ）の npm パッケージ 144 個が乗っ取られ、インストール時に自動実行される postinstall フックでマルウェアを仕込む攻撃が起きた。Microsoft は北朝鮮系 Sapphire Sleet の犯行と高確度で帰属。npm v12 が install スクリプトをデフォルト無効化した（既報）背景にある実例で、コードで import していなくても `npm install` した瞬間に発火する怖さを示す。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">起点はメンテナアカウント(ehindero)乗っ取り。社員が LinkedIn 経由のソーシャルエンジニアリングで侵害され、npm の token bypass 設定の隙を突かれた</li>
+        <li data-i="02">dayjs の typosquat「easy-day-js」を注入。前日に無害版 1.11.21→翌日 postinstall 付き 1.11.22 を公開し、`^1.11.21` の SemVer 自動解決で全新規インストールが汚染版に</li>
+        <li data-i="03">01:12–02:39 UTC の 88 分で 142 パッケージを自動再公開。import の有無に関係なく install/update で発火</li>
+        <li data-i="04">ペイロードは TLS 検証を無効化→C2 から二段目取得。160+ の暗号ウォレット拡張やブラウザ履歴を窃取し Win/macOS/Linux に永続化</li>
+        <li data-i="05">対策: `npm install --ignore-scripts`、lockfile/依存ツリー監査、バージョン固定、メンテナの MFA 徹底・token bypass 廃止</li>
+      </ul>
+      <div class="pull">
+        VBC 受講者が npm 依存を入れる時の最大級リスク。対策はそのまま受講者に渡せる。「未知の入力は敵対的とみなす」時代の具体例として、今日の Vibe coding 安全チェック（別トピック）と地続き。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">20</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.microsoft.com/en-us/security/blog/2026/06/17/postinstall-payload-inside-mastra-npm-supply-chain-compromise/">Microsoft Security Blog / The Hacker News</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-17</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.microsoft.com/en-us/security/blog/2026/06/17/postinstall-payload-inside-mastra-npm-supply-chain-compromise/">https://www.microsoft.com/en-us/security/blog/2026/06/17/postinstall-payload-inside-mastra-npm-supply-chain-compromise/</a></dd>
+        <dd><a href="https://thehackernews.com/2026/06/144-mastra-npm-packages-compromised-via.html">thehackernews.com/2026/06/144-mastra-npm…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · SNAKAJIMA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        業界知見 <span class="sep">/</span> @SNAKAJIMA（中島聡） <span class="sep">/</span> NEWS
+      </div>
+      <h2>中島聡「Vibe Crafting」— Vibe Coding はまだ序の口、本丸は&quot;一人のためにその場で作るソフトウェア&quot;</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-24/topic_3.png" data-alt="中島聡「Vibe Crafting」— Vibe Coding はまだ序の口、本丸は&quot;一人のためにその場で作るソフトウェア&quot;" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-24/topic_3.png" alt="中島聡「Vibe Crafting」— Vibe Coding はまだ序の口、本丸は&quot;一人のためにその場で作るソフトウェア&quot;" />
+      </div>
+      <p class="lede">
+        著名エンジニア中島聡が、Vibe Coding（AI にコードを書かせる開発スタイル）はまだ序の口で本丸はその先だと提起した。2 か月の MulmoClaude 開発の中で見えてきたのは「たった一人のユーザーのために、その場で作られるソフトウェア」という方向性で、これを Vibe Crafting と呼ぶ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">「Vibe Coding の次」を Vibe Crafting と命名して提示</li>
+        <li data-i="02">2 か月の MulmoClaude 開発実践から得た知見</li>
+        <li data-i="03">量産プロダクトではなく&quot;その場・一人向け&quot;の即席ソフトが当たり前になる、という発想転換</li>
+      </ul>
+      <div class="pull">
+        VBC 受講者が「何のために Vibe Coding を学ぶか」の射程を広げる視点。プロダクト前提でなく、自分や目の前の一人のための即席ツールを作る価値観は受講者の心理的ハードルを下げる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">333</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/snakajima/status/2069077424491606400">@snakajima</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>業界知見</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/snakajima/status/2069077424491606400">x.com/snakajima/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · ABOUTHIROPPY / KEN</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ <span class="sep">/</span> @ABOUT_HIROPPY / @KENTA_AKAGI / THE VERGE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Vibe coding で本番に出す前の必須チェック — 事故報道（The Verge）と実践チェックリスト</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-24/topic_4.png" data-alt="Vibe coding で本番に出す前の必須チェック — 事故報道（The Verge）と実践チェックリスト" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-24/topic_4.png" alt="Vibe coding で本番に出す前の必須チェック — 事故報道（The Verge）と実践チェックリスト" />
+      </div>
+      <p class="lede">
+        Vibe coding で公開したアプリに SQL インジェクション・認証なし DB 公開・AI エージェントによる本番 DB 削除などの事故が相次いでいると The Verge が報道し、実務エンジニアが本番リリース前の具体チェックリストを共有している。&quot;動く&quot;までが速い分、本番スケールでの挙動を想像する時間が削られやすいのが事故の温床。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">報告された事故類型: SQLインジェクション / 認証なしで DB を公開 / AI が本番 DB を削除</li>
+        <li data-i="02">チェック①: 生成コードに .env・認証トークンが混入してないか確認</li>
+        <li data-i="03">チェック②: AI のコードは&quot;自信満々に間違える&quot;のでテスト必須／③ `npm audit` で依存の脆弱性確認</li>
+        <li data-i="04">チェック④: SQLi・XSS 対策を必ず入れる</li>
+        <li data-i="05">チェック⑤: 本番想定量のシードデータで負荷テスト（ローカル少数データだと N+1 等を見逃す）</li>
+      </ul>
+      <div class="pull">
+        VBC 受講者がまさにやりがちな事故。これを&quot;作る前/出す前に渡すべき安全リスト&quot;として配ることで実害を防げる。今日の Mastra npm 事件とも地続きで、Vibe Coding の負の側面に正面から向き合う回。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">9</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/about_hiroppy/status/2069021867806220717">@about_hiroppy</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/about_hiroppy/status/2069021867806220717">x.com/about_hiroppy/…</a></dd>
+        <dd><a href="https://x.com/kenta_akagi/status/2069178854766531037">x.com/kenta_akagi/status/206917885476653…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · CODEBURN</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> @_CODEBURN <span class="sep">/</span> NEWS
+      </div>
+      <h2>Codeburn — Claude/Codex/Cursor/Copilot+28 ツールの AI コーディング支出をローカルで一元可視化</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-24/topic_5.png" data-alt="Codeburn — Claude/Codex/Cursor/Copilot+28 ツールの AI コーディング支出をローカルで一元可視化" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-24/topic_5.png" alt="Codeburn — Claude/Codex/Cursor/Copilot+28 ツールの AI コーディング支出をローカルで一元可視化" />
+      </div>
+      <p class="lede">
+        `npx codeburn web` だけで、Claude・Codex・Copilot・Cursor など 28+ の AI コーディングツールの利用コストをローカルのダッシュボードでリアルタイム集計するツールが登場した。データは一切マシン外に出ない。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">28+ の AI コーディングツール横断でコストをライブ集計</li>
+        <li data-i="02">`npx codeburn web` で起動、ローカル完結（プライバシー）</li>
+        <li data-i="03">複数エージェント併用で&quot;課金が見えない&quot;問題への回答</li>
+      </ul>
+      <div class="pull">
+        複数エージェントを併用する VBC 受講者・実務者の「気づいたら高額」問題に直結。コスト可視化は継続利用の前提になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">13</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/_codeburn/status/2069462191913238630">@_codeburn</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/_codeburn/status/2069462191913238630">x.com/_codeburn/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · ATOMICCHATHQ</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> @ATOMIC_CHAT_HQ <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cline を完全ローカル・オフラインで動かす — Atomic Chat が open-weight モデルで実行</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-24/topic_6.png" data-alt="Cline を完全ローカル・オフラインで動かす — Atomic Chat が open-weight モデルで実行" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-24/topic_6.png" alt="Cline を完全ローカル・オフラインで動かす — Atomic Chat が open-weight モデルで実行" />
+      </div>
+      <p class="lede">
+        コーディングエージェント Cline を、Atomic Chat のローカル open-weight モデル上で完全オフライン実行できるようにした構成が公開された。Cline がエージェント層（ファイル読取・編集・ターミナル実行・エラー調査・承認要求）を担い、Atomic Chat がモデル層をオフライン・ローカルで動かす。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Cline = エージェント層: ファイル読み書き・コマンド実行・エラー調査・アクション前の承認</li>
+        <li data-i="02">Atomic Chat = モデル層: open-weight モデルをオフライン・ローカルで実行</li>
+        <li data-i="03">クラウド API に出さずローカル完結（機密保持・コスト削減）</li>
+      </ul>
+      <div class="pull">
+        機密コードを扱う企業や API コストを抑えたい受講者に&quot;ローカル完結のエージェント開発&quot;という選択肢。GLM-5.2 等 open-weight の進化（既報）と接続する実用例。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">22</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/atomic_chat_hq/status/2069506372840919354">@atomic_chat_hq</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/atomic_chat_hq/status/2069506372840919354">x.com/atomic_chat_hq/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · THISWEEKNAIMICHAEL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        業界知見 <span class="sep">/</span> @THISWEEKNAI（MICHAEL TRUELL 発言紹介） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cursor 共同創業者 Truell「5 つのエージェントを切り替えるのは未来じゃない」— 数日かけ完成品を返すエージェント像</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-24/topic_7.png" data-alt="Cursor 共同創業者 Truell「5 つのエージェントを切り替えるのは未来じゃない」— 数日かけ完成品を返すエージェント像" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-24/topic_7.png" alt="Cursor 共同創業者 Truell「5 つのエージェントを切り替えるのは未来じゃない」— 数日かけ完成品を返すエージェント像" />
+      </div>
+      <p class="lede">
+        Cursor 共同創業者 Michael Truell が、細切れタスクのために 5 つのエージェントを切り替える今のやり方はコーディングの未来ではない、と述べた。目指す姿はラフな構想を渡すとエージェントが数日姿を消し、完成・テスト済みのプロダクトを持って戻ってくる世界だという。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">複数エージェントを手動で切り替える現状を&quot;過渡期&quot;と位置づけ</li>
+        <li data-i="02">目指す姿: 構想を渡す→エージェントが長時間自走→完成・テスト済み成果物を返す</li>
+      </ul>
+      <div class="pull">
+        VBC 受講者が&quot;今のエージェント運用&quot;をどの方向に伸ばすかの羅針盤。JetBrains Junie の AFK 長時間タスク（本日トピック1）とも符合する業界トレンド。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ThisWeeknAI/status/2069461355254411671">@ThisWeeknAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>業界知見</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ThisWeeknAI/status/2069461355254411671">x.com/ThisWeeknAI/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://blog.jetbrains.com/junie/2026/06/junie-coding-agent-out-of-beta/">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-06-23/">
+      ← 前日 · 2026-06-23
+      <span class="big">OpenAI、GPT-5.5-Cyber 正式版を公開 — OSS を一斉パッチする「Patch the Planet」始動</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-06-24/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260624.0729</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

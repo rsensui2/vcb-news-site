@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-06-25 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-06-25 の Vibe Coder Bootcamp モーニングディスパッチ — 5本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0625</span>
+    <span class="sep">/</span>
+    <span>2026-06-25</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>05 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260625.0734</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-06-25/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:34 · WED</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · WEDNESDAY · JUNE 25, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>06<span class="dot">.</span>25</h1>
+    <div class="strap">
+      <span>Anthropic「Claude · Z.ai「GLM-5.2」が実利用で急伸 · 新攻撃クラス「Agentjacking」— · Google「Gemini</span>
+      <span><span class="count">05</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI/プロダクト <span class="sep">/</span> ANTHROPIC 公式 / FORTUNE / THE NEW STACK <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic「Claude Tag」公開 — Claude が Slack に“チームの一員”として常駐、@メンションでタスクを非同期委任</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-25/topic_1.png" data-alt="Anthropic「Claude Tag」公開 — Claude が Slack に“チームの一員”として常駐、@メンションでタスクを非同期委任" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-25/topic_1.png" alt="Anthropic「Claude Tag」公開 — Claude が Slack に“チームの一員”として常駐、@メンションでタスクを非同期委任" />
+      </div>
+      <p class="lede">
+        Anthropic が 6/23 に Claude Tag を発表した。従来の「個人が自分専用 Claude と1対1」から「1体の Claude が Slack に共有メンバーとして常駐する」形へと AI 利用の単位を変える製品で、管理者が許可したチャンネル・ツールにアクセスし、ユーザーは @Claude にタスクを投げて裏で進めさせられる。エンジンは Opus 4.8 で、旧「Claude in Slack」アプリを置き換える。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">共有アシスタント: チャンネル内の全員が同じ Claude と対話。他人が始めたタスクの途中経過が見え、引き継げる</li>
+        <li data-i="02">非同期前提: 依頼を投げて立ち去り完了後に戻れる。大きな依頼を複数ステップに分解し連携ツールで遂行、フォローアップのスケジューリングも可</li>
+        <li data-i="03">Ambient Mode（任意）: 関連情報を能動push、返信のないスレッドを追い、放置タスクをリマインド</li>
+        <li data-i="04">エージェント identity モデル: 個人ログインを借りず自身のサービスアカウントで動作。チャンネル単位権限・メモリ分離・監査ログ・管理者コントロール</li>
+        <li data-i="05">課金分離: チャンネル作業は組織課金、Slack 内 DM は個人の Claude アカウント課金。未対応組織は 2026-08-03 に自動移行</li>
+        <li data-i="06">ドッグフーディング: Anthropic 社内版で自社コードの 65% を生成（Claude Tag 自身のコードの大半も含む）</li>
+      </ul>
+      <div class="pull">
+        「AI を個人ツールから“チームの同僚”へ」という運用転換の象徴で、Slack 常駐の非同期エージェントはまさに Ryoko 的な働き方の製品化。企業導入で Anthropic が初めて OpenAI を逆転（Ramp 5月指標 34.4%対32.3%）した文脈とも符合する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">25,484</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.anthropic.com/news/claude-tag">Anthropic 公式 / Fortune / The New Stack</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI/プロダクト</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.anthropic.com/news/claude-tag">https://www.anthropic.com/news/claude-tag</a></dd>
+        <dd><a href="https://fortune.com/2026/06/23/anthropic-claude-tag-virtual-employee-tool-slack/">fortune.com/2026/06/23/anthropic-claude-…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · ZAI  / OPENROUTER </span></aside>
+    <div class="main">
+      <div class="cat-line">
+        LLM/モデル <span class="sep">/</span> Z.AI 公式 / OPENROUTER / SIMON WILLISON <span class="sep">/</span> NEWS
+      </div>
+      <h2>Z.ai「GLM-5.2」が実利用で急伸 — MIT ライセンスのオープンウェイトが Opus 4.8 にあと数点、コストは約1/6</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-25/topic_2.png" data-alt="Z.ai「GLM-5.2」が実利用で急伸 — MIT ライセンスのオープンウェイトが Opus 4.8 にあと数点、コストは約1/6" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-25/topic_2.png" alt="Z.ai「GLM-5.2」が実利用で急伸 — MIT ライセンスのオープンウェイトが Opus 4.8 にあと数点、コストは約1/6" />
+      </div>
+      <p class="lede">
+        中国 Z.ai（旧 Zhipu）の MIT ライセンス・オープンウェイト coding モデル GLM-5.2 が、公開後の実利用で OpenRouter 上のシェアを急速に伸ばしている。Terminal-Bench 2.1 で 81.0、長期タスク FrontierSWE で 74.4 と Claude Opus 4.8（75.4）に肉薄し、コストは閉源フロンティアの約1/6。「長時間走らせる coding エージェントに premium API を払う経済合理性」を揺さぶる存在になっている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">アーキテクチャ: 753B MoE（アクティブ約40B）、コンテキスト 1M、出力 131K。MIT で HuggingFace に重み公開</li>
+        <li data-i="02">IndexShare: 4つの sparse-attention 層ごとに軽量 indexer を共有し 1M で per-token FLOPs を 2.9倍削減。MTP 改良で投機的デコード受理長を最大20%向上</li>
+        <li data-i="03">ベンチ: SWE-bench Pro 62.1（GPT-5.5 の 58.6 超）、Artificial Analysis Index v4.1 で 51 とオープンウェイト首位</li>
+        <li data-i="04">価格: GLM Coding Plan 月~$18 から、API は $1.40 in / $4.40 out（per 1M）</li>
+        <li data-i="05">⚠️ 公開時に公式ベンチ未掲載で、出回る数値の多くはベンダー自己申告/早期サードパーティ。中立ハーネスでの独立検証は途上</li>
+        <li data-i="06">重みは 1.51TB と巨大でローカル運用は重い</li>
+      </ul>
+      <div class="pull">
+        「クラウド API か、ローカル/安価モデルか」を考える VBC 受講者にとって最有力のオープン選択肢。閉源フロンティアに迫る品質×低コストはコーディングエージェント運用のコスト構造を変えうるが、ベンチは“credible vendor claim”として割り引いて見るのが妥当。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">336</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://huggingface.co/zai-org/GLM-5.2">Z.ai 公式 / OpenRouter / Simon Willison</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-16</dd>
+        <dt>CATEGORY</dt>
+        <dd>LLM/モデル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://huggingface.co/zai-org/GLM-5.2">https://huggingface.co/zai-org/GLM-5.2</a></dd>
+        <dd><a href="https://llm-stats.com/models/glm-5.2">llm-stats.com/models/glm-5.2</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · TENET SECURITY / T</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ <span class="sep">/</span> TENET SECURITY / THE HACKER NEWS / THE NEW STACK <span class="sep">/</span> NEWS
+      </div>
+      <h2>新攻撃クラス「Agentjacking」— 公開 Sentry キー1つで Claude Code / Cursor / Codex に任意コードを実行させる</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-25/topic_3.png" data-alt="新攻撃クラス「Agentjacking」— 公開 Sentry キー1つで Claude Code / Cursor / Codex に任意コードを実行させる" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-25/topic_3.png" alt="新攻撃クラス「Agentjacking」— 公開 Sentry キー1つで Claude Code / Cursor / Codex に任意コードを実行させる" />
+      </div>
+      <p class="lede">
+        Tenet Security が 6/12 に公開した新攻撃クラス。Web ソースに普通に埋め込まれている公開 DSN（Sentry の書き込み専用キー）だけで攻撃者が偽のエラーイベントを注入し、開発者が AI エージェントに「未解決の Sentry issue を直して」と頼むと、エージェントが MCP 経由でその偽イベントを“信頼できるシステム出力”として読み、仕込まれた npx コマンドを開発者の権限で実行してしまう。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">起点は認証不要の公開 DSN。フロントエンド JS に埋め込まれ Web 上にインデックスされている書き込み専用クレデンシャル</li>
+        <li data-i="02">“それ単体では安全”な2設計（Sentry が任意ペイロード受理 × Sentry MCP がそれを信頼出力として返す）の交差点を突く</li>
+        <li data-i="03">影響: 注入可能 DSN を持つ 2,388 組織を特定（Tranco top-1M に 71件）、成功率85%・100超のエージェント実行を観測（※露出であり確定侵害ではない）</li>
+        <li data-i="04">窃取対象: 環境変数、~/.aws/config の AWS 認証情報、npm トークン、Docker/git 認証、private repo URL。稼働中の AWS secret key 捕捉例も</li>
+        <li data-i="05">EDR/WAF/IAM/VPN、さらに「外部データを信用するな」という system prompt 指示でも防げなかった</li>
+        <li data-i="06">対策: 使っていない Sentry MCP を .claude/settings.json から外す／エージェントの権限・ツールアクセスを“単体でなく合算”で評価</li>
+      </ul>
+      <div class="pull">
+        VBC 受講者が MCP / 外部ツール連携を使う上での最重要級リスク。対策がそのまま渡せる実務的トピックで、「未知の入力は敵対的とみなせ」「エージェント自身が攻撃面になる」時代の具体例として強い。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://tenetsecurity.ai/blog/agentjacking-coding-agents-with-fake-sentry-errors/">Tenet Security / The Hacker News / The New Stack</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-12</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://tenetsecurity.ai/blog/agentjacking-coding-agents-with-fake-sentry-errors/">https://tenetsecurity.ai/blog/agentjacking-coding-agents-with-fake-sentry-errors/</a></dd>
+        <dd><a href="https://thehackernews.com/2026/06/agentjacking-attack-tricks-ai-coding.html">thehackernews.com/2026/06/agentjacking-a…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · GOOGLE AI FOR DEVE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発者ツール <span class="sep">/</span> GOOGLE AI FOR DEVELOPERS 公式 / @GOOGLEAIDEVS <span class="sep">/</span> NEWS
+      </div>
+      <h2>Google「Gemini Interactions API」が GA — モデルとエージェントを単一エンドポイントに統合、Managed Agents・バックグラウンド実行対応</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-25/topic_4.png" data-alt="Google「Gemini Interactions API」が GA — モデルとエージェントを単一エンドポイントに統合、Managed Agents・バックグラウンド実行対応" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-25/topic_4.png" alt="Google「Gemini Interactions API」が GA — モデルとエージェントを単一エンドポイントに統合、Managed Agents・バックグラウンド実行対応" />
+      </div>
+      <p class="lede">
+        Google が Gemini の新インターフェース「Interactions API」を一般提供（GA）した。テキスト・マルチモーダル入力・ツール使用・Managed Agents を単一エンドポイントに統合し、サーバーサイドの会話状態保持とバックグラウンド実行を備える。2025年12月のベータから昇格し、新規プロジェクトの推奨インターフェースとなった（旧 generateContent は legacy 扱いだが継続サポート）。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">サーバーサイド状態: previous_interaction_id で会話状態を保持。マルチターンの context caching が効きトークンコスト削減</li>
+        <li data-i="02">観測可能な実行ステップ（デバッグ/UI 用）と background=true による長時間タスクのバックグラウンド実行</li>
+        <li data-i="03">Managed Agents: 単一 POST で Gemini 3.5 Flash エージェントを隔離 Linux サンドボックスに起動（コード実行・Web検索・URL fetch）</li>
+        <li data-i="04">コスト階層: Flex（コスト50%減）/ Priority（低レイテンシ）。有料枠は過去 interaction を 55日保持</li>
+        <li data-i="05">Python / JavaScript SDK 対応。LiteLLM / Eigent / Agno など既存パートナー統合も利用可</li>
+        <li data-i="06">旧 generateContent はフルサポート継続だが、長時間モデル/エージェントの最新機能は今後こちらに集約予定</li>
+      </ul>
+      <div class="pull">
+        VBC 受講者がエージェントを“作って動かす”際の Google 側の標準導線。状態管理・バックグラウンド実行・サンドボックス付き Managed Agents を1呼び出しで扱える設計は、Anthropic / OpenAI のエージェント基盤競争に対する Google の回答で、新規はこちらが推奨。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">118</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://blog.google/innovation-and-ai/technology/developers-tools/interactions-api-general-availability/">Google AI for Developers 公式 / @googleaidevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発者ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://blog.google/innovation-and-ai/technology/developers-tools/interactions-api-general-availability/">https://blog.google/innovation-and-ai/technology/developers-tools/interactions-api-general-availability/</a></dd>
+        <dd><a href="https://ai.google.dev/gemini-api/docs/interactions-overview">ai.google.dev/gemini-api/docs/interactio…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · CEREBRAS IR / REUT</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ビジネス/インフラ <span class="sep">/</span> CEREBRAS 公式IR / REUTERS / CNBC <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cerebras、上場後初決算と同時に OpenAI と 750MW・200億ドル超の複数年契約を公表 — それでも株価は10%超下落</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-25/topic_5.png" data-alt="Cerebras、上場後初決算と同時に OpenAI と 750MW・200億ドル超の複数年契約を公表 — それでも株価は10%超下落" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-25/topic_5.png" alt="Cerebras、上場後初決算と同時に OpenAI と 750MW・200億ドル超の複数年契約を公表 — それでも株価は10%超下落" />
+      </div>
+      <p class="lede">
+        ウェハースケール AI チップの Cerebras が、上場後初の四半期決算（Q1 2026）と同時に、OpenAI との複数年・750MW・総額200億ドル超の計算供給契約を公表した。1月に「100億ドル超」とされた契約が拘束力ある正式契約で約2倍に拡大し、OpenAI は今後数年で 750MW の高速推論コンピュートを Cerebras 上に展開する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">契約は 2028 年までの 750MW 推論キャパシティをカバー。OpenAI は運転資金 10億ドルを Cerebras に貸与し契約連動ワラントも保有</li>
+        <li data-i="02">Q1 決算: GAAP 売上 1.934億ドル（前年比+94%）、クラウド/サービス売上 8,280万ドル（+178%）。2026通期コア売上ガイダンス 8.55〜8.65億ドル（+69%）</li>
+        <li data-i="03">AWS とも複数年提携: Trainium 3（prefill）× Cerebras CS-3（decode）で高速推論をグローバル展開</li>
+        <li data-i="04">株価は決算当日に 10.5% 下落。Q2 コア粗利ガイダンスを 36〜38% へ引き下げ（Q1 は 47%）、マージン悪化が好材料を相殺</li>
+        <li data-i="05">背景は「チップ売り」から「AI クラウド事業者」への積極転換。顧客集中（OpenAI/G42/AWS 依存）がリスク</li>
+      </ul>
+      <div class="pull">
+        受講者が使う AI の裏側＝推論インフラの“座取り合戦”が一段と激化している証左。OpenAI が GPU 一辺倒でなく Cerebras / AWS Trainium に分散し、チップ側へ資本注入までしている構図は AI コストとキャパシティの行方を読む手がかり。好決算＋大型契約でも株価が下げる「投資 J カーブ」の生々しい例でもある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://investors.cerebras.ai/news-releases/news-release-details/cerebras-systems-announces-strong-first-quarter-2026-results">Cerebras 公式IR / Reuters / CNBC</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>ビジネス/インフラ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://investors.cerebras.ai/news-releases/news-release-details/cerebras-systems-announces-strong-first-quarter-2026-results">https://investors.cerebras.ai/news-releases/news-release-details/cerebras-systems-announces-strong-first-quarter-2026-results</a></dd>
+        <dd><a href="https://openai.com/index/cerebras-partnership/">openai.com/index/cerebras-partnership/</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://www.anthropic.com/news/claude-tag">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-06-24/">
+      ← 前日 · 2026-06-24
+      <span class="big">JetBrains の AI コーディングエージェント「Junie」が正式版（GA）に — IDE のデバッガで自律デバッグ</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-06-25/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260625.0734</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

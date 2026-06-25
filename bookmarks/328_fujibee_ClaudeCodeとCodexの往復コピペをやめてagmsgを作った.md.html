@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №058</span>
+    <span class="tick">BOOKMARK №062</span>
     <span class="sep">/</span>
     <span>2026-05-27</span>
     <span class="sep">/</span>
     <span>@fujibee</span>
     <span class="sep">/</span>
-    <span>410 ITEMS</span>
+    <span>414 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:11 THU</span>
+    <span>JST 07:18 FRI</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,19 +305,19 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-06-24/">NEWS</a>
+      <a href="../news/2026-06-25/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:11 · THU</div>
+    <div class="meta">JST · 07:18 · FRI</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-05-27 <span>/</span> №058
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-05-27 <span>/</span> №062
     </div>
     <div class="cat-line">
       <span>💻 AI開発ツール / OSS</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">Claude Code と Codex の往復コピペをやめたくて、agmsg を作った</h1>
     <div class="strap">
-      <span><span class="label">№</span>058 / 410</span>
+      <span><span class="label">№</span>062 / 414</span>
       <span><span class="label">SRC</span><a href="https://x.com/fujibee/status/2059357190725783892" target="_blank" rel="noopener noreferrer">x.com/fujibee ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/328_fujibee_ClaudeCode%E3%81%A8Codex%E3%81%AE%E5%BE%80%E5%BE%A9%E3%82%B3%E3%83%94%E3%83%9A%E3%82%92%E3%82%84%E3%82%81%E3%81%A6agmsg%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%9F.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">058<span class="ord">BOOKMARK / 410</span></aside>
+    <aside class="numeral">062<span class="ord">BOOKMARK / 414</span></aside>
     <article class="prose">
 <p><strong>有益度:</strong> ⭐⭐⭐⭐⭐</p><p><strong>エンゲージメント:</strong> RT 353 / Likes 3,346 / Bookmarks 6,624 / Views 1,848,849</p><h2>概要</h2><p>Claude Code と Codex を 2 台体制で併用する開発で、AI 間のメッセージを人間がコピペで運ぶ「伝書鳩問題」を解消するために作った OSS「agmsg」の紹介記事。CLI の AI エージェント同士が共有 SQLite を介して直接メッセージを送り合える仕組みで、Claude Code / Codex / Gemini CLI などどの CLI エージェントでも使える。Agent Skills ベースで、スキルとして入れるだけ。依存は bash と sqlite3 のみ。</p><h2>X Article 本文</h2><p>最近の開発は Claude Code がメインで、そこに Codex を足して2台体制で回している。で、これが思いのほか噛み合う。Claude Code でガリガリ実装を進めて、難しいところやレビューだけ Codex に投げる、みたいな分担に自然と落ち着いた。</p><p>……のはいいんだけど、しばらくやってて気づいた。自分、ずっと2つのAIの間でメッセージをコピペして運んでるだけの人になってないか？と。</p><p>Claude Code が書いたコードを選択してコピー、Codex のウィンドウに貼ってレビューさせる、返ってきた指摘をまたコピーして Claude Code に戻す。これを一日に何十回もやる。地味なんだけど、これが本当にだるい。集中も切れるし、たまに貼り間違える。要は、賢いAIを2台も並べておいて、その間をつなぐ一番アホな作業を人間がやっていた。</p><p>エージェント同士が直接メッセージを送り合えればいいだけの話では？と思って、勢いで作った。agmsg という名前で OSS にしている → https://github.com/fujibee/agmsg</p><p>依存は bash と sqlite3 だけ。専用のデーモンやサーバーは立てないし、ネットワークも python も要らない。同じ「チーム」に参加した2つのエージェントは、これだけで互いにメッセージを送れるようになる。「alice にレビュー終わったって送って」「メッセージ来てる？」と自然言語で話しかけるだけ。</p><p>設計で考えたこと: まず純正機能（team/subagent）を調べたが short-lived 前提で継続会話に不向き。最初はテキストファイルで実装したが、永続×並行で同時書き込み競合・ファイル破損が問題に。SQLite（WALモード、複数リーダー+1ライター、トランザクション）に切り替えた。ただし依存は最小に保つことに一番こだわった。</p><p>受信モード: 手動取得 / hook（Stop フック、Codex 既定）/ monitor（SQLite 常時購読でリアルタイム割り込み、Claude Code 既定）。monitor が入ってから実用性が一気に上がった。monitor 設定済みの Claude Code 同士を同じチームに入れると人間が操作しなくても勝手にやり取りが続く（マルバツゲームを最後まで自律対局させた例）。</p><p>一番手こずったのは Claude Code と Codex で hook や設定の仕組みがまるで違うこと。Claude Code には Monitor やリッチな SessionStart 系フックがあるが Codex には無い。受信モードを分けているのもこの差を吸収するため。</p>
     </article>
@@ -384,14 +384,14 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 410 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 414 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-06-24/">TODAY</a></li>
+          <li><a href="../news/2026-06-25/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -418,7 +418,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-06-25</span>
+      <span>BUILD 2026-06-26</span>
     </div>
   </div>
 </footer>

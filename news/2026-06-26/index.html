@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-06-26 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-06-26 の Vibe Coder Bootcamp モーニングディスパッチ — 6本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0626</span>
+    <span class="sep">/</span>
+    <span>2026-06-26</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>06 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260626.0737</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-06-26/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:37 · THU</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · THURSDAY · JUNE 26, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>06<span class="dot">.</span>26</h1>
+    <div class="strap">
+      <span>OpenAI×Broadcom · Anthropicの「Mythos」がNSA主導テストで米政府の機密システムを&quot;数時間で&quot;突破 · 米政府がフロンティアAIの提供を統制 · Claudeの新機能「Council」—</span>
+      <span><span class="count">06</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI/インフラ <span class="sep">/</span> OPENAI / BROADCOM 公式 / TECHCRUNCH / CNBC / BLOOMBERG <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI×Broadcom、初の自社AIチップ「Jalapeño」を発表 — 推論特化ASIC、開発9ヶ月でコスト約50%減</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-26/topic_1.png" data-alt="OpenAI×Broadcom、初の自社AIチップ「Jalapeño」を発表 — 推論特化ASIC、開発9ヶ月でコスト約50%減" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-26/topic_1.png" alt="OpenAI×Broadcom、初の自社AIチップ「Jalapeño」を発表 — 推論特化ASIC、開発9ヶ月でコスト約50%減" />
+      </div>
+      <p class="lede">
+        OpenAI と Broadcom が、OpenAI 初のカスタム AI チップ「Jalapeño」を 6/24 に発表した。学習ではなく推論に特化した ASIC で、ChatGPT と Codex のワークロード向けに設計されている。両社が昨年合意した 10GW 規模カスタムチップ構想の第1弾で、Nvidia 依存からの多様化を進める一手でもある。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">推論特化: Nvidia Rubin が学習・推論両対応なのに対し Jalapeño は推論のみに最適化。ラボでは GPT-5.3-Codex-Spark を含む ML ワークロードが本番目標の周波数・電力で稼働中</li>
+        <li data-i="02">開発速度: 初期設計から製造テープアウトまで約9ヶ月。高性能半導体で『史上最速級の ASIC 開発サイクル』と主張</li>
+        <li data-i="03">自己加速: OpenAI 自身のモデルが設計を加速。Greg Brockman『モデルがどれだけ加速できたか、我々自身が驚いた』</li>
+        <li data-i="04">コスト・電力: 一般的な AI GPU 比でコスト約50%減（Broadcom CEO Hock Tan）、電力あたり性能も現行 SOTA を大幅に上回る早期結果</li>
+        <li data-i="05">展開: 2026年末に小規模プロトタイプ、以降スケール。Microsoft 等とギガワット級データセンターへ。Broadcom Tomahawk ネットワーキングや Celestica と連携</li>
+        <li data-i="06">戦略文脈: AWS Trainium / AMD / Cerebras に続く Nvidia 多様化。IPO 準備の文脈とも重なる</li>
+      </ul>
+      <div class="pull">
+        推論コストの構造を変えうる動き。フロンティアラボが自前シリコンで推論を安く・速くする流れは、API 価格やエージェント運用の経済性に直結する。自社 AI がチップ設計を加速した点は recursive self-improvement の実例でもある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">994</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://openai.com/index/openai-broadcom-jalapeno-inference-chip/">OpenAI / Broadcom 公式 / TechCrunch / CNBC / Bloomberg</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-24</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI/インフラ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://openai.com/index/openai-broadcom-jalapeno-inference-chip/">https://openai.com/index/openai-broadcom-jalapeno-inference-chip/</a></dd>
+        <dd><a href="https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/">techcrunch.com/2026/06/24/openai-unveils…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · AP / CNBC / SECURI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI/セキュリティ <span class="sep">/</span> AP / CNBC / SECURITYWEEK / FASTCOMPANY / ANTHROPIC 公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropicの「Mythos」がNSA主導テストで米政府の機密システムを&quot;数時間で&quot;突破 — Project Glasswing</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-26/topic_2.png" data-alt="Anthropicの「Mythos」がNSA主導テストで米政府の機密システムを&quot;数時間で&quot;突破 — Project Glasswing" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-26/topic_2.png" alt="Anthropicの「Mythos」がNSA主導テストで米政府の機密システムを&quot;数時間で&quot;突破 — Project Glasswing" />
+      </div>
+      <p class="lede">
+        Anthropic の未公開フロンティアモデル「Mythos」が、政府・情報機関との合同テスト（Project Glasswing）で米政府の機密システムの脆弱性を発見していたと米当局者が AP に明かした。Warner 上院議員が 6/11 の銀行委員会公聴会で『このツールは我々のほぼ全ての機密システムに、数週間でなく数時間で侵入した』と述べていたことが背景にある。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Project Glasswing: テック企業と政府が組み、攻撃者より先に重要ソフトの欠陥を見つけ修正する限定プログラム。Mythos Preview は主要OS・ブラウザ全てを含む数千件の高深刻度脆弱性を発見</li>
+        <li data-i="02">重要な限定: 当局者は『数時間で脆弱性を発見したが、その時間内に悪用できたわけではない』と明確化</li>
+        <li data-i="03">背景の緊張: Anthropic は軍の国内監視・自律兵器利用を拒否、政府は同社を安全保障ブラックリストに。今月、政府は Mythos/Fable の輸出を全世界・全外国籍に停止するよう命令し、Anthropic は全顧客向けに両モデルを無効化して従った</li>
+        <li data-i="04">業界の反発: Adobe・Nvidia など100人超のセキュリティ専門家が『Mythos は優秀だが唯一無二ではない』とし、政府指令の撤回を要請</li>
+        <li data-i="05">両論: NSA・Anthropic 双方コメント拒否。『jailbreak 脆弱性は限定的で他社モデルでも起こりうる範囲、政府対応は過剰』とする見方も併存</li>
+      </ul>
+      <div class="pull">
+        AI が人間の専門家を超えて本番システムの脆弱性を発見しうる段階に達したことの国家安全保障レベルでの実証。同時に、フロンティアモデルが輸出管理・安全保障の対象となり政府がアクセスを統制する時代の象徴で、攻撃にも防御にも効く両刃であることを示す。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.anthropic.com/glasswing">AP / CNBC / SecurityWeek / FastCompany / Anthropic 公式</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI/セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.anthropic.com/glasswing">https://www.anthropic.com/glasswing</a></dd>
+        <dd><a href="https://www.cnbc.com/2026/06/23/anthropics-mythos-model-found-vulnerabilities-in-classified-us-government-systems-official-says.html">www.cnbc.com/2026/06/23/anthropics-mytho…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · THE INFORMATION / </span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI/政策 <span class="sep">/</span> THE INFORMATION / CNBC / BLOOMBERG / REUTERS <span class="sep">/</span> NEWS
+      </div>
+      <h2>米政府がフロンティアAIの提供を統制 — OpenAIに「GPT-5.6」の段階リリースを要請、顧客ごとに政府が承認</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-26/topic_3.png" data-alt="米政府がフロンティアAIの提供を統制 — OpenAIに「GPT-5.6」の段階リリースを要請、顧客ごとに政府が承認" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-26/topic_3.png" alt="米政府がフロンティアAIの提供を統制 — OpenAIに「GPT-5.6」の段階リリースを要請、顧客ごとに政府が承認" />
+      </div>
+      <p class="lede">
+        トランプ政権が安全保障上の懸念から、OpenAI に新モデル「GPT-5.6」の段階的リリースを要請したと The Information が 6/25 に報じた。Altman は社内 Q&amp;A で、GPT-5.6 を少数パートナー向けの限定プレビューで出し、プレビュー期間中は政府が顧客ごとにアクセスを承認すると説明したという。2週間前の Anthropic・Fable 5 停止に続く動きで、フロンティアAIへの政府統制がパターン化しつつある。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">関与省庁: National Cyber Director 室と Office of Science and Technology Policy との協議から要請。Commerce 長官 Lutnick が他省庁承認なしの launch を諌めたとも</li>
+        <li data-i="02">6/2 大統領令が前提: フロンティアモデルの安全な展開枠組みを各機関に整備させる EO（開発者が政府にアクセスを『任意』提供するプロセスを含む）</li>
+        <li data-i="03">パターン化: 2週間前に政府が Anthropic の Fable 5 を停止、今度は OpenAI に段階リリース要請。『&quot;任意&quot;枠組みは両ラボが従う実態では事実上&quot;義務&quot;』との指摘</li>
+        <li data-i="04">Altman の説明: GPT-5.6 を『理想的な長期モデルとは見ておらず、将来はより持続可能な方法を目指す』と社内に。OpenAI は IPO を来年に持ち越す方向との NYT 報道も併載</li>
+        <li data-i="05">⚠️ 細部の注意: 『顧客ごと承認』など一部は社内 Q&amp;A の単一ソース基準</li>
+      </ul>
+      <div class="pull">
+        Anthropic に続き OpenAI も政府の access 統制下に入り、『フロンティアAIは誰でも即使える』前提が崩れつつある。モデル選定・調達計画を立てる側にとって、規制で供給が突然絞られうるプラットフォーム依存リスクの最新実例。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">247</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.theinformation.com/articles/trump-administration-asks-openai-stagger-release-new-model-security-concerns">The Information / CNBC / Bloomberg / Reuters</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI/政策</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.theinformation.com/articles/trump-administration-asks-openai-stagger-release-new-model-security-concerns">https://www.theinformation.com/articles/trump-administration-asks-openai-stagger-release-new-model-security-concerns</a></dd>
+        <dd><a href="https://www.cnbc.com/video/2026/06/25/openai-will-stagger-gpt-5-point-6-release-following-trump-admin-request-for-review-source.html">www.cnbc.com/video/2026/06/25/openai-wil…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · RAULIAPROD</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI/プロンプト <span class="sep">/</span> @RAUL_IA_PROD <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Claudeの新機能「Council」— 5人のAI評議会が議論して1つの答えを出す</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-26/topic_4.png" data-alt="Claudeの新機能「Council」— 5人のAI評議会が議論して1つの答えを出す" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-26/topic_4.png" alt="Claudeの新機能「Council」— 5人のAI評議会が議論して1つの答えを出す" />
+      </div>
+      <p class="lede">
+        Claude に『Council（評議会）』という使い方を仕込むプロンプト技法（BM 1,577 で拡散）。1つの回答を即返すのではなく、Claude の中に立場の違う5人のアドバイザーを立て、互いに議論させたうえで最終的に1つの結論を出させる。設定方法と試せる5つのプロンプトをスレッドで配布している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">核となる指示: 『あなたは Council。決して1つの声で答えず、毎回5人のアドバイザーを別視点で起動し、最後に1つの決定でまとめる』をシステムプロンプトに仕込む</li>
+        <li data-i="02">ロール例: 『反対者（The Opposer）』が弱点を突くなど、各アドバイザーに固有の役割を与えて多視点で1つの問いを叩く</li>
+        <li data-i="03">配布プロンプト: 『本当に重要な決断か』『過去の意思決定履歴からパターンを発見させる』など意思決定・自己分析系が中心</li>
+        <li data-i="04">公式機能ではなくプロンプトエンジニアリングの型（疑似マルチエージェント討論）。重要判断で AI に賛成だけ言わせず反対者役を必ず立てる運用に応用できる</li>
+        <li data-i="05">⚠️ スレッド後半は情報商材（AI映画制作・LINE誘導）への導線が混ざる</li>
+      </ul>
+      <div class="pull">
+        1つのAIに複数ペルソナを持たせて自己反論させる発想の入門例。本格的なマルチエージェント構成を組む前に、プロンプト1枚で『相互批判→統合』を体験でき、設計レビューや重要判断にそのまま応用できる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">800</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/Raul_IA_Prod/status/2069796795396260053">@Raul_IA_Prod</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-24</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI/プロンプト</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/Raul_IA_Prod/status/2069796795396260053">x.com/Raul_IA_Prod/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · MASAKIAIHACKX ARTI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI/ワークフロー <span class="sep">/</span> @MASAKI_AIHACK（X ARTICLE） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Claude Codeの性能を「92倍」引き出す方法 — 文脈管理10コマンド</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-26/topic_5.png" data-alt="Claude Codeの性能を「92倍」引き出す方法 — 文脈管理10コマンド" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-26/topic_5.png" alt="Claude Codeの性能を「92倍」引き出す方法 — 文脈管理10コマンド" />
+      </div>
+      <p class="lede">
+        Claude Code を『賢いチャット相手』ではなく『文脈を管理する秘書』として使い倒すための X Article（BM 5,192・閲覧110万超のヒット）。AI がうまく動かないのは性能でなく『文脈に迷っているから』という主張のもと、文脈を自分で設計・管理するための10コマンド／機能を解説する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">本質: Claude Code の強みは①ファイルを直接読み書きできる②短いコマンドで一気通貫に作業を進められる、の2点</li>
+        <li data-i="02">捨てる/畳む/可視化: /clear（履歴を空に）・/compact（要約して圧縮）・/context（トークンの使い道を色付き可視化）の使い分けが、応答が重く雑になる現象への処方箋</li>
+        <li data-i="03">/rewind: 過去のチェックポイントに巻き戻し（旧 /undo・/checkpoint）。空入力で Esc 2回でも開く</li>
+        <li data-i="04">/effort: 思考の本気度を low/medium/high/xhigh/max/ultracode の6段階で指定。旧『ultrathink』は v2.1.68 で非推奨に</li>
+        <li data-i="05">その他: プランモード（書く前に調査・計画）/ /memory（CLAUDE.md にルール常駐）/ @ファイル指定（探させず直接渡す）/ /goal（完了条件まで自走）/ /btw（履歴を汚さない脱線質問）</li>
+        <li data-i="06">結論: 10個に共通するのは『AI に会話を垂れ流さず、文脈を自分で設計・管理する』こと。⚠️ 記事後半は GPTs配布・LINE誘導の情報商材導線</li>
+      </ul>
+      <div class="pull">
+        受講者が Claude Code を『書く相手』から『文脈を管理する道具』へ認識を切り替えるための実践チェックリスト。/clear・/compact・/context の使い分けや /memory による CLAUDE.md 常駐は、長い作業での品質低下を直接防ぐ。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,944</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/masaki_aihack/status/2069695349086900342">@masaki_aihack</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-24</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI/ワークフロー</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/masaki_aihack/status/2069695349086900342">x.com/masaki_aihack/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · CLAUDEDEVS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI/エンタープライズ <span class="sep">/</span> @CLAUDEDEVS（公式） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Claudeの「エージェント・アイデンティティ」— 共有チャンネルではClaude自身の資格情報で動く</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-26/topic_6.png" data-alt="Claudeの「エージェント・アイデンティティ」— 共有チャンネルではClaude自身の資格情報で動く" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-26/topic_6.png" alt="Claudeの「エージェント・アイデンティティ」— 共有チャンネルではClaude自身の資格情報で動く" />
+      </div>
+      <p class="lede">
+        Anthropic 公式が、複数人いる共有チャンネルで Claude が『誰の権限で動くのか』に答えたスレッド。結論は『Claude 自身の権限』。チームに Claude をタグ付けすると、人間のメンバーと同じように自分専用のアカウント・資格情報が割り当てられる。この仕組みを agent identity と呼ぶ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">DM とチャンネルで挙動が違う: DM では Claude は『あなたとして』動く（あなたのコネクタ・名前。個人メールやカレンダーの定位置）</li>
+        <li data-i="02">共有チャンネルでは『借りるべき正しい権限』が存在しないため Claude は『自分自身として』動く</li>
+        <li data-i="03">agent identity の中身: チャンネルでは Claude が自分専用の Linear・GitHub・データウェアハウスのサービスアカウントを持つ</li>
+        <li data-i="04">管理者制御: 一度プロビジョニングし、チャンネルごとに到達範囲をスコープ（共有スペースは広い読取、機微ツールは限られた人だけ）</li>
+        <li data-i="05">設計思想: 『役立つだけのアクセスを与え、どこで止まるかは管理者が正確に制御する』</li>
+      </ul>
+      <div class="pull">
+        チーム常駐型 AI を組織に置くときの権限設計のお手本。『DM＝個人として代理、共有チャンネル＝AI 自身の独立アカウント』という線引きは、誰の機密がどこまで見えるかという情報境界の問題に直結し、Ryoko の運用思想とも一致する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,948</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2069895377080443271">@ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-24</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI/エンタープライズ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2069895377080443271">x.com/ClaudeDevs/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://openai.com/index/openai-broadcom-jalapeno-inference-chip/">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-06-25/">
+      ← 前日 · 2026-06-25
+      <span class="big">Anthropic「Claude Tag」公開 — Claude が Slack に“チームの一員”として常駐、@メンションでタスクを非同期委任</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-06-26/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260626.0737</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

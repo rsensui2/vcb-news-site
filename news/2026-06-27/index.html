@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-06-27 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-06-27 の Vibe Coder Bootcamp モーニングディスパッチ — 4本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0627</span>
+    <span class="sep">/</span>
+    <span>2026-06-27</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>04 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260627.0725</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-06-27/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:25 · FRI</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · FRIDAY · JUNE 27, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>06<span class="dot">.</span>27</h1>
+    <div class="strap">
+      <span>Anthropic · Google · Claude · Micron</span>
+      <span><span class="count">04</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ/政策 <span class="sep">/</span> BLOOMBERG(一次) / NIKKEI ASIA / THE NEXT WEB / TECHTIMES <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic、Alibaba「Qwen」による過去最大級の蒸留攻撃を上院に告発 — 2,880万件の不正やり取り、米議会は対中制裁修正案へ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-27/topic_1.png" data-alt="Anthropic、Alibaba「Qwen」による過去最大級の蒸留攻撃を上院に告発 — 2,880万件の不正やり取り、米議会は対中制裁修正案へ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-27/topic_1.png" alt="Anthropic、Alibaba「Qwen」による過去最大級の蒸留攻撃を上院に告発 — 2,880万件の不正やり取り、米議会は対中制裁修正案へ" />
+      </div>
+      <p class="lede">
+        Anthropic が、Alibaba の Qwen ラボに紐づくオペレーターが Claude に対し『過去最大級の敵対的蒸留攻撃』を行ったと、米上院銀行委員会宛ての6/10付書簡で告発した(Bloomberg が6/24に初報)。約25,000の不正アカウントと商用プロキシで地理制限を回避し、2026/4/22〜6/5の6週間で約2,880万件のやり取りを生成したとされる。狙われたのはエージェント推論・ソフトウェア工学・長期タスク遂行という Claude の最も商業価値の高い能力だった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">規模: 約25,000の不正アカウント・商用プロキシ経由で6週間に約2,880万件。中国エンティティを排除する地理制限を回避</li>
+        <li data-i="02">蒸留(distillation)とは: フロンティアモデルに大量クエリを投げ応答を収集し、安価な競合モデルの学習に使う手法。R&amp;Dコストを払わず能力を再パッケージする行為</li>
+        <li data-i="03">議会の反応: Hagerty・Andy Kim 両議員が、不正に米AI出力へアクセスした中国企業を制裁・ブラックリスト化する修正案を必須の国防法案へ。下院でも超党派の関連法案</li>
+        <li data-i="04">法的シフト: 利用規約(ToS)違反の枠を超え、貿易法・制裁による対処へ。公開APIにクエリを流す行為への刑事枠組み化には懸念の声も</li>
+        <li data-i="05">前史: 2026/2 には DeepSeek・Moonshot・MiniMax の3ラボで計1,600万件超。4月の OSTP Kratsios メモの警告後に起きた『警告無視』案件</li>
+        <li data-i="06">⚠️ Alibaba はコメント拒否。Qwen が実際に Claude の能力で改善したか・IP侵害に当たるかは未確定</li>
+      </ul>
+      <div class="pull">
+        オープンウェイト competitor の『蒸留で安く追いついた説』に国家安全保障レベルで火がついた構図。モデル調達側にとって、地政学リスクが API アクセスや輸出規制を通じて供給に跳ね返る最新事例で、Anthropic 自身も Fable/Mythos の輸出停止で政府と板挟みになっている。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://asia.nikkei.com/business/technology/artificial-intelligence/anthropic-accuses-alibaba-of-largest-known-distillation-attack-on-claude">Bloomberg(一次) / Nikkei Asia / The Next Web / TechTimes</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-24</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ/政策</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://asia.nikkei.com/business/technology/artificial-intelligence/anthropic-accuses-alibaba-of-largest-known-distillation-attack-on-claude">https://asia.nikkei.com/business/technology/artificial-intelligence/anthropic-accuses-alibaba-of-largest-known-distillation-attack-on-claude</a></dd>
+        <dd><a href="https://thenextweb.com/news/anthropic-accuses-alibaba-distillation-claude-qwen">thenextweb.com/news/anthropic-accuses-al…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · BLOOMBERG / TECHCR</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        業界/人材 <span class="sep">/</span> BLOOMBERG(一次) / TECHCRUNCH / THE NEXT WEB / NEOWIN <span class="sep">/</span> NEWS
+      </div>
+      <h2>Google から Anthropic への AI 頭脳流出が止まらない — Gemini の Adler・Pritzel が移籍、『6日間で4人』の連鎖</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-27/topic_2.png" data-alt="Google から Anthropic への AI 頭脳流出が止まらない — Gemini の Adler・Pritzel が移籍、『6日間で4人』の連鎖" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-27/topic_2.png" alt="Google から Anthropic への AI 頭脳流出が止まらない — Gemini の Adler・Pritzel が移籍、『6日間で4人』の連鎖" />
+      </div>
+      <p class="lede">
+        Google の Gemini に主要貢献してきた研究者 Jonas Adler と Alexander Pritzel が Anthropic へ移籍する見込みと Bloomberg が6/24に報じた。Adler は AI コーディング、Pritzel は事前学習(pretraining)が専門。Noam Shazeer(→OpenAI)、John Jumper(→Anthropic)に続き、直近6日間で Gemini から計4人(Anthropic へ3、OpenAI へ1)の上級研究者が抜ける連鎖の最新となる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">専門: Adler のコーディング研究は Cursor/Codex/Claude Code との競争に直結。Pritzel はモデルが大規模データから学ぶ pretraining 初期段階を担当</li>
+        <li data-i="02">John Jumper との縁: 2人ともノーベル賞の AlphaFold 研究で Jumper と協働。先に Anthropic へ移った Jumper(06-21既報)に合流する形</li>
+        <li data-i="03">6日で4人: Shazeer(→OpenAI)・Jumper(→Anthropic)・Adler・Pritzel(→Anthropic)。全員 Gemini 出身</li>
+        <li data-i="04">動機: 最大の引力は IPO 前のエクイティ。『Google は給与は出せても、上場前の $100B 級企業に入る upside は出せない』。一部は計算資源配分を巡る方針対立も背景</li>
+        <li data-i="05">構造傾向: SignalFire 2025 分析で『DeepMind エンジニアは逆方向の約11倍 Anthropic へ流れやすい』。提携相手の Google から積極的に吸い上げ</li>
+        <li data-i="06">⚠️ 両社・本人とも公式コメントなし(関係者情報ベース)</li>
+      </ul>
+      <div class="pull">
+        フロンティアラボは『最難問を解ける少数の人間』で回る。その中核を上場直前の2社に1週間で4人奪われる事実は、Gemini の競争力そのものより『次の研究者が残るか去るか』の判断材料として効く。AI 業界の重心が pre-IPO スタートアップへ傾く象徴。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://techcrunch.com/2026/06/24/ai-researchers-continue-to-leave-google-for-its-rivals/">Bloomberg(一次) / TechCrunch / The Next Web / Neowin</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-24</dd>
+        <dt>CATEGORY</dt>
+        <dd>業界/人材</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://techcrunch.com/2026/06/24/ai-researchers-continue-to-leave-google-for-its-rivals/">https://techcrunch.com/2026/06/24/ai-researchers-continue-to-leave-google-for-its-rivals/</a></dd>
+        <dd><a href="https://thenextweb.com/news/google-loses-two-gemini-researchers-anthropic">thenextweb.com/news/google-loses-two-gem…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · ANTHROPIC  / RELEA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> ANTHROPIC 公式リリースノート / RELEASEBOT <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code &amp; Developer Platform、6月下旬の実務アップデート群 — /rewind・90秒コード実行の明示・web_search の response_inclusion・refusal は非課金に</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-27/topic_3.png" data-alt="Claude Code &amp; Developer Platform、6月下旬の実務アップデート群 — /rewind・90秒コード実行の明示・web_search の response_inclusion・refusal は非課金に" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-27/topic_3.png" alt="Claude Code &amp; Developer Platform、6月下旬の実務アップデート群 — /rewind・90秒コード実行の明示・web_search の response_inclusion・refusal は非課金に" />
+      </div>
+      <p class="lede">
+        Anthropic が Claude Code 本体と Developer Platform で品質・実務系のアップデートをまとめて投入した。Claude Code 側は /clear 前の会話を復元する /rewind や権限・MCP 周りの安定化、長時間セッションの CPU/メモリ削減。API 側は code execution の90秒上限をツール説明に明示し、web_search/web_fetch に応答制御を追加、refusal を非課金化するなど、エージェント運用の細部が改善された。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Claude Code: /clear 前の会話を復元できる /rewind、バックグラウンドエージェント停止の恒久化、スクロール位置固定、MCP レジリエンス・OAuth 改善、ストリーミング/長時間セッションの CPU・メモリ削減</li>
+        <li data-i="02">/install-github-app: GitHub Actions ワークフロー設定が任意に(App だけ入れて workflow/secret 手順をスキップ可能)</li>
+        <li data-i="03">code execution: code_execution_20260521 で『1セル90秒』の実行上限をツール説明に明示 → LLM が長時間セルの予算を立てやすく(beta ヘッダ不要)</li>
+        <li data-i="04">web search/fetch: web_search_20260318 / web_fetch_20260318 で response_inclusion を追加。消費済み結果ブロックを API 応答から落とせる(文脈節約、beta ヘッダ不要)</li>
+        <li data-i="05">課金: stop_reason='refusal' で出力ゼロのリクエストは非課金に。advisor ツールは max_tokens でコール毎の出力上限を指定可能</li>
+        <li data-i="06">Multiagent sessions / Outcomes が managed-agents-2026-04-01 ヘッダで public beta に</li>
+      </ul>
+      <div class="pull">
+        VBC 受講者が日々触る Claude Code / API の『地味だが効く』改善群。特に web_search の response_inclusion と90秒上限の明示は、長時間エージェントの文脈汚染・タイムアウト事故を直接減らす。refusal 非課金化はコスト面の地味な朗報。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://platform.claude.com/docs/en/release-notes/overview">Anthropic 公式リリースノート / Releasebot</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://platform.claude.com/docs/en/release-notes/overview">https://platform.claude.com/docs/en/release-notes/overview</a></dd>
+        <dd><a href="https://releasebot.io/updates/anthropic/claude-code">releasebot.io/updates/anthropic/claude-c…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · MICRON  / MEMEBURN</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI/インフラ <span class="sep">/</span> MICRON 公式 / MEMEBURN <span class="sep">/</span> NEWS
+      </div>
+      <h2>Micron × Anthropic、AI インフラ供給で長期提携 — メモリ/ストレージ設計を『フロンティアモデルの要求』に直結、Series H にも出資</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-27/topic_4.png" data-alt="Micron × Anthropic、AI インフラ供給で長期提携 — メモリ/ストレージ設計を『フロンティアモデルの要求』に直結、Series H にも出資" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-27/topic_4.png" alt="Micron × Anthropic、AI インフラ供給で長期提携 — メモリ/ストレージ設計を『フロンティアモデルの要求』に直結、Series H にも出資" />
+      </div>
+      <p class="lede">
+        Micron と Anthropic が、AI インフラの供給で提携したと6/22に発表した。AI メモリアーキテクチャ・ストレージ設計・供給計画・Micron 社内での Claude 利用、さらに Anthropic の Series H への戦略的出資までを含む包括的な内容で、フロンティアモデルの要求をインフラの設計・大規模展開に直接結びつける狙いがある。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">範囲: AI メモリアーキテクチャ、ストレージ設計、供給(supply)計画の連携、Micron 社内での Claude 活用、Anthropic への戦略出資という多層パッケージ</li>
+        <li data-i="02">位置づけ: $965B 評価・$47B ARR 級で急拡大する Anthropic のサプライチェーン固め。学習・推論に必要な HBM/メモリ確保がフロンティア競争の制約条件に</li>
+        <li data-i="03">文脈: Jalapeño チップ(OpenAI×Broadcom, 06-26既報)・Cerebras×OpenAI(06-25既報)に続く『フロンティアラボ × 半導体/メモリ』垂直連携の流れ</li>
+        <li data-i="04">⚠️ 金額・出資比率など詳細は限定開示</li>
+      </ul>
+      <div class="pull">
+        モデルの賢さ競争の裏で進む『メモリ・コンピュート供給の囲い込み』。推論コストや供給安定性は API 価格・エージェント運用の経済性に直結し、調達側が見るべきインフラ前提が動いている。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://memeburn.com/micron-and-anthropic-sign-ai-infrastructure-supply-deal-in-2026/">Micron 公式 / Memeburn</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI/インフラ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://memeburn.com/micron-and-anthropic-sign-ai-infrastructure-supply-deal-in-2026/">https://memeburn.com/micron-and-anthropic-sign-ai-infrastructure-supply-deal-in-2026/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://asia.nikkei.com/business/technology/artificial-intelligence/anthropic-accuses-alibaba-of-largest-known-distillation-attack-on-claude">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-06-26/">
+      ← 前日 · 2026-06-26
+      <span class="big">OpenAI×Broadcom、初の自社AIチップ「Jalapeño」を発表 — 推論特化ASIC、開発9ヶ月でコスト約50%減</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-06-27/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260627.0725</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

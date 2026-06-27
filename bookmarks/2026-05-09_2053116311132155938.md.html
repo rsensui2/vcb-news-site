@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №087</span>
+    <span class="tick">BOOKMARK №089</span>
     <span class="sep">/</span>
     <span>2026-05-09</span>
     <span class="sep">/</span>
     <span>@Mnilax</span>
     <span class="sep">/</span>
-    <span>414 ITEMS</span>
+    <span>416 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:11 SAT</span>
+    <span>JST 07:18 SUN</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,19 +305,19 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-06-26/">NEWS</a>
+      <a href="../news/2026-06-27/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:11 · SAT</div>
+    <div class="meta">JST · 07:18 · SUN</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-05-09 <span>/</span> №087
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-05-09 <span>/</span> №089
     </div>
     <div class="cat-line">
       <span>💻 技術Tips</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">Mnimiy: Karpathy式 CLAUDE.md 4ルールを30コードベースで検証、12ルールに拡張した実践記録</h1>
     <div class="strap">
-      <span><span class="label">№</span>087 / 414</span>
+      <span><span class="label">№</span>089 / 416</span>
       <span><span class="label">SRC</span><a href="https://x.com/Mnilax/status/2053116311132155938" target="_blank" rel="noopener noreferrer">x.com/Mnilax ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/2026-05-09_2053116311132155938.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">087<span class="ord">BOOKMARK / 414</span></aside>
+    <aside class="numeral">089<span class="ord">BOOKMARK / 416</span></aside>
     <article class="prose">
 <ul><li>Author: Mnimiy (@Mnilax)</li><li>Category: 💻</li><li>Usefulness: ★★★</li><li>URL: https://x.com/Mnilax/status/2053116311132155938</li><li>Time: Sat May 09 14:14:08 +0000 2026</li><li>Engagement: 59返信 / 512リポスト / 5354いいね / 20166ブックマーク / 3107016表示</li></ul><h2>Text</h2><p>https://t.co/W4MxdOyUKD</p><h2>X Article 本文</h2><p><strong>Title</strong>: Karpathy's 4 CLAUDE.md rules cut Claude mistakes from 41% to 11%. After 30 codebases, I added 8 more</p><p>(原文略 — 日本語訳全文を以下に掲載)</p><h2>日本語訳全文</h2><p><strong>タイトル</strong>: Karpathy の CLAUDE.md 4ルールで Claude のミス率は 41% → 11% に。30 コードベースで検証して、私はさらに 8 ルール追加した</p><p>2026 年 1 月下旬、Andrej Karpathy が「Claude のコード生成」への不満をスレッドで投稿した。失敗パターンは 3 つ：<strong>サイレントな誤った前提・過剰な複雑化・触るべきでないコードへの巻き添え被害</strong>。</p><p>Forrest Chang はそのスレッドを読み、不満を 4 つの行動ルールに整理した単一の <code>CLAUDE.md</code> を作成して GitHub に公開した。初日 5,828 stars、2 週間で 60,000 ブックマーク、現在 120,000 stars。<strong>2026 年最速で伸びた単一ファイル repo</strong> だ。</p><p>私はこれを 30 コードベース × 6 週間で実測した。4 ルールは効く。これまで ~40% の頻度で起きていたミスが、得意領域のタスクでは 3% 未満まで下がった。ただしこのテンプレは 1 月時点のコード生成ミスを潰すために作られたもの。<strong>2026 年 5 月の Claude Code エコシステムは別の問題を抱えている</strong> — エージェントの内紛、フック連鎖、スキルのロード競合、セッションをまたいだ多段ワークフローの破綻。</p><p>そこで私は 8 ルール追加した。以下、12 ルール完全版・各ルールの採用理由・Karpathy オリジナル 4 ルールがサイレントに破綻する 4 つの場面を順に解説する。</p><h3>なぜこれが重要か</h3><p>CLAUDE.md は AI コーディングスタック全体で<strong>最も活かされていないファイル</strong>だ。多くの開発者は次のいずれか：</p><ul><li>これまでの好みを全部詰め込み、4,000+ トークンに肥大化させ、コンプライアンスが 30% に落ちる</li><li>完全にスキップして毎回プロンプトに書く → トークン 5 倍ムダ、セッション間で一貫性なし</li><li>テンプレを一度コピーして放置。2 週間は動くが、コードベースの変化でサイレントに壊れる</li></ul><p>公式 Anthropic ドキュメントは明示している：CLAUDE.md は advisory（助言的）。Claude は約 80% の確率で従う。<strong>200 行を超えると重要ルールがノイズに埋もれてコンプライアンスが急落</strong>する。</p><p>Karpathy のテンプレは 1 ファイル 65 行 4 ルールでこれを解決した。<strong>それが最低ライン</strong>。</p><p>天井はもっと高い。8 ルール追加することで、Karpathy が嘆いた 1 月のコード生成問題だけでなく、<strong>当時はまだ存在しなかった 5 月のエージェントオーケストレーション問題</strong>までカバーできる。</p><h3>オリジナル 4 ルール</h3><p>Forrest Chang の repo を読んでいない人向けに最低ライン：</p><ul><li><strong>ルール 1: コーディング前に考える</strong> — サイレントな前提を置かない。前提を明示する。トレードオフを表に出す。推測する前に質問する。よりシンプルな方法があるならプッシュバックする。</li><li><strong>ルール 2: シンプル優先</strong> — 問題を解く最小コード。投機的な機能を入れない。1 回しか使わないコードに抽象化を入れない。シニアエンジニアが「複雑すぎ」と言うなら簡単にする。</li><li><strong>ルール 3: 外科的変更</strong> — 必要な箇所だけ触る。隣接コードやコメントや書式を「改善」しない。壊れていないものをリファクタリングしない。既存スタイルに合わせる。</li><li><strong>ルール 4: ゴール駆動実行</strong> — 成功条件を定義する。検証されるまでループする。Claude に手順を指示せず、成功の形を伝えて反復させる。</li></ul><p>この 4 つで、無監督の Claude Code セッションで起きる失敗の ~40% は塞げる。残り ~60% が以下のギャップに住んでいる。</p><h3>私が追加した 8 ルール（とその理由）</h3><p>各ルールは「Karpathy の 4 つでは足りなかった瞬間」から生まれた。瞬間 → ルールの順で書く。</p><p><strong>ルール 5: モデルに非言語タスクをやらせない</strong></p><p>Karpathy のルールはここに無言。モデルが「API リトライすべきか」「メッセージをどうルーティングするか」「いつエスカレーションするか」のような<strong>本来 deterministic コードであるべき判断</strong>を毎週違う結果で返してくる。$0.003/token の不安定 if-else。</p><p>*瞬間*: 「503 エラー時にリトライするか Claude に判断させる」コードが 2 週間完璧に動いた後、モデルがリクエストボディをそのまま判断材料に読み始めて挙動がブレ始めた。プロンプトが毎回違うから、リトライポリシーが乱数化した。</p><p><strong>ルール 6: ハードトークン予算、例外なし</strong></p><p>予算なしの CLAUDE.md は白紙小切手。あらゆるループが 50,000 トークンのコンテキストダンプに化ける可能性がある。モデルは自発的に止まらない。</p><p>*瞬間*: デバッグセッションが 90 分続いた。モデルは同じ 8KB のエラーメッセージを延々イテレーションして、どの修正をすでに試したか少しずつ忘れていった。最終的に 40 メッセージ前に却下した修正案を再提案してきた。トークン予算があれば 12 分で殺せた。</p><p><strong>ルール 7: 衝突を平均化せず可視化する</strong></p><p>コードベースの 2 つの部分が異なる方針を採っているとき、Claude は両方を喜ばせようとする。結果は支離滅裂。</p><p>*瞬間*: あるコードベースでエラーハンドリングが 2 パターン共存していた — async/await + 明示的 try/catch と、グローバルエラーバウンダリ。Claude は両方やる新コードを書いた。<strong>エラーハンドラ二重化、エラーが二重に飲み込まれる</strong>。原因究明に 30 分。</p><p><strong>ルール 8: 書く前に読む</strong></p><p>Karpathy の「外科的変更」は「隣接コードを触るな」と教えるが、「隣接コードをまず理解しろ」とは教えない。これがないと Claude は 30 行先の既存コードと衝突する新コードを書く。</p><p>*瞬間*: Claude が「読んでいない」既存関数のすぐ隣に、まったく同じことをする関数を追加した。新しいほうが import 順で優先された。古いほうは 6 ヶ月間 source of truth だった。</p><p><strong>ルール 9: テストは必須、でもゴールではない</strong></p><p>Karpathy の Goal-Driven Execution は暗黙にテストを成功条件として扱う。実際には Claude は「テストが通る」を<strong>唯一のゴール</strong>とみなし、浅いテストだけ通って他がぜんぶ壊れるコードを書く。</p><p>*瞬間*: Claude が認証関数に 12 個テストを書いた。全部 pass。本番で認証は壊れていた。テストは「関数が何かを返す」を確認しているだけで、「正しいものを返すか」は確認していなかった。関数は定数を返していたから通っていた。</p><p><strong>ルール 10: 長尺オペレーションにはチェックポイント</strong></p><p>Karpathy のテンプレはワンショット対話を前提にしている。実際の Claude Code 作業は多段だ — 20 ファイル横断リファクタ、セッションをまたぐ機能構築、複数コミットにわたるデバッグ。<strong>チェックポイントが無いと、1 つの誤りで全進捗を失う</strong>。</p><p>*瞬間*: 6 段階のリファクタがステップ 4 でしくじった。気づいた時には Claude はすでに壊れた状態の上にステップ 5・6 を積み上げていた。<strong>解きほぐすより最初からやり直すほうが早かった</strong>。チェックポイントがあればステップ 4 で捕まえられた。</p><p><strong>ルール 11: コンベンションが目新しさに勝つ</strong></p><p>確立されたパターンを持つコードベースで、Claude は自分流のパターンを持ち込みたがる。たとえ「自分流のほうが良い」としても、<strong>2 パターン共存はどちらか単独より悪い</strong>。</p><p>*瞬間*: クラスコンポーネント主体のコードベースに Claude が React Hooks を導入した。動いた。同時に <code>componentDidMount</code> を前提にしたテストパターンが壊れた。除去と書き直しに半日。</p><p><strong>ルール 12: サイレントに失敗するな、可視に失敗しろ</strong></p><p>最も高くつく Claude の失敗は「<strong>成功に見える失敗</strong>」だ。関数が「動く」が誤データを返す。マイグレーションが「完了」するが 30 レコードを skip。テストが「pass」するがアサーション自体が間違っている。</p><p>*瞬間*: Claude が「DB マイグレーション正常完了」と報告。実際には constraint 違反で <strong>14% のレコードを silent に skip</strong> していた。skip はログには出ていたが表面化していなかった。気づいたのは 11 日後、レポートが変だと気づいたとき。</p><h3>数字</h3><p>30 コードベース × 50 タスク × 6 週間で同じセットを 3 構成で測った：</p><ul><li><strong>CLAUDE.md なし</strong>: ミス率 41%</li><li><strong>Karpathy 4 ルール</strong>: ミス率 11%（コンプライアンス 78%）</li><li><strong>拡張 12 ルール</strong>: ミス率 3%（コンプライアンス 76%）</li></ul><p>ミス率 = 意図に合わせるための修正/書き直しが必要だったタスク（サイレント前提・過剰設計・巻き添え被害・サイレント失敗・コンベンション違反・衝突平均化・チェックポイント漏れ）。コンプライアンス = 該当ルールが適用可能だった場面で Claude が可視に従った率。</p><p>面白いのは「41% → 3%」という見出しではない。<strong>4 ルールから 12 ルールに増やしてもコンプライアンスはほぼ落ちなかった (78% → 76%)</strong> のに、ミス率がさらに 8 ポイント減ったこと。新ルールは旧 4 ルールが扱わなかった失敗モードをカバーしているので、注意リソースを奪い合っていない。</p><h3>Karpathy テンプレがサイレントに破綻する 4 箇所</h3><p>オリジナル 4 ルールテンプレが「新ルール追加前にすでに不十分」になる 4 箇所：</p><ol><li><strong>長尺エージェントタスク</strong> — Karpathy のルールは「Claude がコードを書いている瞬間」を狙っている。（以下略）</li></ol><h2>まとめ</h2><p>Andrej Karpathy が 2026 年 1 月に Claude の失敗パターン (silent wrong assumptions / over-complication / orthogonal damage) を指摘したスレッドを起点に、Forrest Chang が 4 ルールの CLAUDE.md テンプレを作成し GitHub で爆発的ヒット（120,000 stars）。著者 Mnimiy はこれを 30 コードベース × 6 週間で実測し、ミス率が 41% → 11% に下がることを確認した上で、2026 年 5 月時点の Claude Code エコシステムで新たに顕在化した問題 (agent fights / hook cascades / skill loading conflicts / multi-step workflow 切断) に対処するための 8 ルールを追加。最終的に 12 ルール構成で <strong>ミス率 3%</strong> まで圧縮した。重要なのは「ルールを増やしてもコンプライアンス率はほぼ落ちなかった (78% → 76%)」点で、追加ルールが元の 4 ルールと注意リソースを奪い合っていない。</p>
     </article>
@@ -390,14 +390,14 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 414 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 416 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-06-26/">TODAY</a></li>
+          <li><a href="../news/2026-06-27/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -424,7 +424,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-06-27</span>
+      <span>BUILD 2026-06-28</span>
     </div>
   </div>
 </footer>

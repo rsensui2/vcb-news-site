@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-06-28 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-06-28 の Vibe Coder Bootcamp モーニングディスパッチ — 6本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0628</span>
+    <span class="sep">/</span>
+    <span>2026-06-28</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>06 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260628.0738</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-06-28/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:38 · SAT</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SATURDAY · JUNE 28, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>06<span class="dot">.</span>28</h1>
+    <div class="strap">
+      <span>米政府 · DeepSeek · オープンソース · METR</span>
+      <span><span class="count">06</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ / ガバナンス <span class="sep">/</span> SEMAFOR（一次）/ 9TO5MAC / NEOWIN <span class="sep">/</span> NEWS
+      </div>
+      <h2>米政府、Anthropic「Claude Mythos 5」の輸出ブロックを解除 — 100超の米機関へ提供許可</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-28/topic_1.png" data-alt="米政府、Anthropic「Claude Mythos 5」の輸出ブロックを解除 — 100超の米機関へ提供許可" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-28/topic_1.png" alt="米政府、Anthropic「Claude Mythos 5」の輸出ブロックを解除 — 100超の米機関へ提供許可" />
+      </div>
+      <p class="lede">
+        米政府が、Anthropic のフロンティアモデル「Claude Mythos 5」に課していた輸出ブロックを解除し、主要企業や政府機関を含む100超の『信頼できる米国の機関』への提供を許可した、と Semafor が報じた。約2週間前に輸出管理指令で Anthropic が Fable 5 / Mythos 5 を全顧客向けに無効化した措置の、米国内限定での部分的な巻き戻しにあたる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">約2週間前、輸出管理指令により Anthropic は Claude Fable 5 と Mythos 5 を全世界・全外国籍向けに無効化していた（Project Glasswing で機密システムの脆弱性発見が報じられた直後の文脈）</li>
+        <li data-i="02">今回の解禁対象は Mythos 5 のみで、範囲は『100超の信頼できる米国機関』に限定。GA や海外提供の再開ではない</li>
+        <li data-i="03">同日、OpenAI も GPT-5.6 を『米政府要請で限定プレビュー』として開始しており、フロンティアモデルの提供が政府ゲートを通る潮流が同時並行で進行</li>
+        <li data-i="04">⚠️ NSA・Anthropic は個別コメントを控えており、対象機関リストや解禁条件の詳細は未開示。Semafor 単独一次に多数メディアが追随した段階</li>
+      </ul>
+      <div class="pull">
+        フロンティアAIが『規制で突然止まり、政府承認で部分的に再開する』供給形態になりつつあることの実例。モデル供給の不確実性が経営・調達リスクとして定着しつつある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://9to5mac.com/2026/06/26/anthropic-cleared-to-release-claude-mythos-5-to-over-100-us-institutions/">Semafor（一次）/ 9to5Mac / Neowin</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-26</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ / ガバナンス</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://9to5mac.com/2026/06/26/anthropic-cleared-to-release-claude-mythos-5-to-over-100-us-institutions/">https://9to5mac.com/2026/06/26/anthropic-cleared-to-release-claude-mythos-5-to-over-100-us-institutions/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · WSJ / TECHRADAR / </span></aside>
+    <div class="main">
+      <div class="cat-line">
+        業界 / 資金・人材 <span class="sep">/</span> WSJ / TECHRADAR / CAIXIN <span class="sep">/</span> NEWS
+      </div>
+      <h2>DeepSeek、$7.4B 調達後に「全部門を倍増」する大量採用へ — 商用化シフトと AGI 宣言</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-28/topic_2.png" data-alt="DeepSeek、$7.4B 調達後に「全部門を倍増」する大量採用へ — 商用化シフトと AGI 宣言" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-28/topic_2.png" alt="DeepSeek、$7.4B 調達後に「全部門を倍増」する大量採用へ — 商用化シフトと AGI 宣言" />
+      </div>
+      <p class="lede">
+        中国の AI スタートアップ DeepSeek が、初の外部調達（$7.4B・評価額 $50B 超）を原資に『全部門を少なくとも倍増させる』大規模採用に乗り出すと WSJ / Caixin が報じた。研究偏重から商用化（commercialization）へ軸足を移しつつ、創業者 Liang Wenfeng は社内に向けて『人類は AGI の前夜に立つ』と表明したという。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">採用方針は『全部門を少なくとも倍増』。製品・商用展開を担う人員を一気に拡充する</li>
+        <li data-i="02">原資は初の外部調達 $7.4B（評価額 $50B 超）。Liang 自身が約200億元を拠出し、Tencent・CATL が大口出資者。オープンソースモデル継続の方針は維持</li>
+        <li data-i="03">評価額は Anthropic（約$965B）・OpenAI（約$852B級）とは桁違いに小さいが、低コストで frontier 級モデルを出してきた実績を『人材・商用化』フェーズへ転換</li>
+        <li data-i="04">⚠️ $7.4B 調達ラウンド自体は既報。本件の新規性は『採用倍増＋商用化シフト＋AGI 宣言』という事業フェーズ転換のニュース</li>
+      </ul>
+      <div class="pull">
+        『安く追いつく』開発力に加え、商用化と人員規模で西側ラボに正面から挑む構え。オープンソース勢からの競争圧が一段と高まる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.techradar.com/pro/humanity-now-stands-on-the-eve-of-agi-deepseek-wants-to-at-least-double-the-size-of-every-department">WSJ / TechRadar / Caixin</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-26</dd>
+        <dt>CATEGORY</dt>
+        <dd>業界 / 資金・人材</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.techradar.com/pro/humanity-now-stands-on-the-eve-of-agi-deepseek-wants-to-at-least-double-the-size-of-every-department">https://www.techradar.com/pro/humanity-now-stands-on-the-eve-of-agi-deepseek-wants-to-at-least-double-the-size-of-every-department</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · DATACHAZ</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        オープンソース / 開発者ツール <span class="sep">/</span> 開発者コミュニティ実機評価（@DATACHAZ ほか） <span class="sep">/</span> NEWS
+      </div>
+      <h2>オープンソース・コーディングモデル「Ornith-1.0」公開 — ローカル/低VRAMで実用域</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-28/topic_3.png" data-alt="オープンソース・コーディングモデル「Ornith-1.0」公開 — ローカル/低VRAMで実用域" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-28/topic_3.png" alt="オープンソース・コーディングモデル「Ornith-1.0」公開 — ローカル/低VRAMで実用域" />
+      </div>
+      <p class="lede">
+        新しいオープンソースのエージェンティック・コーディングモデル『Ornith-1.0』ファミリー（35B MoE / 9B など）が公開され、ローカル・低VRAM 環境での実用性を複数の開発者が高く評価している。一方で、ローンチ時のベンチマーク比較の見せ方には批判も出ている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">ラインナップは 35B MoE（GB10 等で実用）と 9B の GGUF 量子化（5.63GB, Q4_K_M）など。ローカル・オフライン志向</li>
+        <li data-i="02">実機証言『16GB VRAM 以下でローカルコーディングするなら Ornith-1.0-35B 一択』『9B-GGUF が Gemma4-31B を上回る』。Qwen3.6 系と接戦</li>
+        <li data-i="03">⚠️ @PawelHuryn は『公開4ベンチのうち1つだけ Opus 4.8 と比較し、残りは旧 Opus 4.7 or 比較なし』とローンチチャートのチェリーピックを指摘。ベンチ主張は割り引いて見る必要</li>
+        <li data-i="04">オープンソース（ローカル実行可）である点が、API のコスト変動や提供制限に依存しない選択肢として評価されている</li>
+      </ul>
+      <div class="pull">
+        フロンティア API が政府ゲートやコスト変動で揺れる中、『手元で動く・安いオープンモデル』の実用度が上がることは、学習者やコスト重視の現場の現実的な選択肢を広げる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://huggingface.co/models?search=Ornith-1.0">開発者コミュニティ実機評価（@DataChaz ほか）</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-26</dd>
+        <dt>CATEGORY</dt>
+        <dd>オープンソース / 開発者ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://huggingface.co/models?search=Ornith-1.0">https://huggingface.co/models?search=Ornith-1.0</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · METR/ X</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        研究 / AIインフラ <span class="sep">/</span> METR（ベンチ）/ X 拡散 <span class="sep">/</span> NEWS
+      </div>
+      <h2>METR の NanoGPT スピードラン、学習時間 45分→1.43分（2年弱で約31倍）</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-28/topic_4.png" data-alt="METR の NanoGPT スピードラン、学習時間 45分→1.43分（2年弱で約31倍）" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-28/topic_4.png" alt="METR の NanoGPT スピードラン、学習時間 45分→1.43分（2年弱で約31倍）" />
+      </div>
+      <p class="lede">
+        METR の NanoGPT スピードラン（小規模 LLM を一定品質まで学習するのに要する時間を競うベンチ）で、学習時間が 45分から 1.43分へ、2年弱で約31倍に短縮されたと報告された。AI インフラ／最適化の進歩スピードを定量化する象徴的なデータ点として共有されている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">数値: 学習時間 45分 → 1.43分、2年弱で約31倍の高速化</li>
+        <li data-i="02">対象は小規模 LLM を一定品質まで学習する speedrun。アルゴリズム・実装・ハードの総合的な最適化の積み重ねを反映</li>
+        <li data-i="03">『AI が AI 開発自体を速める』再帰的自己改善の周辺指標として位置づけられる</li>
+        <li data-i="04">⚠️ 特定タスクの speedrun であり、汎用的な学習コスト全般が31倍下がったことを意味するわけではない</li>
+      </ul>
+      <div class="pull">
+        フロンティアの話題に隠れがちだが、『学習を速く・安くする』基盤側の進歩は複利で効き、AI 開発の参入障壁とコスト構造に直結する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://metr.org/">METR（ベンチ）/ X 拡散</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-26</dd>
+        <dt>CATEGORY</dt>
+        <dd>研究 / AIインフラ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://metr.org/">https://metr.org/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · MANAMAKEAI CEO MAK</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI / 開発ツール <span class="sep">/</span> MANA｜株式会社MAKEAI CEO (@MAKEAI_CEO) / X ARTICLE <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Karpathy が語る「Claude Code」と Agentic Work の未来 — AI は「同僚」になる</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-28/topic_5.png" data-alt="Karpathy が語る「Claude Code」と Agentic Work の未来 — AI は「同僚」になる" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-28/topic_5.png" alt="Karpathy が語る「Claude Code」と Agentic Work の未来 — AI は「同僚」になる" />
+      </div>
+      <p class="lede">
+        Karpathy の 2026年5月以降の発言を軸に、AI の本当の争点は『どのモデルが賢いか』ではなく『AI をどこに置き、どんな役割を与えるか（Agentic Work）』に移っていると論じる日本語 X Article。Karpathy の Anthropic（pretraining チーム）参加と、Claude を Slack のチームメンバーとして迎える『Claude Tag』を象徴的事例として取り上げる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">AI は ①質問に答えるチャットボット → ②ターミナル/ファイル/コードベースで自律的に作業するエージェント（Claude Code）→ ③Slack や社内データに常駐する『同僚』へと段階移行している</li>
+        <li data-i="02">Karpathy は post-training ではなく pretraining チームに参加（2026/5/19）。さらに Claude で pretraining 研究自体を加速する＝より強い Claude が研究を支援し研究が速まる再帰ループの中心に本人が入った</li>
+        <li data-i="03">Claude Tag（2026/6/23 ベータ）の本質は &quot;multiplayer&quot;。同じチャンネルの全員が同じ Claude を共有し、AI との仕事が個人の閉じたチャットから共有のチーム活動へ変わる</li>
+        <li data-i="04">Karpathy は『vibe coding』を広めた後、本格的な開発概念として『Agentic Engineering』を提唱しており、この記事はその文脈で Claude Code → Claude Tag の流れを整理している</li>
+      </ul>
+      <div class="pull">
+        『これから AI とどう働くか』の見取り図を与える。AI をプロンプトで使う段階から、権限とスコープを与えて組織の同僚として常駐させる段階への移行が、製品（Claude Tag）として具体化している。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">98</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/MakeAI_CEO/status/2070349324274582006">@MakeAI_CEO</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-26</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI / 開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/MakeAI_CEO/status/2070349324274582006">x.com/MakeAI_CEO/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · SAM ALTMAN SAMA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        LLM / モデルリリース <span class="sep">/</span> SAM ALTMAN (@SAMA) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>OpenAI、GPT-5.6 ファミリー「Sol」と「Terra」を発表 — 米政府要請で限定プレビュー開始</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-28/topic_6.png" data-alt="OpenAI、GPT-5.6 ファミリー「Sol」と「Terra」を発表 — 米政府要請で限定プレビュー開始" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-28/topic_6.png" alt="OpenAI、GPT-5.6 ファミリー「Sol」と「Terra」を発表 — 米政府要請で限定プレビュー開始" />
+      </div>
+      <p class="lede">
+        Sam Altman が GPT-5.6 ファミリーの『Sol』（GPT-5.5 と同価格で大幅な性能向上）と『Terra』（GPT-5.5 級の性能を半額で提供）を発表した。ただし米政府の要請により、当初予定していたオープンアクセスではなく『限定プレビュー』として提供を開始し、一般提供（GA）に向けて政府と協議を続けるとした。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Sol = smart/efficient で明確な前進、価格は GPT-5.5 据え置き。Terra = GPT-5.5 級の性能を半額で提供する廉価モデル</li>
+        <li data-i="02">米政府要請でオープンアクセスでなく limited preview として本日開始。GA まで政府と協力すると説明</li>
+        <li data-i="03">Altman『能力が新水準に達したモデルの段階展開は iterative deployment 戦略に合致するが、これが最適なプロセスとまでは思わない』と留保</li>
+        <li data-i="04">self-thread で『7月に Sol へ 750 token/sec の高速化が来る』と追加告知。同日に Anthropic の Mythos 5 が米機関向けに部分解禁されたのと同じ政府ゲートの潮流</li>
+      </ul>
+      <div class="pull">
+        Terra のような『半額で前世代級』モデルは API コスト設計を直接変える。同時に、フロンティアモデルのリリース形態に政府承認が組み込まれ、供給が規制で絞られうる現実が一次情報で確認された。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">17,032</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/sama/status/2070607488274358364">@sama</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-26</dd>
+        <dt>CATEGORY</dt>
+        <dd>LLM / モデルリリース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/sama/status/2070607488274358364">x.com/sama/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://9to5mac.com/2026/06/26/anthropic-cleared-to-release-claude-mythos-5-to-over-100-us-institutions/">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-06-27/">
+      ← 前日 · 2026-06-27
+      <span class="big">Anthropic、Alibaba「Qwen」による過去最大級の蒸留攻撃を上院に告発 — 2,880万件の不正やり取り、米議会は対中制裁修正案へ</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-06-28/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260628.0738</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

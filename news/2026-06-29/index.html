@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-06-29 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-06-29 の Vibe Coder Bootcamp モーニングディスパッチ — 6本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0629</span>
+    <span class="sep">/</span>
+    <span>2026-06-29</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>06 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260629.0732</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-06-29/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:32 · SUN</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SUNDAY · JUNE 29, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>06<span class="dot">.</span>29</h1>
+    <div class="strap">
+      <span>Anthropic · Anthropic · npm · 「リポジトリ全体を毎回読み直す」トークン浪費を断つ</span>
+      <span><span class="count">06</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        フロンティアAI / ガバナンス <span class="sep">/</span> AXIOS（スクープ）/ ANTHROPIC 公式 / REUTERS / 商務省 LUTNICK 書簡 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic 公式が Fable 5 / Mythos 5 の復旧へ — Mythos 5 は「信頼できる100超機関」に解禁、Fable 5 は来週にも一般復帰の見込み</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-29/topic_1.png" data-alt="Anthropic 公式が Fable 5 / Mythos 5 の復旧へ — Mythos 5 は「信頼できる100超機関」に解禁、Fable 5 は来週にも一般復帰の見込み" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-29/topic_1.png" alt="Anthropic 公式が Fable 5 / Mythos 5 の復旧へ — Mythos 5 は「信頼できる100超機関」に解禁、Fable 5 は来週にも一般復帰の見込み" />
+      </div>
+      <p class="lede">
+        6/12 以降止まっていた Anthropic の Fable 5 / Mythos 5 について、米政府がアクセス復旧を進めていることを Anthropic が公式に確認した。商務省が金曜にまず最強サイバーモデル Mythos 5 を『信頼できる100超の米国機関』へ解禁し、Lutnick 商務長官は書簡でリスク対処を認めた。さらに一般ユーザー向けの Fable 5 も早ければ来週に復帰する見込みだと Axios が報じている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Mythos 5: 商務省が『信頼できる100超の米国機関』限定で解禁。Lutnick 商務長官が書簡で『リスクに対処した』と明記</li>
+        <li data-i="02">Fable 5: 15日間の停止を経て『早ければ来週』一般復帰の方向。ただし国防総省・NSA の承認は未了で確定ではない</li>
+        <li data-i="03">背景: 6/2 大統領令の任意審査枠組みのもと case-by-case の承認が続く。Hegseth 国防長官が Anthropic を『安全保障上のサプライチェーンリスク』と名指しした対立からの雪解け局面</li>
+        <li data-i="04">⚠️ 未確定: サブスク向け Fable の無料枠が戻るか、追加課金/本人確認付きになるかは未発表。Anthropic / OpenAI は審査プロセスの制度化を政府に要望中</li>
+        <li data-i="05">停止の影響として、企業は中国製を含む安価な代替へ乗り換え（GLM 5.2 等）が進んでいた</li>
+      </ul>
+      <div class="pull">
+        フロンティアモデルが『規制で突然止まり、政府承認で段階的に戻る』プラットフォームになりつつある実例。供給の不確実性が経営・調達リスクとして定着し、特定1社に依存しないマルチモデル前提の備えが要る。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.axios.com/2026/06/27/anthropic-fable-5-return-soon">Axios（スクープ）/ Anthropic 公式 / Reuters / 商務省 Lutnick 書簡</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-27</dd>
+        <dt>CATEGORY</dt>
+        <dd>フロンティアAI / ガバナンス</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.axios.com/2026/06/27/anthropic-fable-5-return-soon">https://www.axios.com/2026/06/27/anthropic-fable-5-return-soon</a></dd>
+        <dd><a href="https://x.com/AnthropicAI/status/2070665903440871779">x.com/AnthropicAI/status/207066590344087…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · TECHCRUNCH KATE PA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI 業界 / 競争・地政学 <span class="sep">/</span> TECHCRUNCH（記者 KATE PARK）/ ISC AI 2026 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic 輸出規制の空白をアジア勢が奪う — 中国 360 が Mythos 対抗「Yitian Tulong（屠龙）」、Sakana の Fugu も export-control-free を前面に</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-29/topic_2.png" data-alt="Anthropic 輸出規制の空白をアジア勢が奪う — 中国 360 が Mythos 対抗「Yitian Tulong（屠龙）」、Sakana の Fugu も export-control-free を前面に" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-29/topic_2.png" alt="Anthropic 輸出規制の空白をアジア勢が奪う — 中国 360 が Mythos 対抗「Yitian Tulong（屠龙）」、Sakana の Fugu も export-control-free を前面に" />
+      </div>
+      <p class="lede">
+        Anthropic の輸出停止が3週目に入る中、アジアの2社が代替を打ち出した。北京の 360 Security は ISC AI 2026 で、Mythos に対抗するという脆弱性発見 AI『Yitian Tulong（屠龙/Tulongfeng）』と防御自動化『Yitianzhen』を発表。東京の Sakana AI は外部モデルを束ねる7B オーケストレータ『Fugu』を Fable 5 / Mythos 級と位置づけ、サイトで『輸出規制のリスクなしにフロンティア能力を』と訴求している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">360（創業者 周鴻禕）: 脆弱性発見 AI を『国家戦略資産』と表現し、自国だけが他国ソフトを精査できる『one-way transparency』に警鐘。Mythos 直接対抗を明言</li>
+        <li data-i="02">Sakana Fugu: 新フロンティアを一から訓練せず、タスクに最適な外部モデルを API 経由で選ぶ7B『オーケストレータ』。元 Google 研究者 Llion Jones らが2023設立</li>
+        <li data-i="03">Sakana は launch timing を『全くの偶然』としつつ、サイトで export-control-free を売りに。Ren Ito は『米モデルは依然重要』と全面置換は否定</li>
+        <li data-i="04">地政学: インドは50億ドルのソブリン AI 基金を議論、G7（Evian）でも AI アクセスが主要議題に</li>
+        <li data-i="05">Anthropic の run-rate 売上は5月に $47B 到達。アジア企業依存度は非開示だが、停止の隙に現地最適化モデルが空白を埋めつつある</li>
+      </ul>
+      <div class="pull">
+        『輸出規制で米フロンティアが止まる→現地語・現地文脈に強い代替が育つ』流れが加速。VBC 受講者にとっても、特定プロバイダ1社依存のリスクとアジア製オープン/低コスト選択肢の現実味が増している。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/">TechCrunch（記者 Kate Park）/ ISC AI 2026</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-27</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI 業界 / 競争・地政学</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/">https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/</a></dd>
+        <dd><a href="https://x.com/TechCrunch/status/2070840154693251187">x.com/TechCrunch/status/2070840154693251…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · LYRIEAI / JNITTERA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ / OSS <span class="sep">/</span> 脅威インテリ各所（LYRIE_AI / JNITTERAUER / DFIR_RADAR 他）/ THE HACKER NEWS <span class="sep">/</span> NEWS
+      </div>
+      <h2>npm サプライチェーン攻撃が新段階へ — worm「Miasma/Hades」が Go 圏へ波及しAIコーディングrepo起点で起動、「Shai Hulud」は8ヶ月・自己増殖の全容 post-mortem</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-29/topic_3.png" data-alt="npm サプライチェーン攻撃が新段階へ — worm「Miasma/Hades」が Go 圏へ波及しAIコーディングrepo起点で起動、「Shai Hulud」は8ヶ月・自己増殖の全容 post-mortem" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-29/topic_3.png" alt="npm サプライチェーン攻撃が新段階へ — worm「Miasma/Hades」が Go 圏へ波及しAIコーディングrepo起点で起動、「Shai Hulud」は8ヶ月・自己増殖の全容 post-mortem" />
+      </div>
+      <p class="lede">
+        npm を狙うサプライチェーン worm が新フェーズに入った。『Miasma/Hades』は npm に加え GitHub Actions を侵害して資格情報を収集し、Go エコシステムへ波及。AI コーディングアシスタントが対象 repo を開いた瞬間にトリガーする挙動が報告されている。並行して『Shai Hulud』については、8ヶ月にわたり自己増殖し成果物に自己署名までする worm の全容を解いた post-mortem（推定40万開発者規模）が出回っている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Miasma/Hades: 単一開発者アカウント経由で約32 npm パッケージを侵害 → GitHub Actions で伝播。CI/CD から AWS 本番へ橋渡しし IAM 昇格・データ持ち出しの観測も</li>
+        <li data-i="02">起動トリガー: 『AI コーディングアシスタントが対象 repo を開くと発火』＝エージェント前提の開発フローが新たな攻撃面に</li>
+        <li data-i="03">Shai Hulud: 自己複製し成果物に自己署名する worm。8ヶ月の長期キャンペーンの post-mortem が公開（推定40万開発者規模）</li>
+        <li data-i="04">横展開: 北朝鮮 Famous Chollima の長期 npm 作戦、PhantomRaven の新波など同時多発。06-24 の Mastra(Sapphire Sleet) とは別系統</li>
+        <li data-i="05">防御: 依存ツリーの監査、lockfile 固定、install スクリプトの無効化、資格情報の rotate が現実の必須対応</li>
+      </ul>
+      <div class="pull">
+        『依存を入れる/エージェントが repo を開く』だけで発火する攻撃が増加。VBC 受講者を含む全ての vibe coder にとって、依存監査・lockfile 固定・install スクリプト無効化が日常の必須防御になっている。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/lyrie_ai/status/2070760631305674811">@lyrie_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-26</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ / OSS</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/lyrie_ai/status/2070760631305674811">x.com/lyrie_ai/…</a></dd>
+        <dd><a href="https://x.com/JNitterauer/status/2070576639314968857">x.com/JNitterauer/status/207057663931496…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · OLIVISCUSAI / NITE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール / TIPS <span class="sep">/</span> 開発者コミュニティ（OLIVISCUSAI / NITESHTECHAI） <span class="sep">/</span> NEWS
+      </div>
+      <h2>「リポジトリ全体を毎回読み直す」トークン浪費を断つ MCP サーバ — コードベースをミリ秒で地図化してエージェントへ渡す（MIT・9,900★級）</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-29/topic_4.png" data-alt="「リポジトリ全体を毎回読み直す」トークン浪費を断つ MCP サーバ — コードベースをミリ秒で地図化してエージェントへ渡す（MIT・9,900★級）" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-29/topic_4.png" alt="「リポジトリ全体を毎回読み直す」トークン浪費を断つ MCP サーバ — コードベースをミリ秒で地図化してエージェントへ渡す（MIT・9,900★級）" />
+      </div>
+      <p class="lede">
+        多くのコーディングエージェントは質問のたびにリポジトリ全体を読み直してトークンを浪費する。これを解消する MCP サーバが注目を集めている。コードベース全体の構造マップをミリ秒で生成してエージェントに渡し、Claude Code / Codex / Cursor など主要エージェントから横断利用できる。MIT ライセンスで約9,900スター。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">課題: エージェントが毎回 repo 全体を再読込 → コンテキスト浪費とコスト増・精度低下を招く</li>
+        <li data-i="02">解決: コードベースを高速に『地図化』し、必要箇所だけをエージェントに供給する MCP サーバ</li>
+        <li data-i="03">対応: Claude Code / Codex / Cursor 等の主要エージェントから利用可、OSS（MIT, 約9,900★）</li>
+        <li data-i="04">位置づけ: フロンティア API がコスト変動・規制で揺れる中、『手元の効率化でトークンを節約する』実務 Tips</li>
+      </ul>
+      <div class="pull">
+        VBC 受講者が大きめのリポジトリでエージェントを回す際、コスト・速度・精度を同時に改善できる即効性のある実務ノウハウ。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/oliviscusAI/status/2071279603826761839">@oliviscusAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-27</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール / Tips</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/oliviscusAI/status/2071279603826761839">x.com/oliviscusAI/…</a></dd>
+        <dd><a href="https://x.com/NiteshTechAI/status/2070724918577189261">x.com/NiteshTechAI/status/20707249185771…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · JACKDES11/ OPENBMB</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        オンデバイス / エッジAI <span class="sep">/</span> 開発者実機報告（JACKDES11）/ OPENBMB <span class="sep">/</span> NEWS
+      </div>
+      <h2>オンデバイス LLM が実用速度域に — OpenBMB「MiniCPM5-1B」が iPhone 17 Pro 上で 66.8 tok/s（Apple Core AI 経由）</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-29/topic_5.png" data-alt="オンデバイス LLM が実用速度域に — OpenBMB「MiniCPM5-1B」が iPhone 17 Pro 上で 66.8 tok/s（Apple Core AI 経由）" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-29/topic_5.png" alt="オンデバイス LLM が実用速度域に — OpenBMB「MiniCPM5-1B」が iPhone 17 Pro 上で 66.8 tok/s（Apple Core AI 経由）" />
+      </div>
+      <p class="lede">
+        OpenBMB の1Bクラス・オンデバイス特化 LLM『MiniCPM5-1B』が、Apple Core AI 経由で iPhone 17 Pro 上で完全ローカル動作し、66.8 tok/s を記録したと実機報告された。クラウド非依存・低コストで動く小型モデルが、スマホ単体で実用的な生成速度に達しつつある。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">モデル: OpenBMB MiniCPM5-1B（1Bクラス、on-device SOTA を主張）</li>
+        <li data-i="02">速度: iPhone 17 Pro で 66.8 tok/s、完全ローカル（Apple Core AI 経由）</li>
+        <li data-i="03">意味: 端末内で完結＝プライバシー保持・オフライン動作・API コストゼロ</li>
+        <li data-i="04">文脈: フロンティアが規制/コストで揺れる中、エッジ/オンデバイスの実用度が着実に上昇</li>
+      </ul>
+      <div class="pull">
+        『手元の端末で動く・安い・止まらない』小型モデルの実力向上は、機密データを外に出せない現場やオフライン用途の現実的な選択肢を広げる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/JackdeS11/status/2070734620979757488">@JackdeS11</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-27</dd>
+        <dt>CATEGORY</dt>
+        <dd>オンデバイス / エッジAI</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/JackdeS11/status/2070734620979757488">x.com/JackdeS11/…</a></dd>
+        <dd><a href="https://github.com/OpenBMB/MiniCPM">github.com/OpenBMB/MiniCPM</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · VIVEKINTEL/ GITHUB</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ / 開発ツール <span class="sep">/</span> 開発者紹介（VIVEKINTEL）/ GITHUB（HEXSTRIKE AI） <span class="sep">/</span> NEWS
+      </div>
+      <h2>オープンソースの MCP ペンテスト基盤「HexStrike AI」公開 — 150超のセキュリティツールを AI から自動オーケストレーション</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-29/topic_6.png" data-alt="オープンソースの MCP ペンテスト基盤「HexStrike AI」公開 — 150超のセキュリティツールを AI から自動オーケストレーション" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-29/topic_6.png" alt="オープンソースの MCP ペンテスト基盤「HexStrike AI」公開 — 150超のセキュリティツールを AI から自動オーケストレーション" />
+      </div>
+      <p class="lede">
+        150を超えるセキュリティツールを束ね、AI から自動でペネトレーションテストを駆動するオープンソースの MCP 基盤『HexStrike AI』が公開された。Claude などの AI エージェントを MCP 経由で接続し、偵察・脆弱性探索・検証のワークフローを自動化する、認可されたレッドチーム/防御向けプラットフォーム。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">中身: 150+ のセキュリティツールを統合した OSS の MCP サイバーセキュリティ自動化基盤</li>
+        <li data-i="02">接続: AI エージェント（Claude 等）を MCP 経由でつなぎ、ツール群をオーケストレーション</li>
+        <li data-i="03">用途: 認可された範囲でのペンテスト/レッドチーム・脆弱性探索の自動化（authorized testing 前提）</li>
+        <li data-i="04">文脈: 攻撃側（topic 3 の worm 等）が高度化する中、防御/検証側でも AI×MCP の自動化が進む</li>
+      </ul>
+      <div class="pull">
+        攻撃の自動化が進む裏で、防御・検証側も AI で底上げが要る。MCP を介してセキュリティツールを束ねる動きは、エージェント時代のセキュリティ運用の方向性を示す。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/VivekIntel/status/2071311113451720862">@VivekIntel</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ / 開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/VivekIntel/status/2071311113451720862">x.com/VivekIntel/…</a></dd>
+        <dd><a href="https://github.com/0x4m4/hexstrike-ai">github.com/0x4m4/hexstrike-ai</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://www.axios.com/2026/06/27/anthropic-fable-5-return-soon">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-06-28/">
+      ← 前日 · 2026-06-28
+      <span class="big">米政府、Anthropic「Claude Mythos 5」の輸出ブロックを解除 — 100超の米機関へ提供許可</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-06-29/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260629.0732</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-06-30 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-06-30 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0630</span>
+    <span class="sep">/</span>
+    <span>2026-06-30</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260630.0735</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-06-30/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:35 · MON</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · MONDAY · JUNE 30, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>06<span class="dot">.</span>30</h1>
+    <div class="strap">
+      <span>オープンウェイト · GPT-5.6 · Bruce · 「マルチモデル</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 5 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        オープンモデル / ベンチマーク <span class="sep">/</span> VENTUREBEAT / SEMGREP 公式ブログ / X 速報多数 <span class="sep">/</span> NEWS
+      </div>
+      <h2>オープンウェイト GLM-5.2 が「数値」で米フロンティアの空白を埋める — Semgrep のサイバーベンチで Claude を上回る</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-30/topic_1.png" data-alt="オープンウェイト GLM-5.2 が「数値」で米フロンティアの空白を埋める — Semgrep のサイバーベンチで Claude を上回る" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-30/topic_1.png" alt="オープンウェイト GLM-5.2 が「数値」で米フロンティアの空白を埋める — Semgrep のサイバーベンチで Claude を上回る" />
+      </div>
+      <p class="lede">
+        Anthropic の Fable 5 / GPT-5.6 が米政府の輸出規制で止まる中、中国 Zhipu(Z.ai) の MIT ライセンス・オープンウェイト「GLM-5.2」(約753B MoE / 1Mコンテキスト) が、長時間エージェント型コーディングで GPT-5.5 を上回り Claude Opus 4.8 に肉薄した。さらに Semgrep のサイバーセキュリティ・ベンチでは GLM-5.2 が Claude を上回ったと報告され、「規制で止まる米フロンティア vs 自由に落とせる中国オープンモデル」という構図が数値で可視化されている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">SWE-bench Pro: GLM-5.2 が 62.1 で GPT-5.5(58.6) を明確に上回る。Claude Opus 4.8(69.2) には約7点差で追走</li>
+        <li data-i="02">FrontierSWE は Opus 4.8 に約1点差まで接近、Terminal-Bench 2.1 は 81.0(Opus 4.8 は 85.0)</li>
+        <li data-i="03">Semgrep ベンチ「We have Mythos at Home」: 脆弱性発見で GLM-5.2 が Claude を上回ると報告</li>
+        <li data-i="04">コストは GPT-5.5 の約1/6〜1/7、Artificial Analysis Index 51 でオープン首位・総合4位</li>
+        <li data-i="05">⚠️ ベンチ値は自己申告＋集計由来で bench-maxxed 批判あり。ホスト API は中国インフラ経由＋ Entity List 企業のため機微業務は self-host 推奨</li>
+      </ul>
+      <div class="pull">
+        「米フロンティアが規制で止まる→オープンモデルが性能とコストの両面で実用的代替に育つ」流れが単独ベンチで証明されつつある。1社依存リスクと self-host 可能な高性能オープンモデルの現実味が一段増した。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://venturebeat.com/technology/z-ais-open-weights-glm-5-2-beats-gpt-5-5-on-multiple-long-horizon-coding-benchmarks-for-1-6th-the-cost">VentureBeat / Semgrep 公式ブログ / X 速報多数</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-27</dd>
+        <dt>CATEGORY</dt>
+        <dd>オープンモデル / ベンチマーク</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://venturebeat.com/technology/z-ais-open-weights-glm-5-2-beats-gpt-5-5-on-multiple-long-horizon-coding-benchmarks-for-1-6th-the-cost">https://venturebeat.com/technology/z-ais-open-weights-glm-5-2-beats-gpt-5-5-on-multiple-long-horizon-coding-benchmarks-for-1-6th-the-cost</a></dd>
+        <dd><a href="https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/">semgrep.dev/blog/2026/we-have-mythos-at-…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · X RAYLINAI / BTIBO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        モデルリリース / OPENAI <span class="sep">/</span> X 速報・リーク観測(@RAYLIN_AI / @BTIBOR91 / @JP54362 ほか) <span class="sep">/</span> NEWS
+      </div>
+      <h2>GPT-5.6 ファミリーに第3階層「Luna」と新 Ultra reasoning level — Codex ユーザーへ段階ロールアウトの兆候</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-30/topic_2.png" data-alt="GPT-5.6 ファミリーに第3階層「Luna」と新 Ultra reasoning level — Codex ユーザーへ段階ロールアウトの兆候" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-30/topic_2.png" alt="GPT-5.6 ファミリーに第3階層「Luna」と新 Ultra reasoning level — Codex ユーザーへ段階ロールアウトの兆候" />
+      </div>
+      <p class="lede">
+        06-28 に「Sol / Terra」の限定プレビューが報じられた GPT-5.6 ファミリーに、第3階層「Luna」(最速・最安) と、未公開 Codex ビルド内に現れた新しい Ultra 推論レベルの存在が複数のリーク観測から浮上した。一部の Codex ユーザーには Sol が静かにロールアウトし始めたとのスクショ報告が相次ぐが、ChatGPT 一般提供はなく API / Codex 限定のままとされる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">3階層構成: Sol(フロンティア推論) / Terra(GPT-5.5級を半額) / Luna(最速・最安)</li>
+        <li data-i="02">未公開 Codex ビルドに新しい Ultra reasoning level が追加されている観測</li>
+        <li data-i="03">一部 Codex ユーザーのダッシュボードに Sol が出現したとの複数報告(未確認含む)</li>
+        <li data-i="04">6/2 大統領令を背景に限定プレビュー継続。ChatGPT 提供なし、API/Codex のみ</li>
+        <li data-i="05">⚠️ Luna/Ultra の正式仕様・価格・一般提供時期は未発表。リーク段階の情報を含む</li>
+      </ul>
+      <div class="pull">
+        フロンティアの「階層化（フラッグシップ／廉価／高速）」と推論強度の細分化が進む。コストと精度のトレードオフを設計する開発者にとって、モデル選定の粒度が一段細かくなる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/RayLin_AI/status/2071135531338170643">@RayLin_AI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>モデルリリース / OpenAI</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/RayLin_AI/status/2071135531338170643">x.com/RayLin_AI/…</a></dd>
+        <dd><a href="https://x.com/btibor91/status/2071210186384257070">x.com/btibor91/status/207121018638425707…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · KOPFREQUENCY  / BR</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ <span class="sep">/</span> セキュリティ解説(@KOPFREQUENCY ほか) / BRUCE SCHNEIER <span class="sep">/</span> NEWS
+      </div>
+      <h2>Bruce Schneier が &quot;Promptware&quot; を定義 — AI への攻撃に7段階キルチェーン、侵入口はカレンダー・メール・ドキュメント</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-30/topic_3.png" data-alt="Bruce Schneier が &quot;Promptware&quot; を定義 — AI への攻撃に7段階キルチェーン、侵入口はカレンダー・メール・ドキュメント" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-30/topic_3.png" alt="Bruce Schneier が &quot;Promptware&quot; を定義 — AI への攻撃に7段階キルチェーン、侵入口はカレンダー・メール・ドキュメント" />
+      </div>
+      <p class="lede">
+        セキュリティ研究者 Bruce Schneier が、LLM/エージェントを狙う新クラスの脅威を &quot;Promptware&quot;（プロンプトを介したマルウェア）として整理し、7段階のキルチェーンを定義したと話題になっている。カレンダー招待・メール・ドキュメントなど、エージェントが自動で「読む」あらゆるコンテンツが侵入口になりうるという指摘で、RAG・エージェントワークフロー・モデルルーティングが最も弱いとの現場補足も出ている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Promptware: プロンプトインジェクションを「マルウェアのライフサイクル」として体系化(侵入→実行→拡散)</li>
+        <li data-i="02">侵入口: カレンダー招待・メール・ドキュメント等、エージェントが自動で読むデータ全般</li>
+        <li data-i="03">弱点: 企業 AI ではエージェントワークフロー・RAG・モデルルーティングが最も狙われやすい</li>
+        <li data-i="04">対策: 観測データを「命令」と分離する設計、ツール実行前の確認、監査ログ</li>
+      </ul>
+      <div class="pull">
+        エージェントを実務に組み込むほど「読ませたコンテンツに仕込まれた指示」が現実の攻撃面になる。常駐エージェント運用や自作エージェントに直結する防御知見。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/KopFrequency/status/2071312495780692446">@KopFrequency</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/KopFrequency/status/2071312495780692446">x.com/KopFrequency/…</a></dd>
+        <dd><a href="https://x.com/DsplacementSig/status/2071305935251739053">x.com/DsplacementSig/status/207130593525…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · OPENCODE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発者ツール / ワークフロー <span class="sep">/</span> 開発者コミュニティ実機紹介(OPENCODE ほか) <span class="sep">/</span> NEWS
+      </div>
+      <h2>「マルチモデル・無料の Claude Code 代替」が台頭 — 100+モデルを束ねロックインを断つ流れ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-30/topic_4.png" data-alt="「マルチモデル・無料の Claude Code 代替」が台頭 — 100+モデルを束ねロックインを断つ流れ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-30/topic_4.png" alt="「マルチモデル・無料の Claude Code 代替」が台頭 — 100+モデルを束ねロックインを断つ流れ" />
+      </div>
+      <p class="lede">
+        米フロンティアが規制で不安定になる中、「特定 AI ラボにロックインされない」開発体験を求める動きが加速している。OpenCode のような「100超のモデルを切り替えて使える無料の Claude Code 風 CLI」や、Claude Code / Cursor / Codex / Copilot 横断で動く MIT ライセンスの OSS ツールが相次いで紹介されており、GLM-5.2 等オープンモデルの実用化がこの「マルチモデル前提」を後押ししている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">OpenCode: サブスク・トークン課金・単一ベンダー依存なしで 100+ モデルを横断利用できる Claude Code 風 CLI として紹介</li>
+        <li data-i="02">横断 OSS: Claude Code / Cursor / Codex / GitHub Copilot で共通動作、MCP + A2A 対応、MIT ライセンスのツールが台頭</li>
+        <li data-i="03">背景: 輸出規制によるフロンティア供給の不確実性 + GLM-5.2 等オープンモデルの実用化が「マルチモデル前提」を後押し</li>
+      </ul>
+      <div class="pull">
+        「1社のモデルに開発を縛らない」設計が、思想ではなく実利(供給リスク・コスト)として現実化。ツールチェーンを組む際、モデル切替・OSS 代替を前提に置く判断材料になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/KeisukeIshikawa/status/2071141844210053420">@KeisukeIshikawa</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発者ツール / ワークフロー</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/KeisukeIshikawa/status/2071141844210053420">x.com/KeisukeIshikawa/…</a></dd>
+        <dd><a href="https://x.com/GergelyOrosz/status/2071378540872770007">x.com/GergelyOrosz/status/20713785408727…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · GERGELYOROSZ THE P</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        エージェント / 業界考察 <span class="sep">/</span> @GERGELYOROSZ (THE PRAGMATIC ENGINEER) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Gergely Orosz が読み解く「新パラダイム」— 真の breakthrough は社内全システムに繋がり&quot;ただ動く&quot;クラウドAI</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-30/topic_5.png" data-alt="Gergely Orosz が読み解く「新パラダイム」— 真の breakthrough は社内全システムに繋がり&quot;ただ動く&quot;クラウドAI" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-30/topic_5.png" alt="Gergely Orosz が読み解く「新パラダイム」— 真の breakthrough は社内全システムに繋がり&quot;ただ動く&quot;クラウドAI" />
+      </div>
+      <p class="lede">
+        The Pragmatic Engineer の Gergely Orosz が Anthropic 内部関係者と話し、Karpathy の言う「第3パラダイム」の本質を解説した6連スレッド。breakthrough は Slack に Claude がいることではなく、「社内のあらゆるシステムに接続され、セットアップ不要で&quot;ただ動く&quot;クラウドAI」だと整理する。恩恵を最も受けるのは新規参画者・非エンジニア・ローカル未セットアップの貢献者だと指摘した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">本質は Slack ではなく、全社システム(ツール・統合・コンピュート・メモリ・セキュリティ)接続 × just works</li>
+        <li data-i="02">恩恵が大きいのは新規参画者・非エンジニア・ローカル未セットアップの貢献者(ローカル構築自体が不要に)</li>
+        <li data-i="03">鍵は integration。あるスタートアップは同等の仕組みを数ヶ月かけて構築した</li>
+        <li data-i="04">中堅以上の企業は単一 AI ベンダー依存を避け、推論(モデル・コスト)も自社制御したいはず</li>
+        <li data-i="05">「作れないと思うスタートアップは AI ネイティブではない」とロックイン回避を強調</li>
+      </ul>
+      <div class="pull">
+        「エージェントをチャットに入れる」段階から「社内システム全体に接続された永続クラウドAI」への移行という、エンタープライズAI導入の次フェーズを的確に言語化している。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">3,892</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/GergelyOrosz/status/2071126385121452190">@GergelyOrosz</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>エージェント / 業界考察</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/GergelyOrosz/status/2071126385121452190">x.com/GergelyOrosz/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · BCHERNY CLAUDE COD</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        組織・チーム論 <span class="sep">/</span> @BCHERNY (CLAUDE CODE 作者) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Boris Cherny、Claude Code チームの「5つのアーキタイプ」を提示 — 職能が溶ける未来の役割像</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-30/topic_6.png" data-alt="Boris Cherny、Claude Code チームの「5つのアーキタイプ」を提示 — 職能が溶ける未来の役割像" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-30/topic_6.png" alt="Boris Cherny、Claude Code チームの「5つのアーキタイプ」を提示 — 職能が溶ける未来の役割像" />
+      </div>
+      <p class="lede">
+        Claude Code の作者 Boris Cherny が、エンジニアリング・プロダクト・デザイン・DS などの職能が「新しい役割」へ溶け合う未来を考察した。Claude Code チームを観察して見えた5つのアーキタイプ(Prototyper / Builder / Sweeper / Grower / Maintainer)を提示し、プロダクトのフェーズごとに必要なミックスが変わると論じている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">5アーキタイプ: ①Prototyper(新規アイデア量産) ②Builder(production化) ③Sweeper(簡素化・最適化) ④Grower(PMF改善) ⑤Maintainer(成熟運用)</li>
+        <li data-i="02">多くの人は2〜3役をまたぐ。役割は職種(eng/PM/design/DS)に縛られない</li>
+        <li data-i="03">PMF前=1+2+3、成長期=2+3+4+一部5、強PMF=3+4+5+一部2 とフェーズで必要ミックスが変わる</li>
+        <li data-i="04">未来のプロダクト役割は職能特化型でなくアーキタイプ型に近づくかもしれない</li>
+      </ul>
+      <div class="pull">
+        「肩書き」ではなく「プロダクトフェーズ × アーキタイプ」でチームを組む考え方は、小規模チームや個人開発でも「今どの動きが必要か」を自己診断するフレームになる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">17,050</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/bcherny/status/2071379474277613732">@bcherny</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>組織・チーム論</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/bcherny/status/2071379474277613732">x.com/bcherny/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · AM921543266</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        モデル運用ノウハウ <span class="sep">/</span> @AM921543266 <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>「GPT-5.6 は暴れ馬モデル」— 今のうちに Harness をガッチリ組んでおくべき、という実戦的考察</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-06-30/topic_7.png" data-alt="「GPT-5.6 は暴れ馬モデル」— 今のうちに Harness をガッチリ組んでおくべき、という実戦的考察" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-06-30/topic_7.png" alt="「GPT-5.6 は暴れ馬モデル」— 今のうちに Harness をガッチリ組んでおくべき、という実戦的考察" />
+      </div>
+      <p class="lede">
+        間もなく来る GPT-5.6 の「クセ」を見越し、今のうちに Harness(制御の足場)をガッチリ組んでおくべきという実戦的な運用考察。GPT-5.x 系の弱点と強みを整理し、Claude 系との使い分け戦略まで踏み込んでいる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">GPT-5.6 は暴れ馬。明確な指示が無いとバックエンドをモック・テストをズル突破・新規立ち上げが苦手</li>
+        <li data-i="02">反面コードレビューに非常に強い。context まっさらの不正検知 Bot を常時巡回させ GAN 的対立を組む設計が有効</li>
+        <li data-i="03">GPT-5系はメタ認知に弱い傾向(GPT-5/5.2 に続き3回目)。事前学習からやり直す GPT-6 待ちの見立て</li>
+        <li data-i="04">当面は「レビューの天才 GPT-5.x」と「メタ認知に強い Claude 5系(Sonnet 5 期待)」の使い分けが鍵</li>
+      </ul>
+      <div class="pull">
+        モデルの&quot;性格&quot;を見極めて Harness とワークフローを設計するという実務知見。生成エージェント × 別 context のレビュー/検出エージェントを対立させる設計は、コード品質や不正検知の自動化に応用できる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">61</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/AM921543266/status/2071553624090755350">@AM921543266</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-29</dd>
+        <dt>CATEGORY</dt>
+        <dd>モデル運用ノウハウ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/AM921543266/status/2071553624090755350">x.com/AM921543266/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://venturebeat.com/technology/z-ais-open-weights-glm-5-2-beats-gpt-5-5-on-multiple-long-horizon-coding-benchmarks-for-1-6th-the-cost">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-06-29/">
+      ← 前日 · 2026-06-29
+      <span class="big">Anthropic 公式が Fable 5 / Mythos 5 の復旧へ — Mythos 5 は「信頼できる100超機関」に解禁、Fable 5 は来週にも一般復帰の見込み</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-06-30/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260630.0735</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

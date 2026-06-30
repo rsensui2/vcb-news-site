@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-07-01 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-07-01 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0701</span>
+    <span class="sep">/</span>
+    <span>2026-07-01</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260701.0733</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-07-01/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:33 · TUE</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · TUESDAY · JUNE 1, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>07<span class="dot">.</span>01</h1>
+    <div class="strap">
+      <span>AIソフトウェア開発スタートアップ「8090」が · ArtificialAnalysis「AA-Briefcase」— · Anthropic · ローカルでフロンティアモデルを低予算で動かす</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 5 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 AI業界ニュース / 資金調達 <span class="sep">/</span> SILICONANGLE <span class="sep">/</span> NEWS
+      </div>
+      <h2>AIソフトウェア開発スタートアップ「8090」が $135M を調達 — エージェント前提の開発企業に資金集中</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-01/topic_1.png" data-alt="AIソフトウェア開発スタートアップ「8090」が $135M を調達 — エージェント前提の開発企業に資金集中" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-01/topic_1.png" alt="AIソフトウェア開発スタートアップ「8090」が $135M を調達 — エージェント前提の開発企業に資金集中" />
+      </div>
+      <p class="lede">
+        AI でエンタープライズ向けカスタムソフトウェアを構築する 8090 が $135M の資金調達ラウンドを実施した。同じ週には推論基盤の Baseten が $1.5B、AIエージェントのストレステスト環境を手がける Patronus AI が $50M を調達しており、「エージェント前提の開発」と「AIインフラ」へ同時並行で資金が集中している局面を象徴する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">調達額は $135M。領域は AI によるエンタープライズ向けカスタムソフト開発</li>
+        <li data-i="02">同週に Baseten が $1.5B(推論インフラ)を調達、AI 本番運用フェーズの資金需要が顕在化</li>
+        <li data-i="03">Patronus AI も $50M を調達し、AIエージェントを安全に検証する「デジタル世界」構築を標榜</li>
+        <li data-i="04">Cognition($260億評価)など自律開発エージェント勢の資金集中と同じ流れの延長線上</li>
+      </ul>
+      <div class="pull">
+        「人間が書く」から「エージェントが作る」への移行に投資家が大きくベットしている。VBC 受講者にとって、エージェント開発スキルの市場価値が資金面でも裏付けられている。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://siliconangle.com/2026/06/29/ai-software-development-startup-8090-nabs-135m-funding-round/">SiliconANGLE</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-29</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 AI業界ニュース / 資金調達</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://siliconangle.com/2026/06/29/ai-software-development-startup-8090-nabs-135m-funding-round/">https://siliconangle.com/2026/06/29/ai-software-development-startup-8090-nabs-135m-funding-round/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · EMOLLICK / ARTIFIC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 AIベンチマーク / 評価 <span class="sep">/</span> @EMOLLICK / ARTIFICIALANALYSIS <span class="sep">/</span> NEWS
+      </div>
+      <h2>ArtificialAnalysis「AA-Briefcase」— 数週間規模の複雑なコンサル業務を AI にやらせる新ベンチ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-01/topic_2.png" data-alt="ArtificialAnalysis「AA-Briefcase」— 数週間規模の複雑なコンサル業務を AI にやらせる新ベンチ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-01/topic_2.png" alt="ArtificialAnalysis「AA-Briefcase」— 数週間規模の複雑なコンサル業務を AI にやらせる新ベンチ" />
+      </div>
+      <p class="lede">
+        ArtificialAnalysis が、トリビアや既知解の数学・孤立したコーディング課題ではなく「数週間にわたる複雑な多段コンサル業務」を AI にこなさせる新ベンチ AA-Briefcase を公開した。Ethan Mollick(@emollick) が結果を分析し、ベンチマークがようやく『実際の仕事』に近づいてきたと評価している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">従来ベンチ(trivia・既知解の数学・孤立コーディング課題)が実務に現れない能力を測っていた、という問題意識への回答</li>
+        <li data-i="02">マルチウィーク・高複雑度の consulting gig を模した評価設計</li>
+        <li data-i="03">同時期に「実作業の21%しか完了できない」といった“現実の仕事”を測るベンチも相次いで登場</li>
+        <li data-i="04">モデルの優劣が孤立タスクの点数では割れにくくなり、長期・複合タスクで差が出る段階に入った</li>
+      </ul>
+      <div class="pull">
+        モデル選定の基準が「ベンチの点数」から「実際にマージ・納品できたか」へ移る潮流(後述の Devin Fusion の88%論と同根)。受講者が AI の実務適用範囲を見極める指標になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/emollick/status/2071449550662127927">@emollick</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-29</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 AIベンチマーク / 評価</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/emollick/status/2071449550662127927">x.com/emollick/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · SAIRAHUL1ANTHROPIC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 AI業界ニュース / 開発組織 <span class="sep">/</span> @SAIRAHUL1（ANTHROPIC CEO 発言の引用） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic CEO「コードを書かないエンジニアがいる」— 52日で50超のローンチ、Claude が次の Claude を設計</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-01/topic_3.png" data-alt="Anthropic CEO「コードを書かないエンジニアがいる」— 52日で50超のローンチ、Claude が次の Claude を設計" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-01/topic_3.png" alt="Anthropic CEO「コードを書かないエンジニアがいる」— 52日で50超のローンチ、Claude が次の Claude を設計" />
+      </div>
+      <p class="lede">
+        Anthropic CEO の発言として「社内にはコードを一切書かず Claude に書かせて編集・レビューするだけのエンジニアがいる」「Anthropic でコードを書くとは次世代 Claude を設計すること＝Claude が(完全ではないが大部分)次の Claude を設計している」が引用・拡散された。直近52日で Claude チームが50超の主要機能を投入したともされる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">「書く」より「設計・レビュー」へエンジニアの仕事がシフトしている実例(最先端ラボの自社内)</li>
+        <li data-i="02">52日で50+の major feature launch という出荷速度</li>
+        <li data-i="03">Claude が次世代 Claude の開発の大部分を担うという自己改善ループの主張</li>
+        <li data-i="04">※CEO 発言の引用ポスト経由のため、数値・文言は『とされる』トーンで受け取るのが妥当</li>
+      </ul>
+      <div class="pull">
+        「賢いモデルに振って人は判断・レビューに専念」という構図(Devin Fusion や Kenn の多重下請けと同型)が、最先端ラボ自身の働き方になっている。AI ネイティブ開発組織の到達点を示す。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/sairahul1/status/2071231218650403117">@sairahul1</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 AI業界ニュース / 開発組織</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/sairahul1/status/2071231218650403117">x.com/sairahul1/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · LUCASTECH / X ARTI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 インフラ / ローカルLLM <span class="sep">/</span> @LUCASTECH / X ARTICLE <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>ローカルでフロンティアモデルを低予算で動かす — GPU + RAM の現実解</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-01/topic_4.png" data-alt="ローカルでフロンティアモデルを低予算で動かす — GPU + RAM の現実解" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-01/topic_4.png" alt="ローカルでフロンティアモデルを低予算で動かす — GPU + RAM の現実解" />
+      </div>
+      <p class="lede">
+        民間フロンティアモデル(Mythos/Fable/GPT-5.6)へのアクセス規制を背景に、$70k 出さずにフロンティア級 OSS モデルをローカルで回す現実解を、GPU と RAM の組み合わせで価格・帯域込みで比較した記事。到達ラインは 1TB DDR4 + RTX3090×1 で約 $13k、RTX6000 構成で約 $25k。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">1TB DDR4 + RTX3090×1 で約$13k、+RTX6000 で約$25k が現実的な到達ライン</li>
+        <li data-i="02">DGX Spark は帯域が低く 512GB(4×128GB)上限で Q8 が回らず非推奨</li>
+        <li data-i="03">DDR5 が高騰：128GB ECC DDR5 が 2025/10 の約$800 → 2026/6 に約$4,000</li>
+        <li data-i="04">帯域=トークン生成速度、CPU/GPU=Prefill 速度。token/sec は『一番遅い RAM 速度』に律速</li>
+        <li data-i="05">4bit は &lt;512GB で動くが、8bit を狙うなら 768GB〜1TB のメモリが必要</li>
+      </ul>
+      <div class="pull">
+        フロンティアモデルのアクセス規制リスクへのヘッジとして、ローカルでどこまで現実的に組めるかの価格・帯域の実数感が得られる。無駄な高級構成を避ける指針になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">43</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/lucastech/status/2071663438334456150">@lucastech</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-29</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 インフラ / ローカルLLM</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/lucastech/status/2071663438334456150">x.com/lucastech/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · JUNSONG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 ローカルLLM / 最適化 <span class="sep">/</span> @JUN_SONG <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>ローカルAIの「情報格差」— MLX は MoE 最適化、dense を回すと遅くて当然</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-01/topic_5.png" data-alt="ローカルAIの「情報格差」— MLX は MoE 最適化、dense を回すと遅くて当然" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-01/topic_5.png" alt="ローカルAIの「情報格差」— MLX は MoE 最適化、dense を回すと遅くて当然" />
+      </div>
+      <p class="lede">
+        「128GB Mac で最新 Qwen が遅すぎ・熱すぎ、強力なローカル LLM は何年も先」という嘆きへの反論。MLX は dense ではなく MoE 向けに最適化されており、巨大な unified RAM を活かせるのは MoE 側。27B の dense を回せば遅くて当然で、Minimax-M3.0 や Deepseek-v4-Flash の dq 版なら滑らかに動く、という運用知見。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">MLX は MoE 最適化。27B dense は unified RAM を活かせず遅い</li>
+        <li data-i="02">Minimax-M3.0 / Deepseek-v4-Flash の dq(動的量子化)版なら体感が滑らか</li>
+        <li data-i="03">この知見はフロンティア AI に聞いても出てこない(検索不可・knowledge cutoff)</li>
+        <li data-i="04">「ローカル AI は何年も遅れている」の正体は、ハード性能でなくこの情報格差</li>
+        <li data-i="05">対策はシンプル — 専門家の X の最新情報を見て真似ること</li>
+      </ul>
+      <div class="pull">
+        ローカル LLM は『ハードのスペック』より『モデルとランタイムの相性(MoE vs dense・量子化)』で体験が激変する。LLM 自身が最新運用ノウハウを持たない以上、一次情報を追う重要性も示す。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,221</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/jun_song/status/2071625328083227118">@jun_song</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-29</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 ローカルLLM / 最適化</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/jun_song/status/2071625328083227118">x.com/jun_song/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · KINOPEEAI / X ARTI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 AIエージェント / ハーネス設計 <span class="sep">/</span> @KINOPEE_AI / X ARTICLE <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>「賢いモデルに全部やらせる」時代の終わり — Cognition の Devin Fusion</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-01/topic_6.png" data-alt="「賢いモデルに全部やらせる」時代の終わり — Cognition の Devin Fusion" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-01/topic_6.png" alt="「賢いモデルに全部やらせる」時代の終わり — Cognition の Devin Fusion" />
+      </div>
+      <p class="lede">
+        Cognition が「Devin Fusion」を発表。賢く高いモデル(メイン)と安いモデル(相棒=sidekick)を2体同時に走らせ、メインは計画・指示解釈・最終チェックだけを担う指揮者に徹する。性能を保ったままコストを 35% 下げた。記事の読みどころは『混ぜたこと』自体ではなく、どこに線を引いて設計したか。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">sidekick 方式：相棒も自分でツールを使い情報を集める一人前のエージェントとして並走、メインは手を動かさず判断に専念</li>
+        <li data-i="02">核心はキャッシュ設計：従来の『相談(ツール呼出)型』(Smart Friend / Anthropic の Advisor)は相談ごとに文脈を渡し直してキャッシュが切れ高くつく。Fusion は両者が自分のキャッシュを保持して並走するので連携してもコストが増えない</li>
+        <li data-i="03">モデル乗換は『文脈の圧縮(どのみちキャッシュが切れる瞬間)』に合わせて実質タダ化</li>
+        <li data-i="04">任せていい線引き：判断が済んで作業量だけのタスクは32〜62%安く品質維持。判断そのものが成果物のタスク(検索バーのチーム選択機能追加)は任せるとスコア半減</li>
+        <li data-i="05">数字：GPT-5.5/Opus4.8 比でコスト35%減・性能同等。社内でマージされた PR の88%が Fusion の自動振り分けだけで処理</li>
+      </ul>
+      <div class="pull">
+        これからのハーネス設計は『①タスクをどう分解するか ②どこに判断を残すか ③どこをキャッシュの区切りに合わせて乗り換えるか』の3変数を設計する技術になる。マルチエージェント/コスト最適設計の核心論点。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">110</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/kinopee_ai/status/2071664232689779011">@kinopee_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-29</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 AIエージェント / ハーネス設計</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/kinopee_ai/status/2071664232689779011">x.com/kinopee_ai/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · MASAHIROCHAEN</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 MCP / エージェント開発 <span class="sep">/</span> @MASAHIROCHAEN <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>X 公式が「X MCP」を発表 — 設定ゼロで MCP 対応 AI を X API へ直結</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-01/topic_7.png" data-alt="X 公式が「X MCP」を発表 — 設定ゼロで MCP 対応 AI を X API へ直結" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-01/topic_7.png" alt="X 公式が「X MCP」を発表 — 設定ゼロで MCP 対応 AI を X API へ直結" />
+      </div>
+      <p class="lede">
+        X 公式が「X MCP」を発表。Grok・Cursor・Claude など任意の MCP 対応 AI を、ほぼ設定ゼロで X API に接続できるようになった。API 操作用(api.x.com/mcp)とドキュメント検索用(docs.x.com/mcp)の2サーバ構成で、認証は初回ブラウザ OAuth のみ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">2サーバ構成：api.x.com/mcp(API操作)＋docs.x.com/mcp(ドキュメント検索)</li>
+        <li data-i="02">対応範囲：投稿取得・全アーカイブ検索・トレンド/ニュース・ブックマーク・記事投稿まで</li>
+        <li data-i="03">認証は初回ブラウザ OAuth ログインのみ、以降はトークン自動更新</li>
+        <li data-i="04">繋ぎ方は設定に1行(npx -y @xdevplatform/xurl mcp ...)、Node.js があれば動く</li>
+        <li data-i="05">API / CLI / MCP は『X API にアクセスする手段』で想定ユーザーが違うだけ</li>
+      </ul>
+      <div class="pull">
+        リアルタイム情報源としての X を、自前で OAuth・REST を書かずに MCP 経由でエージェントに繋げられる。受講者が自分のエージェントに X 連携を組む際の最短ルート。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">928</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/masahirochaen/status/2071840889471717529">@masahirochaen</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-30</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 MCP / エージェント開発</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/masahirochaen/status/2071840889471717529">x.com/masahirochaen/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · KENN KENN EJIMA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📖 キャリア論 / AI時代の職能 <span class="sep">/</span> @KENN (KENN EJIMA) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>AIエンジニア＝AIE という新カテゴリ — 低レイヤーは難易度と無関係に給与が下がる</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-01/topic_8.png" data-alt="AIエンジニア＝AIE という新カテゴリ — 低レイヤーは難易度と無関係に給与が下がる" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-01/topic_8.png" alt="AIエンジニア＝AIE という新カテゴリ — 低レイヤーは難易度と無関係に給与が下がる" />
+      </div>
+      <p class="lede">
+        Kenn Ejima が「AI エンジニアの定義論争」に対し、本場ではすでに AIE という略称が SWE のスペシャリティとして定着しており、在野のバイブコーダーが本物のエンジニアに化ける時代だ、と論じた長文ポスト。低レイヤーは技術的な深さや難易度と無関係に給与水準が下がる、とも警告する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">AIE は『まだ存在しない新しい付加価値をこれから作り出す存在』。今の LLM ではギリギリ、来年・再来年の水準でようやく実用になる新用途・新カテゴリを作る人</li>
+        <li data-i="02">低レイヤーは技術的深さや難易度と無関係に給与が下がる。給与は市場への付加価値の関数</li>
+        <li data-i="03">既存 SWE は『自分の好きなレイヤーが AI 以後も残るのか』を冷静に見つめるべき</li>
+        <li data-i="04">『変化を受け入れられない』マインドセットの危険性をメタ認知せよ。世を変えるのは分布の尖った側</li>
+        <li data-i="05">AI 時代には全てがエンジニアリングになり、『エンジニア』の定義すら揺らぐ（併せて『スタックの誤謬』も推奨）</li>
+      </ul>
+      <div class="pull">
+        VBC 受講生＝在野のバイブコーダーがまさに『本物のエンジニアに化ける』当事者。どのレイヤーで価値を出すか、AIE として何を作るかというキャリア設計の指針になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">375</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/kenn/status/2071769170795249783">@kenn</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-30</dd>
+        <dt>CATEGORY</dt>
+        <dd>📖 キャリア論 / AI時代の職能</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/kenn/status/2071769170795249783">x.com/kenn/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://siliconangle.com/2026/06/29/ai-software-development-startup-8090-nabs-135m-funding-round/">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-06-30/">
+      ← 前日 · 2026-06-30
+      <span class="big">オープンウェイト GLM-5.2 が「数値」で米フロンティアの空白を埋める — Semgrep のサイバーベンチで Claude を上回る</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-07-01/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260701.0733</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

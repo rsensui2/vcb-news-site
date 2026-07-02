@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №063</span>
+    <span class="tick">BOOKMARK №064</span>
     <span class="sep">/</span>
     <span>2026-05-29</span>
     <span class="sep">/</span>
     <span>@uchita_success</span>
     <span class="sep">/</span>
-    <span>426 ITEMS</span>
+    <span>428 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:14 THU</span>
+    <span>JST 07:17 FRI</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,19 +305,19 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-07-01/">NEWS</a>
+      <a href="../news/2026-07-02/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:14 · THU</div>
+    <div class="meta">JST · 07:17 · FRI</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-05-29 <span>/</span> №063
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-05-29 <span>/</span> №064
     </div>
     <div class="cat-line">
       <span>💻 AI/開発ツール / 資料作成Tips</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">AIで作ったスライド（画像/PDF）を、ズレなく編集できるパワポに変換する全手順【保存版】 (うちた)</h1>
     <div class="strap">
-      <span><span class="label">№</span>063 / 426</span>
+      <span><span class="label">№</span>064 / 428</span>
       <span><span class="label">SRC</span><a href="https://x.com/uchita_success/status/2060657166714060970" target="_blank" rel="noopener noreferrer">x.com/uchita_success ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/302_uchita_success_AI%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89%E3%82%92%E7%B7%A8%E9%9B%86%E5%8F%AF%E8%83%BD%E3%83%91%E3%83%AF%E3%83%9D%E3%81%AB%E5%A4%89%E6%8F%9B%E3%81%99%E3%82%8B%E5%85%A8%E6%89%8B%E9%A0%86.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">063<span class="ord">BOOKMARK / 426</span></aside>
+    <aside class="numeral">064<span class="ord">BOOKMARK / 428</span></aside>
     <article class="prose">
 <p><strong>有益度:</strong> ⭐⭐⭐⭐⭐</p><h2>本文 (X Article)</h2><p><strong>タイトル:</strong> AIで作ったスライド（画像/PDF）を、ズレなく編集できるパワポに変換する全手順【保存版】</p><p>AIで作った資料の致命的な弱点2つ「編集できない」「PPT変換でレイアウトがズレる」を、プロンプト1本で解決する手順をまとめた記事。</p><h3>なぜ編集できないのか</h3><p>AIが生成したスライドやPDFは中身が「1枚の画像」だから。スライドの形をしているだけで実体は写真と同じ。変換ツールでPPTにしてもレイアウトが崩れる。これを「見た目はそのまま・中身だけ編集できるPPT」に組み直すのがゴール。</p><h3>手順（コード不要・AI任せ）</h3><ol><li><strong>資料をAIに渡す</strong> — 画像/PDFを添付。1スライド＝1枚が最もきれいに出る。</li><li><strong>変換プロンプトを貼る</strong> — <code>&lt;input&gt;</code> に資料を入れて送信。色を変えたいときだけColor Paletteを触る。</li><li><strong>.pptx が生成される</strong> — AIが裏でコードを書き出す（生成時間約5分）。</li><li><strong>編集できるか確認</strong> — PowerPointで開いてCtrl+A、文字も図形も1つずつ選択枠が付けば成功。</li><li><strong>数字・固有名詞を差し替える</strong> — あとは普通のPowerPoint作業。</li></ol><h3>プロンプトが効いている3つのポイント</h3><ul><li><strong>① 文字を画像化させない</strong> — 後から1文字ずつ打ち替え可能に。変換失敗の最大原因なので最優先で禁止。</li><li><strong>② 点線/破線枠を「破線アウトライン」で描かせる（最大の肝）</strong> — AIは点を等間隔に並べようとして崩れる。塗りなし図形に破線を1本引く（<code>prstDash</code>で指定）方式にすると崩れない。</li><li><strong>③ AIが&quot;自分で見て直す&quot;</strong> — 出力後にレンダリングして原画と並べ、ズレをAI自身が修正。1〜2周で打ち切り。</li></ul><h3>重要前提</h3><p>「文章を書くAI」ではなく「コードを書いて動かせるAI」（ChatGPT/Claude/Cowork等、ファイル生成できるタイプ）が必要。裏側でコードを書いて.pptxを組み立てているため。</p><h3>つまずき対処</h3><ul><li>文字が編集できない → 「文字の画像化禁止、全テキスト編集可」を追記</li><li>日本語と英数字の間に変な隙間 → 「フォントはeastAsiaとlatin両方に同じ指定」</li><li>破線がガタつく → 「prstDashで指定、点並べ禁止」（最終判定はPowerPointで）</li><li>要素がズレる → 「座標を原画比率で正規化」「右マージン広め」で再生成</li></ul><h2>スレッド全体</h2><h3>Part 1 (親ポスト)</h3><p>記事リンク。</p><h3>Part 2 (補足リプライ)</h3><p>PPT生成で詰まる場合: 投稿者の環境でもChat（ブラウザ版）・Cowork（デスクトップアプリ）では生成できた。ChatGPTより時間がかかるためタイムアウトでエラーになる可能性あり。</p><h2>概要</h2><p>AI生成スライド/PDFが「画像の塊」で編集不可・変換でズレるという問題を、プロンプト1本で「編集可能なPPTX」に変換する全手順。鍵は「文字を画像化させない」「破線をprstDashで描く」「AI自身が原画と照合して自己修正する」の3点。コード実行できるAI（ChatGPT/Claude/Cowork）が必須。</p>
     </article>
@@ -384,14 +384,14 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 426 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 428 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-07-01/">TODAY</a></li>
+          <li><a href="../news/2026-07-02/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -418,7 +418,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-07-02</span>
+      <span>BUILD 2026-07-03</span>
     </div>
   </div>
 </footer>

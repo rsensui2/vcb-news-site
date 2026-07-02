@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>OSS 化された GLM 5.2 で作られた「ヤバい」7 作例まとめ — Bookmarks · Vibe Coder Bootcamp</title>
-  <meta name="description" content="- ローカル実行の実例: Mac Studio 上で GLM 5.2 を 2bit 量子化して動かした例。ハイエンド GPU を持たなくても、メモリ帯域の大きい Apple Silicon でフロンティア級オープンモデルがローカル稼働しつつあることを示す。 - フロントエンド生成" />
+  <title>DGX Spark + M3 Ultra をクラスタ化して LLM 推論を 4 倍高速化 — prefill/decode をハード別に分担 — Bookmarks · Vibe Coder Bootcamp</title>
+  <meta name="description" content="- スペック比較:   - DGX Spark: 128GB / 帯域 273GB/s / 100 TFLOPS(fp16) / $3,999 — 演算は強いがメモリ帯域が狭い。   - M3 Ultra: 256GB / 帯域 819GB/s / 26 TFLOPS(fp16)" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
@@ -285,11 +285,11 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №017</span>
+    <span class="tick">BOOKMARK №382</span>
     <span class="sep">/</span>
-    <span>2026-06-21</span>
+    <span>2025-10-16</span>
     <span class="sep">/</span>
-    <span>@VaibhavSisinty</span>
+    <span>@exolabs</span>
     <span class="sep">/</span>
     <span>428 ITEMS</span>
     <span class="sep">/</span>
@@ -317,36 +317,36 @@
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-06-21 <span>/</span> №017
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2025-10-16 <span>/</span> №382
     </div>
     <div class="cat-line">
-      <span>📰 技術業界ニュース / 💻 AI（オープンソース LLM / GLM）</span>
-      <span class="sep">·</span><span>Vaibhav Sisinty <span style="opacity:.7">@VaibhavSisinty</span></span>
-      <span class="sep">·</span><span>2026-06-21</span>
+      <span>🔧 インフラ / LLM 推論最適化</span>
+      <span class="sep">·</span><span>EXO Labs <span style="opacity:.7">@exolabs</span></span>
+      <span class="sep">·</span><span>2025-10-16</span>
     </div>
-    <h1 class="title">OSS 化された GLM 5.2 で作られた「ヤバい」7 作例まとめ</h1>
+    <h1 class="title">DGX Spark + M3 Ultra をクラスタ化して LLM 推論を 4 倍高速化 — prefill/decode をハード別に分担</h1>
     <div class="strap">
-      <span><span class="label">№</span>017 / 428</span>
-      <span><span class="label">SRC</span><a href="https://x.com/VaibhavSisinty/status/2068613808470606031" target="_blank" rel="noopener noreferrer">x.com/VaibhavSisinty ↗</a></span>
-      <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/346_VaibhavSisinty_OSS%E5%8C%96%E3%81%97%E3%81%9FGLM5.2%E3%81%AE7%E3%81%A4%E3%81%AE%E4%BD%9C%E4%BE%8B.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
+      <span><span class="label">№</span>382 / 428</span>
+      <span><span class="label">SRC</span><a href="https://x.com/exolabs/status/1978525767739883736" target="_blank" rel="noopener noreferrer">x.com/exolabs ↗</a></span>
+      <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/366_exolabs_DGXSpark%E3%81%A8M3Ultra%E3%82%92%E3%82%AF%E3%83%A9%E3%82%B9%E3%82%BF%E5%8C%96%E3%81%97LLM%E6%8E%A8%E8%AB%964%E5%80%8D%E9%AB%98%E9%80%9F%E5%8C%96.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
   </div>
 </section>
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">017<span class="ord">BOOKMARK / 428</span></aside>
+    <aside class="numeral">382<span class="ord">BOOKMARK / 428</span></aside>
     <article class="prose">
-<p><strong>有益度:</strong> ⭐⭐⭐⭐</p><p><strong>エンゲージメント:</strong> Likes 636 / RT 31 / Replies 33 / Bookmarks 587 / Views 156,376</p><h2>概要</h2><p>中国発の LLM「GLM 5.2」がオープンソース公開されてから 5 日で、コミュニティが作ったデモを 7 件まとめた連投スレッド。ローカル量子化からフロントエンド生成・3D 表現まで、公開直後のオープンウェイトモデルが実際に何を作れるかを実例で見せている。</p><h2>まとめ</h2><ul><li><strong>ローカル実行の実例</strong>: Mac Studio 上で GLM 5.2 を 2bit 量子化して動かした例。ハイエンド GPU を持たなくても、メモリ帯域の大きい Apple Silicon でフロンティア級オープンモデルがローカル稼働しつつあることを示す。</li><li><strong>フロントエンド生成</strong>: ランディングページ全体、インタラクティブな UI / UX デザインを GLM 5.2 単体で生成した例が複数。Vibe Coding 文脈で評価されている強み。</li><li><strong>3D / 表現系</strong>: 3D の腕時計を作った例など、テキスト→ビジュアル/3D の方向でも実用デモが出ている。</li><li><strong>世代比較</strong>: 前世代 GLM 5.1 との比較も投稿され、短期間での品質向上が話題に。</li><li>全体として「クローズドな最上位モデルに課金しなくても、オープンウェイトで現実的なアウトプットが出せる」という潮流を象徴する事例集。出典は各作例の引用ツイート（スレッド内の埋め込み）。</li></ul><h2>原文</h2><blockquote>It's been 5 days since China open-sourced GLM 5.2. What people have built with it is genuinely insane. 🤯 7 wild examples 🧵</blockquote><h2>日本語訳全文</h2><h3>Part 1（親ポスト）</h3><p>中国が GLM 5.2 をオープンソース化して 5 日が経った。人々がそれで作ったものは、控えめに言ってもイカれている。🤯 ヤバい作例を 7 つ紹介する 🧵</p><h3>Part 2</h3><p>この人は Mac Studio 上で GLM 5.2 を使って 2bit 量子化版を作った。</p><h3>Part 3</h3><p>この人は GLM 5.2 だけでランディングページ全体をデザインした。</p><h3>Part 4</h3><p>この人は GLM 5.2 で 3D の腕時計を作った。</p><h3>Part 5</h3><p>この人は GLM 5.2 でインタラクティブな UI / UX デザインを作った。</p><h3>Part 6</h3><p>この人は GLM 5.1 と比較した。</p>
+<p><strong>有益度:</strong> ⭐⭐⭐</p><p><strong>エンゲージメント:</strong> Likes 2,911 / RT 423 / Bookmarks 1,995 / Views 721,102</p><h2>概要</h2><p>EXO Labs が、NVIDIA DGX Spark と Apple M3 Ultra Mac Studio をクラスタ化し、LLM 推論を約 4 倍高速化する手法を公開。2 台のハードの特性（片方は演算性能が高く、片方はメモリ帯域が広い）を、推論の 2 フェーズ（prefill / decode）に応じて使い分けるのがポイント。</p><h2>まとめ</h2><ul><li>スペック比較:</li></ul><p>  - DGX Spark: 128GB / 帯域 273GB/s / 100 TFLOPS(fp16) / $3,999 — 演算は強いがメモリ帯域が狭い。</p><p>  - M3 Ultra: 256GB / 帯域 819GB/s / 26 TFLOPS(fp16) / $5,599 — 帯域は約3倍広いが FLOPS は約1/4。</p><ul><li>着眼点: DGX Spark は M3 Ultra より「メモリ帯域が3倍狭いが FLOPS が4倍多い」という非対称性がある。</li><li>分担設計:</li></ul><p>  - compute-bound な <strong>prefill</strong> を演算の強い DGX Spark で実行。</p><p>  - memory-bound な <strong>decode</strong> を帯域の広い M3 Ultra で実行。</p><p>  - 両者の間は <strong>KV キャッシュを 10GbE でストリーミング</strong>して受け渡す。</p><ul><li>結果: それぞれのハードの得意フェーズだけを担わせることで、単体運用より大きな speedup を実現。</li></ul>
     </article>
     <aside class="side">
       <dl>
-        <dt>AUTHOR</dt><dd>Vaibhav Sisinty</dd>
-        <dt>HANDLE</dt><dd>@VaibhavSisinty</dd>
-        <dt>POSTED</dt><dd>2026-06-21</dd>
-        <dt>CATEGORY</dt><dd>📰 技術業界ニュース / 💻 AI（オープンソース LLM / GLM）</dd>
-        <dt>SOURCE</dt><dd><a href="https://x.com/VaibhavSisinty/status/2068613808470606031" target="_blank" rel="noopener noreferrer">x.com/VaibhavSisinty/status/20686138084706…</a></dd>
-        <dt>MARKDOWN</dt><dd><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/346_VaibhavSisinty_OSS%E5%8C%96%E3%81%97%E3%81%9FGLM5.2%E3%81%AE7%E3%81%A4%E3%81%AE%E4%BD%9C%E4%BE%8B.md" target="_blank" rel="noopener noreferrer">GitHub で原文を見る</a></dd>
+        <dt>AUTHOR</dt><dd>EXO Labs</dd>
+        <dt>HANDLE</dt><dd>@exolabs</dd>
+        <dt>POSTED</dt><dd>2025-10-16</dd>
+        <dt>CATEGORY</dt><dd>🔧 インフラ / LLM 推論最適化</dd>
+        <dt>SOURCE</dt><dd><a href="https://x.com/exolabs/status/1978525767739883736" target="_blank" rel="noopener noreferrer">x.com/exolabs/status/1978525767739883736</a></dd>
+        <dt>MARKDOWN</dt><dd><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/366_exolabs_DGXSpark%E3%81%A8M3Ultra%E3%82%92%E3%82%AF%E3%83%A9%E3%82%B9%E3%82%BF%E5%8C%96%E3%81%97LLM%E6%8E%A8%E8%AB%964%E5%80%8D%E9%AB%98%E9%80%9F%E5%8C%96.md" target="_blank" rel="noopener noreferrer">GitHub で原文を見る</a></dd>
         
       </dl>
     </aside>
@@ -355,13 +355,13 @@
 
 <section class="page-nav">
   <div class="container">
-    <a class="btn prev" href="./349_alaymanguy_shadcn%E6%B5%81%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88UI%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AAagentcn.md.html">
+    <a class="btn prev" href="./38_kinopee_ai_review_automation.md.html">
       <span>← 新しいブックマーク</span>
-      <span class="big">agentcn — shadcn 流「コピペで入る」エージェント UI ライブラリ</span>
+      <span class="big">AIレビュー完全自動化: CodeRabbit + Bugbot + Codex + Dev…</span>
     </a>
-    <a class="btn next" href="./342_JohnJumperSci_AlphaFold%E3%81%AE%E3%82%B8%E3%83%A7%E3%83%B3%E3%83%BB%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%91%E3%83%BC%E3%81%8CDeepMind%E3%82%92%E9%9B%A2%E3%82%8CAnthropic%E3%81%B8.md.html">
+    <a class="btn next" href="./44_kenn_turso_convex_db.md.html">
       <span>古いブックマーク →</span>
-      <span class="big">AlphaFold のジョン・ジャンパーが Google DeepMind を離れ Anth…</span>
+      <span class="big">DB技術選定: Turso vs Convex</span>
     </a>
   </div>
 </section>
@@ -369,8 +369,8 @@
 <section class="actions">
   <div class="container">
     <a href="./">← 一覧へ戻る</a>
-    <a class="primary" href="https://x.com/VaibhavSisinty/status/2068613808470606031" target="_blank" rel="noopener noreferrer">元ポストを X で見る</a>
-    <a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/346_VaibhavSisinty_OSS%E5%8C%96%E3%81%97%E3%81%9FGLM5.2%E3%81%AE7%E3%81%A4%E3%81%AE%E4%BD%9C%E4%BE%8B.md" target="_blank" rel="noopener noreferrer">GitHub で開く</a>
+    <a class="primary" href="https://x.com/exolabs/status/1978525767739883736" target="_blank" rel="noopener noreferrer">元ポストを X で見る</a>
+    <a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/366_exolabs_DGXSpark%E3%81%A8M3Ultra%E3%82%92%E3%82%AF%E3%83%A9%E3%82%B9%E3%82%BF%E5%8C%96%E3%81%97LLM%E6%8E%A8%E8%AB%964%E5%80%8D%E9%AB%98%E9%80%9F%E5%8C%96.md" target="_blank" rel="noopener noreferrer">GitHub で開く</a>
   </div>
 </section>
 

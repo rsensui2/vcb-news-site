@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №055</span>
+    <span class="tick">BOOKMARK №060</span>
     <span class="sep">/</span>
     <span>2026-06-03</span>
     <span class="sep">/</span>
     <span>@sarukun99</span>
     <span class="sep">/</span>
-    <span>428 ITEMS</span>
+    <span>433 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:17 FRI</span>
+    <span>JST 07:21 SAT</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,19 +305,19 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-07-02/">NEWS</a>
+      <a href="../news/2026-07-03/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:17 · FRI</div>
+    <div class="meta">JST · 07:21 · SAT</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-06-03 <span>/</span> №055
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-06-03 <span>/</span> №060
     </div>
     <div class="cat-line">
       <span>🔧 セキュリティ / アーキテクチャ（Vibe Coding × 防御設計）</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">バイブコーディング時代のセキュリティ — 「不完全なコードを周囲でサンドボックス的に守る」防御論 (tomoyuki@AIシャイン)</h1>
     <div class="strap">
-      <span><span class="label">№</span>055 / 428</span>
+      <span><span class="label">№</span>060 / 433</span>
       <span><span class="label">SRC</span><a href="https://x.com/sarukun99/status/2062187169847103567" target="_blank" rel="noopener noreferrer">x.com/sarukun99 ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/310_sarukun99_%E3%83%90%E3%82%A4%E3%83%96%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AE%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E9%98%B2%E5%BE%A1%E8%AB%96.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">055<span class="ord">BOOKMARK / 428</span></aside>
+    <aside class="numeral">060<span class="ord">BOOKMARK / 433</span></aside>
     <article class="prose">
 <p><strong>有益度:</strong> ⭐⭐⭐⭐</p><p><strong>エンゲージメント:</strong> RT 3 / Likes 57 / Bookmarks 64 / Views 7,162</p><h2>本文 (X Post)</h2><blockquote>バイブコーディングだとセキュリティが、今までのソフトウェアと防御の仕方がちょっと違うんですよね。</blockquote><blockquote></blockquote><blockquote>ソースコードが完璧であるのが今までだとするなら、ソースコードは不完全でその周囲でサンドボックス的に守るのがポイントです。</blockquote><blockquote></blockquote><blockquote>認証周りは、リバースプロキシを前段に置きそこでチェックします。ALBでGoogleログイン済をチェックするのと似た感じですね。</blockquote><blockquote></blockquote><blockquote>リバースプロキシの先にデプロイされたバイブコーディングされたシステムは認証を考えなくてよくなります。</blockquote><blockquote></blockquote><blockquote>APIもリバプロで認証かかり、セキュアに公開できるようになります。</blockquote><blockquote></blockquote><blockquote>次に外部送信も同様に、outboundの送信先を絞ります。LLMのAPIか認可されたwebhook以外塞いじゃいます。</blockquote><blockquote></blockquote><blockquote>DBはマルチテナントからシングルテナントにして、ロールに関係なく全データ見れる前提(スプシと同じ)で、workerにbindします。</blockquote><blockquote></blockquote><blockquote>プログラムのバグによるデータロストはこれまで通り、ポイントリカバリを使う感じになります。</blockquote><h2>概要</h2><p>Vibe Coding（AI に書かせる開発）ではセキュリティの考え方が従来と変わる、という実践論。従来は「ソースコードが完璧であること」を前提に守るが、AI 生成コードは不完全である前提に立ち、コードの内側ではなく<strong>周囲をサンドボックス的に固める</strong>のがポイントだとする。具体策は4点: (1) 認証はリバースプロキシを前段に置いてそこでチェックする（ALB の Google ログイン済みチェックと同様）。プロキシ配下のアプリ／API は認証ロジックを持たなくてよくなる。(2) outbound（外部送信）も絞り、LLM API か認可済み webhook 以外の送信先を塞ぐ。(3) DB はマルチテナントをやめてシングルテナント化し、「ロール無関係に全データが見える前提（スプレッドシートと同じ）」で Worker に bind する。(4) プログラムのバグによるデータロストは従来どおりポイントインタイムリカバリで対応。</p>
     </article>
@@ -384,14 +384,14 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 428 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 433 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-07-02/">TODAY</a></li>
+          <li><a href="../news/2026-07-03/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -418,7 +418,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-07-03</span>
+      <span>BUILD 2026-07-04</span>
     </div>
   </div>
 </footer>

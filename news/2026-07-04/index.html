@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-07-04 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-07-04 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0704</span>
+    <span class="sep">/</span>
+    <span>2026-07-04</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260704.0738</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-07-04/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:38 · FRI</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · FRIDAY · JULY 4, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>07<span class="dot">.</span>04</h1>
+    <div class="strap">
+      <span>Kimi · Apple · Alibaba「SkillWeaver」— · Fable</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 6 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        オープンウェイト / 開発者プラットフォーム <span class="sep">/</span> GITHUB 公式 / GITHUB CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Kimi K2.7 Code が GitHub Copilot で一般提供（GA）— Copilot のモデルピッカーに初のオープンウェイトモデル</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-04/topic_1.png" data-alt="Kimi K2.7 Code が GitHub Copilot で一般提供（GA）— Copilot のモデルピッカーに初のオープンウェイトモデル" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-04/topic_1.png" alt="Kimi K2.7 Code が GitHub Copilot で一般提供（GA）— Copilot のモデルピッカーに初のオープンウェイトモデル" />
+      </div>
+      <p class="lede">
+        GitHub が中国 Moonshot AI のオープンウェイトモデル「Kimi K2.7 Code」を GitHub Copilot で一般提供（GA）にした。Copilot のモデルピッカーで選択できる初のオープンウェイトモデルで、これまで自社/提携の閉モデルだけだった選択肢に「自由に落とせるオープンモデル」が正式に加わった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Copilot のモデルピッカーで選択可能な初のオープンウェイトモデル。Pro / Pro+ / Max プランで順次ロールアウト</li>
+        <li data-i="02">VS Code / JetBrains / Xcode / Eclipse など主要 IDE の Copilot から利用可</li>
+        <li data-i="03">Kimi K2.7 Code はリポジトリ規模のコーディングに焦点を当てた Moonshot AI の open-weight モデル（K2.7 系）</li>
+        <li data-i="04">「どのモデルが総合1位か」より「どのタスクにどのモデルを差すか」というモデル選択の実務段階に入ったことを象徴、と開発者が評価</li>
+      </ul>
+      <div class="pull">
+        主要な商用コーディング支援（Copilot）が、規制で揺れる閉モデルとは別に「オープンウェイトを正式な選択肢」として組み込んだ意味は大きく、タスクごとにモデルを差し替える運用が Copilot 内でも現実になった。ロックイン回避とコスト最適化の選択肢が広がる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/">GitHub 公式 / GitHub Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-01</dd>
+        <dt>CATEGORY</dt>
+        <dd>オープンウェイト / 開発者プラットフォーム</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/">https://github.blog/changelog/</a></dd>
+        <dd><a href="https://x.com/github/status/2072712821377286168">x.com/github/status/2072712821377286168</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · WEBKIT  / JOHNWILA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        MCP / ブラウザ自動化 <span class="sep">/</span> WEBKIT 公式ブログ / @JOHNWILANDER <span class="sep">/</span> NEWS
+      </div>
+      <h2>Apple が Safari に MCP サーバをネイティブ搭載（Safari Technology Preview 247）— ブラウザ操作の AI 連携が Chrome 独占でなくなる</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-04/topic_2.png" data-alt="Apple が Safari に MCP サーバをネイティブ搭載（Safari Technology Preview 247）— ブラウザ操作の AI 連携が Chrome 独占でなくなる" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-04/topic_2.png" alt="Apple が Safari に MCP サーバをネイティブ搭載（Safari Technology Preview 247）— ブラウザ操作の AI 連携が Chrome 独占でなくなる" />
+      </div>
+      <p class="lede">
+        Apple の WebKit チームが Safari Technology Preview 247 に Model Context Protocol (MCP) サーバをネイティブ搭載した。サードパーティのブリッジや拡張ではなく Safari 本体の機能として、Web 開発・デバッグのワークフローを AI エージェントから操作できる。Mac 上でローカル動作し、既存の Safari セッション/クッキーを引き継ぐ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Safari MCP サーバは Safari Technology Preview 247 で提供。Mac 上でローカル実行し、既存の Safari セッション/クッキーを継承</li>
+        <li data-i="02">サードパーティ製ブリッジ・プラグインではなく、ブラウザ本体にネイティブ統合された MCP サーバ</li>
+        <li data-i="03">フロントエンド開発・デバッグのワークフローを AI エージェントから高速化する用途（WebKit 公式ブログ）</li>
+        <li data-i="04">Apple にとって1か月で2つ目の MCP サーバ出荷とされ、MCP が「標準プロトコル」化しつつあることを示す。ブラウザレベルのエージェントアクセスが Chrome 独占でなくなる</li>
+      </ul>
+      <div class="pull">
+        Claude in Chrome の GA に続き、ブラウザ大手の一角 Apple までが MCP をネイティブに載せたことで、エージェントが「ブラウザを操作する」土台がベンダー横断で整い、MCP がデファクト標準として固まりつつある。E2E テスト自動化・Web デバッグ自動化に Chrome 以外の選択肢と「セッション/クッキー継承」の利点が加わる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://webkit.org/blog/18136/introducing-the-safari-mcp-server/">WebKit 公式ブログ / @johnwilander</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-02</dd>
+        <dt>CATEGORY</dt>
+        <dd>MCP / ブラウザ自動化</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://webkit.org/blog/18136/introducing-the-safari-mcp-server/">https://webkit.org/blog/18136/introducing-the-safari-mcp-server/</a></dd>
+        <dd><a href="https://x.com/johnwilander/status/2072487264878522482">x.com/johnwilander/status/20724872648785…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · VENTUREBEATALIBABA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        エージェント FRAMEWORK / トークン効率 <span class="sep">/</span> VENTUREBEAT（ALIBABA 研究） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Alibaba「SkillWeaver」— 2,209 個のツールでも溺れないエージェント framework、タスク分解＋必要ツールだけ取得でトークン使用を99%削減</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-04/topic_3.png" data-alt="Alibaba「SkillWeaver」— 2,209 個のツールでも溺れないエージェント framework、タスク分解＋必要ツールだけ取得でトークン使用を99%削減" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-04/topic_3.png" alt="Alibaba「SkillWeaver」— 2,209 個のツールでも溺れないエージェント framework、タスク分解＋必要ツールだけ取得でトークン使用を99%削減" />
+      </div>
+      <p class="lede">
+        Alibaba の研究者が、大量のツールを抱えるエージェントの「コンテキスト溺れ」を解く framework「SkillWeaver」を発表した。全ツールを毎回ロードするのではなく、まず複雑なタスクをサブタスクに分解し、ライブラリから合致するツールだけを取得して実行可能なワークフローに合成することで、トークン使用量を最大99%削減する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">課題: エージェントに 2,209 個ものツールを渡すとコンテキストが溢れ、性能が劣化する</li>
+        <li data-i="02">SkillWeaver は「compositional skill routing（合成的スキルルーティング）」でタスクを分解し、必要なツールだけをライブラリから検索して合成</li>
+        <li data-i="03">全ツールを毎回コンテキストに載せる方式に対し、トークン使用量を最大99%削減</li>
+        <li data-i="04">ツールが増えるほど効く設計で、大規模ツール群を持つ実務エージェントのコスト/精度の両面に効く</li>
+      </ul>
+      <div class="pull">
+        MCP 普及でエージェントが使えるツールは急増しており、「ツールを持ちすぎるとかえって遅く・高く・不正確になる」問題が顕在化している。必要なツールだけを動的に取得する設計は Claude Code の ToolSearch（遅延ロード）と同じ方向で、大規模ツール環境を運用する現場に直結する。トークン99%削減はコスト面のインパクトも大きい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://venturebeat.com/ai/new-alibaba-ai-framework-skips-loading-every-tool-cutting-agent-token-use-99">VentureBeat（Alibaba 研究）</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-02</dd>
+        <dt>CATEGORY</dt>
+        <dd>エージェント framework / トークン効率</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://venturebeat.com/ai/new-alibaba-ai-framework-skips-loading-every-tool-cutting-agent-token-use-99">https://venturebeat.com/ai/new-alibaba-ai-framework-skips-loading-every-tool-cutting-agent-token-use-99</a></dd>
+        <dd><a href="https://x.com/VentureBeat/status/2072785942243373062">x.com/VentureBeat/status/207278594224337…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · TRQ212THARIQ / ANT</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        モデル提供体制 / ANTHROPIC <span class="sep">/</span> @TRQ212（THARIQ / ANTHROPIC） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Fable は 7/7 にサブスクから一旦外れるが、容量が許せば標準プランに復帰予定 — Anthropic の Thariq が説明</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-04/topic_4.png" data-alt="Fable は 7/7 にサブスクから一旦外れるが、容量が許せば標準プランに復帰予定 — Anthropic の Thariq が説明" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-04/topic_4.png" alt="Fable は 7/7 にサブスクから一旦外れるが、容量が許せば標準プランに復帰予定 — Anthropic の Thariq が説明" />
+      </div>
+      <p class="lede">
+        Anthropic の Thariq が、Fable のサブスク提供について寄せられた多数の質問に回答した。Fable は 2026-07-07 以降サブスクリプションから外れるが、当初のブログ記事どおり、容量（capacity）が確保でき次第サブスクの標準機能として復帰させることを目指す、という公式スタンスを示した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Fable は 2026-07-07 以降、サブスクリプションプランから外れる</li>
+        <li data-i="02">容量が確保でき次第、サブスクの標準的な一部として Fable を復帰させることを目指す（当初ブログ記事どおり）</li>
+        <li data-i="03">137万ビュー・9千いいねと反響が大きく、Fable の需要と容量制約の綱引きが注目されている</li>
+        <li data-i="04">高需要フロンティアモデルはローンチ直後、容量制約で提供形態が流動的という実例</li>
+      </ul>
+      <div class="pull">
+        高性能モデルが登場直後は計算資源の制約でサブスク提供を絞り、供給が追いついてから標準化する、というフロンティアモデルの「提供体制の現実」を示す一次情報。ツールに組み込む際は「今サブスクで使えるか」と「将来標準化されるか」を分けて計画する必要がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">8,993</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/trq212/status/2072814903170408784">@trq212</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-02</dd>
+        <dt>CATEGORY</dt>
+        <dd>モデル提供体制 / Anthropic</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/trq212/status/2072814903170408784">x.com/trq212/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · MASAKIAIHACK / AI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        CLAUDE CODE / CLAUDE.MD 設計 <span class="sep">/</span> @MASAKI_AIHACK（銀次 / AI×効率化） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Claude Code の性能を引き出す CLAUDE.md 設計術 — 「メモ帳」でなく「判断の地図」にする 5 要素</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-04/topic_5.png" data-alt="Claude Code の性能を引き出す CLAUDE.md 設計術 — 「メモ帳」でなく「判断の地図」にする 5 要素" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-04/topic_5.png" alt="Claude Code の性能を引き出す CLAUDE.md 設計術 — 「メモ帳」でなく「判断の地図」にする 5 要素" />
+      </div>
+      <p class="lede">
+        Claude Code が作業前に必ず読み込む CLAUDE.md を、思いつきを継ぎ足す「メモ帳」ではなく、AI が毎回参照する「判断の地図」として設計せよという記事。200行以内に抑え、5つの要素で構成すると AI が「推測」をやめ「参照」で動き、同じ依頼に同じ動きをして再現性が出るとする。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">CLAUDE.md は毎会話に効く高レバレッジ設定。推奨は200行以内（長すぎると重要度が埋もれ、毎回全体を読み直して推測しブレる）</li>
+        <li data-i="02">5要素: ①最優先ルール（先頭宣言） ②キーワード→置き場のルーティング表（軸は事業でなく機能） ③置き場の決定木（YES/NOで迷いを消す・一番効く） ④タスクの扱い方 ⑤機密情報の扱い（APIキーは.envへ）</li>
+        <li data-i="03">効果: AI が推測をやめ参照で動く → 同じ依頼に同じ動きで再現性。決定木末尾に「決まらなければ質問せよ」で自信満々の的外れ成果物が構造的に減る</li>
+        <li data-i="04">教訓: 賢い AI ほど、自由にさせるより「型」を渡したほうが性能が出る</li>
+      </ul>
+      <div class="pull">
+        多くの人が CLAUDE.md を放置、または逆に肥大化させて逆効果にしている中で、「200行以内」「機能で切るルーティング表」「決定木＋迷ったら質問」という具体的な型を提示している。Claude Code を業務で安定運用したい層にそのまま渡せる実践チェックリストになる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">146</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/masaki_aihack/status/2071901466026238231">@masaki_aihack</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-30</dd>
+        <dt>CATEGORY</dt>
+        <dd>Claude Code / CLAUDE.md 設計</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/masaki_aihack/status/2071901466026238231">x.com/masaki_aihack/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · NOSTPONSNEKTOM TUR</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ローカルLLM / 量子化 <span class="sep">/</span> @NO_STP_ON_SNEK（TOM TURNEY） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>4bit 量子化は fp16 の「妥協」ではない — Qwen3.6-27B (NVFP4) で実測、コサイン 0.997 の near-lossless</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-04/topic_6.png" data-alt="4bit 量子化は fp16 の「妥協」ではない — Qwen3.6-27B (NVFP4) で実測、コサイン 0.997 の near-lossless" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-04/topic_6.png" alt="4bit 量子化は fp16 の「妥協」ではない — Qwen3.6-27B (NVFP4) で実測、コサイン 0.997 の near-lossless" />
+      </div>
+      <p class="lede">
+        「フル精度の重みこそが本物のモデルで、4bit はやむを得ず妥協するもの」という通念を実測で逆転させる主張。NVIDIA の 4bit 版 Qwen3.6-27B (NVFP4) を独自の非公開行動テストで検証したところ、フル bf16 版とコサイン類似度0.997で区別がつかず、サイズは2.5倍小さかった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">NVFP4(4bit) の Qwen3.6-27B は元モデルにコサイン類似度 0.997 で near-lossless</li>
+        <li data-i="02">圧力をかけたときの振る舞い（same backbone under pressure）も同一、独自の held-out 行動テストで区別不能</li>
+        <li data-i="03">サイズは 2.5 倍小さい → フル精度を運ぶのは丸め誤差のために2.5倍の重みを担ぐようなもの</li>
+        <li data-i="04">「量子化＝劣化版」という直感は最新の4bit（NVFP4）では必ずしも当てはまらない</li>
+      </ul>
+      <div class="pull">
+        ローカルで LLM を動かしたい層にとって、「まずフル精度を諦めて4bitを選ぶ」のではなく「4bitを第一候補にしてよい」という発想の転換になる。VRAM が限られた自宅環境では、2.5倍小さいモデルが near-lossless で動くなら動かせるモデルの選択肢そのものが広がる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">72</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/no_stp_on_snek/status/2072794693457662157">@no_stp_on_snek</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-02</dd>
+        <dt>CATEGORY</dt>
+        <dd>ローカルLLM / 量子化</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/no_stp_on_snek/status/2072794693457662157">x.com/no_stp_on_snek/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · SPACETIMEVIKING / </span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ローカルLLM / 推論サービング <span class="sep">/</span> @SPACETIMEVIKING / @SLIMTRADEYBABY <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>AEON vLLM Ultimate v0.24.0 — DGX Spark 専用最適化コンテナ、単体実測で Gemma-4-26B が実用最速</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-04/topic_7.png" data-alt="AEON vLLM Ultimate v0.24.0 — DGX Spark 専用最適化コンテナ、単体実測で Gemma-4-26B が実用最速" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-04/topic_7.png" alt="AEON vLLM Ultimate v0.24.0 — DGX Spark 専用最適化コンテナ、単体実測で Gemma-4-26B が実用最速" />
+      </div>
+      <p class="lede">
+        DGX Spark (GB10/sm_121a) 専用に vLLM をソースビルドした最適化コンテナ AEON vLLM Ultimate が v0.24.0 をリリースし（@SpaceTimeViking）、第三者が単体 DGX Spark で実測した（@SlimTradeyBaby）。DFlash+FP8 KV で KV 容量2倍などの最適化を先取りし、実測では Gemma-4-26B が高スループットの実用勝者となった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">リリース: DFlash+FP8 KV で KV 容量2倍、Triton NVFP4 KV で最大3倍。stock が落ちる Gemma-4 ロードやツール呼び出しも動作、262K コンテキスト、公称536 tok/s@c16</li>
+        <li data-i="02">実測: 単体 DGX Spark で Gemma-4-26B-A4B-NVFP4 が 578 tok/s@C32・エラー/OOM/クラッシュ0 で実用最速。公称536@C16 は再現せず</li>
+        <li data-i="03">重要な前提: これは並列リクエストの集約スループットで「単一チャット窓が578 tok/s」ではない（ローカルエージェント/バッチ/API サービング向けの数字）</li>
+        <li data-i="04">同じハードでも「ランタイム側の最適化」で throughput とコンテキスト長が激変する、という運用知見</li>
+      </ul>
+      <div class="pull">
+        DGX Spark のような単体 AI ワークステーションで「動かせる最大限」を引き出したい層に向けた実例。リリース告知と第三者の実測追試がセットで揃うのは貴重で、「公称ピーク値」と「自分の環境で安定して出る実用値」は別物という教訓を具体的な tok/s で示している。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">145</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/SpaceTimeViking/status/2072723078363181072">@SpaceTimeViking</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-02</dd>
+        <dt>CATEGORY</dt>
+        <dd>ローカルLLM / 推論サービング</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/SpaceTimeViking/status/2072723078363181072">x.com/SpaceTimeViking/…</a></dd>
+        <dd><a href="https://x.com/SlimTradeyBaby/status/2072961277031506350">x.com/SlimTradeyBaby/status/207296127703…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://github.blog/changelog/">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-07-03/">
+      ← 前日 · 2026-07-03
+      <span class="big">Claude Code v2.1.197〜2.1.198 が大型更新 — Sonnet 5 が既定に（1M）、Claude in Chrome が GA、背景エージェントが自動コミット＆ドラフトPR</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-07-04/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260704.0738</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

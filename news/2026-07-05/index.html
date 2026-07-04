@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-07-05 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-07-05 の Vibe Coder Bootcamp モーニングディスパッチ — 5本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0705</span>
+    <span class="sep">/</span>
+    <span>2026-07-05</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>05 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260705.0735</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-07-05/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:35 · SAT</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SATURDAY · JULY 5, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>07<span class="dot">.</span>05</h1>
+    <div class="strap">
+      <span>「Attention · Gemini · Venice · AEON</span>
+      <span><span class="count">05</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        業界動向 / 人材フロー <span class="sep">/</span> TECH NEWS SCOUT（@HASHIN / @AKASHETH_ 他） <span class="sep">/</span> NEWS
+      </div>
+      <h2>「Attention Is All You Need」全8著者が Google を去った — Noam Shazeer の OpenAI 移籍で&quot;最後の一人&quot;も退社</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-05/topic_1.png" data-alt="「Attention Is All You Need」全8著者が Google を去った — Noam Shazeer の OpenAI 移籍で&quot;最後の一人&quot;も退社" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-05/topic_1.png" alt="「Attention Is All You Need」全8著者が Google を去った — Noam Shazeer の OpenAI 移籍で&quot;最後の一人&quot;も退社" />
+      </div>
+      <p class="lede">
+        2017年に現代AIの起点となった論文「Attention Is All You Need」（Transformer を提唱）の著者8名全員が、今週までに Google を退社した。直近の引き金は、Transformer 共著者で Gemini 共同リードだった Noam Shazeer の OpenAI 移籍（本人が6/18に発表）と、AlphaFold でノーベル賞を受けた John Jumper の Google DeepMind 離脱・Anthropic 移籍。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Transformer 論文の全8著者が、今週の Shazeer・Jumper 退社をもって全員 Google を離れた</li>
+        <li data-i="02">Noam Shazeer: Transformer 共著者・VP Engineering・Gemini 共同リード。6/18 に OpenAI 移籍を発表（役割詳細は未開示）</li>
+        <li data-i="03">Google は2024年に Shazeer とチームを約2,200億円で買い戻した経緯があり、わずか2年で再流出</li>
+        <li data-i="04">John Jumper: DeepMind VP／engineering fellow、AlphaFold でノーベル賞。Anthropic へ移籍</li>
+        <li data-i="05">頭脳が OpenAI / Anthropic の2極に集中していく構図が「Transformer 全著者退社」という形で可視化</li>
+      </ul>
+      <div class="pull">
+        現代AIの基礎設計図を書いた研究者たちが、その発祥企業から一人残らず去ったという象徴的なマイルストーン。モデルの優劣が人材フローと連動する業界力学を読む題材として、モデル選択をする開発者にも無関係ではない。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/hashin/status/2071972030199595237">@hashin</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-30</dd>
+        <dt>CATEGORY</dt>
+        <dd>業界動向 / 人材フロー</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/hashin/status/2071972030199595237">x.com/hashin/…</a></dd>
+        <dd><a href="https://x.com/Akasheth_/status/2071987899193795009">x.com/Akasheth_/status/20719878991937950…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · TECH NEWS SCOUTGOO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        モデル動向 / GOOGLE <span class="sep">/</span> TECH NEWS SCOUT（@GOODWORSE / POLYMARKET） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Gemini 3.5 Pro、&quot;ゼロから完全再学習&quot;版を 7/17 にリリースか（観測ベース）</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-05/topic_2.png" data-alt="Gemini 3.5 Pro、&quot;ゼロから完全再学習&quot;版を 7/17 にリリースか（観測ベース）" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-05/topic_2.png" alt="Gemini 3.5 Pro、&quot;ゼロから完全再学習&quot;版を 7/17 にリリースか（観測ベース）" />
+      </div>
+      <p class="lede">
+        Google が Gemini 3.5 Pro を「スクラッチから完全に再学習した」版として 7/17 にリリースするという観測が浮上。予測市場 Polymarket では同日リリース確率を約48%と提示している。あくまで観測・予測市場ベースで、Google からの正式発表ではない。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Gemini 3.5 Pro を「完全に再学習（retrained from scratch）」した版として 7/17 リリースの観測</li>
+        <li data-i="02">Polymarket が同日リリースに約48%の確率を提示（＝確定情報ではなく予測市場ベース）</li>
+        <li data-i="03">現行 Gemini 3.5 Flash には既に computer use が標準搭載済みで、Pro 側の刷新が次の焦点</li>
+        <li data-i="04">上記の人材流出でモデル開発が遅れているという見方と対で、Google の巻き返しタイミングとして注目</li>
+      </ul>
+      <div class="pull">
+        フロンティア競争で Google が「作り直し」に踏み切ったとすれば、Gemini 系の性能ジャンプがありうる。使うモデルの選択肢に影響するため日付と「再学習」という設計判断は要ウォッチ。ただし現時点は予測市場の観測であり、確報が出るまでは話半分で扱うべき。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">82</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/goodworse/status/2073095926076367317">@goodworse</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-03</dd>
+        <dt>CATEGORY</dt>
+        <dd>モデル動向 / Google</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/goodworse/status/2073095926076367317">x.com/goodworse/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · TECH NEWS SCOUTERI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        オープンウェイト / コスト最適化 <span class="sep">/</span> TECH NEWS SCOUT（@ERIKVOORHEES / VENICE.AI） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Venice API の利用トップ5をオープンソースモデルが独占 — GLM 5.2 が #1、Opus 4.8 は #6</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-05/topic_3.png" data-alt="Venice API の利用トップ5をオープンソースモデルが独占 — GLM 5.2 が #1、Opus 4.8 は #6" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-05/topic_3.png" alt="Venice API の利用トップ5をオープンソースモデルが独占 — GLM 5.2 が #1、Opus 4.8 は #6" />
+      </div>
+      <p class="lede">
+        Venice.ai 創業者の Erik Voorhees が、Venice API 上の利用モデル上位5つが全てオープンソースで、GLM 5.2 が #1、クローズドの Opus 4.8 は #6 だと報告。オープンウェイトが実運用トラフィックで商用フロンティアを上回るという、コスト最適化側の実データ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Venice API の利用モデル上位5つが全てオープンソース、GLM 5.2 が #1</li>
+        <li data-i="02">クローズドの Opus 4.8 は #6 に位置</li>
+        <li data-i="03">GLM 5.2（MIT ライセンス）の実運用採用が伸びているという既存トレンドの追加データ点</li>
+        <li data-i="04">※ Venice という単一プラットフォームの自社データである点は留意</li>
+      </ul>
+      <div class="pull">
+        「ベンチで数点差」だったオープンウェイトが、実際の API トラフィックでクローズドを押しのけて上位を独占するという運用側の証拠。ロックイン回避とコスト最適化を重視するなら、モデル選択の実データとして有用。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">240</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ErikVoorhees/status/2072571265412427962">@ErikVoorhees</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-02</dd>
+        <dt>CATEGORY</dt>
+        <dd>オープンウェイト / コスト最適化</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ErikVoorhees/status/2072571265412427962">x.com/ErikVoorhees/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · SLIMTRADEYBABYBLAC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ローカルLLM / ベンチマーク <span class="sep">/</span> @SLIMTRADEYBABY（BLACKWELLBOY） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>AEON vLLM Ultimate v0.24.0 を単体 DGX Spark で実測 — 公称 536 tok/s は再現できずも Gemma-4-26B が 578 tok/s@C32 で実用最速</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-05/topic_4.png" data-alt="AEON vLLM Ultimate v0.24.0 を単体 DGX Spark で実測 — 公称 536 tok/s は再現できずも Gemma-4-26B が 578 tok/s@C32 で実用最速" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-05/topic_4.png" alt="AEON vLLM Ultimate v0.24.0 を単体 DGX Spark で実測 — 公称 536 tok/s は再現できずも Gemma-4-26B が 578 tok/s@C32 で実用最速" />
+      </div>
+      <p class="lede">
+        前日配信の AEON vLLM Ultimate v0.24.0（リリース告知）に対する第三者の実測追試。単体の DGX Spark (GB10) で実際に回し、公称の 536 tok/s @ C16 は再現できなかったが、Gemma-4-26B なら1台で 578 tok/s @ C32 まで安定して出せると結論づけた。公称値と実測値のギャップを正直に切り分けた検証レポート。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">実用ベストは Gemma-4-26B-A4B-NVFP4（262K コンテキスト有効/FP8 KV）: C24 で 470 tok/s、C32 で 578 tok/s、エラー・OOM・クラッシュ 0</li>
+        <li data-i="02">重要な前提: これは並列リクエストの集約スループットであり、1つのチャット窓が 578 tok/s 出るわけではない（ローカルエージェント・バッチ・マルチセッション API 向けの数字）</li>
+        <li data-i="03">Qwen27B DFlash も config を自力 patch して 262K で安定動作（C32 で 341 tok/s）</li>
+        <li data-i="04">公称の 536 tok/s @ C16 は再現できず。ただし1台の Spark で 578 tok/s @ C32 は達成</li>
+        <li data-i="05">正直な結論: 高スループットの実用的勝者は Gemma 26B-A4B、公称ヘッドラインは構成依存</li>
+      </ul>
+      <div class="pull">
+        リリース告知に対する第三者の実測追試という、めったに揃わない組み合わせ。「公称ピーク値」と「自分の環境で安定して出る実用値」は別物という教訓を具体的な tok/s で示す。ローカル LLM のベンチを読むとき「集約スループットか単一セッションか」「投機的デコードは有効か」を確認する読み方の良い教材。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">39</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/SlimTradeyBaby/status/2072961277031506350">@SlimTradeyBaby</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-03</dd>
+        <dt>CATEGORY</dt>
+        <dd>ローカルLLM / ベンチマーク</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/SlimTradeyBaby/status/2072961277031506350">x.com/SlimTradeyBaby/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · TRQ212THARIQ / ANT</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI開発ワークフロー / エージェンティックコーディング <span class="sep">/</span> @TRQ212（THARIQ / ANTHROPIC） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>A Field Guide to Fable: Finding Your Unknowns — Fable と働くコツは「自分の unknowns を見つけること」（Thariq / Anthropic）</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-05/topic_5.png" data-alt="A Field Guide to Fable: Finding Your Unknowns — Fable と働くコツは「自分の unknowns を見つけること」（Thariq / Anthropic）" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-05/topic_5.png" alt="A Field Guide to Fable: Finding Your Unknowns — Fable と働くコツは「自分の unknowns を見つけること」（Thariq / Anthropic）" />
+      </div>
+      <p class="lede">
+        Anthropic の Thariq による Claude Fable 5 協働ガイド。核となる比喩は「地図は領土ではない」。プロンプト・スキル・コンテキスト（地図）と、コードベースや現実（領土）の差分が「unknowns（未知）」であり、Fable は作業品質が「自分が unknowns を明確化できる能力」でボトルネックになる初めてのモデルだと述べる。unknowns を実装の前・中・後で発見していく反復プロセスと具体テクニック集を紹介する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">unknowns を4象限で分解: Known Knowns / Known Unknowns / Unknown Knowns（見れば分かる）/ Unknown Unknowns（考慮すらしていない）</li>
+        <li data-i="02">実装前: Blind Spot Pass（盲点を洗い出させる）／ブレスト&amp;プロトタイプ（HTMLで複数デザイン案）／インタビュー（1問ずつ、アーキテクチャが変わる質問優先）／リファレンスはソースコードが最良</li>
+        <li data-i="03">実装計画は「変わりやすい決定（データモデル・型・UXフロー）」を先頭、機械的リファクタは末尾に</li>
+        <li data-i="04">実装中: implementation-notes.md に逸脱を記録／実装後: 説明資料で buy-in、マージ前にクイズで自分を試す</li>
+        <li data-i="05">Fable ローンチ動画は全編 Claude Code で編集。Whisper・Remotion・カラーグレーディングの unknowns を Claude に教わりながら埋めた</li>
+      </ul>
+      <div class="pull">
+        モデルが賢くなるほど、勝負は「指示の精度」ではなく「自分が何を分かっていないかを明らかにする力」に移る——という主張は、Fable/Opus 世代のコーディングの軸。blindspot pass・1問ずつインタビュー・マージ前クイズは、そのまま日々のワークフローに落とせる実践プロンプト。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">6,435</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/trq212/status/2073100352921215386">@trq212</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-03</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI開発ワークフロー / エージェンティックコーディング</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/trq212/status/2073100352921215386">x.com/trq212/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/hashin/status/2071972030199595237">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-07-04/">
+      ← 前日 · 2026-07-04
+      <span class="big">Kimi K2.7 Code が GitHub Copilot で一般提供（GA）— Copilot のモデルピッカーに初のオープンウェイトモデル</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-07-05/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260705.0735</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-07-06 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-07-06 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0706</span>
+    <span class="sep">/</span>
+    <span>2026-07-06</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260706.0758</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-07-06/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:58 · SUN</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SUNDAY · JULY 6, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>07<span class="dot">.</span>06</h1>
+    <div class="strap">
+      <span>Alibaba · Google · OpenAI · Nvidia</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 5 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🌏 米中AI摩擦 / 開発ツール <span class="sep">/</span> TECHCRUNCH / TECH NEWS SCOUT（@CODEBYPOONAM 他） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Alibaba が「Claude Code」を全社禁止（7/10 から）— 高リスクソフト指定、蒸留めぐる米中対立が現場レベルへ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-06/topic_1.png" data-alt="Alibaba が「Claude Code」を全社禁止（7/10 から）— 高リスクソフト指定、蒸留めぐる米中対立が現場レベルへ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-06/topic_1.png" alt="Alibaba が「Claude Code」を全社禁止（7/10 から）— 高リスクソフト指定、蒸留めぐる米中対立が現場レベルへ" />
+      </div>
+      <p class="lede">
+        Alibaba が社内の全ワークスペースで Anthropic の Claude Code の利用を 2026-07-10 から禁止すると通達したと TechCrunch が報道した。同社は Claude Code を「高リスクソフトウェア」に分類し、データセキュリティを理由に挙げている。直前に Anthropic が Alibaba/Qwen ラボによる大規模蒸留を米上院に告発した経緯があり、米中の AI 対立が「どの開発ツールを使わせるか」という現場レベルにまで及んだ形。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Alibaba が社内で Claude Code を「高リスクソフトウェア」に指定し、2026-07-10 から全社利用禁止（TechCrunch 報道）</li>
+        <li data-i="02">一部開発者は「Claude Code が中国ユーザーを静かにタグ付けしていた」と主張、Anthropic 側は「蒸留対策（anti-distillation）措置」と説明</li>
+        <li data-i="03">6月に Anthropic が Alibaba の Qwen ラボによる「過去最大級の蒸留攻撃（2,880万件の不正やり取り）」を米上院に告発した文脈の続報</li>
+        <li data-i="04">「自前のフロンティア・コーディングエージェントを持つ企業が、競合のエージェントを社員に使わせ続けるはずがない」という商業的動機の見方も</li>
+      </ul>
+      <div class="pull">
+        モデルの優劣だけでなく「開発ツールそのものが地政学リスクの対象になる」時代に入ったことを示す象徴的な一件。AI コーディングツールがベンダー・国籍・データ扱いで選別される流れは、ツールのロックインとデータガバナンスを考える上で無視できない。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://techcrunch.com/2026/07/04/alibaba-reportedly-bans-claude-code/">TechCrunch / Tech News Scout（@CodeByPoonam 他）</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-04</dd>
+        <dt>CATEGORY</dt>
+        <dd>🌏 米中AI摩擦 / 開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://techcrunch.com/2026/07/04/alibaba-reportedly-bans-claude-code/">https://techcrunch.com/2026/07/04/alibaba-reportedly-bans-claude-code/</a></dd>
+        <dd><a href="https://x.com/CodeByPoonam/status/2073095640213807396">x.com/CodeByPoonam/status/20730956402138…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · GOOGLEGITHUB GOOGL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🛠 開発者ツール / エージェント <span class="sep">/</span> GOOGLE（GITHUB: GOOGLE/AGENTS-CLI） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Google が「agents-cli」を公開 — Claude Code / Codex / Cursor をそのまま Google Cloud のエージェントビルダーに変える公式 CLI</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-06/topic_2.png" data-alt="Google が「agents-cli」を公開 — Claude Code / Codex / Cursor をそのまま Google Cloud のエージェントビルダーに変える公式 CLI" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-06/topic_2.png" alt="Google が「agents-cli」を公開 — Claude Code / Codex / Cursor をそのまま Google Cloud のエージェントビルダーに変える公式 CLI" />
+      </div>
+      <p class="lede">
+        Google が AI エージェントを作成・評価・デプロイするための公式 CLI「agents-cli」をオープンソースで公開した。単体のエージェントではなく、既存の coding agent（Claude Code・Codex・Cursor・Antigravity など）にスキルを差し込み、それらを Google Cloud 上でプロダクションのエージェントを組む道具に変えるのが特徴。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">リポジトリ github.com/google/agents-cli としてオープンソース公開</li>
+        <li data-i="02">Claude Code / Codex / Cursor / Antigravity など既存の coding agent に対応</li>
+        <li data-i="03">エージェントの作成・評価（eval）・デプロイのスキルを提供、Google Cloud 上での本番運用にフォーカス</li>
+        <li data-i="04">「特定エージェントに縛られず、手持ちのツールをそのまま使える」中立的な設計</li>
+      </ul>
+      <div class="pull">
+        ベンダーが自社エコシステムに閉じたエージェント SDK を出す中、Google は「どの coding agent でも使える」中立 CLI を出してきた。普段使いの Claude Code / Codex から一歩進んで、評価・デプロイまで含めたエージェント開発を体験する入り口になりうる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/google/agents-cli">Google（GitHub: google/agents-cli）</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-02</dd>
+        <dt>CATEGORY</dt>
+        <dd>🛠 開発者ツール / エージェント</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/google/agents-cli">https://github.com/google/agents-cli</a></dd>
+        <dd><a href="https://x.com/iblai_/status/2073089479447834985">x.com/iblai_/status/2073089479447834985</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · OPENAIGITHUB OPENA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🛠 開発者ツール / マルチエージェント <span class="sep">/</span> OPENAI（GITHUB: OPENAI/CODEX-PLUGIN-CC） <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI 公式「codex-plugin-cc」— Claude Code の中から Codex を呼べる、単一ターミナルで初のマルチエージェント開発</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-06/topic_3.png" data-alt="OpenAI 公式「codex-plugin-cc」— Claude Code の中から Codex を呼べる、単一ターミナルで初のマルチエージェント開発" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-06/topic_3.png" alt="OpenAI 公式「codex-plugin-cc」— Claude Code の中から Codex を呼べる、単一ターミナルで初のマルチエージェント開発" />
+      </div>
+      <p class="lede">
+        OpenAI が公式プラグイン「codex-plugin-cc」を公開した。Claude Code の CLI からそのまま Codex を呼び出し、コードレビューやタスク委譲を「タブを切り替えずに」実行できる。Claude Code をオーケストレーターに、実行部分を Codex（gpt-5.5 系）に委ねるといった、単一ターミナル内でのマルチエージェント・ワークフローが公式に整った。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">リポジトリ github.com/openai/codex-plugin-cc（OpenAI 公式）を claude-code CLI からインストール</li>
+        <li data-i="02">Claude Code から Codex に review / タスク委譲を投げられ、ウィンドウ切り替えが不要に</li>
+        <li data-i="03">「Fable に計画させ、コード実行だけ gpt-5.5 xHigh（Codex）に回す」といった使い分けの報告も</li>
+        <li data-i="04">有志による逆方向 cc-plugin-codex（Codex から Claude Code 呼び出し）も登場し、双方向の委譲が実用段階に</li>
+      </ul>
+      <div class="pull">
+        「1 つのエージェントに全部やらせる」から「得意分野ごとに複数エージェントを組み合わせる」へという潮流を、二大ベンダーの公式プラグインが後押しした事例。計画は片方・実装はもう片方・レビューは第三者、といった役割分担をすぐ手元で試せる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/openai/codex-plugin-cc">OpenAI（GitHub: openai/codex-plugin-cc）</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-04</dd>
+        <dt>CATEGORY</dt>
+        <dd>🛠 開発者ツール / マルチエージェント</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/openai/codex-plugin-cc">https://github.com/openai/codex-plugin-cc</a></dd>
+        <dd><a href="https://x.com/HeyAnjula/status/2073274764572180913">x.com/HeyAnjula/status/20732747645721809…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · CNBC / TECH NEWS S</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💰 AIインフラ / 資金 <span class="sep">/</span> CNBC / TECH NEWS SCOUT <span class="sep">/</span> NEWS
+      </div>
+      <h2>Nvidia、AI スタートアップに「計算資源を将来収益と交換」するレベニューシェア制を正式開始 — 21万 GPU をコミット</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-06/topic_4.png" data-alt="Nvidia、AI スタートアップに「計算資源を将来収益と交換」するレベニューシェア制を正式開始 — 21万 GPU をコミット" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-06/topic_4.png" alt="Nvidia、AI スタートアップに「計算資源を将来収益と交換」するレベニューシェア制を正式開始 — 21万 GPU をコミット" />
+      </div>
+      <p class="lede">
+        Nvidia が、急成長中の AI スタートアップに GPU 計算資源を提供し、対価として将来のクラウド収益の一部を受け取る「レベニューシェア」契約を正式に開始したと CNBC などが報道した。初期パートナーとして 2 つのデータセンター事業者が名指しされ、計 21 万 GPU がコミットされたとされる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Nvidia がスタートアップにコンピュートを提供し、将来のクラウド収益シェアを得る契約を正式開始（CNBC 報道）</li>
+        <li data-i="02">初期パートナー 2 社に計 210,000 GPU をコミット（Sharon AI 40K + Firmus Technologies 170K との報あり）</li>
+        <li data-i="03">スタートアップは前払いの巨額現金なしに GPU にアクセスでき、Nvidia は顧客のクラウド収益から回収</li>
+        <li data-i="04">Nvidia が「チップ売り」から AI 経済のインフラ地主へ踏み込む構図</li>
+      </ul>
+      <div class="pull">
+        GPU が最大のボトルネックかつ最大コストである AI スタートアップにとって、資金調達の形そのものを変えうる仕組み。AI プロダクトの原価＝コンピュートがどう調達されているかを知る背景知識になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.cnbc.com/2026/07/03/nvidia-revenue-sharing-startups.html">CNBC / Tech News Scout</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-03</dd>
+        <dt>CATEGORY</dt>
+        <dd>💰 AIインフラ / 資金</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.cnbc.com/2026/07/03/nvidia-revenue-sharing-startups.html">https://www.cnbc.com/2026/07/03/nvidia-revenue-sharing-startups.html</a></dd>
+        <dd><a href="https://x.com/BennyLam/status/2073478660103823360">x.com/BennyLam/status/207347866010382336…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · QUARTZ / TECH NEWS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🌏 米中AI摩擦 / M&amp;A <span class="sep">/</span> QUARTZ / TECH NEWS SCOUT <span class="sep">/</span> NEWS
+      </div>
+      <h2>中国が Meta の 20 億ドル AI 買収（Manus）を差し戻し — Meta は統合を巻き戻し、地政学が M&amp;A を左右</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-06/topic_5.png" data-alt="中国が Meta の 20 億ドル AI 買収（Manus）を差し戻し — Meta は統合を巻き戻し、地政学が M&amp;A を左右" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-06/topic_5.png" alt="中国が Meta の 20 億ドル AI 買収（Manus）を差し戻し — Meta は統合を巻き戻し、地政学が M&amp;A を左右" />
+      </div>
+      <p class="lede">
+        Meta が AI スタートアップ Manus の約 20 億ドル買収を、中国当局の外資規制を理由に巻き戻していると報道された。Meta はすでに Manus を社内データ基盤から切り離し、社員に同プラットフォームの利用停止を指示したという。北京が自国 AI 資産を囲い込む姿勢を強め、クロスボーダー AI M&amp;A に地政学が直接介入した事例。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Meta の約 $2B 規模の Manus 買収を、中国当局が外資規制を理由にブロック／差し戻し（Quartz・JDSupra 等）</li>
+        <li data-i="02">Meta は Manus を内部データシステムから切断し、社員に利用停止を指示（統合の具体的巻き戻し）</li>
+        <li data-i="03">「中国が自国 AI の優位を守るため、米テック大手の買収すら止める」米中覇権争いの一断面</li>
+        <li data-i="04">クロスボーダー AI ディールに国家の投資規制が直接効いてくる前例に</li>
+      </ul>
+      <div class="pull">
+        AI スタートアップの価値が国家戦略資産と見なされ、通常の企業買収が地政学で覆される時代に入ったことを示す。AI 業界の勢力図が国境で分断されていく流れを読む材料になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://qz.com/meta-manus-ai-acquisition-china-unwind">Quartz / Tech News Scout</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-03</dd>
+        <dt>CATEGORY</dt>
+        <dd>🌏 米中AI摩擦 / M&amp;A</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://qz.com/meta-manus-ai-acquisition-china-unwind">https://qz.com/meta-manus-ai-acquisition-china-unwind</a></dd>
+        <dd><a href="https://x.com/qz/status/2073102058010669087">x.com/qz/status/2073102058010669087</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · TECH NEWS SCOUTTBU</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💰 AI業界 / 資金動向 <span class="sep">/</span> TECH NEWS SCOUT（@TBUZZDAILY / @MYCOMRADIO 他・集計系） <span class="sep">/</span> NEWS
+      </div>
+      <h2>2026 年上半期の世界スタートアップ投資が過去最高の 5,100 億ドル — AI が牽引、OpenAI・Anthropic に資金集中</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-06/topic_6.png" data-alt="2026 年上半期の世界スタートアップ投資が過去最高の 5,100 億ドル — AI が牽引、OpenAI・Anthropic に資金集中" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-06/topic_6.png" alt="2026 年上半期の世界スタートアップ投資が過去最高の 5,100 億ドル — AI が牽引、OpenAI・Anthropic に資金集中" />
+      </div>
+      <p class="lede">
+        2026 年上半期（H1）の世界スタートアップ投資額が過去最高の約 5,100 億ドルに達し、その伸びを AI が牽引しているとの集計が複数共有された。OpenAI と Anthropic だけで相当な割合を占めるとされ、AI への資金集中が一段と鮮明になっている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">H1 2026 の世界スタートアップ投資が約 $510B で過去最高（複数の集計ポスト）</li>
+        <li data-i="02">伸びの主因は AI、OpenAI・Anthropic といったフロンティア勢に資金が集中</li>
+        <li data-i="03">「AI スタートアップ資金の約 88% が一握りの大手に集中」という偏在の指摘も併存</li>
+        <li data-i="04">AI バブル論も含め、資金の流れ先が少数に偏っている構図</li>
+      </ul>
+      <div class="pull">
+        資金がどこに・どれだけ流れているかは業界の温度感を測る基本指標。自分たちが使うモデル・ツールの背後でどれだけの資本が動き、それが少数に偏っている現実を知る背景データになる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/tbuzzdaily/status/2073749486686384537">@tbuzzdaily</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-05</dd>
+        <dt>CATEGORY</dt>
+        <dd>💰 AI業界 / 資金動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/tbuzzdaily/status/2073749486686384537">x.com/tbuzzdaily/…</a></dd>
+        <dd><a href="https://x.com/mycomradio/status/2073598638182608995">x.com/mycomradio/status/2073598638182608…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · HIK0107 / X ARTICL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📖 考察 / AIと労働 <span class="sep">/</span> @HIK0107 / X ARTICLE <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>配当で暮らせた時代 — 労働の「資産運用」モデルから「元本取り崩し」モデルへ（樫田光）</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-06/topic_7.png" data-alt="配当で暮らせた時代 — 労働の「資産運用」モデルから「元本取り崩し」モデルへ（樫田光）" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-06/topic_7.png" alt="配当で暮らせた時代 — 労働の「資産運用」モデルから「元本取り崩し」モデルへ（樫田光）" />
+      </div>
+      <p class="lede">
+        データアナリスト樫田光（@hik0107）が、AIと労働の関係を「資産運用」の比喩で読み解いた X Article。労働は各人が持つ『暗黙知』という元本からの配当受け取りだったと捉え、米NYの家事代行 Shift（無料で家事をする代わりに作業データを収集しロボットAIに転写・販売）を例に、AIの台頭が労働を『資産運用モデル』から『元本の取り崩しモデル』へ転換させつつあると論じる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">「1億円・5%・500万」の配当生活は単純化された計算。手数料や20%課税で元本維持の安定運用は難しい</li>
+        <li data-i="02">労働＝暗黙知の資産運用：手順やコツという暗黙知を作業に乗せて付加価値を生み、そこから配当（給料）を得ている</li>
+        <li data-i="03">米NY Shift は無料家事代行でデータを吸い上げ、家庭用ロボットのAIエンジン企業に販売。配管・料理へ展開予定</li>
+        <li data-i="04">AIは作業ではなく『暗黙知という元本』を一度きりで吸い上げ償却させる、という捉え方</li>
+        <li data-i="05">2026年ダラス連銀分析：暗黙知（経験）がものを言う仕事ほど、AI台頭後もむしろ賃金が伸びている</li>
+      </ul>
+      <div class="pull">
+        「AIに仕事を奪われる」という定型句を、より解像度高く捉え直す考察。AIが奪うのは作業ではなく、長年積み上げた暗黙知という元本の吸い上げ・償却だという視点は、Vibe Coding でAIを単なる作業代行に使うのか、自分の暗黙知を乗せて付加価値を出すのかという問いに直結する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">151</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/hik0107/status/2073691735088087267">@hik0107</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-05</dd>
+        <dt>CATEGORY</dt>
+        <dd>📖 考察 / AIと労働</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/hik0107/status/2073691735088087267">x.com/hik0107/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://techcrunch.com/2026/07/04/alibaba-reportedly-bans-claude-code/">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-07-05/">
+      ← 前日 · 2026-07-05
+      <span class="big">「Attention Is All You Need」全8著者が Google を去った — Noam Shazeer の OpenAI 移籍で&quot;最後の一人&quot;も退社</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-07-06/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260706.0758</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

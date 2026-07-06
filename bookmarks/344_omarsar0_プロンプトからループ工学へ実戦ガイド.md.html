@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №027</span>
+    <span class="tick">BOOKMARK №029</span>
     <span class="sep">/</span>
     <span>2026-06-19</span>
     <span class="sep">/</span>
     <span>@omarsar0</span>
     <span class="sep">/</span>
-    <span>434 ITEMS</span>
+    <span>436 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:14 MON</span>
+    <span>JST 07:17 TUE</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,19 +305,19 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-07-05/">NEWS</a>
+      <a href="../news/2026-07-06/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:14 · MON</div>
+    <div class="meta">JST · 07:17 · TUE</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-06-19 <span>/</span> №027
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-06-19 <span>/</span> №029
     </div>
     <div class="cat-line">
       <span>📖 技術解説 / 💻 AI（エージェント / Claude Code / loop engineering）</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">プロンプトから「ループ工学」へ — 本番で動くエージェントループの実戦ガイド</h1>
     <div class="strap">
-      <span><span class="label">№</span>027 / 434</span>
+      <span><span class="label">№</span>029 / 436</span>
       <span><span class="label">SRC</span><a href="https://x.com/omarsar0/status/2068008743153832264" target="_blank" rel="noopener noreferrer">x.com/omarsar0 ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/344_omarsar0_%E3%83%97%E3%83%AD%E3%83%B3%E3%83%97%E3%83%88%E3%81%8B%E3%82%89%E3%83%AB%E3%83%BC%E3%83%97%E5%B7%A5%E5%AD%A6%E3%81%B8%E5%AE%9F%E6%88%A6%E3%82%AC%E3%82%A4%E3%83%89.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">027<span class="ord">BOOKMARK / 434</span></aside>
+    <aside class="numeral">029<span class="ord">BOOKMARK / 436</span></aside>
     <article class="prose">
 <p><strong>有益度:</strong> ⭐⭐⭐⭐⭐</p><p><strong>エンゲージメント:</strong> Likes 911 / RT 125 / Replies 41 / Bookmarks 2,174 / Views 241,943</p><h2>概要</h2><p>「もうエージェントにプロンプトを打つな、エージェントにプロンプトを打つループを設計しろ」という最近の主張（Peter Steinberger / Boris Cherny）を、抽象論で終わらせず「ループとは何か・なぜ重要か・本番でどう作るか」まで落とした実践版の X Article。DAIR.AI の elvis（@omarsar0）執筆。</p><h2>まとめ</h2><ul><li>ループ工学＝作業が1段上がる: 「コードを書く」から「コードを書くシステムを書く」へ。先行者は IDE を開かず月に数百 PR を出すと報告。</li><li><strong>「ループ」は最低5つの意味</strong>: ReAct(2022) → AutoGPT(2023) → ralph loop（反復間の context リセット）→ <code>/loop</code>・<code>/goal</code>（完了条件を内蔵）→ orchestration（多エージェントの fan-out）。</li><li><strong>ループを構成する6部品</strong>: ①trigger ②isolation（git worktree）③written-down context ④tools へのreach ⑤独立した検証者 ⑥disk上のstate。</li><li><strong>具体例 &quot;PR babysitter&quot;</strong>: 15分毎 / <code>agent-watch</code> ラベルの開いた PR / CI が決定的理由で赤なら1回修正・main がズレたら1回 rebase / 予算1試行5分10ファイル / CI緑か予算切れで停止して人間に ping。</li><li><strong>Claude Code の <code>/goal</code></strong>: 終了状態・証拠・制約・予算の4つを契約のように明示。</li><li><strong>コストの所在</strong>: 単発呼び出しではなく「ループが何周するか」。弱い検証者が最も高コストなバグ。</li><li><strong>ループにすべきでない時</strong>: 一発で終わる編集 / 未スコープの探索 / 安価な自動チェックが無いもの。</li></ul><h2>日本語訳全文</h2><p>AIコーディング界隈である主張が広まっている。「コーディングエージェントにプロンプトを打つのをやめ、エージェントに代わってプロンプトを打つループを設計し始めろ」。新しいものは何でもそうだが、これは頻繁に繰り返される割にめったに説明されない。これがその実践版だ。エージェントループとは何か、なぜ重要か、本番でどう見えるか。</p><p>以下は、学生・技術系の創業者・AIエンジニア・スタートアップとの会話から得た私の考え（Claude の助けを借りて書いた）だ。</p><h3>この主張の出どころ</h3><p>「もうコーディングエージェントにプロンプトを打つべきではない。エージェントにプロンプトを打つループを設計すべきだ」— Peter Steinberger (@steipete)、2026年6月7日、220万 views。</p><p>Boris Cherny（Claude Code の生みの親）が反対側から同じ点を突く。</p><p>「私はもう Claude にプロンプトを打たない。走っているループがある。それらが Claude にプロンプトを打ち、何をすべきか判断する。私の仕事はループを書くことだ」— Boris Cherny (@bcherny)。</p><p>要点は「プロンプトエンジニアリングが死んだ」ではない。ループ工学では、作業が1段上に移る。コードを書くことから、コードを書くシステムを書くことへ。この道を最も進んだ開発者は、IDE を開かずに月に数百の PR を出荷し、全行がエージェントによって書かれたと報告する。</p><h3>ループとは実際に何か</h3><p>ループとは、あなたが書く小さなプログラムで、4つのことをする:</p><p>代わりにコーディングエージェントにプロンプトを打ち、</p><p>それが生成したものを読み、</p><p>完了したか判断し、</p><p>そうでなければエラーや次のステップで再びプロンプトを打つ。</p><p>あなたはループの中に座ってプロンプトを打つのをやめる。ループを書き、モデルはそれが呼び出すサブルーチンになる。</p><p>形は常に同じ: ゴールを設定し、行動し、チェックし、エラーを戻し、チェックが通るかループが自分で止まるまで繰り返す。</p><h3>「ループ」は最低5つの意味を持つ</h3><p>意見の食い違いの多くは、1つの単語を5つの異なる概念に使っているせいだ。古い順に並べる。</p><ul><li><strong>ReAct (2022)</strong>: 元の研究パターン。推論・行動・観察・繰り返し。</li><li><strong>AutoGPT (2023)</strong>: 自己プロンプトのゴールループ。止め時を知らないことで悪名高い。</li><li><strong>ralph loop</strong>: 反復間で意図的に context をリセットし、エージェントが自分の履歴で溺れないようにする。</li><li><strong>/loop と /goal</strong>: カデンスと完了条件がエージェントに組み込まれ、turn を跨いで state を運ぶ。</li><li><strong>orchestration</strong>: 1人の作者が多数のエージェントを fan-out し、GitHub・Slack・チャットを読んで次に何を作るか決める。</li></ul><h3>実際に組み立てる部品</h3><p>進化の系譜は「ループという言葉で人が何を指すか」を説明する。次は「ループが何から作られるか」。同じ6部品が毎回現れ、今やそのほとんどは自分で保守するカスタムスクリプトではなく、コーディングツールに内蔵されて出荷される。</p><ul><li><strong>トリガー</strong>: あなたが「実行」を押さなくてもループを始める何か。スケジュール、webhook、ファイル変更、PR にラベルが付く、など。これが「手で繰り返す単発実行」と「本物のループ」を分ける。</li><li><strong>隔離（Isolation）</strong>: エージェントごとの private なチェックアウト、通常は git worktree。同時に走る2つのエージェントが互いのファイルを上書きできないように。2つ以上走らせたら、これは必須になる。</li><li><strong>書き留めた context</strong>: 規約・ビルド手順・プロジェクト固有のルールを、エージェントが毎回読む場所に置く。省くと、ループは毎周プロジェクトをゼロから再導出し、隙間を推測で埋める。</li><li><strong>ツールへの reach</strong>: issue tracker・CI・DB・チャットへのコネクタ。ループが PR を開き、チケットを紐付け、結果を投稿できるように。修正を出力して人間が運ぶのを待つのではなく。</li><li><strong>2番目のエージェントがチェックする</strong>: 出力を採点する別のワーカーを、生成したものから切り離す。自分の仕事をレビューするモデルはほぼ全部を通してしまうからだ。</li><li><strong>disk 上の state</strong>: Markdown ファイル、ボード、キューなど、何が終わって何が次かを記録する会話の外側の何か。モデルは実行間で忘れるが、ファイルは忘れない。</li></ul><p>この6つを組み立てれば、ループ工学の良い出発点になる。以前は全部手で組んでいたが、今やほとんどが内蔵機能として出荷され、だからこのパターンは周縁の技術から一般的な利用へと移った。</p><h3>具体的なループ「PR の子守（babysitter）」</h3><p>今日作れる具体例:</p><ul><li><strong>トリガー</strong>: 15分ごと。</li><li><strong>スコープ</strong>: <code>agent-watch</code> ラベルの付いた開いた PR。</li><li><strong>アクション</strong>: CI が決定的な理由で赤なら、1回修正を試みる。main が動いたら、1回 rebase する。</li><li><strong>予算</strong>: PR あたり修正1試行、5分、変更10ファイル。</li><li><strong>停止条件</strong>: CI 緑、または予算切れ。そこで止まって人間に ping。</li></ul><p>壊れたビルドのバックログではなく、マージ済み PR に戻ってこられる。同じ形がほとんどの運用作業をカバーする:</p><ul><li><strong>CI ヘルス</strong>: 30分ごとに失敗 run を引き、signature でクラスタ化。1つの根本原因の赤10 PR が、見るべき1件になる。</li><li><strong>デプロイ検証</strong>: push 後、エンドポイントを叩き、200 と期待される内容を確認、ユーザーより先にリグレッションを検出。</li><li><strong>フィードバックのクラスタ化</strong>: 30分ごとにチャンネルのコメントを引き、テーマごとにグループ化、各クラスタを担当ファイル/ドキュメントに対応づける。</li></ul><h3>Claude Code の <code>/goal</code> を使った具体的ループ</h3><p>子守は自分で配線するループ。エージェントに内蔵されたものも見ておくと役立つ。Claude Code では、最小の完全なループが <code>/goal</code> だ。検証可能な終了状態を渡すと、それが真になるまで turn を取り続ける。</p><p><code>/goal</code> をセッション内コマンドとして使う例。セッションを立ち上げ、その中でゴールを設定する。</p><p>これは先ほどの「行動・チェック・繰り返し」と同じ形で、検証者が組み込まれている。</p><p>ここまでで明らかなのは、強い <code>/goal</code> はプロンプトというより契約のように読めること。良いものは4つを指定する: 欲しい終了状態、それに到達したと証明する証拠、エージェントが破ってはいけない制約、使ってよい作業の予算。どれか1つでも曖昧にすると、モデルは最も楽な解釈で隙間を埋める。早く止まる、近道する、あるいは成功を再定義して、トランスクリプトは完了に見えるのに実システムは壊れている、という具合に。</p><ul><li>条件を設定する。<code>/goal</code> + チェック可能な終了状態、例: <code>/goal tests in test/auth pass</code>。最初の turn が即座に始まる。</li><li>エージェントが1 turn 働く。編集し、テストを走らせ、結果をセッションに出す。</li><li>評価者がチェックする。速いモデルがトランスクリプトを読み、満たされたか否かを判断する。エージェントが自分の仕事を採点しないように。</li><li>ループか終了か。未達なら指示付きでもう1 turn。達成ならゴールが自分でクリアし、run が止まる。</li></ul><p>state は turn を跨いで運ばれるので、早く止めたり途中で制約を落としたりしない。信頼性を保つ制御がいくつかある:</p><ul><li><strong>チェックを測定可能に</strong>: テスト結果、exit code、ファイル数、空のキュー。<code>npm test exits 0</code> はゴール、「もっと良くして」はゴールでない。</li><li><strong>run を区切る</strong>: 「または20 turn 後に止まる」のように付け、詰まったループが turn を燃やし続ける代わりに停止するように。</li><li><strong>auto モードと組む</strong>: turn が無人で走るように。早く中断するには <code>/goal clear</code>。</li></ul><p>評価ステップには有用な機微が隠れている: チェッカーはコーダーと同じモデルである必要はない。ループが役割を分けたら（プランナー、実行者、評価者、ビジョンレビュアー）、各々を別のモデルで走らせられ、どの役割にどのモデルを当てるかが「1つの最良エージェントへの賭け」ではなく「アーキテクチャの決定」になる。あるモデルは計画が得意、あるモデルは安く実行、あるモデルはスクリーンショットの判定が正確。良いオーケストレーターは、1ベンダーが全カテゴリで勝つのを待つのではなく、役割ごとに入れ替えさせてくれる。</p><p>これは API 移行（全呼び出し箇所をコンパイル＆テスト通過まで移す）、リファクタ（各モジュールが予算未満になるまでファイルを分割）、issue バックログ（ラベル付きキューが空になるまで処理）、eval ループ（スコアが閾値を超えるまでプロンプトを調整）でうまく機能する。<code>/loop</code> は単一の終了線が無い作業の対応物で、完了条件の代わりにスケジュールで再プロンプトする。PR の子守のようなループはこれで走り続ける。</p><h3>多数のループを無人で走らせる</h3><p>単一の <code>/goal</code> ループは、1つの終了線へ向かう1エージェント。多数の無人プロセスを走らせると賭け金が上がる。ループは「自分の仕事をチェックできる能力」の分しか信頼できないからだ。Cherny の「Opus を数時間自律で走らせる」セットアップは5ステップに集約される:</p><ul><li>権限を自動承認し、エージェントがツール呼び出しごとに尋ねて止まらないように。</li><li>dynamic workflows を使う（プロンプトに Ultracode を入れる）。1本の直列スレッドではなく多数のエージェントに fan-out。</li><li><code>/goal</code> か <code>/loop</code> で走らせ続ける。<code>/goal</code> は完了条件、<code>/loop</code> はスケジュール再プロンプト。両者とも state を運ぶので早く止まらない。</li><li>クラウドで走らせる（デスクトップ/モバイルアプリ）。ラップトップを閉じてもセッションが生き残る。</li><li>エンドツーエンドで自己検証する手段を与える。Web は Claude in Chrome、モバイルはシミュレータ MCP、バックエンドはライブサーバー。これが他の4つを安全にするステップ。</li></ul><h3>crabfleet: プロダクトとしての orchestration</h3><p>orchestration は具体的なツールで描くと分かりやすい。Peter Steinberger の crabfleet（OpenClaw プロジェクトで「エージェント run の管制塔」と銘打つ）は、プロダクトとしてパッケージされたループで、その形は上記すべてに対応する。</p><ul><li><strong>ボード上のカードとしての作業</strong>: タスクはプロンプト・GitHub issue・PR から作るカードとして入力され、todo・running・human review・done を移動する。そのボードがループのキューであり、停止＆報告ステップを可視化したもの。</li><li><strong>fire-and-forget ではない耐久 run</strong>: 各 run はハートビート付きの追跡された試行で、目を離しても走り続け、閉じたラップトップを生き延びる。ランタイムが handoff 対応を表明したときだけ引き継ぐ。</li><li><strong>エージェントを spawn するエージェント</strong>: run は子セッションを起動し、メッセージを送り、トランスクリプトを読み、サンドボックス内から自分のサマリを更新できる。disk 上メモリと fan-out が一箇所に、1作者・多エージェント。</li></ul><p>これは使い捨てのクラウドサンドボックス上でブラウザベースのターミナルで走る。それが無人 run から立ち去ることを安全にする。要点は特定のツールではなく、ループがインフラへと硬化したこと: キュー、耐久実行、fan-out、人間レビューのゲートが、毎回手で書くものではなく設定するものになった。</p><h3>コストの所在が変わった</h3><p>2年間、AIコーディングのコスト問題は単純だった。どのモデルで、何トークンか。ループの中では、その本能は間違った層を指す。支出はもはや単一の呼び出しではなく「ループが何周するか」だ。6回リトライして収束するループは、同じモデルで1回で着地するループの6倍かかる。</p><p>最適化すべきものが変わる:</p><ul><li><strong>反復が予算項目で、トークンではない</strong>。2倍の頻度でループする安いモデルは安くない。track すべきは finished task あたりのコストで、呼び出しあたりではない。</li><li><strong>弱い検証者が出荷できる最も高コストなバグ</strong>。「done」を決めるチェックが緩いと、ループは壊れた仕事で早く止まるか、既に良かった仕事を延々と挽く。どちらも1反復まるごと無駄にする。何より先にこれを締める。</li><li><strong>早く失敗することはコスト管理</strong>。連続失敗に上限の無いループは、いずれ成功するのではなく、いずれ口座を空にする。停止条件はコードベースと同じくらい請求書を守る。</li></ul><p>以前はプロンプトを調整した。今はループを調整する。コストはそこに溜まるからだ。</p><h3>ループにすべきでない時</h3><p>ループが効くのは、タスクが繰り返され、機械が「いつ終わったか」を判定できる時。それ以外では、ループは churn を自動化するだけ。次の場合は避ける:</p><ul><li><strong>一発の編集</strong>: 1パスで終わるなら、ループは純粋なオーバーヘッド。</li><li><strong>未スコープ／探索的な作業</strong>: 「なぜユーザーが離脱するか探れ」には pass 条件が無く、ループは収束しない。</li><li><strong>安価な自動チェックが無いもの</strong>: 唯一の検証者が自分の目なら、まだループの中にいる。先にチェックを作るか、手でやれ。</li></ul><h3>何が起こりうるか</h3><p>あなたが寝ている間に走るループは、寝ている間にミスもする。失敗モードは予測可能だ。</p><ul><li><strong>検証負担は人間に残る</strong>: ループはあなたがレビューできるより速く書く。diff を読むのをやめれば、作業を除いたのではなく先送りしただけ。</li><li><strong>理解のギャップが広がる</strong>: 自分が書いていないコードを、吸収できるより速く出荷すると、自分のシステムのモデルが侵食され、その負債は次のインシデントで返済を迫る。</li><li><strong>緩いチェックでの静かなドリフト</strong>: 弱い検証者は「間違っているが通る」仕事を毎反復通す。ループは生産的に見えながら穴を掘る。</li></ul><p>これらはループへの反論ではない。だからこそ「ループを設計するエンジニア」がより重要になる、ということだ。</p><h3>自分のループの作り方</h3><ul><li><strong>繰り返せるタスクを1つ選ぶ</strong>: PR の子守、CI 修正、デプロイ検証。ルーチン作業から始める。</li><li><strong>タイトにスコープする</strong>: 「billing webhook の検証を直す、触るのは app/api/billing と lib/billing だけ」は「バグを直す」に勝る。緩いループはさまよう。</li><li><strong>予算と停止条件を与える</strong>: 最大試行、最大実行時間、最大ファイル、最大支出、最大連続失敗。無人で走るループは、無人でミスをするループでもある。</li><li><strong>独立した検証者を加える</strong>: 別のサブエージェントが採点する。コードを書いたエージェントは「終わったか」の最悪の判定者。</li><li><strong>カデンスで走らせる</strong>: 間隔なら <code>/loop</code>、スケジュールなら cron、ライフサイクル地点なら hooks、閉じたラップトップを生き延びさせるなら GitHub Actions。</li><li><strong>メモリを disk に保つ</strong>: モデルは実行間で忘れるので、state は context window ではなく Markdown かボードに。</li></ul><p>要点: いまや高コストで失敗しやすいのは、モデルではなくループだ。「run を始める人」ではなく「出力に責任を持つエンジニアであり続けるつもりの人」のように、ループを作れ。</p>
     </article>
@@ -384,14 +384,14 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 434 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 436 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-07-05/">TODAY</a></li>
+          <li><a href="../news/2026-07-06/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -418,7 +418,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-07-06</span>
+      <span>BUILD 2026-07-07</span>
     </div>
   </div>
 </footer>

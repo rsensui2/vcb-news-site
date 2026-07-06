@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-07-07 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-07-07 の Vibe Coder Bootcamp モーニングディスパッチ — 6本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0707</span>
+    <span class="sep">/</span>
+    <span>2026-07-07</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>06 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260707.0740</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-07-07/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:40 · MON</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · MONDAY · JULY 7, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>07<span class="dot">.</span>07</h1>
+    <div class="strap">
+      <span>Google「Gemma · OpenAI「GPT-5.6」Sol/Terra/Luna · Meituan「LongCat-2.0」の重みが · Anthropic「Security</span>
+      <span><span class="count">06</span>&nbsp;ITEMS · READ 5 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        オープンモデル / マルチモーダル <span class="sep">/</span> GOOGLE / DEEPMIND（TECH NEWS SCOUT, @V_SHAKTHI 他） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Google「Gemma 4」— エンコーダーフリーの統合マルチモーダル、ノートPCでローカル動作・Apache-2.0</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-07/topic_1.png" data-alt="Google「Gemma 4」— エンコーダーフリーの統合マルチモーダル、ノートPCでローカル動作・Apache-2.0" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-07/topic_1.png" alt="Google「Gemma 4」— エンコーダーフリーの統合マルチモーダル、ノートPCでローカル動作・Apache-2.0" />
+      </div>
+      <p class="lede">
+        Google/DeepMind が新しいオープンモデル「Gemma 4」を公開した。テキスト・画像・音声・動画を1つのアーキテクチャで処理する『エンコーダーフリー（encoder-free）』の統合マルチモーダル設計が最大の特徴で、視覚/音声ごとに別パイプラインを持たない分、分割エンコーダのレイテンシを排除する。12B と 31B があり、いずれも Apache-2.0（商用可）。ノートPC等の消費者ハードでのローカル動作を狙った設計。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">テキスト/画像/音声/動画を単一アーキで処理する encoder-free 統合マルチモーダル（従来の分割エンコーダを置換し、分割由来のレイテンシを削減）</li>
+        <li data-i="02">12B と 31B のバリアント。31B instruction-tuned は HuggingFace 公開、画像＋テキスト入力対応。ライセンスは Apache-2.0（商用利用可）</li>
+        <li data-i="03">ノートPC等の消費者ハードでローカル動作を想定。E2B/E4B のエッジ版は軽量だが複雑なエージェントタスクでは品質が落ちるとの実測評も併存</li>
+        <li data-i="04">Google の明言する戦略は『パラメータ規模の追求でなく、パラメータあたりの知能＋広い展開性の最大化』</li>
+      </ul>
+      <div class="pull">
+        手元のノートPCで動く商用可のマルチモーダル基盤が一段強くなり、API課金なしで音声/画像パイプラインやプロトタイプを組める選択肢が広がる。encoder-free はオンデバイス・マルチモーダルの設計トレンドを示す。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://blog.google/innovation-and-ai/technology/">Google / DeepMind（Tech News Scout, @v_shakthi 他）</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-01</dd>
+        <dt>CATEGORY</dt>
+        <dd>オープンモデル / マルチモーダル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://blog.google/innovation-and-ai/technology/">https://blog.google/innovation-and-ai/technology/</a></dd>
+        <dd><a href="https://x.com/v_shakthi/status/2073254549364814100">x.com/v_shakthi/status/20732545493648141…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · TECH NEWS SCOUTCOD</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        モデルリリース（観測） <span class="sep">/</span> TECH NEWS SCOUT（@CODEBYNZ / @MARCOPAPA99 他・観測ベース） <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI「GPT-5.6」Sol/Terra/Luna — 公開 Codex リポにモデル名が出現、API/Codex 限定プレビューで一般公開が目前（観測）</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-07/topic_2.png" data-alt="OpenAI「GPT-5.6」Sol/Terra/Luna — 公開 Codex リポにモデル名が出現、API/Codex 限定プレビューで一般公開が目前（観測）" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-07/topic_2.png" alt="OpenAI「GPT-5.6」Sol/Terra/Luna — 公開 Codex リポにモデル名が出現、API/Codex 限定プレビューで一般公開が目前（観測）" />
+      </div>
+      <p class="lede">
+        OpenAI の次世代『GPT-5.6』ファミリー（Sol / Terra / Luna の3階層）について、公開されている Codex の GitHub リポジトリにモデル名 gpt-5.6-sol / -terra / -luna が追加されたのが観測され、一般公開が目前との見方が強まっている。現状は ChatGPT ではなく API/Codex 限定のプレビュー扱い。リリース日は Polymarket 上で 7/7〜7/10 を巡って確率が乱高下しており、日付は確定していない。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">公開 Codex リポに gpt-5.6-sol / -terra / -luna のモデル名が push されたのが観測された（@CodeByNZ、Likes 136）— リークでなくリポ上の実物</li>
+        <li data-i="02">現状は API/Codex 限定プレビューで、ChatGPT への一般展開はまだ。米政府の早期アクセス・追加監視要請で限定プレビューに留まるとの観測も</li>
+        <li data-i="03">リリース日は Polymarket で乱高下（『7/8までに公開』が1時間で30%→22%、『7/10までに』が68%→57% など）。日付は未確定</li>
+        <li data-i="04">Fable 5 が本日 7/7 でサブスクを外れるタイミングと重なり、『Fable 離脱→GPT-5.6 へ乗り換え』を見込む声が多い</li>
+      </ul>
+      <div class="pull">
+        フロンティアの世代交代が『サブスク→API/政府審査つき限定提供』という新しい流通形態で進む象徴。使えるモデルがどのチャネル（ChatGPT/Codex/API）で出るかがモデル選定を左右する時代を示す。ただし現時点は兆候の段階で、確定情報と観測を分けて追う姿勢が要る。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/CodeByNZ/status/2073432213941600266">@CodeByNZ</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-04</dd>
+        <dt>CATEGORY</dt>
+        <dd>モデルリリース（観測）</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/CodeByNZ/status/2073432213941600266">x.com/CodeByNZ/…</a></dd>
+        <dd><a href="https://x.com/marcopapa99/status/2073692252061475105">x.com/marcopapa99/status/207369225206147…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · MEITUAN LONGCAT ME</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        オープンウェイト / 中国勢 <span class="sep">/</span> MEITUAN LONGCAT（公式, @MEITUAN_LONGCAT） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Meituan「LongCat-2.0」の重みが MIT で完全オープンソース公開 — 1.6兆パラメータ MoE の実物ドロップ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-07/topic_3.png" data-alt="Meituan「LongCat-2.0」の重みが MIT で完全オープンソース公開 — 1.6兆パラメータ MoE の実物ドロップ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-07/topic_3.png" alt="Meituan「LongCat-2.0」の重みが MIT で完全オープンソース公開 — 1.6兆パラメータ MoE の実物ドロップ" />
+      </div>
+      <p class="lede">
+        中国・美団（Meituan）の LongCat チームが、1.6兆パラメータ（アクティブ約48B）の MoE コーディングモデル『LongCat-2.0』のモデル重みと推論コードを MIT ライセンスで完全公開した。07-02 に配信済みの公開告知から一歩進み、制約なしの実物 weights がドロップされた形。1M トークンのコンテキストに対応し、コーディング特化。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">LongCat-2.0（1.6T パラメータ / アクティブ約48B の MoE）の weights と推論コードを MIT で完全公開（@Meituan_LongCat 公式、Likes 2,070 / RT 284）</li>
+        <li data-i="02">ライセンスは MIT・無制限。1M トークンのコンテキスト、コーディング特化設計</li>
+        <li data-i="03">07-02 の発表段階から、07-05 に実際の重み公開へ進展（告知→実物ドロップ）</li>
+        <li data-i="04">『中国のフードデリバリー企業が GPT-5.5 をコーディングベンチで上回った』として英語圏でも拡散（ベンチ主張は伝聞ベース）</li>
+      </ul>
+      <div class="pull">
+        米国が輸出規制を締める一方で、中国発のオープンウェイトが無制限 MIT で最前線に並ぶ構図が続く。巨大 MoE を自前/クラウドで動かせる MIT の選択肢が増えた意味は大きく、GLM-5.2 に続くオープンウェイトがフロンティアの空白を埋める直近事例。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/Meituan_LongCat/status/2073768940078317713">@Meituan_LongCat</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-05</dd>
+        <dt>CATEGORY</dt>
+        <dd>オープンウェイト / 中国勢</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/Meituan_LongCat/status/2073768940078317713">x.com/Meituan_LongCat/…</a></dd>
+        <dd><a href="https://x.com/grok/status/2073802273025617942">x.com/grok/status/2073802273025617942</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · ANTHROPIC / MINDFO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ / 開発ツール <span class="sep">/</span> ANTHROPIC / MINDFORT（@AKULGUPTA30 / @MINDFORT） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic「Security Skills in Claude」— ワンコマンドでコーディングエージェントをセキュリティレビューチーム化するOSSライブラリ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-07/topic_4.png" data-alt="Anthropic「Security Skills in Claude」— ワンコマンドでコーディングエージェントをセキュリティレビューチーム化するOSSライブラリ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-07/topic_4.png" alt="Anthropic「Security Skills in Claude」— ワンコマンドでコーディングエージェントをセキュリティレビューチーム化するOSSライブラリ" />
+      </div>
+      <p class="lede">
+        Anthropic（MindFort チーム）が、リポジトリに対するセキュリティレビューチームとして機能するオープンソースの『Security Skills』を公開した。curl ワンコマンドでプラットフォームを判定してスキルを導入し、Claude Code / Cursor / Codex などのコーディングエージェントを脆弱性レビューに使えるようにする。無料・オープンソースで15スキル構成。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">curl ワンコマンドで導入し、コーディングエージェントをセキュリティレビューチーム化する OSS（@AkulGupta30 / @mindfort、07-02）。15 のセキュリティスキルで構成</li>
+        <li data-i="02">Claude Code / Cursor / Codex 等に対応。無料・オープンソース</li>
+        <li data-i="03">コミュニティ発の別レポ『Anthropic-Cybersecurity-Skills』（mukul975）も今週 約21k★・800超スキルで GitHub トレンド入り（※公式15スキルとは別物）</li>
+        <li data-i="04">実運用例: アルバータ州政府が Claude Code で 4.66億行のコードを20時間でスキャンし脆弱性を発見と報告（@AkshajSatyawada、07-06）</li>
+      </ul>
+      <div class="pull">
+        『AIにコードを書かせる』の次は『AIにセキュリティレビューさせる』段階へ。vibe coding で本番に出す前に、ワンコマンドで脆弱性レビューを回せる実用ツールが公式から出た意味は大きい。ソースが完璧でも防御の仕方が従来と違うという文脈にも直結する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/AkulGupta30/status/2072746324185735215">@AkulGupta30</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-02</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ / 開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/AkulGupta30/status/2072746324185735215">x.com/AkulGupta30/…</a></dd>
+        <dd><a href="https://x.com/AkshajSatyawada/status/2074238176265400677">x.com/AkshajSatyawada/status/20742381762…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · KAIZE 0XKAIZE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI活用 / スキル設計 <span class="sep">/</span> KAIZE (@0X_KAIZE) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Opus 4.8 を Fable 5 に「変える」— 締切前2日間の絞り取り活用術（@0x_kaize）</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-07/topic_5.png" data-alt="Opus 4.8 を Fable 5 に「変える」— 締切前2日間の絞り取り活用術（@0x_kaize）" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-07/topic_5.png" alt="Opus 4.8 を Fable 5 に「変える」— 締切前2日間の絞り取り活用術（@0x_kaize）" />
+      </div>
+      <p class="lede">
+        Fable 5 が有料プランに含まれる最終日が本日 7/7、7/8 からは使用クレジット制（$10/$50 per Mtok、Opus の2倍で Anthropic 最高価格）に移行することを前提に、窓が閉じる前に『Fable 5 自身へ Opus 4.8 向けの SKILL.md を書かせ、Fable の推論パターン・検証習慣・タスク分解を日常モデルに継承させる』メタ活用術を提案した投稿。『Fable へのアクセスは切れても Fable が書いたファイルは残る』が核。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">コアの裏技: Fable に一行『write a SKILL.md for Opus 4.8 capturing how you decompose hard tasks, verify your own work, and decide what to do next』と指示してスキルを書かせる</li>
+        <li data-i="02">6つの絞り取り方: ①最難問を投げる ②20メッセージより1本の大ブリーフ ③effort は high 既定・xhigh は最難問のみ ④セッション跨ぎの .md メモリ1枚 ⑤報告前に自己検証させ偽『完了』を潰す ⑥Opus 時代の過剰プロンプトは消す</li>
+        <li data-i="03">7/8 以降は使用クレジット制（$10/$50 per Mtok、Opus の2倍）へ移行するという課金の節目</li>
+        <li data-i="04">締めに『Loop engineering の記事を読め、7/7 以降はそれを多用する』と誘導</li>
+      </ul>
+      <div class="pull">
+        高性能フロンティアが安く使える窓は流動的だが、モデルに書かせたワークフロー（SKILL.md・メモリ・指示書）は durable に残る。賢いモデルにワークフローを言語化させ、安いモデルに継承させるのが実運用の要になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,263</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/0x_kaize/status/2073857861931667946">@0x_kaize</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-05</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI活用 / スキル設計</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/0x_kaize/status/2073857861931667946">x.com/0x_kaize/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · THINKMOVE INC SHOT</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI活用 / エージェント設計 <span class="sep">/</span> 豊藏 翔太@THINKMOVE INC. (@SHOTATYKR) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>/fable Skill を自作 — Opus 4.8 を Fable 5.0 の出力に近づける5フェーズ（@shotatykr）</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-07/topic_6.png" data-alt="/fable Skill を自作 — Opus 4.8 を Fable 5.0 の出力に近づける5フェーズ（@shotatykr）" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-07/topic_6.png" alt="/fable Skill を自作 — Opus 4.8 を Fable 5.0 の出力に近づける5フェーズ（@shotatykr）" />
+      </div>
+      <p class="lede">
+        前掲 kaize の『Fable に SKILL.md を書かせる』提案を具体化し、実際に /fable Skill を作成した投稿。Fable が難タスクで辿る5フェーズ（Phase 0〜4）と冒頭3原則を言語化した。Opus 4.8 にこれを読み込ませて Fable 5.0 の出力に近づけるのが狙い。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">冒頭3原則: ①完了条件を先に固定（検証方法が書けない＝理解不足）②自分の主張でなく観測を信じる（実物を見るまで完了と言わない）③次の一手は『今いちばんリスクが高い場所』で選ぶ</li>
+        <li data-i="02">Phase 0=触る前に3行（完了条件/検証方法/やらないこと）を書き錨にする / Phase 1=偵察で『事実/仮定/不明』に仕分け（最も危険なのは事実のふりをした仮定）</li>
+        <li data-i="03">Phase 2=独立に検証できる単位でリスク順に分解（簡単な所から片付けるのは罠）/ Phase 3=1ピースずつその場で検証し4つの自問で次手を選び直す</li>
+        <li data-i="04">Phase 4（心臓部）=別の層で確認・境界値で壊しに行く・各原因説明に観測の証拠を1つずつ持たせる（無ければ『寄与は未確認』）・依頼原文突き合わせ・diff通読</li>
+      </ul>
+      <div class="pull">
+        Ryoko の Operating Instructions とほぼ同型で、実務にそのまま流用できる完成度。『検証方法が書けない＝理解できていない』『簡単な部分から片付けるのは罠』『最後にまとめて検証しない』は、AIにコードを書かせる際の典型的失敗を的確に防ぐ。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">502</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/shotatykr/status/2074035238116769851">@shotatykr</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-06</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI活用 / エージェント設計</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/shotatykr/status/2074035238116769851">x.com/shotatykr/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://blog.google/innovation-and-ai/technology/">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-07-06/">
+      ← 前日 · 2026-07-06
+      <span class="big">Alibaba が「Claude Code」を全社禁止（7/10 から）— 高リスクソフト指定、蒸留めぐる米中対立が現場レベルへ</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-07-07/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260707.0740</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

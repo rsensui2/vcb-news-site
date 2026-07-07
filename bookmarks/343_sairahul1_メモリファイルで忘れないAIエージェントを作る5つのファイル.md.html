@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №030</span>
+    <span class="tick">BOOKMARK №034</span>
     <span class="sep">/</span>
     <span>2026-06-19</span>
     <span class="sep">/</span>
     <span>@sairahul1</span>
     <span class="sep">/</span>
-    <span>436 ITEMS</span>
+    <span>441 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:17 TUE</span>
+    <span>JST 07:21 WED</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,19 +305,19 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-07-06/">NEWS</a>
+      <a href="../news/2026-07-07/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:17 · TUE</div>
+    <div class="meta">JST · 07:21 · WED</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-06-19 <span>/</span> №030
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-06-19 <span>/</span> №034
     </div>
     <div class="cat-line">
       <span>📖 技術解説 / 💻 AI（エージェント運用 / Claude Code）</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">メモリファイルで「忘れない」AIエージェントを作る — 5つのファイル構成</h1>
     <div class="strap">
-      <span><span class="label">№</span>030 / 436</span>
+      <span><span class="label">№</span>034 / 441</span>
       <span><span class="label">SRC</span><a href="https://x.com/sairahul1/status/2067903018931257483" target="_blank" rel="noopener noreferrer">x.com/sairahul1 ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/343_sairahul1_%E3%83%A1%E3%83%A2%E3%83%AA%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%A7%E5%BF%98%E3%82%8C%E3%81%AA%E3%81%84AI%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%82%92%E4%BD%9C%E3%82%8B5%E3%81%A4%E3%81%AE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">030<span class="ord">BOOKMARK / 436</span></aside>
+    <aside class="numeral">034<span class="ord">BOOKMARK / 441</span></aside>
     <article class="prose">
 <p><strong>有益度:</strong> ⭐⭐⭐⭐</p><p><strong>エンゲージメント:</strong> Likes 253 / RT 44 / Replies 16 / Bookmarks 772 / Views 391,817</p><h2>概要</h2><p>「AIエージェントが失敗するのはモデルが悪いからではなく、毎セッション記憶喪失で目覚めるから」という問題提起から、CLAUDE.md / AGENTS.md / CLAUDE.local.md / MEMORY.md / README.md の5ファイルでエージェントに永続メモリを与える設計を解説した X Article。</p><h2>まとめ</h2><ul><li>失敗の真因は「モデルの賢さ」ではなく、モデルの下にある<strong>メモリ層の欠如</strong>。プロンプト→実行→セッション終了→記憶消失→次回も同じミス、という繰り返しが AI コーディングで最大の時間浪費。</li><li><strong>5ファイルの役割分担</strong>:</li></ul><p>  - <code>CLAUDE.md</code> — Claude 専用の briefing。プロジェクト文脈/コード規約/コマンド/アーキテクチャの4節、目標300行未満。</p><p>  - <code>AGENTS.md</code> — ベンダー横断の標準。Cursor / Copilot / Gemini CLI / Windsurf / Aider / Zed なども読む共通ファイル。</p><p>  - <code>CLAUDE.local.md</code> — 個人の好み。git にコミットしない。</p><p>  - <code>MEMORY.md</code> — AI が自分で書く自動メモ（index は毎セッション読み込み）。</p><p>  - <code>README.md</code> — 人間向け（エージェント向けではない）。</p><ul><li><code>@imports</code> で巨大1枚岩を回避（最大5階層、チームごとに分割所有）。</li><li><strong>Auto-memory</strong> が最新かつ最重要層: Claude Code がセッション中に自分でメモを書く。<code>/memory</code> でレビュー、「今日学んだことをメモに反映して」で発火。</li><li>結論の式: <strong>Model + Memory + Retrieval + Feedback = Useful Agent</strong>。記憶こそ複利で効く変数で、モデルの賢さは複利でない。</li></ul><h2>日本語訳全文</h2><p>ほとんどのAIエージェントが失敗するのは、モデルが悪いからではない。</p><p>毎セッション、記憶喪失の状態で目覚めるからだ。</p><p>あなたは Claude にこう言う。「うちは npm じゃなく pnpm を使う」</p><p>次のセッション: また npm を使おうとする。</p><p>「ここではデフォルトエクスポートは使わない」と言う。</p><p>次のセッション: デフォルトエクスポートを書く。</p><p>あなたが入れた修正は、セッションが終わった瞬間に蒸発する。</p><p>これには「1ファイルで効く解決策」がある。</p><p>それを見つけるのに、同じことを繰り返し言い続けて3ヶ月かかった。</p><p>学んだことを全部ここに書く。</p><h3>なぜ大半のAIエージェントは失敗するのか</h3><p>モデルのせいではない。</p><p>モデルの「下」にある層が欠けているせいだ。</p><p>→ プロンプトを書く</p><p>→ エージェントがタスクを実行する</p><p>→ セッション終了</p><p>→ 記憶が消える</p><p>→ 次のセッション: 同じミス</p><p>→ 同じ指示を繰り返す</p><p>→ 永遠に</p><p>このループこそ、AIコーディングで時間を浪費する最大の発生源だ。</p><p>悪いコードでもハルシネーションでもない。</p><p>「繰り返し」だ。</p><h3>欠けている層: メモリ</h3><p>誰もが「どのモデルが一番賢いか」に取り憑かれている。</p><p>層を間違えている。</p><p>本当のアップグレードは、より賢いモデルではない。</p><p>モデルに「学んだことを保存する場所」を与えることだ。</p><p>→ プロンプト → エージェントに「今やるべきこと」を伝える</p><p>→ エージェント → タスクを実行する</p><p>→ メモリ → セッションを跨いで文脈を保持する</p><p>→ 永続的な文脈 → 修正の繰り返しが消える</p><p>→ 学習システム → エージェントが実際に時間とともに改善する</p><p>これが「ツール」と「チームメイト」の違いだ。</p><p>ツールは毎回ゼロから、言われたことをやる。</p><p>チームメイトは昨日を覚えている。</p><h3>すべてのAIエージェントに必要な5つのメモリファイル</h3><p>メモリが欠けている層だと受け入れたら、次の問いは「それはどこに置くのか」。</p><p>5つのファイル。それぞれ別の役割。</p><p>→ CLAUDE.md — Claude 個人への briefing 文書</p><p>→ AGENTS.md — 全主要ツールが読む普遍的標準</p><p>→ CLAUDE.local.md — 個人の好み。git にはコミットしない</p><p>→ MEMORY.md — AI が自分について自動で書くメモ</p><p>→ README.md — エージェントではなく人間のため</p><p>順に見ていこう。</p><h3>CLAUDE.md — すべての始まり</h3><p>これをプロジェクトのルートに置く。</p><p>Claude は毎セッションの冒頭でこれを読む。</p><p>記憶喪失の新メンバーへの briefing 文書だと思えばいい。</p><p>良い CLAUDE.md は4つの節を持つ:</p><p>→ プロジェクト文脈 — 一行。「Stripe と Postgres を使った Next.js の EC アプリ」</p><p>→ コードスタイル — 「ちゃんとフォーマットして」ではなく「ES modules、named export、インデント2スペース」</p><p>→ コマンド — 正確な文字列。「テストを実行」ではなく <code>pnpm test:integration</code></p><p>→ アーキテクチャ — 「API ルートは /src/api/[resource]/route.ts。DB アクセスは Repository パターン」</p><p>目標: 300行未満。</p><p>すべての行が、実際の作業と「注意」を奪い合う。</p><p><code>/init</code> を実行すれば Claude が雛形を自動生成する。</p><p>そして大半を削れ。</p><p>デフォルトのファイルには、Claude が package.json から既に分かることまで入っている。ファイルが無いと Claude が間違えること「だけ」を残せ。</p><h3>@imports システム — 軽量に保つ</h3><p>CLAUDE.md がすべてを抱える必要はない。</p><p>他のファイルを import できる:</p><p>See @README.md for project overview</p><p>See @docs/api-patterns.md for API conventions</p><p>See @package.json for available npm scripts</p><p>import は再帰的にできる — 最大5階層。</p><p>これで「1つの巨大ファイル」問題が解ける。</p><p>チームの場合: フロントエンドチームは docs/frontend-rules.md を所有。</p><p>セキュリティは docs/security.md を所有。</p><p>CLAUDE.md はそれらを全部 import するだけ。</p><p>ルートファイルは1つ、専門ソースは多数。</p><h3>AGENTS.md — 普遍的標準</h3><p>CLAUDE.md は Claude にしか効かない。</p><p>チームが Cursor、Copilot、Gemini CLI も使うなら — 彼らはそれを読まない。</p><p>AGENTS.md がこれを解決する。</p><p>1ファイル。すべての主要エージェントが読む。</p><p>Claude Code、Cursor、GitHub Copilot、Gemini CLI、Windsurf、Aider、Zed、Warp などが対応。</p><p>標準的な Markdown。特別なスキーマも YAML も不要。</p><p>AIエージェントのための README だと思えばいい。</p><p>README.md は人間向け。AGENTS.md はベンダーを問わず全エージェント向け。CLAUDE.md はその上に Claude 固有の追加分を載せる。</p><p>これらは補完関係で、競合ではない。</p><h3>Auto-memory — 自分でメモを取るAI</h3><p>これが最新かつ最も興味深い層。</p><p>Claude Code は今やセッション中に自分でメモリファイルを書く。</p><p>memory/</p><p>├── MEMORY.md          ← index、毎セッション読み込み</p><p>├── debugging.md       ← デバッグのパターンのメモ</p><p>├── api-conventions.md ← API 設計の決定</p><p>└── ...</p><p>鍵となる転換:</p><p>あなたが CLAUDE.md を書く。あなたが指示を与える。</p><p>Claude が MEMORY.md を書く。学んだことを記録する。</p><p>→ 人間がルールを書く</p><p>→ エージェントが作業しながらパターンを発見する</p><p>→ エージェントが自分のメモリを書く</p><p>→ 将来のセッションがより賢く始まる</p><p>これは直接トリガーできる。生産的なセッションの終わりにこう言うだけ:</p><p>「今日うちのコードベースについて学んだことをメモリファイルに反映して」</p><p>学びが永続する。カスタム ORM ラッパーを5回目の説明をしなくて済む。</p><p><code>/memory</code> でいつでも、Claude が保存した内容をレビュー・編集できる。</p><h3>「/init してから削る」ワークフロー</h3><p>新規プロジェクトでメモリファイルを最速で立ち上げる方法:</p><p>プロジェクトディレクトリで <code>/init</code> を実行</p><p>Claude がコードベースを基に CLAUDE.md の雛形を生成</p><p>要らないものを削る</p><p>ステップ3でほとんどの人が間違える。</p><p>生成されたファイルは下書きであって完成品ではない。</p><p>よく余計なものが入る。「このプロジェクトは JavaScript を使う」— どうも、package.json を見れば分かる。</p><p>妥当な下書きから削っていく方が、白紙から書くより良い。</p><p>セットアップ後は、有機的に育てる。</p><p>Claude が間違った前提を置いたら — 例えば非推奨パッケージを import し続けるなら — 一度だけ直すのではなく、</p><p>こう言え: 「CLAUDE.md に追記して: 常に @company/utils ではなく @company/utils-v2 から import する」</p><p>その指示は将来の全セッションで永続する。</p><p>数週間ごとに、Claude に CLAUDE.md をレビュー・整理させる。</p><p>指示は溜まる。冗長になるものも、矛盾し始めるものもある。一掃すれば鋭さを保てる。</p><h3>私の実際のセットアップ</h3><p>複数の本番プロジェクトで全部試した結果、定着したのはこれ:</p><p>→ AGENTS.md をルートに — どの AI ツールも読む共有指示。ビルドコマンド、コード規格、テスト要件。</p><p>→ CLAUDE.md は @imports で Claude 固有の挙動。100行未満を維持し、ほぼ docs/ ファイルへのポインタ。</p><p>→ CLAUDE.local.md は個人の癖 — テストデータ、サンドボックス URL、ショートカット。git にはコミットしない。</p><p>→ Auto-memory 有効。Claude が自分でメモを取る。月次でレビュー。</p><p>→ それ以外は全部、AGENTS.md を指す symlink に置き換え。単一の真実ソース。</p><p>エレガントではない。</p><p>だがチームの全ツールで「指示のドリフト」を殺せる。</p><h3>より大きな転換</h3><p>ほとんどの開発者はこう考える:</p><p>良いモデル = 良いエージェント。</p><p>間違い。</p><p>本当の式:</p><p>Model + Memory + Retrieval + Feedback = 有用なエージェント</p><p>メモリの無い賢いモデルは、明日もテストコマンドを忘れる。</p><p>優れたメモリを持つ並のモデルは、毎週鋭くなる。</p><p>メモリは複利で効く変数だ。</p><p>モデルの知能は違う。</p><p>私が AI ワークフローに加えた最大の改善は、モデルを切り替えたことではなかった。</p><p>モデルにメモリを与えたことだ。</p><p>「Claude、うちは pnpm を使う」を毎セッション言うのと、</p><p>「Claude はもう知っている」を毎セッション、の違い。</p><p>それが「ツール」と「チームメイト」の違いだ。</p>
     </article>
@@ -384,14 +384,14 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 436 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 441 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-07-06/">TODAY</a></li>
+          <li><a href="../news/2026-07-07/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -418,7 +418,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-07-07</span>
+      <span>BUILD 2026-07-08</span>
     </div>
   </div>
 </footer>

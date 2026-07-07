@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ループ入門 — Claude Code チームが定義するループ設計の4類型 — Bookmarks · Vibe Coder Bootcamp</title>
+  <meta name="description" content="- Turn-based loop（ターンベース）: トリガー=ユーザーのプロンプト。停止=Claude が完了 or 追加コンテキストが必要と判断。短めの単発タスク向け。検証ステップを SKILL.md に手順化すると自己検証が増えてターン数を減らせる。定量的なチェックほど自己" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+  /* Archive page — day sections */
+  .bm-archive { padding: 0 0 40px; background: var(--paper); }
+  .bm-day {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--hair);
+  }
+  .bm-day:first-of-type { padding-top: 40px; }
+  .bm-day-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+  .bm-day-head .date {
+    font-family: "Shippori Mincho B1", "Noto Serif JP", serif;
+    font-weight: 800;
+    font-size: clamp(40px, 6vw, 72px);
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin: 0;
+  }
+  .bm-day-head .date .sep { color: var(--accent); margin: 0 2px; }
+  .bm-day-head .count {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding: 8px 14px;
+    border: 1px solid var(--accent);
+    white-space: nowrap;
+  }
+  /* active nav underline */
+  .masthead nav a.is-active { border-bottom-color: var(--accent); color: var(--accent); }
+
+  /* Article page — prose */
+  .bm-article-head {
+    padding: 48px 0 40px;
+    border-bottom: 1px solid var(--hair);
+  }
+  .bm-article-head .breadcrumb {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mute);
+    margin-bottom: 18px;
+  }
+  .bm-article-head .breadcrumb a { color: var(--ink); border-bottom: 1px solid var(--hair); padding-bottom: 1px; }
+  .bm-article-head .breadcrumb a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  .bm-article-head .cat-line {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .bm-article-head .cat-line .sep { color: var(--mute); }
+  .bm-article-head h1.title {
+    font-family: "Shippori Mincho B1", "Noto Serif JP", serif;
+    font-weight: 800;
+    font-size: clamp(32px, 4.4vw, 58px);
+    line-height: 1.12;
+    letter-spacing: -0.005em;
+    margin: 0 0 24px;
+    color: var(--ink);
+  }
+  .bm-article-head .strap {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--mute);
+  }
+  .bm-article-head .strap span .label { color: var(--accent); margin-right: 6px; }
+  .bm-article-head .strap a { border-bottom: 1px solid var(--hair); padding-bottom: 2px; }
+  .bm-article-head .strap a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  .bm-body { padding: 72px 0; border-bottom: 1px solid var(--hair); }
+  .bm-body .container {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr) 300px;
+    gap: 48px;
+  }
+  .bm-body .numeral {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 96px;
+    font-weight: 800;
+    line-height: 0.85;
+    color: var(--ink);
+    position: sticky;
+    top: 40px;
+    align-self: start;
+    letter-spacing: -0.03em;
+  }
+  .bm-body .numeral .ord {
+    display: block;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.14em;
+    margin-top: 14px;
+    font-weight: 500;
+  }
+  .bm-body .prose {
+    font-size: 16px;
+    line-height: 1.9;
+    color: var(--ink-soft);
+    font-family: "Inter", "Noto Sans JP", sans-serif;
+  }
+  .bm-body .prose > *:first-child { margin-top: 0; }
+  .bm-body .prose h1 {
+    font-family: "Shippori Mincho B1", serif;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 1.25;
+    margin: 40px 0 18px;
+    color: var(--ink);
+  }
+  .bm-body .prose h2 {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 40px 0 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+  }
+  .bm-body .prose h2::before {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: var(--accent);
+  }
+  .bm-body .prose h3 {
+    font-family: "Shippori Mincho B1", serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.35;
+    margin: 32px 0 14px;
+    color: var(--ink);
+  }
+  .bm-body .prose p { margin: 0 0 18px; }
+  .bm-body .prose ul, .bm-body .prose ol {
+    border-left: 2px solid var(--ink);
+    padding: 4px 0 4px 24px;
+    margin: 18px 0 24px;
+    list-style: none;
+  }
+  .bm-body .prose ul li, .bm-body .prose ol li {
+    position: relative;
+    padding: 4px 0 4px 18px;
+    font-size: 15px;
+  }
+  .bm-body .prose ul li::before {
+    content: "·";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1;
+  }
+  .bm-body .prose blockquote {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 19px;
+    line-height: 1.6;
+    padding: 18px 0 18px 24px;
+    border-left: 4px solid var(--accent);
+    margin: 28px 0;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .bm-body .prose pre {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 18px 20px;
+    overflow-x: auto;
+    margin: 20px 0;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    line-height: 1.65;
+  }
+  .bm-body .prose code {
+    background: var(--paper-deep);
+    border: 1px solid var(--hair);
+    padding: 1px 6px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.9em;
+  }
+  .bm-body .prose pre code { background: transparent; border: 0; padding: 0; color: inherit; font-size: 13px; }
+  .bm-body .prose a { color: var(--accent); border-bottom: 1px solid rgba(200,52,31,0.25); }
+  .bm-body .prose a:hover { border-bottom-color: var(--accent); }
+
+  .bm-body .side {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: var(--mute);
+    border-top: 1px solid var(--hair);
+    padding-top: 24px;
+    position: sticky;
+    top: 40px;
+    align-self: start;
+  }
+  .bm-body .side dl { margin: 0; }
+  .bm-body .side dt {
+    color: var(--accent);
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-top: 18px;
+    margin-bottom: 6px;
+  }
+  .bm-body .side dt:first-child { margin-top: 0; }
+  .bm-body .side dd {
+    margin: 0 0 4px;
+    color: var(--ink);
+    word-break: break-all;
+    font-size: 12.5px;
+    line-height: 1.6;
+  }
+  .bm-body .side dd a { border-bottom: 1px solid var(--hair); padding-bottom: 1px; }
+  .bm-body .side dd a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  .bm-body .side .stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 18px;
+    margin-top: 8px;
+  }
+  .bm-body .side .stats .stat .num {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 24px;
+    color: var(--ink);
+    line-height: 1;
+    font-weight: 800;
+    display: block;
+  }
+  .bm-body .side .stats .stat .lab {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--mute);
+    margin-top: 4px;
+    display: block;
+    text-transform: uppercase;
+  }
+
+  /* card: stretched-link target must be local nav, not external */
+  .xcard .xcard-main-link { cursor: pointer; }
+
+  @media (max-width: 980px) {
+    .bm-body .container { grid-template-columns: 1fr; gap: 24px; }
+    .bm-body .numeral { position: static; font-size: 64px; }
+    .bm-body .side { position: static; }
+    .bm-day-head .date { font-size: 36px; }
+  }
+</style>
+</head>
+<body>
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">BOOKMARK №004</span>
+    <span class="sep">/</span>
+    <span>2026-07-07</span>
+    <span class="sep">/</span>
+    <span>@ClaudeDevs</span>
+    <span class="sep">/</span>
+    <span>441 ITEMS</span>
+    <span class="sep">/</span>
+    <span>JST 07:21 WED</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+<header class="masthead">
+  <div class="container row">
+    <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
+    <nav>
+      <a href="../">HOME</a>
+      <a href="../news/2026-07-07/">NEWS</a>
+      <a href="./" class="is-active">BOOKMARKS</a>
+      <a href="../#archive">ARCHIVE</a>
+      <a href="../#about">ABOUT</a>
+    </nav>
+    <div class="meta">JST · 07:21 · WED</div>
+  </div>
+</header>
+
+<section class="bm-article-head">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-07-07 <span>/</span> №004
+    </div>
+    <div class="cat-line">
+      <span>📖 技術解説 / エージェント設計</span>
+      <span class="sep">·</span><span>ClaudeDevs <span style="opacity:.7">@ClaudeDevs</span></span>
+      <span class="sep">·</span><span>2026-07-07</span>
+    </div>
+    <h1 class="title">ループ入門 — Claude Code チームが定義するループ設計の4類型</h1>
+    <div class="strap">
+      <span><span class="label">№</span>004 / 441</span>
+      <span><span class="label">SRC</span><a href="https://x.com/ClaudeDevs/status/2074208949205881033" target="_blank" rel="noopener noreferrer">x.com/ClaudeDevs ↗</a></span>
+      <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/377_ClaudeDevs_%E3%83%AB%E3%83%BC%E3%83%97%E5%85%A5%E9%96%80ClaudeCode%E3%81%AE4%E9%A1%9E%E5%9E%8B.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
+    </div>
+  </div>
+</section>
+
+<section class="bm-body">
+  <div class="container">
+    <aside class="numeral">004<span class="ord">BOOKMARK / 441</span></aside>
+    <article class="prose">
+<p><strong>有益度:</strong> ⭐⭐⭐</p><p><strong>エンゲージメント:</strong> Likes 14,333 / RT 1,671 / Bookmarks 31,416 / Views 4,099,370 / Replies 278</p><h2>概要</h2><p>「プロンプトを書く」から「ループを設計する」への潮流について、Claude Code チーム公式が用語と設計指針を整理した記事。彼らはループを「停止条件に達するまで作業サイクルを繰り返すエージェント」と定義し、①トリガー方法 ②停止方法 ③使う Claude Code プリミティブ ④向いているタスク の4軸で4類型に分類する。全タスクに複雑なループが要るわけではなく、最も単純な解から始めて選択的に使えと釘を刺している。</p><h2>まとめ</h2><ul><li><strong>Turn-based loop（ターンベース）</strong>: トリガー=ユーザーのプロンプト。停止=Claude が完了 or 追加コンテキストが必要と判断。短めの単発タスク向け。検証ステップを SKILL.md に手順化すると自己検証が増えてターン数を減らせる。定量的なチェックほど自己検証しやすい。</li><li><strong>Goal-based loop（/goal）</strong>: トリガー=リアルタイムの手動プロンプト。停止=ゴール達成 or 最大ターン数到達。検証可能な終了条件があるタスク向け。成功条件を明示すると「もう十分か」を Claude が判断せずに済み、途中で早期終了しない。評価モデルが条件を満たすまで差し戻す。テスト通過数・スコア閾値など決定的な基準が効く。</li><li><strong>Time-based loop（/loop・/schedule）</strong>: トリガー=指定時間間隔。停止=キャンセル or 作業完了（PR マージ・キュー空）。定期作業や外部システムとのインターフェース向け。<code>/loop</code> は自分の PC で動くので電源を切ると止まる。<code>/schedule</code> でクラウドの routine 化して常駐できる。</li><li><strong>Proactive loop（プロアクティブ）</strong>: トリガー=イベント/スケジュール（リアルタイムの人間なし）。停止=各タスクはゴール達成で終了、routine 自体は止めるまで稼働。バグ報告・issue トリアージ・移行・依存更新など定義済みの反復ストリーム向け。<code>/schedule</code>＋<code>/goal</code>＋Dynamic workflows＋Auto mode を合成して長時間稼働を組む。判断は高性能モデル、実行は小型高速モデルに振ってコスト管理。</li><li><strong>コード品質の保ち方</strong>: コードベースを綺麗に保つ（Claude は既存の慣習に倣う）／SKILL で「良い」を定義し自己検証させる／docs を参照可能に／レビューは fresh context の別エージェント（<code>/code-review</code>）で。個別の不合格は個別修正で終わらせず、システムに符号化して全反復を改善する。</li><li><strong>トークン管理</strong>: タスクに合ったプリミティブとモデルを選ぶ／成功・停止条件を明確に／大量実行前に小さくパイロット（Dynamic workflows は数百エージェントを spawn しうる）／決定的作業はスクリプト化（推論より安い）／監視対象の変化頻度に間隔を合わせる／<code>/usage</code>・<code>/goal</code>・<code>/workflows</code> で使用量を随時レビュー。</li></ul><h2>日本語訳全文</h2><p><strong>タイトル: ループ入門（Getting started with loops）</strong></p><p>いま「コーディングエージェントにプロンプトを書く」代わりに「ループを設計する」という話題で持ちきりだ。X で「ループとは何か」を突き止めようとすると、答えは人によってバラバラだと気づくだろう。Claude Code チームでは、ループを「停止条件に達するまで作業サイクルを繰り返すエージェント」と定義する。分類の軸は、①どうトリガーされるか ②どう停止するか ③どの Claude Code プリミティブを使うか ④どんなタスクに最適か、の4つ。本稿では主要なループ型・使いどころ・トークン使用量を管理しつつコード品質を保つ方法を扱う。すべてのタスクに複雑なループが要るわけではない。最も単純な解から始め、これらのパターンは選択的に使うこと。</p><p><strong>ターンベースのループ</strong> — トリガー: ユーザーのプロンプト。停止条件: Claude が完了した、または追加コンテキストが必要だと判断したとき。最適: 定常プロセスやスケジュールに属さない短めのタスク。使用量の管理: 具体的なプロンプトを書き、スキルで検証を強化してターン数を減らす。送るプロンプトごとに、あなたが各ターンを指揮する手動ループが始まる。Claude はコンテキストを集め、行動し、自分の仕事を確認し、必要なら繰り返し、応答する — これがエージェンティックループだ。手動の確認手順を SKILL.md に符号化すれば、Claude が自分の仕事をより多く自己検証できる。チェックが定量的であるほど自己検証は容易になる。</p><p><strong>ゴールベースのループ（/goal）</strong> — トリガー: リアルタイムの手動プロンプト。停止条件: ゴール達成、または最大ターン数に到達。最適: 検証可能な終了条件を持つタスク。使用量の管理: 具体的な完了基準と明示的なターン上限（「5回で止めろ」）を設定。成功基準を定義すると、Claude は「十分か」を自分で判断して早期終了せずに済む。評価モデルが条件を確認し、満たすかターン上限に達するまで差し戻す。テスト通過数やスコア閾値など決定的な基準が効くのはこのため。</p><p><strong>時間ベースのループ（/loop・/schedule）</strong> — トリガー: 指定した時間間隔。停止条件: 自分でキャンセルするか、作業が完了する（PR がマージ、キューが空）。最適: 反復作業、または外部環境／システムとのインターフェース。使用量の管理: 間隔を長くする、時間でなくイベントで反応する。<code>/loop</code> はプロンプトを間隔で再実行し、自分の PC 上で動くので電源を切ると止まる。<code>/schedule</code> で routine を作ればクラウドへ移せる。</p><p><strong>プロアクティブなループ</strong> — トリガー: イベントまたはスケジュール（リアルタイムの人間なし）。停止条件: 各タスクはゴール達成で終了、routine 自体は止めるまで稼働。最適: バグ報告・issue トリアージ・移行・依存更新など、定義済みの反復ストリーム。使用量の管理: routine は小型・高速モデルに振り、判断が要る箇所だけ最も高性能なモデルを使う。<code>/schedule</code>＋<code>/goal</code>＋スキル＋Dynamic workflows＋Auto mode を合成する。</p><p><strong>コード品質の維持</strong>: コードベース自体を綺麗に保つ（Claude は既存のパターン・慣習に倣う）／スキルで「良い」を符号化し自己検証させる／docs を参照しやすくする／レビューは fresh context の別エージェント（<code>/code-review</code> や Code Review for GitHub）を使う。個別の結果が基準を満たさないとき、個別修正で止めず、将来の全反復のためにシステムへ符号化する。</p><p><strong>トークン使用量の管理</strong>: タスクに合ったプリミティブとモデルを選ぶ／明確な成功・停止条件を定義する／大規模実行の前に小さくパイロットする（Dynamic workflows は数百のエージェントを spawn しうる）／決定的な作業はスクリプト化する（推論より安い）／必要以上に頻繁に routine を回さない／<code>/usage</code>・<code>/goal</code>・<code>/workflows</code> で使用量をレビューする。</p><p><strong>始め方</strong>: すでにやっている作業を見て、自分がボトルネックになっているタスクを1つ選び、どの部分を手放せるかを問う — 検証チェックは書けるか？ ゴールは十分明確か？ 作業はスケジュールで届くか？ ループを回し、どこで停滞し・行き過ぎるかを観察し、恐れず改善する。（執筆: @delba_oliveira）</p>
+    </article>
+    <aside class="side">
+      <dl>
+        <dt>AUTHOR</dt><dd>ClaudeDevs</dd>
+        <dt>HANDLE</dt><dd>@ClaudeDevs</dd>
+        <dt>POSTED</dt><dd>2026-07-07</dd>
+        <dt>CATEGORY</dt><dd>📖 技術解説 / エージェント設計</dd>
+        <dt>SOURCE</dt><dd><a href="https://x.com/ClaudeDevs/status/2074208949205881033" target="_blank" rel="noopener noreferrer">x.com/ClaudeDevs/status/207420894920588103…</a></dd>
+        <dt>MARKDOWN</dt><dd><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/377_ClaudeDevs_%E3%83%AB%E3%83%BC%E3%83%97%E5%85%A5%E9%96%80ClaudeCode%E3%81%AE4%E9%A1%9E%E5%9E%8B.md" target="_blank" rel="noopener noreferrer">GitHub で原文を見る</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn prev" href="./378_LuminaXspace_MetaLlama5%E3%83%AA%E3%83%BC%E3%82%AFWatermelon.md.html">
+      <span>← 新しいブックマーク</span>
+      <span class="big">Meta Llama 5（内部コード名 Watermelon）リーク — GPT-5.5 級…</span>
+    </a>
+    <a class="btn next" href="./376_shotatykr_fableSkill%E3%81%A7Opus48%E3%82%92Fable50%E5%87%BA%E5%8A%9B%E3%81%AB%E8%BF%91%E3%81%A5%E3%81%91%E3%82%8B5%E3%83%95%E3%82%A7%E3%83%BC%E3%82%BA.md.html">
+      <span>古いブックマーク →</span>
+      <span class="big">/fable Skill を自作 — Opus 4.8 を Fable 5.0 の出力に近づ…</span>
+    </a>
+  </div>
+</section>
+
+<section class="actions">
+  <div class="container">
+    <a href="./">← 一覧へ戻る</a>
+    <a class="primary" href="https://x.com/ClaudeDevs/status/2074208949205881033" target="_blank" rel="noopener noreferrer">元ポストを X で見る</a>
+    <a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/377_ClaudeDevs_%E3%83%AB%E3%83%BC%E3%83%97%E5%85%A5%E9%96%80ClaudeCode%E3%81%AE4%E9%A1%9E%E5%9E%8B.md" target="_blank" rel="noopener noreferrer">GitHub で開く</a>
+  </div>
+</section>
+
+<footer class="foot" id="about">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">Vibe Coder Bootcamp</div>
+        <p>
+          AI の新しい動きを毎朝整理して、Vibe Coder が今日使える形で届けるフィード。
+          運営は泉水亮介。Slackコミュニティと連動した公開ログです。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          BOOKMARKS ARCHIVE · 441 ITEMS · EN+JP
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../">HOME</a></li>
+          <li><a href="../news/2026-07-07/">TODAY</a></li>
+          <li><a href="./">BOOKMARKS</a></li>
+          <li><a href="../#archive">ARCHIVE</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>SUBSCRIBE</h5>
+        <ul>
+          <li><a href="#">Slack に参加</a></li>
+          <li><a href="#">RSS</a></li>
+          <li><a href="#">X で購読</a></li>
+          <li><a href="#">メール通知</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://github.com/rsensui2/vibe-coder-demo">GitHub</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Colophon</a></li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 2026-07-08</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

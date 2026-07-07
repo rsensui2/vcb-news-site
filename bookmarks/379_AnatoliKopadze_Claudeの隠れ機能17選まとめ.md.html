@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Claude はこれ全部できる — ほとんどの人が知らない機能17選 — Bookmarks · Vibe Coder Bootcamp</title>
+  <meta name="description" content="通常 Claude の隠れ機能: 1. Projects — ドキュメントと常設指示を永続保持。毎回自己紹介し直す必要がなくなる。まず最初にやるべき設定。 2. Artifacts — チャット内で実際に動くアプリ（電卓・習慣トラッカー・ゲーム・チャート付きダッシュボード）を横パ" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+  /* Archive page — day sections */
+  .bm-archive { padding: 0 0 40px; background: var(--paper); }
+  .bm-day {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--hair);
+  }
+  .bm-day:first-of-type { padding-top: 40px; }
+  .bm-day-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+  .bm-day-head .date {
+    font-family: "Shippori Mincho B1", "Noto Serif JP", serif;
+    font-weight: 800;
+    font-size: clamp(40px, 6vw, 72px);
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin: 0;
+  }
+  .bm-day-head .date .sep { color: var(--accent); margin: 0 2px; }
+  .bm-day-head .count {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding: 8px 14px;
+    border: 1px solid var(--accent);
+    white-space: nowrap;
+  }
+  /* active nav underline */
+  .masthead nav a.is-active { border-bottom-color: var(--accent); color: var(--accent); }
+
+  /* Article page — prose */
+  .bm-article-head {
+    padding: 48px 0 40px;
+    border-bottom: 1px solid var(--hair);
+  }
+  .bm-article-head .breadcrumb {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mute);
+    margin-bottom: 18px;
+  }
+  .bm-article-head .breadcrumb a { color: var(--ink); border-bottom: 1px solid var(--hair); padding-bottom: 1px; }
+  .bm-article-head .breadcrumb a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  .bm-article-head .cat-line {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .bm-article-head .cat-line .sep { color: var(--mute); }
+  .bm-article-head h1.title {
+    font-family: "Shippori Mincho B1", "Noto Serif JP", serif;
+    font-weight: 800;
+    font-size: clamp(32px, 4.4vw, 58px);
+    line-height: 1.12;
+    letter-spacing: -0.005em;
+    margin: 0 0 24px;
+    color: var(--ink);
+  }
+  .bm-article-head .strap {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--mute);
+  }
+  .bm-article-head .strap span .label { color: var(--accent); margin-right: 6px; }
+  .bm-article-head .strap a { border-bottom: 1px solid var(--hair); padding-bottom: 2px; }
+  .bm-article-head .strap a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  .bm-body { padding: 72px 0; border-bottom: 1px solid var(--hair); }
+  .bm-body .container {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr) 300px;
+    gap: 48px;
+  }
+  .bm-body .numeral {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 96px;
+    font-weight: 800;
+    line-height: 0.85;
+    color: var(--ink);
+    position: sticky;
+    top: 40px;
+    align-self: start;
+    letter-spacing: -0.03em;
+  }
+  .bm-body .numeral .ord {
+    display: block;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.14em;
+    margin-top: 14px;
+    font-weight: 500;
+  }
+  .bm-body .prose {
+    font-size: 16px;
+    line-height: 1.9;
+    color: var(--ink-soft);
+    font-family: "Inter", "Noto Sans JP", sans-serif;
+  }
+  .bm-body .prose > *:first-child { margin-top: 0; }
+  .bm-body .prose h1 {
+    font-family: "Shippori Mincho B1", serif;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 1.25;
+    margin: 40px 0 18px;
+    color: var(--ink);
+  }
+  .bm-body .prose h2 {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 40px 0 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+  }
+  .bm-body .prose h2::before {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: var(--accent);
+  }
+  .bm-body .prose h3 {
+    font-family: "Shippori Mincho B1", serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.35;
+    margin: 32px 0 14px;
+    color: var(--ink);
+  }
+  .bm-body .prose p { margin: 0 0 18px; }
+  .bm-body .prose ul, .bm-body .prose ol {
+    border-left: 2px solid var(--ink);
+    padding: 4px 0 4px 24px;
+    margin: 18px 0 24px;
+    list-style: none;
+  }
+  .bm-body .prose ul li, .bm-body .prose ol li {
+    position: relative;
+    padding: 4px 0 4px 18px;
+    font-size: 15px;
+  }
+  .bm-body .prose ul li::before {
+    content: "·";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1;
+  }
+  .bm-body .prose blockquote {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 19px;
+    line-height: 1.6;
+    padding: 18px 0 18px 24px;
+    border-left: 4px solid var(--accent);
+    margin: 28px 0;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .bm-body .prose pre {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 18px 20px;
+    overflow-x: auto;
+    margin: 20px 0;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    line-height: 1.65;
+  }
+  .bm-body .prose code {
+    background: var(--paper-deep);
+    border: 1px solid var(--hair);
+    padding: 1px 6px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.9em;
+  }
+  .bm-body .prose pre code { background: transparent; border: 0; padding: 0; color: inherit; font-size: 13px; }
+  .bm-body .prose a { color: var(--accent); border-bottom: 1px solid rgba(200,52,31,0.25); }
+  .bm-body .prose a:hover { border-bottom-color: var(--accent); }
+
+  .bm-body .side {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: var(--mute);
+    border-top: 1px solid var(--hair);
+    padding-top: 24px;
+    position: sticky;
+    top: 40px;
+    align-self: start;
+  }
+  .bm-body .side dl { margin: 0; }
+  .bm-body .side dt {
+    color: var(--accent);
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-top: 18px;
+    margin-bottom: 6px;
+  }
+  .bm-body .side dt:first-child { margin-top: 0; }
+  .bm-body .side dd {
+    margin: 0 0 4px;
+    color: var(--ink);
+    word-break: break-all;
+    font-size: 12.5px;
+    line-height: 1.6;
+  }
+  .bm-body .side dd a { border-bottom: 1px solid var(--hair); padding-bottom: 1px; }
+  .bm-body .side dd a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  .bm-body .side .stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 18px;
+    margin-top: 8px;
+  }
+  .bm-body .side .stats .stat .num {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 24px;
+    color: var(--ink);
+    line-height: 1;
+    font-weight: 800;
+    display: block;
+  }
+  .bm-body .side .stats .stat .lab {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--mute);
+    margin-top: 4px;
+    display: block;
+    text-transform: uppercase;
+  }
+
+  /* card: stretched-link target must be local nav, not external */
+  .xcard .xcard-main-link { cursor: pointer; }
+
+  @media (max-width: 980px) {
+    .bm-body .container { grid-template-columns: 1fr; gap: 24px; }
+    .bm-body .numeral { position: static; font-size: 64px; }
+    .bm-body .side { position: static; }
+    .bm-day-head .date { font-size: 36px; }
+  }
+</style>
+</head>
+<body>
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">BOOKMARK №092</span>
+    <span class="sep">/</span>
+    <span>2026-05-22</span>
+    <span class="sep">/</span>
+    <span>@AnatoliKopadze</span>
+    <span class="sep">/</span>
+    <span>441 ITEMS</span>
+    <span class="sep">/</span>
+    <span>JST 07:21 WED</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+<header class="masthead">
+  <div class="container row">
+    <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
+    <nav>
+      <a href="../">HOME</a>
+      <a href="../news/2026-07-07/">NEWS</a>
+      <a href="./" class="is-active">BOOKMARKS</a>
+      <a href="../#archive">ARCHIVE</a>
+      <a href="../#about">ABOUT</a>
+    </nav>
+    <div class="meta">JST · 07:21 · WED</div>
+  </div>
+</header>
+
+<section class="bm-article-head">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-05-22 <span>/</span> №092
+    </div>
+    <div class="cat-line">
+      <span>🎓 チュートリアル / Claude 活用</span>
+      <span class="sep">·</span><span>Anatoli Kopadze <span style="opacity:.7">@AnatoliKopadze</span></span>
+      <span class="sep">·</span><span>2026-05-22</span>
+    </div>
+    <h1 class="title">Claude はこれ全部できる — ほとんどの人が知らない機能17選</h1>
+    <div class="strap">
+      <span><span class="label">№</span>092 / 441</span>
+      <span><span class="label">SRC</span><a href="https://x.com/AnatoliKopadze/status/2057813254617858078" target="_blank" rel="noopener noreferrer">x.com/AnatoliKopadze ↗</a></span>
+      <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/379_AnatoliKopadze_Claude%E3%81%AE%E9%9A%A0%E3%82%8C%E6%A9%9F%E8%83%BD17%E9%81%B8%E3%81%BE%E3%81%A8%E3%82%81.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
+    </div>
+  </div>
+</section>
+
+<section class="bm-body">
+  <div class="container">
+    <aside class="numeral">092<span class="ord">BOOKMARK / 441</span></aside>
+    <article class="prose">
+<p><strong>有益度:</strong> ⭐⭐⭐</p><p><strong>エンゲージメント:</strong> Likes 3,761 / RT 576 / Bookmarks 17,511 / Views 9,524,760 / Replies 95</p><h2>概要</h2><p>Claude の見落とされがちな機能を「どこにあるか・どうオンにするか・すぐ使えるプロンプト」付きで17個まとめた実用ガイド記事。各機能は数分で設定でき、以後毎日効いてくる、という触れ込み。通常の Claude に隠れた機能、ロールを与えるプロンプト集、そしてプロダクト機能（Chrome/Cowork/Claude Code/Design 等）の3ブロック構成。</p><h2>まとめ</h2><p><strong>通常 Claude の隠れ機能:</strong></p><ol><li><strong>Projects</strong> — ドキュメントと常設指示を永続保持。毎回自己紹介し直す必要がなくなる。まず最初にやるべき設定。</li><li><strong>Artifacts</strong> — チャット内で実際に動くアプリ（電卓・習慣トラッカー・ゲーム・チャート付きダッシュボード）を横パネルに生成。SVG/インタラクティブチャート/Mermaid 対応、無料プランでも使える。</li><li><strong>Adaptive/Extended Thinking</strong> — 回答前に段階的推論を行い、その過程を見られるモード。複雑な意思決定・戦略分析で差が出る。</li><li><strong>Memory</strong> — 時間をかけてユーザーのプロフィール（職業・プロジェクト・コミュニケーション好み）を構築。新規チャットでも文脈を把握。デフォルト off。</li></ol><p><strong>ロールを与えるプロンプト集（新規チャット冒頭に貼る）:</strong></p><ol><li>パーソナル心理士（CBT セラピスト風・答えでなく問いを返す）</li><li>厳しいメンター（同意をやめ弱い前提を潰すストレステスト役）</li><li>パーソナルトレーナー（実数値からテンプレでない運動計画）</li><li>難しい会話の練習（相手役をリアルに演じ、弱い主張には反論）</li><li>悪魔の代弁者（決断に対し、現実的な失敗3パターンを突きつける）</li></ol><p><strong>知られていないプロダクト機能:</strong></p><ol><li><strong>Claude in Chrome</strong> — アクティブタブを見て操作（リンククリック・フォーム入力・遷移）できる拡張。</li><li><strong>Claude Cowork</strong> — デスクトップアプリ。ファイルシステムに直接アクセスして読み書き・整理。</li><li><strong>Scheduled Tasks</strong> — 一度設定すれば指定時刻・頻度で自動実行しフォルダに出力。</li><li><strong>Skills in Cowork</strong> — プラグインのように能力を追加インストール（PowerPoint/PDF/特定ワークフロー）。</li><li><strong>CLAUDE.md</strong> — プロジェクトフォルダに置くと毎セッション自動で読む規約ファイル。</li><li><strong>Claude Code</strong> — ターミナルで動き、コードベースを読んでコード生成・テスト・バグ修正をループで回す。VS Code/JetBrains/GitHub Actions 統合。</li><li><strong>Claude Design</strong> — 資料・ピッチデック・プロトタイプ・LP を作る visual ツール。PPTX/Canva/PDF/HTML 書き出し。claude.ai/design。</li><li><strong>Prompt Caching（開発者向け）</strong> — 繰り返す大きなコンテキストをサーバ側にキャッシュしてトークンコスト最大90%削減。<code>&quot;cache_control&quot;: {&quot;type&quot;: &quot;ephemeral&quot;}</code> を付与、5分保持。</li></ol><p>締め: 「1つだけ選んで今日設定せよ。全部一度にやる必要はない、何が存在するか知っているだけで半分勝ち」。</p><h2>日本語訳全文</h2><p><strong>タイトル: Claude はこれ全部できる。ほとんどの人は知らない。</strong></p><p>Claude はほとんどの人が思うよりずっと多くのことができる。このガイドはその全部を扱う — 各機能がどこにあるか、どうオンにするか、すぐ使えるプロンプト付きで。目を通し、自分のワークフローに合うものを選び、今日設定しよう。どれも数分で設定でき、その後は毎日効いてくる。</p><p><strong>通常の Claude に隠れた機能</strong></p><ol><li>Projects — あなたを本当に覚えている Claude。新しいチャットを開くたび Claude はゼロから始まり、あなたの名前も仕事も好みも知らない。Projects はこれを直す。プロジェクトを作り、ドキュメントをアップロードし、常設指示を書けば、Claude はそれを恒久的に保持する。何より先に直すべき最初の項目。</li><li>Artifacts — チャット内で動く実物アプリ。Claude はテキストしか出せない、というのは誤り。Artifacts はチャット内の横パネルで実際に動くもの（電卓・習慣トラッカー・ゲーム・チャート付きダッシュボード）を作る。SVG・インタラクティブチャート・Mermaid 図に対応。無料プランで使える。</li><li>Adaptive/Extended Thinking — 別次元の推論。多くのユーザーがオンにしたことがない。回答前に段階的に推論し、その過程をすべて見られるモード。単純な質問には不要だが、複雑な意思決定・戦略分析では出力の差が大きい。</li><li>Memory — あなたが誰かを知っている Claude。オンにすると Claude は時間をかけてあなたのプロフィール（仕事・プロジェクト・コミュニケーションの好み・今取り組んでいること）を作る。デフォルトでオフ。</li></ol><p><strong>Claude に役割を与える — ひとつのプロンプトがすべてを変える</strong></p><ol><li>パーソナル心理士 — 答えでなく問いを返し、あなたの考えを検証（CBT セラピスト風）。</li><li>厳しいメンター — 同意をやめ、弱い前提・見落とし・計画が壊れる箇所をストレステストする。</li><li>パーソナルトレーナー — あなたの実数値から本物の計画を作る。テンプレではない。</li><li>難しい会話の練習 — Claude が相手役をリアルに演じ、弱い主張には反論する。</li><li>悪魔の代弁者 — 決断に対し、丁寧な懸念でなく全面的な反証と現実的な失敗3パターンを突きつける。コミット前の5分を。</li></ol><p><strong>ほとんどの人が存在を知らないプロダクト機能</strong></p><ol><li>Claude in Chrome — あなたが見ているものを見る Claude。アクティブタブを読み、リンクをクリックし、フォームを入力し、URL へ遷移する拡張。Chrome ウェブストアで「Claude for Chrome」を検索→インストール→サインイン。</li><li>Claude Cowork — デスクトップに住む Claude。ファイルシステムに直接アクセスし、実ファイルを読み・編集し・新規作成し・フォルダを整理する。</li><li>Scheduled Tasks — あなたが寝ている間に働く Claude。一度タスクを設定すれば、選んだ時刻・頻度で自動実行し、出力をフォルダに保存する。</li><li>Skills in Cowork — プラグインのように新しい能力をインストール。一度スキルを入れれば、その種のタスク（PowerPoint 作成・PDF 操作・特定ワークフロー）を Claude が既に知っている。スマホのアプリのようなもの。</li><li>CLAUDE.md — 毎セッション Claude が自動で読む規約。Cowork と Claude Code で、プロジェクトフォルダに CLAUDE.md を作れば、Claude は毎回のセッション冒頭で頼まずとも読む。コーディング規約・文体ルール・社内用語・ブランドボイスを一度書けば、そのプロジェクトの全セッションで永続的に従う。</li><li>Claude Code — ターミナルでコードを書き・テストし・修正する AI。スニペットだけでなく、本番級のコード・機能全体・複雑なリファクタまで。実際のコードベースを読み、新しいコードを書き、テストを走らせ、エラーメッセージを読み、タスク完了までループでバグを直す。VS Code・JetBrains と統合、GitHub Actions にも組み込める。</li><li>Claude Design — ビジュアル作業のための AI。製品ワンページャー・ピッチデック・プロトタイプ・LP レイアウト。必要なものを説明すれば Claude が作り、PPTX・Canva・PDF・HTML に書き出す。デザイナーでない人にとって、3時間の Figma 作業を10分の会話に置き換える。claude.ai/design が直リンク。</li><li>Prompt Caching（開発者向け）— API 呼び出しのコスト90%削減。大きな繰り返しコンテキスト（長いシステムプロンプト・参照文書・コードベース）を含むリクエストでは、毎回同じトークンを再処理する料金を払っている。Prompt Caching はその内容をサーバ側に保存し、以降の呼び出しは再処理せずキャッシュを再利用する。キャッシュしたいコンテンツブロックに &quot;cache_control&quot;: {&quot;type&quot;: &quot;ephemeral&quot;} を付ける。キャッシュは5分保持され、使うたびタイマーがリセットされる。</li></ol><p>これであなたは、毎日使っているほとんどの人より Claude に詳しくなった。このリストから機能を1つだけ選んで、今日設定しよう。一度に全部やる必要はない。何が存在するか知っているだけで、もう半分は勝ちだ。</p>
+    </article>
+    <aside class="side">
+      <dl>
+        <dt>AUTHOR</dt><dd>Anatoli Kopadze</dd>
+        <dt>HANDLE</dt><dd>@AnatoliKopadze</dd>
+        <dt>POSTED</dt><dd>2026-05-22</dd>
+        <dt>CATEGORY</dt><dd>🎓 チュートリアル / Claude 活用</dd>
+        <dt>SOURCE</dt><dd><a href="https://x.com/AnatoliKopadze/status/2057813254617858078" target="_blank" rel="noopener noreferrer">x.com/AnatoliKopadze/status/20578132546178…</a></dd>
+        <dt>MARKDOWN</dt><dd><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/379_AnatoliKopadze_Claude%E3%81%AE%E9%9A%A0%E3%82%8C%E6%A9%9F%E8%83%BD17%E9%81%B8%E3%81%BE%E3%81%A8%E3%82%81.md" target="_blank" rel="noopener noreferrer">GitHub で原文を見る</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn prev" href="./286_beku_AI_%E5%A4%A9%E6%89%8D%E3%81%A0%E3%81%91%E3%81%8C%E4%BD%BF%E3%81%A3%E3%81%A6%E3%82%8BNotebookLM%E3%81%AE%E9%9A%A0%E3%81%97%E6%A9%9F%E8%83%BD.md.html">
+      <span>← 新しいブックマーク</span>
+      <span class="big">天才だけが使ってるNotebookLMの隠し機能 — ベク</span>
+    </a>
+    <a class="btn next" href="./282_seelffff_zero_to_ai_engineer_roadmap.md.html">
+      <span>古いブックマーク →</span>
+      <span class="big">Zero to AI Engineer — 14週間・$0 の独学ロードマップ</span>
+    </a>
+  </div>
+</section>
+
+<section class="actions">
+  <div class="container">
+    <a href="./">← 一覧へ戻る</a>
+    <a class="primary" href="https://x.com/AnatoliKopadze/status/2057813254617858078" target="_blank" rel="noopener noreferrer">元ポストを X で見る</a>
+    <a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/379_AnatoliKopadze_Claude%E3%81%AE%E9%9A%A0%E3%82%8C%E6%A9%9F%E8%83%BD17%E9%81%B8%E3%81%BE%E3%81%A8%E3%82%81.md" target="_blank" rel="noopener noreferrer">GitHub で開く</a>
+  </div>
+</section>
+
+<footer class="foot" id="about">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">Vibe Coder Bootcamp</div>
+        <p>
+          AI の新しい動きを毎朝整理して、Vibe Coder が今日使える形で届けるフィード。
+          運営は泉水亮介。Slackコミュニティと連動した公開ログです。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          BOOKMARKS ARCHIVE · 441 ITEMS · EN+JP
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../">HOME</a></li>
+          <li><a href="../news/2026-07-07/">TODAY</a></li>
+          <li><a href="./">BOOKMARKS</a></li>
+          <li><a href="../#archive">ARCHIVE</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>SUBSCRIBE</h5>
+        <ul>
+          <li><a href="#">Slack に参加</a></li>
+          <li><a href="#">RSS</a></li>
+          <li><a href="#">X で購読</a></li>
+          <li><a href="#">メール通知</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://github.com/rsensui2/vibe-coder-demo">GitHub</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Colophon</a></li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 2026-07-08</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

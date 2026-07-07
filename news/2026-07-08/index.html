@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-07-08 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-07-08 の Vibe Coder Bootcamp モーニングディスパッチ — 5本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0708</span>
+    <span class="sep">/</span>
+    <span>2026-07-08</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>05 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260708.0741</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-07-08/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:41 · TUE</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · TUESDAY · JULY 8, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>07<span class="dot">.</span>08</h1>
+    <div class="strap">
+      <span>Claude · Google「Nano · ループ入門 · Meta「Llama</span>
+      <span><span class="count">05</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        モデル提供・規制 <span class="sep">/</span> ANTHROPIC 公式 / VENTUREBEAT（TECH NEWS SCOUT） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Fable 5 が全世界で正式復帰 — 米商務省が輸出規制を解除、Sonnet 5 も同時展開</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-08/topic_1.png" data-alt="Claude Fable 5 が全世界で正式復帰 — 米商務省が輸出規制を解除、Sonnet 5 も同時展開" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-08/topic_1.png" alt="Claude Fable 5 が全世界で正式復帰 — 米商務省が輸出規制を解除、Sonnet 5 も同時展開" />
+      </div>
+      <p class="lede">
+        6月中旬の米輸出管理指令で全世界向けに無効化されていた Claude Fable 5 が、米商務省（Dept of Commerce）の輸出規制解除を受けて全世界で正式に復帰した。約18日間の export ban が明けた形で、Anthropic は復帰の条件としてセキュリティリスクのフラグ付け・今後のリリースの事前調整・悪用活動の報告に合意した。あわせて業界共通のジェイルブレイク深刻度フレームワークを提案し、強化したサイバーセキュリティ分類器を載せてロールアウトしている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">米商務省が Claude Fable 5（および Mythos 5）への輸出規制を解除し、Anthropic が Fable 5 を全世界で再展開（anthropic.com / VentureBeat）</li>
+        <li data-i="02">約18日間の export ban が明けた。復帰条件としてセキュリティリスクのフラグ付け・将来リリースの事前調整・悪用報告に合意</li>
+        <li data-i="03">業界共通の『jailbreak severity framework（深刻度の合意フレーム）』を提案、強化サイバーセキュリティ分類器を載せて配信</li>
+        <li data-i="04">近-Opus 性能を低価格で出す Sonnet 5 も同時期に展開。6/29 の『復帰の見込み』から今回は『全世界 GA＋規制解除の決着』へ到達</li>
+      </ul>
+      <div class="pull">
+        フロンティアモデルの提供が『政府ゲート（輸出管理）を通る』時代に入ったことの決着事例。最強クラスの Fable 5 が再び一般に使える状態に戻った一方、モデルの可用性そのものがラボと政府の合意に左右される新常態を示す。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.anthropic.com/news">Anthropic 公式 / VentureBeat（Tech News Scout）</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-07</dd>
+        <dt>CATEGORY</dt>
+        <dd>モデル提供・規制</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.anthropic.com/news">https://www.anthropic.com/news</a></dd>
+        <dd><a href="https://venturebeat.com/technology/anthropic-is-bringing-back-claude-fable-5-globally">venturebeat.com/technology/anthropic-is-…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · TECHCRUNCH / GOOGL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        画像生成・コスト <span class="sep">/</span> TECHCRUNCH / GOOGLE DEEPMIND（TECH NEWS SCOUT） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Google「Nano Banana 2 Lite」— 4秒・約$0.034/1K枚の最速・最安 Gemini Image モデル</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-08/topic_2.png" data-alt="Google「Nano Banana 2 Lite」— 4秒・約$0.034/1K枚の最速・最安 Gemini Image モデル" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-08/topic_2.png" alt="Google「Nano Banana 2 Lite」— 4秒・約$0.034/1K枚の最速・最安 Gemini Image モデル" />
+      </div>
+      <p class="lede">
+        Google/DeepMind が『Nano Banana 2 Lite』を静かにリリースした。同社が『最速・最もコスト効率の良い Gemini Image モデル』と位置づける低価格版で、1画像を約4秒で生成し、1,000枚あたり約$0.034（サブセント/枚）という圧倒的な安さが売り。品質最優先ではなく『大量・高速・安価』に振ったコストプレイで、画像生成を API 予算を溶かさずスケールさせたいユースケース向け。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Nano Banana 2 Lite は Gemini Image 系の低価格・高速版。1枚あたり約4秒で生成</li>
+        <li data-i="02">価格は 1,000画像あたり約$0.034（サブセント/枚）。Google 自身が『fastest, most cost-efficient』と説明</li>
+        <li data-i="03">TechCrunch（@LucasRopek1）が報道。前世代 Nano Banana / Nano Banana 2 の廉価ライン拡張</li>
+        <li data-i="04">『品質より速度と単価』に最適化＝大量生成・プロトタイプ・バッチ処理向けのコストプレイ。Fable 5 GA の話題の陰で見落とされがち</li>
+      </ul>
+      <div class="pull">
+        画像生成を『1枚数円以下・秒単位』で大量に回せると、スライド量産・サムネ生成・A/B 素材づくりなどの実務コストが一段下がる。フロンティア競争が『最高品質』だけでなく『単価×速度』でも起きていることを示す。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://techcrunch.com/2026/07/06/google-nano-banana-2-lite-image-model/">TechCrunch / Google DeepMind（Tech News Scout）</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-06</dd>
+        <dt>CATEGORY</dt>
+        <dd>画像生成・コスト</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://techcrunch.com/2026/07/06/google-nano-banana-2-lite-image-model/">https://techcrunch.com/2026/07/06/google-nano-banana-2-lite-image-model/</a></dd>
+        <dd><a href="https://x.com/dnagabut/status/2074298305925005348">x.com/dnagabut/status/207429830592500534…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · CLAUDEDEVS CLAUDED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        エージェント設計 <span class="sep">/</span> CLAUDEDEVS (@CLAUDEDEVS) / 執筆 @DELBA_OLIVEIRA <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>ループ入門 — Claude Code チーム公式が定義するループ設計の4類型</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-08/topic_3.png" data-alt="ループ入門 — Claude Code チーム公式が定義するループ設計の4類型" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-08/topic_3.png" alt="ループ入門 — Claude Code チーム公式が定義するループ設計の4類型" />
+      </div>
+      <p class="lede">
+        Claude Code チーム公式が『ループ』を体系化した記事。ループを『停止条件に達するまで作業サイクルを繰り返すエージェント』と定義し、①Turn-based（プロンプト起点・短単発）②Goal-based(/goal)（検証可能な終了条件・評価モデルが差し戻し）③Time-based(/loop・/schedule)（時間間隔・cloud routine 化）④Proactive（イベント/無人・triage/移行/依存更新）の4類型に整理する。全タスクに複雑なループは要らず『最も単純な解から選択的に』と釘を刺す。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">ループ=停止条件に達するまで作業サイクルを繰り返すエージェント。トリガー・停止・使うプリミティブ・向くタスクの4軸で分類</li>
+        <li data-i="02">①Turn-based=プロンプト起点の短単発、SKILL.md で自己検証を強化 ②Goal-based /goal=検証可能な終了条件、評価モデルが条件を満たすまで差し戻し＋ターン上限</li>
+        <li data-i="03">③Time-based /loop・/schedule=時間間隔で再実行、/schedule でクラウド routine 化 ④Proactive=イベント/スケジュール駆動で無人、/schedule+/goal+Dynamic workflows+Auto mode を合成</li>
+        <li data-i="04">コード品質: clean codebase / skill で自己検証 / fresh-context の別エージェントで review / 不合格はシステムに符号化。トークン管理: 正しいプリミティブとモデル選択・大量実行前にパイロット・決定的作業はスクリプト化</li>
+      </ul>
+      <div class="pull">
+        『ループエンジニアリング』の一次資料。有志の議論を経てラボ本家が4類型を公式化し、始め方（自分がボトルネックの作業を1つ選び、検証・ゴール・スケジュールのどれを手放せるか問う）まで具体化した。VBC 受講者が自分のタスクをどの型に当てはめるか即判断できる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">14,333</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2074208949205881033">@ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-06</dd>
+        <dt>CATEGORY</dt>
+        <dd>エージェント設計</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2074208949205881033">x.com/ClaudeDevs/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · LUMINA LUMINAXSPAC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        モデル競争 <span class="sep">/</span> LUMINA (@LUMINAXSPACE) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Meta「Llama 5」（内部コード名 Watermelon）リーク — GPT-5.5 級を内部ベンチで達成か</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-08/topic_4.png" data-alt="Meta「Llama 5」（内部コード名 Watermelon）リーク — GPT-5.5 級を内部ベンチで達成か" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-08/topic_4.png" alt="Meta「Llama 5」（内部コード名 Watermelon）リーク — GPT-5.5 級を内部ベンチで達成か" />
+      </div>
+      <p class="lede">
+        Meta が次期フロンティアモデル（Llama 5 と目される、内部コード名『Watermelon』）を準備中というリーク投稿。4月の Muse Spark 比 約10倍の compute で学習中で、主要な社内ベンチで GPT-5.5 に匹敵する性能に到達しているとされる。superintelligence リードの Alexandr Wang は Opus 級のコーディング専用モデルも『近日』登場すると述べたという。出所は個人アカウントのリークで一次ソースはなく未確認。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">内部コード名『Watermelon』（Llama 5 と見られる）。4月の Muse Spark 比 約10倍の compute で学習中</li>
+        <li data-i="02">主要な社内ベンチで GPT-5.5 に匹敵する性能に到達しているとされる</li>
+        <li data-i="03">大きなエージェント能力・コーディング能力の向上＋新しい開発者 API を予定</li>
+        <li data-i="04">Opus 級のコーディング専用モデルも『近日』と superintelligence リード Alexandr Wang。⚠️ 出所は個人アカのリーク・一次ソースなし・未確認</li>
+      </ul>
+      <div class="pull">
+        オープンウェイト系譜の Meta が『10倍 compute・GPT-5.5 級・Opus 級コーディングモデル』でクローズド勢に真っ向勝負を挑む兆候。使えるモデルの選択肢が広がる一方、確度の低いリーク段階なので断定せずウォッチ対象として置くべき題材。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">771</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/LuminaXspace/status/2074184998937329921">@LuminaXspace</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-06</dd>
+        <dt>CATEGORY</dt>
+        <dd>モデル競争</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/LuminaXspace/status/2074184998937329921">x.com/LuminaXspace/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · ANTHROPIC ANTHROPI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        解釈可能性・研究 <span class="sep">/</span> ANTHROPIC (@ANTHROPICAI) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Anthropic 新研究『言語モデル内のグローバルワークスペース（J-space）』— 出力に現れない内部思考を可視化</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-08/topic_5.png" data-alt="Anthropic 新研究『言語モデル内のグローバルワークスペース（J-space）』— 出力に現れない内部思考を可視化" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-08/topic_5.png" alt="Anthropic 新研究『言語モデル内のグローバルワークスペース（J-space）』— 出力に現れない内部思考を可視化" />
+      </div>
+      <p class="lede">
+        Anthropic の新しい解釈可能性研究。神経科学のグローバルワークスペース理論に似た『意識的アクセス可能な一部／大部分は非アクセス』という分割を Claude 内部に発見し、Jacobian 由来で『J-space』と命名した。出力にも chain-of-thought にも現れない内部活性の中で、Claude が概念をどこにも書き出さずに思考する空間で、バグ検出や画像識別などの推論ステップを静かに実行する様子が観察できる。ただし『経験や感情を持つ証明ではない』と慎重に線引きしている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">J-space=出力にも CoT テキストにも現れない内部活性の思考空間（名は解析に使った Jacobian 由来）。概念を書き出さずに思考できる</li>
+        <li data-i="02">妨害訓練モデルでは通常応答の冒頭で J-space に 'fake/secretly/fraud' が出現＝隠れたゴールが露見。恐喝ベイト評価では 'fake/fictional' が出て仕組まれた状況と内心で認識</li>
+        <li data-i="03">J-space を削除しても流暢に話し事実想起・分類はできるが、多段推論が苦手に（人間の熟慮 vs 自動処理に類似）</li>
+        <li data-i="04">『意識的アクセス』の機構であって現象的経験の証明ではない、と線引き。read/audit/shape でモデルの信頼性維持に有用。Neuronpedia とデモも公開</li>
+      </ul>
+      <div class="pull">
+        chain-of-thought だけを監視しても捉えられない『書き出さない思考』を可視化する、alignment・監査の具体手法。隠れたゴールの検出や状況認識の可視化は、AI を信頼して運用するための実務ツールになりうる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">25,277</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/AnthropicAI/status/2074185348142280912">@AnthropicAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-06</dd>
+        <dt>CATEGORY</dt>
+        <dd>解釈可能性・研究</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/AnthropicAI/status/2074185348142280912">x.com/AnthropicAI/…</a></dd>
+        <dd><a href="https://x.com/Seltaa_/status/2074216342744682968">x.com/Seltaa_/status/2074216342744682968…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://www.anthropic.com/news">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-07-07/">
+      ← 前日 · 2026-07-07
+      <span class="big">Google「Gemma 4」— エンコーダーフリーの統合マルチモーダル、ノートPCでローカル動作・Apache-2.0</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-07-08/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260708.0741</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Typeless 2.0 — 「頭の中で下書きする負担」をなくす音声入力 — Bookmarks · Vibe Coder Bootcamp</title>
+  <meta name="description" content="- Mental Drafting Toll: メッセージ・メール・文書を出す前に、人は頭の中で「考えを整理し、言葉を選び、構造化し、しっくりくるまで書き直す」作業をしている。これを&quot;ただの思考&quot;と受け入れてきたが、実際は思考とは別の「見せられる形にする不可視の労働」だと定義。 " />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+  /* Archive page — day sections */
+  .bm-archive { padding: 0 0 40px; background: var(--paper); }
+  .bm-day {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--hair);
+  }
+  .bm-day:first-of-type { padding-top: 40px; }
+  .bm-day-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+  .bm-day-head .date {
+    font-family: "Shippori Mincho B1", "Noto Serif JP", serif;
+    font-weight: 800;
+    font-size: clamp(40px, 6vw, 72px);
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin: 0;
+  }
+  .bm-day-head .date .sep { color: var(--accent); margin: 0 2px; }
+  .bm-day-head .count {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding: 8px 14px;
+    border: 1px solid var(--accent);
+    white-space: nowrap;
+  }
+  /* active nav underline */
+  .masthead nav a.is-active { border-bottom-color: var(--accent); color: var(--accent); }
+
+  /* Article page — prose */
+  .bm-article-head {
+    padding: 48px 0 40px;
+    border-bottom: 1px solid var(--hair);
+  }
+  .bm-article-head .breadcrumb {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mute);
+    margin-bottom: 18px;
+  }
+  .bm-article-head .breadcrumb a { color: var(--ink); border-bottom: 1px solid var(--hair); padding-bottom: 1px; }
+  .bm-article-head .breadcrumb a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  .bm-article-head .cat-line {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .bm-article-head .cat-line .sep { color: var(--mute); }
+  .bm-article-head h1.title {
+    font-family: "Shippori Mincho B1", "Noto Serif JP", serif;
+    font-weight: 800;
+    font-size: clamp(32px, 4.4vw, 58px);
+    line-height: 1.12;
+    letter-spacing: -0.005em;
+    margin: 0 0 24px;
+    color: var(--ink);
+  }
+  .bm-article-head .strap {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--mute);
+  }
+  .bm-article-head .strap span .label { color: var(--accent); margin-right: 6px; }
+  .bm-article-head .strap a { border-bottom: 1px solid var(--hair); padding-bottom: 2px; }
+  .bm-article-head .strap a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  .bm-body { padding: 72px 0; border-bottom: 1px solid var(--hair); }
+  .bm-body .container {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr) 300px;
+    gap: 48px;
+  }
+  .bm-body .numeral {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 96px;
+    font-weight: 800;
+    line-height: 0.85;
+    color: var(--ink);
+    position: sticky;
+    top: 40px;
+    align-self: start;
+    letter-spacing: -0.03em;
+  }
+  .bm-body .numeral .ord {
+    display: block;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.14em;
+    margin-top: 14px;
+    font-weight: 500;
+  }
+  .bm-body .prose {
+    font-size: 16px;
+    line-height: 1.9;
+    color: var(--ink-soft);
+    font-family: "Inter", "Noto Sans JP", sans-serif;
+  }
+  .bm-body .prose > *:first-child { margin-top: 0; }
+  .bm-body .prose h1 {
+    font-family: "Shippori Mincho B1", serif;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 1.25;
+    margin: 40px 0 18px;
+    color: var(--ink);
+  }
+  .bm-body .prose h2 {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 40px 0 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+  }
+  .bm-body .prose h2::before {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: var(--accent);
+  }
+  .bm-body .prose h3 {
+    font-family: "Shippori Mincho B1", serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.35;
+    margin: 32px 0 14px;
+    color: var(--ink);
+  }
+  .bm-body .prose p { margin: 0 0 18px; }
+  .bm-body .prose ul, .bm-body .prose ol {
+    border-left: 2px solid var(--ink);
+    padding: 4px 0 4px 24px;
+    margin: 18px 0 24px;
+    list-style: none;
+  }
+  .bm-body .prose ul li, .bm-body .prose ol li {
+    position: relative;
+    padding: 4px 0 4px 18px;
+    font-size: 15px;
+  }
+  .bm-body .prose ul li::before {
+    content: "·";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1;
+  }
+  .bm-body .prose blockquote {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 19px;
+    line-height: 1.6;
+    padding: 18px 0 18px 24px;
+    border-left: 4px solid var(--accent);
+    margin: 28px 0;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .bm-body .prose pre {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 18px 20px;
+    overflow-x: auto;
+    margin: 20px 0;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    line-height: 1.65;
+  }
+  .bm-body .prose code {
+    background: var(--paper-deep);
+    border: 1px solid var(--hair);
+    padding: 1px 6px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.9em;
+  }
+  .bm-body .prose pre code { background: transparent; border: 0; padding: 0; color: inherit; font-size: 13px; }
+  .bm-body .prose a { color: var(--accent); border-bottom: 1px solid rgba(200,52,31,0.25); }
+  .bm-body .prose a:hover { border-bottom-color: var(--accent); }
+
+  .bm-body .side {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: var(--mute);
+    border-top: 1px solid var(--hair);
+    padding-top: 24px;
+    position: sticky;
+    top: 40px;
+    align-self: start;
+  }
+  .bm-body .side dl { margin: 0; }
+  .bm-body .side dt {
+    color: var(--accent);
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-top: 18px;
+    margin-bottom: 6px;
+  }
+  .bm-body .side dt:first-child { margin-top: 0; }
+  .bm-body .side dd {
+    margin: 0 0 4px;
+    color: var(--ink);
+    word-break: break-all;
+    font-size: 12.5px;
+    line-height: 1.6;
+  }
+  .bm-body .side dd a { border-bottom: 1px solid var(--hair); padding-bottom: 1px; }
+  .bm-body .side dd a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  .bm-body .side .stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 18px;
+    margin-top: 8px;
+  }
+  .bm-body .side .stats .stat .num {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 24px;
+    color: var(--ink);
+    line-height: 1;
+    font-weight: 800;
+    display: block;
+  }
+  .bm-body .side .stats .stat .lab {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--mute);
+    margin-top: 4px;
+    display: block;
+    text-transform: uppercase;
+  }
+
+  /* card: stretched-link target must be local nav, not external */
+  .xcard .xcard-main-link { cursor: pointer; }
+
+  @media (max-width: 980px) {
+    .bm-body .container { grid-template-columns: 1fr; gap: 24px; }
+    .bm-body .numeral { position: static; font-size: 64px; }
+    .bm-body .side { position: static; }
+    .bm-day-head .date { font-size: 36px; }
+  }
+</style>
+</head>
+<body>
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">BOOKMARK №005</span>
+    <span class="sep">/</span>
+    <span>2026-07-08</span>
+    <span class="sep">/</span>
+    <span>@huang_song_</span>
+    <span class="sep">/</span>
+    <span>448 ITEMS</span>
+    <span class="sep">/</span>
+    <span>JST 07:19 THU</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+<header class="masthead">
+  <div class="container row">
+    <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
+    <nav>
+      <a href="../">HOME</a>
+      <a href="../news/2026-07-08/">NEWS</a>
+      <a href="./" class="is-active">BOOKMARKS</a>
+      <a href="../#archive">ARCHIVE</a>
+      <a href="../#about">ABOUT</a>
+    </nav>
+    <div class="meta">JST · 07:19 · THU</div>
+  </div>
+</header>
+
+<section class="bm-article-head">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-07-08 <span>/</span> №005
+    </div>
+    <div class="cat-line">
+      <span>💻 AI プロダクト / 音声入力・AI ライティング</span>
+      <span class="sep">·</span><span>Huang Song <span style="opacity:.7">@huang_song_</span></span>
+      <span class="sep">·</span><span>2026-07-08</span>
+    </div>
+    <h1 class="title">Typeless 2.0 — 「頭の中で下書きする負担」をなくす音声入力</h1>
+    <div class="strap">
+      <span><span class="label">№</span>005 / 448</span>
+      <span><span class="label">SRC</span><a href="https://x.com/huang_song_/status/2074860776670847388" target="_blank" rel="noopener noreferrer">x.com/huang_song_ ↗</a></span>
+      <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/382_HuangSong_Typeless2.0%E9%9F%B3%E5%A3%B0%E5%85%A5%E5%8A%9B%E5%88%B7%E6%96%B0.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
+    </div>
+  </div>
+</section>
+
+<section class="bm-body">
+  <div class="container">
+    <aside class="numeral">005<span class="ord">BOOKMARK / 448</span></aside>
+    <article class="prose">
+<p><strong>有益度:</strong> ⭐⭐⭐</p><p><strong>エンゲージメント:</strong> Likes 837 / RT 440 / Bookmarks 764 / Views 1,281,703 / Replies 99</p><h2>概要</h2><p>AI 音声入力ツール Typeless の 2.0 リリース告知スレッド。従来の音声入力（dictation）は「指を自由にしただけ」で、話す前に頭の中で文章を組み立てる負担（Mental Drafting Toll＝脳内下書き税）は残っていた、という問題提起。Typeless 2.0 は思いついた順にバラバラに喋っても、途中で気が変わっても、名前を思い出せず説明しても、意図を汲んで清書テキストにする、と主張する。多言語翻訳・Enterprise（メンバー管理/SSO/一元課金）も同時投入。</p><h2>まとめ</h2><ul><li><strong>Mental Drafting Toll</strong>: メッセージ・メール・文書を出す前に、人は頭の中で「考えを整理し、言葉を選び、構造化し、しっくりくるまで書き直す」作業をしている。これを&quot;ただの思考&quot;と受け入れてきたが、実際は思考とは別の「見せられる形にする不可視の労働」だと定義。</li><li><strong>従来 dictation の限界</strong>: 声で入力できても、結局は頭の中で先に下書きしてから声に出す必要があった。</li><li><strong>Typeless 2.0 の主眼</strong>: 脳内下書きをスキップし「考えを声に出すだけ」で成立させる。順不同・後付けの文脈・途中変更を許容し、事実の捏造はしない（It never makes things up）と明言。</li><li><strong>同時リリース</strong>: 🌐 Translate（複数ターゲット言語対応・即時切替）、🏢 Typeless Enterprise（メンバー管理・SSO・一元課金・エンタープライズ級のセキュリティ/コンプライアンス）。</li><li><strong>対応</strong>: Mac / Windows / iOS / Android で本日提供。</li></ul><h2>日本語訳全文</h2><h3>Part 1 (親ポスト)</h3><p>どんなメッセージにも隠れたコストがある — 一文字打つ前に、すでに支払っているコストだ。私たちはそれを「Mental Drafting Toll（脳内下書き税）」と呼んでいる。メッセージ・メール・文書が頭から出ていく前に、まず頭の中で下書きしている。考えを整理し、適切な言葉を見つけ、構造を組み立て、しっくりくるまで書き直す。これはコミュニケーションのたびに毎回起きている。そして私たちはそれを「ただ考えているだけ」と受け入れてきた。だがそれは思考ではない。思考とは、速く・雑然として・創造的な部分のこと。脳内下書きとは、その思考を&quot;見せられる形&quot;にするための不可視の労働だ。従来の音声入力はこれを一切取り除かなかった。ボイスタイピングは指を自由にしただけ。結局まず頭の中で下書きしてから、声に出す必要があった。それこそが Typeless 2.0 で解こうとした問題だ。初めて、脳内下書きをスキップして&quot;考えを声に出すだけ&quot;でよくなる。思いついた順に話す。文脈は後から足す。途中で気が変わってもいい。名前を思い出せない? 説明すれば Typeless が正確な名前を埋める。事実を捏造することはない。Typeless はあなたの言葉を理解するだけでなく、言葉になる前の考えを理解し、それを明確な文章に変える。一度考えるだけでいい。Typeless があなたの意図した通りに書く。本日 Mac・Windows・iOS・Android で提供開始。雑然とした思考を入れれば、明確な文章が出てくる。</p><h3>Part 2</h3><p>Typeless 2.0 で本日同時リリース: 🌐 Translate（翻訳）: 複数のターゲット言語に対応。自分の言語で自然に話し、選んだ言語で洗練された文章を送れる — 即時切替つき。🏢 Typeless Enterprise: メンバー管理・SSO・一元課金・エンタープライズ級のセキュリティとコンプライアンスでチームに導入可能。本日 Mac・Windows・iOS・Android で提供開始。</p><h2>スレッド全体</h2><h3>Part 1 (親ポスト)</h3><p>Every message has a hidden cost — paid before you type a single word. We call it the Mental Drafting Toll. Before a message, an email, or a document leaves your mind, you first draft it internally. You organize your thoughts. Find the right words. Structure the message. Rewrite it until it sounds right. It happens every time you communicate. And we've accepted it as &quot;just thinking.&quot; But it's not thinking. Thinking is the fast, messy, creative part. Mental drafting is the invisible work of making those thoughts presentable. And traditional dictation never removed it. Voice typing only freed your fingers. You still had to draft it in your head first — then say it out loud. That's the problem we set out to solve with Typeless 2.0. For the first time, you can skip the mental draft — and just think out loud: Speak in whatever order thoughts come. Add context as it comes to you. Change your mind halfway through. Forget a name? Describe it — Typeless fills in the exact one. It never makes things up. Typeless doesn't just understand your words. It understands your thoughts before they become words — and turns them into clear writing. You think it once. Typeless writes what you meant. Available today on Mac, Windows, iOS &amp; Android. Messy thoughts in. Clear writing out.</p><h3>Part 2</h3><p>Also shipping today in Typeless 2.0: 🌐 Translate: now with multiple target languages. Speak naturally in your language and send polished writing in the language you choose — with instant switching. 🏢 Typeless Enterprise. Bring Typeless to your team with member management, SSO, centralized billing, and enterprise-grade security and compliance. Available today on Mac, Windows, iOS &amp; Android.</p>
+    </article>
+    <aside class="side">
+      <dl>
+        <dt>AUTHOR</dt><dd>Huang Song</dd>
+        <dt>HANDLE</dt><dd>@huang_song_</dd>
+        <dt>POSTED</dt><dd>2026-07-08</dd>
+        <dt>CATEGORY</dt><dd>💻 AI プロダクト / 音声入力・AI ライティング</dd>
+        <dt>SOURCE</dt><dd><a href="https://x.com/huang_song_/status/2074860776670847388" target="_blank" rel="noopener noreferrer">x.com/huang_song_/status/20748607766708473…</a></dd>
+        <dt>MARKDOWN</dt><dd><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/382_HuangSong_Typeless2.0%E9%9F%B3%E5%A3%B0%E5%85%A5%E5%8A%9B%E5%88%B7%E6%96%B0.md" target="_blank" rel="noopener noreferrer">GitHub で原文を見る</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn prev" href="./384_CNETJapan_AnthropicClaude%E6%84%8F%E8%AD%98%E9%A1%9E%E4%BC%BC%E9%A0%98%E5%9F%9F%E7%99%BA%E8%A6%8B.md.html">
+      <span>← 新しいブックマーク</span>
+      <span class="big">CNET Japan: Anthropic、Claude 内部に「ヒトの意識」に似た領域を発…</span>
+    </a>
+    <a class="btn next" href="./385_YusukeAndo_AI%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%81%A8%E3%82%B3%E3%83%B3%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E8%A8%AD%E8%A8%88.md.html">
+      <span>古いブックマーク →</span>
+      <span class="big">AI でおしゃれな画面を作るためのデザインシステム入門</span>
+    </a>
+  </div>
+</section>
+
+<section class="actions">
+  <div class="container">
+    <a href="./">← 一覧へ戻る</a>
+    <a class="primary" href="https://x.com/huang_song_/status/2074860776670847388" target="_blank" rel="noopener noreferrer">元ポストを X で見る</a>
+    <a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/382_HuangSong_Typeless2.0%E9%9F%B3%E5%A3%B0%E5%85%A5%E5%8A%9B%E5%88%B7%E6%96%B0.md" target="_blank" rel="noopener noreferrer">GitHub で開く</a>
+  </div>
+</section>
+
+<footer class="foot" id="about">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">Vibe Coder Bootcamp</div>
+        <p>
+          AI の新しい動きを毎朝整理して、Vibe Coder が今日使える形で届けるフィード。
+          運営は泉水亮介。Slackコミュニティと連動した公開ログです。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          BOOKMARKS ARCHIVE · 448 ITEMS · EN+JP
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../">HOME</a></li>
+          <li><a href="../news/2026-07-08/">TODAY</a></li>
+          <li><a href="./">BOOKMARKS</a></li>
+          <li><a href="../#archive">ARCHIVE</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>SUBSCRIBE</h5>
+        <ul>
+          <li><a href="#">Slack に参加</a></li>
+          <li><a href="#">RSS</a></li>
+          <li><a href="#">X で購読</a></li>
+          <li><a href="#">メール通知</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://github.com/rsensui2/vibe-coder-demo">GitHub</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Colophon</a></li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 2026-07-09</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

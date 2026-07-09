@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-07-10 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-07-10 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0710</span>
+    <span class="sep">/</span>
+    <span>2026-07-10</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260710.0732</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-07-10/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:32 · THU</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · THURSDAY · JULY 10, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>07<span class="dot">.</span>10</h1>
+    <div class="strap">
+      <span>OpenAI「ChatGPT · OpenAI「GPT-5.6」ファミリー（Sol · Anthropic · SpaceXAI「Grok</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 5 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        エージェント運用 <span class="sep">/</span> AGIラボ（@CTGPTLB）ほか <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI「ChatGPT Work」発表 — Codex基盤の業務エージェント（Claude Cowork対抗）</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-10/topic_1.png" data-alt="OpenAI「ChatGPT Work」発表 — Codex基盤の業務エージェント（Claude Cowork対抗）" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-10/topic_1.png" alt="OpenAI「ChatGPT Work」発表 — Codex基盤の業務エージェント（Claude Cowork対抗）" />
+      </div>
+      <p class="lede">
+        OpenAI が Codex を基盤とした仕事用エージェント「ChatGPT Work」を発表した。Anthropic の Claude Cowork に対抗する OpenAI 版で、まず Pro プラン向けに先行提供し、今後数日かけて展開する。あわせて刷新された ChatGPT デスクトップアプリでは Chat / Work / Codex の3モードを1つのアプリで切り替えられる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">ChatGPT Work は Codex 基盤の業務エージェント＝OpenAI 版 Claude Cowork</li>
+        <li data-i="02">Pro プラン先行提供、その後数日で順次ロールアウト</li>
+        <li data-i="03">刷新デスクトップアプリで Chat（対話）/ Work（業務）/ Codex（コーディング）をワンアプリ切替</li>
+        <li data-i="04">業務エージェント領域で Anthropic vs OpenAI の正面衝突が鮮明に</li>
+      </ul>
+      <div class="pull">
+        「対話→コーディング→業務自動化」を1アプリで往復する統合ワークフローが両社の主力に。Ryoko でやっている非同期エージェント運用がプロダクトのど真ん中に来た証左で、Vibe Coder Bootcamp では Claude Cowork との機能比較の切り口が受講生に刺さる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">247</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ctgptlb/status/2075277015113199627">@ctgptlb</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>エージェント運用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ctgptlb/status/2075277015113199627">x.com/ctgptlb/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · AKIRAPAPAIT / KEIT</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        モデル動向 <span class="sep">/</span> 開発者各アカウント（@AKIRA_PAPA_IT / @KEITARO_AIGC ほか） <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI「GPT-5.6」ファミリー（Sol / Terra / Luna）正式リリース</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-10/topic_2.png" data-alt="OpenAI「GPT-5.6」ファミリー（Sol / Terra / Luna）正式リリース" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-10/topic_2.png" alt="OpenAI「GPT-5.6」ファミリー（Sol / Terra / Luna）正式リリース" />
+      </div>
+      <p class="lede">
+        OpenAI の GPT-5.6 ファミリー「Sol・Terra・Luna」が正式リリースされ、ChatGPT Work とあわせて業務向けの位置づけが整理された。開発者の評価では強みはサブエージェントの采配（オーケストレーション）と長時間タスクの粘り強さにあるとされ、「賢いモデルが出た」以上に「AIに細かく指示し続ける働き方が変わる」点が本質だという見方が出ている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">GPT-5.6 が Sol / Terra / Luna の3モデル構成で正式リリース</li>
+        <li data-i="02">開発者評: サブエージェントの采配・長時間タスクの粘り強さが強み</li>
+        <li data-i="03">前世代 GPT-5.5 比で速度も向上との体感情報</li>
+        <li data-i="04">ChatGPT Work とセットで業務エージェント基盤として位置づけ</li>
+      </ul>
+      <div class="pull">
+        モデル選定の軸が「単体の賢さ」から「エージェントを采配して長時間タスクをやり切る力」へ移っている好例。VBC の『賢いモデルを設計役、安いモデルを実行役』というオーケストレーション設計と直結する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/akira_papa_IT/status/2075340106836451405">@akira_papa_IT</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>モデル動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/akira_papa_IT/status/2075340106836451405">x.com/akira_papa_IT/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · CLAUDEDEVSANTHROPI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        プロダクト運用 <span class="sep">/</span> CLAUDEDEVS（ANTHROPIC 公式） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic、全ユーザーの5時間・週次レート制限をリセット</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-10/topic_3.png" data-alt="Anthropic、全ユーザーの5時間・週次レート制限をリセット" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-10/topic_3.png" alt="Anthropic、全ユーザーの5時間・週次レート制限をリセット" />
+      </div>
+      <p class="lede">
+        Anthropic 公式（ClaudeDevs）が、全ユーザーの5時間および週次のレート制限をリセットしたと告知した。Fable 5 公開直後の高負荷・上限到達に対する救済的な措置とみられ、270万 views・3.1万 likes と極めて大きな反響を集めた。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">全ユーザーの5時間 &amp; 週次レート制限をリセット（公式告知）</li>
+        <li data-i="02">Fable 5 リリース直後の usage limit 消化に対するリフレッシュ</li>
+        <li data-i="03">Likes 31,602 / Views 2,697,974 と、制限まわりへの関心の高さを示す反響</li>
+      </ul>
+      <div class="pull">
+        Claude Code をヘビーに回す VBC 受講生に直結の実務情報。『週次上限に当たったらどうなるか』『Fable 5 は週次上限の50%まで』といった運用ルールとセットで、上限管理の立ち回りを教える材料になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">31,602</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2075279141352706215">@ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>プロダクト運用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2075279141352706215">x.com/ClaudeDevs/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · TECHCRUNCH XIHAYAT</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        モデル動向 <span class="sep">/</span> TECHCRUNCH 報道＋X反応（@IHAYATO / @KINOPEE_AI） <span class="sep">/</span> NEWS
+      </div>
+      <h2>SpaceXAI「Grok 4.5」リリース — 低価格・高性能でフロンティア三強入り</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-10/topic_4.png" data-alt="SpaceXAI「Grok 4.5」リリース — 低価格・高性能でフロンティア三強入り" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-10/topic_4.png" alt="SpaceXAI「Grok 4.5」リリース — 低価格・高性能でフロンティア三強入り" />
+      </div>
+      <p class="lede">
+        SpaceXAI（xAI 系）が「Grok 4.5」をリリースした（TechCrunch 報道）。圧倒的な低価格でありながら、一部ユーザー評では Claude Fable 5 の高設定を性能で上回るとの反応も出ている。潤沢な計算資源に Cursor チームの訓練パイプラインを組み合わせた強さが指摘され、OpenAI・Anthropic の二強に SpaceXAI が食い込む業界地図の変化として注目されている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Grok 4.5 リリース、TechCrunch も報道</li>
+        <li data-i="02">低価格 × 高性能で、Fable 5 の高設定を上回るとの一般ユーザー反応</li>
+        <li data-i="03">強さの源泉として計算資源 + Cursor チームの訓練パイプラインを指摘</li>
+        <li data-i="04">先端モデルラボが『二強 → 三強』へ変化との観測</li>
+      </ul>
+      <div class="pull">
+        フロンティア競争の軸が『絶対性能』から『価格あたり性能』へ移り、モデル選定の比較対象が広がった。開発ツール（Cursor）由来のノウハウがモデル訓練に流れ込む垂直統合トレンドも VBC で伝える価値が高い。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">147</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/IHayato/status/2074942983284330715">@IHayato</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-08</dd>
+        <dt>CATEGORY</dt>
+        <dd>モデル動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/IHayato/status/2074942983284330715">x.com/IHayato/…</a></dd>
+        <dd><a href="https://x.com/kinopee_ai/status/2074922476979830918">x.com/kinopee_ai/status/2074922476979830…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · TECHCRUNCH XAIKEIT</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AIツール / プライバシー <span class="sep">/</span> TECHCRUNCH 報道＋X解説（@AI_KEITA0312 / @THECHRISPFLUM） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Meta「Muse Image」— 無料AI画像生成と、Instagram写真流用のプライバシー懸念</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-10/topic_5.png" data-alt="Meta「Muse Image」— 無料AI画像生成と、Instagram写真流用のプライバシー懸念" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-10/topic_5.png" alt="Meta「Muse Image」— 無料AI画像生成と、Instagram写真流用のプライバシー懸念" />
+      </div>
+      <p class="lede">
+        Meta が無料の AI 画像生成ツール「Muse Image」をローンチした（TechCrunch 報道）。一方で、Instagram を公開設定にしているユーザーは、自分の写真が見知らぬ他人の AI 画像生成に使われる可能性があると指摘されている。しかもこの挙動はデフォルトでオンで通知も来ないため、設定の見直しが呼びかけられている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Meta が無料 AI 画像生成ツール Muse Image をリリース（TechCrunch 報道）</li>
+        <li data-i="02">公開設定の Instagram 写真が他人の生成素材に使われうる（デフォルトON・通知なし）との指摘</li>
+        <li data-i="03">ユーザーへプライバシー設定の見直しが呼びかけられている</li>
+      </ul>
+      <div class="pull">
+        便利な無料AIツールの裏でユーザーデータが学習・生成素材に回る問題は、VBC 受講生が自分でツールを作る/使う際のプライバシー設計の教材になる。『デフォルトON・通知なし』が炎上要因になる好例。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/AI_keita0312/status/2075001400946278880">@AI_keita0312</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-08</dd>
+        <dt>CATEGORY</dt>
+        <dd>AIツール / プライバシー</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/AI_keita0312/status/2075001400946278880">x.com/AI_keita0312/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · HINATAMOONKAZZZ33</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール / TIPS <span class="sep">/</span> @HINATA__MOON（KAZZZ_33） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code に「/checkup」コマンド — CLAUDE.md 管理を一括自動化</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-10/topic_6.png" data-alt="Claude Code に「/checkup」コマンド — CLAUDE.md 管理を一括自動化" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-10/topic_6.png" alt="Claude Code に「/checkup」コマンド — CLAUDE.md 管理を一括自動化" />
+      </div>
+      <p class="lede">
+        Claude Code に新コマンド「/checkup」が登場した。これまで手作業だった CLAUDE.md まわりの管理を一括自動化するもので、未使用スキルの削除によるコンテキスト節約や、ローカル設定の点検などをまとめて実行できると日本語で解説されている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Claude Code に /checkup コマンドが追加</li>
+        <li data-i="02">未使用 skills の削除 → コンテキスト節約を自動化</li>
+        <li data-i="03">ローカル設定など CLAUDE.md 管理の手作業を一括化</li>
+      </ul>
+      <div class="pull">
+        CLAUDE.md の肥大化・未使用スキルの放置は VBC 受講生がまさに詰まるポイント。コンテキストを綺麗に保つ運用（context engineering の実務）を公式コマンドで回せるのは実践的なTips。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/hinata__moon/status/2075006867873648695">@hinata__moon</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-08</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール / Tips</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/hinata__moon/status/2075006867873648695">x.com/hinata__moon/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · CASSIDOO / PSUDOMI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        コンテキストエンジニアリング <span class="sep">/</span> 複数の開発者（@CASSIDOO / @PSUDOMIKE / @ETERNEGO_AI ほか） <span class="sep">/</span> NEWS
+      </div>
+      <h2>「プロンプト → コンテキスト」へ — エージェントメモリ設計が新たな主戦場に</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-10/topic_7.png" data-alt="「プロンプト → コンテキスト」へ — エージェントメモリ設計が新たな主戦場に" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-10/topic_7.png" alt="「プロンプト → コンテキスト」へ — エージェントメモリ設計が新たな主戦場に" />
+      </div>
+      <p class="lede">
+        プロンプトエンジニアリングからコンテキストエンジニアリングへ、という議論が一段深まり、焦点は『エージェントメモリの設計』に移っている。セッションが終わると全部忘れる問題に対し、読み書き・統合・永続化を行うメモリシステムが必要だという主張が複数の開発者から同時多発的に出ている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">『短期 vs 永続』メモリの設計がチュートリアルで軽視されがちだと指摘</li>
+        <li data-i="02">セッション終了で記憶が消える問題への解として永続メモリ基盤が話題</li>
+        <li data-i="03">ステートレスなプロンプトではメモリは解けず、読み書き・統合するシステムが要るという整理</li>
+      </ul>
+      <div class="pull">
+        Ryoko の MEMORY.md / knowledge 2層構造や CLAUDE.md によるコンテキスト管理はまさにこの潮流の実装例。VBC で『エージェントに記憶を持たせる設計』を教える文脈にぴったりで、知見系トピックとして受講生に有益。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/cassidoo/status/2075340387351175283">@cassidoo</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>コンテキストエンジニアリング</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/cassidoo/status/2075340387351175283">x.com/cassidoo/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · JEANSCPAPWC 2026</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI×ビジネス活用 <span class="sep">/</span> @JEANSCPA（PWC 2026春調査の紹介） <span class="sep">/</span> NEWS
+      </div>
+      <h2>PwC調査: 日本企業の生成AI活用が87%に、だが「入れたけど効かない」が新課題</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-10/topic_8.png" data-alt="PwC調査: 日本企業の生成AI活用が87%に、だが「入れたけど効かない」が新課題" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-10/topic_8.png" alt="PwC調査: 日本企業の生成AI活用が87%に、だが「入れたけど効かない」が新課題" />
+      </div>
+      <p class="lede">
+        PwC の実態調査（2026年春）で、日本企業の生成AI活用・推進度が87%に到達し、未着手・断念は4%まで減少した。一方で『効果を実感できている』層は伸び悩んでおり、導入はしたが成果に結びつかない『入れたけど効かない』が新たな課題として浮上している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">日本企業の生成AI活用・推進度が87%に到達、未着手/断念は4%まで低下（PwC 2026春調査）</li>
+        <li data-i="02">導入は進んだが『効果を実感』層は伸び悩み</li>
+        <li data-i="03">『入れたけど効かない』が新たな経営課題として顕在化</li>
+      </ul>
+      <div class="pull">
+        『ツールを入れる』段階は終わり『使いこなして成果を出す』段階へ移った現実を示すデータ。VBC が提供する『実際に手を動かして成果物を作る』教育の価値を裏づける、AI×ビジネス活用の重要トピック。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/Jeanscpa/status/2075339390482800866">@Jeanscpa</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI×ビジネス活用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/Jeanscpa/status/2075339390482800866">x.com/Jeanscpa/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/ctgptlb/status/2075277015113199627">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-07-09/">
+      ← 前日 · 2026-07-09
+      <span class="big">Claude Cowork がモバイル・Webへ展開＋使用上限2倍を8/5まで延長</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-07-10/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260710.0732</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

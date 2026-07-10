@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №016</span>
+    <span class="tick">BOOKMARK №018</span>
     <span class="sep">/</span>
     <span>2026-07-03</span>
     <span class="sep">/</span>
     <span>@SlimTradeyBaby</span>
     <span class="sep">/</span>
-    <span>448 ITEMS</span>
+    <span>450 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:13 FRI</span>
+    <span>JST 07:19 SAT</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,19 +305,19 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-07-09/">NEWS</a>
+      <a href="../news/2026-07-10/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:13 · FRI</div>
+    <div class="meta">JST · 07:19 · SAT</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-07-03 <span>/</span> №016
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-07-03 <span>/</span> №018
     </div>
     <div class="cat-line">
       <span>🔧 インフラ / ローカル LLM ベンチマーク</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">AEON vLLM Ultimate v0.24.0 を単体 DGX Spark で実測 — Gemma-4-26B が実用最速、Qwen27B DFlash も動作</h1>
     <div class="strap">
-      <span><span class="label">№</span>016 / 448</span>
+      <span><span class="label">№</span>018 / 450</span>
       <span><span class="label">SRC</span><a href="https://x.com/SlimTradeyBaby/status/2072961277031506350" target="_blank" rel="noopener noreferrer">x.com/SlimTradeyBaby ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/369_SlimTradeyBaby_AEONvLLM_v0.24%E3%82%92%E5%8D%98%E4%BD%93DGXSpark%E3%81%A7%E5%AE%9F%E6%B8%AC_Gemma26B%E3%81%8C%E5%AE%9F%E7%94%A8%E6%9C%80%E9%80%9F.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">016<span class="ord">BOOKMARK / 448</span></aside>
+    <aside class="numeral">018<span class="ord">BOOKMARK / 450</span></aside>
     <article class="prose">
 <p><strong>有益度:</strong> ⭐⭐⭐</p><p><strong>エンゲージメント:</strong> Likes 39 / RT 1 / Bookmarks 27 / Views 4,134 / Replies 4</p><h2>概要</h2><p>前項 368 の AEON vLLM Ultimate v0.24.0 を、単体の DGX Spark (GB10) で実際に回した検証レポート。公称の 536 tok/s は再現できなかったが、Gemma-4-26B なら安定して高スループットが出せると結論づけている。公称値と実測値のギャップを正直に切り分けた、価値の高い追試。</p><h2>まとめ</h2><ul><li><strong>実用ベストは Gemma-4-26B-A4B-NVFP4</strong>（262K コンテキスト有効 / FP8 KV / 投機的ドラフターなし）:</li></ul><p>  - C12: 264 tok/s、C16: 354 tok/s、C24: 470 tok/s、C32: 578 tok/s</p><p>  - エラー 0・OOM 0・クラッシュ 0</p><ul><li>重要な前提: これは <strong>並列リクエスト全体の集約スループット</strong>であり、「1 つのチャット窓が 578 tok/s 出る」わけではない。ローカルエージェント・eval・バッチ・文書処理・マルチセッション API サービングで効く数字。</li><li><strong>Qwen27B DFlash も自力で修正して動作</strong>: DFlash ドラフターの sliding/full attention メタデータ混在が FlashInfer を壊していたが、config を patch して 262K で安定動作。</li></ul><p>  - C16: 258 tok/s、C32: 341 tok/s、C48: 358 tok/s</p><ul><li>公称の 536 tok/s @ C16 は再現できず。ただし 1 台の Spark で 578 tok/s @ C32 は達成。</li><li>正直な結論: AEON v0.24 は堅実。<strong>高スループットの実用的勝者は Gemma 26BA4B</strong>。Qwen27B DFlash も動くが、公称ヘッドラインはモデル/ハーネス/機体/フリート構成に依存しそう（本テストは運転中にモバイル経由という制約付き、要追試）。</li></ul>
     </article>
@@ -384,14 +384,14 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 448 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 450 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-07-09/">TODAY</a></li>
+          <li><a href="../news/2026-07-10/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -418,7 +418,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-07-10</span>
+      <span>BUILD 2026-07-11</span>
     </div>
   </div>
 </footer>

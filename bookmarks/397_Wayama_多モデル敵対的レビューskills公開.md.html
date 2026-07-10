@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Opus 4.8 向けプロンプトガイドの特性まとめ — ML_Bear — Bookmarks · Vibe Coder Bootcamp</title>
-  <meta name="description" content="Claude 公式プロンプトガイドに Opus 4.8 向けの記述が追加されたのを受け、ML_Bear がポイントを箇条書きで紹介。ユーザーの指示を文字通り解釈する傾向、effort 設定の重要性、ツール使用が控えめになったため呼び出してほしいなら強めに指示する必要がある、といっ" />
+  <title>多モデル敵対的レビュー skills を公開 — Fable5 単体の見逃しを潰す — Bookmarks · Vibe Coder Bootcamp</title>
+  <meta name="description" content="- 多モデル敵対的レビュー: 単一モデル（Fable 5）の出力を別モデルに批判的にレビューさせ、指摘を突き合わせて収束させる skills。単体より欠陥検出率が高い。 - 依存度: 研究開発・調査・新規開発のワークフローの中核として常用しているレベル。 - 公開: 「自分だけで" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
@@ -285,11 +285,11 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №095</span>
+    <span class="tick">BOOKMARK №002</span>
     <span class="sep">/</span>
-    <span>2026-05-28</span>
+    <span>2026-07-09</span>
     <span class="sep">/</span>
-    <span>@MLBear2</span>
+    <span>@wayama_ryousuke</span>
     <span class="sep">/</span>
     <span>450 ITEMS</span>
     <span class="sep">/</span>
@@ -317,43 +317,37 @@
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-05-28 <span>/</span> №095
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-07-09 <span>/</span> №002
     </div>
     <div class="cat-line">
-      <span>💻 AI/開発ツール</span>
-      <span class="sep">·</span><span>ML_Bear <span style="opacity:.7">@MLBear2</span></span>
-      <span class="sep">·</span><span>2026-05-28</span>
+      <span>🔁 ループエンジニアリング / マルチエージェント</span>
+      <span class="sep">·</span><span>Ryousuke_Wayama <span style="opacity:.7">@wayama_ryousuke</span></span>
+      <span class="sep">·</span><span>2026-07-09</span>
     </div>
-    <h1 class="title">Opus 4.8 向けプロンプトガイドの特性まとめ — ML_Bear</h1>
+    <h1 class="title">多モデル敵対的レビュー skills を公開 — Fable5 単体の見逃しを潰す</h1>
     <div class="strap">
-      <span><span class="label">№</span>095 / 450</span>
-      <span><span class="label">SRC</span><a href="https://x.com/MLBear2/status/2060056572286701752" target="_blank" rel="noopener noreferrer">x.com/MLBear2 ↗</a></span>
-      <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/289_MLBear2_Opus4.8%E5%90%91%E3%81%91%E3%83%97%E3%83%AD%E3%83%B3%E3%83%97%E3%83%88%E3%82%AC%E3%82%A4%E3%83%89%E3%81%AE%E7%89%B9%E6%80%A7%E3%81%BE%E3%81%A8%E3%82%81.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
+      <span><span class="label">№</span>002 / 450</span>
+      <span><span class="label">SRC</span><a href="https://x.com/wayama_ryousuke/status/2075149701540978698" target="_blank" rel="noopener noreferrer">x.com/wayama_ryousuke ↗</a></span>
+      <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/397_Wayama_%E5%A4%9A%E3%83%A2%E3%83%87%E3%83%AB%E6%95%B5%E5%AF%BE%E7%9A%84%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BCskills%E5%85%AC%E9%96%8B.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
   </div>
 </section>
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">095<span class="ord">BOOKMARK / 450</span></aside>
+    <aside class="numeral">002<span class="ord">BOOKMARK / 450</span></aside>
     <article class="prose">
-<p><strong>有益度:</strong> ⭐⭐⭐</p><h2>概要</h2><p>Claude 公式プロンプトガイドに Opus 4.8 向けの記述が追加されたのを受け、ML_Bear がポイントを箇条書きで紹介。ユーザーの指示を文字通り解釈する傾向、effort 設定の重要性、ツール使用が控えめになったため呼び出してほしいなら強めに指示する必要がある、といった 4.8 の特性を整理している。</p><h2>スレッド全体</h2><h3>Part 1 (親ポスト)</h3><p>Claude公式プロンプトガイドにOpus4.8向けの内容が追加されていました。ユーザーの指示を文字通り解釈する、effort設定が結構重要、ツール使用控えめになったから呼んでほしければ強めに指示しろ、などといった特性がわかりやすく書かれていたので、斜め読みして箇条書きで紹介します。（斜め読みなので間違ってたら教えてください🙏）</p><h3>Part 2</h3><p>Claude公式プロンプトガイド</p><p>https://t.co/Y3A9OHUgjC</p>
+<p><strong>有益度:</strong> ⭐⭐⭐⭐</p><p><strong>エンゲージメント:</strong> Likes 673 / RT 78 / Bookmarks 1,151 / Views 111K</p><h2>概要</h2><p>Claude Code などから複数モデルを相互に敵対的レビューさせる自作 skills を一般公開したという告知スレッド。投稿者は「自分の研究開発・調査・新規開発はもうこの skills なしには回せない」ほど依存していると述べ、Fable 5 単体では見逃す欠陥も、多モデルの相互レビューではほぼ見逃さずきれいに収束すると主張している。</p><h2>まとめ</h2><ul><li><strong>多モデル敵対的レビュー</strong>: 単一モデル（Fable 5）の出力を別モデルに批判的にレビューさせ、指摘を突き合わせて収束させる skills。単体より欠陥検出率が高い。</li><li><strong>依存度</strong>: 研究開発・調査・新規開発のワークフローの中核として常用しているレベル。</li><li><strong>公開</strong>: 「自分だけで使うのはもったいない」として公開。誰でも導入可能。</li><li><strong>CC から Codex を呼ぶ前提</strong>: 補足ポストによると、Claude Code から Codex を呼ぶには公式 Plugin の事前導入が必要。agmsg のようなエージェント間メッセージングでも可能そうだが、CLI 経由の方が細かい制御やプロセス死活監視がしやすいため CLI 経由で運用している。</li></ul><h2>スレッド全体</h2><h3>Part 1 (親ポスト)</h3><p>私の研究開発や調査、新規開発などは、もうこの多モデル敵対的レビューskillsなしには回せないくらいに依存しているので超お勧め</p><p>Fable5単体では見逃すのも、多モデルでは見逃しがほぼなく、きれいに収束する</p><p>自分だけで使うのはもったいないかな、ということで公開しましたので、ぜひ使ってみてください</p><p>https://t.co/VqmwXjkMk9</p><h3>Part 2</h3><p>※思ったより反響が多いので念のため補足</p><p>CCからCodexを呼ぶには下記公式Pluginが事前に入っていることが前提です</p><p>agmsgみたいなエージェント間メッセージングでも行けそうな気もするけど、CLI経由だと細かい制御や死んでるかどうかも把握しやすいので、とりあえずCLI経由でやってます</p>
     </article>
     <aside class="side">
       <dl>
-        <dt>AUTHOR</dt><dd>ML_Bear</dd>
-        <dt>HANDLE</dt><dd>@MLBear2</dd>
-        <dt>POSTED</dt><dd>2026-05-28</dd>
-        <dt>CATEGORY</dt><dd>💻 AI/開発ツール</dd>
-        <dt>SOURCE</dt><dd><a href="https://x.com/MLBear2/status/2060056572286701752" target="_blank" rel="noopener noreferrer">x.com/MLBear2/status/2060056572286701752</a></dd>
-        <dt>MARKDOWN</dt><dd><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/289_MLBear2_Opus4.8%E5%90%91%E3%81%91%E3%83%97%E3%83%AD%E3%83%B3%E3%83%97%E3%83%88%E3%82%AC%E3%82%A4%E3%83%89%E3%81%AE%E7%89%B9%E6%80%A7%E3%81%BE%E3%81%A8%E3%82%81.md" target="_blank" rel="noopener noreferrer">GitHub で原文を見る</a></dd>
+        <dt>AUTHOR</dt><dd>Ryousuke_Wayama</dd>
+        <dt>HANDLE</dt><dd>@wayama_ryousuke</dd>
+        <dt>POSTED</dt><dd>2026-07-09</dd>
+        <dt>CATEGORY</dt><dd>🔁 ループエンジニアリング / マルチエージェント</dd>
+        <dt>SOURCE</dt><dd><a href="https://x.com/wayama_ryousuke/status/2075149701540978698" target="_blank" rel="noopener noreferrer">x.com/wayama_ryousuke/status/2075149701540…</a></dd>
+        <dt>MARKDOWN</dt><dd><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/397_Wayama_%E5%A4%9A%E3%83%A2%E3%83%87%E3%83%AB%E6%95%B5%E5%AF%BE%E7%9A%84%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BCskills%E5%85%AC%E9%96%8B.md" target="_blank" rel="noopener noreferrer">GitHub で原文を見る</a></dd>
         
-        <dt>ENGAGEMENT</dt>
-        <dd>
-          <div class="stats">
-            <div class="stat"><span class="num">101</span><span class="lab">LIKES</span></div><div class="stat"><span class="num">17</span><span class="lab">RTS</span></div><div class="stat"><span class="num">93</span><span class="lab">BMARKS</span></div><div class="stat"><span class="num">7,411</span><span class="lab">VIEWS</span></div>
-          </div>
-        </dd>
       </dl>
     </aside>
   </div>
@@ -361,13 +355,13 @@
 
 <section class="page-nav">
   <div class="container">
-    <a class="btn prev" href="./290_AI_masaou_ClaudeOpus4.8%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%81%A8DynamicWorkflow.md.html">
+    <a class="btn prev" href="./398_Zuckerberg_MuseSpark1.1%E7%99%BA%E8%A1%A8.md.html">
       <span>← 新しいブックマーク</span>
-      <span class="big">ClaudeOpus4.8がリリース！更に『Dynamic Workflow』の新機能など …</span>
+      <span class="big">Meta が Muse Spark 1.1 を発表 — 低価格の agentic コーディン…</span>
     </a>
-    <a class="btn next" href="./328_fujibee_ClaudeCode%E3%81%A8Codex%E3%81%AE%E5%BE%80%E5%BE%A9%E3%82%B3%E3%83%94%E3%83%9A%E3%82%92%E3%82%84%E3%82%81%E3%81%A6agmsg%E3%82%92%E4%BD%9C%E3%81%A3%E3%81%9F.md.html">
+    <a class="btn next" href="./388_ClaudeAI_Fable5%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E5%BB%B6%E9%95%B77%E6%9C%8812%E6%97%A5%E3%81%BE%E3%81%A7.md.html">
       <span>古いブックマーク →</span>
-      <span class="big">Claude Code と Codex の往復コピペをやめたくて、agmsg を作った</span>
+      <span class="big">Claude Fable 5、全有料プランで 7/12 までアクセス延長</span>
     </a>
   </div>
 </section>
@@ -375,8 +369,8 @@
 <section class="actions">
   <div class="container">
     <a href="./">← 一覧へ戻る</a>
-    <a class="primary" href="https://x.com/MLBear2/status/2060056572286701752" target="_blank" rel="noopener noreferrer">元ポストを X で見る</a>
-    <a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/289_MLBear2_Opus4.8%E5%90%91%E3%81%91%E3%83%97%E3%83%AD%E3%83%B3%E3%83%97%E3%83%88%E3%82%AC%E3%82%A4%E3%83%89%E3%81%AE%E7%89%B9%E6%80%A7%E3%81%BE%E3%81%A8%E3%82%81.md" target="_blank" rel="noopener noreferrer">GitHub で開く</a>
+    <a class="primary" href="https://x.com/wayama_ryousuke/status/2075149701540978698" target="_blank" rel="noopener noreferrer">元ポストを X で見る</a>
+    <a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/397_Wayama_%E5%A4%9A%E3%83%A2%E3%83%87%E3%83%AB%E6%95%B5%E5%AF%BE%E7%9A%84%E3%83%AC%E3%83%93%E3%83%A5%E3%83%BCskills%E5%85%AC%E9%96%8B.md" target="_blank" rel="noopener noreferrer">GitHub で開く</a>
   </div>
 </section>
 

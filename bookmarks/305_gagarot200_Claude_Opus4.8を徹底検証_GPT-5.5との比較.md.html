@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №085</span>
+    <span class="tick">BOOKMARK №087</span>
     <span class="sep">/</span>
     <span>2026-05-28</span>
     <span class="sep">/</span>
     <span>@gagarot200</span>
     <span class="sep">/</span>
-    <span>448 ITEMS</span>
+    <span>450 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:13 FRI</span>
+    <span>JST 07:19 SAT</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,19 +305,19 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-07-09/">NEWS</a>
+      <a href="../news/2026-07-10/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:13 · FRI</div>
+    <div class="meta">JST · 07:19 · SAT</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-05-28 <span>/</span> №085
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-05-28 <span>/</span> №087
     </div>
     <div class="cat-line">
       <span>💻 AI/開発ツール / Claude Opus 4.8解説</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">【Claude Code】Claude Opus 4.8 を徹底検証 — ベンチマーク・誠実さ・dynamic workflows (ガガロット)</h1>
     <div class="strap">
-      <span><span class="label">№</span>085 / 448</span>
+      <span><span class="label">№</span>087 / 450</span>
       <span><span class="label">SRC</span><a href="https://x.com/gagarot200/status/2060253037818744947" target="_blank" rel="noopener noreferrer">x.com/gagarot200 ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/305_gagarot200_Claude_Opus4.8%E3%82%92%E5%BE%B9%E5%BA%95%E6%A4%9C%E8%A8%BC_GPT-5.5%E3%81%A8%E3%81%AE%E6%AF%94%E8%BC%83.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">085<span class="ord">BOOKMARK / 448</span></aside>
+    <aside class="numeral">087<span class="ord">BOOKMARK / 450</span></aside>
     <article class="prose">
 <p><strong>有益度:</strong> ⭐⭐⭐⭐</p><blockquote>注: 記事中に Hermes/OpenClaw 導入代行・LINE誘導の宣伝が多く混入しているが、本体の技術解説（GIGAZINE/ZDNET Japan/Anthropic公式/System Card 出典）は実用的。以下は技術部分のみを抽出。</blockquote><h2>本文 (X Article・技術部分抜粋)</h2><p><strong>タイトル:</strong> 【Claude Code】『Opus4.8』を徹底検証した結果「GPT-5.5敗北」</p><p>Anthropic が 2026年5月28日に発表した Claude Opus 4.8（Opus 4.7 の後継・上位モデル）の解説。GIGAZINE / ZDNET Japan / Anthropic公式 / System Card をもとに整理。</p><h3>4つの注目点</h3><ol><li>ソフトウェア開発・コード修正の性能向上</li><li>AIエージェントとして長時間作業を進める能力の強化</li><li>誤った主張・見落としを減らす「誠実さ」の改善</li><li>dynamic workflows / effort control / Messages API改善 / fast mode などの新機能</li></ol><h3>ベンチマーク（公開情報）</h3><ul><li><strong>SWE-Bench Pro: 69.2%</strong>（Opus 4.7 = 64.3%、GPT-5.5 = 58.6%、Gemini 3.1 Pro = 54.2% を上回る）</li><li><strong>Terminal-Bench 2.1: 74.6%</strong>（GPT-5.5 = 78.2% に劣後 — ターミナル操作は他社が強い場面あり）</li><li>Humanity's Last Exam: 49.8% / DRACO: 57.9% / OSWorld-Verified: 83.4% / Finance Agent v2: 53.9%</li><li>単純ランキングではなく用途別の判断材料として見るべき。SWE-Bench系が高い＝既存コードの修正・バグ対応で使いやすい。</li></ul><h3>最大の特徴は「誠実さ」（ZDNET Japan）</h3><p>分からないことを分からないと言える／根拠のない断言を避ける／自分の作業の欠陥を隠さず報告する性質。System Card では多くのアラインメント指標で改善し、特にエージェント設定での誠実さが大きく向上、欠陥コードを報告しない傾向が大幅低下と説明。業務導入で「間違っているのに自信満々な回答」を避けられる点が重要。</p><h3>dynamic workflows（Claude Code連携）</h3><p>Claudeが大きな作業を計画→複数サブエージェントに分解→並列実行→結果を検証してから返す仕組み。数十〜数百の並列サブエージェントを1セッションで動かす。対象: コードベース全体のバグ調査、最適化監査、セキュリティ監査、大規模移行、API置き換え、フレームワーク移行。ただし通常セッションより大幅に多くのトークンを消費するため、範囲を絞って試すべき。</p><h3>effort control / fast mode / Messages API</h3><ul><li><strong>effort control</strong> — どれだけ深く考えさせるかを調整（高=高品質、低=高速・低消費）。Claude.ai / Cowork に追加。</li><li><strong>fast mode</strong> — 2.5倍速。価格は入力$10/出力$50（通常モードは入力$5/出力$25 per 1Mトークン）。速度が売上/顧客体験に直結する業務向け。</li><li><strong>Messages API</strong> — messages配列内に system entries を含められるように。長時間エージェント実行中に権限・トークン予算・環境情報・規約を途中更新しやすくなる（開発者にとって重要）。</li></ul><h3>注意点</h3><p>ベンチマークと自社業務の差は実タスクで小さく検証／トークン消費増は範囲限定＆事前見積もり／誤回答は人間レビュー＋根拠確認／プロンプトインジェクション対策（エージェント文脈では Opus 4.7 比でやや堅牢性が落ちる場面ありとSystem Card）／最小権限運用。なお Opus 4.8 は多くの評価で 4.7 を上回るが、Claude Mythos Preview よりは全体的に弱いとされる。</p><h2>概要</h2><p>Claude Opus 4.8 の技術解説。SWE-Bench Pro 69.2% で GPT-5.5・Gemini 3.1 Pro を上回る一方、Terminal-Bench では GPT-5.5 に劣後。最大の進化は「誠実さ」（不確実性を示し欠陥を隠さない）と、Claude Code の dynamic workflows（数十〜数百サブエージェントの並列実行＋自己検証）。effort control・fast mode・Messages API の system entries も実務に効く。完全自動化は危険で、小さく検証→人間レビュー→段階展開が推奨。</p>
     </article>
@@ -384,14 +384,14 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 448 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 450 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-07-09/">TODAY</a></li>
+          <li><a href="../news/2026-07-10/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -418,7 +418,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-07-10</span>
+      <span>BUILD 2026-07-11</span>
     </div>
   </div>
 </footer>

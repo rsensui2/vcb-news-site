@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-07-11 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-07-11 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0711</span>
+    <span class="sep">/</span>
+    <span>2026-07-11</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260711.0742</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-07-11/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:42 · FRI</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · FRIDAY · JULY 11, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>07<span class="dot">.</span>11</h1>
+    <div class="strap">
+      <span>Claude · DeNA · 「Claude · エンタープライズの</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 6 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> ANTHROPIC 公式（@CLAUDEDEVS） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code デスクトップ版に「in-app ブラウザ」搭載 — ドキュメント/デザインをその場で操作</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-11/topic_1.png" data-alt="Claude Code デスクトップ版に「in-app ブラウザ」搭載 — ドキュメント/デザインをその場で操作" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-11/topic_1.png" alt="Claude Code デスクトップ版に「in-app ブラウザ」搭載 — ドキュメント/デザインをその場で操作" />
+      </div>
+      <p class="lede">
+        Anthropic 公式（ClaudeDevs）が、Claude Code のデスクトップ版に「アプリ内ブラウザ」を追加したと発表した。Claude がドキュメント・デザイン・任意のサイトをアプリ内で開き、ローカル開発サーバを扱うのと同じように読む・クリックする・操作できる。サンドボックス化されており、セッションを永続化するかどうかも選べる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Claude Code デスクトップ版がアプリ内ブラウザを内蔵（公式発表、Likes 11,574 / RT 618）</li>
+        <li data-i="02">Claude が docs・designs・任意サイトを開き、ローカル dev サーバと同様に read / click / interact 可能</li>
+        <li data-i="03">サンドボックス化＋セッション永続化のオン/オフを設定できる</li>
+        <li data-i="04">利用には最新のデスクトップアプリへの更新が必要</li>
+      </ul>
+      <div class="pull">
+        エージェントが「コードを書く」だけでなく「ブラウザを実際に操作する」computer use の主流化がまた一歩進んだ。VBC 受講生には、ローカルサーバの挙動確認・ドキュメント参照・デザイン確認をエージェント任せにする新しいワークフローとして刺さる。Cursor / Codex の computer use 展開と同じ競争軸で、Claude Code が“IDE内ブラウザ”を握りにきた形。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">11,574</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2075635283211772279">@ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-10</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2075635283211772279">x.com/ClaudeDevs/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · DENA MACOPENINSUTA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI×ビジネス活用 <span class="sep">/</span> DENA（紹介: @MACOPENINSUTABA） <span class="sep">/</span> NEWS
+      </div>
+      <h2>DeNA が「AI活用100本ノック」を公開 — 文字起こし整形からGAS業務自動化まで100事例</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-11/topic_2.png" data-alt="DeNA が「AI活用100本ノック」を公開 — 文字起こし整形からGAS業務自動化まで100事例" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-11/topic_2.png" alt="DeNA が「AI活用100本ノック」を公開 — 文字起こし整形からGAS業務自動化まで100事例" />
+      </div>
+      <p class="lede">
+        DeNA が「AI活用100本ノック」を公開し、実務者の間で話題になっている。Gemini や Copilot などのツールを駆使し、面倒な文字起こしの自動整形から GAS（Google Apps Script）を使った業務の仕組み化まで、100の実践事例を網羅している。単なるプロンプト集ではなく「どう実務の効率を上げるか」を学べる教材として評価されている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">DeNA 公開の「AI活用100本ノック」＝100の実務AI活用事例集（紹介 @MacopeninSUTABA、Likes 2,203）</li>
+        <li data-i="02">Gemini / Copilot 等を使い、文字起こしの自動整形〜GASによる業務の仕組み化までカバー</li>
+        <li data-i="03">個別プロンプト集ではなく「実務効率をどう上げるか」に焦点を当てた実践寄りの内容</li>
+      </ul>
+      <div class="pull">
+        大手事業会社が「AIで実務をどう回すか」を体系化して無償公開した意義は大きく、VBC 受講生の「学んだAIを業務に落とす」段の具体的な手本になる。個別プロンプトより「業務の仕組み化（GAS連携など）」に踏み込んでいる点が、Vibe Coding の“作って終わりにしない”姿勢と噛み合う。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,203</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/MacopeninSUTABA/status/2074660235948736835">@MacopeninSUTABA</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-08</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI×ビジネス活用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/MacopeninSUTABA/status/2074660235948736835">x.com/MacopeninSUTABA/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · ROUNDTABLESPACE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール / エコシステム <span class="sep">/</span> @ROUNDTABLESPACE <span class="sep">/</span> NEWS
+      </div>
+      <h2>「Claude Code に 230+ の特化型エージェントを一括導入」する OSS repo が話題</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-11/topic_3.png" data-alt="「Claude Code に 230+ の特化型エージェントを一括導入」する OSS repo が話題" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-11/topic_3.png" alt="「Claude Code に 230+ の特化型エージェントを一括導入」する OSS repo が話題" />
+      </div>
+      <p class="lede">
+        Claude Code にエンジニアリングなど用途別に作り込まれた 230以上の「特化型エージェント」を一括導入できる OSS リポジトリが紹介され、拡散した。用途ごとに既製のエージェント（サブエージェント/スキル群）を入れて使い分ける発想で、エージェントを“自作する”から“既製レシピを取り込んで所有・改変する”段階への移行例として受け止められている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Claude Code 向けに 230+ の ready-made 特化エージェントを配布する OSS repo（紹介 @RoundtableSpace、Likes 178）</li>
+        <li data-i="02">engineering など用途別に作り込まれたエージェントをインストールして即利用</li>
+        <li data-i="03">サブエージェント/スキルの“合成物”としてエージェントを組む潮流（agentcn 等）の一例</li>
+        <li data-i="04">⚠️ 出所不明の大量エージェントを無検証導入するとプロンプトインジェクション・過剰権限のリスク</li>
+      </ul>
+      <div class="pull">
+        エージェント構築が「スクラッチで書く」から「実証済みレシピを所有・改変する」段階へ移りつつあることを示す。VBC では「まず既製の特化エージェント群を入れ、自分の用途に削って使う」導入パターンを教える材料になる。ただし無検証導入のセキュリティ注意はセットで必須。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">178</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/RoundtableSpace/status/2075342984716161275">@RoundtableSpace</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール / エコシステム</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/RoundtableSpace/status/2075342984716161275">x.com/RoundtableSpace/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · WILLIAMGURIMON / A</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI×ビジネス活用 <span class="sep">/</span> @WILLIAM_GURIMON / @AKIRA_PAPA_IT <span class="sep">/</span> NEWS
+      </div>
+      <h2>エンタープライズの AI エージェント本番化 — 壁は「性能」より「統制・ID・監査」</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-11/topic_4.png" data-alt="エンタープライズの AI エージェント本番化 — 壁は「性能」より「統制・ID・監査」" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-11/topic_4.png" alt="エンタープライズの AI エージェント本番化 — 壁は「性能」より「統制・ID・監査」" />
+      </div>
+      <p class="lede">
+        数十人規模のエンタープライズ IT リーダーと AI エージェントについて議論した現場報告と、それに呼応する国内実務者の見解が同時期に出た。共通するのは「エージェントAIは便利な部下ではなく、権限を持つ新しいアカウントに近い」という捉え方で、本番化の壁がモデルの性能ではなく統制・ID（アイデンティティ）・監査にあるという指摘だ。任せる前に、触っていいデータ・実行していい操作・止める条件を決めるべきだとする。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">数十人のエンタープライズ IT リーダーとの AI エージェント議論の現場報告（@william_GURIMON）</li>
+        <li data-i="02">「エージェントは便利な部下でなく、権限を持つ新しいアカウント」＝本番化の壁は性能でなく統制・ID・監査（@akira_papa_IT 同旨）</li>
+        <li data-i="03">導入前に「触っていいデータ / 実行していい操作 / 止める条件」を先に決めるべきという実務指針</li>
+      </ul>
+      <div class="pull">
+        「賢いモデルが出たか」より「権限・監査をどう設計するか」が本番導入の律速になるという現場の総意。PwC調査の「入れたけど効かない」問題と地続きで、VBC 受講生が業務にエージェントを入れる際の設計チェックリスト（権限・停止条件・監査ログ）に直結する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/william_GURIMON/status/2075363265908236459">@william_GURIMON</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI×ビジネス活用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/william_GURIMON/status/2075363265908236459">x.com/william_GURIMON/…</a></dd>
+        <dd><a href="https://x.com/akira_papa_IT/status/2075176638804078657">x.com/akira_papa_IT/status/2075176638804…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · KEITAROAIGC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        知見 / TIPS <span class="sep">/</span> けいたろう（@KEITARO_AIGC） <span class="sep">/</span> NEWS
+      </div>
+      <h2>「モデル名より渡し方」— 目的・材料・制約・成功条件・人間が見る箇所の5要素</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-11/topic_5.png" data-alt="「モデル名より渡し方」— 目的・材料・制約・成功条件・人間が見る箇所の5要素" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-11/topic_5.png" alt="「モデル名より渡し方」— 目的・材料・制約・成功条件・人間が見る箇所の5要素" />
+      </div>
+      <p class="lede">
+        Fable 5 も GPT-5.6 も強いが、実務で差が出るのは「モデル名」より「渡し方」だとする指摘。①目的 ②材料 ③制約 ④成功条件 ⑤人間が見る箇所、の5つを渡せるだけで AI の動き方が変わる、という実践的なタスク設計の型が共有された。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">「実務で差が出るのはモデル名より渡し方」（@keitaro_aigc）</li>
+        <li data-i="02">渡すべき5要素＝目的 / 材料 / 制約 / 成功条件 / 人間が見る箇所</li>
+        <li data-i="03">モデル選び（どっちを使うか）より、この5点の受け渡しが AI の挙動を決めるという主張</li>
+      </ul>
+      <div class="pull">
+        モデルの世代競争が激化するほど「何を渡すか」の設計が効いてくる。VBC の指示設計（/goal で目的・制約・停止条件・レビュー箇所を明記する）とそのまま重なり、「成功条件」と「人間が見る箇所」を明示する型は受講生の再現性を上げる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/keitaro_aigc/status/2075360277076582718">@keitaro_aigc</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>知見 / Tips</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/keitaro_aigc/status/2075360277076582718">x.com/keitaro_aigc/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · SERGEICHYRKOV</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI×デザイン <span class="sep">/</span> @SERGEICHYRKOV <span class="sep">/</span> NEWS
+      </div>
+      <h2>MagicPath — 実際のコードベースと繋がる “AIネイティブ” デザインワークフロー</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-11/topic_6.png" data-alt="MagicPath — 実際のコードベースと繋がる “AIネイティブ” デザインワークフロー" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-11/topic_6.png" alt="MagicPath — 実際のコードベースと繋がる “AIネイティブ” デザインワークフロー" />
+      </div>
+      <p class="lede">
+        多くの AI デザインツールは実際のコードベースから切り離されている、という問題提起とともに、切り離さないワークフローが紹介された。①既存の Cursor / Claude Code プロジェクトを MagicPath にインポート → ②タイポグラフィ・色・レイアウト・アニメーションを Figma のように、ただし AIネイティブに視覚的に再デザイン → ③フレームを選んでコードへ反映、という流れだ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">「多くの AI デザインツールは実コードベースと切り離されている」という課題提起（@SergeiChyrkov）</li>
+        <li data-i="02">MagicPath に既存 Cursor / Claude Code プロジェクトをインポートして視覚的に再デザイン</li>
+        <li data-i="03">タイポ/色/レイアウト/アニメを Figma ライクかつ AIネイティブに編集し、フレーム単位でコードへ反映</li>
+      </ul>
+      <div class="pull">
+        「デザイン↔コードの往復で情報が切れる」問題は Vibe Coding の実装フェーズで頻出する。デザインツールが実プロジェクトを直接読んで反映する方向は、VBC の「見た目の調整を自然言語だけで曖昧に頼む」失敗への具体的な代替になりうる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">12</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/SergeiChyrkov/status/2075276855741968474">@SergeiChyrkov</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI×デザイン</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/SergeiChyrkov/status/2075276855741968474">x.com/SergeiChyrkov/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · RYOUSUKEWAYAMAWAYA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ループエンジニアリング <span class="sep">/</span> RYOUSUKE_WAYAMA（@WAYAMA_RYOUSUKE） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>多モデル敵対的レビュー skills を公開 — Fable5 単体の見逃しを潰す</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-11/topic_7.png" data-alt="多モデル敵対的レビュー skills を公開 — Fable5 単体の見逃しを潰す" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-11/topic_7.png" alt="多モデル敵対的レビュー skills を公開 — Fable5 単体の見逃しを潰す" />
+      </div>
+      <p class="lede">
+        複数モデルを相互に敵対的レビューさせる自作 skills を一般公開したという告知。Fable 5 単体では見逃す欠陥も、多モデルの相互レビューではほぼ見逃さずきれいに収束すると主張し、研究開発・調査・新規開発の中核として常用するほど依存しているという。補足では、Claude Code から Codex を呼ぶには公式 Plugin が前提で、細かい制御と死活監視のしやすさから CLI 経由で運用しているとする。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">1モデル（Fable 5）の出力を別モデルに批判的レビューさせ、突き合わせて収束させる多モデル版の自己検証ループ</li>
+        <li data-i="02">研究開発・調査・新規開発のワークフローの中核として常用（Likes 673 / Bookmarks 1,151 / Views 111K）</li>
+        <li data-i="03">CC↔Codex のクロスモデル運用。CC から Codex を呼ぶには公式 Plugin が前提、CLI 経由で死活監視も容易</li>
+      </ul>
+      <div class="pull">
+        「1モデルの出力を鵜呑みにせず別モデルにレビューさせて収束させる」はコード品質担保のループエンジニアリング定石。VBC でも「生成→別モデルでレビュー→修正」の反復として教えられ、単一ベンダーに閉じない相互検証の具体例として価値が高い。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">673</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/wayama_ryousuke/status/2075149701540978698">@wayama_ryousuke</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>ループエンジニアリング</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/wayama_ryousuke/status/2075149701540978698">x.com/wayama_ryousuke/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · MARK ZUCKERBERGFIN</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        モデル発表 <span class="sep">/</span> MARK ZUCKERBERG（@FINKD） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Meta が Muse Spark 1.1 を発表 — 低価格の agentic コーディングモデル + Meta Model API</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-11/topic_8.png" data-alt="Meta が Muse Spark 1.1 を発表 — 低価格の agentic コーディングモデル + Meta Model API" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-11/topic_8.png" alt="Meta が Muse Spark 1.1 を発表 — 低価格の agentic コーディングモデル + Meta Model API" />
+      </div>
+      <p class="lede">
+        Mark Zuckerberg 本人が Meta の新モデル「Muse Spark 1.1」を発表した。agentic かつコーディングに強いモデルを非常に低価格で提供し、新設の「Meta Model API」および Meta AI 経由で利用可能にする。開発者が Muse Spark を使ってビルドできるのは今回が初めてだ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Muse Spark 1.1 は agentic 性能・ツール利用・コンピュータ操作（computer use）に強みの低価格コーディングモデル</li>
+        <li data-i="02">1M トークンコンテキストで長時間タスクに対応、実行を並列サブエージェントに委任可能</li>
+        <li data-i="03">新設「Meta Model API」で開発者が Muse Spark を使えるのは初（Likes 42,391 / Views 20.3M）</li>
+        <li data-i="04">⚠️ 性能・価格は Meta 自社発表で独立検証は未確認</li>
+      </ul>
+      <div class="pull">
+        「低価格 × agentic × 1M コンテキスト × サブエージェント委任」は Claude/OpenAI が推す設計と真っ向から競合。モデル選定の選択肢が増える＝コスト最適化の余地が広がる。VBC では「オーケストレーターは高性能モデル、実行は安価モデル」の worker 候補が増える追い風。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">42,391</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/finkd/status/2075218444056707458">@finkd</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>モデル発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/finkd/status/2075218444056707458">x.com/finkd/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/ClaudeDevs/status/2075635283211772279">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-07-10/">
+      ← 前日 · 2026-07-10
+      <span class="big">OpenAI「ChatGPT Work」発表 — Codex基盤の業務エージェント（Claude Cowork対抗）</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-07-11/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260711.0742</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-07-12 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-07-12 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0712</span>
+    <span class="sep">/</span>
+    <span>2026-07-12</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260712.0738</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-07-12/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:38 · SAT</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SATURDAY · JULY 12, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>07<span class="dot">.</span>12</h1>
+    <div class="strap">
+      <span>Cursor · Vercel · OpenAI · トークン消費がオープンモデルへ傾く</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 5 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> CURSOR 公式（@CURSOR_AI） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cursor アップデート — side chats と過去エージェント会話の検索</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-12/topic_1.png" data-alt="Cursor アップデート — side chats と過去エージェント会話の検索" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-12/topic_1.png" alt="Cursor アップデート — side chats と過去エージェント会話の検索" />
+      </div>
+      <p class="lede">
+        Cursor が複数の機能更新を発表した。目玉は「side chats」で、メインの作業スレッドを中断せずに別枠で質問したりアイデアを試したりできる。加えて過去のエージェントとのやり取りをローカル検索インデックスから横断検索できる「agent transcripts 検索」、プロジェクト/リポジトリ選択の簡素化も同時に入った。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">side chats: メインスレッドを止めずに質問・探索できる別チャット枠（@cursor_ai、Likes 3,963）</li>
+        <li data-i="02">agent transcript 検索: 過去のエージェントチャットをローカル検索インデックスで横断検索</li>
+        <li data-i="03">project/repo ピッカーの簡素化・強化。検索インデックスは手元（ローカル）に作られる</li>
+      </ul>
+      <div class="pull">
+        エージェントとの対話が増えるほど「本筋を止めずに脇道の質問をする」「過去のやり取りを掘り返す」需要が上がる。Cursor は IDE 内エージェント体験の細かい摩擦を潰しにきており、VBC 受講生の“エージェントと並走する”日常操作の改善に直結する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">3,963</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2075686268113916023">@cursor_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-10</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2075686268113916023">x.com/cursor_ai/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · VERCEL  CHANGELOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール / デプロイ <span class="sep">/</span> VERCEL 公式 CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Vercel × Lovable — Lovable製アプリをゼロ設定でVercelにデプロイ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-12/topic_2.png" data-alt="Vercel × Lovable — Lovable製アプリをゼロ設定でVercelにデプロイ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-12/topic_2.png" alt="Vercel × Lovable — Lovable製アプリをゼロ設定でVercelにデプロイ" />
+      </div>
+      <p class="lede">
+        Vercel が、Lovable で作ったアプリをゼロ設定で Vercel にデプロイできるようにしたと公式 changelog（7/9）で発表した。Lovable を GitHub に接続しリポジトリを Vercel にインポートするだけで、フレームワーク（TanStack Start）を自動判別して Nitro でビルド。以降 Lovable の変更が GitHub 経由で自動再デプロイされる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Lovable アプリを設定不要で Vercel にデプロイ可能に（Vercel 公式 changelog、2026-07-09）</li>
+        <li data-i="02">手順: Lovable→GitHub 接続→リポジトリを Vercel にインポート。フレームワーク（TanStack Start）は自動判別</li>
+        <li data-i="03">Lovable プロジェクトは内部で Nitro 上で動作。変更→GitHub 同期→Vercel 自動デプロイのパイプラインに</li>
+      </ul>
+      <div class="pull">
+        “プロンプトでアプリを作る”（Lovable）と“本番デプロイ”（Vercel）の間の摩擦が消える。VBC の「作ったら公開まで持っていく」流れにそのまま使え、Vibe Coding 系ツールと本番インフラの接続がまた一段スムーズになった。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/you-can-now-deploy-lovable-apps-to-vercel">Vercel 公式 changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール / デプロイ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/you-can-now-deploy-lovable-apps-to-vercel">https://vercel.com/changelog/you-can-now-deploy-lovable-apps-to-vercel</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · OPENAI OPENAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        モデル動向 / AI安全性 <span class="sep">/</span> OPENAI 公式（@OPENAI） <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI GPT-5.6、医療とセキュリティに注力 — ヘルスインテリジェンス強化とバイオ領域のセーフガード</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-12/topic_3.png" data-alt="OpenAI GPT-5.6、医療とセキュリティに注力 — ヘルスインテリジェンス強化とバイオ領域のセーフガード" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-12/topic_3.png" alt="OpenAI GPT-5.6、医療とセキュリティに注力 — ヘルスインテリジェンス強化とバイオ領域のセーフガード" />
+      </div>
+      <p class="lede">
+        7/10 にローンチ済みの GPT-5.6 ファミリーについて、OpenAI が用途別の強化点を相次いで発信した。ひとつは health intelligence（医療知能）でラインナップ全体を大きく前進させたという主張、もうひとつはバイオなど高度な AI 能力に対するセーフガード強化（Bio Bug Bounty の拡大）だ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">GPT-5.6 が health intelligence（医療分野の応答品質）を大幅強化と OpenAI が主張（@OpenAI、Likes 4,799）</li>
+        <li data-i="02">バイオ等の高度能力に対するセーフガード強化＝Bio Bug Bounty プログラムの拡大を告知</li>
+        <li data-i="03">第三者/TechCrunch は「サイバーセキュリティを前面に」と分析（能力↑と悪用防止の両立が論点）</li>
+      </ul>
+      <div class="pull">
+        モデル世代競争が「ベンチスコア」から「医療・セキュリティなど高リスク領域での安全な実運用」へ移りつつある。AI を医療や機微データに使う際の“能力×安全”のトレードオフを考える具体例だ。医療応答は医療助言ではない点、セーフガードは進行中の取り組みである点は押さえておきたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">4,799</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAI/status/2075686461693898868">@OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-10</dd>
+        <dt>CATEGORY</dt>
+        <dd>モデル動向 / AI安全性</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAI/status/2075686461693898868">x.com/OpenAI/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · OLLAMAOLLAMA/ HUGG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        業界動向 / オープンモデル <span class="sep">/</span> OLLAMA（@OLLAMA）/ HUGGING FACE CEO <span class="sep">/</span> NEWS
+      </div>
+      <h2>トークン消費がオープンモデルへ傾く — Ollama と Hugging Face が示す潮目</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-12/topic_4.png" data-alt="トークン消費がオープンモデルへ傾く — Ollama と Hugging Face が示す潮目" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-12/topic_4.png" alt="トークン消費がオープンモデルへ傾く — Ollama と Hugging Face が示す潮目" />
+      </div>
+      <p class="lede">
+        Ollama が「トークン消費がオープンモデルへ傾き始めている」と発信（jmorgan と Peter Fenton の見立て）。呼応して Hugging Face の CEO（Clem Delangue）が「Fortune 500 の約半数がオープンソース AI を採用」「スケール時の API 料金高騰が転換を加速」「大手独占への懸念も」と指摘した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Ollama: トークン消費がオープンモデルへ傾き始めているとの見立て（@ollama、jmorgan ら）</li>
+        <li data-i="02">Hugging Face CEO: Fortune 500 の約半数がオープンソース AI を採用と主張、API 料金高騰が転換を後押し</li>
+        <li data-i="03">大手プラットフォーム独占への懸念も併記（オープン化＝分散・コスト・データ主権のメリット）</li>
+      </ul>
+      <div class="pull">
+        コスト・データ主権・ベンダーロックイン回避の観点から、企業のモデル選定が「常にフロンティア API」ではなくなりつつある。用途によってはローカル/オープンモデルが現実解になる材料だ。「約半数」は Hugging Face CEO の主張である点は明示しておきたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">228</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ollama/status/2075685678130639036">@ollama</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-10</dd>
+        <dt>CATEGORY</dt>
+        <dd>業界動向 / オープンモデル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ollama/status/2075685678130639036">x.com/ollama/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · SAIRAHUL1 GOOGLE /</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        学習リソース <span class="sep">/</span> @SAIRAHUL1 ほか（GOOGLE / NVIDIA 講座紹介） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Google・NVIDIA が無料のエージェント開発講座を相次ぎ公開</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-12/topic_5.png" data-alt="Google・NVIDIA が無料のエージェント開発講座を相次ぎ公開" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-12/topic_5.png" alt="Google・NVIDIA が無料のエージェント開発講座を相次ぎ公開" />
+      </div>
+      <p class="lede">
+        エージェント開発の無料学習リソースが同時期に複数公開され話題になっている。Google の「ゼロから作る agentic engineering」約1時間講座（エージェントのメモリ/コンテキストの扱いを含む）と、NVIDIA の「コーディングエージェントの作り方」2.5時間講座（Cursor の CTO が登場）だ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Google: 約1時間の「agentic engineering をゼロから」講座（メモリ/コンテキスト設計を含む）（紹介 @sairahul1、Likes 318）</li>
+        <li data-i="02">NVIDIA: 2.5時間「コーディングエージェントの作り方」講座、Cursor CTO が登壇（紹介 @phosphenq）</li>
+        <li data-i="03">共通テーマ＝コンテキストエンジニアリング/エージェントメモリ（プロンプト単体からの脱却）</li>
+      </ul>
+      <div class="pull">
+        大手（Google/NVIDIA）が体系的な無料教材を出すことで、エージェント開発の学習ハードルが下がっている。VBC のカリキュラム（ループ/コンテキストエンジニアリング）の補助教材としてそのまま紹介でき、受講生の自習リソースになる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">318</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/sairahul1/status/2075821387625722201">@sairahul1</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-11</dd>
+        <dt>CATEGORY</dt>
+        <dd>学習リソース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/sairahul1/status/2075821387625722201">x.com/sairahul1/…</a></dd>
+        <dd><a href="https://x.com/phosphenq/status/2075615716636504449">x.com/phosphenq/status/20756157166365044…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · GITHUB  CHANGELOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        業界ニュース / 締切アラート <span class="sep">/</span> GITHUB 公式 CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>GitHub Models が2026/7/30に完全終了 — 移行締切が迫る</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-12/topic_6.png" data-alt="GitHub Models が2026/7/30に完全終了 — 移行締切が迫る" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-12/topic_6.png" alt="GitHub Models が2026/7/30に完全終了 — 移行締切が迫る" />
+      </div>
+      <p class="lede">
+        GitHub が無料 AI モデル基盤「GitHub Models」を 2026年7月30日に完全終了すると公式 changelog で告知した。Playground・モデルカタログ・推論 API・BYOK すべてが対象で、既存顧客を含む全ユーザーが影響を受けるハードカットオフだ。7/16 と 7/23 には予行のブラウンアウトが予定される。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">2026-07-30 に GitHub Models 完全終了（Playground/カタログ/推論API/BYOK すべて）。全員対象（公式 changelog、07-01 告知）</li>
+        <li data-i="02">7/16・7/23 に予行のブラウンアウト（依存を炙り出すための短時間停止）</li>
+        <li data-i="03">移行先: Azure AI Foundry（モデル）/ GitHub Copilot（ワークフロー）。GitHub Actions に組み込んだ推論は要移行</li>
+      </ul>
+      <div class="pull">
+        GitHub Actions の PR 要約・issue トリアージ・テスト生成などに GitHub Models の推論を組み込んでいるチームは、7/30 までに移行が必要だ。無料の“モデル遊び場”が消えるので、ローカル（Ollama 等）や他 API への乗り換えを今のうちに検討したい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-07-01-github-models-is-being-fully-retired-on-july-30-2026/">GitHub 公式 changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>業界ニュース / 締切アラート</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-07-01-github-models-is-being-fully-retired-on-july-30-2026/">https://github.blog/changelog/2026-07-01-github-models-is-being-fully-retired-on-july-30-2026/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · GOOGLE DEEPMIND GO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI安全性 / 解釈可能性 <span class="sep">/</span> GOOGLE DEEPMIND 公式（@GOOGLEDEEPMIND） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Google DeepMind — CoT は「思考の窓」、解釈可能性で AI の内部を逆解析する</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-12/topic_7.png" data-alt="Google DeepMind — CoT は「思考の窓」、解釈可能性で AI の内部を逆解析する" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-12/topic_7.png" alt="Google DeepMind — CoT は「思考の窓」、解釈可能性で AI の内部を逆解析する" />
+      </div>
+      <p class="lede">
+        Google DeepMind が、モデルの chain of thought（思考の連鎖）は“スクラッチパッド”のように振る舞い推論を覗く窓になるとして、解釈可能性（interpretability）＝ニューラルネットが何をどう学び考えるかを逆解析する科学をテーマにしたポッドキャストを公開した。解釈可能性研究者 Neel Nanda との対話。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">CoT（chain of thought）は scratch pad のように働き、モデルの推論を覗く窓になる（@GoogleDeepMind）</li>
+        <li data-i="02">テーマは interpretability＝ニューラルネットの学習・思考を reverse engineering する科学</li>
+        <li data-i="03">Neel Nanda（解釈可能性研究者）との対談ポッドキャストとして公開</li>
+      </ul>
+      <div class="pull">
+        「AI がなぜその出力を出したか」を追う解釈可能性は、エージェントに権限を与えて本番運用する時代の安全レバーになる。CoT を監視可能に保つ設計思想は、VBC 受講生が“ブラックボックスに丸投げしない”姿勢を学ぶ土台だ。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/GoogleDeepMind/status/2075620281515929716">@GoogleDeepMind</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-10</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI安全性 / 解釈可能性</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/GoogleDeepMind/status/2075620281515929716">x.com/GoogleDeepMind/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/cursor_ai/status/2075686268113916023">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-07-11/">
+      ← 前日 · 2026-07-11
+      <span class="big">Claude Code デスクトップ版に「in-app ブラウザ」搭載 — ドキュメント/デザインをその場で操作</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-07-12/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260712.0738</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

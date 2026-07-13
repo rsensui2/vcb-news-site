@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №094</span>
+    <span class="tick">BOOKMARK №097</span>
     <span class="sep">/</span>
     <span>2026-05-28</span>
     <span class="sep">/</span>
     <span>@AI_masaou</span>
     <span class="sep">/</span>
-    <span>450 ITEMS</span>
+    <span>453 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:14 MON</span>
+    <span>JST 07:23 TUE</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -310,14 +310,14 @@
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:14 · MON</div>
+    <div class="meta">JST · 07:23 · TUE</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-05-28 <span>/</span> №094
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-05-28 <span>/</span> №097
     </div>
     <div class="cat-line">
       <span>💻 AI/開発ツール</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">ClaudeOpus4.8がリリース！更に『Dynamic Workflow』の新機能など — まさお@AI駆動開発</h1>
     <div class="strap">
-      <span><span class="label">№</span>094 / 450</span>
+      <span><span class="label">№</span>097 / 453</span>
       <span><span class="label">SRC</span><a href="https://x.com/AI_masaou/status/2060065099197689973" target="_blank" rel="noopener noreferrer">x.com/AI_masaou ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/290_AI_masaou_ClaudeOpus4.8%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%81%A8DynamicWorkflow.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">094<span class="ord">BOOKMARK / 450</span></aside>
+    <aside class="numeral">097<span class="ord">BOOKMARK / 453</span></aside>
     <article class="prose">
 <p><strong>記事URL:</strong> https://x.com/i/article/2060061191821733888</p><p><strong>エンゲージメント:</strong> 1返信 / 15リポスト / 128いいね / 109ブックマーク / 32,359表示</p><p><strong>カテゴリ:</strong> 💻 AI/開発ツール</p><p><strong>有益度:</strong> ⭐⭐⭐⭐</p><h2>概要</h2><p>Opus 4.8 のリリースを日本語で詳説した X Article。結論は「同じ料金で賢くなった Opus 4.7」。新機能の effort control / dynamic workflows / fast mode、ベンチマーク改善、そして「正直さ」（虚偽の進捗報告の抑制）の向上を解説している。</p><h2>X Article 本文</h2><p>ClaudeOpus4.8がリリース！更に『Dynamic Workflow』の新機能など</p><p>まず 結論から言うと、Opus 4.8 は「同じ料金で賢くなった Opus 4.7」。</p><p>コーディング・自律タスク・専門知識作業の全方位で benchmark が上がり、長時間回り続ける仕事 (= long-running、夜通しの移行作業のような長丁場) を最後までやり切る一貫性が増した。</p><p>公式も、控えめだが確かな改善と言い切っている。</p><p>今回新しくなったのは ① effort control (Claude にどれだけ考えさせるか選べる) ② dynamic workflows (数百のサブエージェントを並列で走らせる) ③ fast mode (2.5 倍速モードが従来の 3 分の 1 の価格に)</p><p>前世代 Opus 4.7 を全項目で上回る。たとえば実務寄りのコーディング (SWE-Bench Pro) は 64.3% から 69.2% へ、知識作業の総合スコア (GDPval-AA) は 1753 から 1890 へ伸びた。</p><p>一番の進化は「正直さ」</p><p>AI の一番こわい失敗は「嘘の進捗報告」。証拠が薄いのに自信ありげに「直しました」と言い切るこの癖を 4.8 は明確に減らした。公式の評価では、自分が書いたコードの欠陥を見逃して素通りさせる確率が、前世代の約 4 分の 1 になった。不確実なところには自分から旗を立て、断定を避けるようになっている。</p><p>安全性の事前評価でも、人をだます・悪用に手を貸すといった誤った振る舞いが 4.7 より大幅に少なく、最も整った社内モデル (Claude Mythos Preview) に並ぶ水準だった。</p><p>Dynamic workflows</p><p>計画する — 大仕事を小タスクへ自分で分解する。</p><p>並列で走らせる — 数百のサブエージェントが同時に処理する (4.8 ではより長く回り続けられる)。</p><p>自分で検証する — 結果をまとめる前に出力を点検する。</p><p>報告する — 検証を通ったものだけを人に返す。</p><p>Claude Code の新機能 dynamic workflows は、これまで人が手で分割していた大仕事を Claude 自身に任せる仕組み。例えば deep-research コマンドも登場している。</p><p>effort control</p><p>「Claude にどれだけ考えさせるか」を選ぶつまみ。claude.ai と Cowork でモデル選択の隣に現れ、全プランで使える。default は high で、品質と体感のいちばん良いバランス。コーディングでは Opus 4.7 の default とほぼ同じトークン量で性能だけ上がる。</p><p>開発者向けには Messages API がやり取りの途中に system エントリを差し込めるようになり、prompt cache を壊さず権限・トークン予算・環境の前提を途中更新できる。</p><p>価格</p><p>Opus 4.7 から据え置き。fast mode は 2.5 倍速で従来モデルの 3 分の 1 の価格。</p><p>筆者の感想（要約）</p><p>メタ認知能力が高く、今までと問題解決の思考が違う。議論が強く、token は溶けるのでコスパは別問題。opus が好きだった人がさらに好きになる印象。</p>
     </article>
@@ -390,7 +390,7 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 450 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 453 ITEMS · EN+JP
         </p>
       </div>
       <div>
@@ -424,7 +424,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-07-13</span>
+      <span>BUILD 2026-07-14</span>
     </div>
   </div>
 </footer>

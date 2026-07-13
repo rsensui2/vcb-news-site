@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №019</span>
+    <span class="tick">BOOKMARK №022</span>
     <span class="sep">/</span>
     <span>2026-07-03</span>
     <span class="sep">/</span>
     <span>@SpaceTimeViking</span>
     <span class="sep">/</span>
-    <span>450 ITEMS</span>
+    <span>453 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:14 MON</span>
+    <span>JST 07:23 TUE</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -310,14 +310,14 @@
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:14 · MON</div>
+    <div class="meta">JST · 07:23 · TUE</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-07-03 <span>/</span> №019
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-07-03 <span>/</span> №022
     </div>
     <div class="cat-line">
       <span>🔧 インフラ / ローカル LLM サービング</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">AEON vLLM Ultimate v0.24.0 — DGX Spark (GB10) 専用に vLLM をソースビルドした最適化コンテナ</h1>
     <div class="strap">
-      <span><span class="label">№</span>019 / 450</span>
+      <span><span class="label">№</span>022 / 453</span>
       <span><span class="label">SRC</span><a href="https://x.com/SpaceTimeViking/status/2072723078363181072" target="_blank" rel="noopener noreferrer">x.com/SpaceTimeViking ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/368_SpaceTimeViking_AEONvLLMUltimate_v0.24_DGXSpark%E5%90%91%E3%81%91%E6%9C%80%E9%81%A9%E5%8C%96%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">019<span class="ord">BOOKMARK / 450</span></aside>
+    <aside class="numeral">022<span class="ord">BOOKMARK / 453</span></aside>
     <article class="prose">
 <p><strong>有益度:</strong> ⭐⭐⭐</p><p><strong>エンゲージメント:</strong> Likes 145 / RT 22 / Bookmarks 171 / Views 21,098 / Replies 28</p><h2>概要</h2><p>NVIDIA DGX Spark (GB10 / sm_121a) 上で AI を動かすための「究極のコンテナ」を謳う AEON vLLM Ultimate が v0.24.0 をリリース。vLLM をソースからコンパイルし、この世代のハード向けに DFlash・FP8 KV キャッシュなど、上流（stock vLLM）にはまだ入っていない最適化を先取りで盛り込んでいる。</p><h2>まとめ</h2><ul><li><strong>新規アンロック（このリリースで初めて可能に）:</strong></li></ul><p>  - DFlash + FP8 KV キャッシュ → KV 容量 2 倍、draft acceptance は維持（オンデバイス実測）</p><p>  - ビジョンモデルでの FP8 KV → KV 帯域のレバーが復活</p><p>  - DFlash を FlashInfer / Triton バックエンドでも利用可（従来は FlashAttention 限定）</p><ul><li><strong>上流に先行して取り込んだ改善（PR はまだ open だがマージ済み・検証済み）:</strong></li></ul><p>  - Triton NVFP4 KV キャッシュ → KV 容量最大 3 倍</p><p>  - DFlash sliding-window drafters とプレフィックスキャッシュ安定化</p><p>  - 高並列 DFlash — c=64 まで安定</p><ul><li><strong>stock v0.24.0 に無い修正:</strong></li></ul><p>  - Gemma-4 tied embeddings (ModelOpt) — stock はロード時にクラッシュ、こちらは動く</p><p>  - ツール呼び出しが標準で動作（stock の --no-deps ビルドは 500 エラー）</p><p>  - ユニファイドメモリの堅牢化 — 121GB プールで KV の暗黙的オーバーコミットを防止</p><ul><li><strong>1 イメージで全モデル対応:</strong> Gemma-4-26B-A4B / Qwen3.6-27B / Qwen3.6-35B-A3B (hybrid GDN)</li><li>性能: 536 tok/s @ c16、472 tok/s @ c12、262K コンテキスト、画像+動画、tools + reasoning parser、フル CUDA-graph capture</li></ul>
     </article>
@@ -384,7 +384,7 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 450 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 453 ITEMS · EN+JP
         </p>
       </div>
       <div>
@@ -418,7 +418,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-07-13</span>
+      <span>BUILD 2026-07-14</span>
     </div>
   </div>
 </footer>

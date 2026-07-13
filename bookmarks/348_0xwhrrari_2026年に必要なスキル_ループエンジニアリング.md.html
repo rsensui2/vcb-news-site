@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №055</span>
+    <span class="tick">BOOKMARK №058</span>
     <span class="sep">/</span>
     <span>2026-06-13</span>
     <span class="sep">/</span>
     <span>@0xwhrrari</span>
     <span class="sep">/</span>
-    <span>450 ITEMS</span>
+    <span>453 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:14 MON</span>
+    <span>JST 07:23 TUE</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -310,14 +310,14 @@
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:14 · MON</div>
+    <div class="meta">JST · 07:23 · TUE</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-06-13 <span>/</span> №055
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-06-13 <span>/</span> №058
     </div>
     <div class="cat-line">
       <span>📖 技術解説 / 💻 AI（エージェント / loop engineering）</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">Loop Engineering — 2026 年にビルダー全員が必要なスキル</h1>
     <div class="strap">
-      <span><span class="label">№</span>055 / 450</span>
+      <span><span class="label">№</span>058 / 453</span>
       <span><span class="label">SRC</span><a href="https://x.com/0xwhrrari/status/2065539680146182270" target="_blank" rel="noopener noreferrer">x.com/0xwhrrari ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/348_0xwhrrari_2026%E5%B9%B4%E3%81%AB%E5%BF%85%E8%A6%81%E3%81%AA%E3%82%B9%E3%82%AD%E3%83%AB_%E3%83%AB%E3%83%BC%E3%83%97%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E3%83%AA%E3%83%B3%E3%82%B0.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">055<span class="ord">BOOKMARK / 450</span></aside>
+    <aside class="numeral">058<span class="ord">BOOKMARK / 453</span></aside>
     <article class="prose">
 <p><strong>有益度:</strong> ⭐⭐⭐⭐</p><p><strong>エンゲージメント:</strong> Likes 593 / RT 114 / Replies 31 / Bookmarks 1,848 / Views 1,567,603</p><h2>概要</h2><p>「もう手動でエージェントにプロンプトを打つ時代は終わり、プロンプトを打つ&quot;ループ&quot;を設計せよ」という loop engineering を解説した X Article。人間が毎回レビューして直す『人間がループの中にいる』状態から、発見→計画→実行→検証→反復を回す自走システムへ移行する、という主張を 5 段階サイクルで整理している。ブックマーク #344（elvis / omarsar0）と同テーマで、こちらはトークンコストと「安価な長文脈モデルがなぜ重要か」に踏み込んでいるのが特徴。</p><h2>まとめ</h2><ul><li><strong>人間がループから出る</strong>: 従来は「プロンプト→出力→レビュー→修正→再プロンプト」を人間が回す。loop engineering では「ゴール定義→ループが必要なものを発見→計画→エージェント実行→チェッカーが検証→失敗は再投入→達成で停止」をシステムが回す。</li><li><strong>5 ステージの基本サイクル</strong>: Discover → Plan → Execute → Verify → Iterate。合格すれば出荷、失敗すればループに戻す。「完璧な 1 プロンプト」ではなく「基準を満たすまで改善し続けるシステム」。</li><li><strong>裏のコストはトークン</strong>: 中規模コーディングループで 5 万〜20 万トークン、オーケストレーター＋専門エージェントの fleet ループで 50 万〜200 万トークン、毎日回すスケジュールループで週あたり数百万トークン。リトライ・自己修正・検証・サブエージェントが全部コストになる。</li><li><strong>安価な長文脈モデルが鍵</strong>: ループを毎日回すには、安い入出力トークン・大きな文脈窓・ツール呼び出し・JSON 出力・高並列・十分なメモリが要る。これが無いとループは「高価な実験」で終わる。</li><li><strong>Single Agent vs Fleet</strong>: ループには 1 エージェントと、複数の専門エージェントを束ねる fleet の 2 サイズがある。</li><li>引用元として Boris Cherny（Claude Code 開発者）の「自分はもう Claude にプロンプトしない、ループを書くのが仕事」という発言が紹介されている。</li></ul><h2>原文</h2><blockquote>Most people are still prompting agents manually. They type one task. Wait for one answer. Review it themselves. Fix the mistakes themselves. Then prompt again. That means the human is still the loop.</blockquote><h2>日本語訳全文</h2><p>ほとんどの人は、いまだに手動でエージェントにプロンプトを打っている。タスクを 1 つ打ち込み、1 つの回答を待ち、自分でレビューし、自分でミスを直し、また打ち込む。つまり、人間がまだ「ループ」の中にいるのだ。</p><p>次のステップは違う。エージェントにただプロンプトを打つのではない。<strong>エージェントにプロンプトを打ち、結果をチェックし、次の一手を決め、作業が合格するまで回り続ける「ループ」そのものを設計する</strong>。それが loop engineering（ループ・エンジニアリング）だ。</p><p>「もうコーディングエージェントにプロンプトを打つべきではない。エージェントにプロンプトを打ってくれるループを設計すべきだ。」</p><p>そして Anthropic で Claude Code を率いる Boris Cherny も、別の言い方で同じことを言っている。「私はもう Claude にプロンプトを打たない。Claude にプロンプトを打ち、何をすべきか考えるループを走らせている。私の仕事はループを書くことだ。」</p><h3>なぜ多くの人は本物のループを作らないのか</h3><p>ループは魅力的に聞こえる——トークンの請求額を見るまでは。通常のエージェントループは、あっという間に大量の文脈を消費しうる。</p><ul><li>中規模のコーディングループ 1 本で 5 万〜20 万トークン</li><li>オーケストレーター 1 つと複数の専門エージェントから成る fleet ループで 50 万〜200 万トークン</li><li>スケジュール実行の毎日のループは、週あたり数百万トークンに達しうる</li></ul><p>リトライのたびにトークンを食う。自己修正のたびに食う。検証ステップのたびに食う。サブエージェントのたびに食う。</p><p>loop engineering が難しいのは、アイデアが複雑だからではない。<strong>多くの人が、エージェントを長時間自由に走らせ続ける余裕を持てない</strong>からだ。</p><p>だからこそ、安価な長文脈モデルが重要になる。ループを毎日回したいなら、安い入力トークン・安い出力トークン・大きな文脈窓・ツール呼び出し・JSON 出力・高い並列性・ループ序盤の出来事を覚えておけるだけの十分な文脈、が必要だ。これが無ければループは高価な実験で終わる。あれば、ループは実用的なワークフローになる。</p><h3>旧来のやり方 vs 新しいやり方</h3><p><strong>旧来のやり方</strong>: プロンプトを与える → エージェントが出力する → レビューする → 弱い部分を直す → 手動で繰り返す。</p><p><strong>新しいやり方</strong>: ゴールを定義する → ループが必要なものを発見する → ループが作業を計画する → エージェントが実行する → チェッカーが結果を検証する → ループが失敗を直す → ゴールに到達したらシステムが停止する。</p><p>プロンプティングはエージェントに「指示」を与える。loop engineering はエージェントに「仕事」を与える。</p><h3>loop engineering とは実際に何か</h3><p>loop engineering とは、AI エージェントのために<strong>反復可能なフィードバックサイクルを設計する実践</strong>だ。狙いはシンプル——人間が毎ステップを手で駆動しなくても、試行から検証済みの結果まで到達すること。</p><p>基本サイクルは 5 段階: <strong>Discover（発見）→ Plan（計画）→ Execute（実行）→ Verify（検証）→ Iterate（反復）</strong>。出力が合格すれば出荷。失敗すればループに戻す。たった 1 つの完璧なプロンプトではなく、基準を満たすまで出力を改善し続けるシステムだ。</p><h3>Single Agent vs Fleet</h3><p>ループには基本 2 つのサイズがある。1 つのゴールに向かって働く単一エージェントと、1 人のオーケストレーターが複数の専門エージェントへ fan-out する fleet だ。</p>
     </article>
@@ -384,7 +384,7 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 450 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 453 ITEMS · EN+JP
         </p>
       </div>
       <div>
@@ -418,7 +418,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-07-13</span>
+      <span>BUILD 2026-07-14</span>
     </div>
   </div>
 </footer>

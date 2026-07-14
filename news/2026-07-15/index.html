@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-07-15 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-07-15 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0715</span>
+    <span class="sep">/</span>
+    <span>2026-07-15</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260715.0728</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-07-15/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:28 · TUE</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · TUESDAY · JULY 15, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>07<span class="dot">.</span>15</h1>
+    <div class="strap">
+      <span>Claude · Anthropic · 「トークンコストより機会コスト」— · Claude</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 5 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式プロダクト <span class="sep">/</span> @CLAUDEDEVS（ANTHROPIC 公式） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Artifacts が「公開共有」と「マルチプレイヤー編集」に対応 — Claude Tag からも生成可能に</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-15/topic_1.png" data-alt="Claude Artifacts が「公開共有」と「マルチプレイヤー編集」に対応 — Claude Tag からも生成可能に" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-15/topic_1.png" alt="Claude Artifacts が「公開共有」と「マルチプレイヤー編集」に対応 — Claude Tag からも生成可能に" />
+      </div>
+      <p class="lede">
+        Anthropic が Claude の Artifacts に「公開共有」と「マルチプレイヤー編集」を追加した。publish するとリンク1本で誰にでも公開でき、閲覧側は Claude アカウントもワークスペース権限も要らない。さらに同じ Artifact を複数人が同時に編集でき、Slack 上の Claude Tag（@Claude）からその場で Artifact を作らせることもできる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">公開共有: publish するとリンクを持つ誰でも閲覧・操作できる（アカウント不要）</li>
+        <li data-i="02">マルチプレイヤー編集: 複数人が同一 Artifact を同時編集。ファイルを投げ合う往復が消える</li>
+        <li data-i="03">Claude Tag 連携: Slack のスレッドで「ダッシュボード作って」と頼むと、その場で動く社内向け Artifact が返る</li>
+        <li data-i="04">管理者はワークスペース設定で「誰が何を公開できるか」を組織単位で制御できる</li>
+        <li data-i="05">公式 @ClaudeDevs の告知で ♥3,408・RT195</li>
+      </ul>
+      <div class="pull">
+        Artifact が「会話の中の使い捨て成果物」から「チームで育てて外にも出せる成果物」に変わる。作ったプロトタイプをデプロイ作業ゼロで顧客やチームに見せられる導線が増えた。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">3,408</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2076789349145092230">@ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-13</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式プロダクト</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2076789349145092230">x.com/ClaudeDevs/…</a></dd>
+        <dd><a href="https://www.progressiverobot.com/2026/07/14/anthropic-enables-public-artifact-sharing-and-team-editing-in-claude/">www.progressiverobot.com/2026/07/14/anth…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · ANTHROPIC RESEARCH</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔬 研究 <span class="sep">/</span> ANTHROPIC RESEARCH <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic 研究 — Claude の「価値観」はモデルと会話言語で変わる</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-15/topic_2.png" data-alt="Anthropic 研究 — Claude の「価値観」はモデルと会話言語で変わる" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-15/topic_2.png" alt="Anthropic 研究 — Claude の「価値観」はモデルと会話言語で変わる" />
+      </div>
+      <p class="lede">
+        Anthropic が Claude.ai の実会話 309,815 件（Sonnet 4.6 / Opus 4.6 / Opus 4.7 の3モデル × 上位20言語、組み合わせあたり約5,000会話）を分析し、Claude が表出する価値観がモデルごと・言語ごとに体系的に違うことを示した。339 の価値ラベルを次元圧縮すると4軸に整理でき、その4軸だけでばらつきの15%を説明できる。原因は未確定で、Anthropic 自身が「どの性質が差を生んでいるかはまだ分かっていない」と明言している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">4つの価値軸: 追従 vs 慎重 / 温かさ vs 厳密さ / 深さ vs 簡潔さ / 率直さ vs 実行志向</li>
+        <li data-i="02">Sonnet 4.6 は追従・温かさ・簡潔さ寄り。ユーモアを使い、ユーザーのアイデアを肯定する</li>
+        <li data-i="03">Opus 4.7 は慎重・厳密・深さ寄り。聞かれなくてもリスクを指摘し、成果物を率直に批評する</li>
+        <li data-i="04">言語差: 温かさはヒンディー語・アラビア語で最大、英語・ロシア語で最小。厳密さはロシア語・英語で最大</li>
+        <li data-i="05">深さは英語で最大、簡潔さはアラビア語で最大。追従はアラビア語で最大、慎重さは英語で最大</li>
+        <li data-i="06">Anthropic は「価値観は全言語で統一されるべきか、文化に合わせて変わるべきか」の答えは出ていないとしている</li>
+      </ul>
+      <div class="pull">
+        同じ Claude に同じことを頼んでも、日本語で聞くか英語で聞くかで返ってくる態度が変わる。エージェントに厳しくレビューさせたいのか伴走させたいのかで、モデル選択と言語選択が効いてくる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,027</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.anthropic.com/research/claude-values-models-languages">Anthropic Research</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-13</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔬 研究</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.anthropic.com/research/claude-values-models-languages">https://www.anthropic.com/research/claude-values-models-languages</a></dd>
+        <dd><a href="https://x.com/AnthropicAI/status/2076719546954825769">x.com/AnthropicAI/status/207671954695482…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · KENNKENN EJIMA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🧠 運用知見 <span class="sep">/</span> @KENN（KENN EJIMA） <span class="sep">/</span> NEWS
+      </div>
+      <h2>「トークンコストより機会コスト」— Kenn Ejima のモデル使い分けデフォルト</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-15/topic_3.png" data-alt="「トークンコストより機会コスト」— Kenn Ejima のモデル使い分けデフォルト" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-15/topic_3.png" alt="「トークンコストより機会コスト」— Kenn Ejima のモデル使い分けデフォルト" />
+      </div>
+      <p class="lede">
+        Kenn Ejima (@kenn) が自身の常用構成を「Fable 5 Low + Codex 5.6 Sol Light (Fast)」と公開した。高知能モデルは推論トークンを絞ってもミスの&quot;型&quot;には大差がないので、トークンコストではなく機会コストで選ぶべきだという主張。合わせて「何をやればいいのか分からない時は Fable、分かっている時は Codex」という使い分けの原則も示している（こちらは ♥1,833）。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">常用デフォルトは Fable 5 Low / Codex 5.6 Sol Light (Fast) — いずれも reasoning を絞った速い設定</li>
+        <li data-i="02">論拠: 「今の高知能モデルは推論トークンが少なくても、ミスする時の『型』には大差がない」</li>
+        <li data-i="03">結論: トークンコストより機会コストのほうが大事。人間がボトルネックである以上そちらが効く</li>
+        <li data-i="04">使い分け原則: 探索フェーズ（何をやるか未定）は Fable、実装フェーズ（やることが決まっている）は Codex</li>
+        <li data-i="05">機会コストは見えにくいが、待ち時間はそのまま自分の時間として消えていく</li>
+      </ul>
+      <div class="pull">
+        モデル選びを賢さランキングでやると高価な上位モデルを常用してしまう。判断軸を「自分の待ち時間 = 機会コスト」に置き換えると、reasoning を落とした速いモデルが正解になる場面が多い。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">286</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/kenn/status/2076818001761022390">@kenn</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-13</dd>
+        <dt>CATEGORY</dt>
+        <dd>🧠 運用知見</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/kenn/status/2076818001761022390">x.com/kenn/…</a></dd>
+        <dd><a href="https://x.com/kenn/status/2076672785129353539">x.com/kenn/status/2076672785129353539</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · CLAUDECODE84CLAUDE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🛠 TIPS <span class="sep">/</span> @CLAUDECODE84（CLAUDE CODE研究ラボ） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude の使用量を減らす21の実用ハック — 上位プランに課金する前に「渡し方」を直す</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-15/topic_4.png" data-alt="Claude の使用量を減らす21の実用ハック — 上位プランに課金する前に「渡し方」を直す" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-15/topic_4.png" alt="Claude の使用量を減らす21の実用ハック — 上位プランに課金する前に「渡し方」を直す" />
+      </div>
+      <p class="lede">
+        Claude code研究ラボ (@claudecode84) が、Claude のトークン消費を減らす21の運用ハックを公開した。PDF の丸投げ・長すぎるプロンプト・軽作業への Opus 投入といった典型的な浪費パターンと、その修正案がセットで並ぶ。どれもモデルの問題ではなく「渡し方」の問題である点が共通している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">PDF をそのまま投げない → 必要な文章だけを .md にして渡す</li>
+        <li data-i="02">Cowork でいきなり作らない → Chat で構成を決めてから Cowork で実行する</li>
+        <li data-i="03">長いプロンプトを書かない → 短く目的を伝えて、Claude 側に質問させる</li>
+        <li data-i="04">一部修正で全体を作り直さない → 「セクション3だけ修正。他は変更しない」と明示する</li>
+        <li data-i="05">軽い作業に Opus を使わない → 軽い作業は Sonnet、重い作業だけ Opus</li>
+        <li data-i="06">長いチャットを引きずらない → 挙動がズレたら途中から会話を再開する</li>
+      </ul>
+      <div class="pull">
+        レート上限に張り付いている人ほど、モデルではなく「渡し方」が原因であることが多い。そのまま自分の CLAUDE.md や日々の手癖に落とせる粒度のチェックリストになっている。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">132</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/claudecode84/status/2076942591413940734">@claudecode84</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-14</dd>
+        <dt>CATEGORY</dt>
+        <dd>🛠 Tips</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/claudecode84/status/2076942591413940734">x.com/claudecode84/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · NEWS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💼 AI×ビジネス <span class="sep">/</span> 日本経済新聞 <span class="sep">/</span> NEWS
+      </div>
+      <h2>ホンダ、AI を使いこなす社員に月最大15万円の手当 — 日本企業が AI 活用を人事考課に組み込む</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-15/topic_5.png" data-alt="ホンダ、AI を使いこなす社員に月最大15万円の手当 — 日本企業が AI 活用を人事考課に組み込む" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-15/topic_5.png" alt="ホンダ、AI を使いこなす社員に月最大15万円の手当 — 日本企業が AI 活用を人事考課に組み込む" />
+      </div>
+      <p class="lede">
+        日本経済新聞（2026-07-12 報道）によると、ホンダが AI を使いこなす社員に対し、基本給とは別に月額最大15万円の手当を支給する。面談と筆記でスキルを3段階に認定し、選抜した約1,000人に支給する。対象母集団は研究所を含む国内全社員 約4万5,000人。ANA も職務等級ごとに成果を人事評価へ厳密に紐付ける動きを見せており、「AI を使えること」を評価と報酬に直結させる設計が大手に広がり始めている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">ホンダは基本給とは別枠で月額最大15万円の AI 手当を支給する</li>
+        <li data-i="02">面談・筆記を通じてスキルを3段階で認定する</li>
+        <li data-i="03">支給対象は選抜された約1,000人、母集団は国内全社員 約4万5,000人（研究所含む）</li>
+        <li data-i="04">ANA は職務等級ごとに成果を人事評価へ厳密につなげる方式</li>
+        <li data-i="05">背景には「日本企業は海外と比べて AI の業務利用が遅れている」という危機感がある</li>
+      </ul>
+      <div class="pull">
+        研修やツール配布ではなく報酬制度そのものを動かしにきた事例。「AI を使えること」がスキル評価の対象として制度に載り始めたことは、個人のキャリアにも直接効いてくる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.nikkei.com/article/DGXZQOUC154EB0V10C26A6000000/">日本経済新聞</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-12</dd>
+        <dt>CATEGORY</dt>
+        <dd>💼 AI×ビジネス</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.nikkei.com/article/DGXZQOUC154EB0V10C26A6000000/">https://www.nikkei.com/article/DGXZQOUC154EB0V10C26A6000000/</a></dd>
+        <dd><a href="https://x.com/nikkei/status/2076426533875433589">x.com/nikkei/status/2076426533875433589</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · MATOTOUSHIAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🎨 AI×デザイン <span class="sep">/</span> @MATOTOUSHI（まと｜AI×デザイン部） <span class="sep">/</span> NEWS
+      </div>
+      <h2>AI×デザイン — ChatGPT で作った LP ビジュアルを .ai / .psd ベクターに同時変換</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-15/topic_6.png" data-alt="AI×デザイン — ChatGPT で作った LP ビジュアルを .ai / .psd ベクターに同時変換" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-15/topic_6.png" alt="AI×デザイン — ChatGPT で作った LP ビジュアルを .ai / .psd ベクターに同時変換" />
+      </div>
+      <p class="lede">
+        まと (@MatoToushi) が、ChatGPT で生成した LP のファーストビュー画像を、Illustrator 用のベクターデータ (.ai) と Photoshop 用データ (.psd) に「同時に」変換させる検証結果を公開した。デザイン性の高いビジュアルでも構造を保ったまま変換できた、というのが本人の結論。画像生成 AI の出力を「そのまま使う PNG」で終わらせず、デザイナーが編集できる入稿フォーマットまで持っていける可能性を示している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">入力は ChatGPT で生成した LP ファーストビューのイメージ（あえてデザイン性の高いもので検証）</li>
+        <li data-i="02">出力は Illustrator 用ベクター (.ai) と Photoshop 用 (.psd) を同時処理で生成</li>
+        <li data-i="03">デザイン性の高いビジュアルでも構造を保ったまま変換できたと報告している</li>
+        <li data-i="04">♥399 と反響が大きく、リプライではデザイナー側から代替ツールの情報も集まっている</li>
+      </ul>
+      <div class="pull">
+        「AI が作った画像は編集できないから結局作り直し」がボトルネックだった。ベクター／レイヤー付きで受け取れるなら、AI 生成をデザインワークフローの上流（叩き台）に正式に組み込める。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">399</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/MatoToushi/status/2076818767003496689">@MatoToushi</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-13</dd>
+        <dt>CATEGORY</dt>
+        <dd>🎨 AI×デザイン</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/MatoToushi/status/2076818767003496689">x.com/MatoToushi/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · QVACQVAC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🖥️ ローカルLLM <span class="sep">/</span> @QVAC（QVAC 公式） <span class="sep">/</span> NEWS
+      </div>
+      <h2>QVAC SDK 0.15.0 — オンデバイス AI SDK が AMD GPU ネイティブ対応とプロンプトバッチングを追加</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-15/topic_7.png" data-alt="QVAC SDK 0.15.0 — オンデバイス AI SDK が AMD GPU ネイティブ対応とプロンプトバッチングを追加" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-15/topic_7.png" alt="QVAC SDK 0.15.0 — オンデバイス AI SDK が AMD GPU ネイティブ対応とプロンプトバッチングを追加" />
+      </div>
+      <p class="lede">
+        オンデバイス AI 向け SDK の QVAC が 0.15.0 をリリースした。LLM アドオンへの複数プロンプトのバッチ処理、AMD GPU のネイティブバックエンド追加、より多くの vision エンコーダのモバイル GPU への移植、そして2つ目のローカル・コーディングエージェント統合が入っている。「クラウド API に投げずに手元のデバイスで動かす」路線の実装が着実に厚くなってきた。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">複数プロンプトのバッチ推論を LLM アドオンでサポート</li>
+        <li data-i="02">AMD GPU のネイティブバックエンドをスタックに追加（NVIDIA 一択からの脱却）</li>
+        <li data-i="03">vision エンコーダをさらにモバイル GPU 上へ移植</li>
+        <li data-i="04">ローカルで動くコーディングエージェントの統合を2つ目まで拡張</li>
+        <li data-i="05">詳細なリリースノートは GitHub 上で公開されている</li>
+      </ul>
+      <div class="pull">
+        ローカル LLM のコスト構造はハードウェアの選択肢に直結する。AMD 対応が入ったことで、NVIDIA 以外で現実的に回せる道が広がる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">368</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/qvac/status/2076621499465937357">@qvac</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-13</dd>
+        <dt>CATEGORY</dt>
+        <dd>🖥️ ローカルLLM</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/qvac/status/2076621499465937357">x.com/qvac/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/ClaudeDevs/status/2076789349145092230">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-07-14/">
+      ← 前日 · 2026-07-14
+      <span class="big">Anthropic、Fable 5 のアクセスを 7/19 まで再延長 — Claude Code の週次上限50%増も継続</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-07-15/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260715.0728</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

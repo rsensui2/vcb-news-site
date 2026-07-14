@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-07-14 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-07-14 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0714</span>
+    <span class="sep">/</span>
+    <span>2026-07-14</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260714.1425</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-07-14/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 14:25 · MON</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · MONDAY · JULY 14, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>07<span class="dot">.</span>14</h1>
+    <div class="strap">
+      <span>Anthropic · Fable · Supabase「State · Graphify</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 6 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 モデル提供 / レート上限 <span class="sep">/</span> CLAUDE 公式 (@CLAUDEAI) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Anthropic、Fable 5 のアクセスを 7/19 まで再延長 — Claude Code の週次上限50%増も継続</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-14/topic_1.png" data-alt="Anthropic、Fable 5 のアクセスを 7/19 まで再延長 — Claude Code の週次上限50%増も継続" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-14/topic_1.png" alt="Anthropic、Fable 5 のアクセスを 7/19 まで再延長 — Claude Code の週次上限50%増も継続" />
+      </div>
+      <p class="lede">
+        Anthropic 公式が、全有料プランでの Claude Fable 5 アクセスを 7月19日まで延長すると発表した。あわせて Claude Code の週次レート上限を50%引き上げた措置も同日まで維持する。7/08 の告知（当初は 7/12 まで）からの再延長で、期限の後ろ倒しが繰り返されている形だ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対象は全有料プラン。Fable 5 アクセスの期限が 7月19日まで延長</li>
+        <li data-i="02">Claude Code の週次レート上限50%増も 7/19 まで継続</li>
+        <li data-i="03">続報ポストで「週次上限の最大50%までを Fable 5 に充当でき、超過後は usage credits 購入か別モデル切替で継続」と補足</li>
+        <li data-i="04">7/08 告知（7/12 期限）からの再延長。恒久措置ではなく、7/19 以降は元の条件に戻る前提</li>
+        <li data-i="05">Likes 7.2万・Views 2,400万・リプライ 6,559 件と、通常のモデル告知を大きく超える反響</li>
+      </ul>
+      <div class="pull">
+        「7/19 までは Fable 5 と上限50%増が使える」という実務的な期限情報。この期間に、普段はコスト的に躊躇する長時間ループやマルチエージェント構成を試しておくのが得策。逆に 7/19 以降は条件が戻る前提で本番ワークフローを設計すべき。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">72,059</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/claudeai/status/2076351399999557669">@claudeai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-13</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 モデル提供 / レート上限</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/claudeai/status/2076351399999557669">x.com/claudeai/…</a></dd>
+        <dd><a href="https://x.com/claudeai/status/2076351401006154204">x.com/claudeai/status/207635140100615420…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · PRAJWALTOMAR  / CU</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💰 モデル経済 / コスト設計 <span class="sep">/</span> @PRAJWALTOMAR_ ほか / CURSOR エージェント評価 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Fable 5 のコストが現実問題に — Cursor 実測「$17.32/タスク」、Grok 4.5 は「$1.51」</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-14/topic_2.png" data-alt="Fable 5 のコストが現実問題に — Cursor 実測「$17.32/タスク」、Grok 4.5 は「$1.51」" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-14/topic_2.png" alt="Fable 5 のコストが現実問題に — Cursor 実測「$17.32/タスク」、Grok 4.5 は「$1.51」" />
+      </div>
+      <p class="lede">
+        Cursor が公開したエージェント評価で、Fable 5 Max は正答率 70.5% で 1タスクあたり $17.32、Grok 4.5 High は 66.7% で $1.51 という実測値が示された。性能差 4ポイントに対してコストは11倍で、「4時間で $500 溶かした」という体験談とともに価格論争が噴き上がっている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Fable 5 Max: 正答率 70.5% / $17.32 per task（Cursor のエージェント評価）</li>
+        <li data-i="02">Grok 4.5 High: 正答率 66.7% / $1.51 per task。性能差4ptに対しコストは約11倍</li>
+        <li data-i="03">日に千タスク回すエージェントなら $17,000 vs $1,500 の差になる計算</li>
+        <li data-i="04">提唱者の Prajwal Tomar は「値付けを責めるのは筋が違う。間違った仕事を与えたのが問題」と反論</li>
+        <li data-i="05">エージェントのコストの大半は「思考」ではなく毎ターン読み直す“コンテキスト”＝キャッシュが請求書の大半を占める、という指摘も</li>
+        <li data-i="06">数値は Cursor の評価環境・特定ベンチでの実測。タスク性質が変われば比率も変わる</li>
+      </ul>
+      <div class="pull">
+        「一番賢いモデルを常用する」設計が、エージェントを回した瞬間に破綻するという実データ。難所だけ Fable 5、定型は安いモデル、というモデル振り分けとコンテキスト圧縮が、これからのループ設計の必須スキルになる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/PrajwalTomar_/status/2076304824212304110">@PrajwalTomar_</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-12</dd>
+        <dt>CATEGORY</dt>
+        <dd>💰 モデル経済 / コスト設計</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/PrajwalTomar_/status/2076304824212304110">x.com/PrajwalTomar_/…</a></dd>
+        <dd><a href="https://x.com/tetsuoai/status/2075019333789753831">x.com/tetsuoai/status/207501933378975383…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · SUPABASE2000</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📊 調査レポート / AI×ビジネス <span class="sep">/</span> SUPABASE（スタートアップ開発者2,000人調査） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Supabase「State of Startups 2026」— Claude Code が必携に、Cursor は19%減、AI生成コードが主流化</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-14/topic_3.png" data-alt="Supabase「State of Startups 2026」— Claude Code が必携に、Cursor は19%減、AI生成コードが主流化" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-14/topic_3.png" alt="Supabase「State of Startups 2026」— Claude Code が必携に、Cursor は19%減、AI生成コードが主流化" />
+      </div>
+      <p class="lede">
+        Supabase がスタートアップ開発者2,000人に実施した年次調査。2025→2026 で Anthropic が採用面で一人勝ちし、Claude 有料契約は 28%→59% とほぼ倍増して OpenAI（39%）を逆転した。同時に61%のスタートアップでコードベースの過半が AI 生成となる一方、AI ヘビーユーザーの収益化率はむしろ低いという逆説的な結果も出た。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Claude 有料契約 28%→59% と倍増し OpenAI(39%) を逆転。モデル採用率は Anthropic 64% vs OpenAI 52%</li>
+        <li data-i="02">Claude Code が必携ツール化する一方、Cursor は 19% 減</li>
+        <li data-i="03">61% のスタートアップでコードベースの過半が AI 生成。40% は 75% 超</li>
+        <li data-i="04">ただし AI ヘビーユーザーの収益化率は 31% で、AI 不使用勢（56%）より低い</li>
+        <li data-i="05">エージェント: 52% が構築中、24% がマルチエージェントを本番投入</li>
+        <li data-i="06">だが 59% は AI ワークロードを監視しておらず、47% はプロンプト管理の仕組みを持たない＝運用インフラの空白</li>
+        <li data-i="07">ソロ創業者が 61%（+8pt）、40歳以上の創業者が 18%→25% に増加</li>
+      </ul>
+      <div class="pull">
+        「AI を大量に使う＝儲かる」ではないという冷たい事実と、監視・プロンプト管理という運用インフラがごっそり空いているという事実。後者はそのまま個人開発者の勝ち筋（作るべきプロダクト）になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">80</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://supabase.com/state-of-startups">Supabase（スタートアップ開発者2,000人調査）</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-12</dd>
+        <dt>CATEGORY</dt>
+        <dd>📊 調査レポート / AI×ビジネス</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://supabase.com/state-of-startups">https://supabase.com/state-of-startups</a></dd>
+        <dd><a href="https://x.com/supabase/status/2076329988622630925">x.com/supabase/status/207632998862263092…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · SAFISHAMSI / GITHU</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 開発ツール / コンテキストエンジニアリング <span class="sep">/</span> @SAFISHAMSI / GITHUB <span class="sep">/</span> NEWS
+      </div>
+      <h2>Graphify — コードベースを「クエリできる知識グラフ」に変える OSS スキル</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-14/topic_4.png" data-alt="Graphify — コードベースを「クエリできる知識グラフ」に変える OSS スキル" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-14/topic_4.png" alt="Graphify — コードベースを「クエリできる知識グラフ」に変える OSS スキル" />
+      </div>
+      <p class="lede">
+        AI コーディングで本当に難しいのは「コードを書くこと」ではなく、巨大プロジェクトの「どこが、なぜ、繋がっているか」を正しく把握することだ、という問題意識から生まれた OSS。Graphify は 1コマンドで任意のフォルダをクエリ可能な知識グラフに変換し、コード・SQL・ドキュメント・画像を横断して検索できるようにする。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">1コマンドで任意のフォルダを「クエリできる知識グラフ」に変換</li>
+        <li data-i="02">コード・SQL・ドキュメント・画像を横断して関係性を辿れる</li>
+        <li data-i="03">Claude Code / Cursor / Codex / OpenCode / Gemini CLI などから使えるスキルとして提供</li>
+        <li data-i="04">導入は `npx skills add safishamsi/graphify` の1行</li>
+        <li data-i="05">Karpathy が示した「LLM Knowledge Bases」ワークフローの実装として、提唱の48時間後に GitHub に登場した経緯で話題化</li>
+        <li data-i="06">星数はコミュニティ紹介ポストの申告値で幅がある（7〜8万★級）</li>
+      </ul>
+      <div class="pull">
+        大規模コードベースでエージェントが迷子になる問題への直球の解。grep でファイルを漁らせるのではなく、構造を先に渡すというアプローチは、コンテキスト代を圧縮する（＝上のコスト問題に効く）実装でもある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/safishamsi/graphify">@safishamsi / GitHub</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-10</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 開発ツール / コンテキストエンジニアリング</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/safishamsi/graphify">https://github.com/safishamsi/graphify</a></dd>
+        <dd><a href="https://x.com/so_sthbryan/status/2075731041738953165">x.com/so_sthbryan/status/207573104173895…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · KENN EJIMA KENN</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📖 開発思想 / 設計判断 <span class="sep">/</span> KENN EJIMA (@KENN) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Kenn Ejima「自動化しない判断こそが大事」— Vibe Coding 時代の万能感への警鐘</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-14/topic_5.png" data-alt="Kenn Ejima「自動化しない判断こそが大事」— Vibe Coding 時代の万能感への警鐘" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-14/topic_5.png" alt="Kenn Ejima「自動化しない判断こそが大事」— Vibe Coding 時代の万能感への警鐘" />
+      </div>
+      <p class="lede">
+        Claude や Codex で何でも自動化できるようになった結果、「万能感」を覚えて必要以上に作り込み、自己満足に陥る人が増えている——というエンジニア Kenn Ejima 氏の指摘。自動化はプロセスを一気に硬直化させるため、むしろ「自動化しない」判断のほうが重要だと説く。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">自動化は硬直化とセット。世の中は変化し続けるので、変化する部分を固定化するとズレが広がるばかりになる</li>
+        <li data-i="02">イーロン・マスクの5ステップ: ①本当に必要か ②スコープを小さくできないか ③単純化できないか ④運用して改善サイクルを回せているか ⑤そこまでいって初めて自動化</li>
+        <li data-i="03">「これを逆順でやってる人は多い。イーロン自身でさえかつてはそうだった」</li>
+        <li data-i="04">「自動化の技をマスターしている人ほど、自動化は最後までしない」</li>
+        <li data-i="05">「自動化してる感」が実際の課題解決の代わりになる自己欺瞞への警告</li>
+      </ul>
+      <div class="pull">
+        AI で「作れてしまう」ようになると、作る必要のないものまで作り、しかもそれを成果だと錯覚する。手で3回やってから自動化する——くらいの規律を、ループを組む前のチェックリストとして持っておきたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,779</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/kenn/status/2076088272099635489">@kenn</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-12</dd>
+        <dt>CATEGORY</dt>
+        <dd>📖 開発思想 / 設計判断</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/kenn/status/2076088272099635489">x.com/kenn/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · HARRISON CHASELANG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🧠 コンテキストエンジニアリング <span class="sep">/</span> HARRISON CHASE（LANGCHAIN 創業者）/ 紹介 @0XCODEZ <span class="sep">/</span> NEWS
+      </div>
+      <h2>LangChain 創業者「コンテキスト窓は広がったが、無限ではない」— compaction が長期エージェントの肝</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-14/topic_6.png" data-alt="LangChain 創業者「コンテキスト窓は広がったが、無限ではない」— compaction が長期エージェントの肝" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-14/topic_6.png" alt="LangChain 創業者「コンテキスト窓は広がったが、無限ではない」— compaction が長期エージェントの肝" />
+      </div>
+      <p class="lede">
+        LangChain 創業者 Harrison Chase が40分のインタビューで、「コンテキスト窓は大きくなったが、それでも無限ではない。どこかで必ず compaction（圧縮）が要る」と述べた。長期horizon エージェントの設計は compaction ＋ ファイルシステム ＋ メモリ の3点セットに集約される、という整理を示している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">「コンテキスト窓は大きくなったが無限ではない。どこかで必ず compaction が要る」</li>
+        <li data-i="02">「コンテキストエンジニアリングという言葉は、我々が LangChain でその名前を知らないままずっとやってきたことそのものだ」</li>
+        <li data-i="03">長期horizon エージェントの設計は compaction ＋ ファイルシステム ＋ メモリ の3点セット</li>
+        <li data-i="04">窓を広げる競争ではなく、何を捨て何をファイルに逃がすかの設計が本丸という主張</li>
+        <li data-i="05">引用は紹介ポスト経由。原典は40分のインタビュー動画</li>
+      </ul>
+      <div class="pull">
+        コンテキストがコストの主因（今日の Fable 5 コスト問題）である以上、compaction は品質の話であると同時に経済の話でもある。長く回るループを作るなら、記憶をファイルに逃がす設計を最初から入れておくべき。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">88</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/0xCodez/status/2076397160296280472">@0xCodez</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-12</dd>
+        <dt>CATEGORY</dt>
+        <dd>🧠 コンテキストエンジニアリング</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/0xCodez/status/2076397160296280472">x.com/0xCodez/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · DEEPLEARNINGAI /  </span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🎓 教育 / エージェント設計 <span class="sep">/</span> DEEPLEARNING.AI / 講師 ELIE SCHOPPIK（ANTHROPIC） <span class="sep">/</span> NEWS
+      </div>
+      <h2>DeepLearning.AI ×Anthropic「Agent Skills」無料講座 — Skill の設計を体系的に学べる</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-14/topic_7.png" data-alt="DeepLearning.AI ×Anthropic「Agent Skills」無料講座 — Skill の設計を体系的に学べる" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-14/topic_7.png" alt="DeepLearning.AI ×Anthropic「Agent Skills」無料講座 — Skill の設計を体系的に学べる" />
+      </div>
+      <p class="lede">
+        DeepLearning.AI が Anthropic と共同制作した2時間19分・全10レッスンの無料講座。Skill を「エージェントに専門知識を与える“指示書フォルダ”」と位置づけ、SKILL.md のフォーマット、フォルダ構造、progressive disclosure でコンテキストを節約する仕組みを扱う。講師は Anthropic の Head of Technical Education、Elie Schoppik。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">2時間19分・全10レッスン・無料。Anthropic との共同制作</li>
+        <li data-i="02">SKILL.md のフォーマットとスキルフォルダの構造を体系的に学べる</li>
+        <li data-i="03">progressive disclosure（必要な時だけ読み込む）でコンテキストを節約する仕組みを解説</li>
+        <li data-i="04">Claude.ai / Claude Code / Claude API / Claude Agent SDK 全面で Skill が動く様子を扱う</li>
+        <li data-i="05">MCP・サブエージェントとの組み合わせ方まで踏み込む</li>
+        <li data-i="06">時事ニュースではなく恒常的な学習リソースとして扱うべき教材</li>
+      </ul>
+      <div class="pull">
+        スキルは今いちばん費用対効果の高いエージェント強化手段で、公式が体系立てて教える教材は貴重。自作エージェントを「なんとなく動く」から「再現性ある資産」に引き上げる最短ルート。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">536</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.deeplearning.ai/courses/agent-skills-with-anthropic">DeepLearning.AI / 講師 Elie Schoppik（Anthropic）</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-11</dd>
+        <dt>CATEGORY</dt>
+        <dd>🎓 教育 / エージェント設計</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.deeplearning.ai/courses/agent-skills-with-anthropic">https://www.deeplearning.ai/courses/agent-skills-with-anthropic</a></dd>
+        <dd><a href="https://x.com/0xCodez/status/2075932575147733290">x.com/0xCodez/status/2075932575147733290…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · OPENAI DEVELOPERS </span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 開発者イベント <span class="sep">/</span> OPENAI DEVELOPERS (@OPENAIDEVS) <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI「Build Week」開幕 — Codex in ChatGPT と GPT-5.6 のハッカソン／ライブ配信</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-14/topic_8.png" data-alt="OpenAI「Build Week」開幕 — Codex in ChatGPT と GPT-5.6 のハッカソン／ライブ配信" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-14/topic_8.png" alt="OpenAI「Build Week」開幕 — Codex in ChatGPT と GPT-5.6 のハッカソン／ライブ配信" />
+      </div>
+      <p class="lede">
+        OpenAI が 7/13 の週を「Build Week」として開催中。7/13 10am PT のライブ配信でハッカソン概要と Codex・GPT-5.6 のデモを行い、7/14 11am PT には「From idea to execution」として実務的な Codex / GPT-5.6 ワークフローとライブサポートを実施する。先立って Codex チームの Reddit AMA も済ませている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">7/13 週を Build Week として開催。ハッカソン＋ライブ配信</li>
+        <li data-i="02">7/13 10am PT: ハッカソン概要と Codex・GPT-5.6 のデモ</li>
+        <li data-i="03">7/14 11am PT: 「From idea to execution」— 実務的な Codex / GPT-5.6 ワークフローとライブサポート</li>
+        <li data-i="04">先行して Codex チームの Reddit AMA（r/Codex）も実施済み</li>
+        <li data-i="05">GPT-5.6 リリースと Codex の ChatGPT 統合に続く、エコシステム定着フェーズの動き</li>
+      </ul>
+      <div class="pull">
+        Anthropic が Fable 5 のアクセス延長で開発者を囲う一方、OpenAI はイベントとワークフロー教育で定着を狙う。両陣営の「開発者の手元に残る」争いが今週ぶつかっている。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,009</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2076022440187330990">@OpenAIDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-11</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 開発者イベント</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2076022440187330990">x.com/OpenAIDevs/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/claudeai/status/2076351399999557669">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-07-13/">
+      ← 前日 · 2026-07-13
+      <span class="big">Apple が OpenAI を提訴 — 元Apple幹部の移籍と「未来のハードウェア」をめぐる営業秘密紛争</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-07-14/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260714.1425</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

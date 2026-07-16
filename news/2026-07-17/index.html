@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-07-17 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-07-17 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0717</span>
+    <span class="sep">/</span>
+    <span>2026-07-17</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260717.0735</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-07-17/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:35 · THU</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · THURSDAY · JULY 17, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>07<span class="dot">.</span>17</h1>
+    <div class="strap">
+      <span>Claude · Gemma · AIエージェントに永続的な身元を · MF会計の</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 6 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 AI/開発ツール（機能リリース） <span class="sep">/</span> @CLAUDEDEVS（ANTHROPIC 公式） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code の /code-review に「エフォートレベル」— low〜ultra でレビュー戦略そのものが変わる</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-17/topic_1.png" data-alt="Claude Code の /code-review に「エフォートレベル」— low〜ultra でレビュー戦略そのものが変わる" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-17/topic_1.png" alt="Claude Code の /code-review に「エフォートレベル」— low〜ultra でレビュー戦略そのものが変わる" />
+      </div>
+      <p class="lede">
+        Claude Code の /code-review がエフォートレベルに対応した。従来はエフォート設定に関わらず固定プロンプトを1本流すだけだったが、今後はレベルごとにレビュー戦略そのものが書き直される。low は差分を1パスするだけで速く安く、high は finder と verifier をフレッシュなコンテキストの subagent として走らせて recall を大きく上げる。最上位の ultra はレビューエージェントの艦隊を起動し、全指摘を独立に再現検証する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">low: 差分を1パス。プッシュのたびに回せる速度とコスト。わずかなトークンコストで他のコードレビューツールを指摘数において上回る（Anthropic 主張）</li>
+        <li data-i="02">medium: 変更コードを文脈込みで読み、複数の finder パスを異なる角度から走らせ、全指摘を検証してから提示</li>
+        <li data-i="03">high: finder と verifier をフレッシュコンテキストの subagent として実行＝直前にコードを書いたエージェントの推論にアンカーされない。recall が有意に向上</li>
+        <li data-i="04">x-high: さらに変更範囲の外側への影響までスイープする</li>
+        <li data-i="05">ultra: レビューエージェントの艦隊を起動し全指摘を独立に再現。severe issue のカバレッジは high と同等のまま誤検知が大幅に減る。Anthropic は社内の全 PR でこれを回している</li>
+        <li data-i="06">セッションのエフォート設定を自動で拾う。`/code-review high` のように明示指定も可能。全 Claude Code セッションで利用可（要アップデート）</li>
+      </ul>
+      <div class="pull">
+        エフォート＝トークンコストのトレードオフを利用者が明示的に選ぶ設計になり、「毎プッシュは low、PR は high」という運用が組める。high 以上の設計思想（フレッシュコンテキストの subagent で、コードを書いた本人の推論から切り離す）は自作のレビューループにもそのまま流用できる原則。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,079</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2077840057130692886">@ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-16</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 AI/開発ツール（機能リリース）</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2077840057130692886">x.com/ClaudeDevs/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · PCWATCH / PC WATCH</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🖥️ ローカルLLM / オンデバイスAI <span class="sep">/</span> @PC_WATCH / PC WATCH <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Gemma 4 大幅強化 — プリフィル最大70%高速化、ツール呼び出しの精度と一貫性を改善</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-17/topic_2.png" data-alt="Gemma 4 大幅強化 — プリフィル最大70%高速化、ツール呼び出しの精度と一貫性を改善" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-17/topic_2.png" alt="Gemma 4 大幅強化 — プリフィル最大70%高速化、ツール呼び出しの精度と一貫性を改善" />
+      </div>
+      <p class="lede">
+        Google がオープンウェイトの Gemma 4 を大幅に更新し、Hugging Face で公開した。プリフィルのスループットが25〜70%向上し、最初のトークンが出るまでの時間が最大31%短縮。高速化の中身は NVIDIA Hopper GPU 上での uniform Flash Attention 4 の有効化で、あわせてツール呼び出しをより正確かつ一貫して実行できるよう改善された。新モデル追加ではなく既存6モデルの実行効率とツール呼び出しの強化が主眼。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">プリフィルのスループット +25〜70%、最初のトークン出力までの時間（TTFT）が最大 -31%</li>
+        <li data-i="02">高速化の技術的な中身は NVIDIA Hopper GPU 上での uniform Flash Attention 4 (FA4) 有効化</li>
+        <li data-i="03">ツール呼び出しを「より正確かつ一貫して」実行できるよう改善</li>
+        <li data-i="04">対象は6モデル: E2B（5.1B / 実効2.3B）・E4B（8B / 実効4.5B）・12B Unified（11.95B）はいずれも Dense でテキスト/画像/音声、26B A4B（25.2B）は MoE、31B Dense（30.7B）はテキスト/画像</li>
+        <li data-i="05">コンテキスト長は 128K〜256K トークン。Hugging Face でオープンウェイト配布</li>
+      </ul>
+      <div class="pull">
+        ローカルでエージェントを回す観点では、速度より「ツール呼び出しの安定性」が本命。エージェントは1タスクで数十〜数百回 tool call を打つため、call の正確さがそのまま完走率になる。プリフィル高速化もループでは効く（毎ステップ肥大したコンテキストを読み直すため）。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">715</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/pc_watch/status/2077614221274251594">@pc_watch</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-15</dd>
+        <dt>CATEGORY</dt>
+        <dd>🖥️ ローカルLLM / オンデバイスAI</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/pc_watch/status/2077614221274251594">x.com/pc_watch/…</a></dd>
+        <dd><a href="https://pc.watch.impress.co.jp/docs/news/2125687.html">pc.watch.impress.co.jp/docs/news/2125687…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · KMATSUMARU /</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 技術業界ニュース <span class="sep">/</span> @K_MATSUMARU / 松丸 彗吾 <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>AIエージェントに永続的な身元を — Vint Cerf が参画する DNSid 構想</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-17/topic_3.png" data-alt="AIエージェントに永続的な身元を — Vint Cerf が参画する DNSid 構想" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-17/topic_3.png" alt="AIエージェントに永続的な身元を — Vint Cerf が参画する DNSid 構想" />
+      </div>
+      <p class="lede">
+        TCP/IP の設計者でインターネットの父と呼ばれる Vint Cerf が、20年在籍した Google を離れ、AIエージェントの識別標準を作る Innovation Labs（DNSレジストリ企業 Identity Digital の子会社）に参画した。提案する「DNSid」は、エージェントに ID を発行して既存のインターネット・ドメイン名に紐づけ、登録履歴を暗号学的証明で経時的に記録する仕組み。オープン標準とマルチステークホルダーの協調で進める立場を掲げる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">DNSid で識別できるもの: どの組織・人間が所有／運用しているか、本物のエージェントか、現在も有効か（停止・失効していないか）、どの暗号鍵で行動を証明するか</li>
+        <li data-i="02">エージェントの身元の上に、権限・契約履歴・信用スコア・評判・資産管理・制裁や資格停止まで積める構想</li>
+        <li data-i="03">DNS + 公開鍵という枯れた部品の組み合わせで解く現実路線。新しい信頼基盤をゼロから作らない</li>
+        <li data-i="04">プロプライエタリな信頼モデルではなくオープン標準・多者協調で進める立場。複数の（非公開の）ハイパースケーラーおよびID企業と試験中</li>
+        <li data-i="05">動機は理念ではなく実務: 取引相手が「誰なのか」を機械同士で判別できないと経済が回らないため、必要性から擬似的な人格が生まれている（松丸氏の観察）</li>
+      </ul>
+      <div class="pull">
+        エージェントに決済・契約・API アクセスを持たせようとすると必ず「このエージェントは誰の代理で、まだ有効か」の検証が要る。企業内のサービスアカウント（Anthropic の agent identity）が1組織の中の話なのに対し、DNSid は組織を跨ぐインターネット規模の識別層で、両者は競合せず積み上がる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">91</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/k_matsumaru/status/2077528647359967317">@k_matsumaru</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-15</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 技術業界ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/k_matsumaru/status/2077528647359967317">x.com/k_matsumaru/…</a></dd>
+        <dd><a href="https://techcrunch.com/2026/07/15/vint-cerf-is-working-on-a-plan-to-unleash-ai-agents-on-the-open-internet/">techcrunch.com/2026/07/15/vint-cerf-is-w…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · KANDMYBIKE / AI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💼 AI×ビジネス活用（業務自動化） <span class="sep">/</span> @KANDMYBIKE / 畠山謙人（AI税理士） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>MF会計の MCP が「明細からの仕訳登録」に対応 — スタッフ0人・顧問先60社の実運用レポート</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-17/topic_4.png" data-alt="MF会計の MCP が「明細からの仕訳登録」に対応 — スタッフ0人・顧問先60社の実運用レポート" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-17/topic_4.png" alt="MF会計の MCP が「明細からの仕訳登録」に対応 — スタッフ0人・顧問先60社の実運用レポート" />
+      </div>
+      <p class="lede">
+        マネーフォワード会計の MCP が「金融機関明細からの仕訳登録」に対応し、連携した銀行・カードの未仕訳明細を取得してそのまま仕訳を作れるようになった。AI税理士の畠山謙人氏は、freee の API/MCP には取引を登録しても明細が処理済みにならない＝消込にあたる機能がないという弱点があると指摘し、2026年3月に API を全プラン公開したばかりの後発 MF が「明細を取って、仕訳にして、消し込む」という記帳自動化の本丸を先に取った、と分析する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">freee は「幅」— 明細取得から証憑ファイルボックス、請求書まで一気通貫。約270本の API をツール化した公式 freee-mcp もある</li>
+        <li data-i="02">MF は「芯」— 仕訳まわりに絞りつつ本丸を先取り。全プラン追加料金なしのリモート MCP で入口も軽い</li>
+        <li data-i="03">実運用（freee 側）: 毎晩21時にタスクスケジューラで全自動バッチ。未処理明細取得 → キーワードと Claude API で勘定科目を分類 → 取引登録まで人手ゼロ</li>
+        <li data-i="04">実運用（MF 側）: MCP 経由で未処理明細をスキャン → 分類 → 仕訳を一括登録まで自動化済み</li>
+        <li data-i="05">畠山氏の事務所はスタッフ0人で顧問先60社。「実行はAIに寄せる」設計を全社に横展開して回している</li>
+        <li data-i="06">自動化するのは実行だけ。税務判断・分類ルールの決定・グレーな論点の停止・最終承認は人が持つ</li>
+      </ul>
+      <div class="pull">
+        MCP がデモではなく事務所の売上を支える本番インフラとして回っている、数少ない具体的な実運用レポート。ベンダーのAI対応を評価する軸が API の本数ではなく「業務の本丸まで開いているか」であること、そして「実行＝AI / 判断＝人」の線引きなら責任の重い領域でも全自動バッチが成立することを示す。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">84</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/kandmybike/status/2077247254856188224">@kandmybike</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-15</dd>
+        <dt>CATEGORY</dt>
+        <dd>💼 AI×ビジネス活用（業務自動化）</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/kandmybike/status/2077247254856188224">x.com/kandmybike/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · TRQ212 / THARIQANT</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🧠 コンテキストエンジニアリング <span class="sep">/</span> @TRQ212 / THARIQ（ANTHROPIC） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>「薄いプロンプト・厚いアーティファクト・薄いスキル」— コンテキストエンジニアリングが主戦場に</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-17/topic_5.png" data-alt="「薄いプロンプト・厚いアーティファクト・薄いスキル」— コンテキストエンジニアリングが主戦場に" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-17/topic_5.png" alt="「薄いプロンプト・厚いアーティファクト・薄いスキル」— コンテキストエンジニアリングが主戦場に" />
+      </div>
+      <p class="lede">
+        Anthropic の Thariq が理想のプロンプト技法を3行で定義した。「thin prompts（薄いプロンプト）/ thick artifacts + context（厚いアーティファクトとコンテキスト）/ thin skills（薄いスキル）」。プロンプトに情報を盛るのではなく、モデルが参照する成果物とコンテキストの側を厚くし、スキルは薄く保て、という主張で、3行の短文に Likes 4,543・Bookmarks 2,431 という異例の反応が集まった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">thin prompts: 指示そのものは短く保つ。プロンプトに背景・制約・例を延々と詰め込む方向に最適化しない</li>
+        <li data-i="02">thick artifacts + context: 厚くするのはアーティファクト（設計文書・コード・仕様・既存の成果物）とコンテキストの側。モデルに読ませる「現物」を充実させる</li>
+        <li data-i="03">thin skills: スキル（手順書・ツール定義）も薄く。肥大化させると毎回コンテキストを食い、モデルの判断余地も奪う</li>
+        <li data-i="04">実務への落とし方: CLAUDE.md や SKILL.md を長文化してモデルを縛るのではなく、設計文書・型・既存コードを整備して「これを読んでこうして」と短く打つ</li>
+        <li data-i="05">同じ週に Gergely Orosz が dexhorthy を招き「コンテキストの限界とその回避」をテーマにした長編 podcast を公開（♥477）。Thariq が原則を3行で示し、こちらが実践論を長尺で語る補完関係</li>
+      </ul>
+      <div class="pull">
+        「良いプロンプトを書く」から「良い材料を置く」への重心移動を1行に凝縮した指針。エージェントは1タスクで数十〜数百ステップ回るため、各ステップで積み上がるコンテキストの質と量がそのまま完走率とコストになる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">4,543</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/trq212/status/2077539537992229076">@trq212</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-15</dd>
+        <dt>CATEGORY</dt>
+        <dd>🧠 コンテキストエンジニアリング</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/trq212/status/2077539537992229076">x.com/trq212/…</a></dd>
+        <dd><a href="https://x.com/GergelyOrosz/status/2077434907274428914">x.com/GergelyOrosz/status/20774349072744…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · OPENAIDEVSOPENAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💼 AI×ビジネス活用（実務ワークフロー） <span class="sep">/</span> @OPENAIDEVS（OPENAI 公式） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Codex in Chrome — 依頼フォームを「ゴーライブ計画」に落とすまでをブラウザで回す</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-17/topic_6.png" data-alt="Codex in Chrome — 依頼フォームを「ゴーライブ計画」に落とすまでをブラウザで回す" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-17/topic_6.png" alt="Codex in Chrome — 依頼フォームを「ゴーライブ計画」に落とすまでをブラウザで回す" />
+      </div>
+      <p class="lede">
+        OpenAI Developers が Codex in Chrome の実務ワークフローを提示した。依頼フォームからチェックリストを組み立て、Google Drive・Slack・ローカルファイルから文脈を引き込み、フォローアップが必要な箇所にフラグを立て、ポータルを更新し、返信を下書きするまでをブラウザ上で回す例。「最終判断はあなたが下す（You make the final call）」と明記している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">フローの骨子: フォームからチェックリスト生成 → Google Drive / Slack / ローカルファイルから文脈収集 → 要フォローアップ箇所にフラグ → ポータル更新 → 返信を下書き</li>
+        <li data-i="02">文脈の引き込み先が単一ツールではなく Drive・Slack・ローカルファイルに跨る点が要</li>
+        <li data-i="03">「You make the final call（最終判断は人）」と、判断を人に残す線引きを公式が明示</li>
+        <li data-i="04">「モデルの賢さ」ではなく「日々の実務手順をエージェントに載せる」という運用寄りの見せ方</li>
+      </ul>
+      <div class="pull">
+        依頼を実行可能な段取りに落とす作業そのものを任せられることを示す具体例。「実行はAI・判断は人」という線引きを公式デモが明示している点が、同日の MF会計の実運用レポートとも符合する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">804</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2077468133120766044">@OpenAIDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-15</dd>
+        <dt>CATEGORY</dt>
+        <dd>💼 AI×ビジネス活用（実務ワークフロー）</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2077468133120766044">x.com/OpenAIDevs/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · CLAUDECODE84 / CLA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🎨 AI×デザイン / 開発ツール <span class="sep">/</span> @CLAUDECODE84 / CLAUDE CODE研究ラボ <span class="sep">/</span> NEWS
+      </div>
+      <h2>/improve-animations skill — 「動くけど何か違う」を専門に監査し、レビューと実装でモデルを分ける</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-17/topic_7.png" data-alt="/improve-animations skill — 「動くけど何か違う」を専門に監査し、レビューと実装でモデルを分ける" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-17/topic_7.png" alt="/improve-animations skill — 「動くけど何か違う」を専門に監査し、レビューと実装でモデルを分ける" />
+      </div>
+      <p class="lede">
+        アニメーション改善に特化した Claude Code スキル /improve-animations が話題を集めている。プロジェクト内の CSS / Framer Motion / Motion / GSAP のアニメーションを自動検出して改善候補を一覧化し、Fable のような高性能モデルが品質を監査して改善案まで提案する。推奨運用は「レビューや設計は高性能モデル、実際のコード修正は低コストモデル」という分業。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">検出: CSS / Framer Motion / Motion / GSAP をプロジェクト横断で洗い出し、改善候補を一覧化</li>
+        <li data-i="02">監査観点: 動きが不自然でないか / イージングは適切か / Duration が長すぎないか / オーバーアニメーションでないか / アクセシビリティを考慮できているか / GPU 負荷が高すぎないか</li>
+        <li data-i="03">改善案の方向性を指定できる: より自然なモーション / Apple ライク / Material Design 風 / Linear 風 / shadcn/ui 風</li>
+        <li data-i="04">推奨運用は分業: レビューや設計は Fable のような高性能モデル、実際のコード修正や置き換えは Sonnet など低コストモデルへ渡し、品質を保ちつつ API コストを削減</li>
+      </ul>
+      <div class="pull">
+        「動くけど何か違う」という言語化しづらく後回しにされがちな品質を、AI に定量的な観点で監査させる型。前日に配信した「Fable に指示を書かせ、Codex に実装させる」と同じ分業思想が、デザイン領域にも現れた具体例。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">176</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/claudecode84/status/2077619835442508249">@claudecode84</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-16</dd>
+        <dt>CATEGORY</dt>
+        <dd>🎨 AI×デザイン / 開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/claudecode84/status/2077619835442508249">x.com/claudecode84/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/ClaudeDevs/status/2077840057130692886">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-07-16/">
+      ← 前日 · 2026-07-16
+      <span class="big">Claude Code の Artifacts が MCP コネクタを呼べるように — ライブデータ連携のダッシュボード/アプリを生成</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-07-17/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260717.0735</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

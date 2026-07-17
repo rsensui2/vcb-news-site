@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-07-18 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-07-18 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0718</span>
+    <span class="sep">/</span>
+    <span>2026-07-18</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260718.0740</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-07-18/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:40 · FRI</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · FRIDAY · JULY 18, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>07<span class="dot">.</span>18</h1>
+    <div class="strap">
+      <span>Kimi-K3 · GPT-5.6 · 1Password · /goal</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 8 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 業界ニュース / ベンチマーク <span class="sep">/</span> @ARENA / @HOLY_FOX_LLM <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Kimi-K3 が Frontend Code Arena で Fable 5 を抜き1位 — 実感でも「Opus 4.8 と二択なら K3」</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-18/topic_1.png" data-alt="Kimi-K3 が Frontend Code Arena で Fable 5 を抜き1位 — 実感でも「Opus 4.8 と二択なら K3」" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-18/topic_1.png" alt="Kimi-K3 が Frontend Code Arena で Fable 5 を抜き1位 — 実感でも「Opus 4.8 と二択なら K3」" />
+      </div>
+      <p class="lede">
+        Moonshot の新モデル Kimi-K3 が、Arena の Frontend Code Arena で 1,679 点の1位を獲得し Claude Fable 5 を上回った。前世代 k2.6 の18位から17ランクのジャンプで、フロントエンド7ドメイン中6つで首位、唯一 Gaming のみ Fable 5 に次ぐ2位。フル重みは7月27日に公開予定。同時期にローカル/オープンモデルに詳しい @Holy_fox_LLM も「Opus 4.8 と Kimi K3 のどちらかしか使えないなら K3 を選ぶ」と実使用レビューし、ベンチと肌感の両面で評価が裏取りされた。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Frontend Code Arena で 1,679 pts の1位、Claude Fable 5 を上回る（前世代 k2.6 は18位＝17ランクのジャンプ）</li>
+        <li data-i="02">7ドメイン中6つで1位（Brand &amp; Marketing / Reference-Based Design / Data &amp; Analytics / Consumer Product / Simulations / Content Creation Tools）、Gaming のみ Fable 5 に次ぐ2位</li>
+        <li data-i="03">フルのモデル重みは7月27日に公開予定 → 公開後はローカル運用・自前ホスティングの現実的候補に</li>
+        <li data-i="04">@Holy_fox_LLM の実感レビュー：「Opus 4.8 と二択なら K3」。難点はスピードがやや遅いこととサーバー混雑のみで品質への不満はほぼ無し</li>
+        <li data-i="05">arena の投稿は Likes 2.3万・Views 1,376万と桁違いに拡散＝オープンモデルがフロンティア商用を抜いたインパクトの大きさ</li>
+      </ul>
+      <div class="pull">
+        「オープン/中国系モデルは商用フロンティアに一歩劣る」という前提が、ベンチ（Arena 1位）と実務者の肌感の両方から同時に崩れた。特にフロントエンド生成でトップという点は VBC の「AI で画面を作る」ワークフローに直結し、7/27 の重み公開後はモデル選定を Claude/GPT に固定しない理由になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">23,398</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/arena/status/2077824029126504525">@arena</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-16</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 業界ニュース / ベンチマーク</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/arena/status/2077824029126504525">x.com/arena/…</a></dd>
+        <dd><a href="https://x.com/Holy_fox_LLM/status/2077966136034152653">x.com/Holy_fox_LLM/status/20779661360341…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · OPENAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 業界ニュース / セキュリティ <span class="sep">/</span> @OPENAI（公式） <span class="sep">/</span> NEWS
+      </div>
+      <h2>GPT-5.6 Sol がサイバーセキュリティで SOTA 更新 — 攻撃力を防御に転じる「Codex Security」</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-18/topic_2.png" data-alt="GPT-5.6 Sol がサイバーセキュリティで SOTA 更新 — 攻撃力を防御に転じる「Codex Security」" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-18/topic_2.png" alt="GPT-5.6 Sol がサイバーセキュリティで SOTA 更新 — 攻撃力を防御に転じる「Codex Security」" />
+      </div>
+      <p class="lede">
+        OpenAI が、コーディング特化モデル GPT-5.6 Sol が攻防演習環境「The Last Ones」サイバーレンジでサイバーセキュリティの新 SOTA を達成したと発表した。その能力を防御側の成果に転じ、実世界コードの脆弱性を「発見・検証・修正」する用途として Codex に「Codex Security」プラグインを提供する。あわせて「switch to Codex」キャンペーンで GPT-5.6 Sol へのサブスク移行を強く訴求している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">GPT-5.6 Sol が「The Last Ones」サイバーレンジでサイバーセキュリティの SOTA を更新（OpenAI 公式主張）</li>
+        <li data-i="02">攻撃力を防御へ転換：実コードの脆弱性を find / validate / fix する成果を確認と主張</li>
+        <li data-i="03">提供形態：Codex に「Codex Security」プラグインを追加 →「Try in chat」でセキュリティスキャン用プロンプトが用意された新規チャットが開き、対象フォルダを選んで実行</li>
+        <li data-i="04">OpenAI は「switch to Codex（10,000 reasons people love GPT-5.6 Sol）」ページで移行を積極訴求</li>
+      </ul>
+      <div class="pull">
+        本日は Kimi K3・1Password for Claude など Anthropic/中国勢が話題の中心だが、OpenAI も Codex（GPT-5.6 Sol）で明確に攻勢に出ている。「cyber range で SOTA な攻撃能力を、脆弱性の発見・修正という防御プロダクトに転じる」構図は、受講者が自作アプリのセキュリティを AI に監査させる具体的な入口になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAI/status/2078243667081617826">@OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-17</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 業界ニュース / セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAI/status/2078243667081617826">x.com/OpenAI/…</a></dd>
+        <dd><a href="https://x.com/OpenAI/status/2078223217773474134">x.com/OpenAI/status/2078223217773474134</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · 1PASSWORDWITH ANTH</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 セキュリティ / AIエージェント <span class="sep">/</span> @1PASSWORD（WITH @ANTHROPICAI） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>1Password for Claude — AIエージェントに認証情報を渡さず「本人代行」させる</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-18/topic_3.png" data-alt="1Password for Claude — AIエージェントに認証情報を渡さず「本人代行」させる" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-18/topic_3.png" alt="1Password for Claude — AIエージェントに認証情報を渡さず「本人代行」させる" />
+      </div>
+      <p class="lede">
+        1Password が Anthropic と組み「1Password for Claude」を発表した。AIエージェントに代行させる＝認証情報をモデルに晒す、という構造的リスクに対し、保存済みクレデンシャルで Claude に実タスクを完了させつつ、パスワードやワンタイムコードがモデル・そのメモリ・Anthropic のシステムに一切到達しない設計にする。認証は 1Password が裏側で処理し、どの資格情報をどのエージェントに使わせるかはユーザーが都度承認する。まず Mac 版から提供。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">解く課題：エージェントに代行させると認証情報が LLM の文脈・メモリ・ベンダー基盤に残る構造的リスク</li>
+        <li data-i="02">仕組み：認証は 1Password が裏側で実行。秘密はモデルにもメモリにも Anthropic のシステムにも届かない</li>
+        <li data-i="03">制御：どの資格情報をどのエージェントに使わせるかをユーザーが都度承認＝人間が主導権を保持</li>
+        <li data-i="04">提供：現時点で Mac 版から（business / family / individual）</li>
+        <li data-i="05">位置づけ：エージェントに実世界操作をさせる時代の、認証レイヤーの標準解の一つ</li>
+      </ul>
+      <div class="pull">
+        エージェントが外部サービスへログインして作業する運用では「認証情報をどう渡すか」が最大のセキュリティ論点になる。「秘密をモデルに一切見せず、承認済みの範囲だけ裏で認証させる」という設計原則は、自前でエージェント認証を組む際の参照アーキテクチャになる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,184</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/1Password/status/2077743858239094854">@1Password</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-16</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 セキュリティ / AIエージェント</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/1Password/status/2077743858239094854">x.com/1Password/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · KENNKENN EJIMA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔁 ループエンジニアリング <span class="sep">/</span> @KENN（KENN EJIMA） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>/goal・/loop が失敗する理由 —「理解は委譲できない」と TOC「ザ・ゴール」</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-18/topic_4.png" data-alt="/goal・/loop が失敗する理由 —「理解は委譲できない」と TOC「ザ・ゴール」" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-18/topic_4.png" alt="/goal・/loop が失敗する理由 —「理解は委譲できない」と TOC「ザ・ゴール」" />
+      </div>
+      <p class="lede">
+        Kenn Ejima が、AI 自走（/goal・/loop）が滅多にうまくいかない理由を「理解は委譲できない（Never delegate understanding）」原則を破っているからだと分析した。数万行の成果物をポン出しして「動けばラッキー」の博打では人間側が成長しない。最小の差分を積み上げ、AI に質問しながら理解を深める工程にこそマジックが宿る、と説く。TOC（制約条件理論／「ザ・ゴール」）を引き、いまの制約条件は人間の理解力であり、そこを上げるのが全体最適だとする。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">失敗の根因：/goal・/loop は「理解は委譲できない」を破っている。生成物の理解を人間がスキップすると成長も品質管理も失われる</li>
+        <li data-i="02">ポン出しの罠：数万行を丸投げして「動けばOK」は博打。人間が理解していないので次に活かせない</li>
+        <li data-i="03">正しい進め方：最小の差分を積み上げ AI に質問しながら理解を深める。この工程にこそ価値が宿る</li>
+        <li data-i="04">TOC「ザ・ゴール」：鎖は最も弱い輪から切れる。いまの制約条件＝人間の理解力なので、そこを上げるのが全体最適</li>
+        <li data-i="05">イテレーション速度：24時間自走は学びが1日1回きり。10分おきに計画・実装・レビューを回せば理解を深めながら前進できる</li>
+      </ul>
+      <div class="pull">
+        ループエンジニアリング推進の熱に対する当事者からのカウンター。「自律ループ＝人間が見なくていい」という誤解を正し、ループの粒度を細かくして各サイクルで人間が理解を積むことが結局いちばん速い、という設計原則を与える。VBC の「小さく理解しながら回す」標準作法の論拠になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">527</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/kenn/status/2077771554017206459">@kenn</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-16</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔁 ループエンジニアリング</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/kenn/status/2077771554017206459">x.com/kenn/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · LMSTUDIO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🖥️ ローカルLLM / オンデバイス <span class="sep">/</span> @LMSTUDIO（公式） <span class="sep">/</span> NEWS
+      </div>
+      <h2>LM Studio「Bionic」提供開始 — ローカル実行＋音声文字起こし＋ZDRクラウドを1つに</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-18/topic_5.png" data-alt="LM Studio「Bionic」提供開始 — ローカル実行＋音声文字起こし＋ZDRクラウドを1つに" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-18/topic_5.png" alt="LM Studio「Bionic」提供開始 — ローカル実行＋音声文字起こし＋ZDRクラウドを1つに" />
+      </div>
+      <p class="lede">
+        ローカルLLM実行の定番アプリ LM Studio が新プロダクト「Bionic」を Mac / Windows で提供開始した。最新のローカルLLMをアプリ内から直接ダウンロードしてネイティブにローカル実行でき、Bionic に自然に話しかけると SOTA 級のローカル音声文字起こしが走る。最も重い処理はフロンティアの OSS モデルを ZDR（Zero Data Retention）デフォルトのクラウドで動かす、という「ローカル基本・必要時だけクラウド」のハイブリッド構成が特徴。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Bionic は Mac / Windows で提供開始（07-16）</li>
+        <li data-i="02">ネイティブにローカル：最新のローカルLLMをアプリ内から直接ダウンロードして実行</li>
+        <li data-i="03">ローカル音声文字起こし：話しかけると SOTA 級のローカル transcription（クラウド送信なし）</li>
+        <li data-i="04">クラウドはオプション：重い処理向けにフロンティア OSS モデルを ZDR（データ非保持）デフォルトで実行</li>
+      </ul>
+      <div class="pull">
+        Kimi K3 と同軸で「ローカル/オープンは商用に一歩劣る」前提が崩れる流れの受け皿。プライバシー要件が厳しい業務でも、ローカル基本＋必要時だけ ZDR クラウド、という現実的な落とし所を1アプリで提供する。受講者がコスト・機密の両面でローカル運用を検討する入口になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/lmstudio/status/2077836997872197771">@lmstudio</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-16</dd>
+        <dt>CATEGORY</dt>
+        <dd>🖥️ ローカルLLM / オンデバイス</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/lmstudio/status/2077836997872197771">x.com/lmstudio/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · NEWSFROMGOOGLE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 業界ニュース / プロダクト <span class="sep">/</span> @NEWSFROMGOOGLE（公式） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>NotebookLM が「Gemini Notebook」に改称 — Gemini / 検索エコシステムへ統合</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-18/topic_6.png" data-alt="NotebookLM が「Gemini Notebook」に改称 — Gemini / 検索エコシステムへ統合" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-18/topic_6.png" alt="NotebookLM が「Gemini Notebook」に改称 — Gemini / 検索エコシステムへ統合" />
+      </div>
+      <p class="lede">
+        Google が NotebookLM を「Gemini Notebook」に改称したと発表した。プロダクト自体はこれまでどおりの独立プロダクトで、名前が変わっただけ。引き続きリサーチ主力ツールという位置づけだが、今後は Gemini App や Google 検索を含む Google エコシステム全体でより多くのことができるようになる。AI プロダクト群を「Gemini」ブランドに集約する Google の統合戦略の一環。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">改称：NotebookLM → Gemini Notebook。中身は同じ独立プロダクトで名称のみ変更</li>
+        <li data-i="02">位置づけ：引き続きリサーチ用の主力ツール。ただしブランドを Gemini 傘下に統一</li>
+        <li data-i="03">拡張：Gemini App・Google 検索など Google エコシステム横断で機能を発揮する方向へ</li>
+        <li data-i="04">経緯：3年前に「学習を速くする実験」として発足 → 音声・動画・双方向性を追加 → 研究の相棒へ進化</li>
+        <li data-i="05">狙い：AI プロダクト群を Gemini ブランドに集約する統合戦略の一環</li>
+      </ul>
+      <div class="pull">
+        NotebookLM を資料要約・音声要約で使っている受講者が名称変更で戸惑わないよう押さえておきたい。実務上は「同じツールが Gemini ブランドに吸収され、検索や Gemini App と繋がっていく」統合の方向性が肝で、単体ツールでなく Google エコシステムの研究入口として捉え直すと使い所が広がる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,079</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/NewsFromGoogle/status/2077808070139289906">@NewsFromGoogle</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-16</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 業界ニュース / プロダクト</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/NewsFromGoogle/status/2077808070139289906">x.com/NewsFromGoogle/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · SHATTUS / GERGELYO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🧠 コンテキストエンジニアリング <span class="sep">/</span> @SH_AT_TUS / @GERGELYOROSZ × DEXHORTHY <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>AIっぽさの正体は「認知リズムの欠如」— 出力もエージェントも“材料の設計”で決まる</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-18/topic_7.png" data-alt="AIっぽさの正体は「認知リズムの欠如」— 出力もエージェントも“材料の設計”で決まる" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-18/topic_7.png" alt="AIっぽさの正体は「認知リズムの欠如」— 出力もエージェントも“材料の設計”で決まる" />
+      </div>
+      <p class="lede">
+        「AIっぽい文章」の違和感の正体は内容の正しさではなく「認知リズムがない」ことにある、という指摘が拡散した（@sh_at_tus）。引用元は japanese-tech-writing スキルによる「認知リズムを生むための日本語ライティング規範」で、特に GPT 系は文の緩急・情報の出し方に認知的リズムがなく読んで疲れる文章を出しがち。この規範を LLM に読ませて出力側のリズムを矯正するアイデアで、プロンプトの巧拙ではなく“読ませる材料”の側を設計するコンテキストエンジニアリングの実例。同じ潮流として Gergely Orosz が dexhorthy を招き「コンテキストの限界とその回避＝コンテキストエンジニアリング」を長編 podcast で掘り下げている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">違和感の正体：AIっぽさ＝事実の誤りではなく「認知リズムの不在」。同じ密度・構造が延々続くと内容が正しくても読み手が疲れる</li>
+        <li data-i="02">処方箋：japanese-tech-writing の「ライティング規範」を LLM に読ませ、出力側のリズムを整える＝材料の設計で品質を上げる</li>
+        <li data-i="03">コンテキストエンジニアリングの潮流：Gergely Orosz × dexhorthy の podcast が「コンテキストの限界とその回避」（the dumb zone / software factories / loopsmaxxing）を掘り下げ</li>
+        <li data-i="04">共通する原則：プロンプトを長文化するより、参照させる“材料（規範・設計文書・コンテキスト）”の側を工学的に整える</li>
+      </ul>
+      <div class="pull">
+        AI 生成テキストの質を「正確さ」だけで測らず「読み手の認知リズム」という軸を足すと、配信文面・議事録・スライド原稿の体感品質が一段上がる。プロンプトでなく“材料”を設計するという原則は、エージェント運用（何を読ませ何を読ませないか）にもそのまま効く。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">3,591</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/sh_at_tus/status/2077590437280555458">@sh_at_tus</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-16</dd>
+        <dt>CATEGORY</dt>
+        <dd>🧠 コンテキストエンジニアリング</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/sh_at_tus/status/2077590437280555458">x.com/sh_at_tus/…</a></dd>
+        <dd><a href="https://x.com/GergelyOrosz/status/2077434907274428914">x.com/GergelyOrosz/status/20774349072744…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · SEIKEIKIN</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🎨 AI×デザイン / 公共 <span class="sep">/</span> @SEIKEI_KIN <span class="sep">/</span> NEWS
+      </div>
+      <h2>デジタル庁デザインシステムが全ドキュメントを Markdown でも提供 — AI協業を見据えて</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-18/topic_8.png" data-alt="デジタル庁デザインシステムが全ドキュメントを Markdown でも提供 — AI協業を見据えて" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-18/topic_8.png" alt="デジタル庁デザインシステムが全ドキュメントを Markdown でも提供 — AI協業を見据えて" />
+      </div>
+      <p class="lede">
+        日本のデジタル庁のデザインシステムがアップデートし、全てのドキュメント・ガイドラインを従来の形式に加えて Markdown 形式でも提供開始した。Markdown 化により、AI（コーディングエージェント等）に読み込ませての協業がしやすくなる。公共のデザイン標準が「人間が読む資料」から「AI にも読ませる資料」へと配布形式を広げた具体例。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">デジタル庁デザインシステムが全ドキュメント・ガイドラインを Markdown 形式でも提供</li>
+        <li data-i="02">狙いは AI との協業のしやすさ（Markdown はエージェントが読み込み・参照しやすい）</li>
+        <li data-i="03">公共機関のデザイン標準が AI フレンドリーな配布形式に対応した国内事例</li>
+      </ul>
+      <div class="pull">
+        「thin prompts / thick artifacts」の実務そのもの＝AI に読ませる“厚い材料”を Markdown で整えておくと、デザイン準拠のUI生成をエージェントに任せやすくなる。公共・企業のデザインシステムに沿ったUIを AI で作る際、参照ドキュメントを Markdown で与える手法の好例で、国内・公共の身近なネタとしても刺さる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/seikei_kin/status/2077185652345676282">@seikei_kin</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-15</dd>
+        <dt>CATEGORY</dt>
+        <dd>🎨 AI×デザイン / 公共</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/seikei_kin/status/2077185652345676282">x.com/seikei_kin/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/arena/status/2077824029126504525">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-07-17/">
+      ← 前日 · 2026-07-17
+      <span class="big">Claude Code の /code-review に「エフォートレベル」— low〜ultra でレビュー戦略そのものが変わる</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-07-18/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260718.0740</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

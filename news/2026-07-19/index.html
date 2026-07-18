@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-07-19 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-07-19 の Vibe Coder Bootcamp モーニングディスパッチ — 6本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0719</span>
+    <span class="sep">/</span>
+    <span>2026-07-19</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>06 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260719.0745</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-07-19/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:45 · SAT</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SATURDAY · JULY 19, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>07<span class="dot">.</span>19</h1>
+    <div class="strap">
+      <span>Fable · 中国 · Claude · 「loop</span>
+      <span><span class="count">06</span>&nbsp;ITEMS · READ 7 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 プラン・アクセス改定 <span class="sep">/</span> @CLAUDEDEVS / @CLAUDEAI <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Fable 5 が Max・Team Premium に統合（7/20〜）— Claude Code 週次上限も+50%で8/19まで延長</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-19/topic_1.png" data-alt="Fable 5 が Max・Team Premium に統合（7/20〜）— Claude Code 週次上限も+50%で8/19まで延長" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-19/topic_1.png" alt="Fable 5 が Max・Team Premium に統合（7/20〜）— Claude Code 週次上限も+50%で8/19まで延長" />
+      </div>
+      <p class="lede">
+        Anthropic が Claude の提供条件を更新した。7/20 から最上位モデル Claude Fable 5 を Max・Team Premium の全プランに、各リミットの50%枠で正式に含める。Pro・Team Standard は従来どおり usage credit でアクセスでき、一度きりの $100 クレジットが付与される。あわせて Claude Code の週次リミット50%増を 8/19 まで延長（Pro/Max/Team/seat ベースの Enterprise 全対象）。これまで「7/12→7/19」と繰り返し後ろ倒しされてきた期限付き開放が、恒久的なプラン内提供へと一歩前進した形。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">7/20 から Fable 5 を Max・Team Premium の全プランに統合（各リミットの50%枠内で利用可）</li>
+        <li data-i="02">Pro・Team Standard は usage credit 継続＋一度きりの $100 クレジット付与</li>
+        <li data-i="03">Claude Code の週次リミット50%増を 8/19 まで延長（Pro/Max/Team/seat-based Enterprise）</li>
+        <li data-i="04">背景は「Fable への需要が想定を超えて逼迫」— 期限付き開放をプラン内提供へ段階移行</li>
+        <li data-i="05">ただし「50%枠」であって無制限ではない。従来の一時延長より一歩踏み込んだ恒久措置</li>
+      </ul>
+      <div class="pull">
+        日々の開発コストと使えるモデル上限に直結する。7/20 以降 Max/Team Premium なら追加課金なしで Fable 5 を枠内で触れるため、「重い設計・レビューは Fable、実装ループは Opus/Sonnet」の使い分けがプラン内で完結しやすくなる。Pro ユーザーは $100 クレジットで乗り換え前の性能評価ができる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">13,178</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2078511173759324328">@ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 プラン・アクセス改定</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2078511173759324328">x.com/ClaudeDevs/…</a></dd>
+        <dd><a href="https://x.com/claudeai/status/2078302415804379218">x.com/claudeai/status/207830241580437921…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · HOLYFOXLLM / WAYAM</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 モデル動向 / オープン・中国勢 <span class="sep">/</span> @HOLY_FOX_LLM / @WAYAMA_RYOUSUKE <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>中国・オープンモデルが商用に並ぶ — Kimi K3 実感「Opus 4.8と二択ならK3」＋GPU規制が効率革新を強制（和山）</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-19/topic_2.png" data-alt="中国・オープンモデルが商用に並ぶ — Kimi K3 実感「Opus 4.8と二択ならK3」＋GPU規制が効率革新を強制（和山）" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-19/topic_2.png" alt="中国・オープンモデルが商用に並ぶ — Kimi K3 実感「Opus 4.8と二択ならK3」＋GPU規制が効率革新を強制（和山）" />
+      </div>
+      <p class="lede">
+        Moonshot の新モデル Kimi K3 について、ローカル/オープンモデルに詳しい @Holy_fox_LLM が「今の Opus 4.8 と Kimi K3 のどちらか一方しか使えないなら K3 を選ぶ」と実使用レビュー。難点はスピードがやや遅いこととサーバー混雑のみで、品質への不満はほぼ挙げていない。同時期に @wayama_ryousuke は、DeepSeek 等の論文水準で中国勢は技術的にすでに同等で、米国の GPU 輸出規制がむしろ MLA・Kimi Delta Attention・極限スパース MoE・独自コンパイラといったアーキ革新を強制し、リソース消費型の米国モデルより効率的なエコシステムを生んだと分析した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">@Holy_fox_LLM 実感：「Opus 4.8 と二択なら Kimi K3」。弱点は速度とサーバー混雑のみで品質への不満はほぼ無し</li>
+        <li data-i="02">Kimi K3 のフル重みは 7/27 公開予定 → 公開後はローカル運用・自前ホスティングの現実的候補に</li>
+        <li data-i="03">和山の読み：GPU 輸出規制が物量スケールを封じ、MLA / Kimi Delta Attention / 極限スパース MoE / 独自コンパイラ等のアーキ革新を強制</li>
+        <li data-i="04">結果として米国のリソース消費型より効率的な AI エコシステムが誕生した可能性</li>
+        <li data-i="05">競争軸が「GPU 保有量（物量戦）」→「少ないリソースで高い知能＋実ワークフロー統合（効率・適応）」へ移行</li>
+      </ul>
+      <div class="pull">
+        「オープン/中国系は商用フロンティアに一歩劣る」前提が、実務者の肌感（Kimi K3）と構造分析（GPU 規制の逆説）の両面から崩れつつある。VBC 受講者のモデル選定に「効率とオープンウェイト」という軸を与え、Claude/GPT 一択でない判断材料になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">663</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/Holy_fox_LLM/status/2077966136034152653">@Holy_fox_LLM</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-17</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 モデル動向 / オープン・中国勢</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/Holy_fox_LLM/status/2077966136034152653">x.com/Holy_fox_LLM/…</a></dd>
+        <dd><a href="https://x.com/wayama_ryousuke/status/2078120645242839253">x.com/wayama_ryousuke/status/20781206452…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · CLAUDEDEVS / KINOP</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🤖 エージェント基盤（ANTHROPIC） <span class="sep">/</span> @CLAUDEDEVS / @KINOPEE_AI <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude の非同期・マネージドエージェントが実務レベルに — Managed Agents 新API＋Cloud Agents 実感</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-19/topic_3.png" data-alt="Claude の非同期・マネージドエージェントが実務レベルに — Managed Agents 新API＋Cloud Agents 実感" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-19/topic_3.png" alt="Claude の非同期・マネージドエージェントが実務レベルに — Managed Agents 新API＋Cloud Agents 実感" />
+      </div>
+      <p class="lede">
+        Anthropic の ClaudeDevs が、過去6か月で Claude Platform に追加したエージェント構築・デプロイ用の新API群をプラットフォームリードが振り返るスレッドを公開。本番で見えたパターンとして、Managed Agents の「outcomes」（完了条件のルーブリックを与え満たすまで自走ループ）と「multi-agent」（各エージェントが異なるモデル・プロンプト・ツールを使い、sandbox や vault credential を共有して協調）を挙げた。実務ヘビーユーザーの @kinopee_ai も、公式アナウンス前の Cloud Agents アップデートを「完了条件まで自走する力が高く指示に忠実」と高評価し、従来できなかった過去プロンプトの編集・再送信が可能になったと報告した（速度の遅さは課題として併記）。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Managed Agents 'outcomes'：完了条件をルーブリックで与え、満たすまで Claude が自走ループ（loop engineering のマネージド化）</li>
+        <li data-i="02">Managed Agents 'multi-agent'：異なるモデル/プロンプト/ツールを使い分け、sandbox・vault credential を共有して協調・委任</li>
+        <li data-i="03">プラットフォームリード（Katelyn Lesse / Angela Jiang / Jess Yan）が本番運用パターンを解説（動画あり）</li>
+        <li data-i="04">@kinopee_ai 実感：Cloud Agents が「完了条件まで自走」し実装手段の選択が上手で指示に忠実</li>
+        <li data-i="05">Cloud Agents で過去プロンプトの編集・再送信が可能に（従来は不可）。ただし回答速度は遅め＝インフラ余地</li>
+      </ul>
+      <div class="pull">
+        「ルーブリックを満たすまでループ」「マルチエージェントで役割分担」は、VBC が教える loop engineering / agent teams をベンダーがマネージドAPI化した動き。自作でループ制御を書かなくても outcomes / multi-agent プリミティブに乗せられ、非同期エージェントに重いタスクを投げて放置する運用が現実味を帯びた。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,212</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2078251675308240973">@ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-17</dd>
+        <dt>CATEGORY</dt>
+        <dd>🤖 エージェント基盤（Anthropic）</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2078251675308240973">x.com/ClaudeDevs/…</a></dd>
+        <dd><a href="https://x.com/kinopee_ai/status/2078558817894482306">x.com/kinopee_ai/status/2078558817894482…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · PANDALIYIN / PALAN</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔁 LOOP ENGINEERING（知見） <span class="sep">/</span> @PANDA_LIYIN / @PALANTIRTECH <span class="sep">/</span> NEWS
+      </div>
+      <h2>「loop engineering」には2つの定義がある — Li Yin が整理（Ng・Karpathy系 vs メインストリーム）＋Palantir「ループは分散ステートマシン」</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-19/topic_4.png" data-alt="「loop engineering」には2つの定義がある — Li Yin が整理（Ng・Karpathy系 vs メインストリーム）＋Palantir「ループは分散ステートマシン」" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-19/topic_4.png" alt="「loop engineering」には2つの定義がある — Li Yin が整理（Ng・Karpathy系 vs メインストリーム）＋Palantir「ループは分散ステートマシン」" />
+      </div>
+      <p class="lede">
+        LLM フレームワーク AdalFlow の Li Yin（@panda_liyin）が、氾濫する「loop engineering」という語に2つの定義があると整理した。①メインストリーム＝追加プロンプトなしにゴール達成まで止まらず走らせる（Claude Code の /goal が好例で達成は容易）、②Andrew Ng・（おそらく）Karpathy・自分が指す方＝計画→実装→コードレビュー→PR がグリーンになるまでの反復開発ライフサイクルを回すもので、異なるコンテキストを持つ複数エージェントとその協調維持が必要ではるかに難しい。同時期に Palantir が DevCon 6 で「3つのプリミティブを組み合わせると、エージェントループは内部的には分散ステートマシンになる」と Agent Engine / Agent SDK を発表しており、「ループ＝単純な繰り返し」から「状態機械の設計」へと理解が深まっている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">定義①（易しい）：追加プロンプトなしでゴールまで自走。Claude Code /goal が代表例</li>
+        <li data-i="02">定義②（難しい・Ng/Karpathy系）：plan→implement→code review→PR green の反復開発ライフサイクル</li>
+        <li data-i="03">定義②は「異なるコンテキストを持つ複数エージェント」＋「マルチエージェント協調の維持」を要する</li>
+        <li data-i="04">Palantir は DevCon 6 で Agent Engine / Agent SDK を発表し「agent loop は内部的には分散ステートマシン」と定式化</li>
+        <li data-i="05">共通する含意：ループは「繰り返し」でなく「状態遷移の設計」として捉えると堅牢になる</li>
+      </ul>
+      <div class="pull">
+        「ループを設計しろ」と言われて混乱する VBC 受講者の典型ポイントに直接効く整理。「止まらず走らせる（簡単）」と「開発ライフサイクルを多エージェントで回す（難しい）」を分けて理解すれば、自分がどのレベルの loop engineering を目指すか選べる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">84</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/panda_liyin/status/2078244942028435678">@panda_liyin</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-17</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔁 loop engineering（知見）</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/panda_liyin/status/2078244942028435678">x.com/panda_liyin/…</a></dd>
+        <dd><a href="https://x.com/PalantirTech/status/2077481045251821760">x.com/PalantirTech/status/20774810452518…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · THEO / THSOTTIAUXA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 開発ワークフロー / マルチモデル <span class="sep">/</span> @THEO / @THSOTTIAUX(ANTHROPIC) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Claude Code の中で gpt-5.6 や Kimi K3 を使う — Theo の CLIProxyAPI セットアップ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-19/topic_5.png" data-alt="Claude Code の中で gpt-5.6 や Kimi K3 を使う — Theo の CLIProxyAPI セットアップ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-19/topic_5.png" alt="Claude Code の中で gpt-5.6 や Kimi K3 を使う — Theo の CLIProxyAPI セットアップ" />
+      </div>
+      <p class="lede">
+        Theo（t3.gg）が「なぜ Claude Code の中で gpt-5.6 と Kimi K3 を使うのか」を深掘りする動画を公開。Claude Code の UX・エージェントループはそのままに、バックエンドの推論モデルだけを CLIProxyAPI 経由で gpt-5.6 Sol / Kimi K3 に差し替える運用で、手順は Install → Connect → Define の約5分。引用元は Anthropic の @thsottiaux 本人で、「Codex アプリを入れるほど大胆でなくても、慣れた Claude Code に留まったまま GPT 5.6 Sol を指せる」と、自社ツールを他モデルのフロントとして使う運用を肯定的に紹介している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Claude Code の UX・エージェントループを維持したまま、推論モデルだけを gpt-5.6 Sol / Kimi K3 に差し替え</li>
+        <li data-i="02">手段は CLIProxyAPI：Install → Connect → Define の約5分。Codex アプリ不要</li>
+        <li data-i="03">引用元 @thsottiaux は Anthropic 側＝自社ツールを他モデルのフロントに使う運用を否定せず紹介</li>
+        <li data-i="04">クライアント側（手元 CLI）のモデルルーティングの一例（06-28 の OpenCode と同軸）</li>
+        <li data-i="05">Bookmarks 3,719 と保存数が突出＝実際に手を動かして再現したい層に刺さっている</li>
+      </ul>
+      <div class="pull">
+        「モデルを1つに固定しない」運用に直結。Claude Code の優秀なエージェントループ（計画・ツール実行・ファイル編集）というガワは維持したまま推論モデルだけ差し替える発想は、コスト最適化とモデル比較の両面で有効。ただしプロキシ経由は認証・レート・tool calling 互換のハマりどころがあり、まず公式構成に慣れてからが無難。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,720</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/theo/status/2078217355780624864">@theo</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-17</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 開発ワークフロー / マルチモデル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/theo/status/2078217355780624864">x.com/theo/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · RKMT</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📖 思想・HCI <span class="sep">/</span> @RKMT（暦本純一） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>vibe coding はもはや直接操作 — 暦本純一による HCI 論考</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-19/topic_6.png" data-alt="vibe coding はもはや直接操作 — 暦本純一による HCI 論考" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-19/topic_6.png" alt="vibe coding はもはや直接操作 — 暦本純一による HCI 論考" />
+      </div>
+      <p class="lede">
+        HCI 研究者の暦本純一が、精度の上がった vibe coding を「ソフト外注の代替」ではなく「ダイレクトマニピュレーション（直接操作, Shneiderman 1983）の延長」として捉え直す論考を公開。「指令→予測との誤差→修正」を漸近的に繰り返す構造がフィッツの法則（GUI 操作、毎秒数回）と同型で、vibe coding は一回数分〜数十分だが同じ漸近ループだと指摘。この操作から人間が得るのがエージェンシー（自己主体感）で、「ほぼ AI が作っても《私が作った》と感じる」点に萌芽があるとし、入力が音声・BCI 化しサイクルが速くなればソフトを「直接操作」する感覚に近づくと展望した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">vibe coding をダイレクトマニピュレーション（Shneiderman 1983）の延長として定式化</li>
+        <li data-i="02">「指令→予測との誤差→修正」の漸近ループがフィッツの法則（GUI 操作）と構造的に同型</li>
+        <li data-i="03">GUI 操作は毎秒数回、vibe coding は一回数分〜数十分だが外注時代（数週間）比では桁違いの速度</li>
+        <li data-i="04">この操作から得るのがエージェンシー（自己主体感）。ほぼ AI 製でも「私が作った」と感じる点に萌芽</li>
+        <li data-i="05">自己スレッド補足：AI と協業する使い方なら ownership が保たれる（研究）／automation でも agentic でもない vibe coding という語が言いえて妙</li>
+      </ul>
+      <div class="pull">
+        VBC 受講者が陥りがちな「全部 AI にやらせて自分が空っぽになる」不安への理論的な回答になる。「なぜ一発生成に固執せず反復するのか」を人間工学の言葉で説明でき、AI と協業しながら主体感を保つ vibe coding の本質を言語化している。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">335</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/rkmt/status/2078060401531793572">@rkmt</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-17</dd>
+        <dt>CATEGORY</dt>
+        <dd>📖 思想・HCI</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/rkmt/status/2078060401531793572">x.com/rkmt/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/ClaudeDevs/status/2078511173759324328">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-07-18/">
+      ← 前日 · 2026-07-18
+      <span class="big">Kimi-K3 が Frontend Code Arena で Fable 5 を抜き1位 — 実感でも「Opus 4.8 と二択なら K3」</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-07-19/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260719.0745</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

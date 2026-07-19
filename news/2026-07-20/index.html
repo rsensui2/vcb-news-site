@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-07-20 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-07-20 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0720</span>
+    <span class="sep">/</span>
+    <span>2026-07-20</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260720.0734</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-07-20/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:34 · SUN</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SUNDAY · JULY 20, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>07<span class="dot">.</span>20</h1>
+    <div class="strap">
+      <span>Claude · ループエンジニアリングの「11ページ · Codex · AI</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 7 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 開発ツール / リリース <span class="sep">/</span> @CLAUDECODELOG（CLAUDE CODE CHANGELOG） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code 2.1.212 — /fork がバックグラウンド並走に、WebSearch にセッション上限（暴走ガード）</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-20/topic_1.png" data-alt="Claude Code 2.1.212 — /fork がバックグラウンド並走に、WebSearch にセッション上限（暴走ガード）" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-20/topic_1.png" alt="Claude Code 2.1.212 — /fork がバックグラウンド並走に、WebSearch にセッション上限（暴走ガード）" />
+      </div>
+      <p class="lede">
+        Claude Code CLI 2.1.212 がリリースされ、48件の CLI 変更が入った。目玉は `/fork` の挙動変更で、会話を「新しいバックグラウンドセッション」として claude agents 側にコピーするようになり、フォークした作業が本線と並走し続ける。あわせてユーザー指定の Bash コマンドを実行して出力を返すツールが追加され、セッション内でのシェル自動化が可能になった。地味だが効くのが WebSearch のセッション単位の呼び出し上限（デフォルト200・調整可）の新設で、探索が止まらないタイプの暴走にツール側からガードがかかった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">2.1.212 で 48件の CLI 変更</li>
+        <li data-i="02">`/fork` が会話をバックグラウンドセッションへコピー＝分岐した作業が本線と並走する</li>
+        <li data-i="03">ユーザー指定 Bash コマンドを実行して出力を返すツールを追加（セッション内シェル自動化）</li>
+        <li data-i="04">WebSearch のセッション内呼び出しにデフォルト200回の上限を新設（調整可）</li>
+        <li data-i="05">`claude auto-mode reset` を追加（確認プロンプト付き、`--yes` でスキップ）</li>
+        <li data-i="06">ANTHROPIC_BETAS / ANTHROPIC_CUSTOM_MODEL_OPTION 系など複数の環境変数を削除</li>
+      </ul>
+      <div class="pull">
+        ループを長時間回すほど「探索が止まらない」事故が起きるので、WebSearch のセッション上限はコスト暴発への直接の効き手になる。`/fork` のバックグラウンド化は「本線を止めずに別案を試す」分岐運用が公式サポートされたということ。ただし環境変数の削除は自前スクリプトを壊しうるので、アップデート前に一度確認しておきたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">624</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeCodeLog/status/2077915627449122997">@ClaudeCodeLog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-17</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 開発ツール / リリース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeCodeLog/status/2077915627449122997">x.com/ClaudeCodeLog/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · DATASCIENCEDOJO AN</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔁 ループエンジニアリング / 知見 <span class="sep">/</span> @DATASCIENCEDOJO ほか（ANTHROPIC エンジニアの PRIMER を紹介） <span class="sep">/</span> NEWS
+      </div>
+      <h2>ループエンジニアリングの「11ページ primer」が再拡散 — 生成役と評価役を分けろ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-20/topic_2.png" data-alt="ループエンジニアリングの「11ページ primer」が再拡散 — 生成役と評価役を分けろ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-20/topic_2.png" alt="ループエンジニアリングの「11ページ primer」が再拡散 — 生成役と評価役を分けろ" />
+      </div>
+      <p class="lede">
+        Anthropic のシニアエンジニアが公開した11ページのループエンジニアリング primer が、今週あらためて広く再拡散している。中心にあるのは「エージェントにプロンプトを打つのをやめ、エージェントにプロンプトを打ち続けるシステムを作る」という発想の転換。ループの1ターンは Schedule → Discover → Build → Verify → Repeat として定義され、discovery / handoff / verification / persistence / scheduling の5つの手に分解される。Peter Steinberger の「もうコーディングエージェントにプロンプトを打つべきではない。エージェントにプロンプトを打つループを設計すべきだ」という言い方が広く引用され、Claude Code 責任者の Boris Cherny も同趣旨を支持している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">ループの1ターン＝Schedule → Discover → Build → Verify → Repeat</li>
+        <li data-i="02">Discovery: 作業リストを渡されるのではなく、失敗中のCI・Issue・直近コミットから自分で仕事を見つける</li>
+        <li data-i="03">Handoff: 各タスクに独立した git worktree を割り当て、並列エージェント同士の衝突を防ぐ</li>
+        <li data-i="04">Verification: 2体目に「このコードは壊れている前提で見ろ」と指示して1体目をレビューさせる</li>
+        <li data-i="05">Persistence: 結果はディスクに書く。フラッシュされるコンテキストウィンドウに置いたままにしない</li>
+        <li data-i="06">generator/evaluator 分離: エージェントは自分の出力を過大評価する。生成役を自己批判的にするより、独立して調整した懐疑的な評価役を置くほうが扱いやすい</li>
+      </ul>
+      <div class="pull">
+        「ループを設計する」の中身が、そのまま実装レベルの5要素に分解されている。特に generator/evaluator 分離と worktree による衝突回避は、並列エージェントを回し始めた瞬間にぶつかる問題への直接の答え。「結果はディスクに書く」も、セッションが切れて成果が消える事故の予防策としてそのまま使える。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">198</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/DataScienceDojo/status/2077875926742815120">@DataScienceDojo</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-16</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔁 ループエンジニアリング / 知見</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/DataScienceDojo/status/2077875926742815120">x.com/DataScienceDojo/…</a></dd>
+        <dd><a href="https://x.com/polydao/status/2077270435385717171">x.com/polydao/status/2077270435385717171…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · U1 / X ARTICLE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🧠 コンテキストエンジニアリング <span class="sep">/</span> @U1 / X ARTICLE <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Codex の「独自用語乱立・曖昧」問題への対策 — 命名を最後に回す semantic-generation skill</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-20/topic_3.png" data-alt="Codex の「独自用語乱立・曖昧」問題への対策 — 命名を最後に回す semantic-generation skill" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-20/topic_3.png" alt="Codex の「独自用語乱立・曖昧」問題への対策 — 命名を最後に回す semantic-generation skill" />
+      </div>
+      <p class="lede">
+        Codex が「言葉の定義を適当にしたまま設計や実装を進めてしまう」問題への具体的な対策が X Article で公開された。きっかけは実際の事故で、調査レポートの「圧縮時点」という語が本文中で「会話履歴が設定量に達したこと」「自動要約を始めるしきい値」「実際に要約が始まる時」の3つを行き来し、調査結果そのものが誤った方向へ誘導された。対策として作られた semantic-generation skill は、設計の前に7列の候補語対応表を書かせ、候補語を右端に置くことで「具体対象と役割を書くまで名前を与えられない」状態を作る。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">事故例: 1語が開始条件・値・事象を兼ねた瞬間、説明の対象が定まらなくなり調査結果が誤誘導された</li>
+        <li data-i="02">文章は流暢で技術的に見えるため、誤りが読みにくさとして表面化せずレビューを素通りする</li>
+        <li data-i="03">対策は7列の対応表（出典 / 目的 / 具体対象 / 役割 / 前後関係 / 候補語 / 初出定義）を設計前に作らせること</li>
+        <li data-i="04">候補語は右端に置く。左端だと語を先に書いて後付けで説明を作れてしまい、止めたい生成順を表の中で再現するだけになる</li>
+        <li data-i="05">役割は1行1つ。開始条件と事象を同じ語で扱いたくなったら行を分けると「対象が2つある」事実が見える</li>
+        <li data-i="06">訂正リスト方式は却下。止めたいのは誤用の再発ではなく「対象が曖昧なまま語を先に置いて思考を進めること」自体</li>
+      </ul>
+      <div class="pull">
+        AI に長い設計や調査をさせたときの最頻の事故がこれで、出力が流暢なぶんレビューで気づけない。プロンプトを丁寧に書いても直らず、生成の順序を書式で縛る必要がある、という処方箋は他の skill 設計にもそのまま転用できる。CLAUDE.md に「新しい用語を導入する前に対象・役割・前後関係を先に書け」の1行を足すだけでも近い効果が出る。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">516</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/u1/status/2078414824917156228">@u1</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-18</dd>
+        <dt>CATEGORY</dt>
+        <dd>🧠 コンテキストエンジニアリング</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/u1/status/2078414824917156228">x.com/u1/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · MAKS6361 / X ARTIC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💼 AI×ビジネス / コンテンツ自動化 <span class="sep">/</span> @MAKS6361 / X ARTICLE <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>AI 記事を公開する前に通す7段パイプライン — 問題はAIで書くことではなく、誰も検品しないこと</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-20/topic_4.png" data-alt="AI 記事を公開する前に通す7段パイプライン — 問題はAIで書くことではなく、誰も検品しないこと" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-20/topic_4.png" alt="AI 記事を公開する前に通す7段パイプライン — 問題はAIで書くことではなく、誰も検品しないこと" />
+      </div>
+      <p class="lede">
+        自作アプリのブログ記事を全自動で執筆・公開しているパイプラインの中身が X Article で全公開された。主張の軸は「Google が禁じているのは AI 製であることではなく、役に立たない・オリジナルでない・人間向けでないコンテンツ」であり、記事を書くツールが問題だったことは一度もなく、問題は誰も出力を検品していないことだという整理。キーワードリサーチから公開まで7段あり、各段に通過条件が置かれている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">バックログが空ならパイプラインは停止して通知する。publish を続けるために近いトピックを勝手に選ぶことを禁じている</li>
+        <li data-i="02">プロダクト定義ファイルには「存在する機能」だけでなく「存在しない機能」も書く。これがハルシネーション抑制に効く</li>
+        <li data-i="03">アンチスロップは2パス。1回目で誇張語・空虚なマーケ文句・根拠なき断言、2回目で文頭の反復・弱い接続・長すぎる段落など微妙なシグナル</li>
+        <li data-i="04">公開前にスコアリング。配点が最も重いのは「人間が書いたように読めるか」と「プロダクトの記述がすべて事実か」</li>
+        <li data-i="05">スコアが基準未満なら執筆工程へ差し戻す（採点と差し戻しのループ）</li>
+        <li data-i="06">記事構造は検索エンジンとLLMの両方向け。冒頭に短い回答、その下に AI エンジン向けの長い回答ブロックを置く</li>
+      </ul>
+      <div class="pull">
+        「AIで量産する」と「AIで量産して検品する」の差が、そのまま実装可能な粒度で書かれている。存在しない機能を明示列挙するプロダクト定義ファイルはコンテンツ以外のAI出力にも効くし、「バックログが空なら止まる」設計は毎日出すことを優先すると必ず薄いネタを拾うAIへの正しい歯止め。評価器を内側に持つループの実例そのもの。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">257</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/maks6361/status/2076589639553397155">@maks6361</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-13</dd>
+        <dt>CATEGORY</dt>
+        <dd>💼 AI×ビジネス / コンテンツ自動化</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/maks6361/status/2076589639553397155">x.com/maks6361/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · ZARAZHANGRUIZARA Z</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💼 AI×ビジネス / 組織 <span class="sep">/</span> @ZARAZHANGRUI（ZARA ZHANG） <span class="sep">/</span> NEWS
+      </div>
+      <h2>エンタープライズAI導入の最大の壁は技術ではない —「AIが分かる人は業務を分からない」</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-20/topic_5.png" data-alt="エンタープライズAI導入の最大の壁は技術ではない —「AIが分かる人は業務を分からない」" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-20/topic_5.png" alt="エンタープライズAI導入の最大の壁は技術ではない —「AIが分かる人は業務を分からない」" />
+      </div>
+      <p class="lede">
+        Zara Zhang が「エンタープライズAI導入の最大の障壁は、AIを理解している人が事業を理解しておらず、事業を理解している人がAIを理解していないこと」と投稿し、大きな反響を得た。続く投稿では、経営者たちに「業務を理解している人にAIを教えるのと、AIを理解している人に業務を教えるのと、どちらが易しいか」と尋ねたところ、多くが前者と答えたと報告している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">障壁は技術ではなく、AI知識と業務知識を併せ持つ人材の不在</li>
+        <li data-i="02">経営者への聞き取りでは「業務を知る人にAIを教える方が易しい」が多数派</li>
+        <li data-i="03">返信65件と Likes に対する議論比率が高く、当事者の実感を突いたテーマであることが窺える</li>
+        <li data-i="04">返信欄には「売るべきはAIではなく成果（outcome）。エンタープライズは純粋にインパクト基準で動く」という指摘も</li>
+        <li data-i="05">経営者への聞き取りは規模・手法とも非公開で、統計ではなく所感</li>
+      </ul>
+      <div class="pull">
+        「AI人材を採る」より「業務を知っている既存メンバーにAIを持たせる」ほうが速い、という結論は、社内でAI活用を進めるときの説得材料になる。AI導入が進まないのはツールのせいではない、という診断は多くの現場に当てはまる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">288</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/zarazhangrui/status/2078492577788268549">@zarazhangrui</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-18</dd>
+        <dt>CATEGORY</dt>
+        <dd>💼 AI×ビジネス / 組織</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/zarazhangrui/status/2078492577788268549">x.com/zarazhangrui/…</a></dd>
+        <dd><a href="https://x.com/zarazhangrui/status/2078504313580916981">x.com/zarazhangrui/status/20785043135809…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · SANOHABIT / HABIT </span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🎨 AI×デザイン / 教育 <span class="sep">/</span> @SANOHABIT（サノヨシユキ / HABIT DESIGN） <span class="sep">/</span> NEWS
+      </div>
+      <h2>デザイン専門学校が授業でのAI生成を禁止に —「10年後の中間層を失わないため」</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-20/topic_6.png" data-alt="デザイン専門学校が授業でのAI生成を禁止に —「10年後の中間層を失わないため」" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-20/topic_6.png" alt="デザイン専門学校が授業でのAI生成を禁止に —「10年後の中間層を失わないため」" />
+      </div>
+      <p class="lede">
+        デザイン専門学校で週一の講師を務める @sanohabit が、別学年を担当するデザイナー講師と「授業で生徒にAI生成を使わせるか」を話し合い、互いのクラスで授業課題でのAI生成の使用を禁止することで一致したと投稿した。理由は「まだデザインの基礎も根付いていない段階でAIに頼るのではなく、まずは自分の力で調べ考える力を身につけさせるべき」というもの。さらに、基礎を徹底して教えることを「10年後の中間層を失わないための基盤作り」と位置づけている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">複数クラスの講師が、授業課題でのAI生成の使用を禁止する方針で一致</li>
+        <li data-i="02">理由は「基礎が根付く前にAIに頼らせない」＝自分で調べ考える力の育成</li>
+        <li data-i="03">講師本人の言葉として「デザインの基礎を徹底して教えるのは10年後の中間層を失わないための基盤作り」</li>
+        <li data-i="04">現場の講師同士の合意であり、学校としての公式方針ではない</li>
+      </ul>
+      <div class="pull">
+        AIツールが普及するほど「どこから使わせるか」の線引きが問われる。「中間層が育たない」という懸念はデザインに限らずエンジニアリングでも同じ構造で起きるので、生産性が上がるほど基礎を身につける機会をどこに確保するかを設計する必要がある。社内のジュニア育成にもそのまま跳ね返る論点。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">92</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/sanohabit/status/2078619323854360629">@sanohabit</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-18</dd>
+        <dt>CATEGORY</dt>
+        <dd>🎨 AI×デザイン / 教育</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/sanohabit/status/2078619323854360629">x.com/sanohabit/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · TECHCRUNCH</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 業界ニュース / M&amp;A <span class="sep">/</span> TECHCRUNCH <span class="sep">/</span> NEWS
+      </div>
+      <h2>Netflix が Ben Affleck の AI映像スタートアップを $587M で買収 — 買収額が届出で判明</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-20/topic_7.png" data-alt="Netflix が Ben Affleck の AI映像スタートアップを $587M で買収 — 買収額が届出で判明" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-20/topic_7.png" alt="Netflix が Ben Affleck の AI映像スタートアップを $587M で買収 — 買収額が届出で判明" />
+      </div>
+      <p class="lede">
+        Netflix が Ben Affleck らの共同創業した AI 映像制作スタートアップ InterPositive を5億8,700万ドル（現金）で買収していたことが、規制当局への届出で明らかになった。買収の発表自体は2026年3月だったが、金額は今回まで非公表だった。InterPositive はポストプロダクション向けのAIツールを提供し、撮り逃したショットの補完・背景の差し替え・照明の補正などを行う。Netflix は既に約300タイトルでこのツールを実運用している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">買収額は5億8,700万ドル（現金）。2026年7月の規制当局への届出で判明</li>
+        <li data-i="02">買収の発表自体は2026年3月、金額はこれまで非公開だった</li>
+        <li data-i="03">InterPositive はポストプロダクション向けAI（欠けたショットの補完・背景差し替え・照明補正）</li>
+        <li data-i="04">Netflix は既に約300タイトルで実運用している</li>
+        <li data-i="05">Ben Affleck は買収後 Netflix のシニアアドバイザーに就任、チームは全員統合</li>
+        <li data-i="06">Affleck のコメント「人間の創造性の力を守りたい」</li>
+      </ul>
+      <div class="pull">
+        生成AIの映像分野での価値が「新しい映像を作る」ではなく「撮影済みの素材の問題を後から直す」という地味な実務ポイントで数百億円の値付けを受けた点が重要。300タイトルでの実運用という数字は、話題性ではなく制作パイプラインに組み込まれていることを示す。AIプロダクトの値付けは派手さではなく、既存工程のどこに刺さっているかで決まる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">18</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://techcrunch.com/2026/07/19/netflix-paid-587m-for-ben-afflecks-ai-filmmaking-startup/">TechCrunch</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 業界ニュース / M&amp;A</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://techcrunch.com/2026/07/19/netflix-paid-587m-for-ben-afflecks-ai-filmmaking-startup/">https://techcrunch.com/2026/07/19/netflix-paid-587m-for-ben-afflecks-ai-filmmaking-startup/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/ClaudeCodeLog/status/2077915627449122997">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-07-19/">
+      ← 前日 · 2026-07-19
+      <span class="big">Fable 5 が Max・Team Premium に統合（7/20〜）— Claude Code 週次上限も+50%で8/19まで延長</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-07-20/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260720.0734</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

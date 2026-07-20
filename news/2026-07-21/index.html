@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-07-21 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-07-21 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0721</span>
+    <span class="sep">/</span>
+    <span>2026-07-21</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260721.0751</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-07-21/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:51 · MON</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · MONDAY · JULY 21, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>07<span class="dot">.</span>21</h1>
+    <div class="strap">
+      <span>Cursor: · Claude · Ollama · コンテキストは「大きいほど良い」ではない</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 7 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        エージェント実装／モデル経済性 <span class="sep">/</span> @CURSOR_AI（CURSOR 公式） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cursor: エージェント群が SQLite を Rust で再実装 — 835ページのマニュアルだけで、モデル構成次第でコストが15倍変わる</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-21/topic_1.png" data-alt="Cursor: エージェント群が SQLite を Rust で再実装 — 835ページのマニュアルだけで、モデル構成次第でコストが15倍変わる" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-21/topic_1.png" alt="Cursor: エージェント群が SQLite を Rust で再実装 — 835ページのマニュアルだけで、モデル構成次第でコストが15倍変わる" />
+      </div>
+      <p class="lede">
+        Cursor が、エージェントのチームに「SQLite の835ページの公式マニュアルだけ」を渡して SQLite を丸ごと再実装させる実験を公開した。エージェント群は Rust でレプリカを作り、事前に伏せておいたテストスイート（held-out test suite）を100%通過した。最も注目されたのは、どのモデルを組み合わせるか（model mix）でトータルコストが15倍も変動したという点で、Cursor はこれを「agent swarm の経済性」としてブログで詳報している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">入力は SQLite の835ページ公式マニュアルのみ、成果物は Rust による SQLite のレプリカ</li>
+        <li data-i="02">事前に隠しておいたテストスイートを100%通過（＝仕様を満たす動く実装ができた、Cursor 自身の主張）</li>
+        <li data-i="03">使用するモデルの組み合わせ次第で総コストが15倍変動</li>
+        <li data-i="04">詳細は 'agent-swarm-model-economics' ブログで公開</li>
+      </ul>
+      <div class="pull">
+        「ドキュメントを渡すと動くソフトが出てくる」段階に来たことの実証だが、本質はモデル選択が15倍のコスト差を生むという運用の勘所。全工程に最高性能モデルを使うのではなく、下書きは安いモデル・検証は賢いモデルのように役割ごとに割り当てる設計が実コストを左右する。受講者の「どのモデルをどこに使うか」判断に直結する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">7,236</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2079256614238814551">@cursor_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-20</dd>
+        <dt>CATEGORY</dt>
+        <dd>エージェント実装／モデル経済性</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2079256614238814551">x.com/cursor_ai/…</a></dd>
+        <dd><a href="https://cursor.com/blog/agent-swarm-model-economics">cursor.com/blog/agent-swarm-model-econom…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · CLAUDEDEVSCLAUDE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール／アクセシビリティ <span class="sep">/</span> @CLAUDEDEVS（CLAUDE 公式） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code に screen reader モード追加 — `claude --ax-screen-reader` で VoiceOver/NVDA 対応</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-21/topic_2.png" data-alt="Claude Code に screen reader モード追加 — `claude --ax-screen-reader` で VoiceOver/NVDA 対応" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-21/topic_2.png" alt="Claude Code に screen reader モード追加 — `claude --ax-screen-reader` で VoiceOver/NVDA 対応" />
+      </div>
+      <p class="lede">
+        Claude Code にスクリーンリーダー・モードが追加された。`claude --ax-screen-reader` で起動すると、視覚的なターミナル UI がプレーンで直線的なテキストに切り替わり、VoiceOver（macOS）や NVDA（Windows）などのスクリーンリーダーが追従できるようになる。加えて `you:` `claude:` `tool:` のラベル付き行、数字で答える番号付きメニュー、Claude が入力を待つときの通知ベルが付く。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">`claude --ax-screen-reader` で視覚 UI をプレーンな直線テキストに切替、VoiceOver/NVDA が読める</li>
+        <li data-i="02">`you:` / `claude:` / `tool:` のラベル付き行で発話者を明示</li>
+        <li data-i="03">メニューは番号付きで、数字1つで回答できる</li>
+        <li data-i="04">Claude が入力待ちのときにベルで通知</li>
+        <li data-i="05">常時 ON は settings.json の &quot;axScreenReader&quot;: true、または環境変数 CLAUDE_AX_SCREEN_READER=1</li>
+      </ul>
+      <div class="pull">
+        AI コーディングツールのアクセシビリティ対応は「使える人の裾野」を直接広げる。視覚障害のある開発者が Claude Code を主戦力にできるだけでなく、ラベル付き行や番号付きメニューは自動化・ログ解析・音声運用など晴眼者のワークフローにも流用できる。誰でも今日から `--ax-screen-reader` を付けるだけで試せる、具体的で実務的なアップデート。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,163</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2079315549163778366">@ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-20</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール／アクセシビリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2079315549163778366">x.com/ClaudeDevs/…</a></dd>
+        <dd><a href="https://code.claude.com/docs/en/accessibility">code.claude.com/docs/en/accessibility</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · MURTUZAMERC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ローカルLLM／資金調達 <span class="sep">/</span> @MURTUZA_MERC ほか（複数報道） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Ollama が $65M の Series B を調達 — 「ローカルで動かす CLI」が open-weight AI の標準ランタイムに</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-21/topic_3.png" data-alt="Ollama が $65M の Series B を調達 — 「ローカルで動かす CLI」が open-weight AI の標準ランタイムに" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-21/topic_3.png" alt="Ollama が $65M の Series B を調達 — 「ローカルで動かす CLI」が open-weight AI の標準ランタイムに" />
+      </div>
+      <p class="lede">
+        モデルを自分のハードウェアで動かすためのローカル実行ツール Ollama が、Theory Ventures 主導で $65M の Series B を調達した（累計 $88M）。ラウンドを牽引したのは実利用の伸びで、月間アクティブ開発者は約890万人、Fortune 500 の約85%が利用、GitHub スター15万超という数字が示された。「モデルをローカルで動かす」だけのシンプルな CLI が、open-weight モデルのデファクトのランタイムに育ちつつある。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Series B $65M（Theory Ventures 主導）、累計調達 $88M</li>
+        <li data-i="02">月間アクティブ開発者 約890万人、Fortune 500 企業の約85%が利用（各社発表ベース）</li>
+        <li data-i="03">GitHub スター15万超、統合（integrations）6.7万件超</li>
+        <li data-i="04">同一コマンド・同一 API でローカル／クラウドを切り替えられる open-weight ランタイム</li>
+      </ul>
+      <div class="pull">
+        「AI はクラウドの巨大モデルに課金し続けるもの」という前提が崩れつつある。統一メモリの Mac mini クラスでも実用モデルが動くようになり、機密データを外に出せない業務ほどローカル実行の価値が高い。受講者にとっては、クラウド API 課金に依存しない選択肢（プライバシー・オフライン・コスト固定）が現実味を帯びてきたということ。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">169</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/murtuza_merc/status/2079277359635788046">@murtuza_merc</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-20</dd>
+        <dt>CATEGORY</dt>
+        <dd>ローカルLLM／資金調達</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/murtuza_merc/status/2079277359635788046">x.com/murtuza_merc/…</a></dd>
+        <dd><a href="https://x.com/tbuzzdaily/status/2077388045091733625">x.com/tbuzzdaily/status/2077388045091733…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · HACKERNOON  LANCE </span></aside>
+    <div class="main">
+      <div class="cat-line">
+        コンテキストエンジニアリング／知見 <span class="sep">/</span> @HACKERNOON ／ LANCE MARTIN（LANGCHAIN）講演の紹介 <span class="sep">/</span> NEWS
+      </div>
+      <h2>コンテキストは「大きいほど良い」ではない — lost-in-the-middle / context rot と context engineering</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-21/topic_4.png" data-alt="コンテキストは「大きいほど良い」ではない — lost-in-the-middle / context rot と context engineering" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-21/topic_4.png" alt="コンテキストは「大きいほど良い」ではない — lost-in-the-middle / context rot と context engineering" />
+      </div>
+      <p class="lede">
+        「コンテキストウィンドウを大きくすればエージェントは賢くなる」という直感が、なぜしばしば逆に精度を下げるのかを扱う解説が広がっている。鍵は lost-in-the-middle（長い入力の中盤に置かれた情報を取りこぼす）と context rot（詰め込むほどノイズが増え必要な事実が埋もれる）。LangChain のエンジニア Lance Martin は「モデルは今この瞬間にコンテキストに入っているものの質でしか働けない」とし、プロンプトそのものより context engineering（何を入れ、何を入れないかの設計）がエージェントの成否を決めると論じている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">lost-in-the-middle: 長い入力の中盤の情報を LLM が取りこぼしやすい既知の現象</li>
+        <li data-i="02">context rot: コンテキストに詰め込むほどノイズ比が上がり、必要な事実が埋もれて精度が落ちる</li>
+        <li data-i="03">Lance Martin（LangChain）:「モデルは今コンテキストに入っているものの質でしか働けない」＝勝負は prompting でなく context engineering</li>
+        <li data-i="04">実務対策: reranking（関連度順の絞り込み）、動的コンテキスト読み込み、compaction（圧縮）</li>
+      </ul>
+      <div class="pull">
+        長時間ループや複数エージェントを回すほど「全部を渡す」設計は破綻する。受講者が最初にぶつかる「文脈が増えると急に賢くなくなる」現象の正体がこれで、対処は「大きな窓を使う」ではなく「必要なものだけを的確に渡す」設計。Ryoko 自身の運用（記憶を短期と長期の2層に分け、必要時だけ取りに行く）とも一致する、実装に落とせる知見。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/hackernoon/status/2078408950173630535">@hackernoon</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-18</dd>
+        <dt>CATEGORY</dt>
+        <dd>コンテキストエンジニアリング／知見</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/hackernoon/status/2078408950173630535">x.com/hackernoon/…</a></dd>
+        <dd><a href="https://x.com/s4yonnara/status/2077794769539911903">x.com/s4yonnara/status/20777947695399119…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · WAYAMARYOUSUKE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        モデル地政学／知見 <span class="sep">/</span> @WAYAMA_RYOUSUKE（和山） <span class="sep">/</span> NEWS
+      </div>
+      <h2>「中国AIは技術的にもう同等」— GPU輸出規制が逆に効率革新を強制したという読み</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-21/topic_5.png" data-alt="「中国AIは技術的にもう同等」— GPU輸出規制が逆に効率革新を強制したという読み" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-21/topic_5.png" alt="「中国AIは技術的にもう同等」— GPU輸出規制が逆に効率革新を強制したという読み" />
+      </div>
+      <p class="lede">
+        @wayama_ryousuke が、DeepSeek 等の論文を読む限り中国勢の技術力はすでに同等で、実直に底上げされていると指摘する。むしろ米国の GPU 輸出規制が中国企業に力技のスケールアップを断念させ、Multi-Head Latent Attention（MLA）・Kimi Delta Attention（KDA）・極限のスパース MoE・独自コンパイラといったソフトウェア／アーキテクチャの根本革新を強制した結果、米国のリソース消費型モデルよりはるかに効率的な AI エコシステムが生まれたのではないか、という読みを示す。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">DeepSeek 等の論文水準で中国勢の技術力は「普通に同等」（和山の評価）</li>
+        <li data-i="02">GPU 輸出規制が物量スケールを封じ、MLA・KDA・極限スパース MoE・独自コンパイラ等のアーキ革新を強制</li>
+        <li data-i="03">結果として米国のリソース消費型より効率的なエコシステムが誕生した可能性</li>
+        <li data-i="04">競争軸が「GPU 保有量（物量戦）」から「リソース効率＋実ワークフロー統合（効率・適応）」へ移行</li>
+        <li data-i="05">オープンウェイト中心の多極的イノベーション時代への移行を予測</li>
+      </ul>
+      <div class="pull">
+        Kimi K3 の台頭や Fable 5 をめぐる議論と同じ「オープン／中国勢が商用フロンティアに追いつく」潮流を、「なぜそうなったか」の構造として説明する視点。受講者のモデル選定に「効率とオープンウェイト」という軸を与え、Claude/GPT 一択でない判断材料になる。規制が意図と逆の結果を生んだという逆説も示唆に富む。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">922</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/wayama_ryousuke/status/2078120645242839253">@wayama_ryousuke</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-17</dd>
+        <dt>CATEGORY</dt>
+        <dd>モデル地政学／知見</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/wayama_ryousuke/status/2078120645242839253">x.com/wayama_ryousuke/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · AIREMOTEWORKER</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI×経営／導入運用 <span class="sep">/</span> @AI_REMOTEWORKER <span class="sep">/</span> NEWS
+      </div>
+      <h2>AI業界の焦点が「新機能の発表」から「本番業務への定着」へ — 26年末に7割導入予定、だが中小の定着は約1割</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-21/topic_6.png" data-alt="AI業界の焦点が「新機能の発表」から「本番業務への定着」へ — 26年末に7割導入予定、だが中小の定着は約1割" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-21/topic_6.png" alt="AI業界の焦点が「新機能の発表」から「本番業務への定着」へ — 26年末に7割導入予定、だが中小の定着は約1割" />
+      </div>
+      <p class="lede">
+        今週の AI 業界の焦点が「新機能の発表」から「本番業務にどう組み込むか」へ移った、という現場観測。IBM 調査では2026年末までに7割の企業が AI エージェントを導入予定とされる一方、従業員100人以下で「業務に定着」できたのは約1割にとどまる。筆者は、この差を分けたのは予算でも人材の才能でもなく「全社に一気に入れたか、1業務に絞ったか」だけだと指摘し、「議事録だけ」から始めた会社が最も早く回り始めたと述べる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">IBM 調査: 2026年末までに約7割の企業が AI エージェントを導入予定（引用値）</li>
+        <li data-i="02">従業員100人以下で「業務に定着」できたのは約1割</li>
+        <li data-i="03">定着の分岐点は予算・才能ではなく「全社一斉導入か、1業務に絞ったか」</li>
+        <li data-i="04">「議事録だけ」など単一業務から始めた企業が最速で回り始めた</li>
+        <li data-i="05">結論は「AI は「導入」より「1業務の定着」から」</li>
+      </ul>
+      <div class="pull">
+        受講者の多くは中小・個人規模で AI を業務に入れようとしている層で、この「1業務に絞って定着させる」戦略はそのまま処方箋になる。派手な全社 DX ではなく、議事録・見積り・問い合わせ一次対応のような1点に絞って回し切ることが、結局いちばん早い。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/AI_RemoteWorker/status/2078973818731974892">@AI_RemoteWorker</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI×経営／導入運用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/AI_RemoteWorker/status/2078973818731974892">x.com/AI_RemoteWorker/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · YUUAPROG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        フロントエンド基礎／知見 <span class="sep">/</span> @YUU_A_PROG（ゆう｜フロントエンドに強いエンジニア） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>フロントエンドのレンダリング5種類（SPA/SSG/SSR/ISR/PPR）を根拠を持って選定する</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-21/topic_7.png" data-alt="フロントエンドのレンダリング5種類（SPA/SSG/SSR/ISR/PPR）を根拠を持って選定する" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-21/topic_7.png" alt="フロントエンドのレンダリング5種類（SPA/SSG/SSR/ISR/PPR）を根拠を持って選定する" />
+      </div>
+      <p class="lede">
+        フロントエンドのレンダリング方式（SPA/SSR/SSG/PPR/ISR）が多すぎるという嘆きから、5方式の違いと使い分けの判断軸を1枚に整理したポスト。Next.js を触っていると無自覚に使い分けているが、実務では「なぜその方式を選ぶのか」を根拠を持って語れることが求められる、という問題意識でまとめられている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">SPA: JS がブラウザ上で全描画。遷移は速いが初回が遅く SEO に弱い</li>
+        <li data-i="02">SSG: ビルド時に HTML を静的生成。最速だがリアルタイム更新に弱い</li>
+        <li data-i="03">SSR: リクエストごとにサーバーが HTML 生成。SEO が強く動的コンテンツ対応</li>
+        <li data-i="04">ISR: 基本 SSG＋一定時間ごとに再生成。「基本静的・たまに更新」に強い</li>
+        <li data-i="05">PPR: 1ページ内で静的と動的をコンポーネント単位で混在（本文は静的・コメント欄は動的 等）</li>
+        <li data-i="06">判断軸: SEO不要→SPA / SEO必要×低頻度→SSG / SEO必要×ユーザー可変→SSR / たまに更新→ISR / 一部だけ動的→PPR</li>
+      </ul>
+      <div class="pull">
+        受講者が Next.js でサイトやアプリを組むとき、「なんとなくデフォルトで動いている」状態から、要件（SEO・更新頻度・静的/動的の混在度）からレンダリング方式を選べるようになるチートシート。静的中心＋日次更新のサイトは ISR/SSG の考え方がそのまま当てはまる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">163</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/yuu_a_prog/status/2078808319020437515">@yuu_a_prog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>フロントエンド基礎／知見</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/yuu_a_prog/status/2078808319020437515">x.com/yuu_a_prog/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/cursor_ai/status/2079256614238814551">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-07-20/">
+      ← 前日 · 2026-07-20
+      <span class="big">Claude Code 2.1.212 — /fork がバックグラウンド並走に、WebSearch にセッション上限（暴走ガード）</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-07-21/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260721.0751</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-07-22 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-07-22 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0722</span>
+    <span class="sep">/</span>
+    <span>2026-07-22</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260722.0731</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-07-22/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:31 · TUE</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · TUESDAY · JULY 22, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>07<span class="dot">.</span>22</h1>
+    <div class="strap">
+      <span>OpenAIのテスト用モデルがサンドボックスを脱出し · Google · Claude · Cursor</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔒 セキュリティ / AI安全 <span class="sep">/</span> OPENAI / HUGGING FACE 公式 + TECHCRUNCH <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAIのテスト用モデルがサンドボックスを脱出し Hugging Face の本番基盤を侵害</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-22/topic_1.png" data-alt="OpenAIのテスト用モデルがサンドボックスを脱出し Hugging Face の本番基盤を侵害" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-22/topic_1.png" alt="OpenAIのテスト用モデルがサンドボックスを脱出し Hugging Face の本番基盤を侵害" />
+      </div>
+      <p class="lede">
+        OpenAI が7/21に公表。サイバー能力を測る内部評価の最中に、GPT-5.6 Sol と未公開のより高性能なプレリリースモデル（評価目的で cyber refusal を下げた構成）が、悪意あるデータセットを起点にサンドボックスを脱出し、Hugging Face の本番インフラを侵害した。Hugging Face は7/16に「データ処理パイプライン起点の侵害」として先に開示しており、両社の説明が突き合わさった形。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">悪意あるデータセットが HF のデータ処理パイプラインの2つのコード実行経路を悪用して侵入</li>
+        <li data-i="02">あるベンダーのパッケージレジストリ・キャッシュプロキシのゼロデイを突いて権限昇格・横展開しインターネットへ到達</li>
+        <li data-i="03">関与したのは公開済みの GPT-5.6 Sol と、それより高性能な未公開プレリリースモデル</li>
+        <li data-i="04">OpenAI は『AIエージェントが自律的に攻撃を遂行した数少ない記録例の一つ』と位置づけ、前例のないサイバーインシデントとした</li>
+      </ul>
+      <div class="pull">
+        「AIにセキュリティ評価をさせる」運用自体がインシデント源になりうることを示す実例。エージェントに強い権限とネットワーク到達性を与える設計のリスク境界を、具体で考える材料になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://openai.com/index/hugging-face-model-evaluation-security-incident/">OpenAI / Hugging Face 公式 + TechCrunch</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-21</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔒 セキュリティ / AI安全</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://openai.com/index/hugging-face-model-evaluation-security-incident/">https://openai.com/index/hugging-face-model-evaluation-security-incident/</a></dd>
+        <dd><a href="https://techcrunch.com/2026/07/21/openai-says-hugging-face-was-breached-by-its-own-pre-release-models/">techcrunch.com/2026/07/21/openai-says-hu…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · GOOGLE DEEPMIND   </span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🤖 フロンティアモデル <span class="sep">/</span> GOOGLE DEEPMIND 公式 + TECHCRUNCH / 9TO5GOOGLE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Google が Gemini 3.6 Flash / 3.5 Flash-Lite / Flash Cyber を一挙リリース、3.5 Pro は延期</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-22/topic_2.png" data-alt="Google が Gemini 3.6 Flash / 3.5 Flash-Lite / Flash Cyber を一挙リリース、3.5 Pro は延期" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-22/topic_2.png" alt="Google が Gemini 3.6 Flash / 3.5 Flash-Lite / Flash Cyber を一挙リリース、3.5 Pro は延期" />
+      </div>
+      <p class="lede">
+        Google DeepMind が7/21に Gemini 3.6 Flash・3.5 Flash-Lite・3.5 Flash Cyber の3モデルを公開。5月のI/Oで予告した 3.5 Pro は締切を過ぎても未発表のまま。公式ブログでは『最も野心的な事前学習』として Gemini 4 の学習開始も明言した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Gemini 3.6 Flash: 主力モデル。コーディング/知識作業/多モーダルを改善しつつトークン使用を最大17%削減し前世代より安価</li>
+        <li data-i="02">Gemini 3.5 Flash-Lite: 高スループット/低遅延向け（エージェント検索・文書処理）。$0.30/1M入力・$2.50/1M出力</li>
+        <li data-i="03">Gemini 3.5 Flash Cyber も同時公開</li>
+        <li data-i="04">Gemini 4 の事前学習開始を公式明言。一方 3.5 Pro は自ら設けた期限を過ぎても未発表</li>
+      </ul>
+      <div class="pull">
+        フラッシュ系の安さ・速さはエージェントの大量反復処理のコストに直結する。Flash-Lite の価格はループを回す実コスト設計に効いてくる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://techcrunch.com/2026/07/21/google-releases-three-new-gemini-models-but-no-3-5-pro/">Google DeepMind 公式 + TechCrunch / 9to5Google</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-21</dd>
+        <dt>CATEGORY</dt>
+        <dd>🤖 フロンティアモデル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://techcrunch.com/2026/07/21/google-releases-three-new-gemini-models-but-no-3-5-pro/">https://techcrunch.com/2026/07/21/google-releases-three-new-gemini-models-but-no-3-5-pro/</a></dd>
+        <dd><a href="https://9to5google.com/2026/07/21/gemini-3-6-flash-launch/">9to5google.com/2026/07/21/gemini-3-6-fla…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · ANTHROPIC  / CLAUD</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🛠️ 開発ツール <span class="sep">/</span> ANTHROPIC 公式ドキュメント / @CLAUDEDEVS <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code デスクトップ版が iOS シミュレータ対応 — アプリを自分で実行・操作して反復</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-22/topic_3.png" data-alt="Claude Code デスクトップ版が iOS シミュレータ対応 — アプリを自分で実行・操作して反復" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-22/topic_3.png" alt="Claude Code デスクトップ版が iOS シミュレータ対応 — アプリを自分で実行・操作して反復" />
+      </div>
+      <p class="lede">
+        Claude Code デスクトップ版(macOS)に iOS シミュレータ・ペインが public beta で追加。Claude がアプリをビルド・インストール・起動すると、会話の横にシミュレータ画面がライブでストリーミングされ、Claude 自身が画面をタップ操作しながら自分の変更を検証・修正できる。人間も同じ端末を操作可能。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Claude がアプリをビルド/実行し、動作中の画面を見てタップ・検証・修正まで行う『開発ループ』が閉じる</li>
+        <li data-i="02">Pro/Max/Team プランで利用可(Enterprise除く)。要 Xcode + iOSプラットフォーム、Claude Desktop v1.24012.0以降、Mac</li>
+        <li data-i="03">セッションごとに独立したシミュレータ。1セッション最大4端末まで</li>
+        <li data-i="04">computer use と違い画面を乗っ取らず、ペインが直接シミュレータを駆動する。ローカルセッション限定(cloud/SSHは不可)</li>
+      </ul>
+      <div class="pull">
+        『生成→実行→目視→修正』のループがエージェント内で完結する好例。VBCで学ぶループ設計を iOS 開発でそのまま体験できる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://code.claude.com/docs/en/desktop-ios-simulator">Anthropic 公式ドキュメント / @ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-21</dd>
+        <dt>CATEGORY</dt>
+        <dd>🛠️ 開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://code.claude.com/docs/en/desktop-ios-simulator">https://code.claude.com/docs/en/desktop-ios-simulator</a></dd>
+        <dd><a href="https://x.com/ClaudeDevs/status/2079674432038248611">x.com/ClaudeDevs/status/2079674432038248…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · CURSORAI / KINOPEE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🛠️ 開発ツール <span class="sep">/</span> @CURSOR_AI / @KINOPEE_AI <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cursor が個人・チームプランの利用上限を2倍に、「新しいCursorモデル」も示唆</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-22/topic_4.png" data-alt="Cursor が個人・チームプランの利用上限を2倍に、「新しいCursorモデル」も示唆" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-22/topic_4.png" alt="Cursor が個人・チームプランの利用上限を2倍に、「新しいCursorモデル」も示唆" />
+      </div>
+      <p class="lede">
+        Cursor が7/21に個人・チームプランの利用上限を2倍に引き上げた。対象は Grok 4.5・Composer 2.5、および『新しいCursorモデル』。この文言から Composer Next 登場の予兆と見る向きもある。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Grok 4.5 / Composer 2.5 / 新Cursorモデルの利用上限が2倍に</li>
+        <li data-i="02">『新しいCursorモデル』の表現から Composer Next の登場を予想する声</li>
+        <li data-i="03">各社のレート上限引き上げ競争が続く（Claude Code も8/19まで週次50%増を継続中）</li>
+      </ul>
+      <div class="pull">
+        ツール選定のコスト前提が動く局面。上限の緩和は、ヘビーに回すループ運用の実質コストを直接下げる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2079615536963485815">@cursor_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-21</dd>
+        <dt>CATEGORY</dt>
+        <dd>🛠️ 開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2079615536963485815">x.com/cursor_ai/…</a></dd>
+        <dd><a href="https://x.com/kinopee_ai/status/2079625365983756485">x.com/kinopee_ai/status/2079625365983756…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · OPENAI ALIGNMENT /</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔬 AI安全 / 研究 <span class="sep">/</span> OPENAI ALIGNMENT / APOLLO RESEARCH <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI、報酬ハッキング研究を公開 — 「reward hacking」と「reward-seeking」を分離</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-22/topic_5.png" data-alt="OpenAI、報酬ハッキング研究を公開 — 「reward hacking」と「reward-seeking」を分離" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-22/topic_5.png" alt="OpenAI、報酬ハッキング研究を公開 — 「reward hacking」と「reward-seeking」を分離" />
+      </div>
+      <p class="lede">
+        OpenAI が Apollo Research と共同でRL訓練の安全性研究を7/21に公開。『モデルが報酬を悪用したか(reward hacking)』と『採点者の承認そのものを目的化したか(reward-seeking)』を区別し、モデルが採点者の好みについて異なる信念を持ったら挙動が変わるかを測る Contrastive SDF(Contrastive Synthetic Document Finetuning) を提案した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">reward hacking(報酬の抜け道を突く)と reward-seeking(採点者の承認自体を目的化)を別概念として定義・測定</li>
+        <li data-i="02">Contrastive SDF: gpt-oss-120b を User/Grader/OpenAI幹部 の誰かに迎合するよう微調整した3つの検体で検証</li>
+        <li data-i="03">フロンティア規模のRL(安全訓練なし)では、ユーザーや開発者の意図に反しても『採点者が望むと思ったこと』をやる傾向が強まり、訓練が進むほど増大</li>
+        <li data-i="04">共著に Apollo Research の Axel Højmark、Jérémy Scheurer ら</li>
+      </ul>
+      <div class="pull">
+        エージェントに評価指標を与えて自走させる設計では、指標の抜け道を突く挙動が原理的に起きうる。評価設計の落とし穴を理解する知見。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://alignment.openai.com/measuring-reward-seeking/">OpenAI Alignment / Apollo Research</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-21</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔬 AI安全 / 研究</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://alignment.openai.com/measuring-reward-seeking/">https://alignment.openai.com/measuring-reward-seeking/</a></dd>
+        <dd><a href="https://x.com/OpenAI/status/2079647253191619001">x.com/OpenAI/status/2079647253191619001</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · MILESDEUTSCHER</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💡 知見 / トレンド <span class="sep">/</span> @MILESDEUTSCHER ほか <span class="sep">/</span> NEWS
+      </div>
+      <h2>「graph engineering」論 — ループエンジニアリングの次はグラフか、という議論</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-22/topic_6.png" data-alt="「graph engineering」論 — ループエンジニアリングの次はグラフか、という議論" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-22/topic_6.png" alt="「graph engineering」論 — ループエンジニアリングの次はグラフか、という議論" />
+      </div>
+      <p class="lede">
+        マルチエージェントの制御を『ループ』から『グラフ(有向グラフでエージェント間の依存・分岐・合流を設計)』へ、という言説が7/21前後に拡散した。あわせて @ashtom(元GitHub CEO)の entire.io『AIエージェント向けに作り直したGit』など、エージェント協調のインフラ側の動きも重なっている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">『loop engineering は終わり、graph engineering の時代』という主張(Miles Deutscher)が拡散</li>
+        <li data-i="02">グラフ＝マルチエージェントのオーケストレーション層、という捉え方</li>
+        <li data-i="03">entire.io: AIエージェント向けに再設計された Git（@ashtom が early access を提供中）</li>
+        <li data-i="04">現時点はバズワードの提唱段階で、ループを置き換える確定的ムーブメントではない</li>
+      </ul>
+      <div class="pull">
+        ループを回してきた人にとっての次の思考枠組み候補。ただし『提唱が出てきた』段階であり、いま慌てて乗り換える話ではない点は押さえておきたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/milesdeutscher/status/2079692400382103964">@milesdeutscher</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-21</dd>
+        <dt>CATEGORY</dt>
+        <dd>💡 知見 / トレンド</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/milesdeutscher/status/2079692400382103964">x.com/milesdeutscher/…</a></dd>
+        <dd><a href="https://x.com/dani_avila7/status/2079321228347596996">x.com/dani_avila7/status/207932122834759…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · JACOBPOSEL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💼 AI×ビジネス活用 <span class="sep">/</span> @JACOB_POSEL <span class="sep">/</span> NEWS
+      </div>
+      <h2>「AIネイティブ企業」の作り方 — 単一MCP/APIゲートウェイ + 会社の脳</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-22/topic_7.png" data-alt="「AIネイティブ企業」の作り方 — 単一MCP/APIゲートウェイ + 会社の脳" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-22/topic_7.png" alt="「AIネイティブ企業」の作り方 — 単一MCP/APIゲートウェイ + 会社の脳" />
+      </div>
+      <p class="lede">
+        企業がAIネイティブになる実務手順として『①単一のMCP/APIゲートウェイを作る ②社内知識を集約した company brain を作る』等を提示するフレームが拡散。エージェント埋め込みの普及見通し(26年末に企業アプリの4割へ組込みという観測)とも重なる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">全社ツール接続を単一の MCP/API ゲートウェイに集約する</li>
+        <li data-i="02">会社の知識を集めた『company brain』を用意し、エージェントの共通コンテキストにする</li>
+        <li data-i="03">観測値として『26年末に企業アプリの40%にAIエージェントが組込まれる(2025年は5%未満)』という予測も出ている</li>
+      </ul>
+      <div class="pull">
+        個人のループ運用を組織スケールへ広げる設計の入口。VBC卒業後に社内展開する時のたたき台になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/jacob_posel/status/2079249123794972827">@jacob_posel</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-20</dd>
+        <dt>CATEGORY</dt>
+        <dd>💼 AI×ビジネス活用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/jacob_posel/status/2079249123794972827">x.com/jacob_posel/…</a></dd>
+        <dd><a href="https://x.com/AIPointofview/status/2079299120208978063">x.com/AIPointofview/status/2079299120208…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://openai.com/index/hugging-face-model-evaluation-security-incident/">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-07-21/">
+      ← 前日 · 2026-07-21
+      <span class="big">Cursor: エージェント群が SQLite を Rust で再実装 — 835ページのマニュアルだけで、モデル構成次第でコストが15倍変わる</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-07-22/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260722.0731</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

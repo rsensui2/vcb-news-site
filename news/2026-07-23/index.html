@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-07-23 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-07-23 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0723</span>
+    <span class="sep">/</span>
+    <span>2026-07-23</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260723.0730</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-07-23/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:30 · WED</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · WEDNESDAY · JULY 23, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>07<span class="dot">.</span>23</h1>
+    <div class="strap">
+      <span>Claude · Claude · Codex · Matt</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔒 セキュリティ / 開発ツール <span class="sep">/</span> ANTHROPIC (@CLAUDEAI) 公式 + プロダクトページ <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code に「セキュリティプラグイン」ベータ登場 — 差分をセキュリティ研究者のように読む</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-23/topic_1.png" data-alt="Claude Code に「セキュリティプラグイン」ベータ登場 — 差分をセキュリティ研究者のように読む" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-23/topic_1.png" alt="Claude Code に「セキュリティプラグイン」ベータ登場 — 差分をセキュリティ研究者のように読む" />
+      </div>
+      <p class="lede">
+        Anthropic が7/22に Claude Code 向け「Security」プラグインのベータを公開した。ルールベースのパターンマッチではなく、Claude がコードをセキュリティ研究者のように読み解き、Git履歴を追い、データフローとビジネスロジックを理解した上で脆弱性と修正案を提示する。コードは環境外に出さずスキャンできる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">検出対象はメモリ破壊・インジェクション・認証バイパス等の高深刻度脆弱性と、パターンマッチが見逃す文脈依存のロジック欠陥</li>
+        <li data-i="02">スキャン → 自分の検出結果を自分で反証する『敵対的検証パス』で誤検知を削減 → 修正案を提示（適用は人間が承認）</li>
+        <li data-i="03">複数ファイルを横断して文脈を理解し、データの流れを追って多要素の脆弱性パターンを捕捉</li>
+        <li data-i="04">ディレクトリ単位のスコープ指定・定期自動スキャン・Slack/Jira 連携（webhook）・CSV/Markdown 出力に対応。管理コンソールから有効化</li>
+      </ul>
+      <div class="pull">
+        「AIによる脆弱性スキャン」は2026年前半の一大トレンド。生成したコードをその場でセキュリティ検査するループを、レビュー工程に組み込む具体的な一手になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">7,152</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://claude.com/product/claude-security#beta">Anthropic (@claudeai) 公式 + プロダクトページ</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔒 セキュリティ / 開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://claude.com/product/claude-security#beta">https://claude.com/product/claude-security#beta</a></dd>
+        <dd><a href="https://x.com/claudeai/status/2079990597973057691">x.com/claudeai/status/207999059797305769…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · ANTHROPIC CLAUDEDE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🤖 エージェント基盤 <span class="sep">/</span> ANTHROPIC (@CLAUDEDEVS) 公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Managed Agents に新機能 — エフォート制御・最大500スキル・セッション種付け</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-23/topic_2.png" data-alt="Claude Managed Agents に新機能 — エフォート制御・最大500スキル・セッション種付け" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-23/topic_2.png" alt="Claude Managed Agents に新機能 — エフォート制御・最大500スキル・セッション種付け" />
+      </div>
+      <p class="lede">
+        ClaudeDevs が7/22に Claude Managed Agents の複数の新機能を発表した。各エージェントの「思考量（effort）」を設定でき、低くすれば高速・低コスト、高くすればより熟考する。スキルは最大500個まで付与でき、従来は別APIだったセッション作成と初期イベント投入を1コールで「種付け（seed）」できるようになった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">effort レベル設定: 応答速度・コストと思考の深さのトレードオフを明示的に制御</li>
+        <li data-i="02">スキル（task-specific instructions）を最大500個までエージェントに付与可能</li>
+        <li data-i="03">セッションを seed — 作成と最初のイベント送信をまとめて1回のAPIコールに</li>
+        <li data-i="04">07-19 の Managed Agents ローンチに続く増分アップデート</li>
+      </ul>
+      <div class="pull">
+        エージェントの「考える量」をコストとして扱える設計。ループ運用で『浅く速く』と『深く高価』を場面ごとに切り替える実務に直結する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,537</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2080009523952263295">@ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>🤖 エージェント基盤</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2080009523952263295">x.com/ClaudeDevs/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · OPENAI CODEXRELEAS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🛠️ 開発ツール <span class="sep">/</span> OPENAI (@CODEXRELEASES) 公式 + GITHUB RELEASES <span class="sep">/</span> NEWS
+      </div>
+      <h2>Codex CLI 0.145.0 リリース — マルチエージェント V2 が安定版に、音声入力も</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-23/topic_3.png" data-alt="Codex CLI 0.145.0 リリース — マルチエージェント V2 が安定版に、音声入力も" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-23/topic_3.png" alt="Codex CLI 0.145.0 リリース — マルチエージェント V2 が安定版に、音声入力も" />
+      </div>
+      <p class="lede">
+        OpenAI の Codex CLI 0.145.0 が7/21公開。目玉はマルチエージェント V2 の安定版化で、サブエージェント単位でモデル・推論レベル・並列度を設定でき、役割(role)も復活した。加えて音声入力とリアルタイム V3 ストリーミング、検索付きのスレッド履歴（再開・メモリ）に対応した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Multi-agent V2 が stable に昇格 — サブエージェントごとにモデル/推論レベル/並列度/役割を構成可能</li>
+        <li data-i="02">音声入力とツール出力に対応、リアルタイム V3 会話ストリーミングを追加</li>
+        <li data-i="03">実験的なページング式スレッド履歴: 効率的な再開・出現箇所検索・名前とメモリの永続化</li>
+        <li data-i="04">/import が Cursor・Claude Code の設定/MCPサーバ/プラグイン/セッション/メモリの移行に対応</li>
+      </ul>
+      <div class="pull">
+        「オーケストレータは賢いモデル、下請けは安いモデル」というモデル分業をCLIが正式サポート。コストと品質を両取りするループ設計の定石をツール側が後押しする。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">649</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/CodexReleases/status/2079634417299918949">@CodexReleases</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-21</dd>
+        <dt>CATEGORY</dt>
+        <dd>🛠️ 開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/CodexReleases/status/2079634417299918949">x.com/CodexReleases/…</a></dd>
+        <dd><a href="https://github.com/openai/codex/releases/tag/rust-v0.145.0">github.com/openai/codex/releases/tag/rus…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · MATTPOCOCK/SKILLS </span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🧠 ワークフロー / スキル <span class="sep">/</span> MATTPOCOCK/SKILLS (GITHUB) / @YAMIK1SHI 紹介 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Matt Pocock の Claude Code スキル集 — 「vibe coding」をやめて設計させる21のスキル</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-23/topic_4.png" data-alt="Matt Pocock の Claude Code スキル集 — 「vibe coding」をやめて設計させる21のスキル" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-23/topic_4.png" alt="Matt Pocock の Claude Code スキル集 — 「vibe coding」をやめて設計させる21のスキル" />
+      </div>
+      <p class="lede">
+        TypeScript教育で著名な Matt Pocock が公開している `.claude` ディレクトリのスキル集 `mattpocock/skills` が改めて注目を集めている。Claude Code / Codex が「雰囲気でコードを書く（vibe coding）」に流れるのを防ぎ、計画・TDD・安全ガードレールなど「実際のエンジニアリング」をさせるためのスキル群で、GitHubで3万超のスターを集める。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">リポジトリは mattpocock/skills（本人の日常運用スキルをそのまま公開）</li>
+        <li data-i="02">約21個のスキルで、計画立案・TDD・セーフティガードレールなどを網羅</li>
+        <li data-i="03">狙いは「reactive なチャットボット」を「shop の流儀を知るチームメンバー」に変えること</li>
+        <li data-i="04">コード生成そのものより『書く前に問題を考え抜かせる』スキルが中心</li>
+      </ul>
+      <div class="pull">
+        スキルで暴走を抑える発想は、VBCで教えるループ設計・コンテキスト設計の実物サンプル。そのまま真似できる形で公開されている点が有益。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/mattpocock/skills">mattpocock/skills (GitHub) / @Yamik1shi 紹介</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-21</dd>
+        <dt>CATEGORY</dt>
+        <dd>🧠 ワークフロー / スキル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/mattpocock/skills">https://github.com/mattpocock/skills</a></dd>
+        <dd><a href="https://x.com/Yamik1shi/status/2079514119586418775">x.com/Yamik1shi/status/20795141195864187…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · MITSUNARINOAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🧠 コンテキストエンジニアリング <span class="sep">/</span> @MITSUNARINOAI <span class="sep">/</span> NEWS
+      </div>
+      <h2>context engineering を実務化する「まず作る3ファイル」</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-23/topic_5.png" data-alt="context engineering を実務化する「まず作る3ファイル」" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-23/topic_5.png" alt="context engineering を実務化する「まず作る3ファイル」" />
+      </div>
+      <p class="lede">
+        「プロンプトが下手なのではなく、渡す材料が少ないだけ」という実務論。まず①誰向けか ②口調 ③禁止事項 の3ファイルを用意することを起点に context engineering を組み立てる、という具体手順の提案。RAGとの異同も並行して議論されている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">起点となる3ファイル: 誰向け / 口調 / 禁止事項</li>
+        <li data-i="02">context engineering は『RAGの言い換え』ではないが、同じ『モデルに正しい材料を与える』問題を解いている</li>
+        <li data-i="03">プロンプトの巧拙より、渡す文脈（材料）の設計が成果を左右するという主張</li>
+      </ul>
+      <div class="pull">
+        受講者がすぐ真似できる最小構成。CLAUDE.md / AGENTS.md 運用の具体的な入り口として、コンテキスト設計を「何を書くか」に落とし込める。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/mitsunarinoai/status/2079689322106937480">@mitsunarinoai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-21</dd>
+        <dt>CATEGORY</dt>
+        <dd>🧠 コンテキストエンジニアリング</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/mitsunarinoai/status/2079689322106937480">x.com/mitsunarinoai/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · DAIRAI DAIRAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🧠 コンテキストエンジニアリング / AGENT MEMORY <span class="sep">/</span> DAIR.AI (@DAIR_AI) <span class="sep">/</span> NEWS
+      </div>
+      <h2>「メモリをスキルに変換する」agent memory の新発想</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-23/topic_6.png" data-alt="「メモリをスキルに変換する」agent memory の新発想" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-23/topic_6.png" alt="「メモリをスキルに変換する」agent memory の新発想" />
+      </div>
+      <p class="lede">
+        多くの agent memory は過去の生ログを「取り出して」文脈に足すだけだが、この発想は過去のやり取りを「実行可能なスキル（手続き）」に変換して蓄える。受け身の文脈を能動的な手続き知識に変える点が新しいとして、DAIR.AI の紹介が高い反応を集めた。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">従来の agent memory は過去テキストを retrieve して文脈に注入する受動型</li>
+        <li data-i="02">新発想は記憶を再利用可能な『スキル』へ変換して蓄積し、能動的に呼び出す</li>
+        <li data-i="03">生ログの肥大を避けつつ、再現性のある手続きとして知識を残せる</li>
+      </ul>
+      <div class="pull">
+        コンテキストエンジニアリングの核心＝「何を覚え、どう再利用するか」。長期運用エージェントの設計で、コンテキスト肥大と再現性の両立に効く考え方。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">249</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/dair_ai/status/2079706493495234693">@dair_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-21</dd>
+        <dt>CATEGORY</dt>
+        <dd>🧠 コンテキストエンジニアリング / agent memory</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/dair_ai/status/2079706493495234693">x.com/dair_ai/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · TECHCRUNCH / DEEZE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🎵 AI×クリエイティブ / 業界 <span class="sep">/</span> TECHCRUNCH / DEEZER NEWSROOM <span class="sep">/</span> NEWS
+      </div>
+      <h2>Deezer、1日のアップロード楽曲の過半がAI生成に — 初めて50%を突破</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-23/topic_7.png" data-alt="Deezer、1日のアップロード楽曲の過半がAI生成に — 初めて50%を突破" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-23/topic_7.png" alt="Deezer、1日のアップロード楽曲の過半がAI生成に — 初めて50%を突破" />
+      </div>
+      <p class="lede">
+        音楽ストリーミングの Deezer が7/21、1日にアップロードされる新曲のうち完全AI生成の楽曲が初めて過半（50%超）に達したと公表した。6月時点で1日あたり約9万曲のペース。Deezer は不正再生に使われるAI生成曲や6か月以上再生のない曲を削除する方針も示した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">6月に完全AI生成曲が1日約9万曲＝アップロードの50%超に到達（初）</li>
+        <li data-i="02">推移: 25年1月 1万曲(10%) → 25年4月 2万(18%) → 25年9月 3万(28%) → 26年4月 7.5万(44%) → 26年6月 9万(50%超)</li>
+        <li data-i="03">AI生成の急増を受け、不正ストリーム目的の曲や長期未再生の曲を削除する対応を表明</li>
+        <li data-i="04">4月時点では『44%』だった数字が、わずか2か月で過半に</li>
+      </ul>
+      <div class="pull">
+        生成AIがクリエイティブ産業の「量」を根本から変えている定量指標。生成物が氾濫する中で「人間の価値をどこに置くか」を考える具体的な材料になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://techcrunch.com/2026/07/21/music-streamer-deezer-says-more-than-50-of-daily-uploads-are-ai-generated/">TechCrunch / Deezer Newsroom</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-21</dd>
+        <dt>CATEGORY</dt>
+        <dd>🎵 AI×クリエイティブ / 業界</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://techcrunch.com/2026/07/21/music-streamer-deezer-says-more-than-50-of-daily-uploads-are-ai-generated/">https://techcrunch.com/2026/07/21/music-streamer-deezer-says-more-than-50-of-daily-uploads-are-ai-generated/</a></dd>
+        <dd><a href="https://newsroom-deezer.com/2026/07/ai-music-exceeds-50-percent-daily-uploads-deezer/">newsroom-deezer.com/2026/07/ai-music-exc…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://claude.com/product/claude-security#beta">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-07-22/">
+      ← 前日 · 2026-07-22
+      <span class="big">OpenAIのテスト用モデルがサンドボックスを脱出し Hugging Face の本番基盤を侵害</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-07-23/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260723.0730</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

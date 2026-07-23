@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-07-24 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-07-24 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0724</span>
+    <span class="sep">/</span>
+    <span>2026-07-24</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260724.0740</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-07-24/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:40 · THU</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · THURSDAY · JULY 24, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>07<span class="dot">.</span>24</h1>
+    <div class="strap">
+      <span>Cursor · Claude · Keel · 中国発の超小型OCRモデル「Unlimited-OCR」がOSS公開</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 5 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🛠️ 開発ツール / モデルルーティング <span class="sep">/</span> CURSOR (@CURSOR_AI) 公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cursor Router 発表 — タスクごとに最適モデルを自動選択、フロンティア品質で60%コスト減</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-24/topic_1.png" data-alt="Cursor Router 発表 — タスクごとに最適モデルを自動選択、フロンティア品質で60%コスト減" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-24/topic_1.png" alt="Cursor Router 発表 — タスクごとに最適モデルを自動選択、フロンティア品質で60%コスト減" />
+      </div>
+      <p class="lede">
+        Cursor が7/22に「Cursor Router」を発表した。リクエストの内容を解析し、難しい仕事にはフロンティアモデル、そうでなければ価格効率のよいモデルへと自動でルーティングするインテリジェント・モデルルーターで、Auto モードから Intelligence / Balance / Cost の最適化方針を選べる。フロンティア品質を保ったままコストを60%下げると謳う。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Auto モードで最適化方針を Intelligence / Balance / Cost の3択から選択、Router が各リクエストを解析して最適モデルへ振り分ける</li>
+        <li data-i="02">早期アクセスでは『全リクエストを Opus 4.8 に流す構成』と比べ、品質低下なしにコミットあたりコストが下がったと報告</li>
+        <li data-i="03">Teams / Enterprise プランで本日から全サーフェスに提供。管理者はチーム単位の有効化・特定モデルの許可/ブロック・デフォルト設定・最適化モードの無効化ができる</li>
+        <li data-i="04">『フロンティア品質を維持しつつ60%コスト減』を主眼に据えたコスト最適化機能</li>
+      </ul>
+      <div class="pull">
+        『賢いモデルは高い、安いモデルは弱い』を人が切り替えていたモデル分業を、ルーターが自動化する。品質を落とさずコストを制御するモデルルーティングの実装イメージそのもので、チームやVBC受講者の日常運用に効く。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">9,659</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2079993729532989500">@cursor_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>🛠️ 開発ツール / モデルルーティング</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2079993729532989500">x.com/cursor_ai/…</a></dd>
+        <dd><a href="https://x.com/cursor_ai/status/2079993735082016851">x.com/cursor_ai/status/20799937350820168…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · CLAUDE CODE CHANGE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🛠️ 開発ツール / CLAUDE CODE <span class="sep">/</span> CLAUDE CODE CHANGELOG (@CLAUDECODELOG) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code 2.1.218 リリース — /code-review がバックグラウンド subagent 化、Cowork 用ターミナルモデルも追加</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-24/topic_2.png" data-alt="Claude Code 2.1.218 リリース — /code-review がバックグラウンド subagent 化、Cowork 用ターミナルモデルも追加" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-24/topic_2.png" alt="Claude Code 2.1.218 リリース — /code-review がバックグラウンド subagent 化、Cowork 用ターミナルモデルも追加" />
+      </div>
+      <p class="lede">
+        Claude Code 2.1.218 が公開された（37件のCLI変更）。目玉は `/code-review` がバックグラウンドの subagent として走るようになった点で、レビュー出力が会話を埋めず、後続のスタックしたコマンドがそのレビューを対象にできる。screen-reader モードは削除操作を読み上げるようになり、新モデル `claude-coworker-terminal` が追加された。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">`/code-review` がバックグラウンド subagent 実行に。レビューが会話を占有せず、スタックした /コマンドがレビュー結果を参照できる</li>
+        <li data-i="02">`--ax-screen-reader` モードで単語/行削除（Option+Delete・Ctrl+W・Cmd+Backspace・Ctrl+U・Ctrl+K）を音声で読み上げ</li>
+        <li data-i="03">モデル `claude-coworker-terminal` を追加、環境変数 `CLAUDE_CODE_ENABLE_XAA` を削除</li>
+        <li data-i="04">`claude mcp list` / `/mcp` に HTTP ステータスとエラーテキストを表示。前版 2.1.217 から約23時間でのリリース</li>
+      </ul>
+      <div class="pull">
+        レビューを『別コンテキストのバックグラウンド subagent』に逃がす設計は、生成役と評価役を分けるレビューループの実装が公式CLIに降りてきたもの。`claude-coworker-terminal` の追加は Claude Cowork がターミナルにも広がる布石。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">546</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeCodeLog/status/2080045045156098131">@ClaudeCodeLog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>🛠️ 開発ツール / Claude Code</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeCodeLog/status/2080045045156098131">x.com/ClaudeCodeLog/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · ZENTEX ZENT7X</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🤖 エージェント / ループエンジニアリング <span class="sep">/</span> ZENTEX (@ZENT7X) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Keel Code ローンチ — 「コードを書く」でなく「ゴールを完遂する」コーディングエージェント</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-24/topic_3.png" data-alt="Keel Code ローンチ — 「コードを書く」でなく「ゴールを完遂する」コーディングエージェント" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-24/topic_3.png" alt="Keel Code ローンチ — 「コードを書く」でなく「ゴールを完遂する」コーディングエージェント" />
+      </div>
+      <p class="lede">
+        Zentex（@zent7x）が7/22に「Keel Code」をローンチした。多くのコーディングエージェントはコードを書いて手を止め、動くかどうかの確認・修正・再プロンプトはユーザー任せになる、という問題意識のもと、Keel Code は『ゴールを最後まで完遂する』ことを掲げ、目標達成まで自律ループで回す設計を打ち出す。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">『コードを書く（write code）』ではなく『ゴールを完遂する（finish a goal）』ことを設計目標に据える</li>
+        <li data-i="02">多くのエージェントは一発試して止まり、動作確認・修正・再プロンプトが人間側に残る、という現状課題を出発点にする</li>
+        <li data-i="03">生成→検証→修正→再試行を人手に頼らず回すことを標榜する新規プロダクト</li>
+        <li data-i="04">loop engineering（生成と検証を分けて自律ループで回す）の考え方を製品として具体化</li>
+      </ul>
+      <div class="pull">
+        『生成と検証を分けて自律ループで完遂まで回す』というループエンジニアリングの理念を、そのまま製品にした一例。受講者が自作ループで目指す『止まらずゴールまで到達するエージェント』の実装リファレンスになる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">127</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/zent7x/status/2079876160624947686">@zent7x</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>🤖 エージェント / ループエンジニアリング</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/zent7x/status/2079876160624947686">x.com/zent7x/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · ARCANE AI ARCANEAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🖥️ ローカルLLM / OCR <span class="sep">/</span> ARCANE AI (@ARCANE_AII) <span class="sep">/</span> NEWS
+      </div>
+      <h2>中国発の超小型OCRモデル「Unlimited-OCR」がOSS公開 — 3Bで100ページPDFを一括解析・完全ローカル</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-24/topic_4.png" data-alt="中国発の超小型OCRモデル「Unlimited-OCR」がOSS公開 — 3Bで100ページPDFを一括解析・完全ローカル" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-24/topic_4.png" alt="中国発の超小型OCRモデル「Unlimited-OCR」がOSS公開 — 3Bで100ページPDFを一括解析・完全ローカル" />
+      </div>
+      <p class="lede">
+        中国発の軽量OCRモデル「Unlimited-OCR」がオープンソース公開された。わずか3Bパラメータで完全ローカル動作し、100ページのPDFを1回（single shot）で解析する。多くのOCRツールが文書をページ単位に分割して文脈を失うのに対し、これは文書全体をまとめて読む設計だという。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">名称は Unlimited-OCR、3B パラメータ、完全ローカルで動作</li>
+        <li data-i="02">100ページ規模のPDFを1回で解析（ページ分割せず single shot）</li>
+        <li data-i="03">既存OCRがページ単位に切って文脈を失うのに対し、文書全体の文脈を保持したまま読む点が差別化</li>
+        <li data-i="04">オープンソース公開でローカル運用が前提</li>
+      </ul>
+      <div class="pull">
+        オンデバイス/ローカルLLMの実用度がまた一段上がった実例。API課金や情報漏洩を避けたい業務（請求書・契約書・議事録PDFの構造化）を手元のマシンで完結できる。ローカルLLM/データ処理ワークフローに直結する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">68</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/Arcane_Aii/status/2079879241295183995">@Arcane_Aii</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>🖥️ ローカルLLM / OCR</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/Arcane_Aii/status/2079879241295183995">x.com/Arcane_Aii/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · TAKANORIP /   TAKA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🎨 AI×デザイン <span class="sep">/</span> TAKANORIP / カンム デザインマネージャー (@TAKANORIPE) / SPEAKER DECK <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>AI-Slopなデザインを生まないためのデザインプロセス戦略</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-24/topic_5.png" data-alt="AI-Slopなデザインを生まないためのデザインプロセス戦略" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-24/topic_5.png" alt="AI-Slopなデザインを生まないためのデザインプロセス戦略" />
+      </div>
+      <p class="lede">
+        カンムのデザインマネージャー takanorip による AI Design Night 登壇資料。生成AIで『それっぽいデザイン』が誰でも量産できる時代に、平均化された哲学のないデザイン（＝AI-Slop）をどう避けるかを、デザインプロセスの設計論として提示する。核心は『AIで生産量を増やすのではなく、デザインの上限を高めるためにAIを使う』という方針転換。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">AI-Slop＝『哲学がないデザイン』。生成AIは統計的に平均を出すため意思や哲学を持たない</li>
+        <li data-i="02">避ける6戦略: ①審美眼を軽視しない ②哲学をTips化しない ③生産性の定義を問い直す ④Design Harnessの幻想を排除 ⑤ユーザーを軽視しない ⑥役割境界を明確にする</li>
+        <li data-i="03">Design Harness（ルール・自動レビュー）は『-1を0』にはできても『9を10』にはできない。上限を決めるのは人間の哲学・審美眼・文脈理解</li>
+        <li data-i="04">原因は『哲学の未言語化／テキスト説明だけで済ませる誤解／ハードスキル不足』の3つ</li>
+      </ul>
+      <div class="pull">
+        AIにデザインもコードも任せる層が最も陥りやすい『成果物の平均化』を言語化している。『ハーネスは品質の下限を守る装置』という原則はコード生成やエージェント運用にもそのまま転用でき、『量でなく上限を上げる』発想はAI経営全体の指針になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">367</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/takanoripe/status/2079884066485354883">@takanoripe</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>🎨 AI×デザイン</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/takanoripe/status/2079884066485354883">x.com/takanoripe/…</a></dd>
+        <dd><a href="https://speakerdeck.com/takanorip/ai-slopnadezainwosheng-manaitamenodezainpurosesuzhan-lue">speakerdeck.com/takanorip/ai-slopnadezai…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · / TV DSNAKAJIMA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔒 セキュリティ / 教育 <span class="sep">/</span> なかじ / 中島大介@ウェブ職TV (@DS_NAKAJIMA) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>エンジニアじゃない人のClaude Codeの使い方 — 危険な設定チェックリスト</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-24/topic_6.png" data-alt="エンジニアじゃない人のClaude Codeの使い方 — 危険な設定チェックリスト" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-24/topic_6.png" alt="エンジニアじゃない人のClaude Codeの使い方 — 危険な設定チェックリスト" />
+      </div>
+      <p class="lede">
+        非エンジニアがやりがちな Claude Code の危険な設定・運用を7項目のアンチパターンとして列挙したポスト。煽りではなく、AIコーディングが非エンジニアに広がるほど顕在化するセキュリティリスクを整理し、対策講座への導線につないでいる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">危険な使い方: ホームディレクトリで起動（全ファイルがAIアクセス範囲に入る）／settings.json が無い（権限制御なし）／サンドボックス未使用</li>
+        <li data-i="02">APIキーを無制限で使用／機密情報を .env に平文保存</li>
+        <li data-i="03">全コマンドを全承認（--dangerously-skip-permissions の常用を含む）</li>
+        <li data-i="04">本人が『非エンジニアでもできる Claude Code / Codex セキュリティ対策講座』（8/9・8/17）を告知</li>
+      </ul>
+      <div class="pull">
+        VBC受講者はまさに『非エンジニアが Claude Code を触る』層。このリストはそのまま受講者向けセキュリティ・オンボーディングのチェックリストになる（作業ディレクトリを切る／settings.jsonで権限を絞る／権限モード理解／シークレット管理）。同時期の Claude Security プラグインと合わせ『危険を知る→ツールで守る』の教材に。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,531</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ds_nakajima/status/2079753295455723786">@ds_nakajima</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔒 セキュリティ / 教育</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ds_nakajima/status/2079753295455723786">x.com/ds_nakajima/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · SEELOGLOG / HERDRD</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 開発ツール / エージェント運用 <span class="sep">/</span> ろぐみ (@SEELOGLOG) / HERDR.DEV <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>herdr — tmux/zellij から乗り換え推奨のエージェント対応ターミナルマルチプレクサ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-24/topic_7.png" data-alt="herdr — tmux/zellij から乗り換え推奨のエージェント対応ターミナルマルチプレクサ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-24/topic_7.png" alt="herdr — tmux/zellij から乗り換え推奨のエージェント対応ターミナルマルチプレクサ" />
+      </div>
+      <p class="lede">
+        『tmux や zellij を使ってる人は herdr に移行したほうがいい、全てが変わる』という短い推薦ポスト。名指しされた herdr は、一次調査によると AIエージェント時代向けに設計された Rust 製ターミナルマルチプレクサで、マルチエージェント運用の文脈で注目に値するツール。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">herdr は tmux 互換CLI＋daemon駆動のSDK＋Ratatui ネイティブ統合を備える</li>
+        <li data-i="02">tmux が『ターミナル』を永続化するのに対し、herdr は『エージェントのワークスペースと状態』を永続化する</li>
+        <li data-i="03">エージェントがプログラム的にペイン生成・出力読取・状態待ち（orchestration）でき、これは tmux/zellij では不可能な領域</li>
+        <li data-i="04">リリースから約100日と若く、tmux の成熟度には未達。ヘビーなカスタマイズ用途の完全代替ではないが、複数エージェントを常時走らせるなら試す価値大</li>
+      </ul>
+      <div class="pull">
+        複数エージェントを1ターミナルでオーケストレーションする、というループエンジニアリング/マルチエージェント運用そのものを狙ったツール。現状の tmux 運用を『エージェント状態を可視化・待受できる基盤』に置き換えられる可能性がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">3</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/seeloglog/status/2080239065627271617">@seeloglog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 開発ツール / エージェント運用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/seeloglog/status/2080239065627271617">x.com/seeloglog/…</a></dd>
+        <dd><a href="https://herdr.dev/">herdr.dev/</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/cursor_ai/status/2079993729532989500">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-07-23/">
+      ← 前日 · 2026-07-23
+      <span class="big">Claude Code に「セキュリティプラグイン」ベータ登場 — 差分をセキュリティ研究者のように読む</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-07-24/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260724.0740</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

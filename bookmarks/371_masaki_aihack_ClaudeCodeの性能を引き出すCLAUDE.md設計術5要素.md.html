@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №027</span>
+    <span class="tick">BOOKMARK №034</span>
     <span class="sep">/</span>
     <span>2026-06-30</span>
     <span class="sep">/</span>
     <span>@masaki_aihack</span>
     <span class="sep">/</span>
-    <span>453 ITEMS</span>
+    <span>460 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:20 FRI</span>
+    <span>JST 07:22 SAT</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,19 +305,19 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-07-23/">NEWS</a>
+      <a href="../news/2026-07-24/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:20 · FRI</div>
+    <div class="meta">JST · 07:22 · SAT</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-06-30 <span>/</span> №027
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-06-30 <span>/</span> №034
     </div>
     <div class="cat-line">
       <span>🎓 Claude Code / プロンプトエンジニアリング</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">Claude Code の性能を引き出す CLAUDE.md 設計術 — 「メモ帳」ではなく「判断の地図」にする 5 要素</h1>
     <div class="strap">
-      <span><span class="label">№</span>027 / 453</span>
+      <span><span class="label">№</span>034 / 460</span>
       <span><span class="label">SRC</span><a href="https://x.com/masaki_aihack/status/2071901466026238231" target="_blank" rel="noopener noreferrer">x.com/masaki_aihack ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/371_masaki_aihack_ClaudeCode%E3%81%AE%E6%80%A7%E8%83%BD%E3%82%92%E5%BC%95%E3%81%8D%E5%87%BA%E3%81%99CLAUDE.md%E8%A8%AD%E8%A8%88%E8%A1%935%E8%A6%81%E7%B4%A0.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">027<span class="ord">BOOKMARK / 453</span></aside>
+    <aside class="numeral">034<span class="ord">BOOKMARK / 460</span></aside>
     <article class="prose">
 <p><strong>有益度:</strong> ⭐⭐⭐⭐</p><p><strong>エンゲージメント:</strong> Likes 146 / RT 5 / Bookmarks 521 / Views 163,915</p><h2>概要</h2><p>Claude Code が作業前に必ず読み込む <code>CLAUDE.md</code> を、思いついた指示を継ぎ足す「メモ帳」ではなく、AI が毎回参照する「判断の地図」として設計せよ、という記事。Anthropic 公式どおり CLAUDE.md はフォルダにあれば作業開始前に必ず読まれるため、ここの中身で AI の初動が 100% 変わる。長すぎる CLAUDE.md（200 行超）はかえって重要度が埋もれる、と警告する。</p><h2>まとめ</h2><ul><li>CLAUDE.md は毎会話に効く「一度書けば全会話に適用される」高レバレッジな設定。プロンプトを磨いても、ここが整っていないと恩恵はほぼゼロ。</li><li>推奨は <strong>200 行以内</strong>。長すぎると「どれが重要か分からない長文」になり、AI が毎回全体を読み直して「今回はどれに当てはまる?」と<strong>推測</strong>する → ブレる。</li><li>強い CLAUDE.md に共通して入る <strong>5 要素</strong>:</li></ul><p>  1. <strong>最優先ルール</strong> — 出力前に必ず従わせる先頭の宣言（「考える前にまず下のルールに従え」と釘を刺す）</p><p>  2. <strong>キーワード→置き場のルーティング表</strong> — どの仕事をどこに置く/見るかを普段の言葉で対応づけ。軸は「事業」でなく「機能（やること）」で切る</p><p>  3. <strong>置き場の決定木</strong> — 表に無いものを上から YES/NO で辿らせ、迷う余地を消す（記事いわく「ここが一番効く」）</p><p>  4. <strong>タスクの扱い方</strong> — やることをどこにどう残すか固定</p><p>  5. <strong>機密情報の扱い</strong> — 外に出してはいけないものの線引き（API キー・パスワードは .env へ 等）</p><ul><li>効果: AI が「推測」をやめ「参照」で動く → 同じ依頼に毎回同じ動きをして再現性が出る。決定木の最後に「決まらなければ突っ走らず質問せよ」と書くと、自信満々の的外れ成果物が構造的に減る。</li><li>教訓: 賢い AI ほど、自由にさせるより「型」を渡したほうが性能が出る。</li></ul>
     </article>
@@ -384,14 +384,14 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 453 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 460 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-07-23/">TODAY</a></li>
+          <li><a href="../news/2026-07-24/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -418,7 +418,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-07-24</span>
+      <span>BUILD 2026-07-25</span>
     </div>
   </div>
 </footer>

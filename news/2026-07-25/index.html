@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-07-25 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-07-25 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0725</span>
+    <span class="sep">/</span>
+    <span>2026-07-25</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260725.0750</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-07-25/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:50 · FRI</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · FRIDAY · JULY 25, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>07<span class="dot">.</span>25</h1>
+    <div class="strap">
+      <span>Claude · Codex · ChatGPT · ChatGPT</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 7 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        フロンティアモデル発表 <span class="sep">/</span> @CLAUDEAI / @CLAUDEDEVS <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Claude Opus 5 発表 — Fable 5 級の知能を半額で、Frontier-Bench で新SOTA</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-25/topic_1.png" data-alt="Claude Opus 5 発表 — Fable 5 級の知能を半額で、Frontier-Bench で新SOTA" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-25/topic_1.png" alt="Claude Opus 5 発表 — Fable 5 級の知能を半額で、Frontier-Bench で新SOTA" />
+      </div>
+      <p class="lede">
+        Anthropic が新フラッグシップ Claude Opus 5 を発表。Fable 5 のフロンティア知能に半額で迫る「思慮深く先回り型」のモデルで、価格は Opus 4.8 据え置き、当日から全有料プラン・Claude API・Claude Code で利用できる。開発者向けには @ClaudeDevs が詳報し、エージェント的ターミナルコーディングのベンチ Frontier-Bench v0.1 で 43.3% と新 SOTA（Fable 5 の 33.7% を上回り Opus 4.8 の2倍超）を主張した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Frontier-Bench v0.1（エージェント的ターミナルコーディング）で 43.3% の新 SOTA。Fable 5 は 33.7%、FrontierCode v1.1 では Fable 5 と同等を半額で</li>
+        <li data-i="02">自動行動監査でこれまでで最もアラインされたモデル（無謀・欺瞞的行動の発生率が最も低い）。ARC-AGI-3 は次点モデルの3倍</li>
+        <li data-i="03">Claude Code / Platform で既定 high effort（難問は上げ・高速化は下げて調整）。Fast モードは約2.5倍速で基本価格の2倍</li>
+        <li data-i="04">大規模コードベースの長期プロジェクト（アーキテクチャ・デプロイ・design品質UI）に強く、多段作業で軌道を保ちやすい</li>
+        <li data-i="05">利用は API で `claude-opus-5`、Claude Code で `/model claude-opus-5`。既存ワークロードの移行は `/claude-api migrate`</li>
+        <li data-i="06">サイバーセキュリティは Opus 4.8 超だがエクスプロイト開発は Mythos 5 に大きく劣る（高リスク用途はブロック設計）</li>
+      </ul>
+      <div class="pull">
+        基盤モデル世代がそのまま更新される話。「Fable 5 級を半額・価格据え置きで default が上がる」ため、cron 群や子セッションを大量に回す運用・VBC 受講者ともに追加負担なく賢くなる。effort 既定と移行コマンドはモデルを黙って乗り換える実務手順そのもの。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">46,303</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/claudeai/status/2080699495453528290">@claudeai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-24</dd>
+        <dt>CATEGORY</dt>
+        <dd>フロンティアモデル発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/claudeai/status/2080699495453528290">x.com/claudeai/…</a></dd>
+        <dd><a href="https://x.com/ClaudeDevs/status/2080703243722854516">x.com/ClaudeDevs/status/2080703243722854…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · TUTURETOM / KOTETS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール / スライド生成 <span class="sep">/</span> @TUTURETOM / @KOTETSU_0321 <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Codex がスライド生成基盤に — コンサルスライドの仕組みと Codex Slides の OSS 化</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-25/topic_2.png" data-alt="Codex がスライド生成基盤に — コンサルスライドの仕組みと Codex Slides の OSS 化" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-25/topic_2.png" alt="Codex がスライド生成基盤に — コンサルスライドの仕組みと Codex Slides の OSS 化" />
+      </div>
+      <p class="lede">
+        Codex（GPT-5.6）をスライド生成基盤にする動きが相次いだ。@tuturetom は「Codex Slides」を正式にオープンソース化し、repo・PDF・アイデアを数分で編集可能な PPT に変換、目玉の image-to-slides で複雑な概念を直接ビジュアル化する。@kotetsu_0321 は編集可能なマッキンゼー風コンサルスライドを、①設計プロンプト②PPTX生成③自動検査・修復の3層構造で生成する仕組みを公開した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Codex Slides を OSS 化。テンプレ探し・手動レイアウト不要で編集可能・エクスポート可能なスライドを生成、fast モードで3〜6分</li>
+        <li data-i="02">目玉の image-to-slides は画像式生成で複雑な概念を直接ビジュアル表現に変換</li>
+        <li data-i="03">kotetsu 版はコンサルスライドを3層構造（①設計プロンプト②PPTX生成③自動検査・修復）で。①プロンプトだけでも体感70点</li>
+        <li data-i="04">最高品質には②編集可能PPTX生成＋③文字切れ・図形衝突・レイアウト崩れの検出/修復が必要</li>
+        <li data-i="05">トヨタの有価証券報告書を読ませて“読ませる”スライドに落とす実例</li>
+      </ul>
+      <div class="pull">
+        Ryoko の tekion-slide-generator v5（JSON設計→生成→validate/修復）と設計思想が一致し、第三者が独立に同じ3層に到達したのは方式が定石である裏づけ。「①プロンプトだけでは届かない、後段の自動検査が品質を作る」という切り分けは VBC の資料作成自動化の具体教材になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">960</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/tuturetom/status/2079908319586623531">@tuturetom</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール / スライド生成</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/tuturetom/status/2079908319586623531">x.com/tuturetom/…</a></dd>
+        <dd><a href="https://x.com/kotetsu_0321/status/2080216360315982170">x.com/kotetsu_0321/status/20802163603159…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · SACCCC / OPENAIDEV</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール / エージェント実行環境 <span class="sep">/</span> @SACCC_C / @OPENAIDEVS <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>ChatGPT Work がエージェント実行基盤に — 内蔵VMに加えログイン必須サイトも操作可能</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-25/topic_3.png" data-alt="ChatGPT Work がエージェント実行基盤に — 内蔵VMに加えログイン必須サイトも操作可能" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-25/topic_3.png" alt="ChatGPT Work がエージェント実行基盤に — 内蔵VMに加えログイン必須サイトも操作可能" />
+      </div>
+      <p class="lede">
+        ChatGPT Work がエージェントの実行基盤として拡張している。全有料ユーザーに 20GB・9コアの仮想マシンが内蔵されており（Pro で 20GB、Plus はおよそ 15GB）、実質 VPS 1台として自動化タスクや agent 常駐を載せられる（投稿者は openclaw を載せられたと報告）。加えて @OpenAIDevs は7/24、ChatGPT Work のエージェントがログイン必須サイトを扱えるようになったと発表。ユーザーがクラウドブラウザを一時的に引き継いでサインインすれば、以降はログインが保持されエージェントがタスクを続行できる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">全有料ユーザーに 20GB/9コアの VM が内蔵（Pro 20GB / Plus 約15GB）。実質 VPS 1台で自動化・agent 常駐が可能</li>
+        <li data-i="02">投稿者は内蔵VM上に openclaw を素早くセットアップできたと報告</li>
+        <li data-i="03">エージェントがログイン必須サイトを操作可能に。人がクラウドブラウザを take over してサインイン→以降エージェントが継続</li>
+        <li data-i="04">ログインはセッションを跨いで保持され、一度サインインすれば再入力不要</li>
+        <li data-i="05">⚠️ VMスペックはユーザー観測値で ToS 上の常駐可否・永続性は未確認</li>
+      </ul>
+      <div class="pull">
+        エージェント自動化の最大のボトルネックだった「実行環境の確保」と「認証の壁」の両方に同時に手が入った。実行基盤がサブスク付属で実質タダに近づき、人が認証だけ肩代わりして後は自走、という human-in-the-loop が現実的になる。VBC の業務自動化ワークフロー設計に直結。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">3,142</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/Saccc_c/status/2079974103109509240">@Saccc_c</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-24</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール / エージェント実行環境</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/Saccc_c/status/2079974103109509240">x.com/Saccc_c/…</a></dd>
+        <dd><a href="https://x.com/OpenAIDevs/status/2080707685448847418">x.com/OpenAIDevs/status/2080707685448847…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · OPENAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        音声インターフェース / エージェント操作 <span class="sep">/</span> @OPENAI <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>ChatGPT Voice がデスクトップアプリに — 音声でPCを操作し複数エージェントを指揮</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-25/topic_4.png" data-alt="ChatGPT Voice がデスクトップアプリに — 音声でPCを操作し複数エージェントを指揮" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-25/topic_4.png" alt="ChatGPT Voice がデスクトップアプリに — 音声でPCを操作し複数エージェントを指揮" />
+      </div>
+      <p class="lede">
+        OpenAI が ChatGPT Voice をデスクトップアプリに搭載。音声だけで自分のコンピュータを操作し、ChatGPT Work や Codex 上で走る複数のエージェントを声で指揮できる。GPT-Live 駆動で、話す・聞く・アプリ内の作業調整を同時並行に行う。当日からグローバル展開し、iOS アプリからペア済みリモートアクセスで Codex 内の音声も使え、Android 対応も近日予定。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">デスクトップアプリに音声搭載。音声だけで PC を操作</li>
+        <li data-i="02">ChatGPT Work / Codex 上で走る複数エージェントを声でディレクション</li>
+        <li data-i="03">GPT-Live 駆動で話す・聞く・作業調整を同時並行</li>
+        <li data-i="04">当日からグローバル展開。iOS からペア済みリモートアクセスで Codex 内の音声も利用可、Android 近日対応</li>
+      </ul>
+      <div class="pull">
+        エージェント操作の入口が「打つ」から「話す」へ広がる兆し。テキストで委任していた delegation を音声インターフェースに載せると、手が塞がっている場面や複数タスクの並行指示に効く。マルチエージェント運用の UX が音声＋並列指揮へ動いている。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">12,091</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAI/status/2080378182469857576">@OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>音声インターフェース / エージェント操作</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAI/status/2080378182469857576">x.com/OpenAI/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · PUPPOSANDRO / OLLA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ローカルLLM / オープンモデル <span class="sep">/</span> @PUPPOSANDRO / @OLLAMA <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>ローカル/オープンLLM が実務級に — DeepSeek V4 Flash を32tok/s、Fortune 500 もオープンモデルへ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-25/topic_5.png" data-alt="ローカル/オープンLLM が実務級に — DeepSeek V4 Flash を32tok/s、Fortune 500 もオープンモデルへ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-25/topic_5.png" alt="ローカル/オープンLLM が実務級に — DeepSeek V4 Flash を32tok/s、Fortune 500 もオープンモデルへ" />
+      </div>
+      <p class="lede">
+        ローカル/オープンLLM の実用度がまた上がった。@pupposandro は DeepSeek V4 Flash（284B）を Ryzen AI MAX+ 395 (Strix Halo) 上で完全ローカル・32 tok/s で動かした。ROCmFPX 混合量子化で約102GB（≒2.88bit/param）に圧縮し、11GB の軽量ドラフト「DSpark」で投機的デコード（本体が1融合ステップで4位置を検証）して速度を稼ぐ。あわせて Ollama 共同創業者 @jmorgan は、Fortune 500 がコスト削減とデータ・挙動の制御を理由にオープンソースモデルへ移行していると Yahoo Finance で語った。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">DeepSeek V4 Flash を Strix Halo の統合メモリ機で完全ローカル32 tok/s（284B級をオンデバイス推論）</li>
+        <li data-i="02">ROCmFPX 混合量子化で約102GBに圧縮＋DSpark ドラフトの投機的デコードで実用速度を達成</li>
+        <li data-i="03">Ollama 創業者：Fortune 500 がオープンソースモデルへ移行中、理由は低コストとデータ・挙動のコントロール</li>
+        <li data-i="04">クローズドなフロンティア API 一辺倒から、オープンモデルを自前基盤で回す方向への企業側シフト</li>
+        <li data-i="05">⚠️ ROCmFPX/DSpark は新しめの構成で再現性・安定性は要検証、「Fortune 500 が移行」は Ollama 側の主張</li>
+      </ul>
+      <div class="pull">
+        「フロンティア API vs オープン/ローカル」の綱引きで、ハード実証（DeepSeek）と配布側の観測（Ollama）が同じ方向を指す。コスト・機密・制御を理由に手元推論へ寄る流れは、API課金や情報漏洩を避けたい TEKION/VBC の顧客提案の背景データになる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">303</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/pupposandro/status/2080358376261759148">@pupposandro</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>ローカルLLM / オープンモデル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/pupposandro/status/2080358376261759148">x.com/pupposandro/…</a></dd>
+        <dd><a href="https://x.com/ollama/status/2080132205452398929">x.com/ollama/status/2080132205452398929</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · DAVIDHDEV / CANVAS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        フロントエンド / UIライブラリ <span class="sep">/</span> @DAVIDHDEV / CANVASUI.DEV <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Canvas UI 公開 — 世界初の html-in-canvas コンポーネントライブラリ（24種・OSS）</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-25/topic_6.png" data-alt="Canvas UI 公開 — 世界初の html-in-canvas コンポーネントライブラリ（24種・OSS）" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-25/topic_6.png" alt="Canvas UI 公開 — 世界初の html-in-canvas コンポーネントライブラリ（24種・OSS）" />
+      </div>
+      <p class="lede">
+        davidhdev が「世界初の html-in-canvas コンポーネントライブラリ」Canvas UI を公開。DOM を canvas のレンダーターゲットにし、操作可能な実 UI の上にリアルタイムシェーダーをかけられる。24 コンポーネントを収録し React / Vue / Svelte / vanilla TS に対応、無料・オープンソース（canvasui.dev）。ブックマーク数 9,675 とフロントエンド界隈の注目度が高い。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">DOM をレンダーターゲットとして canvas に描画する新方式（DOM が canvas の描画対象に）</li>
+        <li data-i="02">操作可能な実 UI の上にリアルタイムシェーダーを重ねられる（見た目のためにインタラクションを捨てない）</li>
+        <li data-i="03">24 コンポーネント収録、React / Vue / Svelte / vanilla TypeScript 対応</li>
+        <li data-i="04">無料・オープンソース（canvasui.dev）、BM 9,675 と高注目</li>
+      </ul>
+      <div class="pull">
+        「リッチな見た目＝canvas で描き直し＝操作性/アクセシビリティを捨てる」というトレードオフを崩す。動きのある表現とフォーム操作性を両立させたいランディングやプロダクトのヒーローに効く。OSS なので vibe-coder-demo 系のフロント表現実験に取り込みやすい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">6,911</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/davidhdev/status/2080224101432447094">@davidhdev</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>フロントエンド / UIライブラリ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/davidhdev/status/2080224101432447094">x.com/davidhdev/…</a></dd>
+        <dd><a href="http://canvasui.dev">canvasui.dev</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · PNPN86</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI業務活用 / スキル <span class="sep">/</span> @PNPN_86 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code Skills の実利用 Top5 を4社が公開 — 上位はコーディングでなく「調査・レビュー」</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-25/topic_7.png" data-alt="Claude Code Skills の実利用 Top5 を4社が公開 — 上位はコーディングでなく「調査・レビュー」" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-25/topic_7.png" alt="Claude Code Skills の実利用 Top5 を4社が公開 — 上位はコーディングでなく「調査・レビュー」" />
+      </div>
+      <p class="lede">
+        ダイニー・ディップ・LayerX・タイミーの4社が、Claude Code で実際に使っている Skills の Top5 を公開した。どの会社も上位はコーディング系ではなく、調査（リサーチ）やレビューの Skills だった。「AIにコードを書かせる」より「調べさせる・レビューさせる」用途が現場で効いているという、実運用企業の生データ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">4社（ダイニー/ディップ/LayerX/タイミー）の Claude Code Skills 実利用 Top5 を公開</li>
+        <li data-i="02">上位は一貫してコーディング系でなく調査・レビュー系の Skills</li>
+        <li data-i="03">想像でなく実運用企業の生データという点で希少</li>
+        <li data-i="04">「まず整備すべきは調査/レビュー Skills」という優先度の実証データ</li>
+      </ul>
+      <div class="pull">
+        Skills をどう設計・優先すべきかの現場データ。VBC 受講者や TEKION の運用で「最初に作るべきは調査/レビュー Skills」という具体指針になり、Ryoko の capability 系スキル群の優先度づけにも直結する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">430</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/pnpn_86/status/2080442357984768018">@pnpn_86</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI業務活用 / スキル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/pnpn_86/status/2080442357984768018">x.com/pnpn_86/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · TMIYATAKE1</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI×デザイン / 企業活用 <span class="sep">/</span> @TMIYATAKE1 <span class="sep">/</span> NEWS
+      </div>
+      <h2>コカ・コーラが Adobe 共同開発の AIデザインシステムをローンチ — 200超の市場でブランド準拠コンテンツを自動生成</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-25/topic_8.png" data-alt="コカ・コーラが Adobe 共同開発の AIデザインシステムをローンチ — 200超の市場でブランド準拠コンテンツを自動生成" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-25/topic_8.png" alt="コカ・コーラが Adobe 共同開発の AIデザインシステムをローンチ — 200超の市場でブランド準拠コンテンツを自動生成" />
+      </div>
+      <p class="lede">
+        コカ・コーラが新しいグローバルブランドアイデンティティをローンチ。Adobe と共同開発した AI デザインシステムに自社のブランドガイドラインを取り込み、AI が200以上の市場でブランドルールに準拠したパッケージング・広告コンテンツを生成できるようにした。「AIにデザインを任せると崩れる」を、ガイドラインを制約として組み込むことで大規模に解いた企業事例。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Adobe と共同開発の AI デザインシステムにブランドガイドラインを組み込み</li>
+        <li data-i="02">200以上の市場でブランド準拠のパッケージング・広告コンテンツを AI が生成</li>
+        <li data-i="03">グローバルブランドアイデンティティ刷新の一部として展開</li>
+        <li data-i="04">ガイドライン＝制約を与えることで大規模でも一貫性を保つ設計</li>
+      </ul>
+      <div class="pull">
+        AI×デザインが「個人の生成」から「ブランド統制つきの企業運用」へ進んだ実例。ガイドラインを制約として与えれば大規模でも一貫性を保てる、という設計は TEKION/VBC のブランド運用（スライド・ロゴ・トンマナ）自動化の参照になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">239</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/tmiyatake1/status/2079720579746386283">@tmiyatake1</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI×デザイン / 企業活用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/tmiyatake1/status/2079720579746386283">x.com/tmiyatake1/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/claudeai/status/2080699495453528290">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-07-24/">
+      ← 前日 · 2026-07-24
+      <span class="big">Cursor Router 発表 — タスクごとに最適モデルを自動選択、フロンティア品質で60%コスト減</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-07-25/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260725.0750</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

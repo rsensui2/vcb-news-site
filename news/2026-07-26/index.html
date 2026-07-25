@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-07-26 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-07-26 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0726</span>
+    <span class="sep">/</span>
+    <span>2026-07-26</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260726.0740</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-07-26/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:40 · SAT</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SATURDAY · JULY 26, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>07<span class="dot">.</span>26</h1>
+    <div class="strap">
+      <span>Claude · ChatGPT · Google · Supabase</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        コンテキストエンジニアリング <span class="sep">/</span> @TRQ212 / @U1 / @SUGURUKUN_AI <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Claude 5でsystem promptを80%以上削減 — 強いモデルには『指示を足すより引く』</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-26/topic_1.png" data-alt="Claude 5でsystem promptを80%以上削減 — 強いモデルには『指示を足すより引く』" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-26/topic_1.png" alt="Claude 5でsystem promptを80%以上削減 — 強いモデルには『指示を足すより引く』" />
+      </div>
+      <p class="lede">
+        AnthropicのThariqは、Claude Opus 5 / Fable 5向けにClaude Codeのsystem promptを80%以上削除しても、社内のコーディング評価で測定可能な性能低下がなかったと報告した。長文記事は、CLAUDE.mdをrepo固有の落とし穴に絞り、検証やレビューの詳細を必要時に読むSkillへ分け、コード・テスト・HTML artifact・rubricを高忠実度の参照資料として渡す設計へ移るよう提案している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">新モデル向けClaude Code system promptを80%以上削減しても、Anthropic社内coding evalで測定可能な低下なし</li>
+        <li data-i="02">固定ルールの列挙より、周囲のコードにコメント密度・命名・イディオムを合わせる判断を促す</li>
+        <li data-i="03">ツール利用例を増やす代わりに、型・列挙値・状態制約でインターフェース自体を表現豊かにする</li>
+        <li data-i="04">検証・レビューは常時コンテキストへ置かず、SkillsとToolSearchの遅延ロードで必要時だけ読む</li>
+        <li data-i="05">CLAUDE.mdはrepoの目的を短く、トークンはコードベース固有の落とし穴へ使う</li>
+        <li data-i="06">参照資料はMarkdownに限らず、コード・テスト・HTML artifact・rubricも使う</li>
+      </ul>
+      <div class="pull">
+        長大なAGENTS.md / CLAUDE.mdへ指示を足し続ける運用を見直す具体的な基準になる。VBCでも『プロンプトをうまく書く』から『材料・インターフェース・読み込み時点を設計する』へ学習の出口を移せる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">13,592</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/trq212/status/2080710971228918066">@trq212</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-24</dd>
+        <dt>CATEGORY</dt>
+        <dd>コンテキストエンジニアリング</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/trq212/status/2080710971228918066">x.com/trq212/…</a></dd>
+        <dd><a href="https://x.com/SuguruKun_ai/status/2080926008723853400">x.com/SuguruKun_ai/status/20809260087238…</a></dd>
+        <dd><a href="https://x.com/u1/status/2080955239172297026">x.com/u1/status/2080955239172297026</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · OPENAIDEVS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        業務エージェント / ブラウザ自動化 <span class="sep">/</span> @OPENAIDEVS <span class="sep">/</span> NEWS
+      </div>
+      <h2>ChatGPT Workがログイン必須サイトを操作 — 人が認証だけ引き継ぐ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-26/topic_2.png" data-alt="ChatGPT Workがログイン必須サイトを操作 — 人が認証だけ引き継ぐ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-26/topic_2.png" alt="ChatGPT Workがログイン必須サイトを操作 — 人が認証だけ引き継ぐ" />
+      </div>
+      <p class="lede">
+        ChatGPT Work agentが、サインインを必要とするWebサイトを継続操作できるようになった。ユーザーがクラウドブラウザを一時的に引き継いでログインし、その後agentへ処理を戻す方式で、ログイン状態はセッションをまたいで保持される。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">人間がクラウドブラウザをtake overしてログインし、その後agentへ処理を返す</li>
+        <li data-i="02">ログイン状態はセッションをまたいで保持され、毎回の再認証を減らせる</li>
+        <li data-i="03">認証情報そのものをプロンプトへ書かずに、要ログインの管理画面やSaaSを操作できる</li>
+        <li data-i="04">認証だけ人が担当し、残りをagentが進めるhuman-in-the-loop設計</li>
+      </ul>
+      <div class="pull">
+        業務自動化で頻繁に詰まる認証境界を、『完全無人』か『全部手作業』かの二択にせず越える実装例。社内SaaSや管理画面の自動化へ直結する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">3,707</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2080707685448847418">@OpenAIDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-24</dd>
+        <dt>CATEGORY</dt>
+        <dd>業務エージェント / ブラウザ自動化</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2080707685448847418">x.com/OpenAIDevs/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · GOOGLE AI  ECONOMY</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI×ビジネス / 実利用調査 <span class="sep">/</span> GOOGLE AI &amp; ECONOMY ATLAS <span class="sep">/</span> NEWS
+      </div>
+      <h2>Google ATLAS — 1,500万件の実利用で見えた『AIは仕事を丸ごと代替しない』</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-26/topic_3.png" data-alt="Google ATLAS — 1,500万件の実利用で見えた『AIは仕事を丸ごと代替しない』" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-26/topic_3.png" alt="Google ATLAS — 1,500万件の実利用で見えた『AIは仕事を丸ごと代替しない』" />
+      </div>
+      <p class="lede">
+        GoogleはAI &amp; Economy ATLAS v1.0を公開し、Gemini App・AI Mode・Gemini APIにおける1,500万件の集計・匿名化interactionから、AIが仕事と日常でどう使われるかを分析した。職場利用は全産業と68%の職種に広がる一方、典型的な職種でAIが使われるのはタスクの約21%、完全自動化に当たるinteractionは10%未満で、主流は発想・戦略・情報検索・学習などの協働支援だった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">1,500万件、150超の国、140言語、800職種、4,000タスクを対象</li>
+        <li data-i="02">職場利用は全産業と68%の職種に及ぶが、典型的な職種でAIを使うのはタスクの約21%</li>
+        <li data-i="03">職場interactionの完全自動化は10%未満で、協働・支援が大半</li>
+        <li data-i="04">手作業・技術職でも診断、トラブルシューティング、現場学習の補助に利用</li>
+        <li data-i="05">全interactionの86%以上は仕事外で、買い物調査・家電利用・税や許認可などにも使われる</li>
+        <li data-i="06">データはGoogle製品利用者に限られ、Google WorkspaceやEnterprise等は対象外</li>
+      </ul>
+      <div class="pull">
+        法人研修の出口を『職を丸ごと自動化』ではなく『各職種の高摩擦タスクを協働支援する』へ置く根拠になる。VBCの職種別トラック設計と相性がいい実利用データだ。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">272</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/NewsFromGoogle/status/2080333518589059536">@NewsFromGoogle</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI×ビジネス / 実利用調査</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/NewsFromGoogle/status/2080333518589059536">x.com/NewsFromGoogle/…</a></dd>
+        <dd><a href="https://blog.google/innovation-and-ai/technology/research/understanding-the-ai-economy/">blog.google/innovation-and-ai/technology…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · SUPABASE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール / OBSERVABILITY <span class="sep">/</span> @SUPABASE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Supabase Edge Functionsに運用画面 — エラー率・実行時間・CPU・メモリを可視化</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-26/topic_4.png" data-alt="Supabase Edge Functionsに運用画面 — エラー率・実行時間・CPU・メモリを可視化" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-26/topic_4.png" alt="Supabase Edge Functionsに運用画面 — エラー率・実行時間・CPU・メモリを可視化" />
+      </div>
+      <p class="lede">
+        SupabaseはEdge Functionごとの稼働状況を確認できる新しいOverviewページの展開を始めた。管理画面でerror rate、execution time、CPU・memory usageをまとめて見られ、関数の実装後にボトルネックや障害兆候を追いやすくする更新だ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Edge Function単位のOverviewページを追加</li>
+        <li data-i="02">error rateとexecution timeを表示</li>
+        <li data-i="03">CPU usageとmemory usageも同じ画面で確認</li>
+        <li data-i="04">コードを書くだけでなく、本番稼働を観測する導線がSupabase内に揃う</li>
+      </ul>
+      <div class="pull">
+        Vibe codingで作ったバックエンドは、動いた後を観測できるかで本番品質が変わる。受講者が障害を自分で見つけ、修正ループを回すための実用的な更新。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">173</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/supabase/status/2080669559967657995">@supabase</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-24</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール / Observability</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/supabase/status/2080669559967657995">x.com/supabase/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · AIHAKASE / FREDCON</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ローカルLLM / ツール <span class="sep">/</span> @AI_HAKASE_ / FREDCONEX/ARANDU <span class="sep">/</span> NEWS
+      </div>
+      <h2>Arandu — llama.cppをGUIで管理、ローカルLLMの導入障壁を下げる</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-26/topic_5.png" data-alt="Arandu — llama.cppをGUIで管理、ローカルLLMの導入障壁を下げる" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-26/topic_5.png" alt="Arandu — llama.cppをGUIで管理、ローカルLLMの導入障壁を下げる" />
+      </div>
+      <p class="lede">
+        Aranduはllama.cpp / llama-serverをGUIから扱うデスクトップアプリで、モデル管理、Hugging Face連携、llama.cppのリリース管理、起動引数preset、内蔵chat UI、hardware monitorをまとめて提供する。紹介スレッドはv0.6.5を案内しており、CLIに不慣れな人の入口になる一方、公式READMEではLinux・Mac対応はまだTo-doだ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">モデル管理とHugging Face integrationを内蔵</li>
+        <li data-i="02">llama.cpp GitHub releaseの管理とllama-server起動をGUI化</li>
+        <li data-i="03">引数のカスタマイズ・preset、内蔵chat UI、hardware monitorを搭載</li>
+        <li data-i="04">ソースとreleasesをGitHubで公開</li>
+        <li data-i="05">現行READMEではWindows向け、Linux・Macは今後対応予定</li>
+      </ul>
+      <div class="pull">
+        ローカルLLMは機密性・コスト・オフライン利用に強いが、環境構築が普及の壁になる。GUI管理は非エンジニアを含む受講者がまず動かす入口になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">72</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ai_hakase_/status/2080189677181563042">@ai_hakase_</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>ローカルLLM / ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ai_hakase_/status/2080189677181563042">x.com/ai_hakase_/…</a></dd>
+        <dd><a href="https://github.com/fredconex/Arandu">github.com/fredconex/Arandu</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · OLLAMA / YAHOO FIN</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ローカルLLM / エンタープライズ <span class="sep">/</span> @OLLAMA / YAHOO FINANCE INTERVIEW <span class="sep">/</span> NEWS
+      </div>
+      <h2>Fortune 500がオープンモデルへ — Ollamaが語る『低コストとデータ制御』</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-26/topic_6.png" data-alt="Fortune 500がオープンモデルへ — Ollamaが語る『低コストとデータ制御』" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-26/topic_6.png" alt="Fortune 500がオープンモデルへ — Ollamaが語る『低コストとデータ制御』" />
+      </div>
+      <p class="lede">
+        Ollamaは、共同創業者Jeffrey MorganのYahoo Finance出演を紹介し、Fortune 500企業が低コストとデータ制御を理由にオープンソースモデルへ移行していると述べた。移行社数や比較条件の定量値は示されておらず、Ollama側の市場観測として読む必要がある。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">移行理由としてクラウドAPIより低いコストを挙げる</li>
+        <li data-i="02">自社データとモデル運用をより強く制御できる点を強調</li>
+        <li data-i="03">オープンモデルを自前基盤で動かす企業需要をOllama側から説明</li>
+        <li data-i="04">企業数・コスト差・第三者検証は示されていないため市場観測として扱う</li>
+      </ul>
+      <div class="pull">
+        企業のモデル選定が『最強API一択』ではなく、コスト・機密・制御を含むポートフォリオ設計へ移る材料。Aranduのような導入ツールと合わせ、ローカル/オープン運用の裾野が広がっている。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">111</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ollama/status/2080132205452398929">@ollama</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>ローカルLLM / エンタープライズ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ollama/status/2080132205452398929">x.com/ollama/…</a></dd>
+        <dd><a href="https://ca.finance.yahoo.com/video/why-fortune-500-companies-are-flocking-to-open-source-ai-223952992.html">ca.finance.yahoo.com/video/why-fortune-5…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · KENN EJIMA KENN</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        マルチモデル運用 <span class="sep">/</span> KENN EJIMA (@KENN) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Opus 5は方向性探索、Codex / Grokは実装 — モデル分業の実感レビュー</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-26/topic_7.png" data-alt="Opus 5は方向性探索、Codex / Grokは実装 — モデル分業の実感レビュー" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-26/topic_7.png" alt="Opus 5は方向性探索、Codex / Grokは実装 — モデル分業の実感レビュー" />
+      </div>
+      <p class="lede">
+        Kenn EjimaはOpus 5の実使用所感として、開発の方向性を探索する相談相手や大きな方針決定に向く一方、狭く深い実行・実装ではCodexやGrokを組み合わせると整理した。ベンチマーク比較ではなく、探索と実装をモデル特性で分ける個人の運用レビューだ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Opus 5は開発方針を広く探索する相談相手として評価</li>
+        <li data-i="02">大きな方向性を決める段階でClaude系の特性を活用</li>
+        <li data-i="03">狭く深い実装はCodexやGrokへ分担</li>
+        <li data-i="04">単一モデルへ全工程を任せず、工程ごとにルーティングする</li>
+      </ul>
+      <div class="pull">
+        AI組織を組むときは『一番賢いモデルは何か』より『どの工程を誰に持たせるか』が効く。VBCでも企画・探索・実装・レビューをモデル別に設計する教材になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">437</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/kenn/status/2080804062887571938">@kenn</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-24</dd>
+        <dt>CATEGORY</dt>
+        <dd>マルチモデル運用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/kenn/status/2080804062887571938">x.com/kenn/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/trq212/status/2080710971228918066">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-07-25/">
+      ← 前日 · 2026-07-25
+      <span class="big">Claude Opus 5 発表 — Fable 5 級の知能を半額で、Frontier-Bench で新SOTA</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-07-26/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260726.0740</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

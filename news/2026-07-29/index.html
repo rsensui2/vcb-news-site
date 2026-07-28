@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-07-29 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-07-29 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0729</span>
+    <span class="sep">/</span>
+    <span>2026-07-29</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260729.0740</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-07-29/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:40 · TUE</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · TUESDAY · JULY 29, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>07<span class="dot">.</span>29</h1>
+    <div class="strap">
+      <span>MCP · OpenAI · llama.cpp · Anthropic</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 8 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 プロトコル / 開発者基盤 <span class="sep">/</span> MODEL CONTEXT PROTOCOL 公式ブログ <span class="sep">/</span> NEWS
+      </div>
+      <h2>MCP 仕様 2026-07-28 が正式版に — プロトコルがステートレスになり、initialize ハンドシェイクとセッションが消えた</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-29/topic_1.png" data-alt="MCP 仕様 2026-07-28 が正式版に — プロトコルがステートレスになり、initialize ハンドシェイクとセッションが消えた" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-29/topic_1.png" alt="MCP 仕様 2026-07-28 が正式版に — プロトコルがステートレスになり、initialize ハンドシェイクとセッションが消えた" />
+      </div>
+      <p class="lede">
+        Model Context Protocol の新仕様 2026-07-28 が正式版として公開された。ローンチ以来最大の改訂で、中核は `initialize`/`initialized` ハンドシェイクと `Mcp-Session-Id` ヘッダの完全撤廃。各リクエストが自分でプロトコルバージョン・クライアント識別・ケーパビリティを `_meta` に載せて運ぶ自己完結型になり、リモート MCP サーバは共有セッションストアもスティッキールーティングも無しで、素のラウンドロビン LB の後ろで水平スケールできる。あわせて MCP Apps・Tasks・Enterprise-Managed Authorization が正式な「拡張」の枠組みに整理され、認可の穴埋めと12か月の廃止猶予ポリシーが入った。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">`initialize`/`initialized` ハンドシェイクと `Mcp-Session-Id` ヘッダを撤廃。「どのリクエストも、共有ストレージ無しに、素のラウンドロビン LB の後ろのどのインスタンスにも着地できる」</li>
+        <li data-i="02">アプリ側の状態まで捨てる必要はない。状態を持ち越したいサーバはツールから明示的なハンドル（`basket_id` 等）を発行し、以降の呼び出しでただの引数としてモデルに渡し返させる</li>
+        <li data-i="03">MRTR（Multi Round-Trip Requests）がストリーム開きっぱなしの server-initiated request を置き換え。途中でユーザー入力が要るときは `resultType: &quot;input_required&quot;` を返し、クライアントが `inputResponses` を付けて元の呼び出しをリトライする</li>
+        <li data-i="04">新しい `Mcp-Method` / `Mcp-Name` ヘッダで、ゲートウェイ・レートリミッタ・WAF が JSON ボディを解析せずにルーティングと計測をできる</li>
+        <li data-i="05">認可の強化: RFC 9207 の issuer 検証で認可サーバすり替え攻撃を防ぐ／動的クライアント登録 (DCR) を正式に非推奨化し Client ID Metadata Documents (CIMD) へ</li>
+        <li data-i="06">Roots / Sampling / Logging を非推奨化、最低12か月のサポート期間を義務づけ。旧 HTTP+SSE トランスポートも同じく1年の猶予</li>
+        <li data-i="07">Tier 1 SDK（TS・Python・Go・C#）の月間ダウンロードが合計5億件近く、TypeScript と Python は累計10億ダウンロードをそれぞれ突破</li>
+      </ul>
+      <div class="pull">
+        MCP サーバを自前でホストしている側には破壊的変更で、セッション初期化の除去・リクエストの自己完結化・DCR から CIMD への認可移行が実作業として降ってくる。代わりに得られるのは「MCP サーバが普通の REST サービスと同じようにスケールする」こと——remote MCP を本番に置く最大の障壁だったスティッキーセッションと共有ストアの要求が消える。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://blog.modelcontextprotocol.io/posts/2026-07-28/">Model Context Protocol 公式ブログ</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 プロトコル / 開発者基盤</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://blog.modelcontextprotocol.io/posts/2026-07-28/">https://blog.modelcontextprotocol.io/posts/2026-07-28/</a></dd>
+        <dd><a href="https://modelcontextprotocol.io/specification/draft/changelog">modelcontextprotocol.io/specification/dr…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · OPENAI API CHANGEL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 モデル / 音声AI <span class="sep">/</span> OPENAI API CHANGELOG / @OPENAIDEVS <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI が書き起こしモデルを2種投入 — Whisper の誤り率を半分以下に、「文脈を渡せる」ASR へ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-29/topic_2.png" data-alt="OpenAI が書き起こしモデルを2種投入 — Whisper の誤り率を半分以下に、「文脈を渡せる」ASR へ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-29/topic_2.png" alt="OpenAI が書き起こしモデルを2種投入 — Whisper の誤り率を半分以下に、「文脈を渡せる」ASR へ" />
+      </div>
+      <p class="lede">
+        OpenAI が API に GPT-Live-Transcribe（低遅延のストリーミング書き起こし）と GPT-Transcribe（完了済み音声ファイル・バッチ向け）を追加した。特徴は精度そのものより「文脈を渡せる」設計で、録音の状況を説明する自由記述・固有名詞や専門用語のキーワード・想定言語リスト・直前の発話ターンを入力として渡せる。Common Voice 22言語での書き起こし誤り率は Whisper (whisper-1) の 40.37% に対し GPT-Transcribe が 19.27% と、半分以下に下がった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">`gpt-live-transcribe`（マイク・通話など生の音声ストリーム向け、低遅延で transcript の差分を返す）と `gpt-transcribe`（完了した録音・バッチ向け、Realtime ターンの最終 transcript にも使う）の2本立て</li>
+        <li data-i="02">渡せる文脈は4種: 自由記述の文脈（録音の話題や場面）／キーワード（製品名・薬剤名・略語）／想定入力言語のリスト／直前の書き起こし済みターン</li>
+        <li data-i="03">新設の Context Aware ASR ベンチで、自由記述の文脈を渡すと意味的精度が GPT-Live-Transcribe: 38.5% → 44.6%、GPT-Transcribe: 41.6% → 45.2% に上昇</li>
+        <li data-i="04">Common Voice 22言語の誤り率: GPT-Transcribe 19.27% / GPT-Live-Transcribe 19.70% に対し Whisper (whisper-1) は 40.37%</li>
+        <li data-i="05">Real-World Audio Recording ベンチ（9言語）: GPT-Transcribe 8.98% に対し Whisper (whisper-1) 15.21%</li>
+        <li data-i="06">対象 API は `v1/audio/transcriptions` と `v1/realtime`。短いフレーズ・数字・専門用語・大きな背景ノイズ下の発話に強いとされる</li>
+        <li data-i="07">⚠️ 価格と初回応答までの実測レイテンシは公式発表に含まれていない</li>
+      </ul>
+      <div class="pull">
+        議事録・商談録音・セミナー書き起こしを回している運用で効くのは、モデルを差し替えることより事前に渡す文脈を用意すること。参加者名・社名・製品名・略語をキーワードで渡し会議の主題を自由記述で添えるだけで、意味的精度が公式数値で6ポイント前後動く——呼び出し側の工夫だけで取れる伸びしろ。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,310</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://developers.openai.com/api/docs/changelog">OpenAI API Changelog / @OpenAIDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 モデル / 音声AI</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://developers.openai.com/api/docs/changelog">https://developers.openai.com/api/docs/changelog</a></dd>
+        <dd><a href="https://x.com/OpenAIDevs/status/2082201169443905798">x.com/OpenAIDevs/status/2082201169443905…</a></dd>
+        <dd><a href="https://developers.openai.com/api/docs/guides/transcription/">developers.openai.com/api/docs/guides/tr…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · GGML-ORG/LLAMACPP </span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🖥️ ローカルLLM / エージェント <span class="sep">/</span> GGML-ORG/LLAMA.CPP PR #26062 <span class="sep">/</span> NEWS
+      </div>
+      <h2>llama.cpp 本体が MCP stdio に対応 — llama-server が単体でエージェントハーネスになった</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-29/topic_3.png" data-alt="llama.cpp 本体が MCP stdio に対応 — llama-server が単体でエージェントハーネスになった" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-29/topic_3.png" alt="llama.cpp 本体が MCP stdio に対応 — llama-server が単体でエージェントハーネスになった" />
+      </div>
+      <p class="lede">
+        ローカル LLM の実行エンジン llama.cpp に「server: support MCP stdio」（PR #26062）がマージされ、llama-server 自身が MCP の JSON 定義を受け取って MCP サーバをサブプロセスとして起動・管理し、そのツールをサーバのツールとして公開できるようになった。これまで llama.cpp の MCP 対応は同梱 WebUI 側の実装で、外部プロキシやエージェントフレームワークを挟むのが前提だったが、C++ サーバ本体に降りたことでローカルの GGUF モデルが単体でツールを叩ける。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">PR #26062「server: support MCP stdio」が 2026-07-25 23:08 UTC（JST 07-26 08:08）にマージ。先行 PR #25736 を置き換える再実装</li>
+        <li data-i="02">挙動: サーバが MCP の JSON 設定を受け取り、サブプロセスを spawn して life-cycle を管理し、MCP ツールをサーバのツールとして公開する</li>
+        <li data-i="03">実装は4クラス分割: `server_mcp_server_config`（設定データ）/ `server_mcp_transport`（JSON-RPC）/ `server_mcp_stdio`（JSON を知らない低レベルのパイプとサブプロセス）/ `server_mcp`（全 transport の管理）</li>
+        <li data-i="04">`shared_ptr` の使用を絞り、`shutdown()` はブロッキング、スコープを抜けた後にポインタを漏らさず、detached thread を作らない、とライフサイクルを厳格化</li>
+        <li data-i="05">⚠️ 「llama.cpp の MCP 対応は WebUI 止まり」と書く第三者記事が複数流通しているが、本 PR はサーバ本体（C++ 側）の実装。WebUI 側の MCP クライアント（PR #18655）は 2026-03 に別途マージ済みで両者は別物</li>
+        <li data-i="06">実装者は AI 利用開示欄で「先行 PR の挙動だけを研究させ、コードは見せずゼロから再実装させた。ヘッダを先に書かせて手でレビューし、1コンポーネントずつ設計を検証してから次へ進めた」と手順を明記。それでもモデルは `shared_ptr` / `atomic` の要否で誤った前提を置き、都度指摘して設計を詰めたと述べている</li>
+      </ul>
+      <div class="pull">
+        ローカル LLM を「チャットが動くだけ」から「ファイル・検索・DB を触るエージェント」に引き上げる最後のピースが、外部フレームワークではなくエンジン本体に入った。機密データを外に出せない業務でのエージェント化に直接効く。実装手順の開示も参考になり、「AI に設計を任せず、ヘッダを先に書かせて人間がレビューし、1コンポーネントずつ進める」という進め方が OSS の実プロジェクトで実践された記録になっている。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/ggml-org/llama.cpp/pull/26062">ggml-org/llama.cpp PR #26062</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-26</dd>
+        <dt>CATEGORY</dt>
+        <dd>🖥️ ローカルLLM / エージェント</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/ggml-org/llama.cpp/pull/26062">https://github.com/ggml-org/llama.cpp/pull/26062</a></dd>
+        <dd><a href="https://x.com/ai_hakase_/status/2081561467329867804">x.com/ai_hakase_/status/2081561467329867…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · ANTHROPICAI / BLOO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 AI ガバナンス / 業界 <span class="sep">/</span> @ANTHROPICAI / BLOOMBERG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic が「フロンティア開発を意図的に減速させる」請願を公式支持 — CEO と複数の共同創業者が署名</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-29/topic_4.png" data-alt="Anthropic が「フロンティア開発を意図的に減速させる」請願を公式支持 — CEO と複数の共同創業者が署名" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-29/topic_4.png" alt="Anthropic が「フロンティア開発を意図的に減速させる」請願を公式支持 — CEO と複数の共同創業者が署名" />
+      </div>
+      <p class="lede">
+        OpenAI と Anthropic の従業員が回している請願——米政府が「自動化された AI 開発のフロンティアを意図的にペース調整するための技術的・ガバナンス的ツール」を作る国際的な取り組みを支持すべき——について、Anthropic が公式アカウントで支持を表明した。「当社の CEO、複数の共同創業者、シニアスタッフが署名している」と述べ、先月公開した再帰的自己改善に関する自社研究がその必要性を示していると位置づけた。従業員発の署名運動に会社として公式に乗った形になる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Anthropic 公式アカウントの表明: 「We support this petition, signed by our CEO, several co-founders, and senior staff.」</li>
+        <li data-i="02">根拠として挙げたのは先月公開した再帰的自己改善（recursive self-improvement）に関する自社研究。「社会が備えられるようフロンティアを意図的にペース調整するツールが必要だと示している」</li>
+        <li data-i="03">請願本文の要求は「米政府は、自動化された AI 開発のフロンティアを意図的にペース調整するために必要な技術的・ガバナンス的ツールを開発する国際的な取り組みを支持すべき」</li>
+        <li data-i="04">請願は OpenAI と Anthropic の従業員が回しているもので、Google DeepMind の従業員にも回付されている。Bloomberg が 2026-07-28 に報道</li>
+        <li data-i="05">書簡は「AI が人々が理解・制御できる速度を超えて進む現実的なリスク」があると警告</li>
+        <li data-i="06">⚠️ 署名者の総数は公表されていない。OpenAI は会社としてのコメントを出していない</li>
+        <li data-i="07">文脈: Anthropic は 07-27 に open-weights の立場文書を公開し、能力閾値に基づく義務的安全テストを主張していた</li>
+      </ul>
+      <div class="pull">
+        従業員の署名運動を CEO と共同創業者が追認するのは、社内の温度と経営方針が同じ方向を向いていることの公開表明にあたる。前日の open-weights 立場文書と合わせると、Anthropic は「配布の是非」ではなく「能力の進み方そのものに検査と減速の手続きを入れる」という一貫した線を引きにきている。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">259</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/AnthropicAI/status/2082228994653696371">@AnthropicAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 AI ガバナンス / 業界</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/AnthropicAI/status/2082228994653696371">x.com/AnthropicAI/…</a></dd>
+        <dd><a href="https://finance.yahoo.com/technology/ai/articles/openai-anthropic-staff-share-letter-163833780.html">finance.yahoo.com/technology/ai/articles…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · CURSOR  / CURSORAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💼 AI×ビジネス / 価格戦略 <span class="sep">/</span> CURSOR 公式ブログ / @CURSOR_AI <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cursor が地域別プラン「Cursor Start」をインドで開始 — 月₹649・UPI 決済、常時稼働クラウドエージェント込み</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-29/topic_5.png" data-alt="Cursor が地域別プラン「Cursor Start」をインドで開始 — 月₹649・UPI 決済、常時稼働クラウドエージェント込み" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-29/topic_5.png" alt="Cursor が地域別プラン「Cursor Start」をインドで開始 — 月₹649・UPI 決済、常時稼働クラウドエージェント込み" />
+      </div>
+      <p class="lede">
+        Cursor がインド向けの地域別プラン「Cursor Start」を月額 ₹649（税込）で開始した。Free と Pro の間に置かれる新しい段で、Grok 4.5 と Composer への潤沢なアクセス、コードをビルド・テストして PR まで開く常時稼働のクラウドエージェント、iOS アプリからのエージェント起動・遠隔操作、プラグイン / MCP サーバ / hooks / skills といったワークフロー拡張が含まれる。決済は UPI・クレジット・デビットに対応し、INR で月次課金される。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">月額 ₹649（税込）、INR 建て・月次自動更新、UPI またはカードで支払い。2026-07-28 提供開始</li>
+        <li data-i="02">含まれるもの: Cursor の自社モデル（最強モデルの Grok 4.5、最もコスト効率の良いコーディングモデル Composer）／常時稼働クラウドエージェント（ビルド・テスト・PR 作成）／Cursor for iOS（スマホから起動・操縦）／プラグイン・MCP サーバ・hooks・skills</li>
+        <li data-i="03">Pro との差: Pro は全モデルのフルアクセスに加え Bugbot・Auto モード・Automations・Cursor SDK。Start は「日常のビルド」をカバーする位置づけ</li>
+        <li data-i="04">インドのユーザー基盤が1年で3倍の300万開発者超に。Cursor にとって世界3位の市場</li>
+        <li data-i="05">1開発者あたりのエージェントリクエスト数は他のどの市場より多い、と Cursor が公表</li>
+      </ul>
+      <div class="pull">
+        注目すべきは価格そのものより、常時稼働のクラウドエージェントが最安の有料段に降りてきたこと。1年前ならプレミアム機能だったものが、地域別エントリープランの標準構成に入っている。「1開発者あたりのエージェントリクエスト数はインドが世界一」という数字も、エージェント常時稼働型の開発が特定市場でどこまで日常化しているかを示す実データとして読める。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">6,520</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://cursor.com/blog/cursor-start-india">Cursor 公式ブログ / @cursor_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>💼 AI×ビジネス / 価格戦略</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://cursor.com/blog/cursor-start-india">https://cursor.com/blog/cursor-start-india</a></dd>
+        <dd><a href="https://x.com/cursor_ai/status/2081978255004053560">x.com/cursor_ai/status/20819782550040535…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · AKSHAYPACHAAR</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🧠 コンテキスト / ループエンジニアリング <span class="sep">/</span> @AKSHAY_PACHAAR <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>〈知見〉prompt → context → harness → loop → graph — 5層を「作業の単位」で切り分ける</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-29/topic_6.png" data-alt="〈知見〉prompt → context → harness → loop → graph — 5層を「作業の単位」で切り分ける" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-29/topic_6.png" alt="〈知見〉prompt → context → harness → loop → graph — 5層を「作業の単位」で切り分ける" />
+      </div>
+      <p class="lede">
+        増え続ける「◯◯エンジニアリング」という用語は互いを置き換える競合概念ではなく入れ子構造であり、見分ける唯一クリーンな基準は「1単位の作業（unit of work）が何か」だと整理した投稿。prompt = 1つの入力、context = ウィンドウに残ったもの、harness = 機械を1回通すこと、loop = ラン全体、graph = ジョブ全体、と各層の単位を定義し、そこからデバッグすべき層の特定法まで一本の論理でつないでいる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">prompt はメッセージ。モデルはこの呼び出し以前を何も覚えていないので、必要な世界のすべてをプロンプトが運ぶ。出力が悪いとき求められるのは書き直しでなく「どの材料が足を引っ張ったか」の特定</li>
+        <li data-i="02">context はメモリ。ウィンドウは有限で情報は無限なのでキュレーションが強制される。良いキュレーションは詰め込むことではなく、ほとんどが「何を捨てるかを知っていること」</li>
+        <li data-i="03">harness は機械。必要なものを集め・実行し・ツールやサブエージェントを呼び・テストや judge で検証する。この検証ステップこそが「API を呼ぶ」と「エージェントを走らせる」の差分のすべて</li>
+        <li data-i="04">loop はラン。①事前に定義したゴール ②最大反復回数・予算上限というブレーキ ③体感でなく自動化された完了判定、の3点が要る。「ツールを要求しなくなったエージェントはターンを終えただけで、タスクを終えたわけではない」</li>
+        <li data-i="05">graph は協調。単一ループは「自分自身に戻るエッジを1本持つ1ノードのグラフ」にすぎないので、グラフはループを置き換えるのでなく統べる</li>
+        <li data-i="06">prompt と context はどちらもハーネスの gather ステップの内側に住む。ハーネスは1パス、ループはそのパスを再実行するか決め、グラフはどのループを走らせるかを決める</li>
+        <li data-i="07">デバッグの指針: unit of work が壊れた層を見つけてその層を直す。プロンプトは最も編集しやすいので、3層上で起きた失敗の責任まで押し付けられ続けている</li>
+      </ul>
+      <div class="pull">
+        自分のループ運用の障害切り分けチェックリストとしてそのまま使える。出力1回分が悪いならプロンプト層、途中から話が繋がらないならコンテキスト層、ツール呼び出しや検証が抜けているならハーネス層、終わったつもりで終わっていないならループ層、複数ジョブの順序や依存が崩れているならグラフ層。完了判定を「体感でなく自動」にせよという要求は、日次パイプラインなら「PDF がディスクに出来た」ではなく「配信まで到達した」を完了条件に置く設計そのもの。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,365</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/akshay_pachaar/status/2081356379026280677">@akshay_pachaar</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-26</dd>
+        <dt>CATEGORY</dt>
+        <dd>🧠 コンテキスト / ループエンジニアリング</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/akshay_pachaar/status/2081356379026280677">x.com/akshay_pachaar/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · MURASAMETECH</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🖥️ ローカルLLM / 計測 <span class="sep">/</span> @MURASAMETECH <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉ローカル LLM の「遅い」を3区間に分解する — Ollama の API が返す3つの duration を残す</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-29/topic_7.png" data-alt="〈知見〉ローカル LLM の「遅い」を3区間に分解する — Ollama の API が返す3つの duration を残す" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-29/topic_7.png" alt="〈知見〉ローカル LLM の「遅い」を3区間に分解する — Ollama の API が返す3つの duration を残す" />
+      </div>
+      <p class="lede">
+        ローカル LLM が「遅い」と感じるとき、①モデルをストレージから読み込む時間 ②プロンプトを読み取る時間 ③回答を生成する時間、の3区間に分けると原因を追いやすくなる、という計測の作法。Ollama の API は `load_duration` / `prompt_eval_duration` / `eval_duration` をそれぞれ返すので、tokens/s だけでなく最初の応答までの待ち時間も区間ごとに記録しておくと、ストレージ交換やモデル変更の効果を後から比較できる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">3区間に分ける: ①モデルのストレージからの読み込み ②プロンプトの読み取り（prefill）③回答の生成（decode）</li>
+        <li data-i="02">Ollama の API が返すフィールドは `load_duration` / `prompt_eval_duration` / `eval_duration`</li>
+        <li data-i="03">tokens/s という単一指標では、どの区間がボトルネックかが潰れて見えなくなる</li>
+        <li data-i="04">区間別に残しておくと、ストレージ交換とモデル変更のどちらが効いたかを後から比較できる</li>
+      </ul>
+      <div class="pull">
+        「遅いから量子化を強くする」「遅いからモデルを小さくする」という反射的な対処は、ボトルネックがモデルのロード時間だった場合ほとんど効かない。区間を分けて記録するだけで、打つべき手が「ストレージを速くする」「プロンプトを短くする」「モデルを軽くする」のどれかが確定する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">22</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/murasametech/status/2081575317882519947">@murasametech</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-27</dd>
+        <dt>CATEGORY</dt>
+        <dd>🖥️ ローカルLLM / 計測</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/murasametech/status/2081575317882519947">x.com/murasametech/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · DGKIKUSHU</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💼 AI×ビジネス活用 <span class="sep">/</span> @DG_KIKUSHU <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉AI を「既存業務に足す」のと「仕事の設計をやり直す」のは別物 — 前者は工数削減で頭打ちになる</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-29/topic_8.png" data-alt="〈知見〉AI を「既存業務に足す」のと「仕事の設計をやり直す」のは別物 — 前者は工数削減で頭打ちになる" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-29/topic_8.png" alt="〈知見〉AI を「既存業務に足す」のと「仕事の設計をやり直す」のは別物 — 前者は工数削減で頭打ちになる" />
+      </div>
+      <p class="lede">
+        AI を既存の業務プロセスに追加するやり方は工数削減で終わる。一方、仕事の設計そのものを「AI がある前提」で作り直すと、やれることの範囲自体が変わる。この2つはまったく別の話なのに、同じ「AI活用」という言葉でまとめて語られることが多い、という指摘。同じ発信者は「AI に手順を頼むより判断基準を頼むほうが使えるアウトプットになる」とも書いている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">既存業務に AI を追加 → 得られるのは工数削減。上限は「今やっている仕事の時間」で頭打ちになる</li>
+        <li data-i="02">AI がある前提で仕事の設計を作り直す → やれることの範囲（何を仕事として引き受けられるか）自体が変わる</li>
+        <li data-i="03">この2つが「AI活用」という同じ言葉で語られるため、投資判断と成果の期待値がずれる</li>
+        <li data-i="04">関連する作法として「AI に手順ではなく判断基準を頼む」＝「どの順番でやるか」でなく「何を優先するか、なぜか」を聞くと、作業の依頼から思考の壁打ちに変わる</li>
+      </ul>
+      <div class="pull">
+        社内で「AI を導入したのに効果が薄い」となる典型が前者で止まっているケース。工数削減は測りやすく KPI に選ばれやすいが、それだけを追うと「今の仕事を速くやる」以上には出られない。着手前に「これは足す話か、設計をやり直す話か」を明示的に切り分けるだけで、期待値と評価軸のズレをかなり防げる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">11</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/dg_kikushu/status/2081992298649518158">@dg_kikushu</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>💼 AI×ビジネス活用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/dg_kikushu/status/2081992298649518158">x.com/dg_kikushu/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://blog.modelcontextprotocol.io/posts/2026-07-28/">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-07-28/">
+      ← 前日 · 2026-07-28
+      <span class="big">Kimi K3、重み公開の翌日に Cursor と Ollama クラウドへ — 「594GB / 8×H100」を踏まずに使える経路ができた</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-07-29/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260729.0740</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

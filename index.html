@@ -14,15 +14,15 @@
 
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">DISPATCH №0728</span>
+    <span class="tick">DISPATCH №0729</span>
     <span class="sep">/</span>
-    <span>2026-07-28</span>
+    <span>2026-07-29</span>
     <span class="sep">/</span>
     <span>MORNING EDITION</span>
     <span class="sep">/</span>
     <span>08 ITEMS</span>
     <span class="sep">/</span>
-    <span>BUILD 20260728.0747</span>
+    <span>BUILD 20260729.0740</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -40,13 +40,13 @@
     </button>
     <nav class="main-nav" id="main-nav">
       <a href="./">HOME</a>
-      <a href="./news/2026-07-28/">TODAY</a>
+      <a href="./news/2026-07-29/">TODAY</a>
       <a href="./#bookmarks">BOOKMARKS</a>
       <a href="./#archive">ARCHIVE</a>
       <a href="./#about">ABOUT</a>
       <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
     </nav>
-    <div class="meta">JST · 07:47 · MON</div>
+    <div class="meta">JST · 07:40 · TUE</div>
   </div>
 </header>
 <script>
@@ -70,7 +70,7 @@
     <div class="grid">
       <div>
         <div class="eyebrow">
-          MORNING DISPATCH <span class="dot">·</span> MONDAY, JULY 28, 2026 <span class="dot">·</span> ISSUE N°0728
+          MORNING DISPATCH <span class="dot">·</span> TUESDAY, JULY 29, 2026 <span class="dot">·</span> ISSUE N°0729
         </div>
         <h1>
           VCB News<br>
@@ -84,9 +84,9 @@
     </div>
     <div class="hero-strap">
       <span><span class="k">08</span>TODAY</span>
-      <span><span class="k">21</span>BOOKMARKS / 7D</span>
-      <span><span class="k">539</span>ARCHIVE</span>
-      <span><span class="k">959</span>DELIVERED</span>
+      <span><span class="k">22</span>BOOKMARKS / 7D</span>
+      <span><span class="k">540</span>ARCHIVE</span>
+      <span><span class="k">967</span>DELIVERED</span>
       <span>SINCE 2026-04-17</span>
       <span>07:15 JST DAILY</span>
     </div>
@@ -101,38 +101,38 @@
         今朝の配信
       </div>
       <div class="trail">
-        <a href="./news/2026-07-28/">全08件を詳細ページで読む →</a>
+        <a href="./news/2026-07-29/">全08件を詳細ページで読む →</a>
       </div>
     </div>
 
     <div class="today-sub today-sub--hero">
       <h3>今日の一面</h3>
-      <div class="meta">TOP STORY · 2026-07-28</div>
+      <div class="meta">TOP STORY · 2026-07-29</div>
     </div>
     <article class="feature">
       <header class="feature-head">
-        <div class="cat"><span class="rule"></span>📰 モデル / 開発ツール · @ollama / @cursor_ai</div>
-        <h2><a href="./news/2026-07-28/#topic-1">Kimi K3、重み公開の翌日に Cursor と Ollama クラウドへ — 「594GB / 8×H100」を踏まずに使える経路ができた</a></h2>
+        <div class="cat"><span class="rule"></span>📰 プロトコル / 開発者基盤 · Model Context Protocol 公式ブログ</div>
+        <h2><a href="./news/2026-07-29/#topic-1">MCP 仕様 2026-07-28 が正式版に — プロトコルがステートレスになり、initialize ハンドシェイクとセッションが消えた</a></h2>
       </header>
-      <div class="media zoom-image" data-src="assets/images/2026-07-28/topic_1.png" data-alt="Kimi K3、重み公開の翌日に Cursor と Ollama クラウドへ — 「594GB / 8×H100」を踏まずに使える経路ができた" role="button" tabindex="0" aria-label="スライド画像を拡大">
-        <img src="assets/images/2026-07-28/topic_1.png" alt="Kimi K3、重み公開の翌日に Cursor と Ollama クラウドへ — 「594GB / 8×H100」を踏まずに使える経路ができた">
+      <div class="media zoom-image" data-src="assets/images/2026-07-29/topic_1.png" data-alt="MCP 仕様 2026-07-28 が正式版に — プロトコルがステートレスになり、initialize ハンドシェイクとセッションが消えた" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="assets/images/2026-07-29/topic_1.png" alt="MCP 仕様 2026-07-28 が正式版に — プロトコルがステートレスになり、initialize ハンドシェイクとセッションが消えた">
       </div>
       <div class="body">
         <p class="lede">
-          Moonshot AI の Kimi K3（2.8兆パラメータ MoE）の重みが 07-27 に公開された同じ日に、Ollama のクラウドと Cursor の両方で利用可能になった。Ollama では `ollama launch claude --model kimi-k3:cloud` の1コマンドで Claude Code から K3 を呼べる。前日に配信した「重みは自由でも自己ホストには 594GB のダウンロードと 8×H100 が要る」という推論インフラの壁を、ホスティング側が肩代わりする形で迂回する経路が同日に立ち上がった。
+          Model Context Protocol の新仕様 2026-07-28 が正式版として公開された。ローンチ以来最大の改訂で、中核は `initialize`/`initialized` ハンドシェイクと `Mcp-Session-Id` ヘッダの完全撤廃。各リクエストが自分でプロトコルバージョン・クライアント識別・ケーパビリティを `_meta` に載せて運ぶ自己完結型になり、リモート MCP サーバは共有セッションストアもスティッキールーティングも無しで、素のラウンドロビン LB の後ろで水平スケールできる。あわせて MCP Apps・Tasks・Enterprise-Managed Authorization が正式な「拡張」の枠組みに整理され、認可の穴埋めと12か月の廃止猶予ポリシーが入った。
         </p>
         <ul class="keypoints">
-          <li data-i="K.01">Ollama クラウドで提供開始。Claude Code から使う場合は `ollama launch claude --model kimi-k3:cloud`</li>
-          <li data-i="K.02">Ollama は公式に「Pro または Max のサブスクリプションが必要、かつ追加の usage credits を消費する」と明記。容量拡張を進行中</li>
-          <li data-i="K.03">Cursor でも利用可能に。「CursorBench でフロンティアに近いスコア」と発表し、US ベースの推論に言及</li>
-          <li data-i="K.04">モデル仕様は 2.8T MoE（896エキスパート中16アクティブ）・1M トークンコンテキスト・ネイティブ vision</li>
+          <li data-i="K.01">`initialize`/`initialized` ハンドシェイクと `Mcp-Session-Id` ヘッダを撤廃。「どのリクエストも、共有ストレージ無しに、素のラウンドロビン LB の後ろのどのインスタンスにも着地できる」</li>
+          <li data-i="K.02">アプリ側の状態まで捨てる必要はない。状態を持ち越したいサーバはツールから明示的なハンドル（`basket_id` 等）を発行し、以降の呼び出しでただの引数としてモデルに渡し返させる</li>
+          <li data-i="K.03">MRTR（Multi Round-Trip Requests）がストリーム開きっぱなしの server-initiated request を置き換え。途中でユーザー入力が要るときは `resultType: &quot;input_required&quot;` を返し、クライアントが `inputResponses` を付けて元の呼び出しをリトライする</li>
+          <li data-i="K.04">新しい `Mcp-Method` / `Mcp-Name` ヘッダで、ゲートウェイ・レートリミッタ・WAF が JSON ボディを解析せずにルーティングと計測をできる</li>
         </ul>
         <div class="footline">
-          <span><span class="label">♡</span> 1,838 likes</span>
-          <span><span class="label">SRC</span> <a href="https://x.com/ollama/status/2081771120173408767">@ollama</a></span>
+          
+          <span><span class="label">SRC</span> <a href="https://blog.modelcontextprotocol.io/posts/2026-07-28/">Model Context Protocol 公式ブログ</a></span>
           <span><span class="label">TOPIC</span> 01 / 08</span>
         </div>
-        <a class="feature-cta" href="./news/2026-07-28/#topic-1">
+        <a class="feature-cta" href="./news/2026-07-29/#topic-1">
           続きを読む <span class="arrow">→</span>
         </a>
       </div>
@@ -143,71 +143,71 @@
       <div class="meta">08 ITEMS TOTAL</div>
     </div>
     <div class="rest rest--horizontal">
-        <a class="rest-item" href="./news/2026-07-28/#topic-2">
+        <a class="rest-item" href="./news/2026-07-29/#topic-2">
           <div class="rest-num">02</div>
           <div class="rest-body">
-            <div class="cat">📰 業界動向 / 規制 · Anthropic 公式 / @AnthropicAI</div>
-            <h4 class="rest-title">Anthropic が open-weights の立場を公式表明 — 「禁止を主張したことは一度もない」、争点は3つ</h4>
-            <p class="rest-note">「オープンウェイト賛成 vs 反対」の二項対立が、Anthropic 側から「能力閾値での安全テスト義務化」と「蒸留の産業利用規制」という具体的な線引きに置き換えられた。争われているのはモデルを配ることの是非ではなく、どの能力水準から誰の検</p>
+            <div class="cat">📰 モデル / 音声AI · OpenAI API Changelog / @OpenAIDevs</div>
+            <h4 class="rest-title">OpenAI が書き起こしモデルを2種投入 — Whisper の誤り率を半分以下に、「文脈を渡せる」ASR へ</h4>
+            <p class="rest-note">議事録・商談録音・セミナー書き起こしを回している運用で効くのは、モデルを差し替えることより事前に渡す文脈を用意すること。参加者名・社名・製品名・略語をキーワードで渡し会議の主題を自由記述で添えるだけで、意味的精度が公式数値で6ポイント前後動</p>
           </div>
-          <div class="rest-likes">♡ <b>277</b></div>
+          <div class="rest-likes">♡ <b>1,310</b></div>
         </a>
-        <a class="rest-item" href="./news/2026-07-28/#topic-3">
+        <a class="rest-item" href="./news/2026-07-29/#topic-3">
           <div class="rest-num">03</div>
           <div class="rest-body">
-            <div class="cat">📰 AI×ビジネス / 労働 · OpenAI 公式レポート / @OpenAI</div>
-            <h4 class="rest-title">OpenAI 調査 — 職種特化の AI 依頼の 43.5% が「他職種の仕事」、AI が職務の境界を溶かしている</h4>
-            <p class="rest-note">「AI が仕事を奪う」ではなく「職務記述書の外側へ手が届くようになった」という方向の数字が規模をもって示された。エンジニアリングのタスクが非エンジニアに最も広く漏れ出している結果は、非エンジニアがコードに手を出す動きが個人の意欲ではなく統計</p>
+            <div class="cat">🖥️ ローカルLLM / エージェント · ggml-org/llama.cpp PR #26062</div>
+            <h4 class="rest-title">llama.cpp 本体が MCP stdio に対応 — llama-server が単体でエージェントハーネスになった</h4>
+            <p class="rest-note">ローカル LLM を「チャットが動くだけ」から「ファイル・検索・DB を触るエージェント」に引き上げる最後のピースが、外部フレームワークではなくエンジン本体に入った。機密データを外に出せない業務でのエージェント化に直接効く。実装手順の開示も</p>
           </div>
-          <div class="rest-likes">♡ <b>1,153</b></div>
+          <div class="rest-likes"></div>
         </a>
-        <a class="rest-item" href="./news/2026-07-28/#topic-4">
+        <a class="rest-item" href="./news/2026-07-29/#topic-4">
           <div class="rest-num">04</div>
           <div class="rest-body">
-            <div class="cat">📰 公式アカウント発表 · @OpenAI</div>
-            <h4 class="rest-title">GPT-Live が ChatGPT Voice の Edu / Business / Enterprise プランへ全世界展開</h4>
-            <p class="rest-note">エージェントへの指示インターフェースがキーボードから会話へ移る局面。個人プランで先に配られたものが組織プランへ降りてきたのは、業務利用の想定が固まったサイン。ただし日本語での実用度と、音声で並列エージェントを制御したときのレビュー可能性（何</p>
+            <div class="cat">📰 AI ガバナンス / 業界 · @AnthropicAI / Bloomberg</div>
+            <h4 class="rest-title">Anthropic が「フロンティア開発を意図的に減速させる」請願を公式支持 — CEO と複数の共同創業者が署名</h4>
+            <p class="rest-note">従業員の署名運動を CEO と共同創業者が追認するのは、社内の温度と経営方針が同じ方向を向いていることの公開表明にあたる。前日の open-weights 立場文書と合わせると、Anthropic は「配布の是非」ではなく「能力の進み方その</p>
           </div>
-          <div class="rest-likes">♡ <b>1,363</b></div>
+          <div class="rest-likes">♡ <b>259</b></div>
         </a>
-        <a class="rest-item" href="./news/2026-07-28/#topic-5">
+        <a class="rest-item" href="./news/2026-07-29/#topic-5">
           <div class="rest-num">05</div>
           <div class="rest-body">
-            <div class="cat">💻 AI/開発ツール · @ryoma_nakajima / akari-oss.app</div>
-            <h4 class="rest-title">Akari Video — Claude Code / Codex がそのまま編集チームになる OSS の AI ネイティブ動画編集</h4>
-            <p class="rest-note">コードで動画を作る方式は確認のたびにレンダリングが要るが、AKARI はビューワーがセーブデータを直読みするのでプレビューが即応し、レンダリングは書き出し1回に集約される。AI 編集の本質は「出させて→見て→直させて」の往復なので、その1回</p>
+            <div class="cat">💼 AI×ビジネス / 価格戦略 · Cursor 公式ブログ / @cursor_ai</div>
+            <h4 class="rest-title">Cursor が地域別プラン「Cursor Start」をインドで開始 — 月₹649・UPI 決済、常時稼働クラウドエージェント込み</h4>
+            <p class="rest-note">注目すべきは価格そのものより、常時稼働のクラウドエージェントが最安の有料段に降りてきたこと。1年前ならプレミアム機能だったものが、地域別エントリープランの標準構成に入っている。「1開発者あたりのエージェントリクエスト数はインドが世界一」とい</p>
           </div>
-          <div class="rest-likes">♡ <b>1,183</b></div>
+          <div class="rest-likes">♡ <b>6,520</b></div>
         </a>
-        <a class="rest-item" href="./news/2026-07-28/#topic-6">
+        <a class="rest-item" href="./news/2026-07-29/#topic-6">
           <div class="rest-num">06</div>
           <div class="rest-body">
-            <div class="cat">🧠 コンテキストエンジニアリング · @SuguruKun_ai</div>
-            <h4 class="rest-title">〈知見〉Opus 5 では指示を「足す」のでなく「引く」— Anthropic 公式プロンプトガイドの要点</h4>
-            <p class="rest-note">CLAUDE.md や運用プロンプトに「必ず検証して」系を書いている人は、消すだけで速くなる。モデル更新は性能向上であると同時に「モデルが標準で何をするか」の更新であり、ユーザー側の指示と重複していないかの棚卸しが毎回発生する。とくに「絞れ</p>
+            <div class="cat">🧠 コンテキスト / ループエンジニアリング · @akshay_pachaar</div>
+            <h4 class="rest-title">〈知見〉prompt → context → harness → loop → graph — 5層を「作業の単位」で切り分ける</h4>
+            <p class="rest-note">自分のループ運用の障害切り分けチェックリストとしてそのまま使える。出力1回分が悪いならプロンプト層、途中から話が繋がらないならコンテキスト層、ツール呼び出しや検証が抜けているならハーネス層、終わったつもりで終わっていないならループ層、複数ジ</p>
           </div>
-          <div class="rest-likes">♡ <b>427</b></div>
+          <div class="rest-likes">♡ <b>2,365</b></div>
         </a>
-        <a class="rest-item" href="./news/2026-07-28/#topic-7">
+        <a class="rest-item" href="./news/2026-07-29/#topic-7">
           <div class="rest-num">07</div>
           <div class="rest-body">
-            <div class="cat">🔁 ループエンジニアリング · @neil_xbt</div>
-            <h4 class="rest-title">〈知見〉エージェントループの多くに「リトライ上限」が無い — 70システム調査と「厳格エスカレーション」</h4>
-            <p class="rest-note">ループを組むときに設計されるのは大抵「うまくいく経路」で、壊れたときの経路は暗黙のまま残る。上限・成功条件・引き渡し先の3点は、ループを1本書くたびに埋められるチェックリストの粒度。cron やエージェントを常時走らせている運用では「止まら</p>
+            <div class="cat">🖥️ ローカルLLM / 計測 · @murasametech</div>
+            <h4 class="rest-title">〈知見〉ローカル LLM の「遅い」を3区間に分解する — Ollama の API が返す3つの duration を残す</h4>
+            <p class="rest-note">「遅いから量子化を強くする」「遅いからモデルを小さくする」という反射的な対処は、ボトルネックがモデルのロード時間だった場合ほとんど効かない。区間を分けて記録するだけで、打つべき手が「ストレージを速くする」「プロンプトを短くする」「モデルを軽</p>
           </div>
-          <div class="rest-likes">♡ <b>59</b></div>
+          <div class="rest-likes">♡ <b>22</b></div>
         </a>
-        <a class="rest-item" href="./news/2026-07-28/#topic-8">
+        <a class="rest-item" href="./news/2026-07-29/#topic-8">
           <div class="rest-num">08</div>
           <div class="rest-body">
-            <div class="cat">💻 AI/開発ツール · @adocomplete</div>
-            <h4 class="rest-title">〈知見〉Claude Code デスクトップ版は UI に直接マークアップして修正指示を出せる</h4>
-            <p class="rest-note">UI の手直しは「どこの何を」を言葉にするコストが高く、AI との往復が伸びやすい工程。指示を画面上の位置情報として渡せるなら、その工程だけ言語化を飛ばせる。「イメージと違うものが出てきたときの直し方」で詰まったとき、テキストで説明し直す前</p>
+            <div class="cat">💼 AI×ビジネス活用 · @dg_kikushu</div>
+            <h4 class="rest-title">〈知見〉AI を「既存業務に足す」のと「仕事の設計をやり直す」のは別物 — 前者は工数削減で頭打ちになる</h4>
+            <p class="rest-note">社内で「AI を導入したのに効果が薄い」となる典型が前者で止まっているケース。工数削減は測りやすく KPI に選ばれやすいが、それだけを追うと「今の仕事を速くやる」以上には出られない。着手前に「これは足す話か、設計をやり直す話か」を明示的に</p>
           </div>
-          <div class="rest-likes">♡ <b>533</b></div>
+          <div class="rest-likes">♡ <b>11</b></div>
         </a>
     </div>
-    <a class="rest-read-full rest-read-full--center" href="./news/2026-07-28/">
+    <a class="rest-read-full rest-read-full--center" href="./news/2026-07-29/">
       今日のディスパッチ全文 <span>→</span>
     </a>
   </div>
@@ -220,7 +220,7 @@
         <span class="en">§02 · Latest Bookmarks</span>
         最新ブックマーク
       </div>
-      <div class="trail"><a href="./bookmarks/">直近7日間 · 21件 · 全件を見る →</a></div>
+      <div class="trail"><a href="./bookmarks/">直近7日間 · 22件 · 全件を見る →</a></div>
     </div>
 
     <div class="bk-filter">
@@ -416,6 +416,27 @@ Part 6
 ぜひ、リツイートやいいねで応援よろしくお願いします！🙏</div>
         </div>
       </article>
+      <article class="xcard" data-url="https://x.com/akshay_pachaar/status/2081356379026280677" data-type="short" tabindex="0" role="button" aria-label="Akshay 🚀 の📝 ポストを開く">
+        <header class="xcard-head">
+          <div class="xcard-avatar" style="--c:#a0522d;">A</div>
+          <div class="xcard-who">
+            <span class="xcard-name">Akshay 🚀 <span class="xcard-cat">🧠 コンテキストエンジニアリング / 🔁 ループエンジニアリング</span></span>
+            <span class="xcard-handle">@akshay_pachaar · 7月26日</span>
+          </div>
+          <span class="xcard-type xcard-type--short">📝 ポスト</span>
+        </header>
+        <div class="xcard-body">
+          <p class="xcard-preview">「プロンプトエンジニアリング」「コンテキストエンジニアリング」「ハーネスエンジニアリング」「ループエンジニアリング」、そして新しく「グラフエンジニアリング」——次々に増えるこれらの用語は、互いを置き換える競合概念として語られがちだが、実際は入れ子構造であり、見分ける唯一クリーンな基準は「1 単位の作業 (a single unit of work) が何か」だと整理した投稿。5 層それぞれの unit of work を定義し、デバッグ…</p>
+        </div>
+        <footer class="xcard-foot">
+          <div class="xcard-stats"></div>
+          <a class="xcard-x" href="https://x.com/akshay_pachaar/status/2081356379026280677" target="_blank" rel="noopener noreferrer" aria-label="Xで開く">𝕏 <span aria-hidden="true">↗</span></a>
+        </footer>
+        <div class="xcard-full" hidden>
+          <div class="xcard-full-meta" data-title="" data-type="short" data-type-label="📝 ポスト" data-has-alt="0" data-primary-lang="ja"></div>
+          <div class="xcard-full-primary">「プロンプトエンジニアリング」「コンテキストエンジニアリング」「ハーネスエンジニアリング」「ループエンジニアリング」、そして新しく「グラフエンジニアリング」——次々に増えるこれらの用語は、互いを置き換える競合概念として語られがちだが、実際は入れ子構造であり、見分ける唯一クリーンな基準は「1 単位の作業 (a single unit of work) が何か」だと整理した投稿。5 層それぞれの unit of work を定義し、デバッグすべきレイヤーの特定法まで一本の論理でつないでいる。</div>
+        </div>
+      </article>
       <article class="xcard" data-url="https://x.com/u1/status/2080955239172297026" data-type="thread" tabindex="0" role="button" aria-label="Yuichi Uemura の🧵 スレッドを開く">
         <header class="xcard-head">
           <div class="xcard-avatar" style="--c:#d97706;">Y</div>
@@ -609,71 +630,6 @@ Part 7
           <div class="xcard-full-primary">ChatGPT Work agent で、ユーザーがクラウドブラウザを一時的に引き継いでログインし、その後エージェントへ処理を戻せるようになった。ログイン状態はセッションをまたいで保持されるため、認証が必要な業務サイトも継続的な自動化対象にできる。</div>
         </div>
       </article>
-      <article class="xcard" data-url="https://x.com/ClaudeDevs/status/2080703243722854516" data-type="thread" tabindex="0" role="button" aria-label="ClaudeDevs の🧵 スレッドを開く">
-        <header class="xcard-head">
-          <div class="xcard-avatar" style="--c:#a0522d;">C</div>
-          <div class="xcard-who">
-            <span class="xcard-name">ClaudeDevs <span class="xcard-cat">📰 技術業界ニュース / AIモデル</span></span>
-            <span class="xcard-handle">@ClaudeDevs · 7月24日</span>
-          </div>
-          <span class="xcard-type xcard-type--thread">🧵 スレッド</span>
-        </header>
-        <div class="xcard-body">
-          <p class="xcard-preview">- Claude Code と Claude Platform で提供開始\n- 高難度向け high effort と高速・低コスト向け設定を選択可能\n- fast mode は約2.5倍高速、基本料金の2倍\n- 大規模コードベースの長期プロジェクトを重視</p>
-        </div>
-        <footer class="xcard-foot">
-          <div class="xcard-stats"></div>
-          <a class="xcard-x" href="https://x.com/ClaudeDevs/status/2080703243722854516" target="_blank" rel="noopener noreferrer" aria-label="Xで開く">𝕏 <span aria-hidden="true">↗</span></a>
-        </footer>
-        <div class="xcard-full" hidden>
-          <div class="xcard-full-meta" data-title="" data-type="thread" data-type-label="🧵 スレッド" data-has-alt="1" data-primary-lang="ja"></div>
-          <div class="xcard-full-primary">- Claude Code と Claude Platform で提供開始\n- 高難度向け high effort と高速・低コスト向け設定を選択可能\n- fast mode は約2.5倍高速、基本料金の2倍\n- 大規模コードベースの長期プロジェクトを重視</div>
-          <div class="xcard-full-alt" hidden>Part 1 (親ポスト)
-
-Opus 5 is live in Claude Code and the Claude Platform today.
-
-A few things worth knowing: 🧵
-https://t.co/jAdUagXt9C
-
-Part 2
-
-Opus 5 defaults to high effort in Claude Code and Claude Platform. Turn it up for your hardest problems, or down for faster, cheaper turns.
-
-Fast mode is also available: ~2.5x faster at 2x base price, on the Claude Platform and in Claude Code via extra usage.
-
-Part 3
-
-Opus 5 is a step-change in coding for the Opus class.
-
-It excels at long-horizon projects in large codebases, handling architecture, deployment, and design-quality UI. It’s better at staying on track across multi-stage work, allowing you to delegate more.
-
-Part 4
-
-On agentic terminal coding (Frontier-Bench v0.1), Opus 5 is the new state of the art at 43.3%: ahead of Fable 5 (33.7%) and more than double Opus 4.8.
-
-On FrontierCode v1.1 it matches Fable 5, at half the price. https://t.co/z4jppMZuMR
-
-Part 5
-
-Try Opus 5 today. Use “claude-opus-5” on the Claude API, or run “/model claude-opus-5” in Claude Code.
-
-https://t.co/Z4WkWCSoGY
-
-Part 6
-
-To upgrade existing workloads to Opus 5, run /claude-api migrate in Claude Code.
-
-The built-in claude-api skill updates your model strings and suggests prompt improvements that are tuned for Opus 5.
-
-Part 7
-
-On Claude Platform, Opus 5 supports mid-conversation tool changes: add or remove tools without invalidating your prompt cache. 
-
-We also added fallback routing: classifier-blocked requests are routed to our recommended model based on the request.
-
-https://t.co/OId7Kd1OK6</div>
-        </div>
-      </article>
 
     </div>
   </div>
@@ -702,7 +658,7 @@ https://t.co/OId7Kd1OK6</div>
   </div>
   <div class="cal-month" data-month="2026-07">
     <div class="cal-weekdays"><span>日</span><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span>土</span></div>
-    <div class="cal-grid"><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><a class="cal-cell cal-cell--news" href="./news/2026-07-01/" aria-label="2026-07-01 の配信を開く"><span class="cal-day">1</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-02/" aria-label="2026-07-02 の配信を開く (ブックマーク4件)"><span class="cal-day">2</span><span class="cal-count">4</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-03/" aria-label="2026-07-03 の配信を開く (ブックマーク2件)"><span class="cal-day">3</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--news" href="./news/2026-07-04/" aria-label="2026-07-04 の配信を開く"><span class="cal-day">4</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-05/" aria-label="2026-07-05 の配信を開く (ブックマーク3件)"><span class="cal-day">5</span><span class="cal-count">3</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-06/" aria-label="2026-07-06 の配信を開く (ブックマーク7件)"><span class="cal-day">6</span><span class="cal-count">7</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-07/" aria-label="2026-07-07 の配信を開く (ブックマーク4件)"><span class="cal-day">7</span><span class="cal-count">4</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-08/" aria-label="2026-07-08 の配信を開く (ブックマーク8件)"><span class="cal-day">8</span><span class="cal-count">8</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-09/" aria-label="2026-07-09 の配信を開く (ブックマーク3件)"><span class="cal-day">9</span><span class="cal-count">3</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-10/" aria-label="2026-07-10 の配信を開く (ブックマーク3件)"><span class="cal-day">10</span><span class="cal-count">3</span></a><a class="cal-cell cal-cell--news" href="./news/2026-07-11/" aria-label="2026-07-11 の配信を開く"><span class="cal-day">11</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-12/" aria-label="2026-07-12 の配信を開く (ブックマーク1件)"><span class="cal-day">12</span><span class="cal-count">1</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-13/" aria-label="2026-07-13 の配信を開く (ブックマーク2件)"><span class="cal-day">13</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-14/" aria-label="2026-07-14 の配信を開く (ブックマーク2件)"><span class="cal-day">14</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-15/" aria-label="2026-07-15 の配信を開く (ブックマーク2件)"><span class="cal-day">15</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-16/" aria-label="2026-07-16 の配信を開く (ブックマーク9件)"><span class="cal-day">16</span><span class="cal-count">9</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-17/" aria-label="2026-07-17 の配信を開く (ブックマーク3件)"><span class="cal-day">17</span><span class="cal-count">3</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-18/" aria-label="2026-07-18 の配信を開く (ブックマーク2件)"><span class="cal-day">18</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-19/" aria-label="2026-07-19 の配信を開く (ブックマーク2件)"><span class="cal-day">19</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--news" href="./news/2026-07-20/" aria-label="2026-07-20 の配信を開く"><span class="cal-day">20</span></a><a class="cal-cell cal-cell--news" href="./news/2026-07-21/" aria-label="2026-07-21 の配信を開く"><span class="cal-day">21</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-22/" aria-label="2026-07-22 の配信を開く (ブックマーク5件)"><span class="cal-day">22</span><span class="cal-count">5</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-23/" aria-label="2026-07-23 の配信を開く (ブックマーク7件)"><span class="cal-day">23</span><span class="cal-count">7</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-24/" aria-label="2026-07-24 の配信を開く (ブックマーク5件)"><span class="cal-day">24</span><span class="cal-count">5</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-25/" aria-label="2026-07-25 の配信を開く (ブックマーク2件)"><span class="cal-day">25</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-26/" aria-label="2026-07-26 の配信を開く (ブックマーク2件)"><span class="cal-day">26</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--news" href="./news/2026-07-27/" aria-label="2026-07-27 の配信を開く"><span class="cal-day">27</span></a><a class="cal-cell cal-cell--news" href="./news/2026-07-28/" aria-label="2026-07-28 の配信を開く"><span class="cal-day">28</span></a><div class="cal-cell cal-cell--inactive"><span class="cal-day">29</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">30</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">31</span></div><div class="cal-cell cal-cell--empty"></div></div>
+    <div class="cal-grid"><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><a class="cal-cell cal-cell--news" href="./news/2026-07-01/" aria-label="2026-07-01 の配信を開く"><span class="cal-day">1</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-02/" aria-label="2026-07-02 の配信を開く (ブックマーク4件)"><span class="cal-day">2</span><span class="cal-count">4</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-03/" aria-label="2026-07-03 の配信を開く (ブックマーク2件)"><span class="cal-day">3</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--news" href="./news/2026-07-04/" aria-label="2026-07-04 の配信を開く"><span class="cal-day">4</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-05/" aria-label="2026-07-05 の配信を開く (ブックマーク3件)"><span class="cal-day">5</span><span class="cal-count">3</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-06/" aria-label="2026-07-06 の配信を開く (ブックマーク7件)"><span class="cal-day">6</span><span class="cal-count">7</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-07/" aria-label="2026-07-07 の配信を開く (ブックマーク4件)"><span class="cal-day">7</span><span class="cal-count">4</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-08/" aria-label="2026-07-08 の配信を開く (ブックマーク8件)"><span class="cal-day">8</span><span class="cal-count">8</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-09/" aria-label="2026-07-09 の配信を開く (ブックマーク3件)"><span class="cal-day">9</span><span class="cal-count">3</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-10/" aria-label="2026-07-10 の配信を開く (ブックマーク3件)"><span class="cal-day">10</span><span class="cal-count">3</span></a><a class="cal-cell cal-cell--news" href="./news/2026-07-11/" aria-label="2026-07-11 の配信を開く"><span class="cal-day">11</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-12/" aria-label="2026-07-12 の配信を開く (ブックマーク1件)"><span class="cal-day">12</span><span class="cal-count">1</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-13/" aria-label="2026-07-13 の配信を開く (ブックマーク2件)"><span class="cal-day">13</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-14/" aria-label="2026-07-14 の配信を開く (ブックマーク2件)"><span class="cal-day">14</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-15/" aria-label="2026-07-15 の配信を開く (ブックマーク2件)"><span class="cal-day">15</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-16/" aria-label="2026-07-16 の配信を開く (ブックマーク9件)"><span class="cal-day">16</span><span class="cal-count">9</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-17/" aria-label="2026-07-17 の配信を開く (ブックマーク3件)"><span class="cal-day">17</span><span class="cal-count">3</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-18/" aria-label="2026-07-18 の配信を開く (ブックマーク2件)"><span class="cal-day">18</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-19/" aria-label="2026-07-19 の配信を開く (ブックマーク2件)"><span class="cal-day">19</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--news" href="./news/2026-07-20/" aria-label="2026-07-20 の配信を開く"><span class="cal-day">20</span></a><a class="cal-cell cal-cell--news" href="./news/2026-07-21/" aria-label="2026-07-21 の配信を開く"><span class="cal-day">21</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-22/" aria-label="2026-07-22 の配信を開く (ブックマーク5件)"><span class="cal-day">22</span><span class="cal-count">5</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-23/" aria-label="2026-07-23 の配信を開く (ブックマーク7件)"><span class="cal-day">23</span><span class="cal-count">7</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-24/" aria-label="2026-07-24 の配信を開く (ブックマーク5件)"><span class="cal-day">24</span><span class="cal-count">5</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-25/" aria-label="2026-07-25 の配信を開く (ブックマーク2件)"><span class="cal-day">25</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-07-26/" aria-label="2026-07-26 の配信を開く (ブックマーク3件)"><span class="cal-day">26</span><span class="cal-count">3</span></a><a class="cal-cell cal-cell--news" href="./news/2026-07-27/" aria-label="2026-07-27 の配信を開く"><span class="cal-day">27</span></a><a class="cal-cell cal-cell--news" href="./news/2026-07-28/" aria-label="2026-07-28 の配信を開く"><span class="cal-day">28</span></a><a class="cal-cell cal-cell--news" href="./news/2026-07-29/" aria-label="2026-07-29 の配信を開く"><span class="cal-day">29</span></a><div class="cal-cell cal-cell--inactive"><span class="cal-day">30</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">31</span></div><div class="cal-cell cal-cell--empty"></div></div>
   </div>
   <div class="cal-month" data-month="2026-06" hidden>
     <div class="cal-weekdays"><span>日</span><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span>土</span></div>
@@ -751,6 +707,13 @@ https://t.co/OId7Kd1OK6</div>
 })();
 </script>
     <ul class="archive-list archive-grid">
+      <li>
+        <span class="date">07.29 TUE</span>
+        <span class="count">08 ITEMS</span>
+        <span class="headline"><a href="./news/2026-07-29/">MCP 仕様 2026-07-28 が正式版に — プロトコルがステートレスになり、initialize ハンドシェイクとセッションが消えた、OpenAI が書き起こしモデルを2種投入 — Whisper の誤り率を半分以下に、「文脈を渡せる」ASR へ / llama.cpp 本体が MCP stdio に対応 — llama-server が単体でエージェントハーネスになった</a></span>
+        <span class="tags">Model Context Protocol 公式ブログ / OpenAI API Changelog / @OpenAIDevs / ggml-org/llama.cpp PR #26062 / AnthropicAI / Bloomberg</span>
+        <span class="arrow">→</span>
+      </li>
       <li>
         <span class="date">07.28 MON</span>
         <span class="count">08 ITEMS</span>
@@ -1460,15 +1423,15 @@ https://t.co/OId7Kd1OK6</div>
       </div>
       <div class="about-stats">
         <div class="about-stat">
-          <div class="num">98</div>
+          <div class="num">99</div>
           <div class="lbl">Issues Published</div>
         </div>
         <div class="about-stat">
-          <div class="num">641</div>
+          <div class="num">649</div>
           <div class="lbl">Items Curated</div>
         </div>
         <div class="about-stat">
-          <div class="num">959</div>
+          <div class="num">967</div>
           <div class="lbl">Delivered</div>
         </div>
         <div class="about-stat">
@@ -1485,7 +1448,7 @@ https://t.co/OId7Kd1OK6</div>
     <h3>毎朝、<em>続きを。</em></h3>
     <p>毎朝 07:15 JST に最新の配信が並びます。</p>
     <div class="cta-row">
-      <a class="primary" href="./news/2026-07-28/">📄 今日のディスパッチを読む</a>
+      <a class="primary" href="./news/2026-07-29/">📄 今日のディスパッチを読む</a>
       <a href="#archive">📅 過去のアーカイブ</a>
       <a href="#bookmarks">🔖 ブックマーク</a>
     </div>
@@ -1508,7 +1471,7 @@ https://t.co/OId7Kd1OK6</div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="./">HOME</a></li>
-          <li><a href="./news/2026-07-28/">TODAY</a></li>
+          <li><a href="./news/2026-07-29/">TODAY</a></li>
           <li><a href="./#bookmarks">BOOKMARKS</a></li>
           <li><a href="./#archive">ARCHIVE</a></li>
           <li><a href="./#about">About</a></li>
@@ -1525,7 +1488,7 @@ https://t.co/OId7Kd1OK6</div>
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 20260728.0747</span>
+      <span>BUILD 20260729.0740</span>
     </div>
   </div>
 </footer>

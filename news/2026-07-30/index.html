@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-07-30 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-07-30 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0730</span>
+    <span class="sep">/</span>
+    <span>2026-07-30</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260730.0752</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-07-30/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:52 · WED</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · WEDNESDAY · JULY 30, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>07<span class="dot">.</span>30</h1>
+    <div class="strap">
+      <span>Claude · OpenAI · 〈実測〉Claude · 〈知見〉モデル別</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 7 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 セキュリティ / AI研究 <span class="sep">/</span> ANTHROPIC RESEARCH <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Mythos が暗号アルゴリズムの新しい弱点を発見 — 耐量子署名 HAWK の実効鍵長を60時間で半減</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-30/topic_1.png" data-alt="Claude Mythos が暗号アルゴリズムの新しい弱点を発見 — 耐量子署名 HAWK の実効鍵長を60時間で半減" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-30/topic_1.png" alt="Claude Mythos が暗号アルゴリズムの新しい弱点を発見 — 耐量子署名 HAWK の実効鍵長を60時間で半減" />
+      </div>
+      <p class="lede">
+        Anthropic が 2026-07-28、非公開モデル Claude Mythos Preview を使った暗号研究で2件の新しい攻撃を発見したと公表した。1件は NIST 評価中の耐量子署名候補 HAWK に対するもので、格子に潜む自明でない自己同型を突いて HAWK-256 の完全鍵復元コストを 2^64 → 2^38 に落とし、実効鍵長を半減させた。もう1件は7ラウンドに削減した AES-128 に対する「Möbius Bridge」で、既知最良の中間一致攻撃より 200〜800倍速い。いずれも実運用システムには影響せず、変更が必要な製品ソフトウェアは無いと Anthropic 自身が明記している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">HAWK-256 の完全鍵復元の期待コストが 2^64 → 2^38 に低下（実効鍵長が半減）。より大きな HAWK 鍵は依然として攻撃非現実的</li>
+        <li data-i="02">HAWK は2年間・2ラウンドの専門家レビューを通過していたスキームで、その間この対称性は見つかっていなかった。Mythos は約60時間・API コスト約10万ドルで到達し、人間の入力は「プロジェクト管理」程度に限られた</li>
+        <li data-i="03">AES 側は 7/10 ラウンドの AES-128 が対象。「Möbius Bridge」＝より洗練されたフィンガープリンティングで列挙要件を 256倍削減し、既知最良の中間一致攻撃比で 200〜800倍高速</li>
+        <li data-i="04">AES の結果はほぼ完全に自律的な発見。研究者が用意したのは足場と3日間で3回の実質的なプロンプトだけで、Claude は数十億トークンを生成した</li>
+        <li data-i="05">実世界への影響は無い。HAWK は候補段階で未配備、AES 攻撃は削減版のみで完全な AES は安全（実装には数億ドル規模のコストがかかる）。どちらも多項式時間ではなく指数時間の攻撃にとどまる</li>
+        <li data-i="06">検証が律速だった。AES の結果は2人の研究者が正しさに確信を持つまでほぼ1か月を要し、研究者はモデルの主張を検証できるだけの暗号研究を学ぶのに数百時間を費やした</li>
+        <li data-i="07">責任ある開示手順を踏み、学術者に相談のうえ米政府・業界パートナーへ事前共有。HAWK は結果公開と同時に NIST の公開メーリングリストへ調整開示された</li>
+      </ul>
+      <div class="pull">
+        「AI が新しい数学的知見を出せるか」という議論が、査読を2度通ったスキームの穴を実際に見つけるという形で一段進んだ。ただし持ち帰るべきはむしろ非対称のほうで、モデルはほぼ自律で60時間走ったのに人間側の検証には1か月と数百時間かかっている — 生成が速くなるほど検証がボトルネックになるという構図は、そのまま自分のループ設計に返ってくる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.anthropic.com/research/discovering-cryptographic-weaknesses">Anthropic Research</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 セキュリティ / AI研究</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.anthropic.com/research/discovering-cryptographic-weaknesses">https://www.anthropic.com/research/discovering-cryptographic-weaknesses</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · OPENAI OPENAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 技術業界ニュース / 🔧 セキュリティ <span class="sep">/</span> OPENAI (@OPENAI) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>OpenAI が Codex Security CLI をオープンソース公開 — 実行をまたいで検出結果を追跡し、修正まで検証する</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-30/topic_2.png" data-alt="OpenAI が Codex Security CLI をオープンソース公開 — 実行をまたいで検出結果を追跡し、修正まで検証する" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-30/topic_2.png" alt="OpenAI が Codex Security CLI をオープンソース公開 — 実行をまたいで検出結果を追跡し、修正まで検証する" />
+      </div>
+      <p class="lede">
+        OpenAI が Codex Security CLI をオープンソースとして公開した。リポジトリのスキャン、実行をまたいだ検出結果の追跡、修正の検証、CI/CD へのセキュリティチェックの追加ができる CLI で、`npm install @OpenAI/codex-security` または `npx @OpenAI/codex-security@latest --help` で使える。告知前に Hacker News に見つけられたことを OpenAI 自身がポストの書き出しに使っており、early release だと明言してフィードバックを募っている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">できることは4つ — リポジトリのスキャン / 実行をまたいだ検出結果の追跡（track findings across runs）/ 修正の検証（verify fixes）/ CI/CD へのセキュリティチェックの追加</li>
+        <li data-i="02">導入は `npm install @OpenAI/codex-security`、まず試すなら `npx @OpenAI/codex-security@latest --help`。ソースとドキュメントも公開されている</li>
+        <li data-i="03">本命は「毎回全件報告」からの脱却。一般的な静的解析は毎回ゼロから全件を出すので既知の未対応項目とノイズが毎回同量出てきて、結果として誰も見なくなる</li>
+        <li data-i="04">実行間で findings を追跡できれば「前回から増えた分だけ」を見られるので CI に入れても運用が破綻しない。修正の検証がセットなのは「直したつもり」を潰すため</li>
+        <li data-i="05">OpenAI 自身が early release と明記しており、対象言語・ルール数・既存ツール（Semgrep 等）との比較データは公開されていない</li>
+        <li data-i="06">守備範囲はコード内容のスキャン。後述の「4段防衛線」でいう4段目にあたるので、入れることは「守った」ではなく「コードの中身も一応見る」を足すことになる</li>
+      </ul>
+      <div class="pull">
+        Codex を日常的に使っているなら `npx` で1回走らせるコストは低く、出力を見てから CI 組み込みを判断できる。ただし同じ週に「4段目だけ入れても上流が開いていれば意味が薄い」という実測が出ているので、これ1本で守った気にならない使い方が前提になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">12,191</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAI/status/2082263717916586117">@OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-29</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 技術業界ニュース / 🔧 セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAI/status/2082263717916586117">x.com/OpenAI/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · TATSUKI  CLAUDE CO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 インフラ・セキュリティ / 💻 AI開発ツール <span class="sep">/</span> TATSUKI | CLAUDE CODE活用支援 (@NOBEL_824) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>〈実測〉Claude Code のセキュリティは4段ある — 公式プラグインだけ入れても出番が来ない</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-30/topic_3.png" data-alt="〈実測〉Claude Code のセキュリティは4段ある — 公式プラグインだけ入れても出番が来ない" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-30/topic_3.png" alt="〈実測〉Claude Code のセキュリティは4段ある — 公式プラグインだけ入れても出番が来ない" />
+      </div>
+      <p class="lede">
+        公式セキュリティプラグイン `security-guidance` を2ヶ月動かして動作ログ 17,385 行を全解析したところ、25本ある検知ルールのうち実際に発火したのは1本だけで、しかもその1本は唯一コード内容を検査しないルールだった。ただし著者の結論は「プラグインが悪い」ではなく「入れる順番が逆」。Claude Code のセキュリティは公式ドキュメント上で4段（サンドボックス→権限ルール→スキャン→プラグイン）に整理されており、プラグインは最下流の4段目なので、上流を置かないとそもそも出番が来ない。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">ログ実測の内訳 — ターン終了時レビュー起動 416回 / レビュー対象なしの空振り 322回（77%）/ LLM レビューまで走った 38回（全体の9%）/ そのレビューの指摘 0件 / 鳴ったルール種類は 25種中1種</li>
+        <li data-i="02">唯一鳴った `github_actions_workflow` は 25本中で唯一コード内容を見ないルール。`.github/workflows/` 下の yml を触った事実だけで発火する（危険なコードを書いたからではなくファイルを開いたから鳴った）</li>
+        <li data-i="03">サンドボックスは初期状態で無効。`/sandbox` → Mode タブで auto-allow を選ぶ。macOS は標準搭載の Seatbelt を使うので追加インストール不要、Linux/WSL2 は `bubblewrap` と `socat`、Windows は WSL2 内で動かす</li>
+        <li data-i="04">穴1 — 公式ドキュメントに「There is no built-in credential deny list, so only the files and variables you list are restricted.」と明記されている。実測では `~/.ssh` はブロックされたが `~/.config/gh/hosts.yml`（GitHub CLI が平文でトークンを置くファイル）は読めたまま</li>
+        <li data-i="05">穴2 — 公式は「新規ドメインは初回に許可を求める」と書くが、auto-allow では5ドメインすべてに到達し一度も許可を聞かれなかった。つまり書き換えは止まるが持ち出しは止まらない</li>
+        <li data-i="06">サンドボックスが囲うのは Bash とその子プロセスだけで、`Read`/`Edit`/`Write` は権限ルール側が効くため両方書く必要がある。また `network.strictAllowlist` はユーザー設定・管理者設定・CLI `--settings` からしか効かず、リポジトリの `.claude/settings.json` に書いても無視される</li>
+        <li data-i="07">公式25ルールの守備範囲は JS/TS・Python・Go のみ（PHP・Ruby・Java・Rails は0本）。正規表現層にハードコード認証情報検知も SQL インジェクション検知も入っておらず、レビュー対象は Claude が自分でコミットしたときだけ</li>
+      </ul>
+      <div class="pull">
+        「一番目立つ・一番新しい・一番宣伝されている対策が、実は最下流だった」という構造の具体例で、個人・小規模なら1段目と2段目を置くだけで守りの大半が完成する。組み込みの拒否リストが無いという仕様は誰の環境にも当てはまるので、`~/.config/gh` や API キーを入れた `.env` は自分で書かない限り読めたままになる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">956</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/nobel_824/status/2081962142056792475">@nobel_824</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 インフラ・セキュリティ / 💻 AI開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/nobel_824/status/2081962142056792475">x.com/nobel_824/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · / LAST SCENE YAGIR</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🧠 コンテキストエンジニアリング / 💻 AI開発ツール <span class="sep">/</span> やぎ（八木 利生太郎）/ LAST SCENE代表 (@YAGIRYUUU) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>〈知見〉モデル別 Anthropic 公式プロンプトガイドの差分 — まずやるべきは指示の追加ではなく削除</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-30/topic_4.png" data-alt="〈知見〉モデル別 Anthropic 公式プロンプトガイドの差分 — まずやるべきは指示の追加ではなく削除" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-30/topic_4.png" alt="〈知見〉モデル別 Anthropic 公式プロンプトガイドの差分 — まずやるべきは指示の追加ではなく削除" />
+      </div>
+      <p class="lede">
+        Anthropic がモデルごとに出している公式プロンプトガイド（Fable 5 / Sonnet 5 / Opus 5）を全部読み込み、共通ルールとモデル別の差分に整理した記事。核心は進化方向の定式化で、旧世代は「放っておくと変なことをするから禁止と手順で縛る」、現世代は「勝手に検証し勝手に気を利かせるからスコープと判断基準だけ渡して任せる」。だから旧世代向けの「必ず検証して」「徹底的にやって」は現世代では過剰トリガーになり、まずやるべきは指示の追加ではなく削除だと結論している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">公式ガイド自身が「CRITICAL: You MUST〜みたいな強い言葉は普通のトーンに戻せ」と書いている</li>
+        <li data-i="02">資料が先、指示は最後。2万トークンを超える長文では質問を末尾に置くだけで回答品質が最大30%向上したテスト結果がガイドに載っている。「回答の前にまず関連箇所を引用させる」を足すと長文で迷子にならない</li>
+        <li data-i="03">Opus 5 — 「ダブルチェックして」は逆効果（言われなくても検証するので二重に走る）。回答が長いのは effort では直らない（effort は思考量で出力量ではない）。サブエージェントは「数手で終わる仕事は振るな」「1体で済むなら1体」。コンテキストは100万トークンが標準で、effort は low/medium でもバグ発見の精度が維持される</li>
+        <li data-i="04">Sonnet 5 — 罠は「指示を守りすぎる」。「重大な問題だけ報告して」と書くと同じ深さで調べてバグを見つけた上で基準未満と判断して黙るので、公式推奨は「全部報告させ、信頼度と重大度を添えさせ、絞り込みは別工程」</li>
+        <li data-i="05">Sonnet 5 の移行トラップ — `temperature` が使えなくなった（設定するとエラー）、トークナイザー変更で同テキストが約30%増、effort は medium が旧 4.6 の high 相当</li>
+        <li data-i="06">Fable 5 — 「報告する前に各主張を今セッションのツール実行結果と突き合わせろ。未検証なら未検証と言え」で、捏造を誘発するように設計されたテストですら虚偽報告がほぼゼロになった。メモリの運用ルールもガイドに載っている（「1ファイル1教訓、重複は更新、間違いは削除」）</li>
+        <li data-i="07">見直しの優先順は ①「ダブルチェックして」を消す ②「重大なものだけ報告」を「全部報告→後で絞る」に ③長さは effort ではなく言葉で ④資料が先・指示が後 ⑤MUST/CRITICAL を普通のトーンに。著者は「1と4だけでもコストと精度が目に見えて変わる」としている</li>
+      </ul>
+      <div class="pull">
+        自分の `CLAUDE.md` / `AGENTS.md` / `SKILL.md` をそのまま健康診断できる。ただし全部消すのが正解ではなく、過去に実際に事故が起きて書かれた行と念のため書いた行を分けるのが本筋。「発見と選別を分ける」（全部出させてから別工程で絞る）はレビュー系スキルの設計に直接効く。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">283</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/yagiryuuu/status/2081996155077230780">@yagiryuuu</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>🧠 コンテキストエンジニアリング / 💻 AI開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/yagiryuuu/status/2081996155077230780">x.com/yagiryuuu/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · ARXIV 260723809MET</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📖 AI研究 / コンテキストエンジニアリング <span class="sep">/</span> ARXIV 2607.23809（META / CMU） <span class="sep">/</span> NEWS
+      </div>
+      <h2>ACM: Agentic Context Management — 「いつ圧縮するか」をエージェント自身に決めさせる（Meta / CMU）</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-30/topic_5.png" data-alt="ACM: Agentic Context Management — 「いつ圧縮するか」をエージェント自身に決めさせる（Meta / CMU）" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-30/topic_5.png" alt="ACM: Agentic Context Management — 「いつ圧縮するか」をエージェント自身に決めさせる（Meta / CMU）" />
+      </div>
+      <p class="lede">
+        Meta と CMU の研究者による、長期タスク向けのコンテキスト管理フレームワーク ACM の論文（arXiv 2607.23809、2026-07-26 投稿）。本番のエージェントは1ターンごとにコンテキストを積み上げるが、既存の圧縮手法は「トークン数がしきい値に達したら圧縮して残りを捨てる」という硬直的なルールで発火するため、いま取り組んでいる作業と無関係な理由で発火してしまう。ACM はエージェントに専用のコンテキスト編集ツールを渡し、いつ圧縮するかをエージェント自身に決めさせ、捨てる内容は外部メモリへ退避して必要になったときに問い合わせる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">論文タイトルは「ACM: Agentic Context Management for Long Horizon Tasks」、arXiv 2607.23809、投稿は 2026-07-26</li>
+        <li data-i="02">著者は Xiaochuan Li / Ryan Ming / Meng Chu / Shuai Shao / Rong Jin / Chenyan Xiong（Meta・CMU）</li>
+        <li data-i="03">問題設定は「既存の圧縮手法は必然的に情報損失を伴い、硬直的なヒューリスティックルールで発火する」こと。しきい値方式はタスクの区切りと無関係なところで記憶を切る</li>
+        <li data-i="04">仕組みは3点 — 専用のコンテキスト編集ツールでロスレスな管理を行う / エージェントが自律的に圧縮タイミングを決める / 捨てた内容を外部メモリへ退避し必要時に取り出す（人間の記憶とのやり取りに着想）</li>
+        <li data-i="05">効果的なコンテキスト管理の実演をもとにしたポストトレーニングのパイプラインも構築している</li>
+        <li data-i="06">分析で示されたのは、ピーク時のトークン圧力が下がること・より長い探索が可能になること・独立した試行間でより一貫した解が出ること</li>
+        <li data-i="07">査読前のプレプリントで、abstract には定量的なベンチマーク数値が示されていない（効果は定性的な記述にとどまる）</li>
+      </ul>
+      <div class="pull">
+        「コンテキストが溢れたら圧縮」を自動でやっているエージェント運用にそのまま効く指摘。しきい値方式はタスクの区切りと無関係なところで記憶が切れるので、長い作業の途中で話が繋がらなくなる原因になる。圧縮タイミングをエージェント自身に持たせ、捨てたものは外部に置いて引ける状態にするという設計は、`/compact` やメモリファイルの運用を見直すときの下敷きになる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://arxiv.org/abs/2607.23809">arXiv 2607.23809（Meta / CMU）</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-26</dd>
+        <dt>CATEGORY</dt>
+        <dd>📖 AI研究 / コンテキストエンジニアリング</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://arxiv.org/abs/2607.23809">https://arxiv.org/abs/2607.23809</a></dd>
+        <dd><a href="https://x.com/omarsar0/status/2082105300392542246">x.com/omarsar0/status/208210530039254224…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · SKILLSSHVERCEL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📖 開発ツール / エコシステム <span class="sep">/</span> SKILLS.SH（VERCEL） <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉skills.sh — Agent Skills のオープンなエコシステム、1コマンドでエージェントに能力を足す</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-30/topic_6.png" data-alt="〈知見〉skills.sh — Agent Skills のオープンなエコシステム、1コマンドでエージェントに能力を足す" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-30/topic_6.png" alt="〈知見〉skills.sh — Agent Skills のオープンなエコシステム、1コマンドでエージェントに能力を足す" />
+      </div>
+      <p class="lede">
+        Vercel が運営する Agent Skills のディレクトリ。やりたいことを検索して `npx skills add &lt;owner&gt;/&lt;repo&gt;` の1コマンドでエージェントに能力を追加できる。Anthropic・Microsoft・Supabase・Firebase といった各社の公式スキルと、独立開発者のスキルが同じ場所に並び、リーダーボードの累計インストール数は 1,026,775 件に達している。対応クライアントは20以上で、Claude Code で入れたスキルの資産が Cursor や Codex 側でも効く。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">運営は Vercel（サイトのフッターに「Made with care by Vercel」）。スキル自体は GitHub 上でオープンソース</li>
+        <li data-i="02">リーダーボードの累計インストール数は 1,026,775 件</li>
+        <li data-i="03">主な公開元は Vercel Labs / Anthropic / Microsoft（Azure 系）/ Matt Pocock / LarkSuite・Feishu / Supabase / Firebase / HeyGen</li>
+        <li data-i="04">導入コマンドは `npx skills add &lt;owner&gt;/&lt;repo&gt;` の1行</li>
+        <li data-i="05">対応クライアントは20以上（Claude Code / Cursor / GitHub Copilot / Windsurf / Gemini / Cline / VS Code / Zed ほか）</li>
+        <li data-i="06">特定のスキルは URL で直接指せる（例: skills.sh/anthropics/skills/skill-creator、skills.sh/mattpocock/skills/grill-me）</li>
+        <li data-i="07">導入は外部リポジトリのコードを取り込む行為なので、入れる前に SKILL.md を読むのが前提になる</li>
+      </ul>
+      <div class="pull">
+        「必要な能力が無いとき、自分で書く前にまず探す」を安く実行できる場所。スキルを1本自作する前に既存のものを1コマンドで入れて動かし、中の SKILL.md を読んで書き方を学ぶという導入経路が使える。複数クライアントに対応しているので、入れたスキルの資産がツールを乗り換えても効くのも選定理由になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.skills.sh/">skills.sh（Vercel）</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-27</dd>
+        <dt>CATEGORY</dt>
+        <dd>📖 開発ツール / エコシステム</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.skills.sh/">https://www.skills.sh/</a></dd>
+        <dd><a href="https://x.com/ihteshamali/status/2081780438415380785">x.com/ihteshamali/status/208178043841538…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · APPMARKELABO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🎨 デザイン・UI/UX / 💼 マーケティング <span class="sep">/</span> アプリマーケティング研究所 (@APPMARKELABO) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>〈知見〉お問い合わせページに実績ロゴを置いたら CVR が12%改善 — 効くのは集客ではなく最終段の離脱防止</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-30/topic_7.png" data-alt="〈知見〉お問い合わせページに実績ロゴを置いたら CVR が12%改善 — 効くのは集客ではなく最終段の離脱防止" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-30/topic_7.png" alt="〈知見〉お問い合わせページに実績ロゴを置いたら CVR が12%改善 — 効くのは集客ではなく最終段の離脱防止" />
+      </div>
+      <p class="lede">
+        お問い合わせページ（＝コンバージョン直前のページ）に導入企業の実績ロゴを追加しただけで、コンバージョン率が 12% 改善したという取材事例。効いた理由の仮説は「お問い合わせまであと一歩の人たちの不安の緩和」で、集客の改善ではなく離脱の防止として働いている。投稿者は一般化して「コンバージョン直前のページに信頼性を高めるような情報を置くだけでも、お問い合わせや申し込みの数が増える可能性がある」としている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">変更内容は「お問い合わせページに実績ロゴを追加」の1点のみで、結果はコンバージョン率 +12%</li>
+        <li data-i="02">効いた理由の仮説は「お問い合わせまで『あと一歩』のひとたちの不安の緩和」＝集客ではなく離脱の防止として働いている</li>
+        <li data-i="03">一般化すると「コンバージョン直前のページに信頼性を高めるような情報を置くだけでも、お問い合わせや申し込みの数が増える可能性がある」</li>
+        <li data-i="04">LP 上部には実績や導入企業ロゴを載せていても、フォームページに遷移した瞬間にそれが消える構成は多く、そこが手つかずで残っている</li>
+        <li data-i="05">変更点を1つに絞れば因果が読めるので、フォームページの表示→送信率を先に取っておけば12%級の変化は十分検知できる</li>
+        <li data-i="06">同アカウントは併せて AI 検索対策（「AI 検索の影響」の把握方法・今日からできるコンテンツ施策）の取材記事も更新している</li>
+      </ul>
+      <div class="pull">
+        工数がほぼゼロで効果が単独で測れる改修で、申込フォーム・ウェビナー登録・資料ダウンロードにそのまま横展開できる。特に判断コストが低い代わりに離脱も軽いウェビナー申込では、直前ページの信頼シグナルが相対的に効きやすい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">505</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/appmarkelabo/status/2081695822731981258">@appmarkelabo</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-27</dd>
+        <dt>CATEGORY</dt>
+        <dd>🎨 デザイン・UI/UX / 💼 マーケティング</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/appmarkelabo/status/2081695822731981258">x.com/appmarkelabo/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://www.anthropic.com/research/discovering-cryptographic-weaknesses">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-07-29/">
+      ← 前日 · 2026-07-29
+      <span class="big">MCP 仕様 2026-07-28 が正式版に — プロトコルがステートレスになり、initialize ハンドシェイクとセッションが消えた</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-07-30/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260730.0752</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

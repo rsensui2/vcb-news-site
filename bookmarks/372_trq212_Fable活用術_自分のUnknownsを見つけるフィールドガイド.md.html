@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №028</span>
+    <span class="tick">BOOKMARK №031</span>
     <span class="sep">/</span>
     <span>2026-07-04</span>
     <span class="sep">/</span>
     <span>@trq212</span>
     <span class="sep">/</span>
-    <span>462 ITEMS</span>
+    <span>465 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:14 WED</span>
+    <span>JST 07:28 THU</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,19 +305,19 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-07-28/">NEWS</a>
+      <a href="../news/2026-07-29/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:14 · WED</div>
+    <div class="meta">JST · 07:28 · THU</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-07-04 <span>/</span> №028
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-07-04 <span>/</span> №031
     </div>
     <div class="cat-line">
       <span>💻 AI / エージェント開発ワークフロー</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">A Field Guide to Fable: Finding Your Unknowns — Fable と働くコツは「自分の Unknowns を見つけること」</h1>
     <div class="strap">
-      <span><span class="label">№</span>028 / 462</span>
+      <span><span class="label">№</span>031 / 465</span>
       <span><span class="label">SRC</span><a href="https://x.com/trq212/status/2073100352921215386" target="_blank" rel="noopener noreferrer">x.com/trq212 ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/372_trq212_Fable%E6%B4%BB%E7%94%A8%E8%A1%93_%E8%87%AA%E5%88%86%E3%81%AEUnknowns%E3%82%92%E8%A6%8B%E3%81%A4%E3%81%91%E3%82%8B%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E3%82%AC%E3%82%A4%E3%83%89.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">028<span class="ord">BOOKMARK / 462</span></aside>
+    <aside class="numeral">031<span class="ord">BOOKMARK / 465</span></aside>
     <article class="prose">
 <p><strong>記事URL:</strong> https://x.com/i/article/2073090223194755072</p><p><strong>カテゴリ:</strong> 💻 AI / エージェント開発ワークフロー</p><p><strong>有益度:</strong> ⭐⭐⭐⭐⭐</p><p><strong>エンゲージメント:</strong> Likes 6,435 / RT 748 / Bookmarks 14,627 / Views 1,853,546 / Replies 193</p><h2>概要</h2><p>Anthropic の Thariq (@trq212) による、Claude Fable 5 と協働するためのフィールドガイド。核となる比喩は「地図は領土ではない (the map is not the territory)」。プロンプト・スキル・コンテキスト（＝地図）と、実際にコードや現実が存在する場所（＝領土）の差分が「unknowns（未知）」であり、Fable は「作業の質が、自分が unknowns を明確化できる能力によってボトルネックになる初めてのモデル」だと述べる。unknowns を実装の前・最中・後で発見していく反復プロセスと、その具体テクニック集を紹介している。</p><h2>まとめ</h2><ul><li><strong>4象限で unknowns を分解する</strong>:</li></ul><p>  - Known Knowns = プロンプトに書いてあること（何をやってほしいか）</p><p>  - Known Unknowns = まだ決めてないが、決めてないと自覚していること</p><p>  - Unknown Knowns = 当たり前すぎて書かないが、見れば「それだ」と分かること</p><p>  - Unknown Unknowns = そもそも考慮すらしていないこと</p><ul><li>優れたエージェンティックコーダー（Boris や Jarred）は unknowns が少なく、コードベースとモデル挙動の両方に深くシンクしている。だが同時に unknowns の存在を前提に計画する。unknowns を減らし・織り込むことがエージェンティックコーディングのスキルそのもの。</li><li><strong>Claude への指示は繊細なバランス</strong>: 具体的すぎると方針転換すべき時も指示に従い続け、曖昧すぎると task に合わない業界ベストプラクティスで勝手に判断する。</li><li><strong>フェーズ別テクニック集</strong>:</li></ul><p>  - *実装前*: <strong>Blind Spot Pass</strong>（「blindspot pass」「unknown unknowns」という言葉を literal に使い、自分の盲点を洗い出させる）／<strong>ブレスト &amp; プロトタイプ</strong>（HTMLで複数デザイン案を出させ反応する）／<strong>インタビュー</strong>（1問ずつ、アーキテクチャが変わる質問を優先させる）／<strong>リファレンス</strong>（最良の参照はソースコード。好きなライブラリのフォルダを指させる）／<strong>実装計画</strong>（変わりやすい箇所＝データモデル・型・UXフローを先頭に書かせる）</p><p>  - *実装中*: <strong>implementation-notes.md</strong> を書かせ、計画から逸脱したら保守的な選択をして 'Deviations' に記録させる</p><p>  - *実装後*: <strong>ピッチ &amp; 説明資料</strong>（レビュワーの承認を加速）／<strong>クイズ</strong>（変更内容をHTMLレポート＋クイズで説明させ、満点を取れるまでマージしない）</p><ul><li><strong>Fable ローンチ動画は全編 Claude Code で編集</strong>: 未知の領域だったので、既知（Claudeがコードで動画編集・文字起こしできる）から始め、Whisper の仕組みを教えてもらい、Remotion でプロトタイプ動画を作り、カラーグレーディングは「そもそも良い状態が分からない」ので Claude に教わって自分の unknowns を発見した。</li></ul><h2>日本語訳全文</h2><p>Claude Fable 5 と働いていると、古い教訓を何度も学び直させられる——「地図は領土ではない」。</p><p>地図、つまり「やるべき作業の表現」は、私のプロンプト・スキル・コンテキストであり、Claude に与えるものだ。領土とは、作業が実際に起きる場所——コードベース、現実世界、その本当の制約——のことだ。</p><p>地図と領土の差分を、私は「unknowns（未知）」と呼ぶ。Claude が unknown にぶつかると、私が何を望んでいるかについての最善の推測に基づいて判断を下さなければならない。作業量が多いほど、Claude が遭遇しうる unknowns は増える。Fable は、作業の質が「自分が unknowns をどれだけ明確化できるか」によってボトルネックになる、初めてのモデルだと感じている。</p><p>重要なのは、単に前もって計画するだけでは十分でないこと。unknowns は実装の奥深くで見つかることもあるし、unknowns があなたに「そもそも別のやり方で問題を解くべきだ」と気づかせることもある。Fable との作業は、実装の前・最中・後を通じて自分の unknowns を発見していく反復プロセスだと分かった。</p><h3>自分の unknowns を知る</h3><p>問題を持って Claude に来るとき、私は4通りに分解する：</p><ul><li>Known Knowns（既知の既知）：本質的にプロンプトに書いてあること。エージェントに何を望むと伝えるか。</li><li>Known Unknowns（既知の未知）：まだ解決していないが、解決していないと自覚していること。</li><li>Unknown Knowns（未知の既知）：当たり前すぎて絶対に書き留めないが、見れば「それだ」と認識できること。</li><li>Unknown Unknowns（未知の未知）：そもそも一切考慮していないこと。自分が気づいていない知識。「どれだけ良くできるか」を自分は知っているか。</li></ul><p>最良のエージェンティックコーダーは unknowns が比較的少ない。Boris や Jarred のようなプロンプトを見ていると、彼らが自分の望むものを細部まで分かっているのは明らかだ。彼らはコードベースとモデル挙動の両方に深くシンクしている。だが同時に、彼らは unknowns の存在を前提にしている。多くの意味で、unknowns を減らし・それに備えて計画することこそがエージェンティックコーディングのスキルなのだ。</p><h3>Claude に手伝わせる</h3><p>Claude への指示は繊細なバランスだ。具体的すぎると、方針転換のほうが適切な時でも Claude は指示に従い続ける。曖昧すぎると、Claude はしばしば、あなたの task に合わないかもしれない業界のベストプラクティスに基づいて選択や仮定をする。このプロセスで最も重要なのは、あなたの出発点についてのコンテキストを Claude に与えることだ。</p><h3>実装前</h3><ul><li><strong>Blind Spot Pass（盲点パス）</strong>：Claude に、自分の unknown unknowns を見つけて説明させる。「blindspot pass」「unknown unknowns」という言葉を literal（そのまま）に使う。</li><li><strong>ブレスト &amp; プロトタイプ</strong>：Claude にブレストとプロトタイプをさせる。例：反応するための「大きく異なる4方向のデザイン」を1枚の HTML ページで出させる。</li><li><strong>インタビュー</strong>：「曖昧な点について1問ずつ私にインタビューして。私の答えでアーキテクチャが変わる質問を優先して。」</li><li><strong>リファレンス</strong>：絶対的に最良の参照はソースコード。Fable にフォルダを指し示して、何を探すか伝える。これは Claude Design の仕組みでもある——スクショだけでなく、その裏のコードを読む。</li><li><strong>実装計画</strong>：変わりやすい決定（データモデル、型インターフェース、UXフロー）を先頭に書き、機械的なリファクタリングは末尾に埋める計画を書かせる。</li></ul><h3>実装中</h3><ul><li><strong>実装ノート</strong>：「implementation-notes.md を保持して。計画から逸脱せざるを得ないエッジケースにぶつかったら、保守的な選択肢を選び、'Deviations' の下に記録して、そのまま続けて。」</li></ul><h3>実装後</h3><ul><li><strong>ピッチ &amp; 説明資料</strong>：プロトタイプ・仕様・実装ノートを1つのドキュメントにまとめて buy-in を得る。デモ GIF を先頭に。</li><li><strong>クイズ</strong>：変更についての HTML レポートと、末尾に「合格必須のクイズ」を Claude に作らせる。完璧に合格してからのみマージする。</li></ul><h3>これがどう噛み合うか：Fable のローンチ</h3><p>Fable のローンチ動画は全編 Claude Code で編集した。私にとって新しい領域で、専門家では全くない。そこで既知（Claude はコードで動画編集・文字起こしができる）から始め、Whisper のような文字起こしの仕組みを Claude に説明してもらい、Remotion と文字起こしで「発話とタイミングを合わせた UI」のプロトタイプ動画を作れるか試した。最後に、動画が少しくすんで見えたのはカラーグレーディングのせいだと分かっていたが、そもそも「良い状態」が分からなかったので、Claude にカラーグレーディングを教えてもらって自分の unknowns を発見した。</p><h3>地図と領土を一致させる</h3><p>モデルが良くなるほど、正しいアプローチで達成できることは増える。長時間の task が誤った結果で返ってきたら、たいていは unknowns の定義や、Claude がそれを乗り越えて即興できる実装計画に、もっと時間をかける必要がある。あらゆる説明資料・ブレスト・インタビュー・プロトタイプ・リファレンスは、「高くつく前に、自分が知らなかったことを安く知る」手段だ。だから次のプロジェクトは、Claude に「自分の unknowns を見つけるのを手伝って」と頼むことから始めよう。</p><h2>X Article 本文</h2><p>Working with Claude Fable 5 keeps re-teaching me an old lesson: the map is not the territory.</p><p>The map, a representation of the work to be done, is my prompts and skills and context, it's what I give Claude. The territory is where the work needs to happen, the codebase, the real world, its actual constraints.</p><p>The difference between the map and the territory is what I call unknowns. When Claude runs into an unknown, it needs to make a decision based on its best guess of what I want. The more work being done, the more unknowns Claude might run into. Fable is the first model where I find the quality of the work is bottlenecked by my ability to clarify its unknowns.</p><p>(原文全文は raw 版 bookmarks/372... を参照)</p>
     </article>
@@ -384,14 +384,14 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 462 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 465 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-07-28/">TODAY</a></li>
+          <li><a href="../news/2026-07-29/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -418,7 +418,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-07-29</span>
+      <span>BUILD 2026-07-30</span>
     </div>
   </div>
 </footer>

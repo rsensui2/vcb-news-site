@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-07-31 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-07-31 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0731</span>
+    <span class="sep">/</span>
+    <span>2026-07-31</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260731.0739</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-07-31/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:39 · THU</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · THURSDAY · JULY 31, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>07<span class="dot">.</span>31</h1>
+    <div class="strap">
+      <span>OpenAI · ベンチマークはモデルだけを測っていない · Cursor · Devin</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 5 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 モデル運用・自己改善 <span class="sep">/</span> @OPENAI（公式） <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI が GPT-5.6 Sol に自分自身を最適化させた — サービングコスト20%減</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-31/topic_1.png" data-alt="OpenAI が GPT-5.6 Sol に自分自身を最適化させた — サービングコスト20%減" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-31/topic_1.png" alt="OpenAI が GPT-5.6 Sol に自分自身を最適化させた — サービングコスト20%減" />
+      </div>
+      <p class="lede">
+        デプロイ済みの GPT-5.6 Sol を「自分自身の実行効率を上げる」作業に適用した結果を OpenAI 公式が公開した。本番 GPU カーネルの改善でサービングコストが20%下がり、投機的デコーディング（speculative decoding）の改善でトークン生成効率が15%以上向上した。@OpenAIDevs も同日、Codex で GPT-5.6 Sol を使って自社インフラとパフォーマンスを最適化したと報告している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">本番 GPU カーネルの改善でサービングコスト20%減</li>
+        <li data-i="02">投機的デコーディングの改善でトークン生成効率が15%以上向上</li>
+        <li data-i="03">OpenAI は「これらの最適化はスタック全体で複利に効き、コスト×知能カーブのあらゆる地点で最も高性能なモデルを解放する」と位置づけ</li>
+        <li data-i="04">Codex 側でも同じ手法で自社インフラとパフォーマンスを最適化したと @OpenAIDevs が報告</li>
+        <li data-i="05">「自己改善」が研究テーマではなく本番の原価低減として報告されたのが今回の新しさ</li>
+        <li data-i="06">⚠️ 改善率はいずれも OpenAI 自身の測定で第三者検証なし。値下げに直結するかは非言及</li>
+      </ul>
+      <div class="pull">
+        モデルが自分の推論基盤を速くするという構図が、研究の話ではなく本番の原価低減として初めて数字つきで報告された。推論コストが下がれば、これまで採算が合わなかったループ運用や常時稼働エージェントの前提が変わる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">15,422</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAI/status/2082577277246972300">@OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-29</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 モデル運用・自己改善</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAI/status/2082577277246972300">x.com/OpenAI/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · OPENAI5</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 ハーネス設計・エージェント運用 <span class="sep">/</span> @OPENAI（公式・5連スレッド） <span class="sep">/</span> NEWS
+      </div>
+      <h2>ベンチマークはモデルだけを測っていない — API 設定2つでスコア3倍・出力トークン1/6</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-31/topic_2.png" data-alt="ベンチマークはモデルだけを測っていない — API 設定2つでスコア3倍・出力トークン1/6" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-31/topic_2.png" alt="ベンチマークはモデルだけを測っていない — API 設定2つでスコア3倍・出力トークン1/6" />
+      </div>
+      <p class="lede">
+        数学の未解決問題を解いた GPT-5.6 Sol が、なぜ2Dパズルゲームのベンチマーク ARC-AGI-3 で苦戦するのかを OpenAI 自身が調査した。原因はモデルではなくハーネスで、標準ハーネスは1手ごとに推論を破棄し、コンテキストが埋まると過去の行動から捨てていたため、モデルは毎回ゼロからやり直していた。Responses API で実装し直し、設定を2つ有効化したところ公開セットのスコアが188%上昇し、出力トークンは6分の1になった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">標準ハーネスの問題は2つ — 1手ごとに推論を破棄／コンテキストが埋まると過去の行動を捨てる。結果「モデルは毎回やり直していた」</li>
+        <li data-i="02">有効化したのは Retained reasoning（推論の保持）と Context compaction（コンテキストの圧縮）の2つだけ</li>
+        <li data-i="03">公開セットでスコア188%上昇（約3倍）、同時に出力トークンは6分の1。強くなり、かつ安くなった</li>
+        <li data-i="04">OpenAI の結論は「evals がモデルを単体で測ることはめったにない。API 設定・ハーネス設計・プロンプトという、見えにくい選択の束も一緒に測っている」</li>
+        <li data-i="05">長時間動くエージェントでは「推論を保持しコンテキストを圧縮することで、モデルは既に学んだことの上に積み上げられる」</li>
+        <li data-i="06">⚠️ 公開セットでの自社測定。他モデル・他ベンチへの一般化は示されていない</li>
+      </ul>
+      <div class="pull">
+        「うちのエージェントの成績が悪いのはモデルのせい」という診断を、モデル提供者自身が真っ向から否定した。モデルを乗り換える前に、推論を保持しているか・コンテキストをどう畳んでいるかを見直すほうが効く可能性がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">8,570</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAI/status/2082616636989952217">@OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-29</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 ハーネス設計・エージェント運用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAI/status/2082616636989952217">x.com/OpenAI/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · CURSORAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 開発ツール <span class="sep">/</span> @CURSOR_AI（公式） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cursor が iPad に対応 — エージェントの作成・レビュー・マージがモバイルで完結</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-31/topic_3.png" data-alt="Cursor が iPad に対応 — エージェントの作成・レビュー・マージがモバイルで完結" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-31/topic_3.png" alt="Cursor が iPad に対応 — エージェントの作成・レビュー・マージがモバイルで完結" />
+      </div>
+      <p class="lede">
+        Cursor が iPad アプリを提供開始した。「iPhone 版の全機能を、エージェントと作業するためのより広い画面で」という位置づけで、どこからでも作成・レビュー・マージができる。iPhone / iPad の両方に、整理用の inbox と、コメント・チェック・承認まで含めて PR 全体をカバーするレビュー体験が新たに加わった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">iPad 対応。「iPhone の全機能を、エージェントと作業するためのより広い画面で」</li>
+        <li data-i="02">どこからでも作成・レビュー・マージができる</li>
+        <li data-i="03">iPhone / iPad 共通の新機能① inbox（整理用の受信箱）</li>
+        <li data-i="04">iPhone / iPad 共通の新機能② PR 全体をカバーするレビュー体験（コメント・チェック・承認を含む）</li>
+        <li data-i="05">モバイル側の役割が「コードを書く道具」から「走らせたエージェントの結果を確認して取り込む窓口」に寄った</li>
+        <li data-i="06">⚠️ 対応プランや無料枠の扱いは投稿に非記載</li>
+      </ul>
+      <div class="pull">
+        クラウドで走るエージェントが前提になると、人間の仕事は書くことより「確認して取り込むこと」に移る。その窓口が手元の端末に来たことで、待ち時間が実質的に消える。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">3,797</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2082532273421955513">@cursor_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-29</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2082532273421955513">x.com/cursor_ai/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · COGNITION</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 開発ツール <span class="sep">/</span> @COGNITION（公式） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Devin が GitHub の Stacked PR にネイティブ対応 — 巨大 PR を自動で分割</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-31/topic_4.png" data-alt="Devin が GitHub の Stacked PR にネイティブ対応 — 巨大 PR を自動で分割" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-31/topic_4.png" alt="Devin が GitHub の Stacked PR にネイティブ対応 — 巨大 PR を自動で分割" />
+      </div>
+      <p class="lede">
+        Cognition が Devin の GitHub Stacked PR 対応を発表した。大きな変更をレビュー可能な小さい diff に分割し、スタックをまたいでコメントに対応・修正し、下流の変更を自動でリベースする。従来も指示すればスタックド PR は作れたが、この動作がデフォルト化した点が変化にあたる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">①大きな変更をレビュー可能な小さい diff に分割する</li>
+        <li data-i="02">②スタックをまたいでコメントに対応・修正する</li>
+        <li data-i="03">③下流の変更を自動でリベースする</li>
+        <li data-i="04">従来も指示すれば作れたが、ユーザーが指示しなくても適切な粒度に分解する動作がデフォルト化した</li>
+        <li data-i="05">レビュー往復のたびに人が手で下流をリベースし直す手間が消える</li>
+        <li data-i="06">⚠️ 分割粒度の妥当性は実運用での評価待ち。GitHub 以外のホスティングへの対応は非言及</li>
+      </ul>
+      <div class="pull">
+        エージェントに大きなタスクを任せると PR が巨大化してレビュー不能になる、というのがエージェント開発の最大の詰まりどころだった。生成の速さではなく、レビューの通しやすさに手が入った点が実務的に効く。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">318</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/cognition/status/2082870779775959249">@cognition</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-30</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/cognition/status/2082870779775959249">x.com/cognition/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · KAJIKENT</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💼 AI×ビジネス活用 <span class="sep">/</span> @KAJIKENT（梶谷健人） <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉「Claude Code を配って生産性は上がったのに、事業の数字が変わらない」</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-31/topic_5.png" data-alt="〈知見〉「Claude Code を配って生産性は上がったのに、事業の数字が変わらない」" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-31/topic_5.png" alt="〈知見〉「Claude Code を配って生産性は上がったのに、事業の数字が変わらない」" />
+      </div>
+      <p class="lede">
+        梶谷健人が「社員に Claude Code を配って生産性は上がったのに、事業の数字は変わらない。次は何をしたら良いか？」という相談を多くの経営者から受けていると報告した。論点は「個人のタスク効率化を終えたあと、次に何をどうすればいいのか」。同じ問題は Sierra の Neil Rahilly も「セッション数やツール呼び出し数は活動であって成果ではない」という形で言語化しており、日米で同時に同じ診断が出ている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">相談の中身は「個人のタスク効率化を終えたあと、次に何をどうすればいいのか」</li>
+        <li data-i="02">ツールの配布は活動指標を確実に動かすが、事業指標は別に設計しないと動かない</li>
+        <li data-i="03">同型の指摘（Sierra / @neilrahilly）: 「チームは tokenmaxx して見栄えのいい採用グラフを作り上げることができてしまう——下流では何も良くなっていないのに」</li>
+        <li data-i="04">対処の型は3ステップ — ①導入前に現状のサイクルタイムを1つだけ測る（商談の決着日数／一次解決率／レビュー滞留時間のどれか）②活動指標で習慣化を確認する ③同じ指標を再測して差分を見る</li>
+        <li data-i="05">①を飛ばすと後から比較できないのが最大の落とし穴</li>
+        <li data-i="06">⚠️ note 本文は月額メンバーシップ限定でフレームワーク・数字・事例は未確認。ここで扱うのは公開されている問題設定と、対になる海外事例まで</li>
+      </ul>
+      <div class="pull">
+        AI 導入の次の壁が「配ったのに数字が動かない」であることが、日米で同時に言語化され始めた。導入提案を書く側は、最初から「何が変わったら成功か」を1行入れておかないと数か月後に詰む。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">82</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/kajikent/status/2082605071821603087">@kajikent</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-29</dd>
+        <dt>CATEGORY</dt>
+        <dd>💼 AI×ビジネス活用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/kajikent/status/2082605071821603087">x.com/kajikent/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · KENNKENN EJIMA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🧠 コンテキストエンジニアリング <span class="sep">/</span> @KENN（KENN EJIMA） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>AI 向けドキュメントは4層構造にする — 概要 html &gt; 詳細 md &gt; テスト &gt; コード</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-31/topic_6.png" data-alt="AI 向けドキュメントは4層構造にする — 概要 html &gt; 詳細 md &gt; テスト &gt; コード" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-31/topic_6.png" alt="AI 向けドキュメントは4層構造にする — 概要 html &gt; 詳細 md &gt; テスト &gt; コード" />
+      </div>
+      <p class="lede">
+        「人間向けの短いドキュメントだけで AI は問題なく働けるか、それとも人間用と AI 用を分けるべきか」という問いに、Kenn Ejima が「分ける」と即答した。根拠は「推論トークンが知能を上限なくスケールさせるのは既知の事実なので AI 用のメモは必須」。さらに運用フローと、層が食い違ったときにどれを信じるかの序列まで具体化している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">結論は分ける。人間向けの短いドキュメントと AI 向けの長いドキュメントを両方持つ</li>
+        <li data-i="02">ライフサイクル: プランは md → 実装が終わると仕様書に昇格 → そこから人間用サマリー html を生成</li>
+        <li data-i="03">html は css と js をコロケートしつつ分離し、html 単体はトークン効率重視にする（読むたびのトークンを無駄にしないため）</li>
+        <li data-i="04">序列は 概要仕様(html) &gt; 詳細仕様(md) &gt; テスト &gt; コード で、下に行くほど truthy</li>
+        <li data-i="05">使い方: 仕様書 vs 実装ならコードが正しい／テスト vs 仕様書ならテスト。覚え方は「一番読みやすい層が一番嘘をつきやすい」</li>
+        <li data-i="06">⚠️ 個人の運用知見で定量検証なし。二重管理は md→html の生成が自動化されている前提（手で二重に書くと必ず片方が腐る）</li>
+      </ul>
+      <div class="pull">
+        エージェントを増やすほど「同じことについて複数の記述がある」状態になる。衝突時の優先順位を先に決めておかないと、腐った仕様書を根拠に動いているコードを壊す事故が起きる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">432</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/kenn/status/2082629390102614166">@kenn</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-30</dd>
+        <dt>CATEGORY</dt>
+        <dd>🧠 コンテキストエンジニアリング</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/kenn/status/2082629390102614166">x.com/kenn/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · NEILRAHILLYSIERRA </span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💼 AI×ビジネス活用 <span class="sep">/</span> @NEILRAHILLY（SIERRA / X ARTICLE） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>〈知見〉役割別エージェントを4体作って失敗し、1体に戻した — Sierra の5つの学び</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-07-31/topic_7.png" data-alt="〈知見〉役割別エージェントを4体作って失敗し、1体に戻した — Sierra の5つの学び" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-07-31/topic_7.png" alt="〈知見〉役割別エージェントを4体作って失敗し、1体に戻した — Sierra の5つの学び" />
+      </div>
+      <p class="lede">
+        AI エージェント企業 Sierra が、全社員向け社内エージェント「Pinecone」を内製する中で得た知見を5点にまとめている。サポート・データ分析・エンジニア・営業の4体に分けたが実践で失敗し、窓口を1体に統合した。600人以上・75,000セッション超が稼働し、PR の70%がここを通る規模で運用されている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">①エージェントは単数に集約する — 役割別4体は失敗。理由は記憶負荷ではなく構造で「最も重要な仕事はチーム内ではなくチーム横断で起きる」。統合後は1ハンドル・1 URL・途切れない1スレッド</li>
+        <li data-i="02">②リアクティブでなくプロアクティブ — webhook 発火・タスク着地・レビュー到着でエージェント側からファーストパスを書く。「通知を増やすのではなく、未完成のまま届く仕事を減らす」</li>
+        <li data-i="03">③ボトルネックは知能ではなくビジネスコンテキスト — フロンティアモデルはすでに十分賢く、制約は自社固有の文脈側に移った</li>
+        <li data-i="04">権限は「利用者の権限を継承」で解く — MCP Gateway が各社員のアクセス権を継承し、全ツール呼び出しでポリシー強制・顧客データ隔離・監査証跡</li>
+        <li data-i="05">④エージェントが UI、システムオブレコードがバックエンド — GitHub / Salesforce / Linear は置き換えず横断レイヤーに徹する。「デッキを締めて」と頼めばデッキ自体が更新されて返る</li>
+        <li data-i="06">⑤活動量ではなく成果 — 「持続的な優位は基盤モデルの所有ではなく、コンテキスト・ワークフロー・ルーティング層の所有」とも明言</li>
+        <li data-i="07">⚠️ 自社ブログの自己申告で統合前後の定量比較はなし。「5倍」の測定方法も非提示</li>
+      </ul>
+      <div class="pull">
+        「部署ごとに AI を入れる」提案は直感的に通りやすいが、最も価値のある仕事は部署をまたぐところで起きる。実際に分けて失敗した会社の記録は、導入設計の初手を決める材料になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">512</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/neilrahilly/status/2075290325757608148">@neilrahilly</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>💼 AI×ビジネス活用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/neilrahilly/status/2075290325757608148">x.com/neilrahilly/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/OpenAI/status/2082577277246972300">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-07-30/">
+      ← 前日 · 2026-07-30
+      <span class="big">Claude Mythos が暗号アルゴリズムの新しい弱点を発見 — 耐量子署名 HAWK の実効鍵長を60時間で半減</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-07-31/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260731.0739</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

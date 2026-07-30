@@ -291,9 +291,9 @@
     <span class="sep">/</span>
     <span>@ClaudeDevs</span>
     <span class="sep">/</span>
-    <span>465 ITEMS</span>
+    <span>466 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:28 THU</span>
+    <span>JST 07:23 FRI</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,12 +305,12 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-07-29/">NEWS</a>
+      <a href="../news/2026-07-30/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:28 · THU</div>
+    <div class="meta">JST · 07:23 · FRI</div>
   </div>
 </header>
 
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">MCP 2026-07-28 — 発足以来最大の更新。プロトコルがステートレスになり、拡張機能が一級市民に</h1>
     <div class="strap">
-      <span><span class="label">№</span>003 / 465</span>
+      <span><span class="label">№</span>003 / 466</span>
       <span><span class="label">SRC</span><a href="https://x.com/ClaudeDevs/status/2082164248697069935" target="_blank" rel="noopener noreferrer">x.com/ClaudeDevs ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/452_ClaudeDevs_MCP2026-07-28%E3%82%B9%E3%83%86%E3%83%BC%E3%83%88%E3%83%AC%E3%82%B9%E5%8C%96%E3%81%A8%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">003<span class="ord">BOOKMARK / 465</span></aside>
+    <aside class="numeral">003<span class="ord">BOOKMARK / 466</span></aside>
     <article class="prose">
 <p><strong>有益度:</strong> ⭐⭐⭐⭐⭐</p><p><strong>エンゲージメント:</strong> Likes 12594 / RT 1298 / Bookmarks 7809 / Views 2318792</p><h2>投稿本文</h2><p>MCP 2026-07-28 is live and it's the largest update to the protocol since launch.</p><p>MCP is now stateless, making it easier to deploy and scale remote servers.</p><p>https://claude.com/blog/bringing-mcp-2026-07-28-to-claude</p><h2>概要</h2><p>Model Context Protocol の新仕様 <strong>2026-07-28</strong> が公開された。ローンチ以来最大の更新で、中核は<strong>プロトコルのステートレス化</strong>。従来は双方向ステートフル通信でセッション状態をサーバ側に保持する必要があり、serverless に載せられず、ロードバランサの背後では sticky session が必須だった。新仕様はリクエスト/レスポンスモデルになり、MCP サーバが「<strong>一級の HTTP ワークロード</strong>」として扱えるようになる。あわせて拡張機能（MCP Apps / Tasks / Enterprise Managed Auth）がバージョン管理された正式な枠組みとして整備され、認可が本番グレードの OAuth 2.0 / OIDC に準拠した。</p><h2>まとめ</h2><ul><li><strong>ステートレス化</strong>: 双方向ステートフル通信 → リクエスト/レスポンスモデルへ。serverless・エッジへのデプロイが可能になり、任意のロードバランサ背後で水平スケールできる。セッション状態管理の複雑さが消える</li><li><strong>拡張機能フレームワークの標準化</strong>: MCP Apps と Tasks が<strong>バージョン管理された拡張機能</strong>として動くようになった。プロトコル本体を改変（フォーク）せずに、対話 UI や長時間処理といった機能を正式な手順で追加できる。Claude 製品群との互換性を保ったまま拡張できる</li></ul><p>  - <strong>MCP Apps</strong>: サーバ側でレンダリングした UI をサンドボックス iframe 内に表示する</p><p>  - <strong>Tasks</strong>: 長時間実行・非同期オペレーション</p><p>  - <strong>Enterprise Managed Auth</strong>: ID プロバイダ経由で MCP サーバへのアクセスを中央管理する</p><ul><li><strong>認証のハードニング</strong>: 認可が本番運用グレードの OAuth 2.0 / OIDC 標準に整列。<strong>Entra や Okta のようなエンタープライズ ID 基盤と、回避策なしで直接統合できる</strong></li><li><strong>正式な廃止（deprecation）ポリシー</strong>が導入された</li><li><strong>エンタープライズ導入への効果</strong>: 管理者が既存の ID プロバイダを通じて組織全体にコネクタをプロビジョニングでき、ユーザーは自動でアクセスを継承する。ユーザーごとの手動セットアップが不要になる</li><li><strong>エコシステムの規模</strong>: MCP の SDK は<strong>月間4億ダウンロード</strong>（2026年で4倍成長）、Claude のコネクタディレクトリには <strong>950 以上のサーバ</strong>が登録されている</li><li>ベータ期間中に Figma・Intuit・Netlify・Zoom などがこの仕様リリースに貢献した</li><li>リリース日: <strong>2026年7月28日</strong></li></ul><h2>スレッド全体</h2><h3>Part 1 (親ポスト)</h3><p>MCP 2026-07-28 is live and it's the largest update to the protocol since launch.</p><p>MCP is now stateless, making it easier to deploy and scale remote servers.</p><p>https://claude.com/blog/bringing-mcp-2026-07-28-to-claude</p><h3>Part 2</h3><p>Before, running a remote MCP server meant managing session state, which limited where you could run it.</p><p>Now that MCP is stateless, you can deploy on serverless and edge infrastructure, or scale horizontally behind any load balancer.</p><h3>Part 3</h3><p>Also in this release:</p><p>Auth hardening and a formal deprecation policy</p><p>See the MCP blog for more.</p><h3>Part 4</h3><p>Extensions are also first-class — a formal path to extend the protocol. Examples:</p><ol><li>MCP Apps: server-rendered UIs in a sandboxed iframe</li></ol><ol><li>Tasks: long-running and async operations</li></ol><ol><li>Enterprise Managed Auth: control MCP server access centrally via your identity provider</li></ol><h2>日本語訳全文</h2><h3>Part 1 (親ポスト)</h3><p>MCP 2026-07-28 が公開。ローンチ以来、プロトコルにとって最大の更新です。</p><p>MCP はステートレスになりました。これによりリモートサーバのデプロイとスケールが容易になります。</p><p>https://claude.com/blog/bringing-mcp-2026-07-28-to-claude</p><h3>Part 2</h3><p>これまでは、リモート MCP サーバを動かすということはセッション状態を管理するということであり、それが「どこで動かせるか」を制限していました。</p><p>MCP がステートレスになったことで、serverless やエッジのインフラにデプロイできるようになり、任意のロードバランサの背後で水平スケールできるようになります。</p><h3>Part 3</h3><p>本リリースにはさらに以下も含まれます。</p><p>認証のハードニングと、正式な廃止（deprecation）ポリシー</p><p>詳細は MCP のブログをご覧ください。</p><h3>Part 4</h3><p>拡張機能（Extensions）も一級市民になりました。プロトコルを拡張するための正式な道筋です。例:</p><ol><li>MCP Apps: サンドボックス iframe 内でサーバ側レンダリングした UI を表示する</li></ol><ol><li>Tasks: 長時間実行・非同期のオペレーション</li></ol><ol><li>Enterprise Managed Auth: 自社の ID プロバイダ経由で MCP サーバへのアクセスを中央管理する</li></ol><h2>参照リンク</h2><ul><li>元ポスト: https://x.com/ClaudeDevs/status/2082164248697069935</li><li>公式ブログ: https://claude.com/blog/bringing-mcp-2026-07-28-to-claude</li></ul>
     </article>
@@ -384,14 +384,14 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 465 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 466 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-07-29/">TODAY</a></li>
+          <li><a href="../news/2026-07-30/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -418,7 +418,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-07-30</span>
+      <span>BUILD 2026-07-31</span>
     </div>
   </div>
 </footer>

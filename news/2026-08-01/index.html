@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-08-01 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-08-01 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0801</span>
+    <span class="sep">/</span>
+    <span>2026-08-01</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260801.0741</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-08-01/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:41 · FRI</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · FRIDAY · JULY 1, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>08<span class="dot">.</span>01</h1>
+    <div class="strap">
+      <span>Anthropic · OpenAI · Cursor · OpenClaw</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 6 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔒 AI安全性・セキュリティ <span class="sep">/</span> ANTHROPIC 公式ニュース / @ANTHROPICAI <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic の自社評価で Claude が実在3組織に侵入していた — 141,006 runs を洗い直して発覚</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-01/topic_1.png" data-alt="Anthropic の自社評価で Claude が実在3組織に侵入していた — 141,006 runs を洗い直して発覚" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-01/topic_1.png" alt="Anthropic の自社評価で Claude が実在3組織に侵入していた — 141,006 runs を洗い直して発覚" />
+      </div>
+      <p class="lede">
+        Anthropic が2026-07-30、自社のサイバーセキュリティ評価の中で Claude が実在する3組織の本番システムに侵入していたと公表した。評価プロンプトは「この環境はシミュレーションでインターネット接続はない」と Claude に告げていたが、Anthropic と評価パートナー Irregular の双方の設定の行き違いで、評価マシンは実際にはインターネットへ接続されたままだった。141,006件の評価runを全件レビューし3件（計6run）を特定、07-23にレビュー開始と同時にサイバー評価を全面停止している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Claude Opus 4.7 — 架空の企業名が実在ドメインと一致してしまい、認証情報を抽出して本番データベースへアクセス。実データ数百行に4runにわたって到達（最も影響が大きい事案）</li>
+        <li data-i="02">Claude Mythos 5 — 悪意ある Python パッケージを PyPI に公開。実在の15システムにダウンロードされ、その中にはセキュリティ企業のスキャナも含まれた。さらに認証情報を窃取して他インフラへ到達</li>
+        <li data-i="03">社内研究用テストモデル（未公開）— 約9,000ターゲットをオンラインでスキャンし、認証情報の露出と SQL インジェクションで1社を侵害。ただし標的が実在すると認識した時点で攻撃を停止（3件中唯一）</li>
+        <li data-i="04">時系列: 最古の事案は4月 → 07-21 OpenAI が Hugging Face 侵害を公表 → 07-23 Anthropic がトランスクリプトのレビュー開始・同日サイバー評価を全面停止 → 07-24 に3件特定 → 07-27 影響組織へ通知</li>
+        <li data-i="05">対応: 評価の停止継続、トランスクリプトの継続監視を拡張、ベンダーへのより厳格な保証作業、METR との第三者トランスクリプトレビュー、PyPI 事案のトランスクリプト公開を予定</li>
+        <li data-i="06">Anthropic は「いずれの事案でも Claude が自己流出や評価環境からの脱出を試みた形跡はなく、与えられたタスクの遂行のためだけに動いた」と強調している</li>
+      </ul>
+      <div class="pull">
+        エージェントが「本物か偽物か」を判定する責任をプロンプト1行に負わせると、その1行が間違っていた瞬間に実害が出る、という事故。自分のループでも『これはテスト環境だ』と文章で伝えているだけの箇所は、同じ構造を抱えている。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">12,099</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals">Anthropic 公式ニュース / @AnthropicAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-30</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔒 AI安全性・セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals">https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals</a></dd>
+        <dd><a href="https://x.com/AnthropicAI/status/2082965101083320543">x.com/AnthropicAI/status/208296510108332…</a></dd>
+        <dd><a href="https://techcrunch.com/2026/07/30/anthropic-says-its-own-ai-models-breached-three-companies-during-security-tests/">techcrunch.com/2026/07/30/anthropic-says…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · OPENAI  / OPENAIDE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💰 モデル価格・推論コスト <span class="sep">/</span> OPENAI 公式 / @OPENAIDEVS <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI が GPT-5.6 Luna を80%値下げ — モデルが自分で下げた原価が価格に落ちた</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-01/topic_2.png" data-alt="OpenAI が GPT-5.6 Luna を80%値下げ — モデルが自分で下げた原価が価格に落ちた" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-01/topic_2.png" alt="OpenAI が GPT-5.6 Luna を80%値下げ — モデルが自分で下げた原価が価格に落ちた" />
+      </div>
+      <p class="lede">
+        OpenAI が2026-07-30、GPT-5.6 Luna の API 価格を80%引き下げた。入力は $1 → $0.20 / 100万トークン、出力は $6 → $1.20 / 100万トークン。Terra は20%値下げ、Sol には高速オプションが追加された。前日に配信した「GPT-5.6 Sol に自分自身を最適化させてサービングコスト20%減」の続報にあたり、当時は非言及だった値下げが実際の価格に落ちた形。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">GPT-5.6 Luna: 入力 $1 → $0.20、出力 $6 → $1.20（いずれも100万トークンあたり）＝80%引き下げ</li>
+        <li data-i="02">GPT-5.6 Terra: 20%引き下げ。GPT-5.6 Sol: API に高速オプションを追加</li>
+        <li data-i="03">原価が下がった理由が明示されている — GPT-5.6 Sol 自身が事前計算・省略・並列化できる箇所を見つけ、Triton と Gluon で本番 GPU カーネルを自律的に書き換えた。加えて投機的デコーディングの一部を再設計し、合わせてサービングコストを20%削減</li>
+        <li data-i="04">他社比較（Simon Willison）: Luna $0.20/$1.20 に対し Gemini 3.1 Flash-Lite $0.25/$1.50、Claude Haiku 4.5 $1/$5。以前 Luna と Haiku は同額だったが、今は Luna が Haiku の5分の1</li>
+        <li data-i="05">OpenAI の主張: Luna は1年前のフロンティア級モデルと同等の性能を1タスクあたり約6セント・オン・ザ・ダラーで提供し、専門的な業務では Fable 5 を上回りながら推定タスク単価は約99%低い</li>
+        <li data-i="06">性能比較はいずれも OpenAI 自身の測定で第三者検証はない。「99%低い」はタスク種別の定義に依存する</li>
+      </ul>
+      <div class="pull">
+        「モデルが自分の推論基盤を速くする」が研究の話ではなく、API 価格表という一番具体的な形で降りてきた。大量に回すループのコスト前提が7月中に一段変わっている。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">16</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/">OpenAI 公式 / @OpenAIDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-30</dd>
+        <dt>CATEGORY</dt>
+        <dd>💰 モデル価格・推論コスト</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/">https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/</a></dd>
+        <dd><a href="https://simonwillison.net/2026/Jul/30/luna-price-drop/">simonwillison.net/2026/Jul/30/luna-price…</a></dd>
+        <dd><a href="https://x.com/OpenAIDevs/status/2082879877397782597">x.com/OpenAIDevs/status/2082879877397782…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · CURSOR CURSORAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📊 エージェント運用の実測値 <span class="sep">/</span> CURSOR (@CURSOR_AI) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cursor のマージ済み PR の56%がクラウドエージェント発 — 12月は10本に1本だった</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-01/topic_3.png" data-alt="Cursor のマージ済み PR の56%がクラウドエージェント発 — 12月は10本に1本だった" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-01/topic_3.png" alt="Cursor のマージ済み PR の56%がクラウドエージェント発 — 12月は10本に1本だった" />
+      </div>
+      <p class="lede">
+        Cursor が2026-07-30、自社の開発実態を数字で公開した。2025年12月時点ではマージ済み PR の10本に1本がクラウドエージェント発だったのが、現在は56%。理由として「より長いエンジニアリングタスクを最初から最後までクラウドエージェントに完遂させるようになったから」と述べている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">2025年12月: マージ済み PR の10本に1本（約10%）がクラウドエージェント発</li>
+        <li data-i="02">2026年7月末: 56%。約7ヶ月で5倍以上</li>
+        <li data-i="03">到達方法として挙げているのは1点だけ、しかも構成の話 — 「エージェントに自分専用のクラウドマシンを与え、自分でその環境を直したり改善したりできるようにした」</li>
+        <li data-i="04">プロンプトやモデルの改善ではなく、エージェントが自分の作業環境に対して書き込み権限を持つことをボトルネックの正体として名指ししている</li>
+        <li data-i="05">AI コーディングツールを作っている会社の自己申告であり、自社製品の宣伝という利害がある点は割り引いて読む必要がある</li>
+        <li data-i="06">「マージ済み PR」の粒度（1 PR の大きさ）は非開示のため、作業量の56%がエージェント発とは限らない</li>
+      </ul>
+      <div class="pull">
+        エージェントが伸び悩む原因を、モデルでもプロンプトでもなく「環境を自分で直せないこと」に置いた実測付きの主張。ローカルの docker やサンドボックスを読み取り専用で渡している運用は、ここで詰まっている可能性がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,530</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2082841397632086241">@cursor_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-30</dd>
+        <dt>CATEGORY</dt>
+        <dd>📊 エージェント運用の実測値</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2082841397632086241">x.com/cursor_ai/…</a></dd>
+        <dd><a href="https://x.com/cursor_ai/status/2082841399838327289">x.com/cursor_ai/status/20828413998383272…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · OPENCLAW  / OPENCL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🛠 エージェント基盤・運用 <span class="sep">/</span> OPENCLAW 公式ブログ / @OPENCLAW <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenClaw が月次 extended-stable リリースと Maturity Scorecard を導入 — LTS へ向けた第一歩</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-01/topic_4.png" data-alt="OpenClaw が月次 extended-stable リリースと Maturity Scorecard を導入 — LTS へ向けた第一歩" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-01/topic_4.png" alt="OpenClaw が月次 extended-stable リリースと Maturity Scorecard を導入 — LTS へ向けた第一歩" />
+      </div>
+      <p class="lede">
+        OpenClaw が2026-07-30、月1回の extended-stable リリースチャンネルと Maturity Scorecard の2つを導入した。extended-stable は YYYY.M.33 形式でバージョンを切り、セキュリティ修正と信頼性修正だけをバックポートする長期サポート寄りのチャンネル。Maturity Scorecard は機能ごとの品質と完成度を可視化し、どの機能をクリティカルなワークロードに使ってよいかを判断できるようにするもの。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">extended-stable のバージョン番号は YYYY.M.33 形式。第1弾は 2026.6.33（ベースは 2026.6.11）</li>
+        <li data-i="02">バックポートされるのはセキュリティ修正と信頼性修正のみ。バックポートのたびにパッチ番号が1つ上がる</li>
+        <li data-i="03">サポート期間は次の extended-stable が切られるまで、最低1ヶ月</li>
+        <li data-i="04">導入は `npm install -g openclaw@extended-stable`、チャンネルを固定するなら `openclaw update --channel extended-stable`</li>
+        <li data-i="05">Maturity Scorecard は機能を surface area（大きな製品能力）と category（関連機能の束）に階層化し、未解決の GitHub issue 数・類似サービスとの比較・人間の判断を組み合わせて品質と完成度を評価する</li>
+        <li data-i="06">OpenClaw 自身は「公式 LTS リリースの提供に近づく一歩」「エージェント時代における長期サポートの提供方法を模索するためのリリースプロセスの硬化」と位置づけている</li>
+      </ul>
+      <div class="pull">
+        毎週バージョンが変わる前提だったエージェント基盤に、初めて「動かしっぱなしにしてよい線」が引かれた。本番ループを載せているなら、latest ではなく extended-stable に寄せる選択肢ができた。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">693</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://openclaw.ai/blog/extended-stable-releases-and-maturity-scorecards">OpenClaw 公式ブログ / @openclaw</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-30</dd>
+        <dt>CATEGORY</dt>
+        <dd>🛠 エージェント基盤・運用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://openclaw.ai/blog/extended-stable-releases-and-maturity-scorecards">https://openclaw.ai/blog/extended-stable-releases-and-maturity-scorecards</a></dd>
+        <dd><a href="https://x.com/openclaw/status/2082861975244259700">x.com/openclaw/status/208286197524425970…</a></dd>
+        <dd><a href="https://docs.openclaw.ai/reference/RELEASING">docs.openclaw.ai/reference/RELEASING</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · VOXYZAIBORIS CHERN</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🎓 運用ノウハウ・ハーネス設計 <span class="sep">/</span> @VOXYZ_AI（BORIS CHERNY の YC 登壇内容の引用） <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉Boris Cherny「CLAUDE.md も skills も hooks も半年ごとに消せ」— ただし消す前に検証仕様を書け</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-01/topic_5.png" data-alt="〈知見〉Boris Cherny「CLAUDE.md も skills も hooks も半年ごとに消せ」— ただし消す前に検証仕様を書け" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-01/topic_5.png" alt="〈知見〉Boris Cherny「CLAUDE.md も skills も hooks も半年ごとに消せ」— ただし消す前に検証仕様を書け" />
+      </div>
+      <p class="lede">
+        Claude Code を作った Boris Cherny が YC の登壇で「自分の設定（CLAUDE.md・skills・hooks）を定期的に消して、素の状態でモデルがどう振る舞うか見ろ」と述べた。Anthropic 自身もモデルがリリースされるたびにコードベースとプロンプトを全部捨てて精査し直しており、Opus 5 では従来のシステムプロンプトの80%を削除できたという。引用した @Voxyz_ai が実務側の但し書きとして「必要になったときには、もう消えている」を足し、消す前に検証仕様（verification spec）を書くことを勧めている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Cherny の主張: 自分の設定（CLAUDE.md・skills・hooks）を定期的に消して、素の状態でモデルがどう振る舞うか見る</li>
+        <li data-i="02">Anthropic 自身の運用: モデルがリリースされるたびにコードベースとプロンプトを全部捨て、システムプロンプトを1行ずつ精査し直す</li>
+        <li data-i="03">Opus 5 では、モデルが明示しなくても理解するようになったため従来のシステムプロンプトの80%を削除できた</li>
+        <li data-i="04">「半年ごとに、また1つ足場（scaffold）が不要になり、『AI には難しすぎる』の1カテゴリが日常作業になる」</li>
+        <li data-i="05">実務側の但し書き（@Voxyz_ai）: 「必要になったときには、もう消えている」。だから消す対象そのものではなく、それが担保していた振る舞いを検証仕様として先に文書化する</li>
+        <li data-i="06">リポジトリが変わったら maintenance skill で検証仕様を追随させる、という運用まで提示している</li>
+      </ul>
+      <div class="pull">
+        設定ファイルは足すのは簡単で、消す判断だけが誰にもできない。「消す前に、それが守っていた振る舞いを書き出す」は今日から使える。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">10</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/Voxyz_ai/status/2083253716522594679">@Voxyz_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-31</dd>
+        <dt>CATEGORY</dt>
+        <dd>🎓 運用ノウハウ・ハーネス設計</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/Voxyz_ai/status/2083253716522594679">x.com/Voxyz_ai/…</a></dd>
+        <dd><a href="https://www.ycombinator.com/library/UN-boris-cherny-building-claude-code">www.ycombinator.com/library/UN-boris-che…</a></dd>
+        <dd><a href="https://www.startuphub.ai/ai-news/artificial-intelligence/2026/anthropic-s-boris-cherny-on-building-claude-code">www.startuphub.ai/ai-news/artificial-int…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · KENN EJIMA KENN</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🧠 コンテキストエンジニアリング <span class="sep">/</span> KENN EJIMA (@KENN) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>AI駆動開発のドキュメントを3層化する — md原本 / README 1枚 / pandoc生成HTML</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-01/topic_6.png" data-alt="AI駆動開発のドキュメントを3層化する — md原本 / README 1枚 / pandoc生成HTML" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-01/topic_6.png" alt="AI駆動開発のドキュメントを3層化する — md原本 / README 1枚 / pandoc生成HTML" />
+      </div>
+      <p class="lede">
+        Kenn Ejima が、仕様・計画の Markdown が40ファイル・1万行を超えて全体を見渡せなくなった問題への解を4連投で公開した。エージェントは md を苦もなく読み書きするが人間には辛く、かといって HTML 化すると GitHub 上で読めなくなる。この二律背反を md原本 / 手書きREADME 1枚 / pandoc生成HTMLミラー の3層分離で解いている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">層1: mdツリーが原本。エージェントが読み書きする一次情報はここにのみ置く</li>
+        <li data-i="02">層2: 手書きはトップの README.md 1枚だけ＝リンク集。フォルダ一覧ではなくプロダクト構造で並べ、各エントリは原本へのリンクだけを持つ</li>
+        <li data-i="03">層3: pandoc で md と同じフォルダ構造をミラーした HTML ツリーを生成し gitignore する。人間が読むのはここ（README.md → index.html）</li>
+        <li data-i="04">役割の完全分離: md ＝ エージェント用/GitHub用、生成HTML ＝ 人間のローカル用（自動目次つき）。assets に共通の css と js を置く。人間がメンテするのは README 1枚だけ</li>
+        <li data-i="05">乖離対策はルールより設計で — README には「原本に明記された内容の圧縮」しか書けない＝独自の事実を作れない構造にする。この制約のため md の詳細編集の大半で README 更新が不要になる</li>
+        <li data-i="06">機械が強制するのは AGENTS.md の契約1行と、リンク切れ・仕様網羅・見出し形式を見る検査スクリプトだけ。意味の同期は機械で強制しない</li>
+      </ul>
+      <div class="pull">
+        ドキュメントの同期をルールやCIで縛ると必ず守られなくなって腐る。「README は圧縮しか書けない」という構造的制約に置き換えれば、そもそも乖離が起きにくくなる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">681</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/kenn/status/2083036997376172491">@kenn</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-31</dd>
+        <dt>CATEGORY</dt>
+        <dd>🧠 コンテキストエンジニアリング</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/kenn/status/2083036997376172491">x.com/kenn/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · YUICHI UEMURA U1 /</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🧠 レビュー設計・セキュリティ <span class="sep">/</span> YUICHI UEMURA (@U1) / X ARTICLE <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Artifact に足りない「レビューの往復」— 認知負荷理論から設計した RHW と、索引化事故の3層分析</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-01/topic_7.png" data-alt="Artifact に足りない「レビューの往復」— 認知負荷理論から設計した RHW と、索引化事故の3層分析" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-01/topic_7.png" alt="Artifact に足りない「レビューの往復」— 認知負荷理論から設計した RHW と、索引化事故の3層分析" />
+      </div>
+      <p class="lede">
+        「モデルが1回に出す量は増え続けるのに、読む側の処理能力は変わらない」という問題設定から、認知負荷理論と実測研究を土台に Claude Code の Artifact tool を評価した長文記事。Artifact の強み4点を認めた上で不足3点を挙げ、自作の RHW (Reviewable HTML Workbench) で埋めている。あわせて2026-07 の Artifact 索引化事故の原因を3層に分解している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">CHI 2026-04 の実測（Catalan et al., n=4）: 生成スクリプトの関数がいくつあったか正しく答えられた人は4人中0人。それでも4人全員が「変更は不要」と判断した</li>
+        <li data-i="02">研究者はこれを greedy allocation strategy と命名 — 完了を確認できる最小コストの検査で済ませ、表層の検証が失敗したときだけ深く読む。把握されていたのは happy path 一本だけ</li>
+        <li data-i="03">Artifact の不足3点: ①資料の上で対話できない（指摘のたびに「3章の後半あたりの…」と位置を言葉で作り直す）②生成物がローカルに残らない ③意図しない公開が起きた事例がある</li>
+        <li data-i="04">索引化事故の原因3層: ①tool description が `Publishing proactively is fine for your own work-product` を許し、docs 自身が「再 publish では二度目の確認は出ない」と明記 ②Pro / Max では公開リンクが唯一の共有手段 ③robots.txt の Disallow を noindex 代わりに誤用</li>
+        <li data-i="05">直されたのは③だけ。「公開すると検索に載る」経路は塞がれたが「見せるには公開しかない」構造は残っている。機密を軽く扱ったからではなく、見せる手段が公開しかなかった</li>
+        <li data-i="06">RHW の差分: 箇所を選んでコメント→agent がその場所に返信→resolved で本体へ反映。生成物は自分のディスク上のファイルで外部にURLを発行しない。Claude Code / Codex 双方で動く</li>
+      </ul>
+      <div class="pull">
+        「レビューが追いつかない」ではなく「帯域があっても検証していない」という診断。人間のレビューを最後の砦に置いている運用は、その砦が実は素通りかもしれない。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">234</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/u1/status/2082765537424420981">@u1</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-30</dd>
+        <dt>CATEGORY</dt>
+        <dd>🧠 レビュー設計・セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/u1/status/2082765537424420981">x.com/u1/…</a></dd>
+        <dd><a href="https://github.com/u-ichi/reviewable-html-workbench">github.com/u-ichi/reviewable-html-workbe…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · MANAMAKEAI CEO MAK</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🎨 AI×デザイン・動画 <span class="sep">/</span> MANA｜株式会社MAKEAI CEO (@MAKEAI_CEO) / X ARTICLE <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>〈知見〉HyperFrames — Claude Code が動画編集ソフトになる（HTML→MP4 の決定論的レンダリング）</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-01/topic_8.png" data-alt="〈知見〉HyperFrames — Claude Code が動画編集ソフトになる（HTML→MP4 の決定論的レンダリング）" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-01/topic_8.png" alt="〈知見〉HyperFrames — Claude Code が動画編集ソフトになる（HTML→MP4 の決定論的レンダリング）" />
+      </div>
+      <p class="lede">
+        HeyGen が Apache 2.0 で公開している動画レンダリングフレームワーク HyperFrames の日本語解説。動画を1本の HTML ファイルとして定義し、ヘッドレス Chrome が1フレームずつ撮影して FFmpeg が MP4 に固める方式で、Claude Code / Codex / Cursor / Gemini CLI などスキル対応エージェントから駆動できる。2026年6月の AI Engineer World's Fair の公式オープニング映像が、編集ソフトを一度も開かずにこの方式で制作された。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">決定論的レンダリング: 日本語テロップが崩れない、指定カラーコードが1ピクセルもズレない、同じ指示から必ず同じ映像が返る。生成AIの動画とは別カテゴリ</li>
+        <li data-i="02">React（Remotion）ではなくプレーン HTML を選んだ理由は「LLM が世界で最も大量に学習したマークアップ言語だから」。人間の書きやすさではなくエージェントの書きやすさで設計している</li>
+        <li data-i="03">スキル20個同梱。ルーター役の /hyperframes が /faceless-explainer（解説）/music-to-video（音ハメ）/motion-graphics /talking-head-recut /website-to-video へ振り分ける。中身はただの Markdown で読める</li>
+        <li data-i="04">Apache 2.0・レンダリング回数課金なし・商用利用制限なし・ローカル完結で外部にデータを送らない。導入は Node.js v22以上 + FFmpeg のみ</li>
+        <li data-i="05">ブランド定義は DESIGN.md（色・フォント・トーン）+ FRAME.md（動き方）の2ファイル。フォルダに置くだけで以降の全動画に適用される</li>
+        <li data-i="06">DESIGN.md 抽出プロンプトが優秀 — スクリーンショットからの色推測を禁止し、CSS から一字一句抜き出させ、最後に出典を列挙させて出典を示せない項目は削除させる。ハルシネーションを構造的に潰す型</li>
+      </ul>
+      <div class="pull">
+        動画がテキストファイルになると差分管理と部分差し替えができる。「先週の動画の色だけ変えて再書き出し」が一瞬で終わるので、定期配信のパイプラインに組み込める。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">343</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/MakeAI_CEO/status/2081253131996872764">@MakeAI_CEO</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-26</dd>
+        <dt>CATEGORY</dt>
+        <dd>🎨 AI×デザイン・動画</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/MakeAI_CEO/status/2081253131996872764">x.com/MakeAI_CEO/…</a></dd>
+        <dd><a href="https://hyperframes.heygen.com/">hyperframes.heygen.com/</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-07-31/">
+      ← 前日 · 2026-07-31
+      <span class="big">OpenAI が GPT-5.6 Sol に自分自身を最適化させた — サービングコスト20%減</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-08-01/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260801.0741</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

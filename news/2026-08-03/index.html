@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-08-03 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-08-03 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0803</span>
+    <span class="sep">/</span>
+    <span>2026-08-03</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260803.0731</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-08-03/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:31 · SUN</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SUNDAY · AUGUST 3, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>08<span class="dot">.</span>03</h1>
+    <div class="strap">
+      <span>カリフォルニア · Google · Apple · DeepSeek-V4-Flash-0731</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 5 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        規制・AI生成コンテンツ <span class="sep">/</span> CALIFORNIA AI TRANSPARENCY ACT (SB 942 / AB 853) <span class="sep">/</span> NEWS
+      </div>
+      <h2>カリフォルニア AI透明性法が 8/2 施行 — C2PA 準拠の来歴埋め込みと無料検出ツールが義務に</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-03/topic_1.png" data-alt="カリフォルニア AI透明性法が 8/2 施行 — C2PA 準拠の来歴埋め込みと無料検出ツールが義務に" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-03/topic_1.png" alt="カリフォルニア AI透明性法が 8/2 施行 — C2PA 準拠の来歴埋め込みと無料検出ツールが義務に" />
+      </div>
+      <p class="lede">
+        カリフォルニア州 AI透明性法（SB 942、AB 853 による改正版）が 8/2 に施行された。対象は州内で公開アクセス可能かつ月間100万ユーザー超の生成AIシステムを提供する事業者で、画像・動画・音声への C2PA 互換の電子透かし埋め込みと、誰でも使える無料の検出ツールの提供が義務づけられる。罰則は1違反 $5,000 で、不遵守の1日ごとが別個の違反として数えられる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対象は「州内で公開アクセス可能かつ月間100万ユーザー超」の生成AIシステム。判定は親会社ではなくシステム単位</li>
+        <li data-i="02">潜在的開示（電子透かし）は画像・動画・音声が対象でテキストは対象外。提供者名 / システム名とバージョン / 生成時刻 / 一意のコンテンツID を含み C2PA 互換であること</li>
+        <li data-i="03">無料の検出ツールはアップロードと URL を受け付け API も提供。提出物を結果返却後に保持せず、個人情報も集めないこと</li>
+        <li data-i="04">罰則は1違反 $5,000。不遵守の1日ごとが別個の違反となり、30日放置で $150,000 相当の露出になる</li>
+        <li data-i="05">執行権限は州司法長官のほか市の弁護士・郡法務官にもあり、勝訴側は弁護士費用も回収できる</li>
+        <li data-i="06">2027-01-01 に大規模プラットフォームの来歴開示義務、2028-01-01 にカメラ機器メーカーの撮影時来歴埋め込みが追加される</li>
+      </ul>
+      <div class="pull">
+        自前で画像・動画・音声を生成させているプロダクトにとって、C2PA は「あったらいい機能」から「出荷要件」に格上げされた。日本から出しているサービスでも、州内で公開アクセス可能で閾値を超えれば射程に入る。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.ailawsbystate.com/blog/california-ai-transparency-act-sb-942">California AI Transparency Act (SB 942 / AB 853)</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-02</dd>
+        <dt>CATEGORY</dt>
+        <dd>規制・AI生成コンテンツ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.ailawsbystate.com/blog/california-ai-transparency-act-sb-942">https://www.ailawsbystate.com/blog/california-ai-transparency-act-sb-942</a></dd>
+        <dd><a href="https://natlawreview.com/article/california-establishes-ai-transparency-act">natlawreview.com/article/california-esta…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · ENGADGET / NEWS FR</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI生成コンテンツ・誤情報 <span class="sep">/</span> ENGADGET / NEWS FROM GOOGLE (@NEWSFROMGOOGLE) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Google Earth の Nano Banana が24時間で撤回 — SynthID の透かしでは止まらなかった</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-03/topic_2.png" data-alt="Google Earth の Nano Banana が24時間で撤回 — SynthID の透かしでは止まらなかった" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-03/topic_2.png" alt="Google Earth の Nano Banana が24時間で撤回 — SynthID の透かしでは止まらなかった" />
+      </div>
+      <p class="lede">
+        Google は 7/30 に Google Earth へ画像生成モデル Nano Banana を搭載したが、7/31 には取り下げた。ユーザーがロサンゼルスの爆発クレーターや水没した米国議会議事堂といった、実在しない衛星風の光景を次々生成して拡散したためである。Google は全生成画像に SynthID の電子透かしが入っていると釈明したが、その透かし自体が防御として機能しないことが検証で示された。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">生成・拡散された偽画像はロサンゼルスの爆発クレーター、水没した米国議会議事堂、イラン・カーグ島の火災、Google 本社前のデモ隊など</li>
+        <li data-i="02">搭載は 7/30、撤回は 7/31。24時間ももたなかった</li>
+        <li data-i="03">Google の声明は「地理空間の専門家には正当な用途があったが、ポリシー違反に見える生成画像のスクショが共有されるのを確認した」</li>
+        <li data-i="04">BBC Verify の検証で SynthID は回避可能なケースが見つかった</li>
+        <li data-i="05">さらに Google Earth の Nano Banana 画像は AI が生成した部分にしか透かしが入らず、検証例では画像全体の25%未満。画像全体を AI生成として検証できない</li>
+        <li data-i="06">セキュリティ研究者 Joseph Cox は「透かし頼みは誤情報の伝わり方を読み違えている。人はシェアする前に検証しない」と指摘</li>
+      </ul>
+      <div class="pull">
+        同じ週にカリフォルニアが来歴埋め込みを法律で義務化した直後に、その来歴技術の実効性が現場で否定された。透かしは「後から検証できる人」にしか効かず、拡散そのものは止められないという限界が、規制の前提ごと問われている。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,212</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.engadget.com/2228142/google-rolls-back-the-needless-ai-generation-tools-it-added-to-google-earth/">Engadget / News from Google (@NewsFromGoogle)</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-31</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI生成コンテンツ・誤情報</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.engadget.com/2228142/google-rolls-back-the-needless-ai-generation-tools-it-added-to-google-earth/">https://www.engadget.com/2228142/google-rolls-back-the-needless-ai-generation-tools-it-added-to-google-earth/</a></dd>
+        <dd><a href="https://x.com/NewsFromGoogle/status/2083249962150760610">x.com/NewsFromGoogle/status/208324996215…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · FINANCIAL TIMES</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ・AIの副作用 <span class="sep">/</span> FINANCIAL TIMES（報道） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Apple がバグ報告に上限と30日クールダウン — AIスロップで $200,000 級の実在の穴が埋もれた</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-03/topic_3.png" data-alt="Apple がバグ報告に上限と30日クールダウン — AIスロップで $200,000 級の実在の穴が埋もれた" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-03/topic_3.png" alt="Apple がバグ報告に上限と30日クールダウン — AIスロップで $200,000 級の実在の穴が埋もれた" />
+      </div>
+      <p class="lede">
+        Financial Times の報道によると、Apple が Feedback Assistant 経由のバグ報告に提出上限と30日のクールオフ期間を導入した。理由は AI 支援で生成された脆弱性報告の氾濫である。もっともらしく書かれているが実在しない脆弱性の報告がレビュアーの時間を食い、本物の発見がキューの後ろへ押しやられていた。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Apple は Feedback Assistant のバグ報告に提出上限と30日のクールオフ期間を設けた。実績のある研究者は申請すればより高い枠をもらえる</li>
+        <li data-i="02">直接の引き金は AI 支援で生成された脆弱性報告の大量流入</li>
+        <li data-i="03">問題の型は「もっともらしいが実在しない脆弱性」。レビュアーは1件ずつ読んで否定する必要があり、その分だけ本物が後回しになる</li>
+        <li data-i="04">実害として、イタリアのスタートアップ Bynario が macOS の重大な脆弱性を発見したのに提出枠が埋まっていて報告できなかった</li>
+        <li data-i="05">その脆弱性は報奨金にして最大 $200,000 相当。報告されないまま残った</li>
+      </ul>
+      <div class="pull">
+        1人が10倍の成果物を出せるようになっても、受け手の検証能力は10倍にならない。上限とクールダウンは詰まったパイプに対する応急処置であり、エージェントに大量出力させる運用では「相手の検証コストを自分が消費している」という自覚が要る。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.techmeme.com/260802/p1">Financial Times（報道）</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-02</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ・AIの副作用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.techmeme.com/260802/p1">https://www.techmeme.com/260802/p1</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · DEEPSEEK</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        モデルリリース・コスト <span class="sep">/</span> DEEPSEEK <span class="sep">/</span> NEWS
+      </div>
+      <h2>DeepSeek-V4-Flash-0731 が正式リリース — 入力 $0.14 / 出力 $0.28、Anthropic 形式でも叩ける</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-03/topic_4.png" data-alt="DeepSeek-V4-Flash-0731 が正式リリース — 入力 $0.14 / 出力 $0.28、Anthropic 形式でも叩ける" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-03/topic_4.png" alt="DeepSeek-V4-Flash-0731 が正式リリース — 入力 $0.14 / 出力 $0.28、Anthropic 形式でも叩ける" />
+      </div>
+      <p class="lede">
+        7/31、DeepSeek-V4-Flash-0731 が Preview を抜けて正式リリースされた。モデル構成は4月の Preview から変えず再ポストトレーニングのみで、284B total / 13B active の MoE、コンテキスト 1M・最大出力 384K。注目は API 側で、OpenAI Responses API にネイティブ対応するのに加え `/anthropic` エンドポイントで Anthropic 形式も受けるため、ハーネスを替えずに中のモデルだけ差し替えられる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">正式価格は per 1M トークンでキャッシュヒット入力 $0.0028 / キャッシュミス入力 $0.14 / 出力 $0.28</li>
+        <li data-i="02">ベンダー公称ベンチ（第三者未検証）は Terminal-Bench 2.1 が 82.7、DeepSWE 54.4、CybergymL 76.7、DSBench-HardStack 59.6</li>
+        <li data-i="03">同時実行は 2,500 で、上位の V4-Pro（500）の5倍。ループを並列で回す用途ではここが先に効く</li>
+        <li data-i="04">API は OpenAI Responses API ネイティブ対応（Codex 適合）に加え `/anthropic` エンドポイントで Anthropic 形式も受ける</li>
+        <li data-i="05">-0731 のオープンウェイトは未公開。Hugging Face にある MIT ライセンス版は4月 Preview のまま</li>
+        <li data-i="06">V4-Pro は依然 Preview で価格据え置き（出力 $0.87/1M）、1.6T total / 49B active。正式化時期は未定</li>
+      </ul>
+      <div class="pull">
+        ハーネス（Claude Code / Codex）を固定したままモデルだけ載せ替える経路が、正式リリースと確定価格を伴って揃った。ただし重みは公開されていないので、ローカル実行の話とは切り分けて読む必要がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.digitalapplied.com/blog/deepseek-v4-flash-0731-official-release-agent-benchmarks">DeepSeek</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-31</dd>
+        <dt>CATEGORY</dt>
+        <dd>モデルリリース・コスト</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.digitalapplied.com/blog/deepseek-v4-flash-0731-official-release-agent-benchmarks">https://www.digitalapplied.com/blog/deepseek-v4-flash-0731-official-release-agent-benchmarks</a></dd>
+        <dd><a href="https://deepseek.ai/pricing">deepseek.ai/pricing</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · XAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI動画生成 <span class="sep">/</span> XAI <span class="sep">/</span> NEWS
+      </div>
+      <h2>Grok Imagine Video 1.5 に画像・音声リファレンス — 最大7枚で顔・商品・場所を別々に固定</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-03/topic_5.png" data-alt="Grok Imagine Video 1.5 に画像・音声リファレンス — 最大7枚で顔・商品・場所を別々に固定" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-03/topic_5.png" alt="Grok Imagine Video 1.5 に画像・音声リファレンス — 最大7枚で顔・商品・場所を別々に固定" />
+      </div>
+      <p class="lede">
+        8/1、xAI が Grok Imagine Video 1.5 に画像リファレンス・音声リファレンス・text-to-video・ネイティブ1080p を追加した。目玉は Multi-Reference で、1回の生成に最大7枚の参照画像を渡し、1枚目で顔を固定・2枚目で商品を固定・3枚目でロケーションを定義、というように役割ごとに割り当てられる。音声リファレンスはシーンをまたいだ声の一貫性を保つためのもの。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Multi-Reference は1回の生成につき最大7枚の参照画像。それぞれに顔・商品・ロケーションなど別々の役割を割り当てられる</li>
+        <li data-i="02">音声リファレンスでシーンをまたいだ声の一貫性を維持できる</li>
+        <li data-i="03">画像・音声リファレンスは米国の SuperGrok Heavy / SuperGrok Plus 向けに web と iOS で先行し、数日で全ティアへ展開</li>
+        <li data-i="04">text-to-video とネイティブ1080p は web / iOS / Android で既に一般提供</li>
+        <li data-i="05">API のモデル名は `grok-imagine-video-1.5`。画像リファレンス・text-to-video・1080p は API から利用可能</li>
+        <li data-i="06">音声リファレンスのみ xAI への個別申請が必要</li>
+      </ul>
+      <div class="pull">
+        ショート動画の量産で最も壊れやすいのは「カットが変わると主人公の顔と服が変わる」問題で、参照画像を役割ごとに分けて渡せる設計はそこに直接効く。連作を前提とした制作フローの前提が変わる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.testingcatalog.com/xai-adds-character-references-and-1080p-to-imagine-video-1-5/">xAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-01</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI動画生成</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.testingcatalog.com/xai-adds-character-references-and-1080p-to-imagine-video-1-5/">https://www.testingcatalog.com/xai-adds-character-references-and-1080p-to-imagine-video-1-5/</a></dd>
+        <dd><a href="https://x.ai/news/grok-imagine-1-5">x.ai/news/grok-imagine-1-5</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · VERCEL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発インフラ <span class="sep">/</span> VERCEL <span class="sep">/</span> NEWS
+      </div>
+      <h2>Vercel Passport が GA — 自社 IdP でデプロイを保護し、アプリから本人情報を読める</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-03/topic_6.png" data-alt="Vercel Passport が GA — 自社 IdP でデプロイを保護し、アプリから本人情報を読める" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-03/topic_6.png" alt="Vercel Passport が GA — 自社 IdP でデプロイを保護し、アプリから本人情報を読める" />
+      </div>
+      <p class="lede">
+        7/31、Vercel Passport が一般提供になった（Enterprise プラン）。訪問者は Okta / Microsoft Entra ID / 任意の OIDC プロバイダで認証してからでないと保護対象のデプロイを見られず、Vercel は認証後に署名済み ID トークンをデプロイ側へ転送する。単なるアクセス制限で終わらず、アプリ側が訪問者の本人情報を読んで認可に使える設計になっている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対応 IdP は Okta / Microsoft Entra ID / 任意の OIDC プロバイダ</li>
+        <li data-i="02">`getIdentity()` でアプリから安定した識別子と検証済みトークンを読める</li>
+        <li data-i="03">IdP のグループクレームを使ったデプロイ単位のグループベース認可に対応</li>
+        <li data-i="04">`verifyIdentity()` で下流サービス側が署名と Passport 固有クレームを検証できる</li>
+        <li data-i="05">認証成功ごとに `passport-access-granted` が Activity Log と Audit Log の両方に記録される</li>
+        <li data-i="06">Webhook や CI は既存の protection-bypass や Trusted Sources で迂回可能（迂回時 `getIdentity()` は null を返す）。staging / QA などカスタム環境にも対応</li>
+      </ul>
+      <div class="pull">
+        プレビュー URL に Basic 認証をかけて凌いでいたステージング環境を、そのまま本番の ID 基盤に載せ替えられる。共有リンクの管理から、認証済みの誰が見たかを追える運用へ移行できる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/vercel-passport-generally-available">Vercel</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-07-31</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発インフラ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/vercel-passport-generally-available">https://vercel.com/changelog/vercel-passport-generally-available</a></dd>
+        <dd><a href="https://vercel.com/docs/passport">vercel.com/docs/passport</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · ANTHROPIC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        実務・LLMコスト管理 <span class="sep">/</span> ANTHROPIC <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Sonnet 5 の導入価格は 8/31 まで — 9/1 に単価 +50%、さらにトークン数も増える</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-03/topic_7.png" data-alt="Claude Sonnet 5 の導入価格は 8/31 まで — 9/1 に単価 +50%、さらにトークン数も増える" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-03/topic_7.png" alt="Claude Sonnet 5 の導入価格は 8/31 まで — 9/1 に単価 +50%、さらにトークン数も増える" />
+      </div>
+      <p class="lede">
+        Sonnet 5 のローンチ時に告知されていた条件だが、期限まで4週間を切ったので実務トピックとして扱う。導入価格 $2/$10（入力/出力、per 1M）は 8/31 で終わり、9/1 から標準価格 $3/$15 になる。さらに Sonnet 5 は新しいトークナイザを積んでおり、同じ文章が Sonnet 4.6 比で 1.0〜1.35倍のトークン数になる。単価とトークン数が掛け算になるため、同じ仕事の実効コストは最悪で約2倍になりうる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">導入価格 $2/$10 は 8/31 まで。9/1 から標準価格 $3/$15 で単価は +50%</li>
+        <li data-i="02">プロンプトキャッシュの読み出しも $0.20/1M から $0.30/1M へ上がる</li>
+        <li data-i="03">新トークナイザにより同じ入力が Sonnet 4.6 比 1.0〜1.35倍のトークン数になる（平均で3割前後）</li>
+        <li data-i="04">Sonnet 5 は Claude Code の既定モデル（ネイティブ1Mコンテキスト）なので、意識せず使っている分がそのまま対象になる</li>
+        <li data-i="05">試算では月間 入力500M / 出力150M のワークロードで $2,500 から $3,750 へ（月 +$1,250、年 +$15,000）。これはトークナイザ効果を織り込む前の数字</li>
+        <li data-i="06">8月中の打ち手は、実測ベースラインの記録・プロンプトキャッシュの先行導入・軽いタスクの下位モデルへの退避・使用量が大きいならコミット契約の相談</li>
+      </ul>
+      <div class="pull">
+        「$3/$15 は他社と同水準」という見え方をするため、請求書が来るまで増加に気づきにくい。9月になってから慌てて下位モデルへ切り替えると精度検証の時間が取れないので、比較できる形の実測を8月中に残しておく必要がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.anthropic.com/news/claude-sonnet-5">Anthropic</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-03</dd>
+        <dt>CATEGORY</dt>
+        <dd>実務・LLMコスト管理</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.anthropic.com/news/claude-sonnet-5">https://www.anthropic.com/news/claude-sonnet-5</a></dd>
+        <dd><a href="https://finopsllm.com/research/sonnet-5-intro-pricing-deadline">finopsllm.com/research/sonnet-5-intro-pr…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://www.ailawsbystate.com/blog/california-ai-transparency-act-sb-942">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-08-02/">
+      ← 前日 · 2026-08-02
+      <span class="big">OpenAI の暴走エージェント、封じ込め破りは1件ではなかった — Modal Labs 含む計4社へ</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-08-03/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260803.0731</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

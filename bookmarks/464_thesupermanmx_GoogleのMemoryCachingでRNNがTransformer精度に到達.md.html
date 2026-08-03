@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AnthropicマーケティングチームのClaude Code活用術 — Bookmarks · Vibe Coder Bootcamp</title>
-  <meta name="description" content="BM数12,718は今回の5件中トップ。技術職ではないマーケターがClaude Codeをどう実務に使っているかのリアル事例。非エンジニアがVibe Codingする文脈でそのまま使える事例として、VBC受講者への共有価値が高い。画像2枚付き（実際の使用画面と思われる）。" />
+  <title>Google の Memory Caching (MC) — RNN が Transformer 精度に並び、線形計算量を維持 — Bookmarks · Vibe Coder Bootcamp</title>
+  <meta name="description" content="- 問題設定: Transformer = 高精度だが $O(L^2)$ / RNN = 線形で速いが固定メモリゆえ長文で忘れる - MC のアイデア: 隠れ状態のチェックポイントをキャッシュし、ニューラルネットにおける仮想メモリのように振る舞わせる。実効記憶容量が系列長に応じて" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
@@ -285,11 +285,11 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №341</span>
+    <span class="tick">BOOKMARK №002</span>
     <span class="sep">/</span>
-    <span>2026-02-15</span>
+    <span>2026-08-01</span>
     <span class="sep">/</span>
-    <span>@robjama</span>
+    <span>@thesupermanmx</span>
     <span class="sep">/</span>
     <span>468 ITEMS</span>
     <span class="sep">/</span>
@@ -317,43 +317,37 @@
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-02-15 <span>/</span> №341
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-08-01 <span>/</span> №002
     </div>
     <div class="cat-line">
-      <span>💻 技術Tips</span>
-      <span class="sep">·</span><span>Robleh <span style="opacity:.7">@robjama</span></span>
-      <span class="sep">·</span><span>2026-02-15</span>
+      <span>📖 技術解説 / 論文</span>
+      <span class="sep">·</span><span>Superman <span style="opacity:.7">@thesupermanmx</span></span>
+      <span class="sep">·</span><span>2026-08-01</span>
     </div>
-    <h1 class="title">AnthropicマーケティングチームのClaude Code活用術</h1>
+    <h1 class="title">Google の Memory Caching (MC) — RNN が Transformer 精度に並び、線形計算量を維持</h1>
     <div class="strap">
-      <span><span class="label">№</span>341 / 468</span>
-      <span><span class="label">SRC</span><a href="https://x.com/robjama/status/2023151595295268939" target="_blank" rel="noopener noreferrer">x.com/robjama ↗</a></span>
-      <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/101_robjama_anthropic_marketing_claude_code.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
+      <span><span class="label">№</span>002 / 468</span>
+      <span><span class="label">SRC</span><a href="https://x.com/thesupermanmx/status/2083556033931403600" target="_blank" rel="noopener noreferrer">x.com/thesupermanmx ↗</a></span>
+      <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/464_thesupermanmx_Google%E3%81%AEMemoryCaching%E3%81%A7RNN%E3%81%8CTransformer%E7%B2%BE%E5%BA%A6%E3%81%AB%E5%88%B0%E9%81%94.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
   </div>
 </section>
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">341<span class="ord">BOOKMARK / 468</span></aside>
+    <aside class="numeral">002<span class="ord">BOOKMARK / 468</span></aside>
     <article class="prose">
-<p><strong>有益度:</strong> ⭐⭐⭐ HIGH</p><h2>概要</h2><blockquote>how Anthropic's marketing team uses claude code</blockquote><h2>まとめ</h2><p>BM数12,718は今回の5件中トップ。技術職ではないマーケターがClaude Codeをどう実務に使っているかのリアル事例。非エンジニアがVibe Codingする文脈でそのまま使える事例として、VBC受講者への共有価値が高い。画像2枚付き（実際の使用画面と思われる）。</p><h2>関連リンク</h2><ul><li><a href="https://pbs.twimg.com/media/HBOtSSCasAA_sHP.png" target="_blank" rel="noopener noreferrer">投稿画像1</a></li><li><a href="https://pbs.twimg.com/media/HBOtTyyWEAAQBbU.jpg" target="_blank" rel="noopener noreferrer">投稿画像2</a></li></ul>
+<p><strong>有益度:</strong> ⭐⭐⭐⭐</p><p><strong>エンゲージメント:</strong> Likes 1557 / RT 275 / Bookmarks 1504 / Views 463505</p><h2>投稿本文（原文）</h2><p>Google has quietly published a method that might end the entire transformer era.</p><p>For a decade, every major AI model on earth, ChatGPT, Claude, Gemini, has been chained to the exact same architecture. The Transformer.</p><p>It changed everything by letting models look at entire sequences at once. But it has a fatal flaw. Its memory consumption scales quadratically. $O(L^2)$. As context windows grow to millions of tokens, the compute cost explodes. It requires massive data centers, thousands of GPUs, and fortunes in electricity.</p><p>For years, researchers tried to replace Transformers with old-school Recurrent Neural Networks (RNNs) to get lightning-fast linear speed. The problem? RNNs have fixed-size memory. When texts get long, they forget. They choke on complex reasoning and recall tasks. So everyone went back to Transformers.</p><p>Until Google dropped a bombshell new paper. They introduced Memory Caching (MC).</p><p>Instead of forcing an RNN to rely on a fixed, static memory, Google's technique lets the model's effective memory capacity grow dynamically with the sequence length. It acts like virtual memory for neural networks. By caching checkpoints of hidden states and integrating smart mechanisms like sparse selective retrieval, the model dynamically looks back at what it needs, without the crushing mathematical overhead of a Transformer.</p><p>The results completely break the old rules of sequence modeling:</p><p>• Matches Transformer-level accuracy on complex in-context recall tasks.</p><p>• Completely closes the performance gap that kept RNNs sidelined for years.</p><p>• Maintains linear complexity, making long-context processing radically cheaper and faster.</p><p>We've spent years believing that massive, heavy attention mechanisms are the only way to build intelligent systems. Google just proved you can have the infinite memory of a Transformer with the blistering speed and efficiency of an RNN.</p><p>The era of brute-forcing scale with quadratic attention is hitting a wall.</p><h2>概要</h2><p>Google が発表した <strong>Memory Caching (MC)</strong> の解説スレッド。RNN 系列モデルの積年の弱点だった「固定サイズの記憶」を、<strong>隠れ状態のチェックポイントをキャッシュする</strong>ことで解消し、実効的な記憶容量を系列長とともに動的に増やす手法。</p><p>Transformer の Attention は系列長 L に対して $O(L^2)$ で計算・メモリが膨らむ。100万トークン級のコンテキストではこれが電力とGPUのコストに直結する。一方 RNN は $O(L)$ と安いが、固定サイズの状態に全部を押し込むので長文で忘れる。<strong>MC はこの二者択一を崩す</strong>というのが主張。</p><h2>まとめ</h2><ul><li><strong>問題設定</strong>: Transformer = 高精度だが $O(L^2)$ / RNN = 線形で速いが固定メモリゆえ長文で忘れる</li><li><strong>MC のアイデア</strong>: 隠れ状態のチェックポイントをキャッシュし、<strong>ニューラルネットにおける仮想メモリのように</strong>振る舞わせる。実効記憶容量が系列長に応じて動的に伸びる</li><li><strong>retrieval</strong>: sparse selective retrieval（疎な選択的検索）で、必要なときだけ過去を参照しに行く。全トークン間の総当たり Attention を回避</li><li><strong>主張されている結果</strong>:</li></ul><p>  - 複雑な in-context recall タスクで <strong>Transformer 級の精度に到達</strong></p><p>  - RNN を長年退けてきた性能ギャップを解消</p><p>  - <strong>線形計算量を維持</strong> — 長コンテキスト処理が劇的に安く速くなる</p><h2>日本語訳全文</h2><p>Google が、Transformer の時代を終わらせるかもしれない手法を静かに公開しました。</p><p>この10年、地球上のあらゆる主要 AI モデル — ChatGPT、Claude、Gemini — は、まったく同じアーキテクチャに縛られてきました。<strong>Transformer</strong> です。</p><p>Transformer は、モデルが系列全体を一度に見られるようにしたことですべてを変えました。しかし致命的な欠陥があります。<strong>メモリ消費が二乗で増える</strong> $O(L^2)$ という性質です。コンテキストウィンドウが数百万トークンへと伸びるにつれ、計算コストは爆発します。巨大なデータセンター、数千枚の GPU、そして莫大な電気代が必要になります。</p><p>研究者たちは長年、Transformer を旧来の RNN（再帰型ニューラルネットワーク）で置き換え、線形の高速性を得ようとしてきました。問題は何か？ <strong>RNN は記憶が固定サイズ</strong>だという点です。テキストが長くなると忘れてしまう。複雑な推論や想起タスクで詰まる。だから皆 Transformer に戻っていきました。</p><p>そこへ Google が衝撃的な新論文を投下しました。<strong>Memory Caching (MC)</strong> です。</p><p>RNN に固定的で静的な記憶を強いる代わりに、Google の手法は<strong>モデルの実効的な記憶容量が系列長とともに動的に増える</strong>ようにします。ニューラルネットにおける仮想メモリのように振る舞うのです。隠れ状態のチェックポイントをキャッシュし、<strong>疎な選択的検索（sparse selective retrieval）</strong>のような賢い機構を組み合わせることで、モデルは必要なものを動的に振り返って参照します — Transformer のような圧倒的な数学的オーバーヘッドを払うことなく。</p><p>結果は、系列モデリングの旧来の常識を完全に破壊しました:</p><ul><li>複雑な in-context recall（文脈内想起）タスクで <strong>Transformer 級の精度に到達</strong></li><li>RNN を長年脇に追いやってきた<strong>性能ギャップを完全に解消</strong></li><li><strong>線形計算量を維持</strong> — 長コンテキスト処理が劇的に安く、速くなる</li></ul><p>我々は何年ものあいだ、巨大で重い Attention 機構こそが知的システムを作る唯一の道だと信じてきました。Google は、<strong>Transformer の無限の記憶と、RNN の圧倒的な速度・効率の両方を手にできる</strong>ことを証明したのです。</p><p>二乗の Attention でスケールを力任せに押し切る時代は、壁に突き当たりつつあります。</p>
     </article>
     <aside class="side">
       <dl>
-        <dt>AUTHOR</dt><dd>Robleh</dd>
-        <dt>HANDLE</dt><dd>@robjama</dd>
-        <dt>POSTED</dt><dd>2026-02-15</dd>
-        <dt>CATEGORY</dt><dd>💻 技術Tips</dd>
-        <dt>SOURCE</dt><dd><a href="https://x.com/robjama/status/2023151595295268939" target="_blank" rel="noopener noreferrer">x.com/robjama/status/2023151595295268939</a></dd>
-        <dt>MARKDOWN</dt><dd><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/101_robjama_anthropic_marketing_claude_code.md" target="_blank" rel="noopener noreferrer">GitHub で原文を見る</a></dd>
+        <dt>AUTHOR</dt><dd>Superman</dd>
+        <dt>HANDLE</dt><dd>@thesupermanmx</dd>
+        <dt>POSTED</dt><dd>2026-08-01</dd>
+        <dt>CATEGORY</dt><dd>📖 技術解説 / 論文</dd>
+        <dt>SOURCE</dt><dd><a href="https://x.com/thesupermanmx/status/2083556033931403600" target="_blank" rel="noopener noreferrer">x.com/thesupermanmx/status/208355603393140…</a></dd>
+        <dt>MARKDOWN</dt><dd><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/464_thesupermanmx_Google%E3%81%AEMemoryCaching%E3%81%A7RNN%E3%81%8CTransformer%E7%B2%BE%E5%BA%A6%E3%81%AB%E5%88%B0%E9%81%94.md" target="_blank" rel="noopener noreferrer">GitHub で原文を見る</a></dd>
         
-        <dt>ENGAGEMENT</dt>
-        <dd>
-          <div class="stats">
-            <div class="stat"><span class="num">5,722</span><span class="lab">LIKES</span></div><div class="stat"><span class="num">372</span><span class="lab">RTS</span></div><div class="stat"><span class="num">12.7K</span><span class="lab">BMARKS</span></div><div class="stat"><span class="num">1.5M</span><span class="lab">VIEWS</span></div>
-          </div>
-        </dd>
       </dl>
     </aside>
   </div>
@@ -361,13 +355,13 @@
 
 <section class="page-nav">
   <div class="container">
-    <a class="btn prev" href="./116_RayDalio_world_order_breakdown.md.html">
+    <a class="btn prev" href="./463_Alibaba_Qwen_Qwen38Max%E7%99%BA%E8%A1%A82.4T%E3%83%91%E3%83%A9%E3%83%A1%E3%83%BC%E3%82%BF%E3%81%A7%E8%87%AA%E5%BE%8B%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B010%E6%97%A5%E9%96%93.md.html">
       <span>← 新しいブックマーク</span>
-      <span class="big">世界秩序の崩壊が正式に宣言された — Ray Dalio</span>
+      <span class="big">Qwen3.8-Max 発表 — 2.4Tパラメータ、10日超の自律コーディングと来週のオー…</span>
     </a>
-    <a class="btn next" href="./98_cline_cli_2.0_terminal_agent.md.html">
+    <a class="btn next" href="./454_OpenAI_CodexSecurityCLI%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E3%82%BD%E3%83%BC%E3%82%B9%E5%85%AC%E9%96%8B.md.html">
       <span>古いブックマーク →</span>
-      <span class="big">Cline CLI 2.0 — ターミナル完結のOSSコーディングエージェント</span>
+      <span class="big">OpenAI が Codex Security CLI をオープンソース公開 — 静かに出し…</span>
     </a>
   </div>
 </section>
@@ -375,8 +369,8 @@
 <section class="actions">
   <div class="container">
     <a href="./">← 一覧へ戻る</a>
-    <a class="primary" href="https://x.com/robjama/status/2023151595295268939" target="_blank" rel="noopener noreferrer">元ポストを X で見る</a>
-    <a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/101_robjama_anthropic_marketing_claude_code.md" target="_blank" rel="noopener noreferrer">GitHub で開く</a>
+    <a class="primary" href="https://x.com/thesupermanmx/status/2083556033931403600" target="_blank" rel="noopener noreferrer">元ポストを X で見る</a>
+    <a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/464_thesupermanmx_Google%E3%81%AEMemoryCaching%E3%81%A7RNN%E3%81%8CTransformer%E7%B2%BE%E5%BA%A6%E3%81%AB%E5%88%B0%E9%81%94.md" target="_blank" rel="noopener noreferrer">GitHub で開く</a>
   </div>
 </section>
 

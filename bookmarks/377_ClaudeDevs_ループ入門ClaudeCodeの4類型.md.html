@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №028</span>
+    <span class="tick">BOOKMARK №030</span>
     <span class="sep">/</span>
     <span>2026-07-07</span>
     <span class="sep">/</span>
     <span>@ClaudeDevs</span>
     <span class="sep">/</span>
-    <span>466 ITEMS</span>
+    <span>468 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:11 MON</span>
+    <span>JST 07:16 TUE</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,19 +305,19 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-08-02/">NEWS</a>
+      <a href="../news/2026-08-03/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:11 · MON</div>
+    <div class="meta">JST · 07:16 · TUE</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-07-07 <span>/</span> №028
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-07-07 <span>/</span> №030
     </div>
     <div class="cat-line">
       <span>📖 技術解説 / エージェント設計</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">ループ入門 — Claude Code チームが定義するループ設計の4類型</h1>
     <div class="strap">
-      <span><span class="label">№</span>028 / 466</span>
+      <span><span class="label">№</span>030 / 468</span>
       <span><span class="label">SRC</span><a href="https://x.com/ClaudeDevs/status/2074208949205881033" target="_blank" rel="noopener noreferrer">x.com/ClaudeDevs ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/377_ClaudeDevs_%E3%83%AB%E3%83%BC%E3%83%97%E5%85%A5%E9%96%80ClaudeCode%E3%81%AE4%E9%A1%9E%E5%9E%8B.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">028<span class="ord">BOOKMARK / 466</span></aside>
+    <aside class="numeral">030<span class="ord">BOOKMARK / 468</span></aside>
     <article class="prose">
 <p><strong>有益度:</strong> ⭐⭐⭐</p><p><strong>エンゲージメント:</strong> Likes 14,333 / RT 1,671 / Bookmarks 31,416 / Views 4,099,370 / Replies 278</p><h2>概要</h2><p>「プロンプトを書く」から「ループを設計する」への潮流について、Claude Code チーム公式が用語と設計指針を整理した記事。彼らはループを「停止条件に達するまで作業サイクルを繰り返すエージェント」と定義し、①トリガー方法 ②停止方法 ③使う Claude Code プリミティブ ④向いているタスク の4軸で4類型に分類する。全タスクに複雑なループが要るわけではなく、最も単純な解から始めて選択的に使えと釘を刺している。</p><h2>まとめ</h2><ul><li><strong>Turn-based loop（ターンベース）</strong>: トリガー=ユーザーのプロンプト。停止=Claude が完了 or 追加コンテキストが必要と判断。短めの単発タスク向け。検証ステップを SKILL.md に手順化すると自己検証が増えてターン数を減らせる。定量的なチェックほど自己検証しやすい。</li><li><strong>Goal-based loop（/goal）</strong>: トリガー=リアルタイムの手動プロンプト。停止=ゴール達成 or 最大ターン数到達。検証可能な終了条件があるタスク向け。成功条件を明示すると「もう十分か」を Claude が判断せずに済み、途中で早期終了しない。評価モデルが条件を満たすまで差し戻す。テスト通過数・スコア閾値など決定的な基準が効く。</li><li><strong>Time-based loop（/loop・/schedule）</strong>: トリガー=指定時間間隔。停止=キャンセル or 作業完了（PR マージ・キュー空）。定期作業や外部システムとのインターフェース向け。<code>/loop</code> は自分の PC で動くので電源を切ると止まる。<code>/schedule</code> でクラウドの routine 化して常駐できる。</li><li><strong>Proactive loop（プロアクティブ）</strong>: トリガー=イベント/スケジュール（リアルタイムの人間なし）。停止=各タスクはゴール達成で終了、routine 自体は止めるまで稼働。バグ報告・issue トリアージ・移行・依存更新など定義済みの反復ストリーム向け。<code>/schedule</code>＋<code>/goal</code>＋Dynamic workflows＋Auto mode を合成して長時間稼働を組む。判断は高性能モデル、実行は小型高速モデルに振ってコスト管理。</li><li><strong>コード品質の保ち方</strong>: コードベースを綺麗に保つ（Claude は既存の慣習に倣う）／SKILL で「良い」を定義し自己検証させる／docs を参照可能に／レビューは fresh context の別エージェント（<code>/code-review</code>）で。個別の不合格は個別修正で終わらせず、システムに符号化して全反復を改善する。</li><li><strong>トークン管理</strong>: タスクに合ったプリミティブとモデルを選ぶ／成功・停止条件を明確に／大量実行前に小さくパイロット（Dynamic workflows は数百エージェントを spawn しうる）／決定的作業はスクリプト化（推論より安い）／監視対象の変化頻度に間隔を合わせる／<code>/usage</code>・<code>/goal</code>・<code>/workflows</code> で使用量を随時レビュー。</li></ul><h2>日本語訳全文</h2><p><strong>タイトル: ループ入門（Getting started with loops）</strong></p><p>いま「コーディングエージェントにプロンプトを書く」代わりに「ループを設計する」という話題で持ちきりだ。X で「ループとは何か」を突き止めようとすると、答えは人によってバラバラだと気づくだろう。Claude Code チームでは、ループを「停止条件に達するまで作業サイクルを繰り返すエージェント」と定義する。分類の軸は、①どうトリガーされるか ②どう停止するか ③どの Claude Code プリミティブを使うか ④どんなタスクに最適か、の4つ。本稿では主要なループ型・使いどころ・トークン使用量を管理しつつコード品質を保つ方法を扱う。すべてのタスクに複雑なループが要るわけではない。最も単純な解から始め、これらのパターンは選択的に使うこと。</p><p><strong>ターンベースのループ</strong> — トリガー: ユーザーのプロンプト。停止条件: Claude が完了した、または追加コンテキストが必要だと判断したとき。最適: 定常プロセスやスケジュールに属さない短めのタスク。使用量の管理: 具体的なプロンプトを書き、スキルで検証を強化してターン数を減らす。送るプロンプトごとに、あなたが各ターンを指揮する手動ループが始まる。Claude はコンテキストを集め、行動し、自分の仕事を確認し、必要なら繰り返し、応答する — これがエージェンティックループだ。手動の確認手順を SKILL.md に符号化すれば、Claude が自分の仕事をより多く自己検証できる。チェックが定量的であるほど自己検証は容易になる。</p><p><strong>ゴールベースのループ（/goal）</strong> — トリガー: リアルタイムの手動プロンプト。停止条件: ゴール達成、または最大ターン数に到達。最適: 検証可能な終了条件を持つタスク。使用量の管理: 具体的な完了基準と明示的なターン上限（「5回で止めろ」）を設定。成功基準を定義すると、Claude は「十分か」を自分で判断して早期終了せずに済む。評価モデルが条件を確認し、満たすかターン上限に達するまで差し戻す。テスト通過数やスコア閾値など決定的な基準が効くのはこのため。</p><p><strong>時間ベースのループ（/loop・/schedule）</strong> — トリガー: 指定した時間間隔。停止条件: 自分でキャンセルするか、作業が完了する（PR がマージ、キューが空）。最適: 反復作業、または外部環境／システムとのインターフェース。使用量の管理: 間隔を長くする、時間でなくイベントで反応する。<code>/loop</code> はプロンプトを間隔で再実行し、自分の PC 上で動くので電源を切ると止まる。<code>/schedule</code> で routine を作ればクラウドへ移せる。</p><p><strong>プロアクティブなループ</strong> — トリガー: イベントまたはスケジュール（リアルタイムの人間なし）。停止条件: 各タスクはゴール達成で終了、routine 自体は止めるまで稼働。最適: バグ報告・issue トリアージ・移行・依存更新など、定義済みの反復ストリーム。使用量の管理: routine は小型・高速モデルに振り、判断が要る箇所だけ最も高性能なモデルを使う。<code>/schedule</code>＋<code>/goal</code>＋スキル＋Dynamic workflows＋Auto mode を合成する。</p><p><strong>コード品質の維持</strong>: コードベース自体を綺麗に保つ（Claude は既存のパターン・慣習に倣う）／スキルで「良い」を符号化し自己検証させる／docs を参照しやすくする／レビューは fresh context の別エージェント（<code>/code-review</code> や Code Review for GitHub）を使う。個別の結果が基準を満たさないとき、個別修正で止めず、将来の全反復のためにシステムへ符号化する。</p><p><strong>トークン使用量の管理</strong>: タスクに合ったプリミティブとモデルを選ぶ／明確な成功・停止条件を定義する／大規模実行の前に小さくパイロットする（Dynamic workflows は数百のエージェントを spawn しうる）／決定的な作業はスクリプト化する（推論より安い）／必要以上に頻繁に routine を回さない／<code>/usage</code>・<code>/goal</code>・<code>/workflows</code> で使用量をレビューする。</p><p><strong>始め方</strong>: すでにやっている作業を見て、自分がボトルネックになっているタスクを1つ選び、どの部分を手放せるかを問う — 検証チェックは書けるか？ ゴールは十分明確か？ 作業はスケジュールで届くか？ ループを回し、どこで停滞し・行き過ぎるかを観察し、恐れず改善する。（執筆: @delba_oliveira）</p>
     </article>
@@ -384,14 +384,14 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 466 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 468 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-08-02/">TODAY</a></li>
+          <li><a href="../news/2026-08-03/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -418,7 +418,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-08-03</span>
+      <span>BUILD 2026-08-04</span>
     </div>
   </div>
 </footer>

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-08-04 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-08-04 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0804</span>
+    <span class="sep">/</span>
+    <span>2026-08-04</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260804.0734</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-08-04/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:34 · MON</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · MONDAY · AUGUST 4, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>08<span class="dot">.</span>04</h1>
+    <div class="strap">
+      <span>OpenAI · Qwen3.8-Max · 「No · Zero-Mem</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 5 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 / 研究 <span class="sep">/</span> OPENAI (@OPENAI) / OPENAI.COM <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI、未発表モデルの内部版が数学の未解決問題10件で新結果 — トークン代は約$2,000、ただし検証はこれから</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-04/topic_1.png" data-alt="OpenAI、未発表モデルの内部版が数学の未解決問題10件で新結果 — トークン代は約$2,000、ただし検証はこれから" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-04/topic_1.png" alt="OpenAI、未発表モデルの内部版が数学の未解決問題10件で新結果 — トークン代は約$2,000、ただし検証はこれから" />
+      </div>
+      <p class="lede">
+        OpenAI が「次期メジャーモデルの内部版」を使い、10年以上未解決だった数学・理論計算機科学の問題に対して10件の新しい結果を出したと発表した。トークン消費は GPT-5.6 Sol の API レート換算で約 $2,000 相当。原稿・Lean 形式の証明証明書・推論の過程を公開し、数学者が検証できる形にしているが、公開直後の時点で専門家による定理ごとのレビューは見当たらず、公開リポジトリ自身がパッケージを &quot;agent-reviewed&quot; と表示している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対象は球充填・符号理論・群論・量子計算複雑性・格子暗号・極値組合せ論。非 sofic 群の初の明示的構成、高次元球充填の Cohn–Elkies 上界の改善、Connes の剛性予想の反証、Erdős 問題3件 (#146/#180/#183) など</li>
+        <li data-i="02">二次的な集計では10件のうち4件が「数学者がそうだと信じていたことへの反例」</li>
+        <li data-i="03">OpenAI は議論の中身はすべてモデル由来とし、原稿執筆と Lean での形式化は人間が担当したと説明</li>
+        <li data-i="04">コストは GPT-5.6 Sol の API レートで約 $2,000 分のトークン。研究1本あたりの単価としては極端に安い</li>
+        <li data-i="05">⚠️ 8/1 時点で定理ごとの専門家サインオフは確認されておらず、リポジトリのラベルは &quot;agent-reviewed&quot;</li>
+        <li data-i="06">⚠️ モデル内部名「Astra」は非公式アカウント発。公式ポストは「次期メジャーモデルの内部版」としか書いていない</li>
+      </ul>
+      <div class="pull">
+        研究レベルの新規性が $2,000 分のトークンで出るなら、ボトルネックは生成側ではなく検証側に完全に移る。今週この論点は複数の話題で同時に噴き出している。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">7,929</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://openai.com/index/ten-advances-in-mathematics/">OpenAI (@OpenAI) / openai.com</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-03</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表 / 研究</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://openai.com/index/ten-advances-in-mathematics/">https://openai.com/index/ten-advances-in-mathematics/</a></dd>
+        <dd><a href="https://x.com/OpenAI/status/2084352161404920316">x.com/OpenAI/status/2084352161404920316</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · QWEN ALIBABAQWEN</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 業界ニュース / 💻 AI開発ツール <span class="sep">/</span> QWEN (@ALIBABA_QWEN) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Qwen3.8-Max 発表 — 2.4Tパラメータ、来週フラッグシップの重みを公開</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-04/topic_2.png" data-alt="Qwen3.8-Max 発表 — 2.4Tパラメータ、来週フラッグシップの重みを公開" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-04/topic_2.png" alt="Qwen3.8-Max 発表 — 2.4Tパラメータ、来週フラッグシップの重みを公開" />
+      </div>
+      <p class="lede">
+        Alibaba が最上位モデル Qwen3.8-Max（2.4Tパラメータ）を発表した。売りは性能ベンチではなく実行の長さで、空フォルダから本番投入可能な状態まで人の介入なしで到達する10日超の自律コーディングを掲げ、その全トレースを GitHub で公開している。最大のニュースは来週のオープンウェイト公開で、Max 本体に加え Qwen3.8-27B も重みが出る。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">2.4T パラメータ。コーディングと &quot;cowork&quot;（数百職種の実務遂行）に照準</li>
+        <li data-i="02">自律コーディング10日超。全プロジェクトトレースを GitHub `qwen-code-dev-bot/oh-my-cli` で公開（スレッド内には16日間の実行例も）</li>
+        <li data-i="03">長期ホライズン: チップ設計最適化で500ターン超、EC戦略で365日相当の閉ループ適応学習を駆動したと主張</li>
+        <li data-i="04">価格は Input $2.0 / Output $6.0 / Implicit Caching $0.25（いずれも100万トークンあたり）</li>
+        <li data-i="05">来週オープンウェイト公開: Qwen3.8-Max と Qwen3.8-27B。27B はローカル運用の現実的な射程に入る</li>
+        <li data-i="06">⚠️ 公開されているのはベンダー自身が選んだ成功トレース。実運用の歩留まりは示されていない</li>
+      </ul>
+      <div class="pull">
+        フラッグシップ級の重みが配られると「API で試して、量が出る部分は自前ホスト」が成立する。上位ラボの値上げが走っている同じ週に、下から価格を当てにくる動きが出た。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">20,676</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/Alibaba_Qwen/status/2084100707423289643">@Alibaba_Qwen</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-03</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 業界ニュース / 💻 AI開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/Alibaba_Qwen/status/2084100707423289643">x.com/Alibaba_Qwen/…</a></dd>
+        <dd><a href="https://qwen.ai/blog?id=qwen3.8">qwen.ai/blog?id=qwen3.8</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · ZOSTAFF ZOSTAFF</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🧠 コンテキストエンジニアリング <span class="sep">/</span> ZOSTAFF (@ZOSTAFF) <span class="sep">/</span> NEWS
+      </div>
+      <h2>「No Vibes Allowed」— エージェントの品質はコンテキストの40%から落ちる。だから Research → Plan → Implement</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-04/topic_3.png" data-alt="「No Vibes Allowed」— エージェントの品質はコンテキストの40%から落ちる。だから Research → Plan → Implement" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-04/topic_3.png" alt="「No Vibes Allowed」— エージェントの品質はコンテキストの40%から落ちる。だから Research → Plan → Implement" />
+      </div>
+      <p class="lede">
+        &quot;context engineering&quot; という語を作った本人の講演「No Vibes Allowed」の要約が広がっている。主張はエージェントには &quot;dumb zone&quot; があり、品質はコンテキストウィンドウの40%あたりから落ち始めるというもの。MCP を大量に積むとタスクを始めた時点ですでにその領域に入っている。対策として Research → Plan → Implement の3段構え (RPI) が提示されている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">品質の劣化はコンテキストウィンドウの40%付近から始まる。使い切る手前ですでに落ちている</li>
+        <li data-i="02">MCP を繋ぎすぎるとタスク開始時点で dumb zone に入る。接続の数はそのままコンテキスト消費</li>
+        <li data-i="03">Research: エージェントはコードベースを読むだけ。何も書かせない</li>
+        <li data-i="04">Plan: ファイル名・行番号・テストまで具体的に書いた Markdown を作らせる</li>
+        <li data-i="05">Implement: 人間が確認済みの計画をただ実行させる</li>
+        <li data-i="06">効くのは「計画を人が確認できる形にした」こと。実装フェーズにはもう判断が残っていない</li>
+      </ul>
+      <div class="pull">
+        MCP を増やすほど便利になる、という直感が明確に否定されている。接続数はコンテキスト予算の問題として管理する対象になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">76</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/zostaff/status/2083935736466678232">@zostaff</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-02</dd>
+        <dt>CATEGORY</dt>
+        <dd>🧠 コンテキストエンジニアリング</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/zostaff/status/2083935736466678232">x.com/zostaff/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · DAIRAI DAIRAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📖 技術解説・論文 <span class="sep">/</span> DAIR.AI (@DAIR_AI) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Zero-Mem — エージェントのメモリから LLM 呼び出しを全部外す</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-04/topic_4.png" data-alt="Zero-Mem — エージェントのメモリから LLM 呼び出しを全部外す" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-04/topic_4.png" alt="Zero-Mem — エージェントのメモリから LLM 呼び出しを全部外す" />
+      </div>
+      <p class="lede">
+        「エージェントのメモリに LLM は本当に必要か」を検証した論文 Zero-Mem が話題になっている。実運用のメモリスタックはやりとりの要約・レコードの書き込み・検索結果の再ランキングにそれぞれ追加のモデル呼び出しを使い、トークンとレイテンシを消費するうえ要約の過程で後から必要になる証拠を捨てている。Zero-Mem はメモリの全ステップから生成を取り除き、LLM を呼ぶのは最終的な質問応答のリーダーだけにする。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">問題は3か所のモデル呼び出し: ①やりとりの要約 ②レコードの書き込み ③検索結果の再ランキング</li>
+        <li data-i="02">要約は情報の損失を伴う。捨てられるのは往々にして後から必要になる証拠</li>
+        <li data-i="03">Zero-Mem はメモリ層から generation を排除。生成を使うのは最終読解のみ</li>
+        <li data-i="04">元のやりとりのトレースをそのままレコードとして保持し、2通りの方法でインデックスする</li>
+        <li data-i="05">効果はコストとレイテンシの削減だけでなく、証拠が消えないことにある</li>
+      </ul>
+      <div class="pull">
+        エージェントのメモリを「賢くする」方向で議論が続いていたところに、賢さを抜いたほうが良いという結果が出た。要約による情報損失は、あとから効いてくるので気づきにくい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">38</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/dair_ai/status/2084370729332797724">@dair_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-03</dd>
+        <dt>CATEGORY</dt>
+        <dd>📖 技術解説・論文</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/dair_ai/status/2084370729332797724">x.com/dair_ai/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · CVXV666 ANTPALKIN</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔁 ループエンジニアリング <span class="sep">/</span> CVXV666 (@ANTPALKIN) <span class="sep">/</span> NEWS
+      </div>
+      <h2>15,000ステップ・150サブエージェントの swarm — 「作った側に自分の仕事を採点させない」</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-04/topic_5.png" data-alt="15,000ステップ・150サブエージェントの swarm — 「作った側に自分の仕事を採点させない」" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-04/topic_5.png" alt="15,000ステップ・150サブエージェントの swarm — 「作った側に自分の仕事を採点させない」" />
+      </div>
+      <p class="lede">
+        単一のエージェントループは数百ステップで力尽きるという前提に対し、15,000ステップ走り切って150体のサブエージェントを立て、$11.5M 規模の実市場についてデスクレベルの分析を返してきたという実行記録。技術的な肝は規模ではなく採点の分離にあり、第1チームが作った成果物に対して第2のエージェントチームを組んで攻撃させる構成になっている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">質問ではなく「仕事」を書く。証拠の連鎖とサブエージェント間の意見の相違を明示的に出力要求する</li>
+        <li data-i="02">「この一行がモデルの差より出力を動かす」</li>
+        <li data-i="03">リードエージェントに採用させる。リードが150体分のサブエージェント仕様を書いた</li>
+        <li data-i="04">15,000ステップを走り切り、途中で力尽きなかった</li>
+        <li data-i="05">第2のエージェントチームが第1チームの成果物を攻撃する構成にした</li>
+        <li data-i="06">総括: 「作った側が自分の仕事を採点することは絶対にない。AI で何か作っている10人のうち9人は、いまだに自己採点させている」</li>
+      </ul>
+      <div class="pull">
+        規模を伸ばすほど、採点者を分けているかどうかが結果を決める。同じ週の OpenAI 数学結果への批判（リポジトリのラベルが agent-reviewed）はまさにこの構図への指摘だった。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">87</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/antpalkin/status/2083601501369344088">@antpalkin</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-01</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔁 ループエンジニアリング</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/antpalkin/status/2083601501369344088">x.com/antpalkin/…</a></dd>
+        <dd><a href="https://x.com/antpalkin/status/2083943460323631179">x.com/antpalkin/status/20839434603236311…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · SATURN SATONCHAIN</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🎓 教育・学習素材 <span class="sep">/</span> SATURN (@SATONCHAIN) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Google が2時間の Graph Engineering 無料コースを公開 — 単体エージェントの先を教える</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-04/topic_6.png" data-alt="Google が2時間の Graph Engineering 無料コースを公開 — 単体エージェントの先を教える" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-04/topic_6.png" alt="Google が2時間の Graph Engineering 無料コースを公開 — 単体エージェントの先を教える" />
+      </div>
+      <p class="lede">
+        Google が Graph Engineering の2時間無料コースを公開した。共有されているタイムスタンプによれば、単体のエージェントを作るところから始めて、ループ工学 → グラフ工学 → 自己スロットリング → マルチエージェント・グラフシステムへと段階的に上がっていく構成になっている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">17:44 → 最初のエージェントを作る</li>
+        <li data-i="02">39:30 → ループ工学 (Loop engineering)</li>
+        <li data-i="03">1:12:38 → グラフ工学 (Graph engineering)</li>
+        <li data-i="04">1:34:26 → 自己スロットリングするエージェント (Self-throttling agents) — 自分で流量を絞る設計</li>
+        <li data-i="05">1:55:05 → マルチエージェント・グラフシステム</li>
+        <li data-i="06">紹介文の要約: 「多くの人は1プロンプト・1エージェント・1ワークフローで止まる。この先にあるのは、協調し、評価し、記憶し、自分を改善するエージェントのネットワーク」</li>
+      </ul>
+      <div class="pull">
+        「1人のエンジニア + エージェントチーム」という働き方が、大手の社内では既に標準になりつつある。無料の体系的教材が出たことで、その前提に追いつく経路ができた。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">306</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/SatOnchain/status/2083859468560048472">@SatOnchain</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-02</dd>
+        <dt>CATEGORY</dt>
+        <dd>🎓 教育・学習素材</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/SatOnchain/status/2083859468560048472">x.com/SatOnchain/…</a></dd>
+        <dd><a href="https://x.com/SatOnchain/status/2083466275909734840">x.com/SatOnchain/status/2083466275909734…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · OPENAI OPENAI / OP</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> OPENAI (@OPENAI) / OPENAI.COM <span class="sep">/</span> NEWS
+      </div>
+      <h2>GPT-Live が「話しながら聞ける」ように — 音声スタックをクライアントからモデルまで作り直し</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-04/topic_7.png" data-alt="GPT-Live が「話しながら聞ける」ように — 音声スタックをクライアントからモデルまで作り直し" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-04/topic_7.png" alt="GPT-Live が「話しながら聞ける」ように — 音声スタックをクライアントからモデルまで作り直し" />
+      </div>
+      <p class="lede">
+        OpenAI が GPT-Live の音声アーキテクチャを刷新した。発話中も聞き取りを続けられるようになり、ChatGPT のスケールでこれを自然に動かすためにクライアントからモデルまで音声スタックを再構築したという。音声は専用の高速パスを通り、深い推論とツール呼び出しは非同期で走るため、推論やツール実行が会話を止めない。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">音声が専用の fast path を通る。深い推論とツール使用は非同期で並走</li>
+        <li data-i="02">そのため推論やツール実行が会話を中断しない</li>
+        <li data-i="03">音声セッションの起動を6回のネットワーク往復から1回に削減</li>
+        <li data-i="04">「クライアントからモデルまで」音声スタック全体の作り直し</li>
+      </ul>
+      <div class="pull">
+        割り込みと非同期ツール実行を同時に成立させる設計は、音声エージェントを組む側にとって直接の参考になる。話し始めるまでの間はそのまま体験の質になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">3,093</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://openai.com/index/continuous-voice-interaction-with-gpt-live/">OpenAI (@OpenAI) / openai.com</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-03</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://openai.com/index/continuous-voice-interaction-with-gpt-live/">https://openai.com/index/continuous-voice-interaction-with-gpt-live/</a></dd>
+        <dd><a href="https://x.com/OpenAI/status/2084378415818579975">x.com/OpenAI/status/2084378415818579975</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · SUPERMAN THESUPERM</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📖 技術解説・論文 <span class="sep">/</span> SUPERMAN (@THESUPERMANMX) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Google の Memory Caching — RNN が Transformer 精度に並び、線形計算量を維持したという主張</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-04/topic_8.png" data-alt="Google の Memory Caching — RNN が Transformer 精度に並び、線形計算量を維持したという主張" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-04/topic_8.png" alt="Google の Memory Caching — RNN が Transformer 精度に並び、線形計算量を維持したという主張" />
+      </div>
+      <p class="lede">
+        Attention の O(L^2) を回避しつつ長文の精度を保つアーキテクチャ研究が話題になっている。Memory Caching (MC) は隠れ状態のチェックポイントをキャッシュし、実効的な記憶容量を系列長とともに動的に伸ばす。複雑な in-context recall タスクで Transformer 級の精度に到達しつつ線形計算量を維持したというのが主張だが、話題になっている投稿は二次解説で原論文へのリンクがない。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">従来の二択: Transformer = 高精度だが O(L^2) / RNN = 線形で速いが固定サイズの記憶ゆえ長文で忘れる</li>
+        <li data-i="02">MC は隠れ状態のチェックポイントをキャッシュし、記憶容量が系列長に応じて伸びるようにする</li>
+        <li data-i="03">疎な選択的検索 (sparse selective retrieval) で必要なときだけ過去を参照。全トークン間の総当たり Attention を避ける</li>
+        <li data-i="04">主張される結果: in-context recall で Transformer 級の精度 / RNN の性能ギャップ解消 / 線形計算量を維持</li>
+        <li data-i="05">⚠️ 出典は二次解説スレッドで原論文リンクなし。「Transformer 終焉」は繰り返し流通する煽りの型でもある</li>
+      </ul>
+      <div class="pull">
+        長コンテキストの単価が線形側に寄れば、いま高すぎて諦めている使い方の採算が変わる。コンテキスト圧縮への投資には寿命がありうる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,557</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/thesupermanmx/status/2083556033931403600">@thesupermanmx</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-01</dd>
+        <dt>CATEGORY</dt>
+        <dd>📖 技術解説・論文</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/thesupermanmx/status/2083556033931403600">x.com/thesupermanmx/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://openai.com/index/ten-advances-in-mathematics/">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-08-03/">
+      ← 前日 · 2026-08-03
+      <span class="big">カリフォルニア AI透明性法が 8/2 施行 — C2PA 準拠の来歴埋め込みと無料検出ツールが義務に</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-08-04/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260804.0734</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

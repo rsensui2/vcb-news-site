@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-08-05 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-08-05 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0805</span>
+    <span class="sep">/</span>
+    <span>2026-08-05</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260805.0737</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-08-05/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:37 · TUE</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · TUESDAY · AUGUST 5, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>08<span class="dot">.</span>05</h1>
+    <div class="strap">
+      <span>Next.js · Cursor · Cursor · Claude</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 6 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 リリース情報 <span class="sep">/</span> NEXT.JS (@NEXTJS) / NEXTJS.ORG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Next.js 16.3 — フレームワークが AGENTS.md を自分で書いて維持し始めた</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-05/topic_1.png" data-alt="Next.js 16.3 — フレームワークが AGENTS.md を自分で書いて維持し始めた" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-05/topic_1.png" alt="Next.js 16.3 — フレームワークが AGENTS.md を自分で書いて維持し始めた" />
+      </div>
+      <p class="lede">
+        Next.js 16.3 が 8/3 に正式リリースされた。目玉はエージェント向けの扱いで、next dev を走らせるだけでプロジェクトの Next.js バージョンに固定された AGENTS.md ブロックが自動で書き込まれ、以後も維持される。参照先は node_modules に同梱されたドキュメントなので、セットアップも更新作業も要らない。公式の説明は「エージェントは学習データにある古いパターンでコードを書きがち」で、その前提をフレームワーク側が引き受けた形になっている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">next dev が AGENTS.md にバージョン一致のブロックを書き込み・維持する。参照先は node_modules 同梱の docs で、セットアップ不要</li>
+        <li data-i="02">ドキュメントを届けるためだけに存在した旧 Skills（vercel-labs/next-skills）は引退。代わりに作業フローを駆動する first-party Skills が入った</li>
+        <li data-i="03">汎用の next-dev-loop Skill は、エージェントにブラウザを操作させ React ツリーを検査させて変更を検証させる（npx skills add vercel/next.js --skill next-dev-loop）</li>
+        <li data-i="04">アップグレードするだけで効く改善: dev のメモリ最大90%減（vercel.com のダッシュボードで 21.5GB → 2GB）、ビルド最大5.5倍、SSR で負荷時のリクエスト処理量が最大22%増（web streams → Node.js ネイティブ streams）</li>
+        <li data-i="05">Instant Navigations に instant() Playwright ヘルパーが追加。「リンクをクリックした瞬間に見えているべき内容」をアサートし、リファクタで遅くなる劣化をテストで捕まえる</li>
+        <li data-i="06">実験的機能: Rust 版 React Compiler（v0 で cold 34% / warm 46% 短縮）、オフライン耐性 experimental.useOffline</li>
+      </ul>
+      <div class="pull">
+        「エージェント用の指示書は人間が書いて人間が更新する」という前提が、フレームワーク側から崩れ始めた。CLAUDE.md / AGENTS.md を手で保守している人ほど、どこまで自動生成に任せられるかを一度見直す価値がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">910</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://nextjs.org/blog/next-16-3">Next.js (@nextjs) / nextjs.org</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-03</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 リリース情報</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://nextjs.org/blog/next-16-3">https://nextjs.org/blog/next-16-3</a></dd>
+        <dd><a href="https://x.com/nextjs/status/2084399990475300898">x.com/nextjs/status/2084399990475300898</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · CURSOR CURSORAI / </span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> CURSOR (@CURSOR_AI) / CURSOR.COM <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cursor が MoE 学習カーネル「Mixture-of-Kittens」をオープンソース化 — MXFP8 forward で最大2.37倍</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-05/topic_2.png" data-alt="Cursor が MoE 学習カーネル「Mixture-of-Kittens」をオープンソース化 — MXFP8 forward で最大2.37倍" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-05/topic_2.png" alt="Cursor が MoE 学習カーネル「Mixture-of-Kittens」をオープンソース化 — MXFP8 forward で最大2.37倍" />
+      </div>
+      <p class="lede">
+        Cursor が自社の MoE (Mixture-of-Experts) 学習用 megakernel「Mixture-of-Kittens (MoK)」をオープンソース公開した。NVIDIA GB200 NVL72 向けに一から書かれたもので、MoE の通信と計算を単一の完全決定論的なカーネルに融合し、計算と GPU 間ネットワークを設定可能な粒度でオーバーラップさせ、CPU-GPU 同期を完全に排除している。自社モデル Composer の本番学習を既に支えている実運用コードの公開。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">リポジトリは github.com/cursor/mixture-of-kittens。BF16 と MXFP8 の両方、forward / backward の両方をカバー</li>
+        <li data-i="02">最速の公開ベースライン比で MXFP8 forward 2.37倍・backward 1.78倍、BF16 forward 1.92倍・backward 1.58倍</li>
+        <li data-i="03">完全決定論的（fully deterministic）— 学習の再現性が取れる設計になっている</li>
+        <li data-i="04">実運用では Cursor 社内の数万 GPU 規模の学習に投入済み。従来の DeepEP ベースのスタック比で end-to-end 学習スループット1.41倍</li>
+        <li data-i="05">自社モデル Composer の本番学習を支えている</li>
+        <li data-i="06">公開の狙いは「AI 研究の参入障壁を下げ、より多くのラボが効率的にモデルを学習できるようにすること」</li>
+      </ul>
+      <div class="pull">
+        IDE の会社が学習インフラの最深部を実運用ごと公開した。エディタ企業がモデルを自前で訓練する時代の、その下回りが誰でも読める形になったということ。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">3,456</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://cursor.com/blog/mixture-of-kittens">Cursor (@cursor_ai) / cursor.com</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-04</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://cursor.com/blog/mixture-of-kittens">https://cursor.com/blog/mixture-of-kittens</a></dd>
+        <dd><a href="https://github.com/cursor/mixture-of-kittens">github.com/cursor/mixture-of-kittens</a></dd>
+        <dd><a href="https://x.com/cursor_ai/status/2084670806613737919">x.com/cursor_ai/status/20846708066137379…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · CURSOR CURSORAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 AI/開発ツール <span class="sep">/</span> CURSOR (@CURSOR_AI) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Cursor のエージェントが Gmail / Drive / カレンダーを read・write・act — ただし権限の仕様は非公開</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-05/topic_3.png" data-alt="Cursor のエージェントが Gmail / Drive / カレンダーを read・write・act — ただし権限の仕様は非公開" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-05/topic_3.png" alt="Cursor のエージェントが Gmail / Drive / カレンダーを read・write・act — ただし権限の仕様は非公開" />
+      </div>
+      <p class="lede">
+        Cursor のエージェントが Gmail / Google Drive / カレンダー / Docs / Sheets を read・write・act できるプラグインが公式に追加された。実装は MCP 経由で、公式リリースノートでは Chat も対象に含まれる。インストールは Cursor 内の Customize ページか Marketplace から行い、個別に MCP サーバーを立てる必要はない。コードエディタが「業務データを触るエージェント基盤」側に踏み出した動き。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対象は Gmail・Google Drive・Google Calendar・Google Docs・Google Sheets（公式リリースノートでは Chat も）</li>
+        <li data-i="02">読み取りだけでなく write / act（作成・更新・操作）まで含むと公式が明記</li>
+        <li data-i="03">実装は MCP 経由。Cursor Marketplace か Customize ページからインストールでき、自前で MCP サーバーを立てなくてよい</li>
+        <li data-i="04">実装タスクの文脈がメールや Doc に散っている現場では、エージェントに仕様の一次ソースを直接読ませられる</li>
+        <li data-i="05">⚠️ 要求スコープ・read限定にできるか・監査ログが残るかが、公式投稿にもスレッドにも書かれていない</li>
+        <li data-i="06">関連: Anthropic の @trq212 は「Claude Connector（Gmail・カレンダー・Slack 等）を繋ぐと Claude Code と Artifacts からもそのまま使える。あまり知られていないと思う」と投稿している</li>
+      </ul>
+      <div class="pull">
+        Gmail と Drive に write を持つエージェントは、事故ったときの被害範囲がコードベースの比ではない。繋ぐ前に「このアカウントで消せるものは何か」を1行書いておく価値がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">4,833</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2084376701539405904">@cursor_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-03</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 AI/開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2084376701539405904">x.com/cursor_ai/…</a></dd>
+        <dd><a href="https://x.com/trq212/status/2084387303959740449">x.com/trq212/status/2084387303959740449</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · CLAUDE CODE CLAUDE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 AI/開発ツール <span class="sep">/</span> 【公式】CLAUDE CODEアカデミア (@CLAUDECODE_ACA) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code が17,000銘柄超の株式・暗号資産データに直結 — 「60秒のセットアップ、でも検証の60秒は削れない」</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-05/topic_4.png" data-alt="Claude Code が17,000銘柄超の株式・暗号資産データに直結 — 「60秒のセットアップ、でも検証の60秒は削れない」" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-05/topic_4.png" alt="Claude Code が17,000銘柄超の株式・暗号資産データに直結 — 「60秒のセットアップ、でも検証の60秒は削れない」" />
+      </div>
+      <p class="lede">
+        financial-datasets MCP サーバーを1コマンドで接続すると、Claude Code から 17,000銘柄超の株式・暗号資産のリアルタイムデータに直接アクセスできる。ブラウザ認証を挟んでセットアップは約60秒。株価だけでなく決算・財務諸表・アナリスト予想まで含み、「NVIDIA の業績予想は？」と聞くだけでアナリスト予想の売上・EPS を表にして返す。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">financial-datasets MCP サーバーを1コマンドで接続。ブラウザ認証を挟んでセットアップ約60秒</li>
+        <li data-i="02">カバー範囲は 17,000銘柄超の株式・暗号資産。株価・決算・財務諸表・アナリスト予想まで</li>
+        <li data-i="03">従来は年間2万ドル超の Bloomberg ターミナルか、複数の金融 API を自前で束ねる必要があった作業</li>
+        <li data-i="04">⚠️ 同じ話題で実務者から重い指摘: 「欠損データを『悪材料なし』と誤読しやすい。相場系は必ず元ソースを一度自分の目で見てから信じる」</li>
+        <li data-i="05">⚠️ 「60秒のセットアップは魅力的だが、検証の60秒は削れない」— データソースのカバレッジと欠損の扱いは接続前に確認する</li>
+        <li data-i="06">投資判断そのものではなく、リサーチ工程の圧縮として使うのが現実的な線</li>
+      </ul>
+      <div class="pull">
+        MCP を1本足すだけで、これまで年額数百万円の端末が要った領域が Claude Code の質問1つになる。同時に「取れなかったデータ」と「無かったデータ」の区別がつかない、という MCP 全般の弱点がそのまま金額に直結する領域でもある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">192</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeCode_aca/status/2084232822655795603">@ClaudeCode_aca</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-03</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 AI/開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeCode_aca/status/2084232822655795603">x.com/ClaudeCode_aca/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · COGNITION COGNITIO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> COGNITION (@COGNITION) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Devin Fusion が「知能 +4%・コスト -27%」— 効いたのはモデルだけではなくハーネス</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-05/topic_5.png" data-alt="Devin Fusion が「知能 +4%・コスト -27%」— 効いたのはモデルだけではなくハーネス" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-05/topic_5.png" alt="Devin Fusion が「知能 +4%・コスト -27%」— 効いたのはモデルだけではなくハーネス" />
+      </div>
+      <p class="lede">
+        Devin の開発元 Cognition が公式に発表: ハーネスとモデルの両方の改善により、Devin Fusion は FrontierCode 1.1 で 4% 賢くなり、27% 安くなった。注目すべきはモデル単体の性能向上ではなく、賢さの向上とコスト削減が同時に出ている点で、Cognition はもともと「全タスクに最強モデルを投げるのは金を燃やしている」という立場を取っている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">FrontierCode 1.1 で知能 +4%・コスト -27%（Cognition 公式ポスト）</li>
+        <li data-i="02">改善の出どころは ハーネス（モデルの外側の実行環境）とモデルの両方と明記されている</li>
+        <li data-i="03">Devin Fusion は高性能モデルと安価なサイドキックモデルを組み合わせる設計。「最強モデルを全タスクに投げるのは金を燃やしている」という同社の立場に沿う</li>
+        <li data-i="04">ハーネス側の改善が単独で効く余地がまだ大きい、というデータ点になっている</li>
+        <li data-i="05">⚠️ FrontierCode 1.1 の測定条件・タスク構成が公式ポストに記載されていない</li>
+        <li data-i="06">⚠️ 「知能 4%」が何のスコアの4%なのかも非開示</li>
+      </ul>
+      <div class="pull">
+        「モデルを乗り換える」より先に「モデルの外側を直す」で 27% のコストが動く、という実測が公式から出た。手元のループでも、モデル選定より前に見直せる余地がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">345</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/cognition/status/2084663103006871970">@cognition</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-04</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/cognition/status/2084663103006871970">x.com/cognition/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · OFFERS DEVREL MAAA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📖 技術解説 <span class="sep">/</span> はまだ | OFFERS DEVREL (@MAAAI12121) / SPEAKER DECK <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>AIが認証し、AIが認証を書く — エージェント時代の認証をどこに置くか（Better Auth）</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-05/topic_6.png" data-alt="AIが認証し、AIが認証を書く — エージェント時代の認証をどこに置くか（Better Auth）" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-05/topic_6.png" alt="AIが認証し、AIが認証を書く — エージェント時代の認証をどこに置くか（Better Auth）" />
+      </div>
+      <p class="lede">
+        Offers DeepDive の登壇資料。TypeScript 製の認証ライブラリ Better Auth を「AI が認証し、AI が認証を書く」という二重の文脈で読み解いた内容（ENECHANGE 柿 海斗 氏）。エージェントが認証の主体になる側と、認証の実装を書く側の両方が論点になっている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Better Auth は TypeScript ファーストの認証ライブラリ。メール/パスワード・OAuth・2FA・組織/マルチテナント・API キーをプラグインで足す構成</li>
+        <li data-i="02">認証 SaaS（Auth0 等）との差分は スキーマとセッションを自前 DB に持てること</li>
+        <li data-i="03">論点①: エージェント自身が認証の主体になる。人間ではなくエージェントがサインインして操作するなら、API キー・スコープ制限・委任トークンの設計が普通のプロダクトにも降りてくる</li>
+        <li data-i="04">論点②: エージェントが認証実装を書く側に立つとき、型で表現された設定と規約重視の API のほうが破綻しにくい</li>
+        <li data-i="05">実務的な含意: 自分のエージェントに外部サービスを触らせるとき、人間アカウントの資格情報をそのまま渡さず、エージェント専用の絞ったクレデンシャルを発行する</li>
+        <li data-i="06">⚠️ X ポストは告知とスライドリンクのみ。上記の整理は資料タイトルと登壇趣旨に基づく</li>
+      </ul>
+      <div class="pull">
+        Vibe Coding で SaaS を作ると認証は最後に回されて一番苦労する。しかも今は「誰がログインするか」に人間以外が混ざり始めている。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">55</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/maaai12121/status/2084585547109208336">@maaai12121</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-04</dd>
+        <dt>CATEGORY</dt>
+        <dd>📖 技術解説</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/maaai12121/status/2084585547109208336">x.com/maaai12121/…</a></dd>
+        <dd><a href="https://speakerdeck.com/sc30gsw/aigaren-zheng-si-aigaren-zheng-woshu-ku-ai-agent-shi-dai-noren-zheng-raiburari-better-authwoli-jie-suru">speakerdeck.com/sc30gsw/aigaren-zheng-si…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · KIMIAIJP KIMIAIJAP</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 AI/開発ツール <span class="sep">/</span> KIMI.AI_JP：日本公式 (@KIMIAI_JAPAN) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Kimi Slides が売りにしたのは「編集できる成果物」— スライド生成の争点が変わってきた</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-05/topic_7.png" data-alt="Kimi Slides が売りにしたのは「編集できる成果物」— スライド生成の争点が変わってきた" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-05/topic_7.png" alt="Kimi Slides が売りにしたのは「編集できる成果物」— スライド生成の争点が変わってきた" />
+      </div>
+      <p class="lede">
+        Kimi 日本公式が Kimi Slides（Kimi Work 内のスライド生成）のチュートリアル第1回を公開。モデルは Kimi K3 で、構成づくりとリサーチをモデル側が担い、グラフや SmartArt を含む統一デザインのスライドを生成、編集可能な形式でそのままダウンロードできる点を前面に出している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">構成 + リサーチまでモデルが担当する（レイアウト生成だけではない）。モデルは Kimi K3</li>
+        <li data-i="02">グラフ・SmartArt に対応。テキスト箇条書きだけのスライドにならない</li>
+        <li data-i="03">編集可能な形式でダウンロードできる — 画像に焼き込まれず、後から人が直せる</li>
+        <li data-i="04">日本語公式アカウントが日本語でチュートリアルを出しており、国内展開に本腰</li>
+        <li data-i="05">棲み分けの目安: 社内向け・叩き台は編集可能型／対外配布・ブランド重視は画像焼き込み型。実務では「ほぼそのまま使える80点」より「直せる70点」が強い場面が多い</li>
+        <li data-i="06">⚠️ 出力フォーマットが明示されていない（PowerPoint 互換か独自形式か不明）。品質の第三者評価もなし</li>
+      </ul>
+      <div class="pull">
+        スライド生成は各社が横並びで攻めている領域で、差がつくポイントが「見た目の完成度」から「そのあと直せるか」に移りつつある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,666</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/KimiAI_Japan/status/2084261387010965711">@KimiAI_Japan</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-03</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 AI/開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/KimiAI_Japan/status/2084261387010965711">x.com/KimiAI_Japan/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · ODANOBUNAGA10</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 AI/開発ツール <span class="sep">/</span> 令和の織田信長 (@ODA_NOBUNAGA10) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>開発マシンを1台に集約する — Codex のリモート機能 + Tailscale という構成</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-05/topic_8.png" data-alt="開発マシンを1台に集約する — Codex のリモート機能 + Tailscale という構成" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-05/topic_8.png" alt="開発マシンを1台に集約する — Codex のリモート機能 + Tailscale という構成" />
+      </div>
+      <p class="lede">
+        Codex アプリのリモート実機コントロール（Connections &gt; Control this Mac / Control other devices）を使い、開発環境を常時起動の母艦1台に集約する運用。iPad・iPhone・他の Mac は全てその母艦を遠隔操作するだけにし、ローカル作業は一切しない。全デバイスを Tailscale で1つの私設ネットワークに入れる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">母艦を1台決めて落とさない（常時起動できるデスクトップ、スリープさせない）</li>
+        <li data-i="02">母艦側: Codex 設定 → Connections → Control this Mac をオン</li>
+        <li data-i="03">クライアント側: 他デバイスの Codex 設定で Control other devices を有効化</li>
+        <li data-i="04">Tailscale で tailnet を張ると、他のエージェント（OpenClaw 等）がマシン間を飛び回って変更を加えられる</li>
+        <li data-i="05">狙いはコードとステートの1箇所集約。エージェントに作業させるほど、環境が散っていることのコストが重くなる（ブランチ・未コミット差分・認証済みトークンが分散すると実行マシンで結果が変わる）</li>
+        <li data-i="06">⚠️ 「生産性1000倍」は測定根拠のない誇張。母艦の単一障害点化と、tailnet 上のエージェント権限の広さ（飛べるということは事故も飛ぶ）に投稿は触れていない</li>
+      </ul>
+      <div class="pull">
+        エージェントに任せる量が増えるほど「どのマシンで実行したか」で結果が変わる問題が効いてくる。集約は正しい方向だが、母艦が落ちた日と権限の範囲は先に決めておきたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">432</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/oda_nobunaga10/status/2084188743733576031">@oda_nobunaga10</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-03</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 AI/開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/oda_nobunaga10/status/2084188743733576031">x.com/oda_nobunaga10/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://nextjs.org/blog/next-16-3">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-08-04/">
+      ← 前日 · 2026-08-04
+      <span class="big">OpenAI、未発表モデルの内部版が数学の未解決問題10件で新結果 — トークン代は約$2,000、ただし検証はこれから</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-08-05/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260805.0737</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

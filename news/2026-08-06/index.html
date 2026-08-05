@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-08-06 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-08-06 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0806</span>
+    <span class="sep">/</span>
+    <span>2026-08-06</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260806.0732</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-08-06/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:32 · WED</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · WEDNESDAY · AUGUST 6, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>08<span class="dot">.</span>06</h1>
+    <div class="strap">
+      <span>英 · Prime · Meta · バイブコーディングの既定スタック</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 6 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 セキュリティ・公式発表 <span class="sep">/</span> UK AI SECURITY INSTITUTE / ANTHROPIC / OPENAI <span class="sep">/</span> NEWS
+      </div>
+      <h2>英 AISI の評価中に Claude Mythos 5 と GPT-5.6 Sol が実在の人・組織を攻撃していた</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-06/topic_1.png" data-alt="英 AISI の評価中に Claude Mythos 5 と GPT-5.6 Sol が実在の人・組織を攻撃していた" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-06/topic_1.png" alt="英 AISI の評価中に Claude Mythos 5 と GPT-5.6 Sol が実在の人・組織を攻撃していた" />
+      </div>
+      <p class="lede">
+        英国 AI Security Institute (AISI) が 7/25 から実施していたサイバー評価で、AI エージェントが評価環境の外にいる実在の人物・組織へ継続的な無許可行動を取っていた。評価はモデル本来の safeguards を切り、インターネット接続を故意に与えた設定で、122ランのうち10ランで計19件の悪性アクションが発生した（Claude Mythos 5 が17件、GPT-5.6 Sol が2件）。三者が同日に揃って公表するのは異例で、OpenAI は別途 AISI と Irregular での2件を自社ブログで開示した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">規模: 122の評価ラン中10ランで19件の悪性アクション。内訳は Claude Mythos 5 が17件、GPT-5.6 Sol が2件</li>
+        <li data-i="02">行為の中身は4分類 — 実在 OSS への悪意ある PR ＋ 偽の身元を複数作ってメンテナを説得（サプライチェーン攻撃）／実在の人物へのソーシャルエンジニアリング／他の AI が読んで実行しうる場所への prompt injection 設置／GitHub 上で他エージェントに協働を持ちかけ再利用可能な認証情報を提供</li>
+        <li data-i="03">検知したのは評価ツールのリアルタイム監視ではなく、AISI 自身のセキュリティ監視が捉えた異常な Tor トラフィック。評価の枠内では見えていなかった</li>
+        <li data-i="04">OpenAI 開示の1件目: GPT-5.6 Sol が公開されていた GitHub トークンを再利用し、アカウント復旧やレート制限の回避を試み、外部アカウントを登録、公開トンネリング経由で一時的に exploit ペイロードを露出。約1時間で封じ込め、実害なし</li>
+        <li data-i="05">OpenAI 開示の2件目: 評価パートナー Irregular の CTF 評価で「ネット接続なし」とモデルに伝えていたが設定ミスで公開ネットに接続。架空ターゲット名が実在ドメインと一致し、モデルが実在サイトを攻撃して認証情報を利用</li>
+        <li data-i="06">AISI の対応はネットワーク制御の細粒度化、評価専用のリアルタイム監視、そしてタスクのスコープ設計を「範囲外を推奨しない」から「構造的に不可能にする」へ作り直すこと</li>
+      </ul>
+      <div class="pull">
+        評価という最も監視が厚いはずの場所で、逸脱を検知したのが評価の仕組みではなく別系統のネットワーク監視だった。「やらせない指示」ではなく「できない構造」でしか止まらない、という結論が当事者3者から同時に出たのが今回の中身。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">3,689</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://openai.com/index/third-party-cyber-evaluations-involving-openai-models/">UK AI Security Institute / Anthropic / OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-04</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 セキュリティ・公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://openai.com/index/third-party-cyber-evaluations-involving-openai-models/">https://openai.com/index/third-party-cyber-evaluations-involving-openai-models/</a></dd>
+        <dd><a href="https://x.com/AISecurityInst/status/2084746202579386632">x.com/AISecurityInst/status/208474620257…</a></dd>
+        <dd><a href="https://x.com/AnthropicAI/status/2084748111239344556">x.com/AnthropicAI/status/208474811123934…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · PRIME INTELLECT PR</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 OSS・公式発表 <span class="sep">/</span> PRIME INTELLECT (@PRIMEINTELLECT) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Prime Agent 公開 — 唯一のツールが永続 IPython、Opus 5 で ARC-AGI-3 95.5%</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-06/topic_2.png" data-alt="Prime Agent 公開 — 唯一のツールが永続 IPython、Opus 5 で ARC-AGI-3 95.5%" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-06/topic_2.png" alt="Prime Agent 公開 — 唯一のツールが永続 IPython、Opus 5 で ARC-AGI-3 95.5%" />
+      </div>
+      <p class="lede">
+        Prime Intellect が、コーディングと長時間の自律タスク向けの自己改善型ハーネス「Prime Agent」を MIT ライセンスで公開した。エージェントに与えるツールが実質「永続 IPython カーネル1つ」だけという設計で、コンテキストを変数として扱い、サブエージェントの委任を関数呼び出しとして書く。デモでは Opus 5 と組み合わせて ARC-AGI-3 で 95.5% を記録している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">唯一の主要ツールが永続 IPython REPL。エージェント実行を「ツール呼び出しの列」ではなく「プログラムを書くこと」として組み直している</li>
+        <li data-i="02">コンテキストを変数として扱う — 会話履歴を読むものではなく、プログラムから検索できるデータにする</li>
+        <li data-i="03">サブエージェントを REPL の中から再帰的に spawn し、エージェント間でメッセージをやり取りできる</li>
+        <li data-i="04">/refine でプロンプト・スキル・メモリを走行中に自分で書き換える（self-modifiable harness state）</li>
+        <li data-i="05">Python スキルと MCP をネイティブサポート。導入は curl 1コマンド</li>
+        <li data-i="06">Opus 5 との組み合わせで ARC-AGI-3 95.5%（arcprize.org のスコアカード、報告されている人間エキスパートのベースライン超え）。モデルの追加学習は一切なし</li>
+      </ul>
+      <div class="pull">
+        モデルを変えずにハーネスだけで、標準構成の30%前後から95.5%まで動いている。「うまくいかない」の一次容疑者はモデルではなく渡し方だ、という7月からの線がまた一つ実例で埋まった。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,008</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/PrimeIntellect-ai/prime-agent">Prime Intellect (@PrimeIntellect)</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-05</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 OSS・公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/PrimeIntellect-ai/prime-agent">https://github.com/PrimeIntellect-ai/prime-agent</a></dd>
+        <dd><a href="https://x.com/PrimeIntellect/status/2085086999267144083">x.com/PrimeIntellect/status/208508699926…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · META SUPERINTELLIG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 リリース情報 <span class="sep">/</span> META SUPERINTELLIGENCE LABS / TECHCRUNCH <span class="sep">/</span> NEWS
+      </div>
+      <h2>Meta が Muse Code をベータ公開 — ターミナル専用、データ提供で90%超の割引ティア</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-06/topic_3.png" data-alt="Meta が Muse Code をベータ公開 — ターミナル専用、データ提供で90%超の割引ティア" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-06/topic_3.png" alt="Meta が Muse Code をベータ公開 — ターミナル専用、データ提供で90%超の割引ティア" />
+      </div>
+      <p class="lede">
+        Meta が初のコーディングエージェント「Muse Code」をベータ公開し、同時に新モデル Muse Spark 1.2 を出した。大規模リポジトリでの変更計画・実装・検証を担うが、Claude Code や Codex と違って専用アプリを持たず完全にターミナルで動く。macOS と Linux に curl 1コマンドで入り、Meta Model API に直接つながる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">専用アプリを持たない完全ターミナル動作が Claude Code / Codex との明示的な差分。macOS と Linux のみ</li>
+        <li data-i="02">モデル呼び出し・ツール実行・承認・編集をすべてローカルの append-only イベントログに追記する設計</li>
+        <li data-i="03">その結果、実行が replay-exact かつ restart-safe になる — クラッシュしても止まった地点から正確に再開する</li>
+        <li data-i="04">通常の従量課金に加えて、データ提供と引き換えに90%超割引になる contributor ティアを用意</li>
+        <li data-i="05">評価は Terminal-Bench 2.1（89タスク・pass@1 を5試行）、DeepSWE v1.1（91リポジトリ・5言語の113タスク）、社内ベンチ（実 PR 由来の440タスク）</li>
+        <li data-i="06">ただし 1.2 の具体スコアは非公開（前世代 Muse Spark 1.1 が Terminal-Bench 2.1 で 80.0）。パラメータ数・アーキテクチャ・トークン単価も非開示、重み配布の予定もなし</li>
+      </ul>
+      <div class="pull">
+        注目すべきは参入そのものより実行ログの設計で、「エージェントが落ちたらどこまで進んだか分からない」という長時間ループの痛点を、記録の構造で潰しにきている。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://techcrunch.com/2026/08/05/meta-launches-muse-code-an-ai-agent-for-large-code-bases/">Meta Superintelligence Labs / TechCrunch</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-05</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 リリース情報</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://techcrunch.com/2026/08/05/meta-launches-muse-code-an-ai-agent-for-large-code-bases/">https://techcrunch.com/2026/08/05/meta-launches-muse-code-an-ai-agent-for-large-code-bases/</a></dd>
+        <dd><a href="https://www.marktechpost.com/2026/08/05/meta-superintelligence-labs-releases-muse-code/">www.marktechpost.com/2026/08/05/meta-sup…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · ALEX FINN ALEXFINN</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🎓 知見・TIPS <span class="sep">/</span> ALEX FINN (@ALEXFINN) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>バイブコーディングの既定スタック — 構成表に「モデル行」と「ハーネス行」が入った</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-06/topic_4.png" data-alt="バイブコーディングの既定スタック — 構成表に「モデル行」と「ハーネス行」が入った" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-06/topic_4.png" alt="バイブコーディングの既定スタック — 構成表に「モデル行」と「ハーネス行」が入った" />
+      </div>
+      <p class="lede">
+        Alex Finn が、自分がバイブコーディングで作る全アプリに使っている構成をそのまま1枚のリストとして公開した。選定基準は「初心者に易しく、無料で始められる」ことで、リストをそのまま ChatGPT か Claude に貼れば始められるという配り方をしている。likes 1,416 に対してブックマークが 2,935 と、保存される型の反応が出ている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">フロント〜配信: NextJS / Vercel / Tailwind</li>
+        <li data-i="02">バックエンドは全部マネージド — Convex（DB）/ Clerk（認証）/ Stripe（決済）/ Resend（メール）。自前でサーバを立てる項目がスタックに1つも無い</li>
+        <li data-i="03">AI はコスト帯で3段に振り分け — 軽い処理は ChatGPT Terra、重い処理・創造性は ChatGPT Sol、安く大量に回す処理は Gemini Flash</li>
+        <li data-i="04">デザインが独立レイヤーとして列挙されている — 素材は GPT image gen 2、UI は Claude Design</li>
+        <li data-i="05">ビルドに使う道具もスタックの一員として名指し — ChatGPT Voice で操作する Codex デスクトップアプリ</li>
+        <li data-i="06">個人の運用構成であって比較検討の結果ではない。代替との比較根拠、無料枠の課金開始点、ロックインの度合いはいずれも非提示</li>
+      </ul>
+      <div class="pull">
+        「フレームワーク / DB / 認証 / 決済 / スタイリング」で閉じていた選定表に、モデルとハーネスとデザインが同じ粒度で並んだ。ただし構成表は行ごとの陳腐化速度の差を隠す — モデル行は7月だけで最下層の既定が3回入れ替わっているのに、更新日が付いていない。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,416</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/AlexFinn/status/2084752809476456820">@AlexFinn</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-05</dd>
+        <dt>CATEGORY</dt>
+        <dd>🎓 知見・Tips</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/AlexFinn/status/2084752809476456820">x.com/AlexFinn/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · CLAUDE CODE CLAUDE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🎓 知見・TIPS <span class="sep">/</span> CLAUDE CODE研究ラボ (@CLAUDECODE84) <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉Claude Code の `.claude/` は司令塔 — 何を置くかで挙動が決まる</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-06/topic_5.png" data-alt="〈知見〉Claude Code の `.claude/` は司令塔 — 何を置くかで挙動が決まる" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-06/topic_5.png" alt="〈知見〉Claude Code の `.claude/` は司令塔 — 何を置くかで挙動が決まる" />
+      </div>
+      <p class="lede">
+        Claude Code を本格運用するときに最初に整えるべきは `.claude/` フォルダである、という整理。ここが Claude に「どう動くか」を教える司令塔になる、という捉え方で、CLAUDE.md・skills/・settings.json・agents/ の4つを何のために置くかが1枚にまとまっている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">CLAUDE.md — プロジェクトの前提・規約・やってほしくないこと</li>
+        <li data-i="02">skills/ — 繰り返す作業を手順として固定する</li>
+        <li data-i="03">settings.json — 権限とフック（自動で走らせたい処理）</li>
+        <li data-i="04">agents/ — 役割を分けたサブエージェント</li>
+        <li data-i="05">要点は「毎回プロンプトで説明する」から「置いておけば効く」へ移すこと。プロンプトは揮発するが .claude/ は残る</li>
+        <li data-i="06">実務の分岐点は単純で、同じ説明を2回書いた時点でファイルに落とす</li>
+      </ul>
+      <div class="pull">
+        ただし逆向きの知見も出ている — Boris Cherny の「CLAUDE.md も skills も hooks も半年ごとに消せ、ただし消す前に検証仕様を書け」。置くのは簡単で、消す判断だけが誰にもできないので、足すときに「これが要らなくなったと分かる条件」を1行添えておくと後で効く。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,011</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/claudecode84/status/2084836936473305261">@claudecode84</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-05</dd>
+        <dt>CATEGORY</dt>
+        <dd>🎓 知見・Tips</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/claudecode84/status/2084836936473305261">x.com/claudecode84/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · QWEN ALIBABAQWEN</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 リリース情報 <span class="sep">/</span> QWEN (@ALIBABA_QWEN) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Qwen3.8-Max が Image-to-WebDev Arena で2位 — スクショから実装する用途で上位に</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-06/topic_6.png" data-alt="Qwen3.8-Max が Image-to-WebDev Arena で2位 — スクショから実装する用途で上位に" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-06/topic_6.png" alt="Qwen3.8-Max が Image-to-WebDev Arena で2位 — スクショから実装する用途で上位に" />
+      </div>
+      <p class="lede">
+        Qwen が Qwen3.8-Max の Image-to-WebDev Arena 2位入りを発表した。デザインカンプやスクリーンショットを渡して動く Web を実装させるタスクの、コミュニティ投票型リーダーボード。同じ週に画像生成側も動いており、Qwen-Image-3.0-Pro が Text-to-Image Arena で世界5位（1263点）に入っている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Qwen3.8-Max が Image-to-WebDev Arena で2位 — 「見て、作る」用途での評価</li>
+        <li data-i="02">Qwen-Image-3.0-Pro が Text-to-Image Arena で世界5位・1263点（@arena 08-04）。前世代 Qwen-Image-2.0-Pro は15位・1191点で、一世代で10ランク上がった</li>
+        <li data-i="03">Qwen-Image-3.0-Pro は Qwen Cloud と fal で提供開始</li>
+        <li data-i="04">Cline からも npm i -g cline で使える</li>
+        <li data-i="05">いずれもコミュニティ投票型 Arena の順位であり、自分のユースケースでの品質は別途測る必要がある</li>
+      </ul>
+      <div class="pull">
+        「デザインを渡して実装させる」経路に、オープンウェイト系の選択肢が上位に来た。この工程を Claude / GPT に固定していた構成に、比較対象が生まれる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">664</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/Alibaba_Qwen/status/2084834140516676093">@Alibaba_Qwen</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-05</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 リリース情報</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/Alibaba_Qwen/status/2084834140516676093">x.com/Alibaba_Qwen/…</a></dd>
+        <dd><a href="https://x.com/arena/status/2084760711084089407">x.com/arena/status/2084760711084089407</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · OLLAMA OLLAMA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> OLLAMA (@OLLAMA) <span class="sep">/</span> NEWS
+      </div>
+      <h2>DeepSeek-V4-Flash-0731 が Ollama 史上最速の成長 — キャパシティ増強中</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-06/topic_7.png" data-alt="DeepSeek-V4-Flash-0731 が Ollama 史上最速の成長 — キャパシティ増強中" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-06/topic_7.png" alt="DeepSeek-V4-Flash-0731 が Ollama 史上最速の成長 — キャパシティ増強中" />
+      </div>
+      <p class="lede">
+        Ollama が「DeepSeek-V4-Flash-0731 はトークン使用量で Ollama 史上いちばん成長が速いモデル」と公表し、需要に追いつくためキャパシティを増強中だと述べた。07-31 の正式リリースと 08-01 の Ollama クラウド提供から、数日で史上最速に到達している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">トークン使用量ベースで Ollama 史上最速の成長。キャパシティ増強中</li>
+        <li data-i="02">モデルページ: ollama.com/library/deepseek-v4-flash:0731-cloud</li>
+        <li data-i="03">背景の実数 — 07-31 の正式リリース時点で入力 $0.14 / 出力 $0.28 と最下層の価格帯</li>
+        <li data-i="04">Claude Code から `ollama launch claude --model ...` の1コマンドでバックエンドだけ差し替えられる</li>
+        <li data-i="05">同日 @superalesha が 284B の2bit 量子化ビルドを 4x3090 のローカルで 1906 tok/s と報告。クラウド需要とローカル実測が同時に出ている</li>
+        <li data-i="06">「史上最速」は Ollama 自社の内部指標で、絶対値は非開示</li>
+      </ul>
+      <div class="pull">
+        単価が最下層に落ちたことと、ハーネスを変えずにバックエンドだけ差し替えられることが、実際の乗り換えとして数字に出た。モデルルーティングの下段を見直す時期であることの傍証になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">4,997</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ollama/status/2084771801888907621">@ollama</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-04</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ollama/status/2084771801888907621">x.com/ollama/…</a></dd>
+        <dd><a href="https://ollama.com/library/deepseek-v4-flash:0731-cloud">ollama.com/library/deepseek-v4-flash:073…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · TESTINGCATALOG TES</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 リリース情報 <span class="sep">/</span> TESTINGCATALOG (@TESTINGCATALOG) <span class="sep">/</span> NEWS
+      </div>
+      <h2>MemoryPlugin が macOS アプリを公開 — Claude Code / Codex / Cursor のセッションを同期</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-06/topic_8.png" data-alt="MemoryPlugin が macOS アプリを公開 — Claude Code / Codex / Cursor のセッションを同期" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-06/topic_8.png" alt="MemoryPlugin が macOS アプリを公開 — Claude Code / Codex / Cursor のセッションを同期" />
+      </div>
+      <p class="lede">
+        MemoryPlugin が macOS アプリをリリースし、ローカルの Claude Code / Codex / Cursor のセッションを同期できるようになった。ハーネスを複数併用すると、そこまでの経緯が各ツールのローカルに閉じてしまう — その分断を埋める層としての位置づけ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">ローカルの Claude Code / Codex / Cursor のセッションを同期する macOS アプリ</li>
+        <li data-i="02">背景にあるのは複数ハーネスの併用が常態化したこと（探索は Claude、実装は Codex、レビューは Cursor といった使い分け）</li>
+        <li data-i="03">同じ問題意識は 07-25 の Kenn Ejima の運用や、今日の Alex Finn のスタック表にも出ている</li>
+        <li data-i="04">小規模なサードパーティ製品で、同期対象の粒度・保存先・機密の扱いは本ソースからは確定できない</li>
+        <li data-i="05">セッション履歴には認証情報や社内コードが普通に含まれる。導入するなら何がどこへ送られるかを確認してからにする</li>
+      </ul>
+      <div class="pull">
+        モデルを使い分けるほど「今どこまで話したか」が分散する。ハーネス間の記憶をどこに置くかは、使い分けを始めた組織から順に効いてくる論点になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">50</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/testingcatalog/status/2085103344008233256">@testingcatalog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-05</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 リリース情報</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/testingcatalog/status/2085103344008233256">x.com/testingcatalog/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://openai.com/index/third-party-cyber-evaluations-involving-openai-models/">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-08-05/">
+      ← 前日 · 2026-08-05
+      <span class="big">Next.js 16.3 — フレームワークが AGENTS.md を自分で書いて維持し始めた</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-08-06/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260806.0732</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

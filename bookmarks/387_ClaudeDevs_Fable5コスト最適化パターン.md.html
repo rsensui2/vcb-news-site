@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №023</span>
+    <span class="tick">BOOKMARK №024</span>
     <span class="sep">/</span>
     <span>2026-07-08</span>
     <span class="sep">/</span>
     <span>@ClaudeDevs</span>
     <span class="sep">/</span>
-    <span>469 ITEMS</span>
+    <span>470 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:14 THU</span>
+    <span>JST 07:12 FRI</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,19 +305,19 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-08-05/">NEWS</a>
+      <a href="../news/2026-08-06/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:14 · THU</div>
+    <div class="meta">JST · 07:12 · FRI</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-07-08 <span>/</span> №023
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-07-08 <span>/</span> №024
     </div>
     <div class="cat-line">
       <span>🔁 ループ/エージェント設計 / コスト最適化</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">Fable 5 を安く使う3パターン — advisor / orchestrator / Managed Agents</h1>
     <div class="strap">
-      <span><span class="label">№</span>023 / 469</span>
+      <span><span class="label">№</span>024 / 470</span>
       <span><span class="label">SRC</span><a href="https://x.com/ClaudeDevs/status/2074606058128224365" target="_blank" rel="noopener noreferrer">x.com/ClaudeDevs ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/387_ClaudeDevs_Fable5%E3%82%B3%E3%82%B9%E3%83%88%E6%9C%80%E9%81%A9%E5%8C%96%E3%83%91%E3%82%BF%E3%83%BC%E3%83%B3.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">023<span class="ord">BOOKMARK / 469</span></aside>
+    <aside class="numeral">024<span class="ord">BOOKMARK / 470</span></aside>
     <article class="prose">
 <p><strong>有益度:</strong> ⭐⭐⭐</p><p><strong>エンゲージメント:</strong> Likes 26,473 / RT 1,956 / Bookmarks 24,686 / Views 4,381,897</p><h2>概要</h2><p>Anthropic 開発者アカウントによる、高価な Fable 5 を安価な Sonnet 5 と組み合わせて「性能をほぼ保ったままコストを大幅に下げる」実践パターンのスレッド。ベンチマーク実測値つきで advisor / orchestrator / Managed Agents の3構成を提示する。2.4 万ブックマークと極めて高い保存率。</p><h2>まとめ</h2><ul><li><strong>パターン1: Fable 5 を &quot;advisor&quot; に</strong>: 実行役の Sonnet 5 が要所だけ Fable 5 に助言を求める。大半のトークンは安い executor レートで課金。→ SWE-bench Pro で Sonnet 5 + Fable 5 advisor が Fable 5 単体の約92%スコアを約63%のコストで達成。Fable 5 呼び出しはタスクあたり約1回のみ。</li><li><strong>パターン2: Fable 5 を &quot;orchestrator&quot; に</strong>: Fable 5 が計画・委任し、worker（Sonnet 5）が実作業。大半のトークンは worker レート。</li><li><strong>Managed Agents が両方をサポート</strong>: sub-agent で Fable 5 advisor へエスカレーション、または Sonnet 5 worker へ委任。各 sub-agent が自前のキャッシュを持つので、同じ文脈への再呼び出しで二重課金にならない。</li><li><strong>BrowseComp 実測</strong>: Fable 5 orchestrator + Sonnet 5 worker で Fable 5 単体の96%性能を46%のコストで達成。トークン重い調査は Sonnet 5 に委任。</li><li>ドキュメント（advisor tool）と cookbook（Managed Agents, plan-big-execute-small）を公開。</li></ul><h2>日本語訳全文</h2><h3>Part 1 (親ポスト)</h3><p>私たちが Fable 5 でよく使うパターンをいくつか紹介する: Fable 5 を &quot;advisor（助言役）&quot; として使う。実行役（Sonnet 5）が Fable 5 にガイダンスを求める。大半のトークンは安い executor（実行役）レートで課金される。</p><h3>Part 2</h3><p>SWE-bench Pro では、Sonnet 5 + Fable 5 advisor ツールが Fable 5 単体スコアの約92%を、約63%のコストで達成した。Fable 5 はタスクあたり稀（約1回）しか呼ばれず舵取りだけを担い、作業の大半は Sonnet 5 の実行役がこなす。詳しくはドキュメント参照。</p><h3>Part 3</h3><p>Claude Managed Agents は sub-agent で両方のパターンをサポートする。上位の Fable 5 advisor へエスカレーションするか、下位の Sonnet 5 worker へ委任する。各 sub-agent は自前のキャッシュを保持するので、同じ文脈への繰り返し呼び出しで二重にフル課金されることがない。</p><h3>Part 4</h3><p>BrowseComp では、Fable 5 orchestrator + Sonnet 5 worker sub-agent の Claude Managed Agents を検証した。Fable 5 orchestrator は Fable 5 単体性能の96%を46%のコストで達成。トークンを大量に食う調査は Sonnet 5 に委任される。cookbook 参照。</p><h3>Part 5</h3><p>第二の戦略: Fable 5 を &quot;orchestrator（統括役）&quot; として使う。Fable 5 が計画し worker（Sonnet 5）に委任する。大半のトークンは安い worker レートで課金される。</p><h2>スレッド全体</h2><h3>Part 1 (親ポスト)</h3><p>A few patterns we frequently use with Fable 5: Use Fable 5 as an &quot;advisor.&quot; An executor (Sonnet 5) calls Fable 5 for guidance. Most tokens are billed at the lower executor rate.</p><h3>Part 2</h3><p>On SWE-bench Pro, Sonnet 5 + a Fable 5 advisor tool gets ~92% of Fable 5's score at ~63% of the price. Fable 5 is called rarely (~once) per task to steer while Sonnet 5 executors the majority of the work. See our docs to learn more.</p><h3>Part 3</h3><p>Claude Managed Agents supports both patterns with sub-agents. Escalate up to a Fable 5 advisor, or delegate down to Sonnet 5 workers. Each sub-agent keeps its own cache, so repeat calls don't pay in full for the same context twice.</p><h3>Part 4</h3><p>On BrowseComp, we tested Claude Managed Agents w/ Fable 5 orchestrator + Sonnet 5 worker sub-agents. The Fable 5 orchestrator achieves 96% of Fable 5 performance at 46% of the price. Token-heavy research is delegated to Sonnet 5. See our cookbook.</p><h3>Part 5</h3><p>A second strategy: use Fable 5 as an orchestrator. Fable 5 plans and delegates to workers (Sonnet 5). Most tokens are billed at the lower worker rate.</p>
     </article>
@@ -384,14 +384,14 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 469 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 470 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-08-05/">TODAY</a></li>
+          <li><a href="../news/2026-08-06/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -418,7 +418,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-08-06</span>
+      <span>BUILD 2026-08-07</span>
     </div>
   </div>
 </footer>

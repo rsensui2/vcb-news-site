@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №064</span>
+    <span class="tick">BOOKMARK №065</span>
     <span class="sep">/</span>
     <span>2026-06-19</span>
     <span class="sep">/</span>
     <span>@horizon_trade_x</span>
     <span class="sep">/</span>
-    <span>469 ITEMS</span>
+    <span>470 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:14 THU</span>
+    <span>JST 07:12 FRI</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,19 +305,19 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-08-05/">NEWS</a>
+      <a href="../news/2026-08-06/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:14 · THU</div>
+    <div class="meta">JST · 07:12 · FRI</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-06-19 <span>/</span> №064
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-06-19 <span>/</span> №065
     </div>
     <div class="cat-line">
       <span>📖 技術解説 / 💻 AI（ループ工学の応用 / クオンツ取引）</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">クオンツがループ工学でアルファを作る方法（フルフレームワーク）</h1>
     <div class="strap">
-      <span><span class="label">№</span>064 / 469</span>
+      <span><span class="label">№</span>065 / 470</span>
       <span><span class="label">SRC</span><a href="https://x.com/horizon_trade_x/status/2067638109416657259" target="_blank" rel="noopener noreferrer">x.com/horizon_trade_x ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/339_horizon_trade_x_%E3%82%AF%E3%82%AA%E3%83%B3%E3%83%84%E3%81%8C%E3%83%AB%E3%83%BC%E3%83%97%E5%B7%A5%E5%AD%A6%E3%81%A7%E3%82%A2%E3%83%AB%E3%83%95%E3%82%A1%E3%82%92%E4%BD%9C%E3%82%8B%E6%96%B9%E6%B3%95.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">064<span class="ord">BOOKMARK / 469</span></aside>
+    <aside class="numeral">065<span class="ord">BOOKMARK / 470</span></aside>
     <article class="prose">
 <p><strong>有益度:</strong> ⭐⭐⭐</p><p><strong>エンゲージメント:</strong> Likes 656 / RT 77 / Replies 21 / Bookmarks 2,925 / Views 1,716,978</p><h2>概要</h2><p>ループ工学を <strong>クオンツ（定量取引）の因子探索</strong> に応用したフレームワーク解説（自社プラットフォーム Horizon の宣伝を兼ねる）。「バックテストは完璧だったのに本番で溶けた」——それは1回の推測に何も反復していなかったから、という導入。戦略を生成 → 検証 → スコアリング → 失敗理由をフィードバック → out-of-sample で生き残るまで回す、というループの形を、スコアリングの数式まで含めて示す。</p><h2>まとめ</h2><ul><li><strong>one-shot が止まる理由</strong>: 1プロンプト＝1推測。最初のアイデアが edge であることは稀で、ループがないと毎回ゼロから始まり何も蓄積しない。</li><li><strong>ループを閉じる指標</strong>: 情報係数 IC = corr(factorₜ, returnₜ₊₁)。単発は noisy なので、時間的な一貫性 <strong>ICIR = mean(IC)/std(IC)</strong> を最適化対象にする。地味でも安定した IC が、一度だけ効く派手な因子に勝つ。</li><li><strong>多くが飛ばす減衰チェック</strong>: 因子の持続性を AR(1) で当てはめ half-life = -ln(2)/ln(ρ) を読む。半減期50日は遅く tradeable、2日ならコストを払ってノイズを追っているだけ。</li><li><strong>edge と過学習を分ける1ステップ</strong>: 同じデータで最適化するループは &quot;綺麗なノイズ&quot; を速く作るだけ。<strong>out-of-sample ゲート</strong>（見たことのないデータでも ICIR が保つか）だけが研究エンジンに変える。試行回数が増えるほど合格ラインを上げる。</li><li><strong>典型的な誤り</strong>: in-sample でループする / スコア関数なし / 高 IC だけ見て安定性を無視 / モデルを method と勘違い（良いモデルは生成を速くするだけ、alpha を生むのは loop・scoring・out-of-sample gate）。</li></ul><h2>日本語訳全文</h2><p>あなたのバックテストは完璧に見えた。本番投入した。2週間後、戦略は出血していた。どのクオンツも一度はこれを経験している。その答えはループだ。</p><p>戦略を生成し、テストし、スコアリングし、結果をフィードバックし、out-of-sample で1つが生き残るまで再び回す。</p><p>さっそく本題に入ろう。</p><p>これをブックマークしてほしい。私たちは Horizon の開発チームだ。Horizon は、取引戦略を平易な英語でタイプし、数分でバックテストし、自分の取引所へライブでデプロイできるプラットフォームだ。ループ工学（loop engineering）は、そのフローの背後にある手法（method）である。現在クローズドベータ中。horizon.trade で waitlist に参加するか、早期アクセスは @horizon_trade_x まで DM を。</p><p>その戦略が死んだのは、何も反復していない1回の推測だったからだ。シングルパスは1回の試行しか与えてくれず、最初の試行が edge であることは稀だ。ループはその1回の試行を「探索（search）」へと変える。各ラウンドでスコアの良かった variant（変種）を残し、残りを次の精緻化へとフィードバックする。これから、そのループがどう機能するか、それを閉じる数式、そして本物の edge と「より速い過学習」とを分ける唯一のステップを分解していく。</p><p>ロードマップはこうだ。</p><p>なぜ1つのプロンプトでは決して edge を見つけられないのか</p><p>複利的に効くループ、そしてそれをスコアリングする数式（IC, ICIR, half-life）</p><p>本物の edge と「より速い過学習」とを分ける唯一のステップ</p><p>自分自身を欺かずにループ全体を回す方法</p><p>Horizon がエンドツーエンドで回す場所</p><p>なぜ one-shot プロンプティングは行き詰まるのか</p><p>1つのプロンプトは1つの推測しか与えない。モデルは汎用的な factor を返し、あなたはそれをバックテストし、たいてい失敗する。なぜなら最初のアイデアが edge であることは稀だからだ。ループがなければ、すべての試行はゼロから始まり、何も複利的に積み上がらない。edge のすべては反復（iteration）の中にあり、one-shot プロンプティングにはそれがまったくない。</p><p>ループ工学とは実際には何か</p><p>ループ工学とは閉じたサイクルだ。仮説を生成し、テストし、明確な目的に対してスコアリングし、なぜ失敗したかを読み取り、それを次の生成へとフィードバックする。その形は「知覚する、推論する、行動する、観測する、繰り返す（perceive, reason, act, observe, repeat）」だ。各パスは安価で、システムは鋭くなっていく。なぜなら、どの結果も探索を絞り込んでいくからだ。重要なのはプロセスである。なぜならそれは、数十回の凡庸な試行を、持ちこたえる1つへと変えるからだ。これが、私たちが Horizon をエンドツーエンドで回すために作ったループだ。</p><p>ループを閉じる指標</p><p>スコア関数のないループは、ただ彷徨うだけだ。因子研究における標準的な目的関数は情報係数（information coefficient）だ。これは、今日の factor の値と、その後に続くリターンとの相関である。IC = corr(factorₜ, returnₜ₊₁)。単発の IC の読みは noisy なので、実際に重要なのは時間を通じたその一貫性、すなわち ICIR だ。ICIR = mean(IC) / std(IC)。控えめでも安定した IC を持つ factor は、一度だけ効いて壊れる派手なものに勝る。ICIR こそ、ループが最適化していく対象だ。</p><p>多くの人が飛ばす減衰チェック</p><p>本物の factor でさえ賞味期限がある。それは測定できる。シグナルの持続性を AR(1) プロセスとして当てはめ、その half-life を読む。t½ = -ln(2) / ln(ρ)。ここで ρ は、factor がある期間から次の期間へどれだけ強く引き継がれるかだ。half-life が50日なら、それは遅く、tradeable な edge だ。half-life が2日なら、あなたはコストを払ってノイズを追っているだけだ。良いループは short-half-life の factor を自動的に棄却する。</p><p>edge と過学習を分けるステップ</p><p>ここが、誇大宣伝が飛ばす部分だ。構築に使ったのと同じデータ上で最適化するループは、alpha をより速く見つけるのではない。より綺麗なノイズをより速く見つけるのだ。追加の iteration はすべて、過去にフィットさせるもう1つの機会にすぎない。ループを研究エンジンへと変える唯一のものは out-of-sample ゲートだ。生き残った各候補は、それが一度も見たことのないデータ上でテストされ、そこでも ICIR が保たれなければならない。試行回数は正直に数えること。なぜなら試す variant が多いほど、合格ラインは高く上げるべきだからだ。これを飛ばせば、ループ工学はただの自動カーブフィッティングにすぎない。</p><p>Horizon がこのループを回す場所</p><p>これが Horizon を中心に据えて構築されたサイクルであり、すべての拍（beat）が1つのフローの中で処理される。あなたは戦略を平易な英語で記述し、すると1つの答えではなく、比較するためのいくつかの variant が提案される。</p><p>Horizon はそれぞれをバックテストし、重要な指標（リターン、Sharpe、drawdown）でスコアリングし、何が保ち、何が壊れたかを示す。</p><p>あなたは失敗を読み、精緻化し、再び回す。候補が本物に見えたら、何かがライブに行く前に out-of-sample データでゲートされ、そのときに初めて自分の取引所へデプロイされる。クオンツデスクが手作業で回す「生成・テスト・スコアリング・精緻化・デプロイ」のループが、正直なステップを保ったまま、1か所で行われる。タイプして、テストして、生き残ったものを残す。</p><p>トレーダーがループ工学を間違える典型</p><p>in-sample データでループする。同じ履歴上での速い iteration は、ただ速く過学習するだけだ。ループはゲートで新鮮なデータを必要とする。</p><p>スコア関数なしで回す。ICIR のような明確な目的がなければ、ループは何も最適化せず、漂流する。</p><p>高い IC を追い、安定性を無視する。素晴らしい IC の1か月は衣装を着ているだけだ。一貫性こそが edge だ。</p><p>モデルを method と勘違いする。より良いモデルは生成を速くする。alpha を実際に生み出すのは、ループ、スコアリング、そして out-of-sample ゲートだ。</p><p>チェックリスト</p><p>始める前に目的を定義する。held-out なウィンドウ上での IC と ICIR。各パスでひと握りの variant を生成する。すべての候補をスコアリングし、失敗を読み、フィードバックする。half-life をチェックし、持続的なシグナルを取引する。生き残ったすべてを out-of-sample データでゲートし、試行回数が増えるにつれて合格ラインを上げる。保つものだけを残す。</p><p>モデルは千の factor を書ける。</p><p>しかし、どれが本物だったかを教えてくれるのはループだけだ。</p><p>最後に。私たちは Horizon の開発チームだ。Horizon は、取引戦略を平易な英語でタイプし、数分でバックテストし、自分の取引所へライブでデプロイできるプラットフォームだ。プロンプトの周りで回すループこそが、edge を生み出す。現在クローズドベータ中。horizon.trade で waitlist に参加するか、早期アクセスは @horizon_trade_x まで DM を。</p>
     </article>
@@ -384,14 +384,14 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 469 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 470 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-08-05/">TODAY</a></li>
+          <li><a href="../news/2026-08-06/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -418,7 +418,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-08-06</span>
+      <span>BUILD 2026-08-07</span>
     </div>
   </div>
 </footer>

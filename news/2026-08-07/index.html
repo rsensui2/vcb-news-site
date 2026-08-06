@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-08-07 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-08-07 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0807</span>
+    <span class="sep">/</span>
+    <span>2026-08-07</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260807.0728</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-08-07/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:28 · THU</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · THURSDAY · AUGUST 7, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>08<span class="dot">.</span>07</h1>
+    <div class="strap">
+      <span>Agent · Cursor · Qwen3.8-Max · Google</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 6 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 標準化・エコシステム <span class="sep">/</span> VERCEL CHANGELOG / AGENT-PLUGINS.ORG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Agent Plugins 1.0.0 — OpenAI・AWS・Microsoft・Cursor・Vercel が共同でベンダー中立の標準を策定</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-07/topic_1.png" data-alt="Agent Plugins 1.0.0 — OpenAI・AWS・Microsoft・Cursor・Vercel が共同でベンダー中立の標準を策定" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-07/topic_1.png" alt="Agent Plugins 1.0.0 — OpenAI・AWS・Microsoft・Cursor・Vercel が共同でベンダー中立の標準を策定" />
+      </div>
+      <p class="lede">
+        Agent Skills と MCP サーバーを1つのフォルダにまとめて持ち運べるようにする、オープンかつベンダー中立の仕様「Agent Plugins 1.0.0」が8月6日に公開された。初期の Technical Steering Committee には Amazon・Cursor・Microsoft・OpenAI・Vercel のコアメンテナが名を連ねており、単独ベンダーの提案ではない。ChatGPT / Codex・Cursor・GitHub Copilot・Kiro・VS Code がローンチ時点で対応する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">ルートに plugin.json マニフェストを置き、skills/（Agent Skills）と mcp.json（MCP サーバー定義）を固定の場所に配置する最小構成</li>
+        <li data-i="02">クライアント固有の拡張は com.example.client/ のような逆ドメイン名前空間に隔離し、移植可能な部分と混ざらないようにしている</li>
+        <li data-i="03">対応クライアント（ローンチ時）: ChatGPT / Codex・Cursor・GitHub Copilot・Kiro・VS Code</li>
+        <li data-i="04">標準が定めるのは「移植可能な部分の相互運用の床」だけ。インストール・配布・権限・UX は各クライアントの裁量に残す</li>
+        <li data-i="05">初期 TSC は Amazon・Cursor・Microsoft・OpenAI・Vercel のコアメンテナ。仕様はオープンライセンスで公開リポジトリにて開発</li>
+      </ul>
+      <div class="pull">
+        これまで Skill も MCP もクライアントごとに配置場所と書式が違い、同じ中身を何度も詰め直す必要があった。1回作れば複数のエージェントで動く形が決まったことで、社内に溜めたスキル資産の寿命が、特定ハーネスの寿命から切り離される。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/introducing-agent-plugins-1-0-0">Vercel Changelog / agent-plugins.org</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-06</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 標準化・エコシステム</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/introducing-agent-plugins-1-0-0">https://vercel.com/changelog/introducing-agent-plugins-1-0-0</a></dd>
+        <dd><a href="https://agent-plugins.org/">agent-plugins.org/</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · CURSOR BLOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 AI開発ツール <span class="sep">/</span> CURSOR BLOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cursor Router の中身が公開 — 複雑度スコアとタクソノミの2段構えで、Fable 超えを68%安く</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-07/topic_2.png" data-alt="Cursor Router の中身が公開 — 複雑度スコアとタクソノミの2段構えで、Fable 超えを68%安く" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-07/topic_2.png" alt="Cursor Router の中身が公開 — 複雑度スコアとタクソノミの2段構えで、Fable 超えを68%安く" />
+      </div>
+      <p class="lede">
+        Cursor が自動モデル選択機構「Cursor Router」の内部構造を8月6日に解説記事として公開した。タスクをまず Compass という予測器が 0〜1 の複雑度スコアで評価し、単純なものは安価なモデルへ直行させる。複雑と判定されたものだけを Taxonomy Router がドメイン・タスク種別・修飾子の3軸で分類し、その分類で最も成績の良いモデルへ振り分ける。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">第1段 Compass: 0〜1 の複雑度スコア。高信頼の予測では96%、低信頼では71%の的中率</li>
+        <li data-i="02">第2段 Taxonomy Router: ドメイン（バックエンド / フロント / DB）× タスク（バグ修正 / テスト / コマンド）× 修飾子（見た目の変更 / プロダクト質問）で分類</li>
+        <li data-i="03">モデル別の得意分野を明示 — Grok 4.5=定型作業を低コストで / GPT-5.6 Sol=計画とコードベース分析 / Opus=実行の重い作業（DevOps・DB）/ Fable=デバッグと見た目の実装</li>
+        <li data-i="04">Auto Intelligence は Fable 水準を超えるユーザー満足度を 68%安く達成</li>
+        <li data-i="05">Auto Balance は Opus 4.8 を上回りつつ 41%安く、満足度は3%増</li>
+        <li data-i="06">ルーティングの重みは毎週数百万件の実利用インタラクションから継続更新される（数値はすべて Cursor 自社計測）</li>
+      </ul>
+      <div class="pull">
+        「どのモデルを使うか」を人が固定する前提が崩れつつある。自分のループでモデルを1つに決めているなら、タスク種別ごとに測って振り分けるだけで同じ品質がかなり安くなる余地がある、という実測が数字付きで公開された。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,264</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://cursor.com/blog/how-cursor-router-works">Cursor Blog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-06</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 AI開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://cursor.com/blog/how-cursor-router-works">https://cursor.com/blog/how-cursor-router-works</a></dd>
+        <dd><a href="https://x.com/cursor_ai/status/2085390483740676365">x.com/cursor_ai/status/20853904837406763…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · ARTIFICIAL ANALYSI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 モデル動向 <span class="sep">/</span> ARTIFICIAL ANALYSIS / @ALIBABA_QWEN <span class="sep">/</span> NEWS
+      </div>
+      <h2>Qwen3.8-Max が Artificial Analysis 総合56点で世界5位 — 再計測で53から上振れ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-07/topic_3.png" data-alt="Qwen3.8-Max が Artificial Analysis 総合56点で世界5位 — 再計測で53から上振れ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-07/topic_3.png" alt="Qwen3.8-Max が Artificial Analysis 総合56点で世界5位 — 再計測で53から上振れ" />
+      </div>
+      <p class="lede">
+        Alibaba の Qwen3.8-Max が Artificial Analysis Intelligence Index で56点を記録し、総合5位に入った。同指標では Claude Opus 4.8 (max) と並び、Google・Meta・xAI のいずれのモデルよりも上位。上に残るのは Anthropic と OpenAI の最上位、および Moonshot AI の Kimi K3 のみとなった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Artificial Analysis Intelligence Index で 56点・総合5位</li>
+        <li data-i="02">Claude Opus 4.8 (max) と同水準。Google・Meta・xAI の全モデルより上</li>
+        <li data-i="03">先行して公表されていた53点は、測定対象エンドポイントの断続的な不具合の影響だった</li>
+        <li data-i="04">Alibaba の公開 API で再実行した結果、56点に修正されている</li>
+        <li data-i="05">モデル本体は8月3日リリース、2.4T パラメータ</li>
+        <li data-i="06">上位5モデルのうち2つ（Qwen3.8-Max・Kimi K3）が中国発という並びになった</li>
+      </ul>
+      <div class="pull">
+        スコアそのものより、「53点」が測定環境の不具合由来で再実行したら56点になった経緯のほうが実務的に重い。ベンチマークの数字は測定環境で動く。自分のループにモデルを組み込む前に、自分のタスクで測り直す理由がここにある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,598</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://artificialanalysis.ai/models/qwen3-8-max">Artificial Analysis / @Alibaba_Qwen</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-06</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 モデル動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://artificialanalysis.ai/models/qwen3-8-max">https://artificialanalysis.ai/models/qwen3-8-max</a></dd>
+        <dd><a href="https://x.com/Alibaba_Qwen/status/2085299356190802058">x.com/Alibaba_Qwen/status/20852993561908…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · GOOGLE DEEPMIND BL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 研究・オープンソース <span class="sep">/</span> GOOGLE DEEPMIND BLOG / NATURE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Google の天気モデル WeatherNext 2 が Nature 掲載、コードと重みを OSS 公開</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-07/topic_4.png" data-alt="Google の天気モデル WeatherNext 2 が Nature 掲載、コードと重みを OSS 公開" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-07/topic_4.png" alt="Google の天気モデル WeatherNext 2 が Nature 掲載、コードと重みを OSS 公開" />
+      </div>
+      <p class="lede">
+        Google DeepMind が WeatherNext 2 の熱帯低気圧予測の成果を Nature に発表し、同時にコードとモデル重みをオープンソース公開した。2023〜2025年の実サイクロンで、進路・強度・風の構造の予測が既存の主要な現業モデルに対して平均1日以上先行する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">2023〜2025年のサイクロンで、進路・強度・風構造の予測が主要現業モデルより平均1日以上先行（3日先の予測が従来の2日先の精度に相当）</li>
+        <li data-i="02">1つのサイクロンにつき 1,000通りのシナリオを生成して予報官の判断を支える</li>
+        <li data-i="03">2025年の大西洋ハリケーンシーズンで米国立ハリケーンセンターの現業ワークフローと並走</li>
+        <li data-i="04">ハリケーン Melissa の急速発達とジャマイカ上陸を、早期警報に間に合う時点で捉えた</li>
+        <li data-i="05">コードと学習済み重みを寛容なオープンソースライセンスで公開。自前ハードでの推論・論文の再現・別ドメインへの転用が可能</li>
+        <li data-i="06">Nature 掲載の査読済み成果</li>
+      </ul>
+      <div class="pull">
+        フロンティアモデル競争とは別の軸で、AI が実際に人命に効いていることが査読を通った形で示された数少ない例。しかも重みごと公開されており、「巨大企業しか触れない」という構図から外れている。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">131</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/">Google DeepMind Blog / Nature</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-06</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 研究・オープンソース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/">https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/</a></dd>
+        <dd><a href="https://www.unite.ai/googles-weathernext-2-gains-a-full-day-of-cyclone-warning-goes-open-source/">www.unite.ai/googles-weathernext-2-gains…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · TECHCRUNCH / NEWSF</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 エージェント活用 <span class="sep">/</span> TECHCRUNCH / @NEWSFROMGOOGLE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Google Maps の Ask Maps がエージェント化 — 注文・予約・チケット購入まで会話で完結</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-07/topic_5.png" data-alt="Google Maps の Ask Maps がエージェント化 — 注文・予約・チケット購入まで会話で完結" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-07/topic_5.png" alt="Google Maps の Ask Maps がエージェント化 — 注文・予約・チケット購入まで会話で完結" />
+      </div>
+      <p class="lede">
+        3月に投入された Gemini ベースの会話機能 Ask Maps に、実際に行動を起こすエージェント機能が8月6日に追加された。自然言語で頼むと料理を注文し、ホテルの空きと価格を比較し、イベントのチケットを探す。加えて Gmail / カレンダーを参照する Personal Intelligence が入る。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">フードデリバリー: 希望を自然言語で伝えると候補を出し、カートまで作って Uber Eats・Toast・Square 等の提携先へ決済を引き渡す</li>
+        <li data-i="02">ホテル: 価格・立地・設備、さらに「雰囲気」のような曖昧な条件でも空室確認まで実行する</li>
+        <li data-i="03">チケット: 「今晩、職場の近くでやってるお笑いかライブは？」のような聞き方で候補と購入リンクを返す</li>
+        <li data-i="04">Personal Intelligence: Gmail とカレンダーを参照して個別化する。既定はオフ</li>
+        <li data-i="05">エージェント機能は米国先行、Personal Intelligence と交通ウィジェットは Ask Maps 提供国へグローバル展開</li>
+      </ul>
+      <div class="pull">
+        「検索して見せる」から「代わりに手続きまで済ませる」への線を、10億人規模の既存プロダクトが跨いだ。決済を自前で持たず提携プラットフォームへ引き渡す設計は、エージェントに商取引をさせるときの現実解として参考になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">223</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://techcrunch.com/2026/08/06/google-maps-adds-agentic-features-including-food-ordering-and-hotel-bookings/">TechCrunch / @NewsFromGoogle</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-06</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 エージェント活用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://techcrunch.com/2026/08/06/google-maps-adds-agentic-features-including-food-ordering-and-hotel-bookings/">https://techcrunch.com/2026/08/06/google-maps-adds-agentic-features-including-food-ordering-and-hotel-bookings/</a></dd>
+        <dd><a href="https://x.com/NewsFromGoogle/status/2085375416106135609">x.com/NewsFromGoogle/status/208537541610…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · VERCEL / NEXTJSORG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 開発ツール・フレームワーク <span class="sep">/</span> @VERCEL / NEXTJS.ORG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Next.js 16.3 の実アプリ実測 — Vercel 上で prefetch リクエストが45%減</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-07/topic_6.png" data-alt="Next.js 16.3 の実アプリ実測 — Vercel 上で prefetch リクエストが45%減" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-07/topic_6.png" alt="Next.js 16.3 の実アプリ実測 — Vercel 上で prefetch リクエストが45%減" />
+      </div>
+      <p class="lede">
+        Vercel が8月5日、16.3 へ上げた実アプリでの計測結果を公表した。prefetch リクエストが45%減、静的アセットの取得が17%減。16.3 では一定サイズ以下の prefetch が自動でまとめられ、リクエスト数そのものが減る設計になっている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Vercel 上の Next.js 16.3 アプリで prefetch リクエスト 45%減、静的アセット 17%減</li>
+        <li data-i="02">しきい値以下の prefetch を自動でバンドル。大きい共有セグメントは分けたまま残し複数ルートで再利用</li>
+        <li data-i="03">next dev のメモリ最大90%減（vercel.com のダッシュボードで 21.5GB → 2GB）</li>
+        <li data-i="04">next build はディスクキャッシュ有効で最大5.5倍高速（vercel.com/geist で 30秒 → 5.5秒）</li>
+        <li data-i="05">SSR を Node.js ネイティブストリームに置き換え、負荷時のリクエスト処理量 +22%</li>
+        <li data-i="06">いずれもアプリ側のコード変更ゼロで効く（数値は Vercel 自社計測）</li>
+      </ul>
+      <div class="pull">
+        フレームワークのバージョンを上げるだけで効く数字が並んでいる。AI に書かせたコードを手で直しにいくより先に、土台を上げるほうが安上がりなケースがある、という具体例。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">338</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/vercel/status/2085018523072610770">@vercel</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-05</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 開発ツール・フレームワーク</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/vercel/status/2085018523072610770">x.com/vercel/…</a></dd>
+        <dd><a href="https://nextjs.org/blog/next-16-3">nextjs.org/blog/next-16-3</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · GITHUB 0XRANX/OPEN</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 OSS・コンテキスト管理 <span class="sep">/</span> GITHUB 0XRANX/OPENCONTEXT <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉OpenContext — 既存の Codex / Claude Code をそのまま使い回す「個人コンテキストの置き場」</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-07/topic_7.png" data-alt="〈知見〉OpenContext — 既存の Codex / Claude Code をそのまま使い回す「個人コンテキストの置き場」" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-07/topic_7.png" alt="〈知見〉OpenContext — 既存の Codex / Claude Code をそのまま使い回す「個人コンテキストの置き場」" />
+      </div>
+      <p class="lede">
+        エージェント用の個人コンテキストストア。プロジェクトの知識を貯めて検索し、複数のエージェントとリポジトリをまたいで再利用する。専用エージェントを新たに契約させるのではなく、手元の Codex / Claude Code / OpenCode の CLI をそのまま呼び出す設計になっている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">既存のコーディングエージェント CLI（Codex / Claude / OpenCode）を再利用。追加のエージェント課金が要らない</li>
+        <li data-i="02">内蔵の Skills / ツール群と、コンテキストを捕まえて検索・編集するデスクトップ GUI を持つ</li>
+        <li data-i="03">Web UI もあり、インストールなしでローカルのコンテキストを閲覧・編集できる</li>
+        <li data-i="04">GitHub スター約700 の個人開発プロジェクト</li>
+        <li data-i="05">狙いは「日をまたぐ・リポジトリをまたぐ・チャットをまたぐと文脈が消え、背景を説明し直す羽目になる」問題の解消</li>
+      </ul>
+      <div class="pull">
+        エージェントに記憶を持たせる話は増えているが、多くは「新しいエージェントに乗り換えろ」という形をとる。ここはハーネスを据え置いたまま置き場だけ足す構成なので、既に Claude Code や Codex で回している人がそのまま試せる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">100</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/0xranx/OpenContext">GitHub 0xranx/OpenContext</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-05</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 OSS・コンテキスト管理</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/0xranx/OpenContext">https://github.com/0xranx/OpenContext</a></dd>
+        <dd><a href="https://x.com/trendtech33566/status/2085152987421536746">x.com/trendtech33566/status/208515298742…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · OIKON48 / SPEAKER </span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🎓 教育・ドキュメント設計 <span class="sep">/</span> @OIKON48 / SPEAKER DECK <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>〈知見〉変化の早い Claude Code を書籍に落とし込む — 資料を「変わらない層」と「変わる層」に割る</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-07/topic_8.png" data-alt="〈知見〉変化の早い Claude Code を書籍に落とし込む — 資料を「変わらない層」と「変わる層」に割る" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-07/topic_8.png" alt="〈知見〉変化の早い Claude Code を書籍に落とし込む — 資料を「変わらない層」と「変わる層」に割る" />
+      </div>
+      <p class="lede">
+        Findy 主催の Claude Code イベントでの登壇資料。週単位で仕様が変わるツールを、数ヶ月かかる書籍という媒体にどう固定するか、という執筆側の問題を扱っている。要は「変わらない層と変わる層を分けて書く」——設計思想・ワークフロー・プロンプトの考え方は寿命が長く、個別のフラグ名・UI・コマンド体系は短い。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">扱っているのは「変化の早さ」そのもの。執筆中に機能が追加・改名・廃止されるツールをどう書くかの方針論</li>
+        <li data-i="02">書籍側は寿命の長い層（原理・型・判断基準）に厚みを置き、短い層はサポートサイトや正誤表で追随させる構成になりやすい</li>
+        <li data-i="03">この考え方は書籍に限らず、社内マニュアルや講座カリキュラムを作る側にそのまま当てはまる</li>
+        <li data-i="04">実務的には資料を2層に割る — 第1層（原理・型・判断基準）は改訂頻度を低く、第2層（操作手順・スクリーンショット・コマンド）は使い捨て前提で別ファイルへ</li>
+        <li data-i="05">混ぜて書くと、UI が変わるたびに資料全体が信用を失う</li>
+        <li data-i="06">資料は Speaker Deck で公開。書籍『Claude Code実践入門 [生成AI深掘りガイド]』は来週発売</li>
+      </ul>
+      <div class="pull">
+        AI ツールの手順書を書いたことがある人なら全員が踏んでいる問題に、はっきりした処方箋が出ている。操作手順と原理を同じファイルに混ぜた瞬間、その資料は次のリリースで死ぬ。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">76</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/oikon48/status/2084479428210626956">@oikon48</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-04</dd>
+        <dt>CATEGORY</dt>
+        <dd>🎓 教育・ドキュメント設計</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/oikon48/status/2084479428210626956">x.com/oikon48/…</a></dd>
+        <dd><a href="https://speakerdeck.com/oikon48/bian-hua-nozao-iclaude-codewo-shu-ji-niluo-tosiip-mu">speakerdeck.com/oikon48/bian-hua-nozao-i…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://vercel.com/changelog/introducing-agent-plugins-1-0-0">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-08-06/">
+      ← 前日 · 2026-08-06
+      <span class="big">英 AISI の評価中に Claude Mythos 5 と GPT-5.6 Sol が実在の人・組織を攻撃していた</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-08-07/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260807.0728</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI生成スライドに意図を込める技術 — リード文で「スタンスをとる」 — Bookmarks · Vibe Coder Bootcamp</title>
+  <meta name="description" content="AI にスライドを作らせたときに「何が言いたいのか分からない」資料になる原因を、リード文（各ページ最上部の結論行）1点に絞って診断・処方している。NG パターンは2つ — ①「最適化する」「効率化する」「OS」「プラットフォーム」のような曖昧ポジワードで逃げる、②「特徴は以下の3" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+  /* Archive page — day sections */
+  .bm-archive { padding: 0 0 40px; background: var(--paper); }
+  .bm-day {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--hair);
+  }
+  .bm-day:first-of-type { padding-top: 40px; }
+  .bm-day-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+  .bm-day-head .date {
+    font-family: "Shippori Mincho B1", "Noto Serif JP", serif;
+    font-weight: 800;
+    font-size: clamp(40px, 6vw, 72px);
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin: 0;
+  }
+  .bm-day-head .date .sep { color: var(--accent); margin: 0 2px; }
+  .bm-day-head .count {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding: 8px 14px;
+    border: 1px solid var(--accent);
+    white-space: nowrap;
+  }
+  /* active nav underline */
+  .masthead nav a.is-active { border-bottom-color: var(--accent); color: var(--accent); }
+
+  /* Article page — prose */
+  .bm-article-head {
+    padding: 48px 0 40px;
+    border-bottom: 1px solid var(--hair);
+  }
+  .bm-article-head .breadcrumb {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mute);
+    margin-bottom: 18px;
+  }
+  .bm-article-head .breadcrumb a { color: var(--ink); border-bottom: 1px solid var(--hair); padding-bottom: 1px; }
+  .bm-article-head .breadcrumb a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  .bm-article-head .cat-line {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .bm-article-head .cat-line .sep { color: var(--mute); }
+  .bm-article-head h1.title {
+    font-family: "Shippori Mincho B1", "Noto Serif JP", serif;
+    font-weight: 800;
+    font-size: clamp(32px, 4.4vw, 58px);
+    line-height: 1.12;
+    letter-spacing: -0.005em;
+    margin: 0 0 24px;
+    color: var(--ink);
+  }
+  .bm-article-head .strap {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--mute);
+  }
+  .bm-article-head .strap span .label { color: var(--accent); margin-right: 6px; }
+  .bm-article-head .strap a { border-bottom: 1px solid var(--hair); padding-bottom: 2px; }
+  .bm-article-head .strap a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  .bm-body { padding: 72px 0; border-bottom: 1px solid var(--hair); }
+  .bm-body .container {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr) 300px;
+    gap: 48px;
+  }
+  .bm-body .numeral {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 96px;
+    font-weight: 800;
+    line-height: 0.85;
+    color: var(--ink);
+    position: sticky;
+    top: 40px;
+    align-self: start;
+    letter-spacing: -0.03em;
+  }
+  .bm-body .numeral .ord {
+    display: block;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.14em;
+    margin-top: 14px;
+    font-weight: 500;
+  }
+  .bm-body .prose {
+    font-size: 16px;
+    line-height: 1.9;
+    color: var(--ink-soft);
+    font-family: "Inter", "Noto Sans JP", sans-serif;
+  }
+  .bm-body .prose > *:first-child { margin-top: 0; }
+  .bm-body .prose h1 {
+    font-family: "Shippori Mincho B1", serif;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 1.25;
+    margin: 40px 0 18px;
+    color: var(--ink);
+  }
+  .bm-body .prose h2 {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 40px 0 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+  }
+  .bm-body .prose h2::before {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: var(--accent);
+  }
+  .bm-body .prose h3 {
+    font-family: "Shippori Mincho B1", serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.35;
+    margin: 32px 0 14px;
+    color: var(--ink);
+  }
+  .bm-body .prose p { margin: 0 0 18px; }
+  .bm-body .prose ul, .bm-body .prose ol {
+    border-left: 2px solid var(--ink);
+    padding: 4px 0 4px 24px;
+    margin: 18px 0 24px;
+    list-style: none;
+  }
+  .bm-body .prose ul li, .bm-body .prose ol li {
+    position: relative;
+    padding: 4px 0 4px 18px;
+    font-size: 15px;
+  }
+  .bm-body .prose ul li::before {
+    content: "·";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1;
+  }
+  .bm-body .prose blockquote {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 19px;
+    line-height: 1.6;
+    padding: 18px 0 18px 24px;
+    border-left: 4px solid var(--accent);
+    margin: 28px 0;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .bm-body .prose pre {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 18px 20px;
+    overflow-x: auto;
+    margin: 20px 0;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    line-height: 1.65;
+  }
+  .bm-body .prose code {
+    background: var(--paper-deep);
+    border: 1px solid var(--hair);
+    padding: 1px 6px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.9em;
+  }
+  .bm-body .prose pre code { background: transparent; border: 0; padding: 0; color: inherit; font-size: 13px; }
+  .bm-body .prose a { color: var(--accent); border-bottom: 1px solid rgba(200,52,31,0.25); }
+  .bm-body .prose a:hover { border-bottom-color: var(--accent); }
+
+  .bm-body .side {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: var(--mute);
+    border-top: 1px solid var(--hair);
+    padding-top: 24px;
+    position: sticky;
+    top: 40px;
+    align-self: start;
+  }
+  .bm-body .side dl { margin: 0; }
+  .bm-body .side dt {
+    color: var(--accent);
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-top: 18px;
+    margin-bottom: 6px;
+  }
+  .bm-body .side dt:first-child { margin-top: 0; }
+  .bm-body .side dd {
+    margin: 0 0 4px;
+    color: var(--ink);
+    word-break: break-all;
+    font-size: 12.5px;
+    line-height: 1.6;
+  }
+  .bm-body .side dd a { border-bottom: 1px solid var(--hair); padding-bottom: 1px; }
+  .bm-body .side dd a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  .bm-body .side .stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 18px;
+    margin-top: 8px;
+  }
+  .bm-body .side .stats .stat .num {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 24px;
+    color: var(--ink);
+    line-height: 1;
+    font-weight: 800;
+    display: block;
+  }
+  .bm-body .side .stats .stat .lab {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--mute);
+    margin-top: 4px;
+    display: block;
+    text-transform: uppercase;
+  }
+
+  /* card: stretched-link target must be local nav, not external */
+  .xcard .xcard-main-link { cursor: pointer; }
+
+  @media (max-width: 980px) {
+    .bm-body .container { grid-template-columns: 1fr; gap: 24px; }
+    .bm-body .numeral { position: static; font-size: 64px; }
+    .bm-body .side { position: static; }
+    .bm-day-head .date { font-size: 36px; }
+  }
+</style>
+</head>
+<body>
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">BOOKMARK №004</span>
+    <span class="sep">/</span>
+    <span>2026-08-06</span>
+    <span class="sep">/</span>
+    <span>@ynmc0214</span>
+    <span class="sep">/</span>
+    <span>475 ITEMS</span>
+    <span class="sep">/</span>
+    <span>JST 07:22 SAT</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+<header class="masthead">
+  <div class="container row">
+    <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
+    <nav>
+      <a href="../">HOME</a>
+      <a href="../news/2026-08-07/">NEWS</a>
+      <a href="./" class="is-active">BOOKMARKS</a>
+      <a href="../#archive">ARCHIVE</a>
+      <a href="../#about">ABOUT</a>
+    </nav>
+    <div class="meta">JST · 07:22 · SAT</div>
+  </div>
+</header>
+
+<section class="bm-article-head">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-08-06 <span>/</span> №004
+    </div>
+    <div class="cat-line">
+      <span>📖 技術解説・ワークフロー</span>
+      <span class="sep">·</span><span>T. Yonemichi『エンジニアのAI壁打ち実践術』予約受付中！ <span style="opacity:.7">@ynmc0214</span></span>
+      <span class="sep">·</span><span>2026-08-06</span>
+    </div>
+    <h1 class="title">AI生成スライドに意図を込める技術 — リード文で「スタンスをとる」</h1>
+    <div class="strap">
+      <span><span class="label">№</span>004 / 475</span>
+      <span><span class="label">SRC</span><a href="https://x.com/ynmc0214/status/2085238101698630047" target="_blank" rel="noopener noreferrer">x.com/ynmc0214 ↗</a></span>
+      <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/473_ynmc0214_AI%E7%94%9F%E6%88%90%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89%E3%81%AB%E6%84%8F%E5%9B%B3%E3%82%92%E8%BE%BC%E3%82%81%E3%82%8B%E6%8A%80%E8%A1%93.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
+    </div>
+  </div>
+</section>
+
+<section class="bm-body">
+  <div class="container">
+    <aside class="numeral">004<span class="ord">BOOKMARK / 475</span></aside>
+    <article class="prose">
+<p><strong>有益度:</strong> ⭐⭐⭐</p><p><strong>エンゲージメント:</strong> Likes 445 / RT 31 / Replies 1 / Bookmarks 719 / Views 177243</p><h2>投稿本文（原文）</h2><p>AI生成されたよくわからんスライドを見かけるたびに、もったいないなーと思ってます。</p><h2>スレッド全体</h2><h3>Part 1 (親ポスト)</h3><p>AI生成されたよくわからんスライドを見かけるたびに、もったいないなーと思ってます。</p><p>（X Article「AI生成スライドに意図を込める技術」へのリンク）</p><h3>Part 2</h3><p>読んでいただいて嬉しいです！ありがとうございます。</p><p>AI生成物との向き合い方や、AIとの壁打ちを通して思考力・技術力を養う方法について、本にしました。</p><p>初の著書。めっちゃ頑張って書きました...!!</p><p>現在、予約受付中です。ぜひ！</p><p>『エンジニアのAI壁打ち実践術』</p><h2>X Article 本文</h2><p><strong>タイトル: AI生成スライドに意図を込める技術</strong></p><p>僕は、スライドはコミュニケーションの手段だと思っています。</p><p>AIでスライドを作るなとは言いませんが、自分の主張や意図が伝わるように努力するのが相手への礼儀だと思う。</p><p>何を言いたいのかイマイチわからないAI生成スライド、もったいないです。読み手に負荷がかかりますし、作成者のネガキャンになりかねません。</p><p>この記事では、AI生成スライドにサクッと手直しして作成者の意図を込める技術を解説してみようと思います。</p><p><strong>最低限、リード文を整えよう</strong></p><p>AIの生成結果に対してツッコミだすとキリがない（し、僕も解説しきれる自信がない）ので、今回はリード文だけに絞ります。</p><p>各スライドの一番上に置く、そのページの結論を書くパートですね。</p><p>ページ内でもっとも重要な要素である反面、修正範囲が閉じているのでコスパ良いです。</p><p>AIが書くリード文には迫力が足りないと感じることが多いです。</p><p>読んだ時に「ほーーん。なんか言ってるな？」「で？」みたいな。</p><p>理由は最後に説明しますが、代表的な2パターンで改善テクニックを紹介します。</p><p>なお、リード文を直すと、今度はボディ（スライドの主要コンテンツ）とのずれが気になり始めるはずです。ここはトークスクリプトでどうにか誤魔化してください。</p><p><strong>パターン１）曖昧ワードを具体化する</strong></p><p>AIが書くNGリード文のパターン1つ目は、「最適化する」「効率化する」のような、聞こえの良いふんわりポジワードで逃げてるものです。</p><p>「OS」「プラットフォーム」とかのAI頻出ワードもこれに該当。</p><p>「最適化する」が、実質的に何も言っていないのがポイントです。</p><p>こういうワードが登場したら、具体的に言い換えましょう。</p><p>「最適化するっていうのは、何と何のトレードオフを、どんな狙いで、どんな目標値に落とし込むことを言いますか？」</p><p>へのアンサーを必死に考えるわけです。AIではなく私たちが。</p><p><strong>パターン２）「で、つまり？」に答える</strong></p><p>2つ目のAI生成NGリード文のパターンは、「〜の特徴は以下の3点」「〜のメリットとデメリット」のようなボディを紹介しているだけのものです。</p><p>ちなみに、AI頻出ワードと掛け合わせて「〜の功罪」とか書いてあると僕は蕁麻疹が出ます。（誇張表現）</p><p>特徴を3つ挙げること自体は悪くないですが、それはスライドを一目見ればわかります。要素が3つあるので。</p><p>リード文に書くべきは、その特徴に対して「で、つまりはなんなの？」へのアンサーです。</p><p>「その3つの特徴から何が言えるのか？」</p><p>「そのメリットデメリットを総合して、どう捉えるべきか？」</p><p>これも、必死に考えましょう。AIではなく私たちが。</p><p><strong>要は、スタンスをとろう</strong></p><p>２パターンとも、僕が言いたいことは同じです。</p><p>「自分はこう考えています」という結論を具体的に書こう、ということです。</p><p>いわゆる「スタンスをとる」ということです。</p><p>AIは客観的な事実や、誰も否定しようがない当たり前のことを述べるのは得意です。資料を生成する際に、いろんなドキュメントたちをコンテキストとして与えれば、それらを総合していい感じに出してくれます。</p><p>ですが、スタンスをとるのは苦手です。それは、作成者の意思だから。正解がないから。</p><p>仮に、主張が書いてあった場合には、それがあなたの言いたいことと本当にマッチしているのか疑ってかかりましょう。経験上、「リード文には〜と書いてください」と指示しない限り、ズレてます。</p><p>聞き手が知りたいのは多くの場合、あなたの意思・主張です。</p><p>意思や主張に説得力を持たせるために、事実を持ち出すのです。</p><p>この順番を履き違えてはいけない。</p><p>自戒を込めて。</p><p>※白書など、事実の集計に意味があるスライドもありますがそれは例外。</p><h2>Summary</h2><p>AI にスライドを作らせたときに「何が言いたいのか分からない」資料になる原因を、リード文（各ページ最上部の結論行）1点に絞って診断・処方している。NG パターンは2つ — ①「最適化する」「効率化する」「OS」「プラットフォーム」のような曖昧ポジワードで逃げる、②「特徴は以下の3点」とボディの目次を書いているだけ。どちらも「で、つまり？」に答えていない。根本原因は、AI が客観的事実の要約は得意でも「スタンスをとる」ことは苦手だからで、そこは人間が引き受けるべき仕事だと結論づけている。</p><h2>Key points</h2><ul><li><strong>修正はリード文だけに絞るのがコスパ最強</strong>: ページ内で最重要な要素なのに、修正範囲が1行に閉じている</li><li><strong>NGパターン①「曖昧ワード」</strong>: 「最適化」と書いてあったら「何と何のトレードオフを、どんな狙いで、どんな目標値に落とすのか」に答え直す</li><li><strong>NGパターン②「ボディの目次」</strong>: 「特徴は3点」はスライドを見れば分かる。書くべきは「その3点から何が言えるか」</li><li><strong>AI は指示しない限りスタンスを外す</strong>: 「リード文には〜と書いて」と明示しない限り、主張は書き手の意図とズレる（筆者の経験則）</li><li><strong>リード文を直すとボディとのズレが顕在化する</strong>: そこはトークスクリプトで吸収する、という現実的な割り切り</li><li><strong>順番を履き違えない</strong>: 事実を並べて主張が出てくるのではなく、主張に説得力を持たせるために事実を持ち出す</li></ul><h2>Takeaway</h2><p>AI スライド生成ツールが増えたことで「量は作れるが刺さらない資料」が氾濫している中で、直すべき箇所を*1行*に特定したのが実務的。生成AIに任せる領域（事実の整理・体裁）と人間が引き受ける領域（スタンス＝主張）の境界線を、抽象論ではなくリード文という具体で線引きしている。スライド自動生成パイプラインを組むなら、「リード文だけは人間がレビューする」というゲートを1つ入れるだけで品質が変わる、という設計指針として読める。</p>
+    </article>
+    <aside class="side">
+      <dl>
+        <dt>AUTHOR</dt><dd>T. Yonemichi『エンジニアのAI壁打ち実践術』予約受付中！</dd>
+        <dt>HANDLE</dt><dd>@ynmc0214</dd>
+        <dt>POSTED</dt><dd>2026-08-06</dd>
+        <dt>CATEGORY</dt><dd>📖 技術解説・ワークフロー</dd>
+        <dt>SOURCE</dt><dd><a href="https://x.com/ynmc0214/status/2085238101698630047" target="_blank" rel="noopener noreferrer">x.com/ynmc0214/status/2085238101698630047…</a></dd>
+        <dt>MARKDOWN</dt><dd><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/473_ynmc0214_AI%E7%94%9F%E6%88%90%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89%E3%81%AB%E6%84%8F%E5%9B%B3%E3%82%92%E8%BE%BC%E3%82%81%E3%82%8B%E6%8A%80%E8%A1%93.md" target="_blank" rel="noopener noreferrer">GitHub で原文を見る</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn prev" href="./476_ICO_AIvideo_WINGLESS%E5%88%B6%E4%BD%9C%E3%83%95%E3%83%AD%E3%83%BC11%E6%99%82%E9%96%93%E3%81%A871040%E5%86%86%E3%81%AE%E5%85%A8%E5%85%AC%E9%96%8B.md.html">
+      <span>← 新しいブックマーク</span>
+      <span class="big">『WINGLESS』制作の全公開 — 11時間・映像生成費 71,040円、Seedance…</span>
+    </a>
+    <a class="btn next" href="./471_AlexFinn_%E3%83%90%E3%82%A4%E3%83%96%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E5%AE%9A%E7%95%AA%E3%83%86%E3%83%83%E3%82%AF%E3%82%B9%E3%82%BF%E3%83%83%E3%82%AF2026%E5%B9%B48%E6%9C%88%E7%89%88.md.html">
+      <span>古いブックマーク →</span>
+      <span class="big">私がバイブコーディングするアプリは全部このスタック — 定番構成（2026年8月版）</span>
+    </a>
+  </div>
+</section>
+
+<section class="actions">
+  <div class="container">
+    <a href="./">← 一覧へ戻る</a>
+    <a class="primary" href="https://x.com/ynmc0214/status/2085238101698630047" target="_blank" rel="noopener noreferrer">元ポストを X で見る</a>
+    <a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/473_ynmc0214_AI%E7%94%9F%E6%88%90%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89%E3%81%AB%E6%84%8F%E5%9B%B3%E3%82%92%E8%BE%BC%E3%82%81%E3%82%8B%E6%8A%80%E8%A1%93.md" target="_blank" rel="noopener noreferrer">GitHub で開く</a>
+  </div>
+</section>
+
+<footer class="foot" id="about">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">Vibe Coder Bootcamp</div>
+        <p>
+          AI の新しい動きを毎朝整理して、Vibe Coder が今日使える形で届けるフィード。
+          運営は泉水亮介。Slackコミュニティと連動した公開ログです。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          BOOKMARKS ARCHIVE · 475 ITEMS · EN+JP
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../">HOME</a></li>
+          <li><a href="../news/2026-08-07/">TODAY</a></li>
+          <li><a href="./">BOOKMARKS</a></li>
+          <li><a href="../#archive">ARCHIVE</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>SUBSCRIBE</h5>
+        <ul>
+          <li><a href="#">Slack に参加</a></li>
+          <li><a href="#">RSS</a></li>
+          <li><a href="#">X で購読</a></li>
+          <li><a href="#">メール通知</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://github.com/rsensui2/vibe-coder-demo">GitHub</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Colophon</a></li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 2026-08-08</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>『WINGLESS』制作の全公開 — 11時間・映像生成費 71,040円、Seedance 2.5 の実運用レポート — Bookmarks · Vibe Coder Bootcamp</title>
+  <meta name="description" content="10万回再生を超えた AI アニメーション『WINGLESS』の作者が、制作フロー・所要時間・実費を具体的な数字つきで公開した。使用ツールはキャラクターデザインが Midjourney V8.2、背景が KREA と Midjourney、楽曲が Suno 5.5v、動画生成が " />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+  /* Archive page — day sections */
+  .bm-archive { padding: 0 0 40px; background: var(--paper); }
+  .bm-day {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--hair);
+  }
+  .bm-day:first-of-type { padding-top: 40px; }
+  .bm-day-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+  .bm-day-head .date {
+    font-family: "Shippori Mincho B1", "Noto Serif JP", serif;
+    font-weight: 800;
+    font-size: clamp(40px, 6vw, 72px);
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin: 0;
+  }
+  .bm-day-head .date .sep { color: var(--accent); margin: 0 2px; }
+  .bm-day-head .count {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding: 8px 14px;
+    border: 1px solid var(--accent);
+    white-space: nowrap;
+  }
+  /* active nav underline */
+  .masthead nav a.is-active { border-bottom-color: var(--accent); color: var(--accent); }
+
+  /* Article page — prose */
+  .bm-article-head {
+    padding: 48px 0 40px;
+    border-bottom: 1px solid var(--hair);
+  }
+  .bm-article-head .breadcrumb {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mute);
+    margin-bottom: 18px;
+  }
+  .bm-article-head .breadcrumb a { color: var(--ink); border-bottom: 1px solid var(--hair); padding-bottom: 1px; }
+  .bm-article-head .breadcrumb a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  .bm-article-head .cat-line {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .bm-article-head .cat-line .sep { color: var(--mute); }
+  .bm-article-head h1.title {
+    font-family: "Shippori Mincho B1", "Noto Serif JP", serif;
+    font-weight: 800;
+    font-size: clamp(32px, 4.4vw, 58px);
+    line-height: 1.12;
+    letter-spacing: -0.005em;
+    margin: 0 0 24px;
+    color: var(--ink);
+  }
+  .bm-article-head .strap {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--mute);
+  }
+  .bm-article-head .strap span .label { color: var(--accent); margin-right: 6px; }
+  .bm-article-head .strap a { border-bottom: 1px solid var(--hair); padding-bottom: 2px; }
+  .bm-article-head .strap a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  .bm-body { padding: 72px 0; border-bottom: 1px solid var(--hair); }
+  .bm-body .container {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr) 300px;
+    gap: 48px;
+  }
+  .bm-body .numeral {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 96px;
+    font-weight: 800;
+    line-height: 0.85;
+    color: var(--ink);
+    position: sticky;
+    top: 40px;
+    align-self: start;
+    letter-spacing: -0.03em;
+  }
+  .bm-body .numeral .ord {
+    display: block;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.14em;
+    margin-top: 14px;
+    font-weight: 500;
+  }
+  .bm-body .prose {
+    font-size: 16px;
+    line-height: 1.9;
+    color: var(--ink-soft);
+    font-family: "Inter", "Noto Sans JP", sans-serif;
+  }
+  .bm-body .prose > *:first-child { margin-top: 0; }
+  .bm-body .prose h1 {
+    font-family: "Shippori Mincho B1", serif;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 1.25;
+    margin: 40px 0 18px;
+    color: var(--ink);
+  }
+  .bm-body .prose h2 {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 40px 0 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+  }
+  .bm-body .prose h2::before {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: var(--accent);
+  }
+  .bm-body .prose h3 {
+    font-family: "Shippori Mincho B1", serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.35;
+    margin: 32px 0 14px;
+    color: var(--ink);
+  }
+  .bm-body .prose p { margin: 0 0 18px; }
+  .bm-body .prose ul, .bm-body .prose ol {
+    border-left: 2px solid var(--ink);
+    padding: 4px 0 4px 24px;
+    margin: 18px 0 24px;
+    list-style: none;
+  }
+  .bm-body .prose ul li, .bm-body .prose ol li {
+    position: relative;
+    padding: 4px 0 4px 18px;
+    font-size: 15px;
+  }
+  .bm-body .prose ul li::before {
+    content: "·";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1;
+  }
+  .bm-body .prose blockquote {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 19px;
+    line-height: 1.6;
+    padding: 18px 0 18px 24px;
+    border-left: 4px solid var(--accent);
+    margin: 28px 0;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .bm-body .prose pre {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 18px 20px;
+    overflow-x: auto;
+    margin: 20px 0;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    line-height: 1.65;
+  }
+  .bm-body .prose code {
+    background: var(--paper-deep);
+    border: 1px solid var(--hair);
+    padding: 1px 6px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.9em;
+  }
+  .bm-body .prose pre code { background: transparent; border: 0; padding: 0; color: inherit; font-size: 13px; }
+  .bm-body .prose a { color: var(--accent); border-bottom: 1px solid rgba(200,52,31,0.25); }
+  .bm-body .prose a:hover { border-bottom-color: var(--accent); }
+
+  .bm-body .side {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: var(--mute);
+    border-top: 1px solid var(--hair);
+    padding-top: 24px;
+    position: sticky;
+    top: 40px;
+    align-self: start;
+  }
+  .bm-body .side dl { margin: 0; }
+  .bm-body .side dt {
+    color: var(--accent);
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-top: 18px;
+    margin-bottom: 6px;
+  }
+  .bm-body .side dt:first-child { margin-top: 0; }
+  .bm-body .side dd {
+    margin: 0 0 4px;
+    color: var(--ink);
+    word-break: break-all;
+    font-size: 12.5px;
+    line-height: 1.6;
+  }
+  .bm-body .side dd a { border-bottom: 1px solid var(--hair); padding-bottom: 1px; }
+  .bm-body .side dd a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  .bm-body .side .stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 18px;
+    margin-top: 8px;
+  }
+  .bm-body .side .stats .stat .num {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 24px;
+    color: var(--ink);
+    line-height: 1;
+    font-weight: 800;
+    display: block;
+  }
+  .bm-body .side .stats .stat .lab {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--mute);
+    margin-top: 4px;
+    display: block;
+    text-transform: uppercase;
+  }
+
+  /* card: stretched-link target must be local nav, not external */
+  .xcard .xcard-main-link { cursor: pointer; }
+
+  @media (max-width: 980px) {
+    .bm-body .container { grid-template-columns: 1fr; gap: 24px; }
+    .bm-body .numeral { position: static; font-size: 64px; }
+    .bm-body .side { position: static; }
+    .bm-day-head .date { font-size: 36px; }
+  }
+</style>
+</head>
+<body>
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">BOOKMARK №003</span>
+    <span class="sep">/</span>
+    <span>2026-08-06</span>
+    <span class="sep">/</span>
+    <span>@ICO_AIvideo</span>
+    <span class="sep">/</span>
+    <span>475 ITEMS</span>
+    <span class="sep">/</span>
+    <span>JST 07:22 SAT</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+<header class="masthead">
+  <div class="container row">
+    <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
+    <nav>
+      <a href="../">HOME</a>
+      <a href="../news/2026-08-07/">NEWS</a>
+      <a href="./" class="is-active">BOOKMARKS</a>
+      <a href="../#archive">ARCHIVE</a>
+      <a href="../#about">ABOUT</a>
+    </nav>
+    <div class="meta">JST · 07:22 · SAT</div>
+  </div>
+</header>
+
+<section class="bm-article-head">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-08-06 <span>/</span> №003
+    </div>
+    <div class="cat-line">
+      <span>🎨 AI動画・クリエイティブ / 💼 実運用コスト</span>
+      <span class="sep">·</span><span>ICO <span style="opacity:.7">@ICO_AIvideo</span></span>
+      <span class="sep">·</span><span>2026-08-06</span>
+    </div>
+    <h1 class="title">『WINGLESS』制作の全公開 — 11時間・映像生成費 71,040円、Seedance 2.5 の実運用レポート</h1>
+    <div class="strap">
+      <span><span class="label">№</span>003 / 475</span>
+      <span><span class="label">SRC</span><a href="https://x.com/ICO_AIvideo/status/2085191510619050342" target="_blank" rel="noopener noreferrer">x.com/ICO_AIvideo ↗</a></span>
+      <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/476_ICO_AIvideo_WINGLESS%E5%88%B6%E4%BD%9C%E3%83%95%E3%83%AD%E3%83%BC11%E6%99%82%E9%96%93%E3%81%A871040%E5%86%86%E3%81%AE%E5%85%A8%E5%85%AC%E9%96%8B.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
+    </div>
+  </div>
+</section>
+
+<section class="bm-body">
+  <div class="container">
+    <aside class="numeral">003<span class="ord">BOOKMARK / 475</span></aside>
+    <article class="prose">
+<p><strong>有益度:</strong> ⭐⭐⭐⭐</p><p><strong>エンゲージメント:</strong> Likes 698 / RT 69 / Replies 12 / Bookmarks 855 / Views 124279</p><h2>投稿本文（原文）</h2><p>「WINGLESS」たくさん見ていただけて嬉しいです🪽</p><p>特に今回は海外の方から、このアニメーション制作についてのDMを沢山いただきました。</p><p>せっかくなので、私の制作フローや、かかった時間、料金について残しておこうと思います。こうしたことを具体的に話すのはおそらく初めてです。</p><h2>スレッド全体</h2><h3>Part 1 (親ポスト)</h3><p>「WINGLESS」たくさん見ていただけて嬉しいです🪽</p><p>特に今回は海外の方から、このアニメーション制作についてのDMを沢山いただきました。</p><p>せっかくなので、私の制作フローや、かかった時間、料金について残しておこうと思います。こうしたことを具体的に話すのはおそらく初めてです。</p><h3>Part 2</h3><p>・キャラクターデザイン：Midjourney V8.2</p><p>・背景画像：KREA、Midjourney</p><p>・楽曲：Suno 5.5v</p><p>まず画像生成でいつも用意するのは、</p><p>・登場人物の画像</p><p>・背景画像</p><p>ざっくり言えばこの2つです。</p><h3>Part 3</h3><p>Seedanceは画像をかなり詳細に参照します。それは長所でもありますが、多くのデータを見続けて疲れた人間が見落としてしまうようなことまで拾い上げてくるのは、時に厄介です。</p><h3>Part 4</h3><p>次に、物語を作ると決めてから考えることはテーマ決めです。自分の描きたいことを一度言葉にします。この段階では脚本ではありません。</p><p>次に、本当にざっくりとした構成を考えます。思い詰まった時は、自分の好きな物語の構成を参考にします（物語そのものではなく、構成です）</p><h3>Part 5</h3><p>動画生成はSeedance 2.5の480p／30秒生成をひたすら回し続けました。</p><p>今回の制作を通して、2.5の30秒生成は本当に素晴らしいと思いました。なんといっても進むのが早い。だけど480pなのにクレジットが高い！ここはクリエイター泣かせですね。</p><h3>Part 6</h3><p>かかった制作時間（企画から完成まで）は11時間ほどでした。</p><p>当初は、Seedance 2.5の挙動テストのために動かし始めたただの生成テスト動画でした。</p><p>ただ、生成された映像の質感が気に入り、そこから物語として仕上げることを決めたものです。</p><h3>Part 7</h3><p>それでは制作費用についてです。</p><p>今回、映像生成にかかった費用は、</p><p>・映像生成費用：71,040円</p><p>でした。</p><p>ただし、これはSeedance 2.5（動画生成）に使用したクレジット費のみです。その他、KREAやMidjourney、SUNOなどのAIサブスク料金は含まれていません。</p><h3>Part 8</h3><p>最後に。これは私なりの方法で、未だにAI生成での正攻法はないと思っています。</p><p>描きたいトーン、実写であるか、アニメーションであるかによってもプロンプトの調整は必要だからです。</p><h3>Part 9</h3><p>そうだ！一番大事なことを忘れてました。</p><p>今回のSeedance 2.5のプロンプト構成のベースは、JINさんが共有してくださっているこちらのガイドを参考にしています。</p><h2>Summary</h2><p>10万回再生を超えた AI アニメーション『WINGLESS』の作者が、制作フロー・所要時間・実費を具体的な数字つきで公開した。使用ツールはキャラクターデザインが Midjourney V8.2、背景が KREA と Midjourney、楽曲が Suno 5.5v、動画生成が Seedance 2.5。企画から完成まで約11時間、Seedance 2.5 のクレジット費だけで 71,040円かかった（他ツールのサブスク費は別）。動画は 480p / 30秒生成を回し続ける形で作られており、「30秒生成は速くて素晴らしいが、480p なのにクレジットが高い」というコスト面の率直な評価も添えられている。</p><h2>Key points</h2><ul><li><strong>総制作時間は約11時間</strong>（企画から完成まで）。もともとは Seedance 2.5 の挙動テスト動画で、映像の質感が気に入って作品に昇格させた</li><li><strong>映像生成費は 71,040円</strong>。これは Seedance 2.5 のクレジット費のみで、Midjourney / KREA / Suno のサブスク料は含まない</li><li><strong>ツール分業が明確</strong>: キャラ = Midjourney V8.2 / 背景 = KREA + Midjourney / 楽曲 = Suno 5.5v / 動画 = Seedance 2.5</li><li><strong>入力画像は「登場人物」と「背景」の2種を必ず用意</strong>するのが定型フロー</li><li><strong>Seedance は参照画像を細かく拾いすぎる</strong>: 長所であると同時に、人間が見落とす要素まで反映してしまう扱いづらさがある</li><li><strong>480p / 30秒生成をひたすら回す</strong>運用。尺が長く取れるぶん進行は速いが、解像度あたりのクレジット単価が高い</li><li><strong>制作の起点は脚本ではなくテーマ</strong>: 描きたいことを言葉にし、次にざっくりした構成、という順序。行き詰まったら好きな物語の「構成」を参照する</li><li><strong>プロンプト構成は JIN 氏公開のガイドがベース</strong>。作者自身「AI生成に正攻法はまだない」と明言している</li></ul><h2>Takeaway</h2><p>AI 動画制作で一番手に入りにくい情報が「実費と時間」で、それを1本の完成作品に紐づけて出したのがこのスレッドの価値。11時間 / 7万円という数字は、外注アニメーション制作と比べれば桁違いに安いが、「AI だからタダ同然」という感覚とはかけ離れている——この現実的な相場観が共有された意味は大きい。加えて、動画生成モデル1つで完結せず Midjourney / KREA / Suno を役割分担させる構成は、いま実用レベルの AI 映像制作をやるうえでの標準形に近い。ショート動画・ブランドフィルムのパイプラインを設計するなら、コスト試算の実測値としてそのまま使える。</p>
+    </article>
+    <aside class="side">
+      <dl>
+        <dt>AUTHOR</dt><dd>ICO</dd>
+        <dt>HANDLE</dt><dd>@ICO_AIvideo</dd>
+        <dt>POSTED</dt><dd>2026-08-06</dd>
+        <dt>CATEGORY</dt><dd>🎨 AI動画・クリエイティブ / 💼 実運用コスト</dd>
+        <dt>SOURCE</dt><dd><a href="https://x.com/ICO_AIvideo/status/2085191510619050342" target="_blank" rel="noopener noreferrer">x.com/ICO_AIvideo/status/20851915106190503…</a></dd>
+        <dt>MARKDOWN</dt><dd><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/476_ICO_AIvideo_WINGLESS%E5%88%B6%E4%BD%9C%E3%83%95%E3%83%AD%E3%83%BC11%E6%99%82%E9%96%93%E3%81%A871040%E5%86%86%E3%81%AE%E5%85%A8%E5%85%AC%E9%96%8B.md" target="_blank" rel="noopener noreferrer">GitHub で原文を見る</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn prev" href="./477_OpenAIDevs_AgentPlugins%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E6%A8%AA%E6%96%AD%E3%81%AE%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E6%A8%99%E6%BA%96.md.html">
+      <span>← 新しいブックマーク</span>
+      <span class="big">Introducing Agent Plugins — Agent Skills と MCP…</span>
+    </a>
+    <a class="btn next" href="./473_ynmc0214_AI%E7%94%9F%E6%88%90%E3%82%B9%E3%83%A9%E3%82%A4%E3%83%89%E3%81%AB%E6%84%8F%E5%9B%B3%E3%82%92%E8%BE%BC%E3%82%81%E3%82%8B%E6%8A%80%E8%A1%93.md.html">
+      <span>古いブックマーク →</span>
+      <span class="big">AI生成スライドに意図を込める技術 — リード文で「スタンスをとる」</span>
+    </a>
+  </div>
+</section>
+
+<section class="actions">
+  <div class="container">
+    <a href="./">← 一覧へ戻る</a>
+    <a class="primary" href="https://x.com/ICO_AIvideo/status/2085191510619050342" target="_blank" rel="noopener noreferrer">元ポストを X で見る</a>
+    <a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/476_ICO_AIvideo_WINGLESS%E5%88%B6%E4%BD%9C%E3%83%95%E3%83%AD%E3%83%BC11%E6%99%82%E9%96%93%E3%81%A871040%E5%86%86%E3%81%AE%E5%85%A8%E5%85%AC%E9%96%8B.md" target="_blank" rel="noopener noreferrer">GitHub で開く</a>
+  </div>
+</section>
+
+<footer class="foot" id="about">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">Vibe Coder Bootcamp</div>
+        <p>
+          AI の新しい動きを毎朝整理して、Vibe Coder が今日使える形で届けるフィード。
+          運営は泉水亮介。Slackコミュニティと連動した公開ログです。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          BOOKMARKS ARCHIVE · 475 ITEMS · EN+JP
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../">HOME</a></li>
+          <li><a href="../news/2026-08-07/">TODAY</a></li>
+          <li><a href="./">BOOKMARKS</a></li>
+          <li><a href="../#archive">ARCHIVE</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>SUBSCRIBE</h5>
+        <ul>
+          <li><a href="#">Slack に参加</a></li>
+          <li><a href="#">RSS</a></li>
+          <li><a href="#">X で購読</a></li>
+          <li><a href="#">メール通知</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://github.com/rsensui2/vibe-coder-demo">GitHub</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Colophon</a></li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 2026-08-08</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

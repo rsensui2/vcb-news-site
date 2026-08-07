@@ -14,15 +14,15 @@
 
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">DISPATCH №0807</span>
+    <span class="tick">DISPATCH №0808</span>
     <span class="sep">/</span>
-    <span>2026-08-07</span>
+    <span>2026-08-08</span>
     <span class="sep">/</span>
     <span>MORNING EDITION</span>
     <span class="sep">/</span>
     <span>08 ITEMS</span>
     <span class="sep">/</span>
-    <span>BUILD 20260807.0728</span>
+    <span>BUILD 20260808.0739</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -40,13 +40,13 @@
     </button>
     <nav class="main-nav" id="main-nav">
       <a href="./">HOME</a>
-      <a href="./news/2026-08-07/">TODAY</a>
+      <a href="./news/2026-08-08/">TODAY</a>
       <a href="./#bookmarks">BOOKMARKS</a>
       <a href="./#archive">ARCHIVE</a>
       <a href="./#about">ABOUT</a>
       <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
     </nav>
-    <div class="meta">JST · 07:28 · THU</div>
+    <div class="meta">JST · 07:39 · FRI</div>
   </div>
 </header>
 <script>
@@ -70,7 +70,7 @@
     <div class="grid">
       <div>
         <div class="eyebrow">
-          MORNING DISPATCH <span class="dot">·</span> THURSDAY, AUGUST 7, 2026 <span class="dot">·</span> ISSUE N°0807
+          MORNING DISPATCH <span class="dot">·</span> FRIDAY, AUGUST 8, 2026 <span class="dot">·</span> ISSUE N°0808
         </div>
         <h1>
           VCB News<br>
@@ -84,9 +84,9 @@
     </div>
     <div class="hero-strap">
       <span><span class="k">08</span>TODAY</span>
-      <span><span class="k">11</span>BOOKMARKS / 7D</span>
-      <span><span class="k">564</span>ARCHIVE</span>
-      <span><span class="k">1036</span>DELIVERED</span>
+      <span><span class="k">14</span>BOOKMARKS / 7D</span>
+      <span><span class="k">569</span>ARCHIVE</span>
+      <span><span class="k">1044</span>DELIVERED</span>
       <span>SINCE 2026-04-17</span>
       <span>07:15 JST DAILY</span>
     </div>
@@ -101,38 +101,38 @@
         今朝の配信
       </div>
       <div class="trail">
-        <a href="./news/2026-08-07/">全08件を詳細ページで読む →</a>
+        <a href="./news/2026-08-08/">全08件を詳細ページで読む →</a>
       </div>
     </div>
 
     <div class="today-sub today-sub--hero">
       <h3>今日の一面</h3>
-      <div class="meta">TOP STORY · 2026-08-07</div>
+      <div class="meta">TOP STORY · 2026-08-08</div>
     </div>
     <article class="feature">
       <header class="feature-head">
-        <div class="cat"><span class="rule"></span>📰 標準化・エコシステム · Vercel Changelog / agent-plugins.org</div>
-        <h2><a href="./news/2026-08-07/#topic-1">Agent Plugins 1.0.0 — OpenAI・AWS・Microsoft・Cursor・Vercel が共同でベンダー中立の標準を策定</a></h2>
+        <div class="cat"><span class="rule"></span>📰 開発ツール · @ClaudeDevs（公式）</div>
+        <h2><a href="./news/2026-08-08/#topic-1">Claude Code のセッション同士がメッセージを送り合えるようになった</a></h2>
       </header>
-      <div class="media zoom-image" data-src="assets/images/2026-08-07/topic_1.png" data-alt="Agent Plugins 1.0.0 — OpenAI・AWS・Microsoft・Cursor・Vercel が共同でベンダー中立の標準を策定" role="button" tabindex="0" aria-label="スライド画像を拡大">
-        <img src="assets/images/2026-08-07/topic_1.png" alt="Agent Plugins 1.0.0 — OpenAI・AWS・Microsoft・Cursor・Vercel が共同でベンダー中立の標準を策定">
+      <div class="media zoom-image" data-src="assets/images/2026-08-08/topic_1.png" data-alt="Claude Code のセッション同士がメッセージを送り合えるようになった" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="assets/images/2026-08-08/topic_1.png" alt="Claude Code のセッション同士がメッセージを送り合えるようになった">
       </div>
       <div class="body">
         <p class="lede">
-          Agent Skills と MCP サーバーを1つのフォルダにまとめて持ち運べるようにする、オープンかつベンダー中立の仕様「Agent Plugins 1.0.0」が8月6日に公開された。初期の Technical Steering Committee には Amazon・Cursor・Microsoft・OpenAI・Vercel のコアメンテナが名を連ねており、単独ベンダーの提案ではない。ChatGPT / Codex・Cursor・GitHub Copilot・Kiro・VS Code がローンチ時点で対応する。
+          Claude Code に、走っているセッション同士が直接メッセージを送り合う機能が入った。別のセッションに文脈を説明し直す代わりに、Claude 自身が要約を作って相手へ送り、受け取った側はタスク実行の途中でそれを拾う。送られるのは要約だけで、会話履歴やファイルそのものは渡らない。macOS / Linux で利用可能。
         </p>
         <ul class="keypoints">
-          <li data-i="K.01">ルートに plugin.json マニフェストを置き、skills/（Agent Skills）と mcp.json（MCP サーバー定義）を固定の場所に配置する最小構成</li>
-          <li data-i="K.02">クライアント固有の拡張は com.example.client/ のような逆ドメイン名前空間に隔離し、移植可能な部分と混ざらないようにしている</li>
-          <li data-i="K.03">対応クライアント（ローンチ時）: ChatGPT / Codex・Cursor・GitHub Copilot・Kiro・VS Code</li>
-          <li data-i="K.04">標準が定めるのは「移植可能な部分の相互運用の床」だけ。インストール・配布・権限・UX は各クライアントの裁量に残す</li>
+          <li data-i="K.01">送信されるのはサマリのみ。会話履歴もファイルも相手に渡らない</li>
+          <li data-i="K.02">受け取り側はタスクの途中でメッセージを拾える（作業を止めて待つ必要がない）</li>
+          <li data-i="K.03">双方向: 別セッションに質問を投げて、答えを今のセッションに返してもらえる</li>
+          <li data-i="K.04">Claude が自発的に送ることもある。例えば自分が加えた変更が、別セッションの作業に影響する場合</li>
         </ul>
         <div class="footline">
-          
-          <span><span class="label">SRC</span> <a href="https://vercel.com/changelog/introducing-agent-plugins-1-0-0">Vercel Changelog / agent-plugins.org</a></span>
+          <span><span class="label">♡</span> 20,111 likes</span>
+          <span><span class="label">SRC</span> <a href="https://x.com/ClaudeDevs/status/2085817074816070014">@ClaudeDevs</a></span>
           <span><span class="label">TOPIC</span> 01 / 08</span>
         </div>
-        <a class="feature-cta" href="./news/2026-08-07/#topic-1">
+        <a class="feature-cta" href="./news/2026-08-08/#topic-1">
           続きを読む <span class="arrow">→</span>
         </a>
       </div>
@@ -143,71 +143,71 @@
       <div class="meta">08 ITEMS TOTAL</div>
     </div>
     <div class="rest rest--horizontal">
-        <a class="rest-item" href="./news/2026-08-07/#topic-2">
+        <a class="rest-item" href="./news/2026-08-08/#topic-2">
           <div class="rest-num">02</div>
           <div class="rest-body">
-            <div class="cat">📰 AI開発ツール · Cursor Blog</div>
-            <h4 class="rest-title">Cursor Router の中身が公開 — 複雑度スコアとタクソノミの2段構えで、Fable 超えを68%安く</h4>
-            <p class="rest-note">「どのモデルを使うか」を人が固定する前提が崩れつつある。自分のループでモデルを1つに決めているなら、タスク種別ごとに測って振り分けるだけで同じ品質がかなり安くなる余地がある、という実測が数字付きで公開された。</p>
+            <div class="cat">📰 開発ツール・セキュリティ · Anthropic Blog</div>
+            <h4 class="rest-title">Claude Code の auto mode が既定に — 「人間の承認より安全」を1,053人の対照試験で示した</h4>
+            <p class="rest-note">「人間が確認しているから安全」という前提を、自社データで否定した発表。承認率97%・却下率3%という数字は、許可プロンプトが儀式化して機能していないことを示す。承認UIを増やす方向の安全設計が効かないなら、残る手は自動ゲートしかない、という</p>
           </div>
-          <div class="rest-likes">♡ <b>1,264</b></div>
+          <div class="rest-likes"></div>
         </a>
-        <a class="rest-item" href="./news/2026-08-07/#topic-3">
+        <a class="rest-item" href="./news/2026-08-08/#topic-3">
           <div class="rest-num">03</div>
           <div class="rest-body">
-            <div class="cat">📰 モデル動向 · Artificial Analysis / @Alibaba_Qwen</div>
-            <h4 class="rest-title">Qwen3.8-Max が Artificial Analysis 総合56点で世界5位 — 再計測で53から上振れ</h4>
-            <p class="rest-note">スコアそのものより、「53点」が測定環境の不具合由来で再実行したら56点になった経緯のほうが実務的に重い。ベンチマークの数字は測定環境で動く。自分のループにモデルを組み込む前に、自分のタスクで測り直す理由がここにある。</p>
+            <div class="cat">📰 AI安全性・ガバナンス · @OpenAI（公式）</div>
+            <h4 class="rest-title">OpenAI が次期モデル Astra を Preparedness Framework 初の「critical」に分類</h4>
+            <p class="rest-note">未公開のモデルに対して、フロンティアラボが自ら最高危険度の指定を公表したのは初めて。7月下旬からの Hugging Face 侵害、封じ込め破りの拡大、英 AISI 評価での逸脱と「作る能力が制御する能力を上回っている」事案が続いた流れの中</p>
           </div>
-          <div class="rest-likes">♡ <b>1,598</b></div>
+          <div class="rest-likes">♡ <b>5,145</b></div>
         </a>
-        <a class="rest-item" href="./news/2026-08-07/#topic-4">
+        <a class="rest-item" href="./news/2026-08-08/#topic-4">
           <div class="rest-num">04</div>
           <div class="rest-body">
-            <div class="cat">📰 研究・オープンソース · Google DeepMind Blog / Nature</div>
-            <h4 class="rest-title">Google の天気モデル WeatherNext 2 が Nature 掲載、コードと重みを OSS 公開</h4>
-            <p class="rest-note">フロンティアモデル競争とは別の軸で、AI が実際に人命に効いていることが査読を通った形で示された数少ない例。しかも重みごと公開されており、「巨大企業しか触れない」という構図から外れている。</p>
+            <div class="cat">📰 業界動向・M&amp;A · The Information（独占）</div>
+            <h4 class="rest-title">SpaceX による Cursor 買収、早ければ来週末に完了か — 「Cursor」ブランドは段階的廃止の可能性</h4>
+            <p class="rest-note">製品として最も勢いがある時期にブランドが消えるという話で、Cursor を社内標準にしている組織にとっては移行計画の判断材料になる。買収合意自体は既報だが、完了時期とブランド変更の方針が出たのは今回が初めて。</p>
           </div>
-          <div class="rest-likes">♡ <b>131</b></div>
+          <div class="rest-likes"></div>
         </a>
-        <a class="rest-item" href="./news/2026-08-07/#topic-5">
+        <a class="rest-item" href="./news/2026-08-08/#topic-5">
           <div class="rest-num">05</div>
           <div class="rest-body">
-            <div class="cat">📰 エージェント活用 · TechCrunch / @NewsFromGoogle</div>
-            <h4 class="rest-title">Google Maps の Ask Maps がエージェント化 — 注文・予約・チケット購入まで会話で完結</h4>
-            <p class="rest-note">「検索して見せる」から「代わりに手続きまで済ませる」への線を、10億人規模の既存プロダクトが跨いだ。決済を自前で持たず提携プラットフォームへ引き渡す設計は、エージェントに商取引をさせるときの現実解として参考になる。</p>
+            <div class="cat">📰 エージェント運用 · @ClaudeDevs（公式）</div>
+            <h4 class="rest-title">Claude Managed Agents に4つの更新 — 予算上限・推論リージョン・repo からの skills 自動ロード・アドバイザー</h4>
+            <p class="rest-note">予算上限とリージョン指定は「エージェントを本番で回す側」に必要な統制で、実験段階から運用段階への移行を示す。アドバイザーは「安いモデルで回して、詰まったところだけ強いモデルを呼ぶ」というコスト設計を公式に組み込んだ形。</p>
           </div>
-          <div class="rest-likes">♡ <b>223</b></div>
+          <div class="rest-likes">♡ <b>95</b></div>
         </a>
-        <a class="rest-item" href="./news/2026-08-07/#topic-6">
+        <a class="rest-item" href="./news/2026-08-08/#topic-6">
           <div class="rest-num">06</div>
           <div class="rest-body">
-            <div class="cat">📰 開発ツール・フレームワーク · @vercel / nextjs.org</div>
-            <h4 class="rest-title">Next.js 16.3 の実アプリ実測 — Vercel 上で prefetch リクエストが45%減</h4>
-            <p class="rest-note">フレームワークのバージョンを上げるだけで効く数字が並んでいる。AI に書かせたコードを手で直しにいくより先に、土台を上げるほうが安上がりなケースがある、という具体例。</p>
+            <div class="cat">🔧 標準化・セキュリティ · @OpenAIDevs / developers.openai.com</div>
+            <h4 class="rest-title">Agent Plugins は「Skills と MCP をまとめる標準」では終わらない — hooks まで同梱される</h4>
+            <p class="rest-note">「1回作ればどこでも動く」は可搬性の話に聞こえるが、実際に運ばれるのはエージェントの実行権限そのもの。外部マーケットプレイスからプラグインを入れる運用は、npm の postinstall と同じクラスのサプライチェーンリスクを持つ。標準の</p>
           </div>
-          <div class="rest-likes">♡ <b>338</b></div>
+          <div class="rest-likes">♡ <b>6,861</b></div>
         </a>
-        <a class="rest-item" href="./news/2026-08-07/#topic-7">
+        <a class="rest-item" href="./news/2026-08-08/#topic-7">
           <div class="rest-num">07</div>
           <div class="rest-body">
-            <div class="cat">🔧 OSS・コンテキスト管理 · GitHub 0xranx/OpenContext</div>
-            <h4 class="rest-title">〈知見〉OpenContext — 既存の Codex / Claude Code をそのまま使い回す「個人コンテキストの置き場」</h4>
-            <p class="rest-note">エージェントに記憶を持たせる話は増えているが、多くは「新しいエージェントに乗り換えろ」という形をとる。ここはハーネスを据え置いたまま置き場だけ足す構成なので、既に Claude Code や Codex で回している人がそのまま試せる。</p>
+            <div class="cat">🎨 AI動画・クリエイティブ · ICO（@ICO_AIvideo）</div>
+            <h4 class="rest-title">AI動画『WINGLESS』の制作費と時間が全公開 — 11時間・映像生成費 71,040円</h4>
+            <p class="rest-note">AI 映像制作で最も手に入りにくいのが実費と時間の一次情報。11時間 / 7万円という数字は外注アニメーションより桁違いに安い一方、「AI ならタダ同然」という感覚とはかけ離れている。動画を内製するかどうかの見積もりにそのまま使える相場観に</p>
           </div>
-          <div class="rest-likes">♡ <b>100</b></div>
+          <div class="rest-likes">♡ <b>698</b></div>
         </a>
-        <a class="rest-item" href="./news/2026-08-07/#topic-8">
+        <a class="rest-item" href="./news/2026-08-08/#topic-8">
           <div class="rest-num">08</div>
           <div class="rest-body">
-            <div class="cat">🎓 教育・ドキュメント設計 · @oikon48 / Speaker Deck</div>
-            <h4 class="rest-title">〈知見〉変化の早い Claude Code を書籍に落とし込む — 資料を「変わらない層」と「変わる層」に割る</h4>
-            <p class="rest-note">AI ツールの手順書を書いたことがある人なら全員が踏んでいる問題に、はっきりした処方箋が出ている。操作手順と原理を同じファイルに混ぜた瞬間、その資料は次のリリースで死ぬ。</p>
+            <div class="cat">📖 知見・資料作成 · T. Yonemichi（@ynmc0214）/ X Article</div>
+            <h4 class="rest-title">AI生成スライドに意図を込める技術 — 直すのはリード文だけでいい</h4>
+            <p class="rest-note">AI スライド生成ツールが増え「量は作れるが刺さらない資料」が氾濫している中で、直すべき箇所を1行に特定したのが実務的。生成AIに任せる領域（事実の整理・体裁）と人間が引き受ける領域（スタンス）の境界を、抽象論ではなく具体で線引きしている。</p>
           </div>
-          <div class="rest-likes">♡ <b>76</b></div>
+          <div class="rest-likes">♡ <b>445</b></div>
         </a>
     </div>
-    <a class="rest-read-full rest-read-full--center" href="./news/2026-08-07/">
+    <a class="rest-read-full rest-read-full--center" href="./news/2026-08-08/">
       今日のディスパッチ全文 <span>→</span>
     </a>
   </div>
@@ -220,7 +220,7 @@
         <span class="en">§02 · Latest Bookmarks</span>
         最新ブックマーク
       </div>
-      <div class="trail"><a href="./bookmarks/">直近7日間 · 11件 · 全件を見る →</a></div>
+      <div class="trail"><a href="./bookmarks/">直近7日間 · 14件 · 全件を見る →</a></div>
     </div>
 
     <div class="bk-filter">
@@ -235,6 +235,204 @@
 
     <div class="xfeed">
 
+      <article class="xcard" data-url="https://x.com/ynmc0214/status/2085238101698630047" data-type="thread" tabindex="0" role="button" aria-label="T. Yonemichi『エンジニアのAI壁打ち実践術』予約受付中！ の🧵 スレッドを開く">
+        <header class="xcard-head">
+          <div class="xcard-avatar" style="--c:#c74a6d;">T</div>
+          <div class="xcard-who">
+            <span class="xcard-name">T. Yonemichi『エンジニアのAI壁打ち実践術』予約受付中！ <span class="xcard-cat">📖 技術解説・ワークフロー</span></span>
+            <span class="xcard-handle">@ynmc0214 · 8月6日</span>
+          </div>
+          <span class="xcard-type xcard-type--thread">🧵 スレッド</span>
+        </header>
+        <div class="xcard-body">
+          <p class="xcard-preview">Part 1 (親ポスト)
+
+AI生成されたよくわからんスライドを見かけるたびに、もったいないなーと思ってます。
+（X Article「AI生成スライドに意図を込める技術」へのリンク）
+
+Part 2
+
+読んでいただいて嬉しいです！ありがとうございます。
+
+AI生成物との向き合い方や、AIとの壁打ちを通して思考力・技術力を養う方法について、本にしました。
+初の著書。めっちゃ頑張って書きました...!!
+
+現在、予約受付中です。ぜひ！…</p>
+        </div>
+        <footer class="xcard-foot">
+          <div class="xcard-stats"></div>
+          <a class="xcard-x" href="https://x.com/ynmc0214/status/2085238101698630047" target="_blank" rel="noopener noreferrer" aria-label="Xで開く">𝕏 <span aria-hidden="true">↗</span></a>
+        </footer>
+        <div class="xcard-full" hidden>
+          <div class="xcard-full-meta" data-title="" data-type="thread" data-type-label="🧵 スレッド" data-has-alt="0" data-primary-lang="ja"></div>
+          <div class="xcard-full-primary">Part 1 (親ポスト)
+
+AI生成されたよくわからんスライドを見かけるたびに、もったいないなーと思ってます。
+（X Article「AI生成スライドに意図を込める技術」へのリンク）
+
+Part 2
+
+読んでいただいて嬉しいです！ありがとうございます。
+
+AI生成物との向き合い方や、AIとの壁打ちを通して思考力・技術力を養う方法について、本にしました。
+初の著書。めっちゃ頑張って書きました...!!
+
+現在、予約受付中です。ぜひ！
+
+『エンジニアのAI壁打ち実践術』</div>
+        </div>
+      </article>
+      <article class="xcard" data-url="https://x.com/ICO_AIvideo/status/2085191510619050342" data-type="thread" tabindex="0" role="button" aria-label="ICO の🧵 スレッドを開く">
+        <header class="xcard-head">
+          <div class="xcard-avatar" style="--c:#a0522d;">I</div>
+          <div class="xcard-who">
+            <span class="xcard-name">ICO <span class="xcard-cat">🎨 AI動画・クリエイティブ / 💼 実運用コスト</span></span>
+            <span class="xcard-handle">@ICO_AIvideo · 8月6日</span>
+          </div>
+          <span class="xcard-type xcard-type--thread">🧵 スレッド</span>
+        </header>
+        <div class="xcard-body">
+          <p class="xcard-preview">Part 1 (親ポスト)
+
+「WINGLESS」たくさん見ていただけて嬉しいです🪽
+特に今回は海外の方から、このアニメーション制作についてのDMを沢山いただきました。
+
+せっかくなので、私の制作フローや、かかった時間、料金について残しておこうと思います。こうしたことを具体的に話すのはおそらく初めてです。
+
+Part 2
+
+・キャラクターデザイン：Midjourney V8.2
+・背景画像：KREA、Midjourney
+・楽曲：Su…</p>
+        </div>
+        <footer class="xcard-foot">
+          <div class="xcard-stats"></div>
+          <a class="xcard-x" href="https://x.com/ICO_AIvideo/status/2085191510619050342" target="_blank" rel="noopener noreferrer" aria-label="Xで開く">𝕏 <span aria-hidden="true">↗</span></a>
+        </footer>
+        <div class="xcard-full" hidden>
+          <div class="xcard-full-meta" data-title="" data-type="thread" data-type-label="🧵 スレッド" data-has-alt="0" data-primary-lang="ja"></div>
+          <div class="xcard-full-primary">Part 1 (親ポスト)
+
+「WINGLESS」たくさん見ていただけて嬉しいです🪽
+特に今回は海外の方から、このアニメーション制作についてのDMを沢山いただきました。
+
+せっかくなので、私の制作フローや、かかった時間、料金について残しておこうと思います。こうしたことを具体的に話すのはおそらく初めてです。
+
+Part 2
+
+・キャラクターデザイン：Midjourney V8.2
+・背景画像：KREA、Midjourney
+・楽曲：Suno 5.5v
+
+まず画像生成でいつも用意するのは、
+・登場人物の画像
+・背景画像
+ざっくり言えばこの2つです。
+
+Part 3
+
+Seedanceは画像をかなり詳細に参照します。それは長所でもありますが、多くのデータを見続けて疲れた人間が見落としてしまうようなことまで拾い上げてくるのは、時に厄介です。
+
+Part 4
+
+次に、物語を作ると決めてから考えることはテーマ決めです。自分の描きたいことを一度言葉にします。この段階では脚本ではありません。
+
+次に、本当にざっくりとした構成を考えます。思い詰まった時は、自分の好きな物語の構成を参考にします（物語そのものではなく、構成です）
+
+Part 5
+
+動画生成はSeedance 2.5の480p／30秒生成をひたすら回し続けました。
+
+今回の制作を通して、2.5の30秒生成は本当に素晴らしいと思いました。なんといっても進むのが早い。だけど480pなのにクレジットが高い！ここはクリエイター泣かせですね。
+
+Part 6
+
+かかった制作時間（企画から完成まで）は11時間ほどでした。
+
+当初は、Seedance 2.5の挙動テストのために動かし始めたただの生成テスト動画でした。
+
+ただ、生成された映像の質感が気に入り、そこから物語として仕上げることを決めたものです。
+
+Part 7
+
+それでは制作費用についてです。
+
+今回、映像生成にかかった費用は、
+・映像生成費用：71,040円
+でした。
+
+ただし、これはSeedance 2.5（動画生成）に使用したクレジット費のみです。その他、KREAやMidjourney、SUNOなどのAIサブスク料金は含まれていません。
+
+Part 8
+
+最後に。これは私なりの方法で、未だにAI生成での正攻法はないと思っています。
+
+描きたいトーン、実写であるか、アニメーションであるかによってもプロンプトの調整は必要だからです。
+
+Part 9
+
+そうだ！一番大事なことを忘れてました。
+今回のSeedance 2.5のプロンプト構成のベースは、JINさんが共有してくださっているこちらのガイドを参考にしています。</div>
+        </div>
+      </article>
+      <article class="xcard" data-url="https://x.com/OpenAIDevs/status/2085398373511918022" data-type="thread" tabindex="0" role="button" aria-label="OpenAI Developers の🧵 スレッドを開く">
+        <header class="xcard-head">
+          <div class="xcard-avatar" style="--c:#d94a27;">O</div>
+          <div class="xcard-who">
+            <span class="xcard-name">OpenAI Developers <span class="xcard-cat">💻 AI/開発ツール</span></span>
+            <span class="xcard-handle">@OpenAIDevs · 8月6日</span>
+          </div>
+          <span class="xcard-type xcard-type--thread">🧵 スレッド</span>
+        </header>
+        <div class="xcard-body">
+          <p class="xcard-preview">Part 1 (親ポスト)
+
+プラグインを一度作れば、対応するあらゆるエージェントクライアントで使える。
+
+Agent Plugins を発表します。AWS Developers、Cursor、GitHub、VS Code、Vercel と共同で策定したオープン標準で、Agent Skills をパッケージ化し、MCP サーバー設定を共通フォーマットでサポートします。
+
+Part 2
+
+ローンチ時点で対応するエージェントクライアント:…</p>
+        </div>
+        <footer class="xcard-foot">
+          <div class="xcard-stats"></div>
+          <a class="xcard-x" href="https://x.com/OpenAIDevs/status/2085398373511918022" target="_blank" rel="noopener noreferrer" aria-label="Xで開く">𝕏 <span aria-hidden="true">↗</span></a>
+        </footer>
+        <div class="xcard-full" hidden>
+          <div class="xcard-full-meta" data-title="" data-type="thread" data-type-label="🧵 スレッド" data-has-alt="1" data-primary-lang="ja"></div>
+          <div class="xcard-full-primary">Part 1 (親ポスト)
+
+プラグインを一度作れば、対応するあらゆるエージェントクライアントで使える。
+
+Agent Plugins を発表します。AWS Developers、Cursor、GitHub、VS Code、Vercel と共同で策定したオープン標準で、Agent Skills をパッケージ化し、MCP サーバー設定を共通フォーマットでサポートします。
+
+Part 2
+
+ローンチ時点で対応するエージェントクライアント:
+• Codex
+• ChatGPT
+• Cursor
+• GitHub Copilot
+• Kiro
+• VS Code</div>
+          <div class="xcard-full-alt" hidden>Part 1 (親ポスト)
+
+Build a plugin once and use it across compatible agent clients.
+
+Introducing Agent Plugins, an open standard developed with @awsdevelopers, @cursor_ai, @github, @code, and @vercel that packages Agent Skills and supports MCP server configurations in a shared format.
+
+Part 2
+
+Compatible agentic clients at launch:
+• Codex
+• @ChatGPT
+• @cursor_ai
+• @github Copilot
+• @kirodotdev
+• @code</div>
+        </div>
+      </article>
       <article class="xcard" data-url="https://x.com/maaai12121/status/2084585547109208336" data-type="short" tabindex="0" role="button" aria-label="はまだ | Offers DevRel の📝 ポストを開く">
         <header class="xcard-head">
           <div class="xcard-avatar" style="--c:#7b6aa8;">は</div>
@@ -295,172 +493,6 @@ Part 2
 Claude Code実践入門 [生成AI深掘りガイド]</div>
         </div>
       </article>
-      <article class="xcard" data-url="https://x.com/ollama/status/2084771801888907621" data-type="thread" tabindex="0" role="button" aria-label="ollama の🧵 スレッドを開く">
-        <header class="xcard-head">
-          <div class="xcard-avatar" style="--c:#d97706;">O</div>
-          <div class="xcard-who">
-            <span class="xcard-name">ollama <span class="xcard-cat">🖥️ ローカルLLM・オンデバイスAI</span></span>
-            <span class="xcard-handle">@ollama · 8月4日</span>
-          </div>
-          <span class="xcard-type xcard-type--thread">🧵 スレッド</span>
-        </header>
-        <div class="xcard-body">
-          <p class="xcard-preview">Part 1（親ポスト）
-
-DeepSeek-V4-Flash-0731 は、トークン使用量ベースで Ollama 史上もっとも急成長しているモデルになりました。米国と欧州でキャパシティを増強中です。
-
-Ollama 上では、このモデルは高いパフォーマンス（100tps 超）で動作し、データ保持はゼロです。あなたのデータはあなたのものです。
-
-ollama run deepseek-v4-flash:0731-cloud
-
-Part 2…</p>
-        </div>
-        <footer class="xcard-foot">
-          <div class="xcard-stats"></div>
-          <a class="xcard-x" href="https://x.com/ollama/status/2084771801888907621" target="_blank" rel="noopener noreferrer" aria-label="Xで開く">𝕏 <span aria-hidden="true">↗</span></a>
-        </footer>
-        <div class="xcard-full" hidden>
-          <div class="xcard-full-meta" data-title="" data-type="thread" data-type-label="🧵 スレッド" data-has-alt="1" data-primary-lang="ja"></div>
-          <div class="xcard-full-primary">Part 1（親ポスト）
-
-DeepSeek-V4-Flash-0731 は、トークン使用量ベースで Ollama 史上もっとも急成長しているモデルになりました。米国と欧州でキャパシティを増強中です。
-
-Ollama 上では、このモデルは高いパフォーマンス（100tps 超）で動作し、データ保持はゼロです。あなたのデータはあなたのものです。
-
-ollama run deepseek-v4-flash:0731-cloud
-
-Part 2
-
-モデルページ: https://ollama.com/library/deepseek-v4-flash</div>
-          <div class="xcard-full-alt" hidden>Part 1 (親ポスト)
-
-DeepSeek-V4-Flash-0731 is Ollama's fastest growing model ever in token usage. We are scaling capacity in US &amp; Europe.
-
-On Ollama, this model runs with high performance (100tps+) and zero data retention. Your data stays yours.
-
-ollama run deepseek-v4-flash:0731-cloud
-
-Part 2
-
-Model page: https://ollama.com/library/deepseek-v4-flash</div>
-        </div>
-      </article>
-      <article class="xcard" data-url="https://x.com/Alibaba_Qwen/status/2084100707423289643" data-type="thread" tabindex="0" role="button" aria-label="Qwen の🧵 スレッドを開く">
-        <header class="xcard-head">
-          <div class="xcard-avatar" style="--c:#2f7d91;">Q</div>
-          <div class="xcard-who">
-            <span class="xcard-name">Qwen <span class="xcard-cat">📰 業界ニュース / 💻 AI/開発ツール</span></span>
-            <span class="xcard-handle">@Alibaba_Qwen · 8月3日</span>
-          </div>
-          <span class="xcard-type xcard-type--thread">🧵 スレッド</span>
-        </header>
-        <div class="xcard-body">
-          <p class="xcard-preview">Part 1 (親ポスト)
-上記本文のとおり。Qwen3.8-Max の発表と、来週のオープンウェイト公開予告。
-
-Part 2
-LM Performance（言語モデルのベンチマーク比較図）
-
-Part 3
-VL Performance（Vision-Language のベンチマーク比較図）
-
-Part 4
-Cowork: Any role, build beyond（職種横断の実務デリバラブル例）
-
-Part 5
-16 days a…</p>
-        </div>
-        <footer class="xcard-foot">
-          <div class="xcard-stats"></div>
-          <a class="xcard-x" href="https://x.com/Alibaba_Qwen/status/2084100707423289643" target="_blank" rel="noopener noreferrer" aria-label="Xで開く">𝕏 <span aria-hidden="true">↗</span></a>
-        </footer>
-        <div class="xcard-full" hidden>
-          <div class="xcard-full-meta" data-title="" data-type="thread" data-type-label="🧵 スレッド" data-has-alt="0" data-primary-lang="ja"></div>
-          <div class="xcard-full-primary">Part 1 (親ポスト)
-上記本文のとおり。Qwen3.8-Max の発表と、来週のオープンウェイト公開予告。
-
-Part 2
-LM Performance（言語モデルのベンチマーク比較図）
-
-Part 3
-VL Performance（Vision-Language のベンチマーク比較図）
-
-Part 4
-Cowork: Any role, build beyond（職種横断の実務デリバラブル例）
-
-Part 5
-16 days autonomous coding（16日間の自律コーディング実行トレース）
-
-Part 6
-Dynamic workflows to quant strategies（動的ワークフローからクオンツ戦略まで）
-
-Part 7
-Visual agentic intelligence（視覚を伴うエージェント動作のデモ）
-
-Part 8
-Text Arena でのランキング掲載
-
-Part 9-10
-LM / VL Performance の英語版図表</div>
-        </div>
-      </article>
-      <article class="xcard" data-url="https://x.com/oda_nobunaga10/status/2084188743733576031" data-type="short" tabindex="0" role="button" aria-label="令和の織田信長 の📝 ポストを開く">
-        <header class="xcard-head">
-          <div class="xcard-avatar" style="--c:#2f7d91;">令</div>
-          <div class="xcard-who">
-            <span class="xcard-name">令和の織田信長 <span class="xcard-cat">💻 AI/開発ツール</span></span>
-            <span class="xcard-handle">@oda_nobunaga10 · 8月3日</span>
-          </div>
-          <span class="xcard-type xcard-type--short">📝 ポスト</span>
-        </header>
-        <div class="xcard-body">
-          <p class="xcard-preview">Codex アプリの リモート実機コントロール機能（Connections &gt; Control this Mac / Control other devices）を使い、開発環境を物理的に1台へ集約する運用の紹介。iPad や iPhone からもその1台を遠隔で操作し、ローカル作業は一切しないという割り切りが要点。</p>
-        </div>
-        <footer class="xcard-foot">
-          <div class="xcard-stats"></div>
-          <a class="xcard-x" href="https://x.com/oda_nobunaga10/status/2084188743733576031" target="_blank" rel="noopener noreferrer" aria-label="Xで開く">𝕏 <span aria-hidden="true">↗</span></a>
-        </footer>
-        <div class="xcard-full" hidden>
-          <div class="xcard-full-meta" data-title="" data-type="short" data-type-label="📝 ポスト" data-has-alt="0" data-primary-lang="ja"></div>
-          <div class="xcard-full-primary">Codex アプリの リモート実機コントロール機能（Connections &gt; Control this Mac / Control other devices）を使い、開発環境を物理的に1台へ集約する運用の紹介。iPad や iPhone からもその1台を遠隔で操作し、ローカル作業は一切しないという割り切りが要点。</div>
-        </div>
-      </article>
-      <article class="xcard" data-url="https://x.com/cursor_ai/status/2084376701539405904" data-type="thread" tabindex="0" role="button" aria-label="Cursor の🧵 スレッドを開く">
-        <header class="xcard-head">
-          <div class="xcard-avatar" style="--c:#d97706;">C</div>
-          <div class="xcard-who">
-            <span class="xcard-name">Cursor <span class="xcard-cat">💻 AI/開発ツール</span></span>
-            <span class="xcard-handle">@cursor_ai · 8月3日</span>
-          </div>
-          <span class="xcard-type xcard-type--thread">🧵 スレッド</span>
-        </header>
-        <div class="xcard-body">
-          <p class="xcard-preview">- 対象サービス: Gmail・Google Drive・Google Calendar・Google Docs・Google Sheets
-- 読み取りだけでなく write / act（作成・更新・操作）まで含むと明記
-- インストール経路は Cursor 内の Customize ページ。個別に MCP サーバーを立てる必要がない
-- IDE 側がコード以外の業務コンテキスト（メールの経緯、仕様書 Doc、予定表）を直接参照できる…</p>
-        </div>
-        <footer class="xcard-foot">
-          <div class="xcard-stats"></div>
-          <a class="xcard-x" href="https://x.com/cursor_ai/status/2084376701539405904" target="_blank" rel="noopener noreferrer" aria-label="Xで開く">𝕏 <span aria-hidden="true">↗</span></a>
-        </footer>
-        <div class="xcard-full" hidden>
-          <div class="xcard-full-meta" data-title="" data-type="thread" data-type-label="🧵 スレッド" data-has-alt="1" data-primary-lang="ja"></div>
-          <div class="xcard-full-primary">- 対象サービス: Gmail・Google Drive・Google Calendar・Google Docs・Google Sheets
-- 読み取りだけでなく write / act（作成・更新・操作）まで含むと明記
-- インストール経路は Cursor 内の Customize ページ。個別に MCP サーバーを立てる必要がない
-- IDE 側がコード以外の業務コンテキスト（メールの経緯、仕様書 Doc、予定表）を直接参照できるようになる</div>
-          <div class="xcard-full-alt" hidden>Part 1（親ポスト）
-
-Cursor can now read, write, and act across your Google Workspace.
-
-New plugins give agents direct access to Gmail, Google Drive, Calendar, Docs, and Sheets.
-
-Part 2
-
-Install them from the Customize page in Cursor.</div>
-        </div>
-      </article>
 
     </div>
   </div>
@@ -489,7 +521,7 @@ Install them from the Customize page in Cursor.</div>
   </div>
   <div class="cal-month" data-month="2026-08">
     <div class="cal-weekdays"><span>日</span><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span>土</span></div>
-    <div class="cal-grid"><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-08-01/" aria-label="2026-08-01 の配信を開く (ブックマーク1件)"><span class="cal-day">1</span><span class="cal-count">1</span></a><a class="cal-cell cal-cell--news" href="./news/2026-08-02/" aria-label="2026-08-02 の配信を開く"><span class="cal-day">2</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-08-03/" aria-label="2026-08-03 の配信を開く (ブックマーク4件)"><span class="cal-day">3</span><span class="cal-count">4</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-08-04/" aria-label="2026-08-04 の配信を開く (ブックマーク3件)"><span class="cal-day">4</span><span class="cal-count">3</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-08-05/" aria-label="2026-08-05 の配信を開く (ブックマーク1件)"><span class="cal-day">5</span><span class="cal-count">1</span></a><a class="cal-cell cal-cell--news" href="./news/2026-08-06/" aria-label="2026-08-06 の配信を開く"><span class="cal-day">6</span></a><a class="cal-cell cal-cell--news" href="./news/2026-08-07/" aria-label="2026-08-07 の配信を開く"><span class="cal-day">7</span></a><div class="cal-cell cal-cell--inactive"><span class="cal-day">8</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">9</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">10</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">11</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">12</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">13</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">14</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">15</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">16</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">17</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">18</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">19</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">20</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">21</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">22</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">23</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">24</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">25</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">26</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">27</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">28</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">29</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">30</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">31</span></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div></div>
+    <div class="cal-grid"><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-08-01/" aria-label="2026-08-01 の配信を開く (ブックマーク1件)"><span class="cal-day">1</span><span class="cal-count">1</span></a><a class="cal-cell cal-cell--news" href="./news/2026-08-02/" aria-label="2026-08-02 の配信を開く"><span class="cal-day">2</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-08-03/" aria-label="2026-08-03 の配信を開く (ブックマーク4件)"><span class="cal-day">3</span><span class="cal-count">4</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-08-04/" aria-label="2026-08-04 の配信を開く (ブックマーク4件)"><span class="cal-day">4</span><span class="cal-count">4</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-08-05/" aria-label="2026-08-05 の配信を開く (ブックマーク1件)"><span class="cal-day">5</span><span class="cal-count">1</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-08-06/" aria-label="2026-08-06 の配信を開く (ブックマーク3件)"><span class="cal-day">6</span><span class="cal-count">3</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-08-07/" aria-label="2026-08-07 の配信を開く (ブックマーク1件)"><span class="cal-day">7</span><span class="cal-count">1</span></a><a class="cal-cell cal-cell--news" href="./news/2026-08-08/" aria-label="2026-08-08 の配信を開く"><span class="cal-day">8</span></a><div class="cal-cell cal-cell--inactive"><span class="cal-day">9</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">10</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">11</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">12</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">13</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">14</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">15</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">16</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">17</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">18</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">19</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">20</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">21</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">22</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">23</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">24</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">25</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">26</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">27</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">28</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">29</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">30</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">31</span></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div></div>
   </div>
   <div class="cal-month" data-month="2026-07" hidden>
     <div class="cal-weekdays"><span>日</span><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span>土</span></div>
@@ -542,6 +574,13 @@ Install them from the Customize page in Cursor.</div>
 })();
 </script>
     <ul class="archive-list archive-grid">
+      <li>
+        <span class="date">08.08 FRI</span>
+        <span class="count">08 ITEMS</span>
+        <span class="headline"><a href="./news/2026-08-08/">Claude Code のセッション同士がメッセージを送り合えるようになった、Claude Code の auto mode が既定に — 「人間の承認より安全」を1,053人の対照試験で示した / OpenAI が次期モデル Astra を Preparedness Framework 初の「critical」に分類</a></span>
+        <span class="tags">ClaudeDevs（公式） / Anthropic Blog / OpenAI（公式） / The Information（独占）</span>
+        <span class="arrow">→</span>
+      </li>
       <li>
         <span class="date">08.07 THU</span>
         <span class="count">08 ITEMS</span>
@@ -1321,15 +1360,15 @@ Install them from the Customize page in Cursor.</div>
       </div>
       <div class="about-stats">
         <div class="about-stat">
-          <div class="num">108</div>
+          <div class="num">109</div>
           <div class="lbl">Issues Published</div>
         </div>
         <div class="about-stat">
-          <div class="num">718</div>
+          <div class="num">726</div>
           <div class="lbl">Items Curated</div>
         </div>
         <div class="about-stat">
-          <div class="num">1036</div>
+          <div class="num">1044</div>
           <div class="lbl">Delivered</div>
         </div>
         <div class="about-stat">
@@ -1346,7 +1385,7 @@ Install them from the Customize page in Cursor.</div>
     <h3>毎朝、<em>続きを。</em></h3>
     <p>毎朝 07:15 JST に最新の配信が並びます。</p>
     <div class="cta-row">
-      <a class="primary" href="./news/2026-08-07/">📄 今日のディスパッチを読む</a>
+      <a class="primary" href="./news/2026-08-08/">📄 今日のディスパッチを読む</a>
       <a href="#archive">📅 過去のアーカイブ</a>
       <a href="#bookmarks">🔖 ブックマーク</a>
     </div>
@@ -1369,7 +1408,7 @@ Install them from the Customize page in Cursor.</div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="./">HOME</a></li>
-          <li><a href="./news/2026-08-07/">TODAY</a></li>
+          <li><a href="./news/2026-08-08/">TODAY</a></li>
           <li><a href="./#bookmarks">BOOKMARKS</a></li>
           <li><a href="./#archive">ARCHIVE</a></li>
           <li><a href="./#about">About</a></li>
@@ -1386,7 +1425,7 @@ Install them from the Customize page in Cursor.</div>
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 20260807.0728</span>
+      <span>BUILD 20260808.0739</span>
     </div>
   </div>
 </footer>

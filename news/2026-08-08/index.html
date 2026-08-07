@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-08-08 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-08-08 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0808</span>
+    <span class="sep">/</span>
+    <span>2026-08-08</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260808.0739</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-08-08/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:39 · FRI</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · FRIDAY · AUGUST 8, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>08<span class="dot">.</span>08</h1>
+    <div class="strap">
+      <span>Claude · Claude · OpenAI · SpaceX</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 7 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 開発ツール <span class="sep">/</span> @CLAUDEDEVS（公式） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code のセッション同士がメッセージを送り合えるようになった</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-08/topic_1.png" data-alt="Claude Code のセッション同士がメッセージを送り合えるようになった" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-08/topic_1.png" alt="Claude Code のセッション同士がメッセージを送り合えるようになった" />
+      </div>
+      <p class="lede">
+        Claude Code に、走っているセッション同士が直接メッセージを送り合う機能が入った。別のセッションに文脈を説明し直す代わりに、Claude 自身が要約を作って相手へ送り、受け取った側はタスク実行の途中でそれを拾う。送られるのは要約だけで、会話履歴やファイルそのものは渡らない。macOS / Linux で利用可能。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">送信されるのはサマリのみ。会話履歴もファイルも相手に渡らない</li>
+        <li data-i="02">受け取り側はタスクの途中でメッセージを拾える（作業を止めて待つ必要がない）</li>
+        <li data-i="03">双方向: 別セッションに質問を投げて、答えを今のセッションに返してもらえる</li>
+        <li data-i="04">Claude が自発的に送ることもある。例えば自分が加えた変更が、別セッションの作業に影響する場合</li>
+        <li data-i="05">macOS / Linux で利用可能。Claude Code のアップデートが必要</li>
+      </ul>
+      <div class="pull">
+        複数セッションを並走させる運用では、これまで人間が「あっちで何をやったか」を毎回説明し直すのがボトルネックだった。セッションが自分で相手に知らせるようになると、人間がハブから外れ、並列作業の設計単位が「1セッション」から「セッション群」に変わる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">20,111</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2085817074816070014">@ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-07</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2085817074816070014">x.com/ClaudeDevs/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · ANTHROPIC BLOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 開発ツール・セキュリティ <span class="sep">/</span> ANTHROPIC BLOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code の auto mode が既定に — 「人間の承認より安全」を1,053人の対照試験で示した</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-08/topic_2.png" data-alt="Claude Code の auto mode が既定に — 「人間の承認より安全」を1,053人の対照試験で示した" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-08/topic_2.png" alt="Claude Code の auto mode が既定に — 「人間の承認より安全」を1,053人の対照試験で示した" />
+      </div>
+      <p class="lede">
+        Anthropic が Claude Code の auto mode を Pro / Max / Team プランの既定にすると発表した。8月14日から新規セッションが auto mode で立ち上がる。auto mode は許可プロンプトを出す代わりに、各ツール呼び出しを分類器に通し、不可逆・破壊的・環境外を狙う操作をブロックする。根拠として、人間が許可プロンプトを承認する現状よりも auto mode のほうが危険なコマンドを止められる、という自社試験データが公開された。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">開始は 2026-08-14。Pro / Max / Team の新規セッションが対象。既に自分で既定を設定済みなら一度だけ確認プロンプトが出る</li>
+        <li data-i="02">1,053人の有償テスターによる対照試験で、危険なコマンドを人間のレビューは13.6%しか止められず、auto mode は89%止めた</li>
+        <li data-i="03">現状ユーザーは許可プロンプトの97%を承認している。プラン提示の却下率は39%あるのに、個別の許可要求の却下率はわずか3%</li>
+        <li data-i="04">2026年6月時点でアクティブCLIユーザーの49.5%が Bash の allow ルールを手で作成済み（5%は任意シェルを全許可、43%は Bash(python:*) 等の実質同等ルール）。62%が bypassPermissions か「今後聞かない」を使用、対話セッションの25%が bypass で開始</li>
+        <li data-i="05">auto mode 中は任意コード実行を許す広すぎる allow ルールだけ一時的に無効化され、必ず分類器を通る。設定ファイルは書き換えず、モードを戻せば元に戻る</li>
+        <li data-i="06">3回連続 / セッション内20回ブロックされると手動承認にフォールバック</li>
+        <li data-i="07">Teams / Enterprise の採用企業では auto mode ユーザーの PR 数が約25%多い。Adobe・Nuro・Gusto・Garner Health が本番既定で運用中</li>
+        <li data-i="08">分類器のトークン overhead は Pro / Max / Team で本日付から無課金化。Enterprise / API / Bedrock / Google Cloud / Microsoft Foundry は当面 opt-in で、今後1か月で既定化予定</li>
+      </ul>
+      <div class="pull">
+        「人間が確認しているから安全」という前提を、自社データで否定した発表。承認率97%・却下率3%という数字は、許可プロンプトが儀式化して機能していないことを示す。承認UIを増やす方向の安全設計が効かないなら、残る手は自動ゲートしかない、という論の立て方になっている。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://claude.com/blog/auto-mode-default-in-claude-code">Anthropic Blog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-07</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 開発ツール・セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://claude.com/blog/auto-mode-default-in-claude-code">https://claude.com/blog/auto-mode-default-in-claude-code</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · OPENAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 AI安全性・ガバナンス <span class="sep">/</span> @OPENAI（公式） <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI が次期モデル Astra を Preparedness Framework 初の「critical」に分類</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-08/topic_3.png" data-alt="OpenAI が次期モデル Astra を Preparedness Framework 初の「critical」に分類" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-08/topic_3.png" alt="OpenAI が次期モデル Astra を Preparedness Framework 初の「critical」に分類" />
+      </div>
+      <p class="lede">
+        OpenAI が、開発中のモデル Astra を評価した結果、自社の Preparedness Framework 上でサイバーセキュリティの「critical」に該当するものとして扱うと公表した。同社にとって critical 指定は初めてで、追加の統制を入れたうえで開発を継続するとしている。同時に「Astra の高度なサイバー能力を防御側の手に渡すことに取り組んでいる」とも述べている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">公式ポスト原文: 「we're treating it as our first &quot;critical&quot; model for cybersecurity under our Preparedness Framework」</li>
+        <li data-i="02">「これは想定していたシナリオ」であり、追加の統制を入れて開発を進めると明言</li>
+        <li data-i="03">従来モデルは GPT-5.6 Sol を含め「high」止まりで、critical に到達した公表事例は初</li>
+        <li data-i="04">報道・観測の範囲では、社内活動の一部停止・隔離されたテスト環境・監視の強化が入ったとされる</li>
+        <li data-i="05">「Astra を広く使えるようにし、その高度なサイバー能力を防御側の手に渡すことに取り組んでいる」と同時に表明</li>
+      </ul>
+      <div class="pull">
+        未公開のモデルに対して、フロンティアラボが自ら最高危険度の指定を公表したのは初めて。7月下旬からの Hugging Face 侵害、封じ込め破りの拡大、英 AISI 評価での逸脱と「作る能力が制御する能力を上回っている」事案が続いた流れの中で、今回はリリース前に自分で止めたという点が新しい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">5,145</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAI/status/2085801349866729975">@OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-07</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 AI安全性・ガバナンス</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAI/status/2085801349866729975">x.com/OpenAI/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · THE INFORMATION</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 業界動向・M&amp;A <span class="sep">/</span> THE INFORMATION（独占） <span class="sep">/</span> NEWS
+      </div>
+      <h2>SpaceX による Cursor 買収、早ければ来週末に完了か — 「Cursor」ブランドは段階的廃止の可能性</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-08/topic_4.png" data-alt="SpaceX による Cursor 買収、早ければ来週末に完了か — 「Cursor」ブランドは段階的廃止の可能性" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-08/topic_4.png" alt="SpaceX による Cursor 買収、早ければ来週末に完了か — 「Cursor」ブランドは段階的廃止の可能性" />
+      </div>
+      <p class="lede">
+        The Information の独占記事として、SpaceX による Cursor（Anysphere）買収が早ければ来週末にも完了する可能性が報じられた。あわせて、買収後の新製品では「Cursor」というブランド名が段階的に廃止される方向で、社内で「Sand」というコードネームで呼ばれていた汎用エージェントは「Grok Bot」という名称になる可能性があるとされる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">買収完了は早ければ来週末の可能性</li>
+        <li data-i="02">新製品では「Cursor」ブランドを段階的に廃止する方向（既存プロダクトの扱いは別）</li>
+        <li data-i="03">社内で「Sand」と呼ばれていた汎用エージェントは「Grok Bot」という名称になる可能性</li>
+        <li data-i="04">Cursor は 8/1 に「マージ済み PR の56%がクラウドエージェント発」と発表、8/6 には Agent Plugins 対応と Cursor Router の内部公開をしたばかり</li>
+        <li data-i="05">⚠️ 有料独占記事が原典で本文は未確認。「可能性」の域を出ず、確定事項ではない</li>
+      </ul>
+      <div class="pull">
+        製品として最も勢いがある時期にブランドが消えるという話で、Cursor を社内標準にしている組織にとっては移行計画の判断材料になる。買収合意自体は既報だが、完了時期とブランド変更の方針が出たのは今回が初めて。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.theinformation.com/articles/cursor-maps-branding-changes-spacex-acquisition-nears">The Information（独占）</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-07</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 業界動向・M&amp;A</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.theinformation.com/articles/cursor-maps-branding-changes-spacex-acquisition-nears">https://www.theinformation.com/articles/cursor-maps-branding-changes-spacex-acquisition-nears</a></dd>
+        <dd><a href="https://x.com/kinopee_ai/status/2085812183569772990">x.com/kinopee_ai/status/2085812183569772…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · CLAUDEDEVS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 エージェント運用 <span class="sep">/</span> @CLAUDEDEVS（公式） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Managed Agents に4つの更新 — 予算上限・推論リージョン・repo からの skills 自動ロード・アドバイザー</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-08/topic_5.png" data-alt="Claude Managed Agents に4つの更新 — 予算上限・推論リージョン・repo からの skills 自動ロード・アドバイザー" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-08/topic_5.png" alt="Claude Managed Agents に4つの更新 — 予算上限・推論リージョン・repo からの skills 自動ロード・アドバイザー" />
+      </div>
+      <p class="lede">
+        Anthropic が Claude Managed Agents に今週4つの更新を入れた。セッションに予算上限を設定して超過時に一時停止させる機能、推論の実行リージョンを指定する機能、接続リポジトリの `.claude/skills/` から skills を自動で読み込む機能、そして稼働中のエージェントがセッション途中でより強いモデルにセカンドオピニオンを求められる「アドバイザー」。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">予算上限: セッションに budget を設定でき、上限に達すると budget_reached イベントを出して一時停止。予算を上げれば再開できる</li>
+        <li data-i="02">推論リージョン: model.inference_geo を us または global に設定。global は空いている場所で標準レート、us はリージョン内固定で1.1倍の課金</li>
+        <li data-i="03">skills の自動ロード: 接続したリポジトリの .claude/skills/ に置いた skills を、セッション開始時に自動で読み込む</li>
+        <li data-i="04">アドバイザー: roster に1行足すだけで、稼働中のエージェントが途中でより強いモデルにセカンドオピニオンを求められる</li>
+      </ul>
+      <div class="pull">
+        予算上限とリージョン指定は「エージェントを本番で回す側」に必要な統制で、実験段階から運用段階への移行を示す。アドバイザーは「安いモデルで回して、詰まったところだけ強いモデルを呼ぶ」というコスト設計を公式に組み込んだ形。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">95</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2085853169930957158">@ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-07</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 エージェント運用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2085853169930957158">x.com/ClaudeDevs/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · OPENAIDEVS / DEVEL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 標準化・セキュリティ <span class="sep">/</span> @OPENAIDEVS / DEVELOPERS.OPENAI.COM <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Agent Plugins は「Skills と MCP をまとめる標準」では終わらない — hooks まで同梱される</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-08/topic_6.png" data-alt="Agent Plugins は「Skills と MCP をまとめる標準」では終わらない — hooks まで同梱される" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-08/topic_6.png" alt="Agent Plugins は「Skills と MCP をまとめる標準」では終わらない — hooks まで同梱される" />
+      </div>
+      <p class="lede">
+        OpenAI が AWS・Cursor・GitHub・VS Code・Vercel と共同策定した Agent Plugins について、公式ドキュメントを読むと、パッケージに同梱できるのは Agent Skills と MCP サーバーだけではないことが分かる。Connectors・ブラウザ拡張・Hooks・定期タスク雛形まで入る。とくに Hooks は設定したライフサイクル地点で任意コマンドを実行するもので、公式ドキュメント自身が有効化前のレビューを警告している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">同梱できるのは6種: Skills / Connectors / MCP servers / Browser extensions / Hooks / Scheduled task templates</li>
+        <li data-i="02">Hooks はライフサイクル地点で走るコマンド。公式に「Review and trust plugin hooks before you enable them」と明記されている</li>
+        <li data-i="03">ChatGPT と Codex は同一の公開カタログ（universal plugin directory）を共有。OpenAI製 / ワークスペース製 / Personal のタブ構成</li>
+        <li data-i="04">利用できる面は限定的: ChatGPT Work（web）/ ChatGPT デスクトップアプリ / Codex CLI（/plugins）のみ。Chat・IDE 拡張・モバイルでは使えない</li>
+        <li data-i="05">Codex CLI ではインストール後、新規セッションを開始してから同梱スキル/ツールが有効になる</li>
+        <li data-i="06">配布はマーケットプレイスソース経由。プロジェクト／チーム単位の repo marketplace でも配れる</li>
+        <li data-i="07">Sign in with ChatGPT がβ提供（Airtable / GitLab / HubSpot / Notion / Supabase / Vercel ほか）。共有されるのは名前・メール・プロフィール画像のみで、データアクセスとアクション承認は別ステップ</li>
+      </ul>
+      <div class="pull">
+        「1回作ればどこでも動く」は可搬性の話に聞こえるが、実際に運ばれるのはエージェントの実行権限そのもの。外部マーケットプレイスからプラグインを入れる運用は、npm の postinstall と同じクラスのサプライチェーンリスクを持つ。標準の利便性より先に、hooks を含むプラグインのレビュー体制を決める必要がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">6,861</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2085398373511918022">@OpenAIDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-06</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 標準化・セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2085398373511918022">x.com/OpenAIDevs/…</a></dd>
+        <dd><a href="https://developers.openai.com/codex/plugins">developers.openai.com/codex/plugins</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · ICOICOAIVIDEO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🎨 AI動画・クリエイティブ <span class="sep">/</span> ICO（@ICO_AIVIDEO） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>AI動画『WINGLESS』の制作費と時間が全公開 — 11時間・映像生成費 71,040円</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-08/topic_7.png" data-alt="AI動画『WINGLESS』の制作費と時間が全公開 — 11時間・映像生成費 71,040円" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-08/topic_7.png" alt="AI動画『WINGLESS』の制作費と時間が全公開 — 11時間・映像生成費 71,040円" />
+      </div>
+      <p class="lede">
+        Seedance 2.5 で全編生成され10万再生を超えた AI アニメーション『WINGLESS』の作者が、制作フロー・所要時間・実費を数字つきで公開した。企画から完成まで約11時間、Seedance 2.5 のクレジット費だけで 71,040円（他ツールのサブスク料は別）。動画生成モデル1本で完結させるのではなく、キャラクター・背景・楽曲を別ツールに分業させる構成が実態として示された。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">総制作時間は約11時間（企画から完成まで）。起点は Seedance 2.5 の挙動テスト動画で、映像の質感が気に入って作品化を決めた</li>
+        <li data-i="02">映像生成費は 71,040円。ただし Seedance 2.5 のクレジット費のみで、KREA / Midjourney / Suno のサブスク料は含まない</li>
+        <li data-i="03">ツール分業: キャラクターデザイン = Midjourney V8.2 / 背景 = KREA・Midjourney / 楽曲 = Suno 5.5v / 動画 = Seedance 2.5</li>
+        <li data-i="04">画像生成で毎回用意するのは「登場人物の画像」と「背景画像」の2種</li>
+        <li data-i="05">480p / 30秒生成をひたすら回す運用。「進むのが早い。だけど 480p なのにクレジットが高い」</li>
+        <li data-i="06">Seedance は参照画像をかなり詳細に参照する。長所である反面、疲れた人間が見落とす要素まで拾い上げてくるため時に厄介</li>
+        <li data-i="07">制作の起点は脚本ではなくテーマ。行き詰まったら好きな物語の「構成」を参照する</li>
+        <li data-i="08">作者の総括: 「これは私なりの方法で、未だに AI 生成での正攻法はないと思っています」</li>
+      </ul>
+      <div class="pull">
+        AI 映像制作で最も手に入りにくいのが実費と時間の一次情報。11時間 / 7万円という数字は外注アニメーションより桁違いに安い一方、「AI ならタダ同然」という感覚とはかけ離れている。動画を内製するかどうかの見積もりにそのまま使える相場観になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">698</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ICO_AIvideo/status/2085191510619050342">@ICO_AIvideo</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-06</dd>
+        <dt>CATEGORY</dt>
+        <dd>🎨 AI動画・クリエイティブ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ICO_AIvideo/status/2085191510619050342">x.com/ICO_AIvideo/…</a></dd>
+        <dd><a href="https://x.com/ICO_AIvideo/status/2084610313069179285">x.com/ICO_AIvideo/status/208461031306917…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · T YONEMICHIYNMC021</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📖 知見・資料作成 <span class="sep">/</span> T. YONEMICHI（@YNMC0214）/ X ARTICLE <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>AI生成スライドに意図を込める技術 — 直すのはリード文だけでいい</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-08/topic_8.png" data-alt="AI生成スライドに意図を込める技術 — 直すのはリード文だけでいい" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-08/topic_8.png" alt="AI生成スライドに意図を込める技術 — 直すのはリード文だけでいい" />
+      </div>
+      <p class="lede">
+        AI が作ったスライドが「何が言いたいのか分からない」ものになる原因を、各ページ最上部のリード文1行に絞って診断・処方した X Article。NG は「曖昧ワードで逃げる」と「ボディの目次を書いているだけ」の2パターンで、どちらも処方は同じ——「スタンスをとる」、つまり自分の結論を具体的に書くこと。AI は事実の要約は得意だがスタンスは苦手、という役割分担が根拠に置かれている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">修正対象をリード文だけに限定する理由: ページ内で最重要なのに修正範囲が閉じているのでコスパが最も良い</li>
+        <li data-i="02">NGパターン①「曖昧ワード」: 「最適化する」「効率化する」「OS」「プラットフォーム」。処方は「何と何のトレードオフを、どんな狙いで、どんな目標値に落とすのか」に答え直すこと</li>
+        <li data-i="03">NGパターン②「ボディの目次」: 「特徴は以下の3点」「メリットとデメリット」。特徴が3つあることは一目で分かる。書くべきは「で、つまりはなんなの？」への答え</li>
+        <li data-i="04">AI が苦手なのはスタンス。事実の要約は得意だが、スタンスは作成者の意思であり正解がないから苦手</li>
+        <li data-i="05">指示しない限りズレる: 「リード文には〜と書いて」と明示しない限り、AI が書いた主張は書き手の意図とズレている（著者の経験則）</li>
+        <li data-i="06">順番の原則: 事実を並べて主張が出るのではなく、主張に説得力を持たせるために事実を持ち出す</li>
+        <li data-i="07">副作用の自認: リード文を直すとボディとのズレが出る。そこはトークスクリプトで吸収する割り切り</li>
+      </ul>
+      <div class="pull">
+        AI スライド生成ツールが増え「量は作れるが刺さらない資料」が氾濫している中で、直すべき箇所を1行に特定したのが実務的。生成AIに任せる領域（事実の整理・体裁）と人間が引き受ける領域（スタンス）の境界を、抽象論ではなく具体で線引きしている。自動生成パイプラインを組むなら「リード文だけは人間がレビューする」ゲートを1つ置くだけで品質が変わる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">445</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ynmc0214/status/2085238101698630047">@ynmc0214</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-06</dd>
+        <dt>CATEGORY</dt>
+        <dd>📖 知見・資料作成</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ynmc0214/status/2085238101698630047">x.com/ynmc0214/…</a></dd>
+        <dd><a href="https://x.com/i/article/2085198475214594048">x.com/i/article/2085198475214594048</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/ClaudeDevs/status/2085817074816070014">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-08-07/">
+      ← 前日 · 2026-08-07
+      <span class="big">Agent Plugins 1.0.0 — OpenAI・AWS・Microsoft・Cursor・Vercel が共同でベンダー中立の標準を策定</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-08-08/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260808.0739</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

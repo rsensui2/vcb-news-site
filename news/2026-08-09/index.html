@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-08-09 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-08-09 の Vibe Coder Bootcamp モーニングディスパッチ — 6本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0809</span>
+    <span class="sep">/</span>
+    <span>2026-08-09</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>06 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260809.0731</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-08-09/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:31 · SAT</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SATURDAY · AUGUST 9, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>08<span class="dot">.</span>09</h1>
+    <div class="strap">
+      <span>Ollama · Gemini · Harrison · 公的ガイドをClaude</span>
+      <span><span class="count">06</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🦙 ローカルLLM・推論基盤 <span class="sep">/</span> @OLLAMA（公式） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Ollama Cloud の DeepSeek-V4-Flash が200 tok/s超へ、ZDRを維持</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-09/topic_1.png" data-alt="Ollama Cloud の DeepSeek-V4-Flash が200 tok/s超へ、ZDRを維持" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-09/topic_1.png" alt="Ollama Cloud の DeepSeek-V4-Flash が200 tok/s超へ、ZDRを維持" />
+      </div>
+      <p class="lede">
+        Ollama は DeepSeek-V4-Flash-0731 のクラウド出力速度が200 tok/sを超えたと公表した。前日の全面展開時点では120 tok/s超としていたため、同じモデルの提供性能がさらに上がった形だ。米国・欧州でゼロデータ保持（ZDR）を掲げ、Pro / Max ではコーディングハーネスの長時間セッションを想定した利用枠を提供する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">2026年8月8日時点の公表値は出力200 tok/s超</li>
+        <li data-i="02">DeepSeek-V4-Flash-0731 は Ollama Cloud の既定 deepseek-v4-flash に全面展開済み</li>
+        <li data-i="03">米国・欧州リージョンでゼロデータ保持（ZDR）</li>
+        <li data-i="04">Pro / Max は長時間・中断なしのコーディングセッションを想定</li>
+      </ul>
+      <div class="pull">
+        機密保持と速度を両立するマネージド推論経路が実用域に入った。ハーネスからモデルを差し替える際は、単価だけでなく速度・保持方針・連続稼働枠をまとめて見る必要がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,398</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ollama/status/2085975426321858799">@ollama</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-08</dd>
+        <dt>CATEGORY</dt>
+        <dd>🦙 ローカルLLM・推論基盤</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ollama/status/2085975426321858799">x.com/ollama/…</a></dd>
+        <dd><a href="https://x.com/ollama/status/2085816970893738381">x.com/ollama/status/2085816970893738381</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · NEWSFROMGOOGLE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🛡️ セキュリティ・エージェントハーネス <span class="sep">/</span> @NEWSFROMGOOGLE（公式） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Gemini が Chrome の直近2リリースで1,000件超のセキュリティ修正を支援</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-09/topic_2.png" data-alt="Gemini が Chrome の直近2リリースで1,000件超のセキュリティ修正を支援" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-09/topic_2.png" alt="Gemini が Chrome の直近2リリースで1,000件超のセキュリティ修正を支援" />
+      </div>
+      <p class="lede">
+        Google は、直近2回の Chrome リリースでLLMが1,000件超のセキュリティバグ修正を支援し、それ以前23リリースの合計を上回ったと公表した。Gemini と専用のエージェントハーネスを組み合わせ、脆弱性の発見から修正候補の作成までを高速化している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">直近2リリースで1,000件超のセキュリティバグ修正を支援</li>
+        <li data-i="02">以前23リリースの合計を上回る</li>
+        <li data-i="03">Geminiと脆弱性探索用の専用ハーネスを組み合わせた</li>
+        <li data-i="04">Chromeの実コード修正に投入</li>
+        <li data-i="05">重大度別内訳や人間レビュー工数は非提示</li>
+      </ul>
+      <div class="pull">
+        モデル単体ではなく、探索・修正・検証をつなぐ専用ハーネスが成果量を決める実例。セキュリティでも生成よりループ設計が中核になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">397</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/NewsFromGoogle/status/2085739755099111556">@NewsFromGoogle</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-07</dd>
+        <dt>CATEGORY</dt>
+        <dd>🛡️ セキュリティ・エージェントハーネス</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/NewsFromGoogle/status/2085739755099111556">x.com/NewsFromGoogle/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · HARRISON CHASE / X</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🧩 エージェント運用・アーキテクチャ <span class="sep">/</span> HARRISON CHASE / X ARTICLE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Harrison Chase が整理した「Managed Agent」の3層構造</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-09/topic_3.png" data-alt="Harrison Chase が整理した「Managed Agent」の3層構造" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-09/topic_3.png" alt="Harrison Chase が整理した「Managed Agent」の3層構造" />
+      </div>
+      <p class="lede">
+        LangChain共同創業者 Harrison Chase は、プロダクション用エージェントを「業務ロジック」「ハーネス」「実行インフラ」の3層に分解した。Managed Deep Agents は Deep Agents のハーネスと LangSmith の永続実行・ストリーミング・サンドボックス・コンテキスト管理・評価・認証を束ね、開発者が業務ロジックに集中できるようにする。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">業務ロジックはcontext・tools・instructions</li>
+        <li data-i="02">ハーネスはLLMループ・ツール利用・計画・委任を担う</li>
+        <li data-i="03">実行インフラにはdurable execution・checkpoint・streaming・sandboxが必要</li>
+        <li data-i="04">Context Hub・Harbor評価・組み込みAuthN・memoryを提供</li>
+        <li data-i="05">AGENTS.md・MCP・Skillsを制御と移植の標準として位置づける</li>
+      </ul>
+      <div class="pull">
+        ローカル実行から本番運用へ移すときに抜けやすい要件を、一枚のチェックリストとして使える。標準ファイルとMCPは業務ロジックを移植し、Managed Agentはそれを載せる運用基盤になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">675</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/hwchase17/status/2085780032031760694">@hwchase17</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-07</dd>
+        <dt>CATEGORY</dt>
+        <dd>🧩 エージェント運用・アーキテクチャ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/hwchase17/status/2085780032031760694">x.com/hwchase17/…</a></dd>
+        <dd><a href="https://www.langchain.com/blog/introducing-managed-deep-agents">www.langchain.com/blog/introducing-manag…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · YAMACHANAILOG /</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🎨 AI×デザイン・実践知 <span class="sep">/</span> @YAMACHAN_AI_LOG / デジタル庁 <span class="sep">/</span> NEWS
+      </div>
+      <h2>公的ガイドをClaude Designのレビュー基準にするダッシュボード診断</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-09/topic_4.png" data-alt="公的ガイドをClaude Designのレビュー基準にするダッシュボード診断" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-09/topic_4.png" alt="公的ガイドをClaude Designのレビュー基準にするダッシュボード診断" />
+      </div>
+      <p class="lede">
+        デジタル庁の「ダッシュボードデザインの実践ガイドブック」を評価基準としてClaude Designに渡し、サンプル資料の診断シート作成からリデザインまで進める実践例が共有された。ガイドには要件整理、プロトタイプによる合意形成、誤解を生まないグラフ表現、Do / Don't、レイアウトグリッド、カラーパレットが含まれる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">公的ガイドをAIレビューのルーブリックとして渡す</li>
+        <li data-i="02">Claude Designに診断シートを作らせ、指摘からリデザインまで進める</li>
+        <li data-i="03">デジタル庁ガイドは要件整理・プロトタイプ・Do / Don'tを体系化</li>
+        <li data-i="04">Power BIテンプレート・チェックリスト・要件定義ワークシートも公開</li>
+        <li data-i="05">ガイド本体は2026年7月17日最終更新</li>
+      </ul>
+      <div class="pull">
+        主観的なデザイン指示を再現可能な検査項目へ変換できる。資料や管理画面の改善でも、外部基準を読み込ませることでレビューの質と説明可能性が上がる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">275</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/yamachan_ai_log/status/2085362118040404095">@yamachan_ai_log</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-06</dd>
+        <dt>CATEGORY</dt>
+        <dd>🎨 AI×デザイン・実践知</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/yamachan_ai_log/status/2085362118040404095">x.com/yamachan_ai_log/…</a></dd>
+        <dd><a href="https://www.digital.go.jp/resources/dashboard-guidebook">www.digital.go.jp/resources/dashboard-gu…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · STREAMCORE / GITHU</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🎙️ 音声AI・リアルタイム基盤 <span class="sep">/</span> STREAMCORE作者 / GITHUB <span class="sep">/</span> NEWS
+      </div>
+      <h2>StreamCore — リアルタイム音声エージェントの媒体層をGoサーバー1つに集約</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-09/topic_5.png" data-alt="StreamCore — リアルタイム音声エージェントの媒体層をGoサーバー1つに集約" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-09/topic_5.png" alt="StreamCore — リアルタイム音声エージェントの媒体層をGoサーバー1つに集約" />
+      </div>
+      <p class="lede">
+        StreamCore は、WebRTC、割り込み、復旧、遅延制御といった音声エージェントの媒体層をまとめたApache 2.0のオープンソースGoサーバー。adaptive VAD、barge-in、STT・LLM・TTSのストリーミング、ローカルモードを提供し、モデルや音声プロバイダーの差し替えを媒体処理から分離する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Go製のセルフホスト可能な音声エージェント基盤</li>
+        <li data-i="02">WebRTCとadaptive VADを内蔵</li>
+        <li data-i="03">clean barge-inと復旧を重視</li>
+        <li data-i="04">STT・LLM・TTSをストリーミングで接続</li>
+        <li data-i="05">Python・TypeScript・JavaScriptプラグインとローカルモード</li>
+      </ul>
+      <div class="pull">
+        音声エージェントで難しいのはLLMより、ユーザーの割り込みを扱う媒体制御。モデル選定とリアルタイム通信基盤を分けることで、プロバイダー変更やローカル運用がしやすくなる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">209</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/jasonshen_/status/2085757958441554076">@jasonshen_</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-07</dd>
+        <dt>CATEGORY</dt>
+        <dd>🎙️ 音声AI・リアルタイム基盤</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/jasonshen_/status/2085757958441554076">x.com/jasonshen_/…</a></dd>
+        <dd><a href="https://github.com/streamcoreai/streamcore-server">github.com/streamcoreai/streamcore-serve…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · OPENWORKER GITHUB </span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🖥️ デスクトップエージェント・権限設計 <span class="sep">/</span> OPENWORKER GITHUB / @SUMANTH_077 <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉OpenWorker の「自由に読む・書く前に承認」境界</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-09/topic_6.png" data-alt="〈知見〉OpenWorker の「自由に読む・書く前に承認」境界" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-09/topic_6.png" alt="〈知見〉OpenWorker の「自由に読む・書く前に承認」境界" />
+      </div>
+      <p class="lede">
+        OpenWorker は、ローカルファイル、ターミナル、Slack、メール、カレンダー等を横断し、チャット回答ではなく文書や更新済み予定などの完成物を返すデスクトップエージェント。設計上は読み取りを広く許し、送信・予定変更・コマンド実行など結果を伴う書き込みは承認後に限定する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">オープンソースでローカル優先</li>
+        <li data-i="02">OpenAI・Anthropic・Google等のAPIまたはOllamaを選択可能</li>
+        <li data-i="03">会話ではなく完成物を返す</li>
+        <li data-i="04">読み取りは広く許し、外部状態を変える重要操作は承認後に限定</li>
+        <li data-i="05">新規リリースではなく設計知見として採用</li>
+      </ul>
+      <div class="pull">
+        有用性と安全性を両立するには、ツール別の細かな許可より「読む」と「外部状態を変える」を分離するほうが説明しやすい。業務エージェントの権限設計テンプレートになる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">317</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/Sumanth_077/status/2085733516126646543">@Sumanth_077</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-07</dd>
+        <dt>CATEGORY</dt>
+        <dd>🖥️ デスクトップエージェント・権限設計</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/Sumanth_077/status/2085733516126646543">x.com/Sumanth_077/…</a></dd>
+        <dd><a href="https://github.com/andrewyng/openworker">github.com/andrewyng/openworker</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/ollama/status/2085975426321858799">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-08-08/">
+      ← 前日 · 2026-08-08
+      <span class="big">Claude Code のセッション同士がメッセージを送り合えるようになった</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-08-09/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260809.0731</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

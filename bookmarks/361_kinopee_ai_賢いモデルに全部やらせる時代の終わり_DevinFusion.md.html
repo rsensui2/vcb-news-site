@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №055</span>
+    <span class="tick">BOOKMARK №060</span>
     <span class="sep">/</span>
     <span>2026-06-30</span>
     <span class="sep">/</span>
     <span>@kinopee_ai</span>
     <span class="sep">/</span>
-    <span>478 ITEMS</span>
+    <span>483 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:10 MON</span>
+    <span>JST 07:20 TUE</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,19 +305,19 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-08-09/">NEWS</a>
+      <a href="../news/2026-08-10/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:10 · MON</div>
+    <div class="meta">JST · 07:20 · TUE</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-06-30 <span>/</span> №055
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-06-30 <span>/</span> №060
     </div>
     <div class="cat-line">
       <span>💻 AIエージェント / ハーネス設計</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">「賢いモデルに全部やらせる」時代の終わり — Cognition の Devin Fusion を読み解く</h1>
     <div class="strap">
-      <span><span class="label">№</span>055 / 478</span>
+      <span><span class="label">№</span>060 / 483</span>
       <span><span class="label">SRC</span><a href="https://x.com/kinopee_ai/status/2071664232689779011" target="_blank" rel="noopener noreferrer">x.com/kinopee_ai ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/361_kinopee_ai_%E8%B3%A2%E3%81%84%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AB%E5%85%A8%E9%83%A8%E3%82%84%E3%82%89%E3%81%9B%E3%82%8B%E6%99%82%E4%BB%A3%E3%81%AE%E7%B5%82%E3%82%8F%E3%82%8A_DevinFusion.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">055<span class="ord">BOOKMARK / 478</span></aside>
+    <aside class="numeral">060<span class="ord">BOOKMARK / 483</span></aside>
     <article class="prose">
 <p><strong>有益度:</strong> ⭐⭐⭐⭐</p><p><strong>エンゲージメント:</strong> Likes 110 / RT 10 / Replies 0 / Bookmarks 170 / Views 80,109</p><h2>概要</h2><p>Cognition が「Devin Fusion」を発表。賢く高いモデルと安いモデルを組み合わせ、性能はそのままにコストを 35% 下げた話。読みどころは「混ぜたこと」自体ではなく「どこに線を引いて設計したか」。</p><h2>まとめ</h2><ul><li><strong>sidekick(相棒)方式</strong>: 賢いメインと安い相棒を2体同時に走らせる。相棒は「言われたことだけやる下請け」ではなく、自分でツールを使い情報を集める一人前のエージェント。メインは「計画」「曖昧な指示の読み取り」「最終チェック」だけを担い、手は動かさず指揮者に徹する。</li><li><strong>キャッシュを設計の主役に</strong>: 従来の「賢いモデルが別モデルに相談する」型（自社 Smart Friend や Anthropic の Advisor）は相談のたびに文脈を渡し直してキャッシュが切れ高くつく。Fusion は両者が自分のキャッシュを保持したまま並走するので連携しても余計なコストが出ない。「相談しに行く」から「最初から並んで走らせる」への転換。</li><li><strong>乗り換えをタダにする小ワザ</strong>: モデル切替はキャッシュが切れて高くつくが、Fusion は「文脈の圧縮（どのみちキャッシュが切れる瞬間）」に乗り換えを合わせ、実質タダにする。お金の側から逆算する発想。</li><li><strong>任せていい線引き</strong>: テスト実行や OpenTracing 一括削除など「判断は済んで作業量だけ」のタスクは任せて 32〜62% 安く品質維持。一方「検索バーにチーム選択機能を足す」など判断そのものが成果物のタスクは任せるとスコア半減。「判断そのものが成果物なら任せると裏目に出る」。</li><li><strong>数字</strong>: Fusion は GPT-5.5 / Opus 4.8 比でコスト 35% 減・性能同等。Fusion + Fable 5 は Fable 5 単独比で 41% 減（※Fable 5 は米政府指令で 6/12 アクセス停止、数字は停止前測定）。社内でマージされた PR の <strong>88% が Fusion の自動振り分けだけ</strong>で処理された。</li></ul><h2>スレッド全体</h2><h3>Part 1 (親ポスト)</h3><p>「賢いモデルに全部やらせる」時代の終わり（Devin Fusion 解説記事へのリンク投稿）</p>
     </article>
@@ -384,14 +384,14 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 478 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 483 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-08-09/">TODAY</a></li>
+          <li><a href="../news/2026-08-10/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -418,7 +418,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-08-10</span>
+      <span>BUILD 2026-08-11</span>
     </div>
   </div>
 </footer>

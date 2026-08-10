@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cloudflare OS が示す「SaaS is Dead」— 完成品SaaSから会社OSの部品へ — Bookmarks · Vibe Coder Bootcamp</title>
+  <meta name="description" content="Cloudflare が公開したオープンソースの Cloudflare OS を「社内AI安全化ツール」ではなく「会社OSという新市場の号砲」と読む論考。社員がAIに頼めばその場で自分専用の業務アプリが生成される世界では、固定された管理画面や細かな便利機能を売るSaaSの価値が下" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+  /* Archive page — day sections */
+  .bm-archive { padding: 0 0 40px; background: var(--paper); }
+  .bm-day {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--hair);
+  }
+  .bm-day:first-of-type { padding-top: 40px; }
+  .bm-day-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+  .bm-day-head .date {
+    font-family: "Shippori Mincho B1", "Noto Serif JP", serif;
+    font-weight: 800;
+    font-size: clamp(40px, 6vw, 72px);
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin: 0;
+  }
+  .bm-day-head .date .sep { color: var(--accent); margin: 0 2px; }
+  .bm-day-head .count {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding: 8px 14px;
+    border: 1px solid var(--accent);
+    white-space: nowrap;
+  }
+  /* active nav underline */
+  .masthead nav a.is-active { border-bottom-color: var(--accent); color: var(--accent); }
+
+  /* Article page — prose */
+  .bm-article-head {
+    padding: 48px 0 40px;
+    border-bottom: 1px solid var(--hair);
+  }
+  .bm-article-head .breadcrumb {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mute);
+    margin-bottom: 18px;
+  }
+  .bm-article-head .breadcrumb a { color: var(--ink); border-bottom: 1px solid var(--hair); padding-bottom: 1px; }
+  .bm-article-head .breadcrumb a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  .bm-article-head .cat-line {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .bm-article-head .cat-line .sep { color: var(--mute); }
+  .bm-article-head h1.title {
+    font-family: "Shippori Mincho B1", "Noto Serif JP", serif;
+    font-weight: 800;
+    font-size: clamp(32px, 4.4vw, 58px);
+    line-height: 1.12;
+    letter-spacing: -0.005em;
+    margin: 0 0 24px;
+    color: var(--ink);
+  }
+  .bm-article-head .strap {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--mute);
+  }
+  .bm-article-head .strap span .label { color: var(--accent); margin-right: 6px; }
+  .bm-article-head .strap a { border-bottom: 1px solid var(--hair); padding-bottom: 2px; }
+  .bm-article-head .strap a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  .bm-body { padding: 72px 0; border-bottom: 1px solid var(--hair); }
+  .bm-body .container {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr) 300px;
+    gap: 48px;
+  }
+  .bm-body .numeral {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 96px;
+    font-weight: 800;
+    line-height: 0.85;
+    color: var(--ink);
+    position: sticky;
+    top: 40px;
+    align-self: start;
+    letter-spacing: -0.03em;
+  }
+  .bm-body .numeral .ord {
+    display: block;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.14em;
+    margin-top: 14px;
+    font-weight: 500;
+  }
+  .bm-body .prose {
+    font-size: 16px;
+    line-height: 1.9;
+    color: var(--ink-soft);
+    font-family: "Inter", "Noto Sans JP", sans-serif;
+  }
+  .bm-body .prose > *:first-child { margin-top: 0; }
+  .bm-body .prose h1 {
+    font-family: "Shippori Mincho B1", serif;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 1.25;
+    margin: 40px 0 18px;
+    color: var(--ink);
+  }
+  .bm-body .prose h2 {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 40px 0 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+  }
+  .bm-body .prose h2::before {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: var(--accent);
+  }
+  .bm-body .prose h3 {
+    font-family: "Shippori Mincho B1", serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.35;
+    margin: 32px 0 14px;
+    color: var(--ink);
+  }
+  .bm-body .prose p { margin: 0 0 18px; }
+  .bm-body .prose ul, .bm-body .prose ol {
+    border-left: 2px solid var(--ink);
+    padding: 4px 0 4px 24px;
+    margin: 18px 0 24px;
+    list-style: none;
+  }
+  .bm-body .prose ul li, .bm-body .prose ol li {
+    position: relative;
+    padding: 4px 0 4px 18px;
+    font-size: 15px;
+  }
+  .bm-body .prose ul li::before {
+    content: "·";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1;
+  }
+  .bm-body .prose blockquote {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 19px;
+    line-height: 1.6;
+    padding: 18px 0 18px 24px;
+    border-left: 4px solid var(--accent);
+    margin: 28px 0;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .bm-body .prose pre {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 18px 20px;
+    overflow-x: auto;
+    margin: 20px 0;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    line-height: 1.65;
+  }
+  .bm-body .prose code {
+    background: var(--paper-deep);
+    border: 1px solid var(--hair);
+    padding: 1px 6px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.9em;
+  }
+  .bm-body .prose pre code { background: transparent; border: 0; padding: 0; color: inherit; font-size: 13px; }
+  .bm-body .prose a { color: var(--accent); border-bottom: 1px solid rgba(200,52,31,0.25); }
+  .bm-body .prose a:hover { border-bottom-color: var(--accent); }
+
+  .bm-body .side {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: var(--mute);
+    border-top: 1px solid var(--hair);
+    padding-top: 24px;
+    position: sticky;
+    top: 40px;
+    align-self: start;
+  }
+  .bm-body .side dl { margin: 0; }
+  .bm-body .side dt {
+    color: var(--accent);
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-top: 18px;
+    margin-bottom: 6px;
+  }
+  .bm-body .side dt:first-child { margin-top: 0; }
+  .bm-body .side dd {
+    margin: 0 0 4px;
+    color: var(--ink);
+    word-break: break-all;
+    font-size: 12.5px;
+    line-height: 1.6;
+  }
+  .bm-body .side dd a { border-bottom: 1px solid var(--hair); padding-bottom: 1px; }
+  .bm-body .side dd a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  .bm-body .side .stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 18px;
+    margin-top: 8px;
+  }
+  .bm-body .side .stats .stat .num {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 24px;
+    color: var(--ink);
+    line-height: 1;
+    font-weight: 800;
+    display: block;
+  }
+  .bm-body .side .stats .stat .lab {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--mute);
+    margin-top: 4px;
+    display: block;
+    text-transform: uppercase;
+  }
+
+  /* card: stretched-link target must be local nav, not external */
+  .xcard .xcard-main-link { cursor: pointer; }
+
+  @media (max-width: 980px) {
+    .bm-body .container { grid-template-columns: 1fr; gap: 24px; }
+    .bm-body .numeral { position: static; font-size: 64px; }
+    .bm-body .side { position: static; }
+    .bm-day-head .date { font-size: 36px; }
+  }
+</style>
+</head>
+<body>
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">BOOKMARK №001</span>
+    <span class="sep">/</span>
+    <span>2026-08-10</span>
+    <span class="sep">/</span>
+    <span>@saasmeshi</span>
+    <span class="sep">/</span>
+    <span>483 ITEMS</span>
+    <span class="sep">/</span>
+    <span>JST 07:20 TUE</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+<header class="masthead">
+  <div class="container row">
+    <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
+    <nav>
+      <a href="../">HOME</a>
+      <a href="../news/2026-08-10/">NEWS</a>
+      <a href="./" class="is-active">BOOKMARKS</a>
+      <a href="../#archive">ARCHIVE</a>
+      <a href="../#about">ABOUT</a>
+    </nav>
+    <div class="meta">JST · 07:20 · TUE</div>
+  </div>
+</header>
+
+<section class="bm-article-head">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-08-10 <span>/</span> №001
+    </div>
+    <div class="cat-line">
+      <span>💼 AI×ビジネス活用</span>
+      <span class="sep">·</span><span>SaaS飯 <span style="opacity:.7">@saasmeshi</span></span>
+      <span class="sep">·</span><span>2026-08-10</span>
+    </div>
+    <h1 class="title">Cloudflare OS が示す「SaaS is Dead」— 完成品SaaSから会社OSの部品へ</h1>
+    <div class="strap">
+      <span><span class="label">№</span>001 / 483</span>
+      <span><span class="label">SRC</span><a href="https://x.com/saasmeshi/status/2086578777560436788" target="_blank" rel="noopener noreferrer">x.com/saasmeshi ↗</a></span>
+      <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/481_saasmeshi_CloudflareOS%E3%81%8C%E7%A4%BA%E3%81%99SaaSisDead%E3%81%A8%E4%BC%9A%E7%A4%BEOS%E5%B8%82%E5%A0%B4.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
+    </div>
+  </div>
+</section>
+
+<section class="bm-body">
+  <div class="container">
+    <aside class="numeral">001<span class="ord">BOOKMARK / 483</span></aside>
+    <article class="prose">
+<p><strong>有益度:</strong> ⭐⭐⭐⭐</p><p><strong>エンゲージメント:</strong> Likes 416 / RT 28 / Replies 10 / Bookmarks 468 / Views 46107</p><h2>投稿本文（原文）</h2><p>気づいてるか？</p><p>AI時代において最も勢いのあるレンタルサーバー会社『Cloudflare』がオープンソースOSをリリースしたことが話題だが、</p><p>このニュースの核心は「社内でAIを安全に使えるようになった」ではなくて、SaaS is Deadがようやく現実味を帯びていき会社用OSが台頭するという未来が示されたことだ。その理由と新たなビジネスチャンスについて解説する。Cloudflareを知らない人のために言えば、ざっくり「企業のサイトやアプリを置き、速くし、攻撃から守る会社」だ。そのCloudflareが公開したCloudflare OSは、WindowsやMacのようなパソコン用OSではない。社員がブラウザ上でAIに仕事を頼み、社内資料や業務システムを使わせ、資料だけでなく小さな業務アプリや自動化まで作らせるための&quot;会社用の仕事場&quot;だ。オープンソースなので、設計図が公開され、各社が自社仕様に改造できる。なお、公開されたv2はまだ初期提供版で、荒い部分も残る。Cloudflare社内では毎週数千人が使い、直近30日で4000以上のアプリやツールが作られたという。</p><p>これまで会社は、営業管理、経費精算、顧客対応、分析など、仕事ごとに完成品のSaaSを契約してきた。だがCloudflare OSでは、社員が「昨日の問い合わせを分類して、対応漏れを知らせる画面を作って」と頼めば、その人に必要なアプリをAIがその場で作る。足りない機能も会話で追加できる。つまり、全員が同じ既製品を我慢して使うのではなく、会社OSの上で、一人ひとりが必要なソフトを必要な時に生み出す。</p><p>これがSaaS is Deadの正体だ。SaaSが全部消えるわけではない。消えやすいのは、固定された管理画面や細かな便利機能だ。逆に、顧客台帳、決済、会計、契約、在庫のような「正しい記録」と、それを安全に操作するAPI、認証、権限管理は残る。将来はSaaSを人間が直接操作するのではなく、会社OSが複数のSaaSを裏側で動かし、必要な画面だけをAIが必要に応じて作る。SaaSは完成品から、会社OSが使う部品へ変わる。</p><p>ここに新しい市場が生まれる。</p><p>では、どう張るか。新しいビジネスチャンスは3つある。</p><p>第一は、日本企業向けの「会社OS導入業」だ。freee、kintone、SmartHR、LINE WORKSなどをAIへ安全につなぎ、誰が何を見て何を実行できるかを設計する。すでに日本のJiteraは、Microsoft TeamsやBoxなど1,000以上の外部アプリとAIをつなぎ、接続と認証を一元管理するMCP連携機能を提供している。</p><p>第二は、社内の散らばった資料や暗黙のルールを整理し、AIが使える正本へ変える「会社の文脈整備業」だ。米国のGleanは、100超のデータ源をつないで元の閲覧権限を保ったまま会社別の知識グラフを作る。導入企業Upsideでは全社展開まで1カ月、利用率92%、月2000時間超を削減したという。</p><p>第三は、社員が大量に作るAIアプリを登録し、費用、権限、責任者、最終利用日、事故時の停止方法まで管理する「AIアプリ管理業」だ。先行例はドイツSAPの『AI Agent Hub』だ。SAP製・他社製のAIエージェント、LLM、MCPサーバーを発見・台帳化・統制・評価し、すでに150社で10万超を管理している。</p><p>料金体系も変わる。私は今後、人間一人につき月額いくらではなく、AIが何件処理し、どのデータを読み、何回取引を実行したかで課金する「エージェント従量課金」が広がると見ている。会社OSを握る企業は、社内のあらゆるAI作業が通る料金所になれる。</p><p>最も大きいのは、会社がソフトを買う市場から、会社そのものをソフトウェア化する市場への転換だ。安くなるのは画面、コード、アプリ、知能だ。逆に希少になるのは、正しい社内データ、接続許可、操作権限、監査記録、責任の所在になる。だから次に一発当てる会社は、もう一つ便利なSaaSを作る会社ではなく、無数のAIと即席アプリが安全に働ける「会社の土台」を握る会社になる。</p><p>ただし、下振れも書いておく。即席アプリの重複や権限事故が増え、導入企業の保守費が削減額を超えれば、既存SaaSへ戻る。小さな会社はOS全体ではなく一業務・一接続から始め、30日で作業時間が20%以上減らないか、重大事故が1件でも出たら止める。それでも正本、接続、権限、監査の市場は残る。</p><p>結論。</p><p>Cloudflare OSが示したのは、SaaSが消える未来ではない。完成した画面の価値が下がり、正本、API、権限、監査を持つ会社が会社OSの部品として残る未来だ。これから一発当てたいなら、AIが会社で安全に働くための土台を握るしかない。</p><h2>スレッド全体</h2><h3>Part 1 (親ポスト)</h3><p>（上記「投稿本文」と同一）</p><h3>Part 2</h3><p>宣伝</p><p>AIデトックスイベントやってます。</p><p>もちろん私も参加します。</p><h3>Part 3</h3><p>Cloudflareを含む先行5社の料金・収益モデル・参入設計は、常連席の『張る人の資料』で掘りました。</p><p>【目次】</p><p>数字で見る、会社OSと企業AIの裏方</p><p>画面は現場で作られ、金は裏方へ流れる</p><p>5社の比較——「AIの仕事場」を誰がどう売るか</p><p>値付けの相場——席の値段から、仕事量の値段へ</p><h2>Summary</h2><p>Cloudflare が公開したオープンソースの Cloudflare OS を「社内AI安全化ツール」ではなく「会社OSという新市場の号砲」と読む論考。社員がAIに頼めばその場で自分専用の業務アプリが生成される世界では、固定された管理画面や細かな便利機能を売るSaaSの価値が下がり、顧客台帳・決済・会計・契約・在庫といった「正しい記録」とそれを操作するAPI・認証・権限管理だけが部品として残る、という主張。そのうえで会社OS導入業・会社の文脈整備業・AIアプリ管理業の3つを新市場として提示している。</p><h2>Key points</h2><ul><li>Cloudflare OS は PC 用 OS ではなく、社員がブラウザ上でAIに業務アプリや自動化を作らせるための「会社用の仕事場」</li><li>社内では毎週数千人が使用、直近30日で4000以上のアプリ/ツールが生成されたとされる（公開版はまだ初期提供）</li><li>消えやすいのは固定管理画面と便利機能、残るのは正本データ・API・認証・権限管理</li><li>新市場①「会社OS導入業」: freee/kintone/SmartHR 等を安全にAIへ接続し権限設計する（日本ではJiteraが1,000超の外部アプリ接続を提供）</li><li>新市場②「会社の文脈整備業」: 散在資料をAIが使える正本へ（Glean は100超のデータ源を権限保持のまま知識グラフ化）</li><li>新市場③「AIアプリ管理業」: 社員が量産するAIアプリを台帳化・統制（SAP AI Agent Hub は150社で10万超を管理）</li><li>課金モデルは「1人月額いくら」からAIの処理件数・データ参照・実行回数に応じた「エージェント従量課金」へ</li><li>下振れシナリオも明示: 即席アプリの重複と権限事故で保守費が削減額を超えれば既存SaaSへ回帰。小さく1業務1接続から始め、30日で作業時間20%減らなければ止める</li></ul><h2>Takeaway</h2><p>「AIが誰でも開発者にする」の次に来る問いは、作られたアプリをどう統制するか。安くなるのは画面・コード・知能で、希少になるのは正本データ・接続許可・操作権限・監査記録という整理は、自社でAI活用を進める側にとっても投資順序の指針になる。まず整えるべきは高性能なモデルではなく、AIに読ませてよい正本と、誰が何を実行できるかの権限設計。</p>
+    </article>
+    <aside class="side">
+      <dl>
+        <dt>AUTHOR</dt><dd>SaaS飯</dd>
+        <dt>HANDLE</dt><dd>@saasmeshi</dd>
+        <dt>POSTED</dt><dd>2026-08-10</dd>
+        <dt>CATEGORY</dt><dd>💼 AI×ビジネス活用</dd>
+        <dt>SOURCE</dt><dd><a href="https://x.com/saasmeshi/status/2086578777560436788" target="_blank" rel="noopener noreferrer">x.com/saasmeshi/status/2086578777560436788…</a></dd>
+        <dt>MARKDOWN</dt><dd><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/481_saasmeshi_CloudflareOS%E3%81%8C%E7%A4%BA%E3%81%99SaaSisDead%E3%81%A8%E4%BC%9A%E7%A4%BEOS%E5%B8%82%E5%A0%B4.md" target="_blank" rel="noopener noreferrer">GitHub で原文を見る</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <span class="btn" style="opacity:.35;pointer-events:none">← 最新です</span>
+    <a class="btn next" href="./484_yagiryuuu_CloudflareOS%E3%81%BE%E3%81%A8%E3%82%81Gadget%E3%81%A8Gatekeeper.md.html">
+      <span>古いブックマーク →</span>
+      <span class="big">【保存版】「Cloudflare OS」についてまとめ — Gadget と Gatekee…</span>
+    </a>
+  </div>
+</section>
+
+<section class="actions">
+  <div class="container">
+    <a href="./">← 一覧へ戻る</a>
+    <a class="primary" href="https://x.com/saasmeshi/status/2086578777560436788" target="_blank" rel="noopener noreferrer">元ポストを X で見る</a>
+    <a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/481_saasmeshi_CloudflareOS%E3%81%8C%E7%A4%BA%E3%81%99SaaSisDead%E3%81%A8%E4%BC%9A%E7%A4%BEOS%E5%B8%82%E5%A0%B4.md" target="_blank" rel="noopener noreferrer">GitHub で開く</a>
+  </div>
+</section>
+
+<footer class="foot" id="about">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">Vibe Coder Bootcamp</div>
+        <p>
+          AI の新しい動きを毎朝整理して、Vibe Coder が今日使える形で届けるフィード。
+          運営は泉水亮介。Slackコミュニティと連動した公開ログです。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          BOOKMARKS ARCHIVE · 483 ITEMS · EN+JP
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../">HOME</a></li>
+          <li><a href="../news/2026-08-10/">TODAY</a></li>
+          <li><a href="./">BOOKMARKS</a></li>
+          <li><a href="../#archive">ARCHIVE</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>SUBSCRIBE</h5>
+        <ul>
+          <li><a href="#">Slack に参加</a></li>
+          <li><a href="#">RSS</a></li>
+          <li><a href="#">X で購読</a></li>
+          <li><a href="#">メール通知</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://github.com/rsensui2/vibe-coder-demo">GitHub</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Colophon</a></li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 2026-08-11</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

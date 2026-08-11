@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-08-12 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-08-12 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0812</span>
+    <span class="sep">/</span>
+    <span>2026-08-12</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260812.0730</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-08-12/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:30 · TUE</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · TUESDAY · AUGUST 12, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>08<span class="dot">.</span>12</h1>
+    <div class="strap">
+      <span>Claude · SpaceXAI · NVIDIA · AI議事録ツール</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 6 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔒 透明性・規制 <span class="sep">/</span> CLAUDE HELP CENTER / TECHCRUNCH <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude の生成テキスト全部に不可視の電子透かし — EU AI Act 対応を全世界へ適用</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-12/topic_1.png" data-alt="Claude の生成テキスト全部に不可視の電子透かし — EU AI Act 対応を全世界へ適用" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-12/topic_1.png" alt="Claude の生成テキスト全部に不可視の電子透かし — EU AI Act 対応を全世界へ適用" />
+      </div>
+      <p class="lede">
+        Anthropic が、Claude の生成テキストに機械可読な電子透かしを埋め込むことを公表した。EU AI Act 第50条の透明性要件への対応だが、適用範囲は EU 圏に限らず全世界・全プロダクトに及ぶ。ファイル出力側は C2PA 準拠の署名付き来歴メタデータが付き、改ざん検知もできる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">2026年8月2日以降にローンチされる Claude モデルは機械可読マーキングをローンチ時点でサポート。それ以前のモデルは移行期間中にレトロフィット中</li>
+        <li data-i="02">対象は Claude Platform (API) / Claude / Claude Code / Claude Cowork / Claude Tag の全面。AWS・Google Cloud・Microsoft Foundry 経由も技術的に可能な範囲で含む</li>
+        <li data-i="03">テキストの透かしはコピー＆ペーストしても付いてくる。ある程度の編集にも耐えうる設計</li>
+        <li data-i="04">ファイルは C2PA 標準の署名付き来歴メタデータ（.svg / .png / .jpg 対応）</li>
+        <li data-i="05">第三者向けの検出手段と技術文書の公開を予告。「テキスト検出 API も出す」と明言（現時点で公開 API は未提供）</li>
+        <li data-i="06">限界も明示: 検出できても「Claude が処理した可能性がある」までで著者性の証明ではない。大幅な書き換えや形式変換で剥がれ、短文は検出できず、透かしが無いことは AI 非生成の証明にならない</li>
+      </ul>
+      <div class="pull">
+        「AI が書いたかどうか」の判定が推測ベースから発行元の署名を読む方式へ変わり、Claude Code が書いた PR や Claude で書いた提案書が相手側のツールで機械的に判定されうる。禁止されるわけではないが、AI の使用を黙って隠せる前提は今後崩れる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content">Claude Help Center / TechCrunch</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-11</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔒 透明性・規制</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content">https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content</a></dd>
+        <dd><a href="https://techcrunch.com/2026/08/11/anthropic-says-it-will-watermark-text-generated-by-its-ai-models/">techcrunch.com/2026/08/11/anthropic-says…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · SPACEXAI / 9TO5MAC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🤖 エージェント製品 <span class="sep">/</span> SPACEXAI / 9TO5MAC <span class="sep">/</span> NEWS
+      </div>
+      <h2>SpaceXAI × Cursor が「Grok Bot」を公開 — Bot 1体ごとに常時起動の自分専用コンピュータ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-12/topic_2.png" data-alt="SpaceXAI × Cursor が「Grok Bot」を公開 — Bot 1体ごとに常時起動の自分専用コンピュータ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-12/topic_2.png" alt="SpaceXAI × Cursor が「Grok Bot」を公開 — Bot 1体ごとに常時起動の自分専用コンピュータ" />
+      </div>
+      <p class="lede">
+        SpaceXAI が Cursor と共同で「Grok Bot」をベータ公開した。チャットアプリではなくエージェントを置いておくアプリで、Bot 1体につきクラウド上の常時起動コンピュータが1台割り当てられる。ユーザーが普段使っている Web サービスに Bot 自身がサインインし、ノート PC を閉じたあとも作業を続ける。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Bot ごとに独立したクラウドコンピュータを持つ。ユーザーのマシンを操作する Computer Use 型とは設計が違い、ローカル環境に依存しない</li>
+        <li data-i="02">API の無いサイトにもサインインして操作できる。人が作業しているところに Bot を同席させると手順を学習し、ルーティンとして保存して以後は自走する</li>
+        <li data-i="03">複数 Bot をグループチャットに入れると、Bot 同士で作業の受け渡しとオーナー割り当てを行い、判断が要るところだけ人を呼ぶ</li>
+        <li data-i="04">ベータ提供は SuperGrok Heavy / Cursor Ultra / Cursor Teams Premium の加入者向け。追加サブスクリプションは不要</li>
+        <li data-i="05">macOS・iOS で先行、Windows・Linux デスクトップ版もあり、Android は近日</li>
+        <li data-i="06">SpaceX による Cursor 買収の流れの上にあり、早期アクセス組からは Copyright 表記が Anysphere から SpaceXAI に変わったとの報告</li>
+      </ul>
+      <div class="pull">
+        エージェントの置き場所が「自分のマシン」から「エージェント専用の常設マシン」へ移る流れ。Bot ごとに環境を切り、走らせっぱなしにして、人は判断だけという形は、そのまま自動化の設計テンプレートになる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.ai/news/introducing-grok-bot">SpaceXAI / 9to5Mac</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-11</dd>
+        <dt>CATEGORY</dt>
+        <dd>🤖 エージェント製品</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.ai/news/introducing-grok-bot">https://x.ai/news/introducing-grok-bot</a></dd>
+        <dd><a href="https://9to5mac.com/2026/08/11/grok-bot-is-an-all-new-iphone-and-mac-app-from-spacexai-and-cursor/">9to5mac.com/2026/08/11/grok-bot-is-an-al…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · OLLAMA BLOG / OLLA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🖥️ ローカルLLM <span class="sep">/</span> OLLAMA BLOG / @OLLAMA <span class="sep">/</span> NEWS
+      </div>
+      <h2>NVIDIA Nemotron 3.5 Lightning が Ollama で動く — 30B（アクティブ3B）・1M コンテキスト</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-12/topic_3.png" data-alt="NVIDIA Nemotron 3.5 Lightning が Ollama で動く — 30B（アクティブ3B）・1M コンテキスト" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-12/topic_3.png" alt="NVIDIA Nemotron 3.5 Lightning が Ollama で動く — 30B（アクティブ3B）・1M コンテキスト" />
+      </div>
+      <p class="lede">
+        NVIDIA のオープンモデル Nemotron 3.5 Lightning が Ollama で利用可能になった。総パラメータ 30B・トークンあたりアクティブ 3B のハイブリッド MoE で、データセンターではなく手元のマシンで走り続けるエージェントを狙った設計。ollama launch claude --model nemotron-3.5-lightning で Claude Code をこのローカルモデルで駆動できる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">30B 総パラメータ / トークンあたりアクティブ 3B のハイブリッド MoE。RTX PC・RTX PRO ワークステーション・DGX Spark / DGX Station で動く</li>
+        <li data-i="02">コンテキスト長は最大 100万トークン。マルチターンの長いツール履歴を丸ごと抱えられる</li>
+        <li data-i="03">投機的デコーディング（MTP＋DFlash / DSpark）で同クラスのオープンモデル比 最大4倍のスループット、タスク完了時間は 30% 短縮</li>
+        <li data-i="04">ollama launch は Claude Code / OpenClaw / Hermes Agent / OpenCode に対応。Apple Silicon 向けには nemotron-3.5-lightning:30b-mlx</li>
+        <li data-i="05">オープンデータセットで学習したオープンモデル。特定タスク向けにポストトレーニングして自前で回せる</li>
+        <li data-i="06">想定用途は常駐型の個人アシスタント、コーディングのサブエージェント、セキュリティ運用のアラート仕分け、高頻度ステップはローカル・難所だけクラウドという二層構成</li>
+      </ul>
+      <div class="pull">
+        08-10 の Muse Glimmer に続いて「エージェントの雑用は 3B アクティブのローカルモデルで足りる」という主張が2日連続で出てきた。同じ CLI・同じ API のまま重い一手だけクラウドに投げる構成が現実的になり、常時走らせるループのランニングコストがここで変わる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://ollama.com/blog/nemotron-3-5-lightning">Ollama Blog / @ollama</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-11</dd>
+        <dt>CATEGORY</dt>
+        <dd>🖥️ ローカルLLM</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://ollama.com/blog/nemotron-3-5-lightning">https://ollama.com/blog/nemotron-3-5-lightning</a></dd>
+        <dd><a href="https://x.com/ollama/status/2087208006455111779">x.com/ollama/status/2087208006455111779</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · BOBDAHACKER</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ⚠️ セキュリティ <span class="sep">/</span> BOBDAHACKER <span class="sep">/</span> NEWS
+      </div>
+      <h2>AI議事録ツール tl;dv で 18万件の会議が丸見えだった — 報告から半年、記事公開時点で未修正</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-12/topic_4.png" data-alt="AI議事録ツール tl;dv で 18万件の会議が丸見えだった — 報告から半年、記事公開時点で未修正" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-12/topic_4.png" alt="AI議事録ツール tl;dv で 18万件の会議が丸見えだった — 報告から半年、記事公開時点で未修正" />
+      </div>
+      <p class="lede">
+        Zoom・Google Meet・Teams に入って録画と文字起こしをする AI 議事録ツール tl;dv（利用者200万人超）で、Firestore データベースにテナント分離が無く、認証済みユーザーなら誰でも全アカウントの会議レコードを列挙できる状態だったという調査記事が公開された。報告は 2026年1月28日、記事公開（8月4日）時点で未修正。日本語圏でも 08-11 に拡散した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">会議コレクションにテナント分離が無く、任意の認証済みユーザーが全アカウントの会議を照会できた。取得できるのは作成者メールアドレス、参加可能な会議ID、プロバイダ、録画ステータス、タイムスタンプ</li>
+        <li data-i="02">recording ステータスの会議 ID は生きている通話。調査時点で常時およそ1,000件がその状態にあり、発見者は実際に第三者の会議2件に無断参加（うち1件はマレーシア教育省の157名参加セッション）</li>
+        <li data-i="03">露出規模は会議レコード 181,874件 / ユニークユーザー 84,312人 / 35,003ドメイン。23カ国の .gov ドメイン（日本を含む）、Berkeley・東京大学などの .edu / .ac、三井倉庫・三井不動産・HubSpot・Confluent・AnyMind Group などの名前が挙がっている</li>
+        <li data-i="04">会議はデフォルト非公開だが、27,334件を調べたところ1,000件超が公開設定で、228ドメイン・715件の招待者メールアドレスが露出</li>
+        <li data-i="05">社内向けに vibe coding で作った W杯予想アプリの API が認証ゼロで、従業員19名の氏名・社用メール・CEO 個人 Gmail まで返していた</li>
+        <li data-i="06">開示の経緯: 1/28 に CEO へ連絡 → 「CTO に報告を」→ CTO は最後まで応答せず。1/29・2/14・3/6・7/22 と催促するも未修正のまま記事公開</li>
+      </ul>
+      <div class="pull">
+        議事録ツールは組織で最も機微な会話が全部集まる場所——商談、採用面接、評価面談、経営会議。導入時は「会議IDとメールが他テナントから読めないか」を審査項目に入れるべき。社内向けの vibe coding アプリが認証ゼロで従業員名簿を返していた点も効く。内部向けだから認証は後で、が一番危ない。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://bobdahacker.com/blog/tldv-hack">bobdahacker</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-11</dd>
+        <dt>CATEGORY</dt>
+        <dd>⚠️ セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://bobdahacker.com/blog/tldv-hack">https://bobdahacker.com/blog/tldv-hack</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · SAASMESHI / SHOTOV</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🏗️ 会社OS・基盤 <span class="sep">/</span> @SAASMESHI / @SHOTOVIM <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Cloudflare OS の使いどころが見えてきた — 「SaaS is Dead」論と、AIの長期記憶を載せる実装</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-12/topic_5.png" data-alt="Cloudflare OS の使いどころが見えてきた — 「SaaS is Dead」論と、AIの長期記憶を載せる実装" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-12/topic_5.png" alt="Cloudflare OS の使いどころが見えてきた — 「SaaS is Dead」論と、AIの長期記憶を載せる実装" />
+      </div>
+      <p class="lede">
+        08-08 に公開された Cloudflare OS について、市場論と実装の両方から具体的な読み解きが出てきた。SaaS飯（@saasmeshi）は「社内AI安全化ツール」ではなく会社OSという新市場の号砲だと整理し、松濤Vimmer（@shotovim）は自分のAI用長期記憶を GitHub 原本のまま Cloudflare OS に載せる構成を実践報告している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Cloudflare OS は PC 用 OS ではなく、社員がブラウザ上でAIに業務アプリや自動化を作らせる「会社用の仕事場」。Cloudflare 社内では毎週数千人が使い、直近30日で4,000以上のアプリ／ツールが生成された</li>
+        <li data-i="02">消えやすいのは固定された管理画面と細かな便利機能。残るのは顧客台帳・決済・会計・契約・在庫といった「正しい記録」と、それを操作するAPI・認証・権限管理。SaaS は完成品から会社OSの部品へ変わる</li>
+        <li data-i="03">新市場3つ: ①会社OS導入業（日本では Jitera が1,000超の外部アプリ接続を提供）②会社の文脈整備業（Glean は100超のデータ源を権限保持のまま知識グラフ化、導入企業 Upside で利用率92%・月2,000時間超の削減）③AIアプリ管理業（SAP AI Agent Hub は150社で10万超を台帳化・統制）</li>
+        <li data-i="04">課金は「1人月額いくら」からAIの処理件数・データ参照・実行回数に応じたエージェント従量課金へ移るという見立て</li>
+        <li data-i="05">実装例（@shotovim）: ナレッジ原本は GitHub リポジトリ1本。ローカルは Claude Code が直接参照、クラウドは Cloudflare OS の Context Library が参照し git push で同期。アクセスは Cloudflare Access（Zero Trust）で保護</li>
+        <li data-i="06">下振れも明示: 即席アプリの重複と権限事故で保守費が削減額を超えれば既存SaaSへ回帰。小さく1業務1接続から始め、30日で作業時間20%減らなければ止める</li>
+      </ul>
+      <div class="pull">
+        安くなるのは画面・コード・アプリ・知能で、希少になるのは正本データ・接続許可・操作権限・監査記録。まず整えるべきは高性能なモデルではなく、AIに読ませてよい正本と、誰が何を実行できるかの権限設計。記憶をランタイム内部に閉じ込めず、バージョン管理されたテキストとして外に出す構成は個人規模でも真似できる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">416</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/saasmeshi/status/2086578777560436788">@saasmeshi</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-10</dd>
+        <dt>CATEGORY</dt>
+        <dd>🏗️ 会社OS・基盤</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/saasmeshi/status/2086578777560436788">x.com/saasmeshi/…</a></dd>
+        <dd><a href="https://x.com/shotovim/status/2085996915200856427">x.com/shotovim/status/208599691520085642…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · GOOGLE BLOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📈 業界動向 <span class="sep">/</span> GOOGLE BLOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Gemini アプリが月間アクティブ 10億人を突破 — 入力の主役はもうテキストではない</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-12/topic_6.png" data-alt="Gemini アプリが月間アクティブ 10億人を突破 — 入力の主役はもうテキストではない" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-12/topic_6.png" alt="Gemini アプリが月間アクティブ 10億人を突破 — 入力の主役はもうテキストではない" />
+      </div>
+      <p class="lede">
+        Google が、Gemini アプリの月間アクティブユーザーが 10億人を超えたと発表した。同社史上最速で成長したプロダクトで、10億到達は Google 全体で14番目。7月時点の 9.5億から1ヶ月で乗せた形。あわせて公開された使われ方の内訳が、テキスト中心という想像とかなり違っている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">MAU 10億人突破。今年前半の約 7.5億 → 7月 9.5億 → 8月 10億という推移。Google で14個目の10億プロダクト</li>
+        <li data-i="02">ユーザーの 63% が音声で使っている。「音声のみ」で使う層が増えており、子育て世帯は日常タスクで音声を使う率が 43% 高い</li>
+        <li data-i="03">画像生成は1日あたり1億5,000万枚超</li>
+        <li data-i="04">iOS の月間アクティブが1億人超。macOS ユーザーは他プラットフォームの約2倍の頻度でプロンプトを投げている</li>
+        <li data-i="05">Gemini Live の対話の5回に1回はカメラか画面共有を伴う。学校関連のリクエストの 38% は添付ファイル付き</li>
+        <li data-i="06">Android では 40以上のアプリと連携してタスクを自動化</li>
+      </ul>
+      <div class="pull">
+        数字そのものより内訳が示唆的で、入力の主役がすでにテキストではない。音声 63%、カメラ・画面共有が5回に1回、添付ファイルが4割弱。AI 前提でプロダクトを作るなら、テキスト入力欄を作って終わりという設計はもう平均から外れている。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://blog.google/innovation-and-ai/products/gemini-app/one-billion-monthly-users/">Google Blog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-11</dd>
+        <dt>CATEGORY</dt>
+        <dd>📈 業界動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://blog.google/innovation-and-ai/products/gemini-app/one-billion-monthly-users/">https://blog.google/innovation-and-ai/products/gemini-app/one-billion-monthly-users/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · GOOGLE RESEARCH / </span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🩺 研究・マルチエージェント <span class="sep">/</span> GOOGLE RESEARCH / ARXIV <span class="sep">/</span> NEWS
+      </div>
+      <h2>Google の医療AI「AMIE (Video)」がリアルタイム動画診察へ — OSCE で医師と同等以上</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-12/topic_7.png" data-alt="Google の医療AI「AMIE (Video)」がリアルタイム動画診察へ — OSCE で医師と同等以上" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-12/topic_7.png" alt="Google の医療AI「AMIE (Video)」がリアルタイム動画診察へ — OSCE で医師と同等以上" />
+      </div>
+      <p class="lede">
+        Google Research が、医療AI 研究システム AMIE をリアルタイムのビデオ診察に拡張した論文を公開した。低レイテンシの対話・臨床推論・リアルタイムの音声映像知覚を統合した Gemini ベースのマルチエージェント構成で、ランダム化した OSCE（客観的臨床能力試験）でプライマリケア医と比較したところ、問診・診断・マネジメント・視診のいずれでも同等以上と評価された。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Gemini ベースのマルチエージェント構成。低レイテンシ対話・臨床推論・リアルタイム音声映像知覚を別々のエージェントとして統合</li>
+        <li data-i="02">評価はランダム化 OSCE 研究で、プライマリケア医 30名・模擬患者 15名・100の臨床シナリオ、3方式の比較</li>
+        <li data-i="03">臨床評価者は問診・診断・マネジメント・視診の全項目で AMIE (Video) をプライマリケア医と同等以上と評価</li>
+        <li data-i="04">模擬患者は AMIE の説明の分かりやすさを好み、一方でラポール形成は医師が上回った</li>
+        <li data-i="05">弱点として、細かい解剖学的精度・微妙な感情のニュアンス・高速な動きの検出を明示</li>
+        <li data-i="06">arXiv 投稿は 2026-08-10。模擬患者による試験であり実診療ではない。研究システムであり製品ではない</li>
+      </ul>
+      <div class="pull">
+        「対話するエージェント」と「じっくり考えるエージェント」と「見るエージェント」を分けて、応答の速さと推論の深さを両立させた構成は、医療以外にも効く一般的な設計パターン。1つのモデルにリアルタイム応答と熟考を同時に求めると必ずどちらかが犠牲になる、という問題への実装解になっている。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://arxiv.org/abs/2608.09861">Google Research / arXiv</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-10</dd>
+        <dt>CATEGORY</dt>
+        <dd>🩺 研究・マルチエージェント</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://arxiv.org/abs/2608.09861">https://arxiv.org/abs/2608.09861</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · YAGIRYUUU / LAST S</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💡 知見・ビジネス <span class="sep">/</span> @YAGIRYUUU / LAST SCENE <span class="sep">/</span> NEWS
+      </div>
+      <h2>サービス概要動画があると商談成約率が 70% vs 30% — 勝負は商談前に決まっている</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-12/topic_8.png" data-alt="サービス概要動画があると商談成約率が 70% vs 30% — 勝負は商談前に決まっている" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-12/topic_8.png" alt="サービス概要動画があると商談成約率が 70% vs 30% — 勝負は商談前に決まっている" />
+      </div>
+      <p class="lede">
+        Last Scene 代表の八木利生太郎氏が、自社の実測として「サービス概要動画を見た上で商談に来た場合の成約率 70%、見ていない場合 30%」という数字を公開した。倍以上の差がついているので、営業が苦手な会社ほど概要動画を持つべき、という主張。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">自社実測で 動画視聴あり 70% / 視聴なし 30% の成約率</li>
+        <li data-i="02">差は約2.3倍。商談の質そのものではなく商談前の理解度で決まっている</li>
+        <li data-i="03">主張は「全事業者が持つべき」。特に営業が得意でない会社ほど効果が大きいという整理</li>
+        <li data-i="04">1社の自己申告データで母数の記載は無い点に留意</li>
+      </ul>
+      <div class="pull">
+        商談の勝率を上げようとすると普通はトークやクロージングを磨く方向に行くが、この数字が言っているのは勝負が商談前にほぼ決まっているということ。概要動画を作るコストは今や劇的に下がっている——構成をAIで書き、素材を生成し、編集まで通せる。「動画は高いから」で止まっていた理由が消えている。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">6</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/yagiryuuu/status/2087144746498294270">@yagiryuuu</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-11</dd>
+        <dt>CATEGORY</dt>
+        <dd>💡 知見・ビジネス</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/yagiryuuu/status/2087144746498294270">x.com/yagiryuuu/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-08-11/">
+      ← 前日 · 2026-08-11
+      <span class="big">Anthropic、未公開の研究版 Claude がリーマンゼータの下界を 41.6% → 67.2% に更新</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-08-12/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260812.0730</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

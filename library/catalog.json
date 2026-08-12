@@ -1,7 +1,17 @@
 {
- "generated": "2026-08-12T18:19:25+09:00",
- "count": 60,
+ "generated": "2026-08-13T08:21:35+09:00",
+ "count": 61,
  "items": [
+  {
+   "type": "note",
+   "type_label": "note",
+   "title": "AIを賢く動かす技術と、人を育てる技術は、同じ構造をしている──コンテキスト設計と学習生態系",
+   "date": "2026-08-12",
+   "url": "https://note.com/rsensui/n/n090a4ccccd9c",
+   "tags": [],
+   "description": "",
+   "extra_links": []
+  },
   {
    "type": "note",
    "type_label": "note",

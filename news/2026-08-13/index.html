@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-08-13 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-08-13 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0813</span>
+    <span class="sep">/</span>
+    <span>2026-08-13</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260813.0733</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-08-13/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:33 · WED</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · WEDNESDAY · AUGUST 13, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>08<span class="dot">.</span>13</h1>
+    <div class="strap">
+      <span>Unsloth · Claude · VercelのAI · Google</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 5 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🖥️ ローカルLLM <span class="sep">/</span> UNSLOTH AI <span class="sep">/</span> NEWS
+      </div>
+      <h2>Unsloth Desktop — ローカルモデルの実行と学習をデスクトップアプリに統合</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-13/topic_1.png" data-alt="Unsloth Desktop — ローカルモデルの実行と学習をデスクトップアプリに統合" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-13/topic_1.png" alt="Unsloth Desktop — ローカルモデルの実行と学習をデスクトップアプリに統合" />
+      </div>
+      <p class="lede">
+        Unslothが、ローカルモデルの実行と学習を一つのデスクトップアプリにまとめた「Unsloth Desktop」を公開した。Mac・Windows・Linuxに対応し、GGUFやMLXの推論だけでなく、PDF・CSV・JSONからのデータセット作成、ノーコード学習、学習状況の可視化まで同じUIで扱える。Claude CodeやCodexをローカルLLMへ接続する入口にもなる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">オープンソースでMac・Windows・Linuxに対応し、CPUとApple Siliconもサポート</li>
+        <li data-i="02">GGUF・MLX、画像／動画diffusion、音声モデルを扱える</li>
+        <li data-i="03">PDF・CSV・JSONなどからデータセットを作り、LoRA・FP8・FFT・継続事前学習をノーコードで実行できる</li>
+        <li data-i="04">Claude CodeとCodexからローカルLLMへ接続できる</li>
+        <li data-i="05">Unslothはtool callの自己修復と精度向上を掲げるが、50%という数値の評価条件は公式投稿で示していない</li>
+      </ul>
+      <div class="pull">
+        ローカルLLMの導入障壁がCLI設定からデスクトップ操作へ下がり、推論と学習が同じ入口にまとまる。クラウドへ出せないデータを使った試作や、複数モデルを比較する教材として使いやすい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">4,380</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/UnslothAI/status/2087177146662072546">@UnslothAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-11</dd>
+        <dt>CATEGORY</dt>
+        <dd>🖥️ ローカルLLM</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/UnslothAI/status/2087177146662072546">x.com/UnslothAI/…</a></dd>
+        <dd><a href="https://github.com/unslothai/unsloth">github.com/unslothai/unsloth</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · CLAUDE / ANTHROPIC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🌐 ブラウザエージェント <span class="sep">/</span> CLAUDE / ANTHROPIC <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude in Chromeが端末をまたぐCoworkセッションへ進化</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-13/topic_2.png" data-alt="Claude in Chromeが端末をまたぐCoworkセッションへ進化" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-13/topic_2.png" alt="Claude in Chromeが端末をまたぐCoworkセッションへ進化" />
+      </div>
+      <p class="lede">
+        Claude in Chromeのサイドパネルが、単発のブラウザ補助ではなくフルのClaude Coworkセッションとして動くようになった。Chromeで始めた会話はアカウントに保存され、デスクトップ・Web・モバイルへ引き継げるほか、既存のskills・plugins・connectorsもブラウザ側でそのまま使える。MaxとTeamで提供を開始し、Proには数週間以内に展開予定。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">セッションは端末ではなくアカウントに保存され、Chromeからデスクトップやモバイルへ継続できる</li>
+        <li data-i="02">サイドパネルから既存のskills・plugins・connectorsを利用できる</li>
+        <li data-i="03">MaxとTeamで提供開始、Proは数週間以内に展開予定</li>
+        <li data-i="04">自動承認時も別の安全チェックがページ内の隠し命令と操作リスクを検査する</li>
+        <li data-i="05">Permissions Modeではサイト単位で許可し、Team／Enterprise管理者は組織のallowlist・blocklistを設定できる</li>
+        <li data-i="06">Anthropic自身がprompt injection防御は完全ではないと明記し、金融・医療記録・認証情報を扱う用途を避けるよう勧告している</li>
+      </ul>
+      <div class="pull">
+        ブラウザ操作が一回限りの拡張機能から、端末をまたいで続く業務セッションへ変わる。調査から成果物作成までを一続きにできる一方、機密サイトを対象外にする権限境界が以前より重要になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">3,870</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://claude.com/claude-in-chrome">Claude / Anthropic</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-12</dd>
+        <dt>CATEGORY</dt>
+        <dd>🌐 ブラウザエージェント</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://claude.com/claude-in-chrome">https://claude.com/claude-in-chrome</a></dd>
+        <dd><a href="https://x.com/claudeai/status/2087635262390026525">x.com/claudeai/status/208763526239002652…</a></dd>
+        <dd><a href="https://support.claude.com/en/articles/12902428-use-claude-in-chrome-safely">support.claude.com/en/articles/12902428-…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · VERCEL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🏭 エージェント開発運用 <span class="sep">/</span> VERCEL <span class="sep">/</span> NEWS
+      </div>
+      <h2>VercelのAI SDK開発、エージェント工場がPR最大35%を担当</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-13/topic_3.png" data-alt="VercelのAI SDK開発、エージェント工場がPR最大35%を担当" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-13/topic_3.png" alt="VercelのAI SDK開発、エージェント工場がPR最大35%を担当" />
+      </div>
+      <p class="lede">
+        VercelはAI SDKのissue対応から変更作成までを工程別エージェントに分け、人間が最終的にmergeする「software factory」を構築した。運用開始から4週間で、merge済みPRの最大35%をこの仕組みが作成し、7月に扱ったissueの70%を閉じ、未解決バグを25%減らしたと報告している。自動化の成果を生成量ではなく、merge・issue・残バグで測っている点が特徴。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">issueの選定、調査、変更作成などの工程を独立したエージェントに分けている</li>
+        <li data-i="02">生成した変更を直接本番へ入れず、人間のmergeを品質ゲートとして残している</li>
+        <li data-i="03">運用4週間でmerge済みPRの最大35%を作成</li>
+        <li data-i="04">7月に対象としたissueの70%をclose</li>
+        <li data-i="05">open bug件数を25%削減</li>
+        <li data-i="06">数値はVercelの自社運用結果であり、他のコードベースでの再現性は未検証</li>
+      </ul>
+      <div class="pull">
+        万能エージェント一体へ丸投げせず、工程分解と人間のmerge gateで運用する具体例になる。業務自動化でも、AIの活動量ではなく未解決件数や処理率をKPIにする考え方が参考になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">517</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/blog/building-a-software-factory-for-ai-sdk">Vercel</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-12</dd>
+        <dt>CATEGORY</dt>
+        <dd>🏭 エージェント開発運用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/blog/building-a-software-factory-for-ai-sdk">https://vercel.com/blog/building-a-software-factory-for-ai-sdk</a></dd>
+        <dd><a href="https://x.com/vercel/status/2087573868877946948">x.com/vercel/status/2087573868877946948</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · GOOGLE DEEPMIND</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🤟 アクセシビリティ <span class="sep">/</span> GOOGLE DEEPMIND <span class="sep">/</span> NEWS
+      </div>
+      <h2>Google DeepMind「SL2T」— Pixel 11で手話を直接テキスト入力</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-13/topic_4.png" data-alt="Google DeepMind「SL2T」— Pixel 11で手話を直接テキスト入力" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-13/topic_4.png" alt="Google DeepMind「SL2T」— Pixel 11で手話を直接テキスト入力" />
+      </div>
+      <p class="lede">
+        Google DeepMindは、手・身体・顔の同時動作をテキストへ翻訳するsign language-to-textモデル「SL2T」を発表した。Pixel 11では米国手話をGboardとLive Transcribeへ直接入力でき、端末側で身体姿勢を追跡し、サーバー側でテキストへ翻訳する。片手でスマートフォンを持ちながら手話する実利用も想定して最適化した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">最初の対応はASLから英語への翻訳</li>
+        <li data-i="02">GboardとLive Transcribeへ手話で直接入力できる</li>
+        <li data-i="03">手だけでなく、身体と顔を含む同時動作を直接テキストへ変換する</li>
+        <li data-i="04">身体姿勢の追跡は端末上で行い、翻訳はサーバー側で処理する</li>
+        <li data-i="05">片手で端末を持つ状況を含む実利用向けに最適化</li>
+        <li data-i="06">Deaf GooglersとAI Sign Language Advisory Committeeの助言を受けて開発し、今後は対象言語と用途を拡大予定</li>
+      </ul>
+      <div class="pull">
+        マルチモーダルAIが画像理解から、身体全体の時間的な言語表現を入力UIへ変換する段階へ進んだ。アクセシビリティを後付け機能ではなく、入力モダリティそのものとして設計する好例。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,009</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/GoogleDeepMind/status/2087541213284946191">@GoogleDeepMind</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-12</dd>
+        <dt>CATEGORY</dt>
+        <dd>🤟 アクセシビリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/GoogleDeepMind/status/2087541213284946191">x.com/GoogleDeepMind/…</a></dd>
+        <dd><a href="https://x.com/GoogleDeepMind/status/2087541220494938537">x.com/GoogleDeepMind/status/208754122049…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · OLLAMA / GITHUB</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🧩 開発ツール <span class="sep">/</span> OLLAMA / GITHUB <span class="sep">/</span> NEWS
+      </div>
+      <h2>OllamaがGitHub Copilot for JetBrainsのモデルプロバイダーに対応</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-13/topic_5.png" data-alt="OllamaがGitHub Copilot for JetBrainsのモデルプロバイダーに対応" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-13/topic_5.png" alt="OllamaがGitHub Copilot for JetBrainsのモデルプロバイダーに対応" />
+      </div>
+      <p class="lede">
+        Ollamaは、GitHub Copilot for JetBrainsでモデルプロバイダーとして利用できるようになったと発表した。JetBrains IDE内のCopilotエージェントから、ローカルまたは自前環境で動かすOllamaモデルを選べる。JetBrains側はすでにOpenAI互換custom endpoint、BYOK、local sandboxを拡張しており、そのモデル選択肢にOllamaが明示的に加わった形。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">GitHub Copilot for JetBrainsのモデルプロバイダーとしてOllamaを選択可能</li>
+        <li data-i="02">ローカルまたは自前環境のモデルをCopilotのUIとエージェント導線から使える</li>
+        <li data-i="03">JetBrains版CopilotはOpenAI互換custom endpointとBYOKを全tierへ拡張済み</li>
+        <li data-i="04">ローカルsandbox設定とprovider/session persistenceの改善も進んでいる</li>
+        <li data-i="05">7月のBYOK基盤拡張とは別に、Ollamaを直接providerとして使えるようになった8月12日の更新</li>
+      </ul>
+      <div class="pull">
+        ローカルモデルと慣れたIDEのエージェント体験を両立しやすくなる。データ境界やAPI費用の都合でローカル推論を選びたいチームにとって、導入時のUI・運用摩擦が下がる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">174</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ollama/status/2087352262268170319">@ollama</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-12</dd>
+        <dt>CATEGORY</dt>
+        <dd>🧩 開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ollama/status/2087352262268170319">x.com/ollama/…</a></dd>
+        <dd><a href="https://github.blog/changelog/2026-07-14-github-copilot-for-jetbrains-expands-byok-capabilities/">github.blog/changelog/2026-07-14-github-…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · AIEDUCATIONLABO / </span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 セキュリティ・AIガバナンス <span class="sep">/</span> @AIEDUCATIONLABO / X ARTICLE <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>メルカリのClaude Code安全導入 — 設定より「誰にどう配るか」</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-13/topic_6.png" data-alt="メルカリのClaude Code安全導入 — 設定より「誰にどう配るか」" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-13/topic_6.png" alt="メルカリのClaude Code安全導入 — 設定より「誰にどう配るか」" />
+      </div>
+      <p class="lede">
+        メルカリの「Claude Codeセキュリティ設定の組織配布戦略」を起点に、企業導入で必要な設定・配布・ガバナンスを整理した長文解説。権限バイパス、外部通信、機密ファイルへのアクセスを制限するだけでなく、エンジニアと非エンジニアで異なる安全な初期値を作り、MDMで強制配布することを中核に置く。記事自身も、設定キーはAnthropic公式と元発表で再確認すべきだと注意している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">`disableBypassPermissionsMode`で確認スキップの危険なモードを無効化する</li>
+        <li data-i="02">curl・wgetなどの外部通信、sudoやrm、.env・SSHキーへのアクセスをdeny／askで制限する</li>
+        <li data-i="03">sandboxで作業ディレクトリ外と未許可ネットワークへの到達を制限する</li>
+        <li data-i="04">エンジニアには生産性と両立する設定、非エンジニアには変更余地を減らした厳格設定を配る</li>
+        <li data-i="05">MDMで全社員へ強制配布し、個人の設定漏れに依存しない</li>
+        <li data-i="06">高規制業界では端末設定に加え、接続経路、監査ログ、経営ガバナンスを層として追加する</li>
+      </ul>
+      <div class="pull">
+        企業のAI導入は便利なツールを配るだけでは成立しない。役割別の安全な初期値、強制配布、監査可能性、教育までを一つの運用設計として持つことで、利用者個人の判断力に依存せず安全性と生産性を両立できる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">742</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/AIEducationlabo/status/2087092697807180160">@AIEducationlabo</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-11</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 セキュリティ・AIガバナンス</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/AIEducationlabo/status/2087092697807180160">x.com/AIEducationlabo/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · KEITOWEBAI / X THR</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🎨 デザイン・UI/UX <span class="sep">/</span> @KEITOWEBAI / X THREAD <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>AI感を消すWebデザイン — 画力より判断基準を渡す</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-13/topic_7.png" data-alt="AI感を消すWebデザイン — 画力より判断基準を渡す" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-13/topic_7.png" alt="AI感を消すWebデザイン — 画力より判断基準を渡す" />
+      </div>
+      <p class="lede">
+        AI生成サイトに出やすい似通った配色・角丸・余白を避ける方法を、11投稿のスレッドで具体化した実践整理。デザインシステム、Figmaの完成デザイン、タイポグラフィや様式、実写素材、モーションなどを参照として渡し、見た目の判断をAIへ丸投げしないことを軸にしている。投稿者は30パターンを比較した結論として、AI感の正体は画力ではなく判断の丸投げだと述べる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">デジタル庁など既存デザインシステムの色・角丸・余白・タイポグラフィを移植する</li>
+        <li data-i="02">taste-skillなどでデザイン判断のパターンを与える</li>
+        <li data-i="03">Figmaで完成デザインを作り、その具体的な参照へ実装を寄せる</li>
+        <li data-i="04">Next.js・Vue.js・WebGL Shaderなどで大胆な動きを加える</li>
+        <li data-i="05">タイポグラフィ、デザイン様式、質感を具体的に指定する</li>
+        <li data-i="06">自社の実写写真・動画を使い、ブランド固有の実在感を出す</li>
+      </ul>
+      <div class="pull">
+        Vibe Codingでも、生成前にデザイン原則・参照物・ブランド固有素材を決めるだけで均質さを減らせる。プロンプトを長くするより、人間が判断基準と実物の参照を用意するほうが再現性を作りやすい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">311</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/keitowebai/status/2087525125600280806">@keitowebai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-12</dd>
+        <dt>CATEGORY</dt>
+        <dd>🎨 デザイン・UI/UX</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/keitowebai/status/2087525125600280806">x.com/keitowebai/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/UnslothAI/status/2087177146662072546">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-08-12/">
+      ← 前日 · 2026-08-12
+      <span class="big">Claude の生成テキスト全部に不可視の電子透かし — EU AI Act 対応を全世界へ適用</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-08-13/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260813.0733</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

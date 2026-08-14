@@ -1,7 +1,38 @@
 {
- "generated": "2026-08-13T08:21:35+09:00",
- "count": 61,
+ "generated": "2026-08-14T19:55:12+09:00",
+ "count": 63,
  "items": [
+  {
+   "type": "article",
+   "type_label": "記事（エージェント経営）",
+   "title": "AIの報告を止める前に、外部監視を配線する──朝の6本を1通に束ねた報告規約",
+   "date": "2026-08-13",
+   "url": "https://ai-agent.co.jp/articles/agent-report-policy-morning-digest/",
+   "tags": [
+    "現場ログ",
+    "エージェント運用",
+    "自動化",
+    "通知設計"
+   ],
+   "description": "AIの定期報告が読みきれなくなった。no-op報告を全廃し朝の6本を親1通＋スレッドに束ねた実録。通知を減らして観測性を上げる順序と、最小レシピ。",
+   "extra_links": []
+  },
+  {
+   "type": "article",
+   "type_label": "記事（エージェント経営）",
+   "title": "新機能の発表は「買うか」ではなく「差分表」で受ける — 自前のエージェント基盤でなぞったら、欠けは2つだけだった",
+   "date": "2026-08-13",
+   "url": "https://ai-agent.co.jp/articles/feature-gap-table/",
+   "tags": [
+    "現場ログ",
+    "エージェント基盤",
+    "コンテキストエンジニアリング",
+    "内製",
+    "ループエンジニアリング"
+   ],
+   "description": "話題のAIワークスペースの新機能を、自前のエージェント基盤と1行ずつ突き合わせた実録。欠けていた2つをその日に最小実装するまでと、自分の環境で試せる差分表の作り方。",
+   "extra_links": []
+  },
   {
    "type": "note",
    "type_label": "note",

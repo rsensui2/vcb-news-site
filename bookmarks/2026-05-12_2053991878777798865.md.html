@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №146</span>
+    <span class="tick">BOOKMARK №147</span>
     <span class="sep">/</span>
     <span>2026-05-12</span>
     <span class="sep">/</span>
     <span>@IntCyberDigest</span>
     <span class="sep">/</span>
-    <span>485 ITEMS</span>
+    <span>486 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:18 THU</span>
+    <span>JST 07:14 SAT</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,19 +305,19 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-08-12/">NEWS</a>
+      <a href="../news/2026-08-13/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:18 · THU</div>
+    <div class="meta">JST · 07:14 · SAT</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-05-12 <span>/</span> №146
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-05-12 <span>/</span> №147
     </div>
     <div class="cat-line">
       <span>🔧 ツール</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">International Cyber Digest: TanStack npm攻撃の経緯 — PR経由でGitHub Actions Cache毒入れ→84バージョン署名公開</h1>
     <div class="strap">
-      <span><span class="label">№</span>146 / 485</span>
+      <span><span class="label">№</span>147 / 486</span>
       <span><span class="label">SRC</span><a href="https://x.com/IntCyberDigest/status/2053991878777798865" target="_blank" rel="noopener noreferrer">x.com/IntCyberDigest ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/2026-05-12_2053991878777798865.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">146<span class="ord">BOOKMARK / 485</span></aside>
+    <aside class="numeral">147<span class="ord">BOOKMARK / 486</span></aside>
     <article class="prose">
 <ul><li>Author: International Cyber Digest (@IntCyberDigest)</li><li>Category: 🔧</li><li>Usefulness: ★★★</li><li>URL: https://x.com/IntCyberDigest/status/2053991878777798865</li><li>Time: Tue May 12 00:13:19 +0000 2026</li><li>Engagement: 59返信 / 507リポスト / 4237いいね / 1753ブックマーク / 686Kビュー</li></ul><h2>Text</h2><p>🚨 How the TanStack npm attack actually happened:</p><ol><li>Attacker opened a normal-looking pull request (#7378) on the TanStack repo.</li><li>GitHub automatically ran CI tests on that PR.</li><li>Code inside the PR stole the workflow's GitHub Actions Cache write token during the test run.</li><li>The attacker used that token to plant poisoned files in the shared build cache. The PR could be closed afterwards. The poisoned cache stays.</li><li>The official release workflow later pulled from the cache, baked the malicious files into the build, and signed and published 84 malicious package versions to npm.</li></ol><h2>まとめ</h2><p>TanStack npm 攻撃の具体的な経緯：</p><ol><li>攻撃者は普通の見た目のPR (#7378) を TanStack リポジトリに送信</li><li>GitHub が自動でそのPRに対しCIテストを実行</li><li>PR 内のコードが、テスト実行中に <strong>GitHub Actions Cache の書き込みトークン</strong> を窃取</li><li>そのトークンで共有ビルドキャッシュに毒入りファイルを仕込む（PR は閉じても毒入りキャッシュは残る）</li><li>公式リリースワークフローが後でキャッシュから取得し、毒入りファイルをビルドに焼き込み、署名して <strong>84 個の悪意あるパッケージバージョンを npm に公開</strong></li></ol><h2>日本語訳全文</h2><p>🚨 TanStack npm攻撃が実際にどう起きたか：</p><ol><li>攻撃者はTanStackリポジトリに、普通に見えるプルリクエスト（#7378）を作成した。</li><li>GitHubが自動的にそのPRに対しCIテストを実行した。</li><li>PR内のコードがテスト実行中に、ワークフローのGitHub Actions Cache書き込みトークンを盗んだ。</li><li>攻撃者はそのトークンを使い、共有ビルドキャッシュに毒入りファイルを仕込んだ。PRはその後閉じてもよい。毒入りキャッシュは残る。</li><li>公式リリースワークフローが後でキャッシュから取得し、悪意あるファイルをビルドに焼き込み、署名し、84個の悪意あるパッケージバージョンをnpmに公開した。</li></ol>
     </article>
@@ -390,14 +390,14 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 485 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 486 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-08-12/">TODAY</a></li>
+          <li><a href="../news/2026-08-13/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -424,7 +424,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-08-13</span>
+      <span>BUILD 2026-08-15</span>
     </div>
   </div>
 </footer>

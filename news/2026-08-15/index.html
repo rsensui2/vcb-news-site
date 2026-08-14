@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-08-15 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-08-15 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0815</span>
+    <span class="sep">/</span>
+    <span>2026-08-15</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260815.0729</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-08-15/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:29 · FRI</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · FRIDAY · AUGUST 15, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>08<span class="dot">.</span>15</h1>
+    <div class="strap">
+      <span>OpenAI「Ultrafast · ChatGPT · DeepSeek · Gemini</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 5 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 モデル・インフラ <span class="sep">/</span> OPENAI 公式 / 9TO5MAC <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI「Ultrafast mode」— GPT-5.6 Sol が最大14倍速・750 tok/s、支えるのは Cerebras</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-15/topic_1.png" data-alt="OpenAI「Ultrafast mode」— GPT-5.6 Sol が最大14倍速・750 tok/s、支えるのは Cerebras" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-15/topic_1.png" alt="OpenAI「Ultrafast mode」— GPT-5.6 Sol が最大14倍速・750 tok/s、支えるのは Cerebras" />
+      </div>
+      <p class="lede">
+        OpenAI が、GPT-5.6 Sol を標準処理の最大14倍の速度で走らせる新しいサービスティア「Ultrafast」を API 向けにプレビュー公開した。出力は最大 750 tokens/秒に達する。速度の出どころはモデルの改良ではなく推論ハードウェアで、Cerebras の Wafer-Scale Engine を使っている。現在は限定提供で、企業は待機リストから申請する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">標準処理の最大14倍、出力最大750 tokens/秒。まず OpenAI API で提供</li>
+        <li data-i="02">速度の正体は Cerebras の Wafer-Scale Engine。ウェハーサイズのチップに 44GB の SRAM を積み、モデル重みをオンチップに置いたまま推論するため、GPU 推論のようなメモリ帯域の往復が発生しない</li>
+        <li data-i="03">初期採用は Jane Street・Basis・Rogo・Podium。想定用途は金融リサーチ、インシデント対応、カスタマーサポート、音声、コマース、ライブ実験</li>
+        <li data-i="04">価格は非公開。提供先も「速度が実プロダクトをどう変えるか評価しつつキャパシティを増やす間」限定のまま</li>
+        <li data-i="05">モデルの賢さは据え置きで、変わったのは速度だけ</li>
+      </ul>
+      <div class="pull">
+        「賢さ」ではなく「速さ」を別ティアとして値付けする動きで、モデル選定の軸が精度・価格の2軸から3軸になる。エージェントを何十周も回す用途では、1回の応答速度より合計待ち時間の削減が効く。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">14,168</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://openai.com/index/previewing-ultrafast/">OpenAI 公式 / 9to5Mac</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-13</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 モデル・インフラ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://openai.com/index/previewing-ultrafast/">https://openai.com/index/previewing-ultrafast/</a></dd>
+        <dd><a href="https://x.com/OpenAI/status/2087947721936359705">x.com/OpenAI/status/2087947721936359705</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · OPENAI DEVELOPERS </span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 AI開発ツール <span class="sep">/</span> OPENAI DEVELOPERS / 9TO5MAC <span class="sep">/</span> NEWS
+      </div>
+      <h2>ChatGPT / Codex に「Computer History」— Mac の操作履歴を文脈にする、注入リスクは公式も認める</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-15/topic_2.png" data-alt="ChatGPT / Codex に「Computer History」— Mac の操作履歴を文脈にする、注入リスクは公式も認める" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-15/topic_2.png" alt="ChatGPT / Codex に「Computer History」— Mac の操作履歴を文脈にする、注入リスクは公式も認める" />
+      </div>
+      <p class="lede">
+        macOS 版 ChatGPT デスクトップアプリに「Computer History」が追加された。選択したアプリとサイトでの操作履歴から検索可能なタイムラインを作り、ChatGPT と Codex の両方がそれを文脈として参照する。既存の Chronicle の置き換えだが中身は作り直しで、スクリーンショットではなく macOS のアクセシビリティ経由の操作イベントを記録する方式に変わった。既定はオフで、明示的なオプトインが要る。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">記録するのはクリック・入力・ショートカット・アプリ切り替えなどの操作イベント。スクリーンショット、画面録画、マイク、システム音声、プライベートブラウジングは対象外</li>
+        <li data-i="02">生イベントは端末上に最大48時間。生成されたメモリはローカルにプレーンテキストの Markdown として残り、削除するまで消えない</li>
+        <li data-i="03">サーバー側では処理後に保持せず、学習にも使わないとしている</li>
+        <li data-i="04">Pro / Business / Enterprise のみ。EEA・スイス・英国は対象外。Business / Enterprise は管理者の許可が先に要る</li>
+        <li data-i="05">「休憩前に何をしていたか」「さっき見ていた資料」を聞けるほか、繰り返している手順を skill や自動化に変える提案も出す</li>
+        <li data-i="06">OpenAI 自身が「悪意あるサイトやアプリの内容によるプロンプトインジェクションのリスクが上がる」と警告し、機密のやり取り中は収集停止、機微なアプリは除外を推奨</li>
+      </ul>
+      <div class="pull">
+        エージェントに渡す文脈が「会話で書いたこと」から「実際に PC でやったこと」へ広がる最初の一般提供機能。同時に攻撃面も端末の操作履歴まで広がるので、オプトイン・48時間・ローカル保存・地域除外という設計自体が、業務でエージェントに履歴を渡すときの境界設計の実例になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,402</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://9to5mac.com/2026/08/13/chatgpt-for-mac-adds-opt-in-computer-history-feature-replacing-chronicle/">OpenAI Developers / 9to5Mac</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-13</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 AI開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://9to5mac.com/2026/08/13/chatgpt-for-mac-adds-opt-in-computer-history-feature-replacing-chronicle/">https://9to5mac.com/2026/08/13/chatgpt-for-mac-adds-opt-in-computer-history-feature-replacing-chronicle/</a></dd>
+        <dd><a href="https://x.com/OpenAIDevs/status/2088000960891408677">x.com/OpenAIDevs/status/2088000960891408…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · DEEPSEEK  / THE NE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔁 ループエンジニアリング <span class="sep">/</span> DEEPSEEK 公式 / THE NEW STACK <span class="sep">/</span> NEWS
+      </div>
+      <h2>DeepSeek が「全部プラグイン」のエージェントハーネスを MIT 公開 — ループ自体が差し替え可能</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-15/topic_3.png" data-alt="DeepSeek が「全部プラグイン」のエージェントハーネスを MIT 公開 — ループ自体が差し替え可能" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-15/topic_3.png" alt="DeepSeek が「全部プラグイン」のエージェントハーネスを MIT 公開 — ループ自体が差し替え可能" />
+      </div>
+      <p class="lede">
+        DeepSeek が独自のエージェントハーネス「DeepSeek Harness (dsh)」を MIT ライセンスでオープンソース公開した。Cordis というカーネルの上でプラグインの搭載・取り外し・依存を管理し、モデルアダプタ・ツール・スキル・セッション・サンドボックス・ストレージ・スケジューリング・UI、そしてエージェントループそのものまで全部が差し替え可能なプラグインとして構成される。公開直後の伸びが異常で、1時間半で2万2千スター、1日以内に6万5千スター超と複数媒体が報じた。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">ライセンスは MIT。起動は `npx @deepseek-ai/dsh web` の1行</li>
+        <li data-i="02">Claude Code や Codex が固定のカーネルを持つのに対し、こちらは固定の中核を持たない。ループ・ツール・モデルが別々に差し替えられる</li>
+        <li data-i="03">GitHub スターは計測時点で幅がある（1.5時間で2.2万 → 数時間で3.3万 → 1日以内に6.5万超と報道）</li>
+        <li data-i="04">現在は developer preview。コアプラグインと API は今後も変わると DeepSeek 自身が明記</li>
+        <li data-i="05">DeepSeek にとっては初の Agent プロダクトで、プラグインとプリセットで独自エージェントを組む前提の設計</li>
+      </ul>
+      <div class="pull">
+        ループエンジニアリングの観点で重要なのは「ループが設定項目になった」こと。これまでハーネスの乗り換えは製品ごとの乗り換えだったが、ループだけを自分の運用に合わせて書き換えるという選択肢が出てくる。自作ループを回している側には設計の参照実装として読む価値がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/deepseek-ai/deepseek-harness">DeepSeek 公式 / The New Stack</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-13</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔁 ループエンジニアリング</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/deepseek-ai/deepseek-harness">https://github.com/deepseek-ai/deepseek-harness</a></dd>
+        <dd><a href="https://deepseek.com/harness/en/">deepseek.com/harness/en/</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · GOOGLE AI  / 9TO5G</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 モデル・インフラ <span class="sep">/</span> GOOGLE AI 公式 / 9TO5GOOGLE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Gemini 3.7 Flash 発表 — 前モデルから3週間、価格は約半分、同日に Spark が乗り換え</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-15/topic_4.png" data-alt="Gemini 3.7 Flash 発表 — 前モデルから3週間、価格は約半分、同日に Spark が乗り換え" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-15/topic_4.png" alt="Gemini 3.7 Flash 発表 — 前モデルから3週間、価格は約半分、同日に Spark が乗り換え" />
+      </div>
+      <p class="lede">
+        Google が Gemini 3.7 Flash を公開した。コーディングとエージェント向けの主力モデルという位置づけで、3.6 Flash からわずか3週間での更新になる。デバッグや課題解決といったコーディングタスク、初回コードの正答率、本番投入できる品質のコード生成で改善したとしている。同日、Google AI Pro / Ultra 向けの常時稼働エージェント Gemini Spark が 3.7 Flash に切り替わった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">導入価格は100万トークンあたり入力 $0.75 / 出力 $3.75。3.6 Flash のおよそ半額</li>
+        <li data-i="02">Web 開発では、より少ないプロンプトで機能の揃ったレイアウトとアプリを出せるとする</li>
+        <li data-i="03">金融・法務・バイオのような知識密度の高い領域での推論精度も改善</li>
+        <li data-i="04">160か国超で提供している常時稼働の個人エージェント Gemini Spark が同日 3.7 Flash へ移行。Workspace のツール利用が改善し、ファイル整理・メール下書き・ステータス文書の更新をこなす</li>
+        <li data-i="05">上位の Gemini 3.5 Pro は遅延が続いており、主力の更新が先に来た形</li>
+        <li data-i="06">ベンチマークの比較条件は Google の自社申告で、第三者検証は未確認</li>
+      </ul>
+      <div class="pull">
+        3週間でのモデル更新と半額化が同時に来た。エージェントを常時走らせる用途は入出力トークンが積み上がるので実運用コストへの効き方が大きく、「最上位を待つ」より「安い主力を回す」設計が有利になる局面が増える。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">60</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://9to5google.com/2026/08/13/gemini-3-7-flash-launch/">Google AI 公式 / 9to5Google</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-13</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 モデル・インフラ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://9to5google.com/2026/08/13/gemini-3-7-flash-launch/">https://9to5google.com/2026/08/13/gemini-3-7-flash-launch/</a></dd>
+        <dd><a href="https://x.com/GoogleAI/status/2087949045407035766">x.com/GoogleAI/status/208794904540703576…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · YUGENMATUNI / X AR</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 AI開発ツール・CLAUDE CODE <span class="sep">/</span> まつにぃ (@YUGEN_MATUNI) / X ARTICLE <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>〈知見〉AI の変な日本語は、プロンプトではなく Hook で潰す — ルール500本＋書き換え例セット</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-15/topic_5.png" data-alt="〈知見〉AI の変な日本語は、プロンプトではなく Hook で潰す — ルール500本＋書き換え例セット" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-15/topic_5.png" alt="〈知見〉AI の変な日本語は、プロンプトではなく Hook で潰す — ルール500本＋書き換え例セット" />
+      </div>
+      <p class="lede">
+        Claude Code / Codex に業務ドキュメントを書かせると内容は正確でも日本語が不自然になる。この問題に対し、システムプロンプトや CLAUDE.md への禁止事項の追記を見限り、PostToolUse Hook でファイル書き込み直後に正規表現照合をかけて書き直させる運用に切り替えた実践記。ルールは500本超まで育っており、全てに「こう書き直す」グッドパターンが対で付いている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">プロンプトで効かない理由が3つ挙がる。会話が長くなると指示が薄まる、モデルが変われば癖の出方も変わる、注意書きを増やすほど別の場所で別の癖が出る</li>
+        <li data-i="02">Hook は処理を止めず、警告をエージェント自身に返して直させる。直した書き込みへもう一度検査がかかる</li>
+        <li data-i="03">セッション終了時にも全体を再検査し、重大な違反が残っているとエージェントは完了報告できない</li>
+        <li data-i="04">NGワードだけの置換は禁止し「検出箇所を含む文を丸ごと書き直せ」と要求する。語だけ差し替えると別の語形で同じ問題が残るため</li>
+        <li data-i="05">500本すべてに書き換え例が対で付く（「効く」→「真価は〜にある」「本領を発揮するのは〜」）。禁止だけ並べると避け方が分からず不自然な回避文を書く</li>
+        <li data-i="06">検出数の上位は「効く」と「AではなくB」型の対比構文。モデルや会話が違っても LLM の日本語には共通の癖がある</li>
+        <li data-i="07">同一文末が3文以上続く・です／ます調と常体の混在・比喩の重ね使いは、単語照合ではなく文書全体の集計で判定する</li>
+        <li data-i="08">効果は書き手の体感のみで、検出率・誤検出率の測定とルール本体500本は非公開</li>
+      </ul>
+      <div class="pull">
+        「プロンプトに書いたのに守らない」は誰もが踏む壁で、その正体が指示の希薄化だと具体的に言語化されている。対処が Hook という誰でも使える機能で、禁止と処方をセットで返すという再利用しやすい設計判断まで開示されている。自分の業務文書ルールを機械化する最初の一歩として、そのまま真似できる粒度。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">322</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/yugen_matuni/status/2088251220452679951">@yugen_matuni</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-14</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 AI開発ツール・Claude Code</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/yugen_matuni/status/2088251220452679951">x.com/yugen_matuni/…</a></dd>
+        <dd><a href="https://x.com/i/article/2088222937635803136">x.com/i/article/2088222937635803136</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · MAPLESHAW MSJIAOZH</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🧠 コンテキストエンジニアリング <span class="sep">/</span> MAPLESHAW (@MSJIAOZHU) <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉Agent Memory の本当の難所は「取り出した情報が、今も成立しているか」</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-15/topic_6.png" data-alt="〈知見〉Agent Memory の本当の難所は「取り出した情報が、今も成立しているか」" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-15/topic_6.png" alt="〈知見〉Agent Memory の本当の難所は「取り出した情報が、今も成立しているか」" />
+      </div>
+      <p class="lede">
+        Agent Memory の議論は「過去の情報をどう取り出すか」に留まりがちだが、エージェントがプロジェクトや月をまたいで働くようになると、より難しい問いは「取り出したその情報は今も成立しているのか」になる、という整理。9連投のスレッドで、必要な能力を検索的な回答と長期コンテキストの回答に分けている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">実務例として、顧客のゴールが3回変わっている、契約書に複数バージョンがある、以前のリスク判断が新しい証拠で覆っている、同じ担当者がプロジェクトごとに違う役割を持つ、という状況を挙げる</li>
+        <li data-i="02">RAG は古いメールも古い結論も取り出せるが、どのバージョンが差し替え済みか、どの判断が当時だけ成立していたかは自然には分からない</li>
+        <li data-i="03">「検索的な回答（過去どこで言及されたか）」と「長期コンテキストの回答（何が変わり、なぜ今この状態を正とすべきか）」を別の能力として分ける</li>
+        <li data-i="04">後者に要るのは大きなベクトルDBではなく、人物・プロジェクト・会話・ファイル・タスク・結果を同じ進化しうる構造に置くこと</li>
+        <li data-i="05">コンテキストウィンドウの大きさと長期の作業履歴は別問題。128K は長い文章を収められるが、実務は増え続け・更新され続け・手がかりが極端に疎な履歴</li>
+        <li data-i="06">事実を一度きりのテキスト片から、時間的な有効性・関係・修正の軌跡を持つオブジェクトへ変える、という技術的な切り口を示す</li>
+      </ul>
+      <div class="pull">
+        記憶を「書き込みと呼び出し」の2操作で設計している限り、履歴が長くなるほど古い結論が現行のものとして混ざる。長く働かせるエージェントほど、いつまで有効かと何に上書きされたかを情報そのものに持たせる必要がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">75</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/msjiaozhu/status/2087842698661347768">@msjiaozhu</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-13</dd>
+        <dt>CATEGORY</dt>
+        <dd>🧠 コンテキストエンジニアリング</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/msjiaozhu/status/2087842698661347768">x.com/msjiaozhu/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · /  DUBHUNTER</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🎨 AI×デザイン <span class="sep">/</span> 梅本周作 / ㈱アジケ (@DUBHUNTER) <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉デザイナーの手が速くなると、次に足りなくなるのは「判断の量」</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-15/topic_7.png" data-alt="〈知見〉デザイナーの手が速くなると、次に足りなくなるのは「判断の量」" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-15/topic_7.png" alt="〈知見〉デザイナーの手が速くなると、次に足りなくなるのは「判断の量」" />
+      </div>
+      <p class="lede">
+        Figma と AI をつないで5画面から100画面へ展開したとき、作業は減ったのに「これでいいか」を決める回数が激増した、という現場の観察。生成が速くなった分、ボトルネックが制作から意思決定へ移る。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">5画面 → 100画面の展開で、作業量は減り、判断の回数が激増した</li>
+        <li data-i="02">先に効いた対策は、AI が読める形に Figma を整えておくこと</li>
+        <li data-i="03">レイヤー名が乱れたファイルを渡すと、AI は乱れたまま量産する</li>
+        <li data-i="04">効果測定のない個人の実務体感として読む</li>
+      </ul>
+      <div class="pull">
+        「AI で速くなる」がそのまま生産性にならない構造を一言で説明している。生成を20倍にすると確認も20倍になるので、入力側の整備（命名・構造）と判断を減らす仕組み（合否基準・サンプリング検品）を先に置かないと、詰まる場所が移動するだけになる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">43</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/dubhunter/status/2087313315567456593">@dubhunter</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-11</dd>
+        <dt>CATEGORY</dt>
+        <dd>🎨 AI×デザイン</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/dubhunter/status/2087313315567456593">x.com/dubhunter/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://openai.com/index/previewing-ultrafast/">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-08-13/">
+      ← 前日 · 2026-08-13
+      <span class="big">Unsloth Desktop — ローカルモデルの実行と学習をデスクトップアプリに統合</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-08-15/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260815.0729</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

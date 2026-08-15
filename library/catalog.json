@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-15T08:22:12+09:00",
+ "generated": "2026-08-16T08:20:05+09:00",
  "count": 63,
  "items": [
   {
@@ -15,7 +15,12 @@
     "通知設計"
    ],
    "description": "AIの定期報告が読みきれなくなった。no-op報告を全廃し朝の6本を親1通＋スレッドに束ねた実録。通知を減らして観測性を上げる順序と、最小レシピ。",
-   "extra_links": []
+   "extra_links": [
+    {
+     "label": "note版",
+     "url": "https://note.com/rsensui/n/na444f78a0845"
+    }
+   ]
   },
   {
    "type": "article",

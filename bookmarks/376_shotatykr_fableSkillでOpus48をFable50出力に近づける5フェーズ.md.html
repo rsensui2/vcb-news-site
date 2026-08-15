@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №049</span>
+    <span class="tick">BOOKMARK №050</span>
     <span class="sep">/</span>
     <span>2026-07-06</span>
     <span class="sep">/</span>
     <span>@shotatykr</span>
     <span class="sep">/</span>
-    <span>486 ITEMS</span>
+    <span>487 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:14 SAT</span>
+    <span>JST 07:13 SUN</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,19 +305,19 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-08-13/">NEWS</a>
+      <a href="../news/2026-08-15/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:14 · SAT</div>
+    <div class="meta">JST · 07:13 · SUN</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-07-06 <span>/</span> №049
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-07-06 <span>/</span> №050
     </div>
     <div class="cat-line">
       <span>💻 AI / エージェント設計</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">/fable Skill を自作 — Opus 4.8 を Fable 5.0 の出力に近づける5フェーズ</h1>
     <div class="strap">
-      <span><span class="label">№</span>049 / 486</span>
+      <span><span class="label">№</span>050 / 487</span>
       <span><span class="label">SRC</span><a href="https://x.com/shotatykr/status/2074035238116769851" target="_blank" rel="noopener noreferrer">x.com/shotatykr ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/376_shotatykr_fableSkill%E3%81%A7Opus48%E3%82%92Fable50%E5%87%BA%E5%8A%9B%E3%81%AB%E8%BF%91%E3%81%A5%E3%81%91%E3%82%8B5%E3%83%95%E3%82%A7%E3%83%BC%E3%82%BA.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">049<span class="ord">BOOKMARK / 486</span></aside>
+    <aside class="numeral">050<span class="ord">BOOKMARK / 487</span></aside>
     <article class="prose">
 <p><strong>有益度:</strong> ⭐⭐⭐⭐</p><p><strong>エンゲージメント:</strong> Likes 502 / RT 32 / Bookmarks 840 / Views 48,384 / Replies 0</p><h2>概要</h2><p>Fable 5.0 が有料プランから外れるなら、<code>/fable</code> という Skill を作って Opus 4.8 で Fable 5.0 の出力に近づければいい、という発想で実際に作ってみた投稿。Fable が難しいタスクを解くときに辿っているらしい5フェーズ（Phase 0〜4）を言語化し、冒頭で3つの原則を刷り込む構成。前掲 @0x_kaize の「Fable に SKILL.md を書かせる」提案を、具体的なフェーズ設計として肉付けした実例になっている。</p><h2>まとめ</h2><ul><li><strong>冒頭の3原則</strong>:</li></ul><p>  - 完了条件を先に固定する — 検証方法が書けないタスクは、まだ理解できていないとみなす</p><p>  - 自分の主張ではなく観測を信じる — 「動くはず」は証拠ではない。実物を見るまで完了と言わない</p><p>  - 次の一手は「いま一番リスクが高い場所」で選ぶ — 元の計画の次の行ではなく</p><ul><li><strong>Phase 0（3行を書く）</strong>: 「完了条件（観測可能な形で）／検証方法（コマンド・diff・実行結果）／やらないこと」。この3行が錨。検証方法の行が書けないなら理解不足なので先に調べに行く。</li><li><strong>Phase 1（偵察）</strong>: 計画の前に実物を軽く読み、「事実／仮定／不明」の3つに仕分ける。核心は「一番危険なのは事実のふりをした仮定」。</li><li><strong>Phase 2（分解）</strong>: 概念ではなく「独立して検証できる単位」で切る。順序はリスク順で、外れたら計画が崩れる仮定の検証を最初に。「簡単なところから片付けて勢いをつけるのは罠」。</li><li><strong>Phase 3（実行ループ）</strong>: 1ピースずつ進めてその場で検証（最後にまとめて検証しない）。毎回4つの自問で次の一手を選び直す —「観測は計画と矛盾していないか／いま最大のリスクはどこか／次の行動は可逆か／人間にしか答えられないことで詰まっているか」。行動と調査の使い分けは「手戻りコストと確認コストの比較」で決める。</li><li><strong>Phase 4（全体検証）</strong>: v2で研いだ心臓部。①作った層と別の層で確認する（コードなら実行、文章なら初見の読者として読む）②壊しに行く（空入力・境界値を実際に当てる）③原因の説明を観測で裏取りする（各原因に証拠を1つずつ、なければ「寄与は未確認」と書く）④依頼原文との突き合わせ⑤diff通読。</li></ul>
     </article>
@@ -384,14 +384,14 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 486 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 487 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-08-13/">TODAY</a></li>
+          <li><a href="../news/2026-08-15/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -418,7 +418,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-08-15</span>
+      <span>BUILD 2026-08-16</span>
     </div>
   </div>
 </footer>

@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №094</span>
+    <span class="tick">BOOKMARK №095</span>
     <span class="sep">/</span>
     <span>2026-06-10</span>
     <span class="sep">/</span>
     <span>@usedhonda</span>
     <span class="sep">/</span>
-    <span>486 ITEMS</span>
+    <span>487 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:14 SAT</span>
+    <span>JST 07:13 SUN</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,19 +305,19 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-08-13/">NEWS</a>
+      <a href="../news/2026-08-15/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:14 · SAT</div>
+    <div class="meta">JST · 07:13 · SUN</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-06-10 <span>/</span> №094
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-06-10 <span>/</span> №095
     </div>
     <div class="cat-line">
       <span>💻 AI / 開発ワークフロー</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">Fable に「実装指示書」を書かせ、Codex/Opus で実装する — /goal ワークフロー用プロンプト</h1>
     <div class="strap">
-      <span><span class="label">№</span>094 / 486</span>
+      <span><span class="label">№</span>095 / 487</span>
       <span><span class="label">SRC</span><a href="https://x.com/usedhonda/status/2064671246571249878" target="_blank" rel="noopener noreferrer">x.com/usedhonda ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/365_usedhonda_Fable%E3%81%AB%E6%8C%87%E7%A4%BA%E6%9B%B8%E3%82%92%E6%9B%B8%E3%81%8B%E3%81%9BCodex%E3%81%A7%E5%AE%9F%E8%A3%85%E3%81%99%E3%82%8B_goal%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">094<span class="ord">BOOKMARK / 486</span></aside>
+    <aside class="numeral">095<span class="ord">BOOKMARK / 487</span></aside>
     <article class="prose">
 <p><strong>有益度:</strong> ⭐⭐⭐</p><p><strong>エンゲージメント:</strong> Likes 872 / RT 51 / Bookmarks 1,386 / Views 104,893</p><h2>概要</h2><p>Fable ボーナス期間中の使い分けとして、Fable には実装そのものより「コードベースを深く読ませて、Codex や Opus 等の実装担当モデルに渡す指示書を作らせる」方が相性が良い、という運用知見。投稿者はさらに、実装モデル側が <code>/goal</code> コマンドで走らせる前提の指示書（<code>refactor-instructions.md</code>）を Fable に生成させるためのプロンプトを公開した。</p><h2>まとめ</h2><ul><li>役割分担: Fable = プロジェクト全体を読み込み、仕様・技術的負債・危険箇所を整理して Markdown 指示書を書く「分析担当」。Fable 自身は実装しない。</li><li>実装担当（Codex/Opus）へは <code>/goal refactor-instructions.md に書かれたことを完遂しろ</code> の形で渡す。</li><li>指示書に必ず含める章立て: Objective / Project Understanding / Behaviors To Preserve / Non-Negotiables / Stop And Ask Conditions / Baseline Commands / Debt Map / Implementation Phases / Verification Requirements / Reporting Format / Out-of-scope Items。</li><li>実装フェーズは「小さく安全な順」に固定: ①現状と検証コマンド確認 → ②重要挙動に安全網（テスト/再現手順）→ ③明らかに安全な整理 → ④小さな責務分離 → ⑤境界・IF明確化 → ⑥テストしやすい構造 → ⑦大きな設計変更は承認なしに実装せず提案に留める。</li><li>ガードレール: 最初に <code>git status</code>、未コミット変更と自分の変更を混ぜない、baseline 検証結果を記録、無関係な整形をしない、正しさが不明なら止めて質問。</li><li>「全部リファクタして」的な曖昧計画・見た目の綺麗さ目的・古いコードを一律に悪と決めつける、を明確に禁止。</li></ul>
     </article>
@@ -384,14 +384,14 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 486 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 487 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-08-13/">TODAY</a></li>
+          <li><a href="../news/2026-08-15/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -418,7 +418,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-08-15</span>
+      <span>BUILD 2026-08-16</span>
     </div>
   </div>
 </footer>

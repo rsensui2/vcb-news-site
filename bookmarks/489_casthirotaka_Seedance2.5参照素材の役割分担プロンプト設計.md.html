@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>イメージ通りの動画を作る方法 | 天才はSeedance2.5をこう使う — Bookmarks · Vibe Coder Bootcamp</title>
+  <meta name="description" content="Seedance 2.5 は1回の生成で画像30枚・動画10本・音声10本を参照として受け取れる（ByteDance公式、2026-07-31発表）。この仕様を踏まえると、プロンプトの役割は「映像を言葉で描写する」ことではなく「どの素材がどの要素の正解を持つかを指揮する」ことに変" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+  /* Archive page — day sections */
+  .bm-archive { padding: 0 0 40px; background: var(--paper); }
+  .bm-day {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--hair);
+  }
+  .bm-day:first-of-type { padding-top: 40px; }
+  .bm-day-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+  .bm-day-head .date {
+    font-family: "Shippori Mincho B1", "Noto Serif JP", serif;
+    font-weight: 800;
+    font-size: clamp(40px, 6vw, 72px);
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin: 0;
+  }
+  .bm-day-head .date .sep { color: var(--accent); margin: 0 2px; }
+  .bm-day-head .count {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding: 8px 14px;
+    border: 1px solid var(--accent);
+    white-space: nowrap;
+  }
+  /* active nav underline */
+  .masthead nav a.is-active { border-bottom-color: var(--accent); color: var(--accent); }
+
+  /* Article page — prose */
+  .bm-article-head {
+    padding: 48px 0 40px;
+    border-bottom: 1px solid var(--hair);
+  }
+  .bm-article-head .breadcrumb {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mute);
+    margin-bottom: 18px;
+  }
+  .bm-article-head .breadcrumb a { color: var(--ink); border-bottom: 1px solid var(--hair); padding-bottom: 1px; }
+  .bm-article-head .breadcrumb a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  .bm-article-head .cat-line {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .bm-article-head .cat-line .sep { color: var(--mute); }
+  .bm-article-head h1.title {
+    font-family: "Shippori Mincho B1", "Noto Serif JP", serif;
+    font-weight: 800;
+    font-size: clamp(32px, 4.4vw, 58px);
+    line-height: 1.12;
+    letter-spacing: -0.005em;
+    margin: 0 0 24px;
+    color: var(--ink);
+  }
+  .bm-article-head .strap {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--mute);
+  }
+  .bm-article-head .strap span .label { color: var(--accent); margin-right: 6px; }
+  .bm-article-head .strap a { border-bottom: 1px solid var(--hair); padding-bottom: 2px; }
+  .bm-article-head .strap a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  .bm-body { padding: 72px 0; border-bottom: 1px solid var(--hair); }
+  .bm-body .container {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr) 300px;
+    gap: 48px;
+  }
+  .bm-body .numeral {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 96px;
+    font-weight: 800;
+    line-height: 0.85;
+    color: var(--ink);
+    position: sticky;
+    top: 40px;
+    align-self: start;
+    letter-spacing: -0.03em;
+  }
+  .bm-body .numeral .ord {
+    display: block;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.14em;
+    margin-top: 14px;
+    font-weight: 500;
+  }
+  .bm-body .prose {
+    font-size: 16px;
+    line-height: 1.9;
+    color: var(--ink-soft);
+    font-family: "Inter", "Noto Sans JP", sans-serif;
+  }
+  .bm-body .prose > *:first-child { margin-top: 0; }
+  .bm-body .prose h1 {
+    font-family: "Shippori Mincho B1", serif;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 1.25;
+    margin: 40px 0 18px;
+    color: var(--ink);
+  }
+  .bm-body .prose h2 {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 40px 0 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+  }
+  .bm-body .prose h2::before {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: var(--accent);
+  }
+  .bm-body .prose h3 {
+    font-family: "Shippori Mincho B1", serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.35;
+    margin: 32px 0 14px;
+    color: var(--ink);
+  }
+  .bm-body .prose p { margin: 0 0 18px; }
+  .bm-body .prose ul, .bm-body .prose ol {
+    border-left: 2px solid var(--ink);
+    padding: 4px 0 4px 24px;
+    margin: 18px 0 24px;
+    list-style: none;
+  }
+  .bm-body .prose ul li, .bm-body .prose ol li {
+    position: relative;
+    padding: 4px 0 4px 18px;
+    font-size: 15px;
+  }
+  .bm-body .prose ul li::before {
+    content: "·";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1;
+  }
+  .bm-body .prose blockquote {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 19px;
+    line-height: 1.6;
+    padding: 18px 0 18px 24px;
+    border-left: 4px solid var(--accent);
+    margin: 28px 0;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .bm-body .prose pre {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 18px 20px;
+    overflow-x: auto;
+    margin: 20px 0;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    line-height: 1.65;
+  }
+  .bm-body .prose code {
+    background: var(--paper-deep);
+    border: 1px solid var(--hair);
+    padding: 1px 6px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.9em;
+  }
+  .bm-body .prose pre code { background: transparent; border: 0; padding: 0; color: inherit; font-size: 13px; }
+  .bm-body .prose a { color: var(--accent); border-bottom: 1px solid rgba(200,52,31,0.25); }
+  .bm-body .prose a:hover { border-bottom-color: var(--accent); }
+
+  .bm-body .side {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: var(--mute);
+    border-top: 1px solid var(--hair);
+    padding-top: 24px;
+    position: sticky;
+    top: 40px;
+    align-self: start;
+  }
+  .bm-body .side dl { margin: 0; }
+  .bm-body .side dt {
+    color: var(--accent);
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-top: 18px;
+    margin-bottom: 6px;
+  }
+  .bm-body .side dt:first-child { margin-top: 0; }
+  .bm-body .side dd {
+    margin: 0 0 4px;
+    color: var(--ink);
+    word-break: break-all;
+    font-size: 12.5px;
+    line-height: 1.6;
+  }
+  .bm-body .side dd a { border-bottom: 1px solid var(--hair); padding-bottom: 1px; }
+  .bm-body .side dd a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  .bm-body .side .stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 18px;
+    margin-top: 8px;
+  }
+  .bm-body .side .stats .stat .num {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 24px;
+    color: var(--ink);
+    line-height: 1;
+    font-weight: 800;
+    display: block;
+  }
+  .bm-body .side .stats .stat .lab {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--mute);
+    margin-top: 4px;
+    display: block;
+    text-transform: uppercase;
+  }
+
+  /* card: stretched-link target must be local nav, not external */
+  .xcard .xcard-main-link { cursor: pointer; }
+
+  @media (max-width: 980px) {
+    .bm-body .container { grid-template-columns: 1fr; gap: 24px; }
+    .bm-body .numeral { position: static; font-size: 64px; }
+    .bm-body .side { position: static; }
+    .bm-day-head .date { font-size: 36px; }
+  }
+</style>
+</head>
+<body>
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">BOOKMARK №001</span>
+    <span class="sep">/</span>
+    <span>2026-08-15</span>
+    <span class="sep">/</span>
+    <span>@casthirotaka</span>
+    <span class="sep">/</span>
+    <span>487 ITEMS</span>
+    <span class="sep">/</span>
+    <span>JST 07:13 SUN</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+<header class="masthead">
+  <div class="container row">
+    <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
+    <nav>
+      <a href="../">HOME</a>
+      <a href="../news/2026-08-15/">NEWS</a>
+      <a href="./" class="is-active">BOOKMARKS</a>
+      <a href="../#archive">ARCHIVE</a>
+      <a href="../#about">ABOUT</a>
+    </nav>
+    <div class="meta">JST · 07:13 · SUN</div>
+  </div>
+</header>
+
+<section class="bm-article-head">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-08-15 <span>/</span> №001
+    </div>
+    <div class="cat-line">
+      <span>💻 AI開発ツール・動画生成</span>
+      <span class="sep">·</span><span>吉田洋孝｜Cast Japan代表 <span style="opacity:.7">@casthirotaka</span></span>
+      <span class="sep">·</span><span>2026-08-15</span>
+    </div>
+    <h1 class="title">イメージ通りの動画を作る方法 | 天才はSeedance2.5をこう使う</h1>
+    <div class="strap">
+      <span><span class="label">№</span>001 / 487</span>
+      <span><span class="label">SRC</span><a href="https://x.com/casthirotaka/status/2088460345371402441" target="_blank" rel="noopener noreferrer">x.com/casthirotaka ↗</a></span>
+      <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/489_casthirotaka_Seedance2.5%E5%8F%82%E7%85%A7%E7%B4%A0%E6%9D%90%E3%81%AE%E5%BD%B9%E5%89%B2%E5%88%86%E6%8B%85%E3%83%97%E3%83%AD%E3%83%B3%E3%83%97%E3%83%88%E8%A8%AD%E8%A8%88.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
+    </div>
+  </div>
+</section>
+
+<section class="bm-body">
+  <div class="container">
+    <aside class="numeral">001<span class="ord">BOOKMARK / 487</span></aside>
+    <article class="prose">
+<p><strong>リンク:</strong> https://x.com/i/article/2088437862685650944</p><p><strong>カテゴリ:</strong> 💻 AI開発ツール・動画生成</p><p><strong>有益度:</strong> ⭐⭐⭐⭐⭐</p><p><strong>エンゲージメント:</strong> Likes 194 / RT 25 / Replies 2 / Bookmarks 690 / Views 180351</p><h2>投稿本文（原文）</h2><p>https://t.co/5M1Q6xL40Z</p><h2>X Article 本文</h2><p>今、Seedance 2.5にチャレンジしている人たちは</p><p>『上手いプロンプト』の型を探し、思いつく限りを検証しているだろう。</p><p>だが、、、</p><p>プロンプトが責任を持てる範囲は、思っているより狭い</p><p>Seedance 2.5 は1回の生成で画像30枚・動画10本・音声10本を参照として受け取る（ByteDance公式、2026年7月31日発表）。</p><p>この仕様が意味するのは、プロンプトが全部を説明する前提で作られていないということ。</p><p>判断基準は1つ。</p><p>その情報を一番正確に持っているのは誰か。</p><p>動きの正解を一番正確に持っているのは、動きを撮った動画そのものであって、それを説明した文章ではない。</p><p>プロンプトに書いてはいけないこと5つ</p><ol><li>形容詞を積み上げた雰囲気の描写</li></ol><p>公式ガイドの記述は「Try not to pile on adjectives.（形容詞を積み上げようとするな）」。</p><p>続けて「動きとレンズの選択について具体的であるほうが、たいていうまくいく」としている。</p><ol><li>動きの「名前」</li></ol><p><code>playful cheeky mini-dance</code> のような概念名は、解釈の幅がそのまま出力の幅になる。</p><p>実際にこの指定で返ってきたのは、</p><p>「相手に近づく→手を前に出す→相手を見る」という人前で踊る映像だった。</p><p>狙いは「一人でふざけながら歩いている、少し雑で速い動き」で、これは踊りですらない。</p><ol><li>身体の各部位の動きを文章で分解したもの</li></ol><p>腕の振り方、肩の揺れ方、それに連動するカメラの反応まで部位ごとに分解して書き直しても、出力は変わらなかった。</p><p>公式ガイドはモーション参照について「長く曖昧な段落より有用（more useful than a long vague paragraph）」と書いている。</p><p>分解して長くしても、参照1本の情報量には届かない。</p><ol><li>参照素材がすでに持っている情報</li></ol><p>公式が公開しているプロンプト例は、参照ごとに取る情報を指定している。</p><p>『@Clay Render 1 からはカメラの動き・ペース・ショットサイズの切り替わり・被写体の軌道・立ち位置を参照する。@Image 2 からはキャラクター設計・シーン・素材・照明・色・雰囲気を参照する』</p><p>参照がすでに持っている情報を文章で重ねて書くと、参照と文章が別々のことを言い出して破綻する。</p><ol><li>互いに矛盾する指示</li></ol><p>密度の高い段落は、内部で指示同士が衝突する。</p><p>守れない指示が混ざった瞬間、AIはどれを捨てるかを自分で決める。</p><p>プロンプトに書くべきこと5つ</p><ol><li>参照ファイルごとの役割</li></ol><p>公式ガイドの指示は「参照の役割を明確に述べる（Mention reference roles clearly）」。</p><p>挙げられている役割は、商品の同一性、キャラクターの一貫性、白模型による動き、グリーンスクリーンの演技、音声、スタイル、部分修正。</p><p>ファイルを添付しただけでは役割は決まらない。</p><ol><li>その参照から使わないもの</li></ol><p>役割を与えると同時に、そこから拾ってほしくない情報を明示する。</p><p>実際に機能した書き方はこれ。</p><p>Do not copy the location, clothing, text, people or story from @Video1.</p><p>Copy only the body rhythm, arm gestures, walking rhythm and body-linked camera motion.</p><p>「動きだけ真似しろ、場所と服と人物は真似するな」と切り分ける。</p><ol><li>譲れない要素の列挙</li></ol><p>公式のモーション参照ガイドは、プロンプトの組み立てをこう指示する。</p><p>「アップロードした参照に名前を付けることから始め、次に譲れない詳細を列挙する。</p><p>identity（同一性）</p><p>shape（形）</p><p>scale（大きさ）</p><p>floor plan（配置）</p><p>product design</p><p>pose</p><p>timing</p><p>voice</p><p>shot order</p><ol><li>何を残し、何を変えるか</li></ol><p>残すもの（演技、タイミング、視線、立ち位置、カメラの動き）と、変えるもの（人物、環境、衣装）を分けて書く。</p><p>この区別を書かないと、AIは全部を作り直す自由を持つ。</p><ol><li>優先順位</li></ol><p>全部を同時に守れない場面で、何を先に守るかを指定する。</p><p>実際のプロンプトではこう書いた。</p><p>PRIORITY:</p><ol><li>Match the body rhythm and arm movement of @Video1.</li><li>Match the body-linked camera motion of @Video1.</li><li>Preserve the POV perspective and environment from @Image1.</li><li>Keep the movement playful and casual rather than choreographed.</li></ol><p>どれを正解にするかを、先に決める</p><p>作りたい映像を要素に割って、要素ごとに「正解を持っている素材」を決める。</p><p>さらに、要素ごとに守らせる強さを3段階で分ける。</p><p>固定：</p><p>勝手に作り替えさせない（人物、商品の形、動きの元素材）</p><p>誘導：</p><p>方向だけ与えて解釈は許す（高級マンション、夜、暖色の照明、楽しい雰囲気）</p><p>おまかせ：</p><p>AIに任せる（ソファの形、本棚の小物、壁面の細部）</p><p>全部を固定すると映像が不自然になり、全部をおまかせにすると狙いから外れる。</p><p> どこを固定してどこを緩めるかの設計そのものが、プロンプトの仕事になる。</p><p>作り方は3通り。難しい動きは先に撮る</p><p>3つ目が重要になる根拠は、</p><p>ByteDance公式が Seedance 2.5 の改善余地として「複数の被写体が相互作用するシーンの安定性」を自ら挙げていること。</p><p>開発元が難所だと認めている領域を、文章で押し切ろうとするのは分が悪い。</p><p>先に撮る方式が成立するのは、</p><p>AIの仕事を「演技を発明すること」から「すでに成立している演技の見た目を変えること」に置き換えられるため。</p><p>立ち位置、タイミング、視線、接触は人間が撮った素材が持ち、AIは同一性と環境だけを担当する。</p><p>X上では、3人の別人が演じた1本の素材を、全員同じ人物に変換した事例が共有されている。</p><p>（Seedance 2.0使用、合成もマスクもなしと投稿者は説明している。第三者の投稿のため、制作工程の詳細までは検証していない）</p><p>向かないケースも明確にある。</p><p>元素材なしで全部を生成したい、接触が複雑すぎる、顔が完全に隠れる、誰がどこにいるか曖昧、元の素材の段階で立ち位置が崩れている。</p><p>この5つに当たるなら、先に撮っても解決しない。</p><p>公式が示すプロンプトの型</p><p>基本の並び順は、</p><p>Subject（誰・何が）→ Action（何をする）→ Camera（どう撮る）→ Style（どんな質感か）</p><p>30秒の一本撮りなら、公式は時間配分まで示している。</p><p>00–06秒 引きの画で状況を見せる</p><p>06–14秒 寄りの画で本題の動きに入る</p><p>14–24秒 カメラを動かすかインサートを入れて展開する</p><p>24–30秒 収束させる</p><p>参照を使う場合にそのまま埋めて使える型👇</p><p>この型が効くのは、書く量が減るからではない。</p><p>文章の仕事が「映像を描写すること」から「素材の役割分担を指揮すること」に変わるため。</p><p>動きの正解は動画が持ち、顔の正解は画像が持ち、空間の正解は白模型が持つ。プロンプトはその配置を決める。</p><p>最後まで読んでいただきありがとうございます。</p><p>X（@casthirotaka）では、こうした実務に効く話を日々発信しています。</p><p>フォローしていただけると嬉しいです。</p><h2>スレッド全体</h2><h3>Part 1 (親ポスト)</h3><p>https://t.co/5M1Q6xL40Z</p><h3>Part 2</h3><p>初心者版もチェック🔰 https://t.co/nJUK2e9zD4</p><h2>まとめ</h2><p>Seedance 2.5 は1回の生成で画像30枚・動画10本・音声10本を参照として受け取れる（ByteDance公式、2026-07-31発表）。この仕様を踏まえると、プロンプトの役割は「映像を言葉で描写する」ことではなく「どの素材がどの要素の正解を持つかを指揮する」ことに変わる。動きの正解は動画が、顔の正解は画像が、空間の正解は白模型が持つ。</p>
+    </article>
+    <aside class="side">
+      <dl>
+        <dt>AUTHOR</dt><dd>吉田洋孝｜Cast Japan代表</dd>
+        <dt>HANDLE</dt><dd>@casthirotaka</dd>
+        <dt>POSTED</dt><dd>2026-08-15</dd>
+        <dt>CATEGORY</dt><dd>💻 AI開発ツール・動画生成</dd>
+        <dt>SOURCE</dt><dd><a href="https://x.com/casthirotaka/status/2088460345371402441" target="_blank" rel="noopener noreferrer">x.com/casthirotaka/status/2088460345371402…</a></dd>
+        <dt>MARKDOWN</dt><dd><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/489_casthirotaka_Seedance2.5%E5%8F%82%E7%85%A7%E7%B4%A0%E6%9D%90%E3%81%AE%E5%BD%B9%E5%89%B2%E5%88%86%E6%8B%85%E3%83%97%E3%83%AD%E3%83%B3%E3%83%97%E3%83%88%E8%A8%AD%E8%A8%88.md" target="_blank" rel="noopener noreferrer">GitHub で原文を見る</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <span class="btn" style="opacity:.35;pointer-events:none">← 最新です</span>
+    <a class="btn next" href="./488_yugen_matuni_AI%E3%81%AE%E5%A4%89%E3%81%AA%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%82%92Hooks%E3%81%A7%E6%92%B2%E6%BB%85%E3%81%99%E3%82%8B.md.html">
+      <span>古いブックマーク →</span>
+      <span class="big">AIの変な日本語、Hooksで撲滅しているお話</span>
+    </a>
+  </div>
+</section>
+
+<section class="actions">
+  <div class="container">
+    <a href="./">← 一覧へ戻る</a>
+    <a class="primary" href="https://x.com/casthirotaka/status/2088460345371402441" target="_blank" rel="noopener noreferrer">元ポストを X で見る</a>
+    <a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/489_casthirotaka_Seedance2.5%E5%8F%82%E7%85%A7%E7%B4%A0%E6%9D%90%E3%81%AE%E5%BD%B9%E5%89%B2%E5%88%86%E6%8B%85%E3%83%97%E3%83%AD%E3%83%B3%E3%83%97%E3%83%88%E8%A8%AD%E8%A8%88.md" target="_blank" rel="noopener noreferrer">GitHub で開く</a>
+  </div>
+</section>
+
+<footer class="foot" id="about">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">Vibe Coder Bootcamp</div>
+        <p>
+          AI の新しい動きを毎朝整理して、Vibe Coder が今日使える形で届けるフィード。
+          運営は泉水亮介。Slackコミュニティと連動した公開ログです。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          BOOKMARKS ARCHIVE · 487 ITEMS · EN+JP
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../">HOME</a></li>
+          <li><a href="../news/2026-08-15/">TODAY</a></li>
+          <li><a href="./">BOOKMARKS</a></li>
+          <li><a href="../#archive">ARCHIVE</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>SUBSCRIBE</h5>
+        <ul>
+          <li><a href="#">Slack に参加</a></li>
+          <li><a href="#">RSS</a></li>
+          <li><a href="#">X で購読</a></li>
+          <li><a href="#">メール通知</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://github.com/rsensui2/vibe-coder-demo">GitHub</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Colophon</a></li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 2026-08-16</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

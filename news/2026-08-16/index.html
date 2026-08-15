@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-08-16 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-08-16 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0816</span>
+    <span class="sep">/</span>
+    <span>2026-08-16</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260816.0730</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-08-16/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:30 · SAT</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SATURDAY · AUGUST 16, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>08<span class="dot">.</span>16</h1>
+    <div class="strap">
+      <span>Anthropic · Claude · Qwen · DeepSeek-V4-Pro</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 6 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI安全性・ガバナンス <span class="sep">/</span> ANTHROPIC 公式 / RISK REPORT AUGUST 2026 (PDF) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic が2回目の Risk Report を公開 — 自律性リスクを「very low」から「low」へ引き上げ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-16/topic_1.png" data-alt="Anthropic が2回目の Risk Report を公開 — 自律性リスクを「very low」から「low」へ引き上げ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-16/topic_1.png" alt="Anthropic が2回目の Risk Report を公開 — 自律性リスクを「very low」から「low」へ引き上げ" />
+      </div>
+      <p class="lede">
+        Anthropic が Responsible Scaling Policy に基づく Risk Report の2本目を公開した。カバー日は 2026年7月15日で、2026年2月24日の前回報告以降を扱う。脅威モデルごとに「なぜ現時点で安全と考えるか」を主張と反証の形で自己開示する文書で、今回は自律性の脅威モデルの評価を1段引き上げた。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">自律性の脅威モデル1（高リスク環境での misalignment）の総合評価を **「very low」から「low」へ引き上げ**。理由はサイバーセキュリティ評価で観測されたモデル挙動のインシデント開示で、Anthropic 自身は「提示した論拠は依然 very low を支持しうる」としつつ不確実性の増加を反映したと明記</li>
+        <li data-i="02">AI R&amp;D 自動化の脅威モデルは「low」だが、**最も具体的なタスクベース評価が『飽和』し能力向上を捉えられなくなった**ため、過去の報告より確信度が下がったと記載。同節に「Claude が現在、当社の本番コードベースにマージされるコードの大多数を書いている」との記述がある</li>
+        <li data-i="03">カバー日時点で未公開の内部モデルが3つ — Claude Opus 5（当時内部展開・その後公開）、Model 1、Model 2（Mythos 5 よりやや高性能・外部公開の予定なし）</li>
+        <li data-i="04">RSP v3.4 で運用ルールが変更 — Risk Report は公開から30日以内のカバー日を持つこと、公開版での墨消し箇所を高レベルで開示すること、未墨消し版を最低200名の従業員に共有すること</li>
+        <li data-i="05">総括で自律性・化学生物兵器のリスクをいずれも「low」としつつ、**「他の AI 開発者が当社モデルを R&amp;D に使ったり出力で蒸留したりすることを含め、AI 業界全体の加速に寄与している可能性が高い」** と自認</li>
+        <li data-i="06">公開版で墨消しされているのは AI R&amp;D 開発プロセスの節（3.5）のみ。ASL レベル自体の変更はなく、変わったのは自己評価と評価手法への確信度</li>
+      </ul>
+      <div class="pull">
+        「安全である」という宣言ではなく、評価手法が能力に追いつかなくなった事実（評価の飽和）と、自社が業界全体の加速に寄与している事実を自分から書いている点が読みどころ。エージェントを業務で回す側にとって、ベンダーの安全主張をどの粒度で読むべきかの物差しになる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,108</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/AnthropicAI/status/2088324824863236248">@AnthropicAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-14</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI安全性・ガバナンス</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/AnthropicAI/status/2088324824863236248">x.com/AnthropicAI/…</a></dd>
+        <dd><a href="https://www.anthropic.com/transparency">www.anthropic.com/transparency</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · CLAUDE CODE CHANGE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI開発ツール <span class="sep">/</span> CLAUDE CODE CHANGELOG (公式) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code 2.1.233 — Todo/タスク管理ツールが新しいモデルで既定オフに</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-16/topic_2.png" data-alt="Claude Code 2.1.233 — Todo/タスク管理ツールが新しいモデルで既定オフに" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-16/topic_2.png" alt="Claude Code 2.1.233 — Todo/タスク管理ツールが新しいモデルで既定オフに" />
+      </div>
+      <p class="lede">
+        Claude Code v2.1.233 で、TaskCreate / TaskGet / TaskUpdate / TaskList / TodoWrite といったタスク管理ツール群が Opus 4.8・Sonnet 5・Fable 5・Mythos 5 とそれ以降のモデルでは提供されなくなった。旧来の挙動に戻すには環境変数 CLAUDE_CODE_ENABLE_TODO_TOOLS=1 を設定する。バージョン依存ではなくモデル依存の変更で、古いモデルでは引き続き使える。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">**廃止対象は TaskCreate / TaskGet / TaskUpdate / TaskList / TodoWrite**。対象モデルは Opus 4.8・Sonnet 5・Fable 5・Mythos 5 とそれ以降。復活は `CLAUDE_CODE_ENABLE_TODO_TOOLS=1`</li>
+        <li data-i="02">直前の 2.1.232 で **サブエージェントの fork が既定オン** に。`subagent_type: &quot;fork&quot;` のサブエージェントは会話とプロンプトキャッシュを丸ごと継承し、対話セッションでの非チームメイト agent は既定でバックグラウンド実行になる</li>
+        <li data-i="03">同じ 2.1.232 で、プロンプトに `@` を打って別の Claude セッションを名前で呼び、`SendMessage` で直接届ける機能が追加された</li>
+        <li data-i="04">2.1.233 のその他 — Bash ツールに Linux memory cgroup 制限を掛ける `CLAUDE_CODE_TOOL_MEMORY_LIMIT`（暴走ビルドでセッションを止めないため）、WebFetch のキャッシュ TTL を変える `CLAUDE_CODE_WEBFETCH_CACHE_TTL_MS`</li>
+        <li data-i="05">セキュリティ修正として、Windows の NT デバイスプレフィクス `\??\` が UNC パス検証を迂回し NTLM 資格情報を漏らしうる経路を塞いだ</li>
+        <li data-i="06">文脈として Anthropic の Thariq は「最新モデル向けに Claude Code のシステムプロンプトを約80%削った」と述べている</li>
+      </ul>
+      <div class="pull">
+        足場（scaffold）を外す方向の変更。TODO の明示管理はモデルが弱かった頃の補助輪で、新しいモデルでは外したほうが素直に動くという判断が製品側に降りてきた。自作ループやプロンプトに「TODO を書き出させる」工程を組み込んでいる場合、新モデルでは無駄になるか逆効果になりうる。同時に fork サブエージェントが既定になり、並列化の設計単位が「新しい文脈を渡す」から「今の文脈ごと分岐させる」へ移る。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.233">Claude Code CHANGELOG (公式)</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-14</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.233">https://github.com/anthropics/claude-code/releases/tag/v2.1.233</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · OLLAMA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ローカルLLM <span class="sep">/</span> OLLAMA モデルライブラリ (公式) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Qwen 3.8 27B が Ollama に — 256K コンテキスト・画像も読む・18GB でローカル完結</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-16/topic_3.png" data-alt="Qwen 3.8 27B が Ollama に — 256K コンテキスト・画像も読む・18GB でローカル完結" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-16/topic_3.png" alt="Qwen 3.8 27B が Ollama に — 256K コンテキスト・画像も読む・18GB でローカル完結" />
+      </div>
+      <p class="lede">
+        Alibaba の Qwen 3.8 27B が Ollama で配布開始した。このサイズ帯で最良クラスの公開モデルという位置づけで、通常版 `qwen3.8:27b` と Apple Silicon 向けの `qwen3.8:27b-mlx` が用意されている。270億パラメータ・配布サイズ 18GB で、256K のコンテキストと画像入力をローカルに持ち込める。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">**270億パラメータ・配布サイズ 18GB**。バリアントは `qwen3.8:27b` と Apple Silicon 向け `qwen3.8:27b-mlx`</li>
+        <li data-i="02">**コンテキスト長は 256K トークン**</li>
+        <li data-i="03">入力はテキストと画像の両方。thinking（推論）は既定オンで、リクエスト単位に切れる</li>
+        <li data-i="04">モデルカードの説明は「エージェントタスク向けの自律的な計画立案と、環境フィードバックの扱いが強化された」</li>
+        <li data-i="05">「STEM の図表や文書から時間規模の動画まで、画像と動画の理解をネイティブに対応」とも記載</li>
+        <li data-i="06">コーディング・専門業務・リサーチ・長期ホライズンのエージェントタスク全般での改善を謳う</li>
+      </ul>
+      <div class="pull">
+        18GB は 32GB メモリのマシンで現実的に回るサイズで、256K コンテキストと画像入力がローカルに降りてきた意味は大きい。外部にコードや資料を出せない案件で、エージェントループを丸ごと手元に閉じる選択肢が一段実用に近づく。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,723</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://ollama.com/library/qwen3.8">Ollama モデルライブラリ (公式)</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-14</dd>
+        <dt>CATEGORY</dt>
+        <dd>ローカルLLM</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://ollama.com/library/qwen3.8">https://ollama.com/library/qwen3.8</a></dd>
+        <dd><a href="https://x.com/ollama/status/2088314436088168491">x.com/ollama/status/2088314436088168491</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · OLLAMA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI開発ツール <span class="sep">/</span> OLLAMA モデルライブラリ (公式) <span class="sep">/</span> NEWS
+      </div>
+      <h2>DeepSeek-V4-Pro (0813) が Ollama クラウドで正式提供 — ハーネスも1日で主要ランタイムに載った</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-16/topic_4.png" data-alt="DeepSeek-V4-Pro (0813) が Ollama クラウドで正式提供 — ハーネスも1日で主要ランタイムに載った" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-16/topic_4.png" alt="DeepSeek-V4-Pro (0813) が Ollama クラウドで正式提供 — ハーネスも1日で主要ランタイムに載った" />
+      </div>
+      <p class="lede">
+        DeepSeek-V4-Pro の 0813 版が Ollama のクラウドで全面展開され、Pro / Max プランに含まれるようになった。同じタイミングで Ollama は DeepSeek Harness（`ollama launch dsh`）にも対応し、8月13日に MIT 公開されたばかりのハーネスを自分の環境で丸ごと動かせるようになっている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">モデルは **総パラメータ 1.6T・アクティブ 49B の Mixture-of-Experts**、コンテキスト長 100万トークン</li>
+        <li data-i="02">推論の強度を3段階で切り替えられる — no thinking（速い直感的回答）/ thinking（丁寧な論理分析）/ max thinking（最難問への最大推論）</li>
+        <li data-i="03">配布されるのは `:cloud` 系バリアントのみ。**ローカル実行ではなく Ollama のクラウド経由**である点に注意</li>
+        <li data-i="04">モデルページは接続先アプリとして Claude Code・OpenCode・Hermes Agent・OpenClaw を挙げている</li>
+        <li data-i="05">`ollama launch dsh` で DeepSeek Harness をそのまま起動できる。Ollama の web search が同梱済みで、trajectory view で裏の動きを追える</li>
+        <li data-i="06">LM Studio も同日 Bionic で 0813 を有効化し「エージェント的コーディングで強い性能を示す」としている</li>
+      </ul>
+      <div class="pull">
+        先週 MIT 公開された DeepSeek Harness が、公開から1日で主要ランタイムに載った。ハーネス（ループ）とモデルが別々に流通しはじめた具体例で、「どのループで、どのモデルを、どこで動かすか」を独立に選べる状態が現実になりつつある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">913</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://ollama.com/library/deepseek-v4-pro">Ollama モデルライブラリ (公式)</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-14</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://ollama.com/library/deepseek-v4-pro">https://ollama.com/library/deepseek-v4-pro</a></dd>
+        <dd><a href="https://x.com/ollama/status/2088392765021528319">x.com/ollama/status/2088392765021528319</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · ANTHROPIC  / CLAUD</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI安全性・ガバナンス <span class="sep">/</span> ANTHROPIC 公式 / CLAUDE HELP CENTER <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude の電子透かし、FAQ で分かったのは「検出器はまだ無い」「著者の証明にはならない」</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-16/topic_5.png" data-alt="Claude の電子透かし、FAQ で分かったのは「検出器はまだ無い」「著者の証明にはならない」" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-16/topic_5.png" alt="Claude の電子透かし、FAQ で分かったのは「検出器はまだ無い」「著者の証明にはならない」" />
+      </div>
+      <p class="lede">
+        8月上旬に始まった Claude 生成テキストへの不可視の電子透かしについて、Anthropic が FAQ を公開して運用上の疑問に答えた。仕組みは Google DeepMind の SynthID-Text 系で、Anthropic が持つ鍵に従って単語選択を統計的に偏らせ、十分な長さのテキストで初めてパターンとして検出できるようにするもの。今回の FAQ で、この仕組みが何を証明できないかが4点はっきりした。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">**検出ツールはまだ公開されていない**。「ユーザーや第三者が透かしとプロヴェナンス情報を検出できるようにする作業中」で、詳細は今後の技術文書で共有するとしている</li>
+        <li data-i="02">**検出された印が示すのは「Claude が処理した」ことであって「Claude が著者である」ことではない** — 校正・翻訳・要約・ファイル変換で Claude を通しただけの人間の文章にも印は付く</li>
+        <li data-i="03">透かしはコピー&amp;ペーストに追随し「一部の編集には耐えうる」が、**大幅な編集・言い換え・翻訳・他の文章への混ぜ込みで消える**</li>
+        <li data-i="04">**短すぎる文章は信号が足りず検出できない**（具体的な最小文字数は非公開）</li>
+        <li data-i="05">適用範囲は Claude・Claude Platform (API)・Claude Code・Claude Cowork・Claude Tag の全部。2026年8月2日以降にローンチしたモデルは出荷時から対応し、それ以前のモデルにも順次追加中</li>
+        <li data-i="06">誤検出率と除去可能性については FAQ に記載がない。Anthropic の Thariq は「品質を落とさずに透かしを入れられるのは直感に反する」として、実際に試せる artifact を公開している</li>
+      </ul>
+      <div class="pull">
+        「AI が書いたかどうかを機械で判定できる」という期待に対し、公式が自分で限界を4つ（検出器未提供・処理の証明にすぎない・編集で消える・短文は不可）明示した。この印を根拠に AI 利用の可否を審査しようとする組織が出てくる前に、何を証明できて何を証明できないかを押さえておく価値がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">3,726</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/AnthropicAI/status/2088343978873966687">@AnthropicAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-14</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI安全性・ガバナンス</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/AnthropicAI/status/2088343978873966687">x.com/AnthropicAI/…</a></dd>
+        <dd><a href="https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content">support.claude.com/en/articles/16266773-…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · CLAUDEDEVS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI開発ツール <span class="sep">/</span> @CLAUDEDEVS (公式) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code デスクトップ版に「自動再開」— 利用上限は停止ではなく遅延になる</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-16/topic_6.png" data-alt="Claude Code デスクトップ版に「自動再開」— 利用上限は停止ではなく遅延になる" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-16/topic_6.png" alt="Claude Code デスクトップ版に「自動再開」— 利用上限は停止ではなく遅延になる" />
+      </div>
+      <p class="lede">
+        Claude Code のデスクトップアプリに Auto-continue のチェックボックスが追加された。有効にしておくと、利用上限に当たって止まったセッションが、上限のリセット後に自動で続きから再開する。上限解除を待って手で再開する操作が不要になる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対象は **デスクトップアプリ**。CLI の CHANGELOG（v2.1.230〜233）には該当項目が無いので、現時点ではデスクトップ限定と見るのが妥当</li>
+        <li data-i="02">オンにすると、利用上限で停止したセッションがリセット後に自動で続きを走る</li>
+        <li data-i="03">公式アカウントの投稿としては直近で最大級の反応（Likes 15,000超）</li>
+        <li data-i="04">設定は明示的なチェックボックス方式で、既定オンではない</li>
+      </ul>
+      <div class="pull">
+        上限に当たった時点で人間の再操作が要るなら「寝ている間に回す」運用は成立しないが、自動再開があるなら上限は停止ではなく遅延になる。cron や常駐エージェントを組んでいる側は、リトライ設計を1段簡略化できる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">15,735</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2088014831605702937">@ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-13</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2088014831605702937">x.com/ClaudeDevs/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · CASTHIROTAKA / X A</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI動画生成・プロンプト設計 <span class="sep">/</span> @CASTHIROTAKA / X ARTICLE <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>〈知見〉Seedance 2.5 は「描写」ではなく「素材の役割分担」で指揮する</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-16/topic_7.png" data-alt="〈知見〉Seedance 2.5 は「描写」ではなく「素材の役割分担」で指揮する" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-16/topic_7.png" alt="〈知見〉Seedance 2.5 は「描写」ではなく「素材の役割分担」で指揮する" />
+      </div>
+      <p class="lede">
+        Seedance 2.5 が1回の生成で画像30枚・動画10本・音声10本を参照として受け取れるようになった（ByteDance 公式、2026-07-31発表）。この仕様を前提にすると、プロンプトの仕事は「映像を言葉で描写すること」ではなく「どの素材がどの要素の正解を持つかを指揮すること」に変わる、という実務論。判断基準は1つで「その情報を一番正確に持っているのは誰か」。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">**残すものと変えるものを分けて書く** — 残す（演技・タイミング・視線・立ち位置・カメラの動き）／変える（人物・環境・衣装）。この区別を書かないと AI は全部を作り直す自由を持つ</li>
+        <li data-i="02">**固定度を3段階に分ける** — 固定（人物・商品の形・動きの元素材＝作り替えさせない）／誘導（夜・暖色の照明のように方向だけ与えて解釈は許す）／おまかせ（ソファの形・小物・壁面の細部）。全部固定すると不自然、全部おまかせだと狙いから外れる</li>
+        <li data-i="03">**PRIORITY 節で競合時の優先順位を先に決める** — 全部を同時に守れない場面は必ず来るので、何を先に守るかを番号付きで書く</li>
+        <li data-i="04">**難しい絡みは生成させず先に人間が撮る** — 根拠は ByteDance 公式が改善余地に「複数の被写体が相互作用するシーンの安定性」を自ら挙げていること。AI の仕事を「演技を発明する」から「成立している演技の見た目を変える」へ置き換える</li>
+        <li data-i="05">公式ガイドは形容詞の積み上げを明確に非推奨（&quot;Try not to pile on adjectives.&quot;）。動きとレンズの選択を具体的に書くほうがうまくいくとする</li>
+        <li data-i="06">公式のプロンプト並び順は Subject → Action → Camera → Style。30秒尺なら時間配分（00-06 引き／06-14 寄り／14-24 展開／24-30 収束）まで提示されている</li>
+        <li data-i="07">向かないケースも5つ明示 — 元素材なしで全生成／接触が複雑すぎる／顔が完全に隠れる／位置関係が曖昧／元素材の段階で立ち位置が崩れている</li>
+      </ul>
+      <div class="pull">
+        参照が1枚から30枚に増えると、うまい言い回しを探すプロンプト職人芸そのものが合理性を失う。探索の対象が「文章の書き方」から「素材の調達と役割の割り当て」へ移り、さらに「渡した参照をどの強さで守らせるか」の宣言が新しい設計変数になる。動画に限らず、参照を多く渡せる生成一般に効く考え方。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">194</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/casthirotaka/status/2088460345371402441">@casthirotaka</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-15</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI動画生成・プロンプト設計</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/casthirotaka/status/2088460345371402441">x.com/casthirotaka/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/AnthropicAI/status/2088324824863236248">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-08-15/">
+      ← 前日 · 2026-08-15
+      <span class="big">OpenAI「Ultrafast mode」— GPT-5.6 Sol が最大14倍速・750 tok/s、支えるのは Cerebras</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-08-16/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260816.0730</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

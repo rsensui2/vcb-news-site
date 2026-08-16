@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-08-17 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-08-17 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0817</span>
+    <span class="sep">/</span>
+    <span>2026-08-17</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260817.0728</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-08-17/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:28 · SUN</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SUNDAY · AUGUST 17, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>08<span class="dot">.</span>17</h1>
+    <div class="strap">
+      <span>Stripe · SpaceX · Anthropic · Qwen</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 5 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        業界動向 <span class="sep">/</span> TECHCRUNCH（BLOOMBERG 報道） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Stripe が AI ゲートウェイの OpenRouter を 70億ドル超で買収へ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-17/topic_1.png" data-alt="Stripe が AI ゲートウェイの OpenRouter を 70億ドル超で買収へ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-17/topic_1.png" alt="Stripe が AI ゲートウェイの OpenRouter を 70億ドル超で買収へ" />
+      </div>
+      <p class="lede">
+        決済インフラ大手の Stripe が、AI ゲートウェイ企業 OpenRouter を 70億ドル超で買収する契約をまとめたと TechCrunch が Bloomberg 報道として伝えた。OpenRouter は400を超えるモデルへ単一の接続口を提供し、用途と予算に応じて使うモデルを選び分けられるようにするサービスで、世界のユーザーは800万。自社ではモデルを一切作らず、モデル間の振り分けに専業している点が特徴で、CEO は自社を「AI版の Stripe」と表現していた。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">買収額は70億ドル超。Bloomberg 報道を TechCrunch が伝えた形で、両社の正式発表はまだ出ていない</li>
+        <li data-i="02">OpenRouter は2026年5月にシリーズBで1億1,300万ドルを調達、当時の評価額は13億ドル。3か月足らずで約5倍の水準</li>
+        <li data-i="03">既存投資家は Sequoia / Andreessen Horowitz / Menlo Ventures / Alphabet の CapitalG</li>
+        <li data-i="04">400超のモデルへ単一 API でアクセスでき、ベンダーロックインを避ける用途で使われる。ユーザー数は世界800万</li>
+        <li data-i="05">自社ではモデルを作らない「振り分け専業」。CEO は自社を「AI版の Stripe」と呼んでいた</li>
+        <li data-i="06">Stripe 広報は「噂や憶測にはコメントしない」として言及を避けた</li>
+      </ul>
+      <div class="pull">
+        「どのモデルを使うか」という判断を丸ごと外部化するレイヤーに、決済インフラの最大手が7,000億円級の値をつけた。モデル単体ではなく、モデルを選ぶ場所が価値の中心に移りつつあるということで、いま自分が作るものをどの層に置くかの判断に直結する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-openrouter-for-7b/">TechCrunch（Bloomberg 報道）</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-16</dd>
+        <dt>CATEGORY</dt>
+        <dd>業界動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-openrouter-for-7b/">https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-openrouter-for-7b/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · TECHCRUNCH</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        業界動向 <span class="sep">/</span> TECHCRUNCH <span class="sep">/</span> NEWS
+      </div>
+      <h2>SpaceX が Cursor の買収を正式クローズ — 600億ドル、株式が対価</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-17/topic_2.png" data-alt="SpaceX が Cursor の買収を正式クローズ — 600億ドル、株式が対価" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-17/topic_2.png" alt="SpaceX が Cursor の買収を正式クローズ — 600億ドル、株式が対価" />
+      </div>
+      <p class="lede">
+        SpaceX が AI コーディングツール Cursor の買収を正式に完了した。2026年4月に公表された600億ドルの案件で、6月の SpaceX 株式公開後に株式を対価として支払われている。Cursor は SpaceX の GPU 群へのアクセスを得るとしており、その計算基盤は現在 Anthropic や Google にも貸し出されている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">買収額600億ドル、対価は SpaceX 株式。2026年4月公表 → 6月の株式公開 → 8月15日クローズ</li>
+        <li data-i="02">Cursor は「世界最大級の GPU フリートへのアクセス」を得たと表明</li>
+        <li data-i="03">SpaceX の計算基盤は Anthropic や Google にも貸し出されている</li>
+        <li data-i="04">Cursor のコメント: 「SpaceX は、今存在するものをはるかに超えて知能をスケールさせるための計算能力を作っている」「我々は、その知能が実際に役立つ場所のひとつだ」</li>
+        <li data-i="05">製品名やブランドの扱いについては、今回の発表では触れられていない</li>
+      </ul>
+      <div class="pull">
+        8月8日に「ブランドは段階的廃止の可能性」と報じられていた案件が決着した。Cursor を実務で使っているなら、計算資源が潤沢になる一方で製品の方向が親会社側に寄る可能性を、いまの時点で織り込んでおきたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://techcrunch.com/2026/08/15/spacex-officially-closes-its-cursor-acquisition/">TechCrunch</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-15</dd>
+        <dt>CATEGORY</dt>
+        <dd>業界動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://techcrunch.com/2026/08/15/spacex-officially-closes-its-cursor-acquisition/">https://techcrunch.com/2026/08/15/spacex-officially-closes-its-cursor-acquisition/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · TECHCRUNCH</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        業界動向 <span class="sep">/</span> TECHCRUNCH <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic CEO「AIへの反発は、根本的には信頼の危機だ」</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-17/topic_3.png" data-alt="Anthropic CEO「AIへの反発は、根本的には信頼の危機だ」" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-17/topic_3.png" alt="Anthropic CEO「AIへの反発は、根本的には信頼の危機だ」" />
+      </div>
+      <p class="lede">
+        投資家の Gavin Baker から「AI の危険性を語りすぎたことが、データセンター反対をはじめとする世間の反発を煽った」と批判された Anthropic CEO の Dario Amodei が、反発の原因は自身の発信ではなく「根本的には信頼の危機だ」と反論した。一般の人々は企業も政府もテック業界も信用していない、というのが彼の診断で、AI 企業への最も的確な批判は「世界に利益をもたらすという大きな約束をまだ果たせていないこと」だと自ら認めている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Amodei「it is fundamentally a crisis of trust」— 普通の人は企業・政府・テック業界のいずれも信頼していない、という認識</li>
+        <li data-i="02">悲観に偏っているという批判に対しては、自分の文章は「リスクと便益でほぼ等分」だと反論</li>
+        <li data-i="03">楽観側の例として、自身のエッセイ『Machines of Loving Grace』を挙げた</li>
+        <li data-i="04">自ら認める最も的確な批判は「Anthropic を含む AI 企業は、世界に利益をもたらすという大きな約束をまだ果たせていない」</li>
+        <li data-i="05">規制はリスク対処と権力集中の抑制を両立させる手段だと位置づけ、Anthropic の提案は「フロンティア AI 企業に不利で、小規模な競合に有利になるよう設計している」と説明</li>
+      </ul>
+      <div class="pull">
+        AI 導入を提案する側から見ると、相手の抵抗は「技術への不安」ではなく「事業者への不信」であることが多い。フロンティアラボのトップが同じ診断をしているのは、社内説得や顧客提案の言葉づかいを組み立て直す材料になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://techcrunch.com/2026/08/16/anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust/">TechCrunch</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-16</dd>
+        <dt>CATEGORY</dt>
+        <dd>業界動向</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://techcrunch.com/2026/08/16/anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust/">https://techcrunch.com/2026/08/16/anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · ALIBABAQWEN</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        モデル・ローカルLLM <span class="sep">/</span> @ALIBABA_QWEN（公式） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Qwen が累計30億ダウンロード — 27B がスマホと車載へ、Hugging Face トレンドも1位</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-17/topic_4.png" data-alt="Qwen が累計30億ダウンロード — 27B がスマホと車載へ、Hugging Face トレンドも1位" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-17/topic_4.png" alt="Qwen が累計30億ダウンロード — 27B がスマホと車載へ、Hugging Face トレンドも1位" />
+      </div>
+      <p class="lede">
+        Alibaba の Qwen が公式アカウントで累計30億ダウンロード達成を告知した。同じ時期に Qwen3.8-27B が Hugging Face のトレンドモデル1位となり、MediaTek との連携でスマートフォンや車載機器へ、LM Studio 経由でラップトップへと配布の裾野が広がっている。オープンウェイトのモデルが、クラウド越しに呼ぶものから端末に最初から載っているものへと位置づけを変えつつある。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">累計30億ダウンロードを公式アカウントが告知（2026-08-16）</li>
+        <li data-i="02">Qwen3.8-27B が Hugging Face のトレンドモデル1位に</li>
+        <li data-i="03">MediaTek との連携で、スマートフォンから車載機器まで搭載が広がっていると公式が謝辞</li>
+        <li data-i="04">LM Studio 上でラップトップ単体でも動作</li>
+        <li data-i="05">Cerebras との連携にも公式が言及し、オープンウェイト × 高速推論の組み合わせを示唆</li>
+        <li data-i="06">Ollama との提携についても公式が謝意を表明</li>
+      </ul>
+      <div class="pull">
+        ローカルで完結させる選択肢が、実験用の回り道ではなく既定の配布経路になりつつある。API 課金を前提にしない構成を、そろそろ本気で設計に入れていい段階。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,641</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/Alibaba_Qwen/status/2088881015855182122">@Alibaba_Qwen</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-16</dd>
+        <dt>CATEGORY</dt>
+        <dd>モデル・ローカルLLM</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/Alibaba_Qwen/status/2088881015855182122">x.com/Alibaba_Qwen/…</a></dd>
+        <dd><a href="https://x.com/Alibaba_Qwen/status/2088467890467168751">x.com/Alibaba_Qwen/status/20884678904671…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · KIRILLKWEB3</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        エージェント設計 <span class="sep">/</span> @KIRILLK_WEB3 <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉単一ループが「ゴール盲目」になる理由と、グラフで組み直す4要素</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-17/topic_5.png" data-alt="〈知見〉単一ループが「ゴール盲目」になる理由と、グラフで組み直す4要素" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-17/topic_5.png" alt="〈知見〉単一ループが「ゴール盲目」になる理由と、グラフで組み直す4要素" />
+      </div>
+      <p class="lede">
+        単一エージェントの plan → act → observe → retry ループが、なぜ長く回すほど当初の目的を見失う（goal blind）のかを整理し、グラフ構造で組み直すときの構成要素と定番トポロジーをまとめた解説が広く共有されている。要点は「エージェントを何体走らせるか」ではなく「検証器とコードでどれだけ決定性を作れるか」に置かれている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">単一ループが壊れる理由: 文脈が肥大化するにつれ、当初のゴールを見失う（goal blind）</li>
+        <li data-i="02">グラフの4要素: ノード / エッジ / 状態（state） / ポリシー</li>
+        <li data-i="03">実務で使う3トポロジー: ダイヤモンド（分岐して合流）、スーパーバイザー（統括役が振り分け）、パイプライン（直列）</li>
+        <li data-i="04">Anthropic が公式に整理した5つのワークフローパターンを下敷きにしている</li>
+        <li data-i="05">結論は「台数ではなく決定性」— 検証器（verifier）とコードで担保する部分をどれだけ増やせるか</li>
+        <li data-i="06">いいね3,330・リポスト468と、この設計論への関心の高さがそのまま出ている</li>
+      </ul>
+      <div class="pull">
+        ループを組んでいると、規模を上げるほど「途中で目的からズレる」問題に必ずぶつかる。対策がプロンプトの書き足しではなく、状態とポリシーを外に出して検証器を挟む構造の問題だという整理は、自分のループの直し方をそのまま変える。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">3,330</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/kirillk_web3/status/2088682533278077382">@kirillk_web3</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-15</dd>
+        <dt>CATEGORY</dt>
+        <dd>エージェント設計</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/kirillk_web3/status/2088682533278077382">x.com/kirillk_web3/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · CHROME FOR DEVELOP</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール・ローカルLLM <span class="sep">/</span> CHROME FOR DEVELOPERS（公式ドキュメント） <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉Chrome には既にローカルLLMが載っている — JS 3行、APIキーもサーバー代も不要</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-17/topic_6.png" data-alt="〈知見〉Chrome には既にローカルLLMが載っている — JS 3行、APIキーもサーバー代も不要" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-17/topic_6.png" alt="〈知見〉Chrome には既にローカルLLMが載っている — JS 3行、APIキーもサーバー代も不要" />
+      </div>
+      <p class="lede">
+        デスクトップ版 Chrome には Gemini Nano が同梱されており、Prompt API を使えば JavaScript 数行でローカル推論を呼べる。API キーもサーバーも、サーバーへの往復レイテンシも要らない。要件を満たすマシンなら既定で利用でき、対応言語には日本語も入っている。「これを使っている人が少なすぎる」という指摘が改めて広まった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">最小コードは実質3行: `const session = await LanguageModel.create();` → `await session.prompt('...')`（事前に `LanguageModel.availability()` の確認とユーザー操作が必要）</li>
+        <li data-i="02">内蔵AI APIは Prompt / Summarizer / Language Detector / Translator / Writer / Rewriter / Proofreader が stable</li>
+        <li data-i="03">対応言語は英語・日本語・スペイン語・ドイツ語・フランス語</li>
+        <li data-i="04">動作要件: Windows 10/11・macOS 13+・Linux・ChromeOS（Chromebook Plus のみ）、空き容量22GB、RAM 16GB以上＋4コア以上 または VRAM 4GB以上の GPU</li>
+        <li data-i="05">通信が要るのはモデルの初回ダウンロードのみ。以降はローカルで完結し、推論コストはゼロ</li>
+      </ul>
+      <div class="pull">
+        「AI 機能を載せたいが API 課金が読めない」段階のプロダクトで、要約・翻訳・下書き整形あたりは推論コストゼロで先に出せる。要件を満たさない端末向けにサーバー側フォールバックを用意する前提なら、いますぐ使える。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://developer.chrome.com/docs/ai/prompt-api">Chrome for Developers（公式ドキュメント）</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-16</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール・ローカルLLM</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://developer.chrome.com/docs/ai/prompt-api">https://developer.chrome.com/docs/ai/prompt-api</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · GITHUB BLOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> GITHUB BLOG（公式） <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉Copilot CLI とスキルで、DNSを手で触らず独自ドメイン＋HTTPS のサイトを14分で立てる</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-17/topic_7.png" data-alt="〈知見〉Copilot CLI とスキルで、DNSを手で触らず独自ドメイン＋HTTPS のサイトを14分で立てる" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-17/topic_7.png" alt="〈知見〉Copilot CLI とスキルで、DNSを手で触らず独自ドメイン＋HTTPS のサイトを14分で立てる" />
+      </div>
+      <p class="lede">
+        空のリポジトリから、独自ドメイン＋HTTPS で動く GitHub Pages サイトまでを、DNS レコードを1件も手で編集せずに約14分で到達させる手順。Copilot CLI が自然言語の指示でリポジトリ作成・ページ生成・Pages 有効化までを回し、コミュニティ製の Namecheap スキルが API 越しに A レコードと CNAME を書き換える。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">実測14分（ドメイン購入 11:21 → 独自ドメイン HTTPS で公開 11:35）</li>
+        <li data-i="02">スキルの導入は `gh skill install github/awesome-copilot namecheap` の1コマンド</li>
+        <li data-i="03">Namecheap 側で API アクセスを有効化し、ユーザー名と API キーを渡すだけ</li>
+        <li data-i="04">パーキング用レコードを GitHub Pages の A レコードと CNAME に置き換える作業をスキルが代行</li>
+        <li data-i="05">DNS レコードの変更は実行前に承認を挟む設計</li>
+        <li data-i="06">前提は GitHub アカウント（無料枠可）と、認証済みの Copilot CLI のみ。例ではドメイン代2.00ドル</li>
+      </ul>
+      <div class="pull">
+        作ったものを独自ドメインで公開する工程は毎回ここで詰まる。「スキルを1つ入れると、エージェントが外部サービスの API まで含めて面倒を見る」という形は Namecheap に限らず、自分が使っているサービスへそのまま移植できる考え方。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">326</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/ai-and-ml/github-copilot/how-github-copilot-enables-zero-dns-configuration-for-github-pages/">GitHub Blog（公式）</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-15</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/ai-and-ml/github-copilot/how-github-copilot-enables-zero-dns-configuration-for-github-pages/">https://github.blog/ai-and-ml/github-copilot/how-github-copilot-enables-zero-dns-configuration-for-github-pages/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-openrouter-for-7b/">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-08-16/">
+      ← 前日 · 2026-08-16
+      <span class="big">Anthropic が2回目の Risk Report を公開 — 自律性リスクを「very low」から「low」へ引き上げ</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-08-17/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260817.0728</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

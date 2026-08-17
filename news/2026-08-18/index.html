@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-08-18 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-08-18 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0818</span>
+    <span class="sep">/</span>
+    <span>2026-08-18</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260818.0745</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-08-18/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:45 · MON</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · MONDAY · AUGUST 18, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>08<span class="dot">.</span>18</h1>
+    <div class="strap">
+      <span>Cursor · Claude · ABC · Anthropic</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 5 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 開発ツール・インフラ <span class="sep">/</span> CURSOR CHANGELOG / @CURSOR_AI <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cursor が独自のコードホスティング「Origin」を正式ローンチ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-18/topic_1.png" data-alt="Cursor が独自のコードホスティング「Origin」を正式ローンチ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-18/topic_1.png" alt="Cursor が独自のコードホスティング「Origin」を正式ローンチ" />
+      </div>
+      <p class="lede">
+        Cursor が自社のコードホスティング／プルリクエスト基盤「Origin」を、08-17 に有料プラン全体の早期ベータとして公開した。リポジトリ・PR・コードブラウズ・GitHub 同期を備え、diff もコメントもマージもエディタを出ずに終わる。土台は 2025年12月に買収した Graphite の技術を作り直したもので、エディタからエージェント基盤へ広げてきた会社が、コードの置き場所そのものへ降りてきた。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">08-17 から有料プラン全体で早期ベータ提供。エンタープライズは管理者がオプトアウトできる</li>
+        <li data-i="02">出荷済みはリポジトリ・PR・コードブラウズ・GitHub 同期の4点。Codebase タブ、CLI からのインストール、リアルタイム同期、GitHub との双方向 PR コメントも入っている</li>
+        <li data-i="03">連携は3本が稼働中。プレビューデプロイの Vercel、Depot、CI/CD の Buildkite</li>
+        <li data-i="04">同期済みリポジトリに read か write 権限があれば、Cursor 内から誰でも閲覧できる</li>
+        <li data-i="05">エージェント特化の機能は「近日」とされ、まだ出ていない。価格とエンタープライズ向けの詳細も未公表</li>
+        <li data-i="06">ローンチ当日に GitHub が大規模障害を起こしており、その偶然が拡散を押し上げた（公式ポストは Likes 約1.5万）</li>
+      </ul>
+      <div class="pull">
+        AIエージェントが大量に PR を出す前提で、ホスティング側が設計され直し始めた。ただしコードの置き場所は移行コストが最も高い層なので、本番を移すのではなく検証リポジトリ1本で試すのが現実的な入り口になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">14,962</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://cursor.com/changelog/origin-code-hosting">Cursor Changelog / @cursor_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-17</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 開発ツール・インフラ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://cursor.com/changelog/origin-code-hosting">https://cursor.com/changelog/origin-code-hosting</a></dd>
+        <dd><a href="https://x.com/cursor_ai/status/2089399057659596847">x.com/cursor_ai/status/20893990576595968…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · CLAUDEDEVSANTHROPI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式アカウント発表 <span class="sep">/</span> @CLAUDEDEVS（ANTHROPIC 公式） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code に `/design` スキル — アートボードを見て選んでから実装させる</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-18/topic_2.png" data-alt="Claude Code に `/design` スキル — アートボードを見て選んでから実装させる" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-18/topic_2.png" alt="Claude Code に `/design` スキル — アートボードを見て選んでから実装させる" />
+      </div>
+      <p class="lede">
+        Anthropic が Claude Code に `/design` スキルをリサーチプレビューとして追加した。Claude Design のアートボード編集の流れを CLI とデスクトップに持ち込むもので、実装は artifacts の上に載っている。`/design` を叩くと UI 候補が編集可能なアートボードで並び、そこから選んで調整し、そのまま Claude に実装させられる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">リサーチプレビュー扱い。Pro / Max / Team / Enterprise で使え、Claude Code の更新が必要</li>
+        <li data-i="02">「選ぶ → 直す → 実装させる」の3手が同じセッションで完結する</li>
+        <li data-i="03">実装基盤は artifacts。Claude Design 側の資産をそのまま持ち込んでいる</li>
+        <li data-i="04">08-18 時点で Claude Code の CHANGELOG（2.1.234 まで）に該当項目は無く、スキル配信で入っている</li>
+      </ul>
+      <div class="pull">
+        言葉だけで画面を詰めていた工程に、見て決める段が挟まる。プロンプトを言い換えても思った画面にならない、という詰まりどころに直接効く。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,324</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2089471692762673408">@ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-17</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式アカウント発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2089471692762673408">x.com/ClaudeDevs/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · ANTHROPIC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💼 AI×ビジネス活用 <span class="sep">/</span> ANTHROPIC 導入事例ブログ <span class="sep">/</span> NEWS
+      </div>
+      <h2>ABC Legal が Claude Managed Agents を50体超で運用 — 組んだのは非エンジニア15人</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-18/topic_3.png" data-alt="ABC Legal が Claude Managed Agents を50体超で運用 — 組んだのは非エンジニア15人" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-18/topic_3.png" alt="ABC Legal が Claude Managed Agents を50体超で運用 — 組んだのは非エンジニア15人" />
+      </div>
+      <p class="lede">
+        従業員1,100人の法務書類配達会社 ABC Legal が、2026年7月時点で本番稼働50体超のエージェント群を運用している。対象は送達・電子申立・出廷代理・マーケティング・コンプライアンス・財務まで広がり、一部のエージェントが担う人手作業ではコストが約50%減った。組んだのは CTO が集めた15人の推進委員会で、その中にソフトウェア開発者は1人もいない。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">本番稼働は50体超（2026年7月時点）。日常的に Claude を使う社員は全部門で約310人</li>
+        <li data-i="02">コスト削減は「一部のエージェントが担う人手作業で約50%」。本格的な最適化を入れる前の数字で、全社の総コスト削減ではない</li>
+        <li data-i="03">推進委員会15人（財務・マーケティング・オペレーション・開発）にソフトウェア開発者はゼロ。1週間で動くものを作り、そこから社内へ広げた</li>
+        <li data-i="04">改善は3役の分業で回る。作業して判断を記録する実務エージェント、Slack のリアクションと返信から人のフィードバックを毎時・毎日集める Harvester、週次でプロンプトと設定の変更案を PR として出す Tuner。PR は人がレビューしてから反映する</li>
+        <li data-i="05">コンプライアンス審査の「Charvis」は人間のレビュアーと98%一致している</li>
+        <li data-i="06">姉妹会社 Docketly（50人）でも運用している</li>
+      </ul>
+      <div class="pull">
+        「エージェントを何体か動かしてみた」ではなく、業務単位でコスト構造が変わった側の一次事例。しかも作ったのが非エンジニアなので、社内展開の順序としてそのまま参考にできる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,237</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://claude.com/blog/how-abc-legal-turned-every-employee-into-a-builder-with-claude-managed-agents">Anthropic 導入事例ブログ</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-17</dd>
+        <dt>CATEGORY</dt>
+        <dd>💼 AI×ビジネス活用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://claude.com/blog/how-abc-legal-turned-every-employee-into-a-builder-with-claude-managed-agents">https://claude.com/blog/how-abc-legal-turned-every-employee-into-a-builder-with-claude-managed-agents</a></dd>
+        <dd><a href="https://x.com/ClaudeDevs/status/2089436153208549876">x.com/ClaudeDevs/status/2089436153208549…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · CLAUDE PLATFORM  /</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 開発者向け仕様変更 <span class="sep">/</span> CLAUDE PLATFORM リリースノート / ヘルプセンター <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic の旧 Workbench と実験的 prompt tools API が 8/17 で終了</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-18/topic_4.png" data-alt="Anthropic の旧 Workbench と実験的 prompt tools API が 8/17 で終了" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-18/topic_4.png" alt="Anthropic の旧 Workbench と実験的 prompt tools API が 8/17 で終了" />
+      </div>
+      <p class="lede">
+        Claude Console の旧 Workbench が 2026-08-17 でアクセス終了になった。あわせて実験的な prompt tools API 3本（generate_prompt / improve_prompt / templatize_prompt）も同日に廃止され、以後これらのエンドポイントを叩くとエラーが返る。予告は 07-17 のリリースノートに出ていたので急な話ではないが、コードから呼んでいた側は今日から黙って壊れる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">旧 Workbench（platform.claude.com/workbench）は 08-17 でアクセス終了</li>
+        <li data-i="02">実験的 prompt tools API 3本も同日廃止。以後は呼ぶとエラーを返す</li>
+        <li data-i="03">移行先は新しい Workbench（Playground）だが、保存済みプロンプト・変数・eval は引き継げない</li>
+        <li data-i="04">エクスポートはバナーと Organizational Settings から可能だったが、期限は既に過ぎている</li>
+        <li data-i="05">予告は 07-17 のリリースノート。効力が発生したのが 08-17 という関係にあたる</li>
+      </ul>
+      <div class="pull">
+        プロンプト生成・改善を API に任せていたパイプラインは、エラーが出て初めて気づく種類の壊れ方をする。該当エンドポイントを呼んでいないか、今日のうちに確認する価値がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://support.claude.com/en/articles/8606378-how-do-i-use-the-workbench">Claude Platform リリースノート / ヘルプセンター</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-17</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 開発者向け仕様変更</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://support.claude.com/en/articles/8606378-how-do-i-use-the-workbench">https://support.claude.com/en/articles/8606378-how-do-i-use-the-workbench</a></dd>
+        <dd><a href="https://platform.claude.com/docs/en/release-notes/overview">platform.claude.com/docs/en/release-note…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · OPENAITHE BUILDERS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🧠 コンテキストエンジニアリング <span class="sep">/</span> OPENAI「THE BUILDER'S GUIDE TO GPT-5.6」 <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉モデルを上げる前に器を直す — OpenAI のコスト設計ガイド</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-18/topic_5.png" data-alt="〈知見〉モデルを上げる前に器を直す — OpenAI のコスト設計ガイド" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-18/topic_5.png" alt="〈知見〉モデルを上げる前に器を直す — OpenAI のコスト設計ガイド" />
+      </div>
+      <p class="lede">
+        OpenAI が GPT-5.6 でエージェントを安く速く組むための設計指針を公開している。主張は一貫していて、行き詰まったら上位モデルに切り替えるのではなく、推論の持ち越し・文脈の圧縮・ツール呼び出しのプログラム化で伸ばす。同じ GPT-5.6 Sol のまま構成だけを変えて ARC-AGI-3 が 13.3% から 38.3% へ上がり、出力トークンは約6分の1に減った、という数字がその根拠になっている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">ARC-AGI-3: GPT-5.6 Sol が標準構成で 13.3%。推論保持とコンパクションを併用して 38.3%、出力トークンは約1/6</li>
+        <li data-i="02">BrowseComp: GPT-5.5（Extra High）が 84.36% で $33.27、GPT-5.6 Luna（Extra High）が 84.04% で $1.33。ほぼ同スコアで約96%安い</li>
+        <li data-i="03">Agents' Last Exam: ハーネスを固定すると、GPT-5.6 Sol の reasoning &quot;low&quot; が GPT-5.5 の &quot;high&quot; を上回った</li>
+        <li data-i="04">導入例では、不動産の Hypha が文書抽出で GPT-5.5 の精度98%を保ったまま費用1/18、Rogo は財務リサーチで入力トークン21%減、PlayerZero はコスト64%減・レイテンシ90%減・F1 5ポイント改善</li>
+        <li data-i="05">指針は6つ。推論強度を下げる、小さいティアを使う、推論を持ち越す、コンテキストを圧縮する、ツール呼び出しをプログラム側で束ねる、マルチエージェントを選択的に使う</li>
+        <li data-i="06">数値はすべて OpenAI 自身の計測。公開は 08-13</li>
+      </ul>
+      <div class="pull">
+        「効かないからモデルを上げる」の前に、器（ハーネス）側でここまで動くという実測。手を入れる先はプロンプトではなく構成のほうで、請求額に直接効く。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,191</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://openai.com/index/builders-guide-to-gpt-5-6/">OpenAI「The builder's guide to GPT-5.6」</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-13</dd>
+        <dt>CATEGORY</dt>
+        <dd>🧠 コンテキストエンジニアリング</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://openai.com/index/builders-guide-to-gpt-5-6/">https://openai.com/index/builders-guide-to-gpt-5-6/</a></dd>
+        <dd><a href="https://x.com/OpenAIDevs/status/2089374207818059793">x.com/OpenAIDevs/status/2089374207818059…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · TECHTALKJP / COJI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 AI開発ツール <span class="sep">/</span> @TECHTALKJP / COJI 溝口浩二 <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>〈知見〉AI臭さと読みにくさは別物 — 日本語 lint に読解負荷レーンが入った</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-18/topic_6.png" data-alt="〈知見〉AI臭さと読みにくさは別物 — 日本語 lint に読解負荷レーンが入った" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-18/topic_6.png" alt="〈知見〉AI臭さと読みにくさは別物 — 日本語 lint に読解負荷レーンが入った" />
+      </div>
+      <p class="lede">
+        日本語文章 lint の natural-japanese が v1.4.0 で、読みにくい箇所を指し示す専用レーンを追加した。`lint.py --reading-load` のオプトインで、severity は info のみ。判定もスコアも出さず、既存の「AI臭さ」の自然度スコアには結果を一切混ぜない。同じリポジトリが以前「読みやすさは機械的に閾値化できない」と結論づけていた領域を、判定基準を差し替えて実装し直したものにあたる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">検出器は5本。一文が長い、列挙が一文に埋もれている、二重否定、漢字の連続、「の」の連鎖</li>
+        <li data-i="02">却下と採用が逆転した理由は基準の違いにある。以前の NO-GO は「AIか人間かを見分けられるか」で判定していて、文長は AI 検出率 1.0% だった。今回は「直したら読みやすくなるか」で問い直している</li>
+        <li data-i="03">機械化してよいのは「読み流すと見落とすもの」だけ、という線引きを明文化した。これに沿って「接続助詞の『が』の連鎖」検出器は削除されている（AI生成9,889文中で反応1件）</li>
+        <li data-i="04">「読点が4個以上」検出器は文書の62%で反応して廃止。真因は読点ではなく列挙の埋もれで、別の検出器として作り直した</li>
+        <li data-i="05">文頭反復の検出が Markdown の `**` や `![]()` を文頭の形態素として数えており、技術記事60本での指摘の42%がこれ由来だった</li>
+        <li data-i="06">指摘密度は AI生成 145件/1,000文 に対し人間執筆 37件/1,000文。ただし著者自身が「測っているのは巧拙ではなく一文あたりの情報密度に近い」と留保している</li>
+      </ul>
+      <div class="pull">
+        禁止語や翻訳調を全部潰しても、一文に詰め込みすぎた文章は読みにくいまま残る。この2つを別レーンで見るという設計は、AI に文章を書かせている全員に効く。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">305</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://artifactshare.com/a/2aretj5195">@techtalkjp / coji 溝口浩二</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-16</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 AI開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://artifactshare.com/a/2aretj5195">https://artifactshare.com/a/2aretj5195</a></dd>
+        <dd><a href="https://github.com/coji/natural-japanese">github.com/coji/natural-japanese</a></dd>
+        <dd><a href="https://x.com/techtalkjp/status/2088902166488789194">x.com/techtalkjp/status/2088902166488789…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · FIGMA BLOG / FIGMA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🎨 AI×デザイン <span class="sep">/</span> FIGMA BLOG / FIGMA LEARN <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉Figma のエージェントに「スキル」— Markdown 1枚を `/` コマンドで呼ぶ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-18/topic_7.png" data-alt="〈知見〉Figma のエージェントに「スキル」— Markdown 1枚を `/` コマンドで呼ぶ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-18/topic_7.png" alt="〈知見〉Figma のエージェントに「スキル」— Markdown 1枚を `/` コマンドで呼ぶ" />
+      </div>
+      <p class="lede">
+        デザイナーの判断基準や作業手順を Markdown で書いておくと、Figma のエージェントから `/` コマンドで呼び出せる。Figma Community には研究・デザインシステム・ハンドオフなど50本超のスキルが公開されており、他のエージェントへコピーして使うこともできる。Claude Code の Skills と同じ形が、デザインツール側にも来た。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">スキルの実体は Agent Skills 仕様に沿った Markdown ファイル。チャットサイドバーで書くか、既存の md をアップロードする</li>
+        <li data-i="02">呼び出しは `/follow-ds-guidelines` `/design-crit` のようなスラッシュコマンド</li>
+        <li data-i="03">Figma Community の AI skills ライブラリに公開・リミックスできる。現時点で50本超</li>
+        <li data-i="04">ファイル内の文脈からエージェント自身にスキルを作らせることもできる</li>
+      </ul>
+      <div class="pull">
+        「暗黙知を手順書にして機械に渡す」が、ツールを跨いだ共通の作法になりつつある。デザイン込みで内製したい場合、Claude Code 側で覚えた作法がそのまま通じる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">142</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.figma.com/blog/got-skills-make-the-figma-agent-a-better-collaborator/">Figma Blog / Figma Learn</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-14</dd>
+        <dt>CATEGORY</dt>
+        <dd>🎨 AI×デザイン</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.figma.com/blog/got-skills-make-the-figma-agent-a-better-collaborator/">https://www.figma.com/blog/got-skills-make-the-figma-agent-a-better-collaborator/</a></dd>
+        <dd><a href="https://help.figma.com/hc/en-us/articles/40283639496599-Custom-skills-for-the-Figma-agent-and-Figma-Make">help.figma.com/hc/en-us/articles/4028363…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://cursor.com/changelog/origin-code-hosting">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-08-17/">
+      ← 前日 · 2026-08-17
+      <span class="big">Stripe が AI ゲートウェイの OpenRouter を 70億ドル超で買収へ</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-08-18/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260818.0745</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

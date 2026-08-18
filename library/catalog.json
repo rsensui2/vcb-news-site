@@ -1,7 +1,41 @@
 {
- "generated": "2026-08-18T08:20:05+09:00",
- "count": 63,
+ "generated": "2026-08-19T08:20:00+09:00",
+ "count": 65,
  "items": [
+  {
+   "type": "article",
+   "type_label": "記事（エージェント経営）",
+   "title": "毎朝の動画ニュースを1本1円で作る──AIに作らせない範囲を決めるという設計",
+   "date": "2026-08-18",
+   "url": "https://ai-agent.co.jp/articles/one-yen-news-video/",
+   "tags": [
+    "現場ログ",
+    "動画生成",
+    "自動化",
+    "コスト設計"
+   ],
+   "description": "毎朝のAIニュースに動画を付けた。外部APIに払っているのは音声合成だけで1本約1円。生成AIに何を作らせないかを決めるだけで、費用も品質のばらつきも同時に落ちる。",
+   "extra_links": []
+  },
+  {
+   "type": "manga",
+   "type_label": "漫画",
+   "title": "1円のニュース番組 ── AIに作らせない範囲を決める",
+   "date": "2026-08-18",
+   "url": "https://ai-agent.co.jp/manga/one-yen-news-video/",
+   "tags": [],
+   "description": "28ページ",
+   "extra_links": [
+    {
+     "label": "x",
+     "url": "https://x.com/rsensui/status/2089709779413541139"
+    },
+    {
+     "label": "note",
+     "url": "https://note.com/rsensui/n/nfea67b11bed2"
+    }
+   ]
+  },
   {
    "type": "article",
    "type_label": "記事（エージェント経営）",

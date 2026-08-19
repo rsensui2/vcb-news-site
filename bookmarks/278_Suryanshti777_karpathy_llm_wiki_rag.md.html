@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №159</span>
+    <span class="tick">BOOKMARK №167</span>
     <span class="sep">/</span>
     <span>2026-05-09</span>
     <span class="sep">/</span>
     <span>@Suryanshti777</span>
     <span class="sep">/</span>
-    <span>488 ITEMS</span>
+    <span>496 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:14 WED</span>
+    <span>JST 07:22 THU</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,19 +305,19 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-08-18/">NEWS</a>
+      <a href="../news/2026-08-19/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:14 · WED</div>
+    <div class="meta">JST · 07:22 · THU</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-05-09 <span>/</span> №159
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-05-09 <span>/</span> №167
     </div>
     <div class="cat-line">
       <span>📖 技術解説 / アーキテクチャ</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">Karpathy の &quot;LLM Wiki&quot; — RAG の限界を超える知識パラダイム</h1>
     <div class="strap">
-      <span><span class="label">№</span>159 / 488</span>
+      <span><span class="label">№</span>167 / 496</span>
       <span><span class="label">SRC</span><a href="https://x.com/Suryanshti777/status/2053144730108829706" target="_blank" rel="noopener noreferrer">x.com/Suryanshti777 ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/278_Suryanshti777_karpathy_llm_wiki_rag.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">159<span class="ord">BOOKMARK / 488</span></aside>
+    <aside class="numeral">167<span class="ord">BOOKMARK / 496</span></aside>
     <article class="prose">
 <p><strong>有益度:</strong> ⭐⭐⭐</p><h2>概要</h2><p>RAG（Retrieval-Augmented Generation）には「何も学習しない」という根本的な欠陥がある、と指摘する解説記事。RAG はクエリのたびにチャンクを取得し回答を生成しては破棄するため、知識が蓄積されない。Andrej Karpathy が提唱する「LLM Wiki」パターンは、モデルが知識を都度取得するのではなく「維持・更新」する設計を提案する。</p><h2>ハイライト</h2><ul><li>RAG はモデルが賢く見えても、毎クエリごとに理解をゼロから再構築する「ステートレス」な仕組み</li><li>NotebookLM、PDF チャット、エンタープライズ copilot もこの天井に当たっている</li><li>LLM Wiki は raw ソースとユーザーの間に「永続的な wiki レイヤー」を構築する</li><li>ドキュメントを再スキャンするのではなく、synthesis（統合された理解）を持続させる</li><li>知識が「複利的」に蓄積し、構造が進化していく</li></ul><h2>なぜ Vibe Coder Bootcamp に重要か</h2><p>「AI にドキュメントを読ませる」系プロダクトを作る受講者にとって、RAG をそのまま採用すると知識が蓄積しない設計上の限界に当たる。永続的な synthesis レイヤー（wiki 型）を持つことで、長期運用するナレッジベースが質的に変わる。Ryoko 自身の wiki ingest パイプラインもこの思想に近い。</p><h2>X Article 本文</h2><p>RAG has a fatal flaw nobody talks about: it never actually learns anything.</p><p>Every time you upload documents into an AI system, the same cycle happens: retrieve chunks, generate answer, discard synthesis, repeat forever.</p><p>The model may sound intelligent. But underneath, it's rebuilding understanding from scratch on every query. No persistent synthesis. No evolving structure. No compounding knowledge. Just temporary reasoning over raw context windows.</p><p>That's the ceiling of almost every &quot;chat with your docs&quot; product today. NotebookLM. PDF chat apps. Most enterprise AI copilots. Even ChatGPT uploads. Useful? Absolutely. But fundamentally stateless.</p><p>Andrej Karpathy's &quot;LLM Wiki&quot; pattern introduces a much more important idea: what if the model maintained knowledge instead of repeatedly retrieving it?</p><p>The distinction sounds small. It completely changes the architecture. Instead of treating documents as something to continuously re-scan, the system builds a persistent wiki layer between the user and the raw sources.</p><h2>日本語訳全文</h2><p>RAG には、誰も語らない致命的な欠陥がある——それは「決して何も学習しない」ことだ。</p><p>AI システムにドキュメントをアップロードするたびに、同じサイクルが繰り返される。チャンクを取得し、回答を生成し、統合（synthesis）を破棄し、それを永遠に繰り返す。</p><p>モデルは賢く聞こえるかもしれない。しかしその内側では、クエリのたびに理解をゼロから再構築しているだけだ。永続的な synthesis もなく、進化する構造もなく、複利的に積み上がる知識もない。あるのは raw なコンテキストウィンドウ上での一時的な推論だけだ。</p><p>それが、今日のほぼすべての「ドキュメントとチャットする」系プロダクトの天井である。NotebookLM、PDF チャットアプリ、大半のエンタープライズ AI copilot、ChatGPT のアップロード機能でさえ同じだ。役に立つか？　もちろん役に立つ。だが本質的にステートレスなのだ。</p><p>Andrej Karpathy の「LLM Wiki」パターンは、はるかに重要なアイデアを提示する——モデルが知識を繰り返し取得するのではなく、知識を「維持」したらどうなるか？</p><p>この違いは小さく聞こえる。だがアーキテクチャを完全に変える。ドキュメントを継続的に再スキャンする対象として扱うのではなく、システムはユーザーと raw ソースの間に「永続的な wiki レイヤー」を構築する。</p>
     </article>
@@ -390,14 +390,14 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 488 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 496 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-08-18/">TODAY</a></li>
+          <li><a href="../news/2026-08-19/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -424,7 +424,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-08-19</span>
+      <span>BUILD 2026-08-20</span>
     </div>
   </div>
 </footer>

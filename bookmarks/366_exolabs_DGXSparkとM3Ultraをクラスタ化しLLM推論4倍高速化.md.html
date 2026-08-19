@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №442</span>
+    <span class="tick">BOOKMARK №450</span>
     <span class="sep">/</span>
     <span>2025-10-16</span>
     <span class="sep">/</span>
     <span>@exolabs</span>
     <span class="sep">/</span>
-    <span>488 ITEMS</span>
+    <span>496 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:14 WED</span>
+    <span>JST 07:22 THU</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,19 +305,19 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-08-18/">NEWS</a>
+      <a href="../news/2026-08-19/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:14 · WED</div>
+    <div class="meta">JST · 07:22 · THU</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2025-10-16 <span>/</span> №442
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2025-10-16 <span>/</span> №450
     </div>
     <div class="cat-line">
       <span>🔧 インフラ / LLM 推論最適化</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">DGX Spark + M3 Ultra をクラスタ化して LLM 推論を 4 倍高速化 — prefill/decode をハード別に分担</h1>
     <div class="strap">
-      <span><span class="label">№</span>442 / 488</span>
+      <span><span class="label">№</span>450 / 496</span>
       <span><span class="label">SRC</span><a href="https://x.com/exolabs/status/1978525767739883736" target="_blank" rel="noopener noreferrer">x.com/exolabs ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/366_exolabs_DGXSpark%E3%81%A8M3Ultra%E3%82%92%E3%82%AF%E3%83%A9%E3%82%B9%E3%82%BF%E5%8C%96%E3%81%97LLM%E6%8E%A8%E8%AB%964%E5%80%8D%E9%AB%98%E9%80%9F%E5%8C%96.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">442<span class="ord">BOOKMARK / 488</span></aside>
+    <aside class="numeral">450<span class="ord">BOOKMARK / 496</span></aside>
     <article class="prose">
 <p><strong>有益度:</strong> ⭐⭐⭐</p><p><strong>エンゲージメント:</strong> Likes 2,911 / RT 423 / Bookmarks 1,995 / Views 721,102</p><h2>概要</h2><p>EXO Labs が、NVIDIA DGX Spark と Apple M3 Ultra Mac Studio をクラスタ化し、LLM 推論を約 4 倍高速化する手法を公開。2 台のハードの特性（片方は演算性能が高く、片方はメモリ帯域が広い）を、推論の 2 フェーズ（prefill / decode）に応じて使い分けるのがポイント。</p><h2>まとめ</h2><ul><li>スペック比較:</li></ul><p>  - DGX Spark: 128GB / 帯域 273GB/s / 100 TFLOPS(fp16) / $3,999 — 演算は強いがメモリ帯域が狭い。</p><p>  - M3 Ultra: 256GB / 帯域 819GB/s / 26 TFLOPS(fp16) / $5,599 — 帯域は約3倍広いが FLOPS は約1/4。</p><ul><li>着眼点: DGX Spark は M3 Ultra より「メモリ帯域が3倍狭いが FLOPS が4倍多い」という非対称性がある。</li><li>分担設計:</li></ul><p>  - compute-bound な <strong>prefill</strong> を演算の強い DGX Spark で実行。</p><p>  - memory-bound な <strong>decode</strong> を帯域の広い M3 Ultra で実行。</p><p>  - 両者の間は <strong>KV キャッシュを 10GbE でストリーミング</strong>して受け渡す。</p><ul><li>結果: それぞれのハードの得意フェーズだけを担わせることで、単体運用より大きな speedup を実現。</li></ul>
     </article>
@@ -384,14 +384,14 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 488 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 496 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-08-18/">TODAY</a></li>
+          <li><a href="../news/2026-08-19/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -418,7 +418,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-08-19</span>
+      <span>BUILD 2026-08-20</span>
     </div>
   </div>
 </footer>

@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №071</span>
+    <span class="tick">BOOKMARK №079</span>
     <span class="sep">/</span>
     <span>2026-06-25</span>
     <span class="sep">/</span>
     <span>@ClaudeDevs</span>
     <span class="sep">/</span>
-    <span>488 ITEMS</span>
+    <span>496 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:14 WED</span>
+    <span>JST 07:22 THU</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,19 +305,19 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-08-18/">NEWS</a>
+      <a href="../news/2026-08-19/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:14 · WED</div>
+    <div class="meta">JST · 07:22 · THU</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-06-25 <span>/</span> №071
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-06-25 <span>/</span> №079
     </div>
     <div class="cat-line">
       <span>📰 AI（Anthropic / エンタープライズ / アクセス制御）</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">Claude の「エージェント・アイデンティティ」— 共有チャンネルでは Claude 自身の資格情報で動く</h1>
     <div class="strap">
-      <span><span class="label">№</span>071 / 488</span>
+      <span><span class="label">№</span>079 / 496</span>
       <span><span class="label">SRC</span><a href="https://x.com/ClaudeDevs/status/2069895377080443271" target="_blank" rel="noopener noreferrer">x.com/ClaudeDevs ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/352_ClaudeDevs_%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%82%A2%E3%82%A4%E3%83%87%E3%83%B3%E3%83%86%E3%82%A3%E3%83%86%E3%82%A3_Claude%E3%81%AF%E8%87%AA%E5%88%86%E3%81%AE%E8%B3%87%E6%A0%BC%E6%83%85%E5%A0%B1%E3%81%A7%E5%8B%95%E3%81%8F.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">071<span class="ord">BOOKMARK / 488</span></aside>
+    <aside class="numeral">079<span class="ord">BOOKMARK / 496</span></aside>
     <article class="prose">
 <p><strong>有益度:</strong> ⭐⭐⭐⭐</p><p><strong>エンゲージメント:</strong> Likes 2,948 / RT 165 / Replies 147 / Bookmarks 1,163 / Views 313,493</p><h2>概要</h2><p>Anthropic 公式（ClaudeDevs）が、複数人がいる共有チャンネルで Claude が動くときに「誰の権限（資格情報）を使うのか」という問いに答えたスレッド。結論は「Claude 自身の権限」。チームに Claude をタグ付けすると、Claude は他のメンバーと同じように自分専用のアカウント／資格情報を割り当てられる。この仕組みを <strong>agent identity（エージェント・アイデンティティ）</strong> と呼ぶ。</p><h2>まとめ</h2><ul><li><strong>DM とチャンネルで挙動が違う</strong>: 1 対 1 の DM では Claude は「あなたとして」動く（あなたのコネクタ・あなたの名前で。個人メールやカレンダーはここが定位置）。3 人以上いる共有チャンネルでは「借りるべき正しい権限セット」が存在しないため、Claude は「Claude 自身として」動く。</li><li><strong>agent identity の中身</strong>: チャンネルでは Claude が自分専用の Linear アカウント・GitHub アカウント・データウェアハウスのサービスアカウントを持つ。人間のチームメイトと同じ扱いでプロビジョニングされる。</li><li><strong>管理者による制御</strong>: 管理者が一度プロビジョニングし、チャンネルごとに到達範囲をスコープできる。共有スペースでは広い読み取り権限、機微なツールは限られた人だけがいる場所でのみ、といった粒度で制御。</li><li><strong>設計思想</strong>: 「共有作業で役立つ程度のアクセスは Claude に与えつつ、それがどこで止まるかは管理者が正確にコントロールする」。</li></ul><h2>原文</h2><blockquote>When Claude is working in a channel with four people, whose credentials does it use?</blockquote><blockquote>The answer: its own. When tagging Claude, Claude gets provisioned like any other teammate, with its own credentials.</blockquote><blockquote>We call this access model &quot;agent identity&quot;. Here's how it works: 🧵</blockquote><h2>スレッド全体</h2><h3>Part 1 (親ポスト)</h3><p>4 人いるチャンネルで Claude が作業するとき、誰の資格情報を使うのか? 答えは「Claude 自身のもの」。Claude をタグ付けすると、Claude は他のチームメイトと同じように自分専用の資格情報でプロビジョニングされる。このアクセスモデルを「agent identity」と呼ぶ。</p><h3>Part 2</h3><p>1 人の個人アシスタントなら「ユーザーとして振る舞う」で問題ないが、Claude Tag はマルチプレイヤーになりうる。3 人が 1 つのスレッドにいると、借りるべき「正しい」権限が存在しない。だからチャンネルでは Claude は自分自身として、DM ではあなた自身として振る舞う。</p><h3>Part 3</h3><p>DM は単純なケース: Claude はあなた自身のコネクタ上で、あなたの名前で動く。個人メールやカレンダーはそこに属する。チャンネルでこそ agent identity が効いてくる。Claude は自分の Linear アカウント、自分の GitHub アカウント、ウェアハウスの自分のサービスアカウントを持つ。</p><h3>Part 4</h3><p>管理者が一度プロビジョニングし、チャンネルごとに到達範囲をスコープする: 共有スペースでは広い読み取りアクセス、機微なツールはクリアされた数人がいる場所だけ。設定手順は Noah のビデオで解説。</p><h3>Part 5</h3><p>Claude には共有作業で役立つだけのアクセスを与え、管理者はそれがどこで止まるかを正確にコントロールする。詳細はブログで。</p>
     </article>
@@ -384,14 +384,14 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 488 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 496 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-08-18/">TODAY</a></li>
+          <li><a href="../news/2026-08-19/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -418,7 +418,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-08-19</span>
+      <span>BUILD 2026-08-20</span>
     </div>
   </div>
 </footer>

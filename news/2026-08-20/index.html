@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-08-20 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-08-20 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0820</span>
+    <span class="sep">/</span>
+    <span>2026-08-20</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260820.0738</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-08-20/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:38 · WED</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · WEDNESDAY · AUGUST 20, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>08<span class="dot">.</span>20</h1>
+    <div class="strap">
+      <span>Claude · OpenAI · Cursor · Codex</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 6 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 AI × 科学 <span class="sep">/</span> ANTHROPIC RESEARCH / @ANTHROPICAI <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude が設計したタンパク質バインダー、15標的中14で結合成功 — 業界標準の2〜3倍のヒット率</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-20/topic_1.png" data-alt="Claude が設計したタンパク質バインダー、15標的中14で結合成功 — 業界標準の2〜3倍のヒット率" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-20/topic_1.png" alt="Claude が設計したタンパク質バインダー、15標的中14で結合成功 — 業界標準の2〜3倍のヒット率" />
+      </div>
+      <p class="lede">
+        Anthropic が、Claude にゼロからのタンパク質ミニバインダー設計をやらせた実験の結果を公開した。15 の標的のうち 14 で結合に成功し、ヒット率は 22.6〜26.7%（複数標的モード）と 35.1%（単一標的モード）。protein design の分野で典型とされる 10〜15% の 2〜3 倍にあたる。設計は Adaptyv Bio と Twist Bioscience が独立に実験室で製造・試験しており、計算上のスコアではなく実物で確かめた数字になっている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">ミニバインダーは標的タンパク質に強く結合する小さなタンパク質。従来は1標的あたり数ヶ月の計算・最適化・スクリーニングが要った</li>
+        <li data-i="02">15標的中14で成功。少なくとも6標的で高親和性バインダーを得て、少なくとも4標的では既報の最良親和性に並んだ</li>
+        <li data-i="03">ヒット率 22.6〜26.7%（複数標的モード）/ 35.1%（単一標的モード）に対し、分野の典型値は 10〜15%</li>
+        <li data-i="04">使ったのは Mythos Preview と Opus 4.8。どちらもライフサイエンス研究向けにアクセスを絞った版で、一般提供モデルではない</li>
+        <li data-i="05">検証は外部2社（Adaptyv Bio / Twist Bioscience）が独立に実施。プロンプト・計算モデル・実験データは Hugging Face で公開、技術レポートも2本出ている</li>
+        <li data-i="06">Anthropic 自身が「バインダーは薬ではない」「予備的な結果」「デュアルユース懸念から一般提供モデルでは能力を制限している」と繰り返し留保をつけている</li>
+      </ul>
+      <div class="pull">
+        ベンチマークの点数と違って、結合したかどうかは外部の実験室が物理的に確かめている。解釈の余地がない数字が出たことに意味がある。同時に、能力を公表しながら一般提供モデルでは同じ能力を絞る、という運用の形もはっきり見えた。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">10,375</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.anthropic.com/research/Claude-accelerates-protein-design">Anthropic Research / @AnthropicAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-18</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 AI × 科学</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.anthropic.com/research/Claude-accelerates-protein-design">https://www.anthropic.com/research/Claude-accelerates-protein-design</a></dd>
+        <dd><a href="https://x.com/AnthropicAI/status/2089842387845804246">x.com/AnthropicAI/status/208984238784580…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · OPENAI  / OPENAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 データ保護・エンタープライズ <span class="sep">/</span> OPENAI 公式 / @OPENAI <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI、フロンティアモデルでも Zero Data Retention を続けると明言 — 「Private Safety Processing」をプレビュー</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-20/topic_2.png" data-alt="OpenAI、フロンティアモデルでも Zero Data Retention を続けると明言 — 「Private Safety Processing」をプレビュー" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-20/topic_2.png" alt="OpenAI、フロンティアモデルでも Zero Data Retention を続けると明言 — 「Private Safety Processing」をプレビュー" />
+      </div>
+      <p class="lede">
+        OpenAI が、フロンティアモデルについても API 顧客向けの Zero Data Retention（処理後にプロンプトと応答を保持しない）を続けると表明した。一方でエージェントが長時間・自律的に動くほど、安全システムは複数のやり取りをまたいだパターンを見る必要が出る。この衝突を解くために、OpenAI の担当者が中身を見ないまま自動システムだけがパターンを検出する Private Safety Processing をプレビューする。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">ZDR の約束は「リクエスト処理後にプロンプトとモデル応答を保持しない」「顧客コンテンツを OpenAI の担当者がレビューできる状態にしない」の2点</li>
+        <li data-i="02">背景にあったのは、一部のフロンティアモデル提供が「安全監視のために機密内容の保持を顧客に飲ませる」形になっていたこと。これがセキュリティ義務と衝突する組織が多かった</li>
+        <li data-i="03">Private Safety Processing は、関連する複数のやり取りにまたがって保護を広げつつ、担当者は保持されたコンテンツにアクセスしない設計</li>
+        <li data-i="04">現在は初期顧客とテスト中。9月からロールアウト開始と技術ホワイトペーパー公開の予定</li>
+        <li data-i="05">現時点で公開されているのは設計の宣言まで。検証可能な仕組みの説明は9月待ちになる</li>
+      </ul>
+      <div class="pull">
+        エージェントを業務に入れるときに必ず出る「うちのデータはどこに残るのか」に、提供側が技術で当てにきた。安全監視のためのログ保持と ZDR は正面から衝突していた論点なので、9月のホワイトペーパーは読む価値がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,946</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://openai.com/index/offering-zero-data-retention-for-frontier-models/">OpenAI 公式 / @OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 データ保護・エンタープライズ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://openai.com/index/offering-zero-data-retention-for-frontier-models/">https://openai.com/index/offering-zero-data-retention-for-frontier-models/</a></dd>
+        <dd><a href="https://x.com/OpenAI/status/2090165328290701800">x.com/OpenAI/status/2090165328290701800</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · CURSOR  / CURSORAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 AI開発ツール <span class="sep">/</span> CURSOR 公式 / @CURSOR_AI <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cursor の Cloud Agents が大型更新 — イベントで起きる、目標を持つ、サブエージェントに専用 VM</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-20/topic_3.png" data-alt="Cursor の Cloud Agents が大型更新 — イベントで起きる、目標を持つ、サブエージェントに専用 VM" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-20/topic_3.png" alt="Cursor の Cloud Agents が大型更新 — イベントで起きる、目標を持つ、サブエージェントに専用 VM" />
+      </div>
+      <p class="lede">
+        Cursor がクラウドエージェント周りをまとめて更新した。エージェントがイベントソース（スレッドや会話）を購読して何か起きたら起動する、`/goal` で長期の目標を渡して完了まで走らせる、サブエージェントが1体ずつ独立した VM とプロジェクトのクリーンコピーを持つ、という3点が中心。割り込みの挙動とスキルの使い方も変わった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">イベント駆動: Cursor Agent がスレッドや会話を購読し、何か起きたときに起きる。自分が作った PR には自動で購読して完了まで駆動する。Slack スレッドの監視やスケジュール実行にも対応</li>
+        <li data-i="02">`/goal`: 長期の目標を渡して完了するまで働かせる。公式の例は「flaky なテストを全部直して CI をグリーンにする」</li>
+        <li data-i="03">サブエージェントが1体ごとに隔離された VM とプロジェクトのクリーンコピーを持つ。親の変更を新品の環境でテストさせる／独立したバグ修正を並列で走らせる</li>
+        <li data-i="04">Steering の変更: 追いのメッセージが次のツール呼び出しまで待つようになり、動作の途中でエージェントを切らなくなった</li>
+        <li data-i="05">任意のスキルを Custom Mode としてチャットに固定できる（常時オンのスキル）。`/` から選んで ⌥⏎（Mac）/ Alt+Enter（Windows）</li>
+      </ul>
+      <div class="pull">
+        「1回聞いて1回答える」から「目標を持って常駐し、外の出来事に反応する」への移行が、また1つ実装として出た。サブエージェントごとの独立 VM は、並列で走らせたときの相互干渉をインフラ側で潰すという発想で、Claude Code の worktree 分離と同じ結論に別の手段で来ている。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,696</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2090136956101414982">@cursor_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 AI開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/cursor_ai/status/2090136956101414982">x.com/cursor_ai/…</a></dd>
+        <dd><a href="https://cursor.com/changelog">cursor.com/changelog</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · THSOTTIAUXOPENAI C</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 エージェント安全性 <span class="sep">/</span> @THSOTTIAUX（OPENAI CODEX 責任者） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Codex が誤ってファイルを消す問題、OpenAI が原因と5層の対策を公表</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-20/topic_4.png" data-alt="Codex が誤ってファイルを消す問題、OpenAI が原因と5層の対策を公表" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-20/topic_4.png" alt="Codex が誤ってファイルを消す問題、OpenAI が原因と5層の対策を公表" />
+      </div>
+      <p class="lede">
+        OpenAI の Codex 責任者が、GPT-5.6 搭載 Codex がユーザーの依頼していないファイル削除をした少数の報告について、調査結果と対策を公開した。最も深刻だったのは「一時作業を片付けるはずのコマンドが、代わりにユーザーのファイルを消す」パターン。原因は `$HOME` のようなシステム環境変数を一時作業用に流用していたことだった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">失敗モードは2つ。`$HOME` などのシステム環境変数を一時作業に流用し、片付けコマンドの組み立てが崩れると実際のホームディレクトリを指す。もう1つは一時パスに何があるか確認せずに削除・上書きしようとするもの</li>
+        <li data-i="02">モデル指示の層: 削除対象を実行前に確認する／一時ディレクトリは毎回新規に作る／システム環境変数を流用しない／復旧可能な操作を優先する／範囲が曖昧なら止まる</li>
+        <li data-i="03">実行時の層: 高リスクな削除コマンドを検出してレビューへ回す。弾かれたらより安全な方法へ誘導する</li>
+        <li data-i="04">権限 UI の層: Full access を誤って有効化しにくくし、危険な権限の組み合わせを制限。加えて Auto-review の破壊的操作検出を改善</li>
+        <li data-i="05">評価・学習の層: 観測された失敗を再生する専用評価を構築。RL タスクと採点器を追加中で、学習データからも破壊的操作を除外している</li>
+        <li data-i="06">ユーザー側の推奨は2点。アプリを最新に保つ／サンドボックスモード（&quot;Ask for approval&quot; か &quot;Approve for me&quot;）を使い、Full access は信頼でき復旧もできる環境だけにする</li>
+      </ul>
+      <div class="pull">
+        「AI が暴走した」ように語られがちな事象の実体が、`rm -rf &quot;$VAR/tmp&quot;` で `$VAR` が空になると親を消す、という古典的なシェルの罠だった。原因が分かれば防げる種類のもので、自分でエージェントループを組んでいる人ほど他人事ではない。対策を5層に分けて「どれか1つで防ごうとしていない」ところが参考になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">6,710</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/thsottiaux/status/2089891927659585918">@thsottiaux</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 エージェント安全性</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/thsottiaux/status/2089891927659585918">x.com/thsottiaux/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · CODEXCHANGES / CLA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 AI開発ツール・リリース <span class="sep">/</span> @CODEXCHANGES / @CLAUDECODELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Codex CLI v0.148.0 と Claude Code 2.1.235 が同日リリース — 直っているのは「長く回したときに効く」ところ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-20/topic_5.png" data-alt="Codex CLI v0.148.0 と Claude Code 2.1.235 が同日リリース — 直っているのは「長く回したときに効く」ところ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-20/topic_5.png" alt="Codex CLI v0.148.0 と Claude Code 2.1.235 が同日リリース — 直っているのは「長く回したときに効く」ところ" />
+      </div>
+      <p class="lede">
+        08-18 に Codex CLI v0.148.0（約300コミット、新機能6・バグ修正6領域）と Claude Code 2.1.235（CLI 変更19件）が相次いでリリースされた。どちらも派手な新機能ではなく、セッションの復元・コンテキストの取り回し・入力の質といった、長く回したときにだけ効いてくる部分の修正が並んでいる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Codex CLI の新機能: `/export`（TUI の会話を Markdown へ書き出し）、Amazon Bedrock Runtime が組み込みプロバイダに、Hooks が非同期実行と MCP ツール呼び出しに対応、セッションのフォーク（`codex exec fork`）とアーカイブ・復元</li>
+        <li data-i="02">Codex CLI の修正: モデル切替や設定更新がコンテキストに古い指示を残さなくなった。再開したセッションが元の作業ディレクトリと承認ポリシーまで復元するようになった</li>
+        <li data-i="03">Claude Code 2.1.235: ローカルの aspell/hunspell/ispell を使ったプロンプト入力のスペルチェック（任意設定）、`--eval-dir` オプション追加、`claude-folder` モデルの削除</li>
+        <li data-i="04">Claude Code の `SendMessage` が、セッション間配信に大きすぎるメッセージを送る前に弾くようになった（従来は送ってから失われていた）</li>
+        <li data-i="05">Claude Code 2.1.235 は 2.1.234 の1日0時間7分後のリリース。バンドルサイズは +352.8kB（+0.7%）</li>
+      </ul>
+      <div class="pull">
+        両者とも「長時間・複数セッションで回す」前提の修正に寄っている。モデル切替が古い指示を残さない、再開が承認ポリシーまで復元する、大きすぎるメッセージを送信前に弾く — どれもエージェントを1回使うだけなら踏まない不具合で、ハーネスの競争が機能の数から運用の安定性へ移ってきたことが分かる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">336</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/CodexChanges/status/2089842906811203949">@CodexChanges</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-18</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 AI開発ツール・リリース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/CodexChanges/status/2089842906811203949">x.com/CodexChanges/…</a></dd>
+        <dd><a href="https://x.com/ClaudeCodeLog/status/2089820945678528653">x.com/ClaudeCodeLog/status/2089820945678…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · ONOFUMIAI / IMASTU</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🎨 AI動画生成・プロンプト設計 <span class="sep">/</span> @ONOFUMI_AI / @IMASTUDIO_AI / @AIEHON_AYA <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>〈知見〉動画生成プロンプトは「カット表」で書く — MiniMax H3 の実例3本に共通する5層</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-20/topic_6.png" data-alt="〈知見〉動画生成プロンプトは「カット表」で書く — MiniMax H3 の実例3本に共通する5層" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-20/topic_6.png" alt="〈知見〉動画生成プロンプトは「カット表」で書く — MiniMax H3 の実例3本に共通する5層" />
+      </div>
+      <p class="lede">
+        MiniMax H3 でモーショングラフィックスを作った実例が3本まとめて出てきた。13カットのキャラクター・リビールトレーラー、15秒のファッションルックブック MV、歌詞連動のリリックビデオ。プロンプトが全文公開されていて、3本とも同じ構造で書かれている — 散文ではなく、時間ブロックに区切った「カット表」になっている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">共通する5層構造: 骨格の宣言 → 同一性の縛り → 1〜1.5秒刻みのタイムライン → 全体スタイル → 禁止事項</li>
+        <li data-i="02">各時間ブロックには「被写体の動き・カメラ・背景」の3要素を必ず書く。`CUT 07 | 6.00-7.00s - &lt;画面で起きること&gt;` の粒度まで落とす</li>
+        <li data-i="03">キャラクターの見た目（顔・体型・肌の色・服装）は冒頭で1回だけ宣言し、各カットでは繰り返さない。繰り返すと指示が競合する</li>
+        <li data-i="04">秒数は小数で書く。リリックビデオの実例は 11.333秒 / 10.750秒 と小数第3位まで指定していて、ビート同期は尺の精度で決まる</li>
+        <li data-i="05">禁止事項リスト（顔のドリフト、キャラクターの入れ替わり、余分な手足、崩れた手、ウォーターマーク、意図しない字幕）はそのまま自分のテンプレに転用できる</li>
+        <li data-i="06">「言わないとやらない」項目がモデルごとにある。MiniMax H3 はリップシンクを明示しないと口が動かない</li>
+        <li data-i="07">onofumi_AI の事例は MiniMax 公式 Skill を Claude 経由で駆動していて、生成15〜20分・自然言語での修正1回で済んでいる</li>
+      </ul>
+      <div class="pull">
+        ショート動画の内製では、1本あたりの試行回数がそのままコストになる。カット表化は試行回数を直接減らす手段で、しかも直したいカットだけ差し替えられる。商品紹介・採用ブランディング・イベント告知の縦型動画にも、衣装を場面に置き換えればそのまま流用できる構造になっている。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,586</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/onofumi_AI/status/2089683944233160721">@onofumi_AI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-18</dd>
+        <dt>CATEGORY</dt>
+        <dd>🎨 AI動画生成・プロンプト設計</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/onofumi_AI/status/2089683944233160721">x.com/onofumi_AI/…</a></dd>
+        <dd><a href="https://x.com/ImaStudio_ai/status/2085681358077137144">x.com/ImaStudio_ai/status/20856813580771…</a></dd>
+        <dd><a href="https://x.com/aiehon_aya/status/2089953825386107323">x.com/aiehon_aya/status/2089953825386107…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · PONGPONG2225</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🧠 プロンプト設計・画像生成 <span class="sep">/</span> @PONGPONG2225 <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>〈知見〉画像生成の「AI 感」は引き算で消す — 撮影条件を書くほど実在感が出る</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-20/topic_7.png" data-alt="〈知見〉画像生成の「AI 感」は引き算で消す — 撮影条件を書くほど実在感が出る" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-20/topic_7.png" alt="〈知見〉画像生成の「AI 感」は引き算で消す — 撮影条件を書くほど実在感が出る" />
+      </div>
+      <p class="lede">
+        人物写真の生成で「AI っぽさ」を消す追加プロンプトを18本まとめたスレッド。出発点は「『リアルにして』という抽象語を繰り返しても効かない」で、処方はきれいに作り込む指示ではなく、作り込みを抑える指示を足すこと。撮影条件・肌・瞳・手の4か所に集中している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">撮影条件を落とす: 高性能カメラではなくスマートフォンで撮影した日常のスナップ質感にする／窓から入る自然光や現場にある照明だけで撮る／わずかな手ブレとスマホ特有のノイズを残す</li>
+        <li data-i="02">肌: 均一になめらかにせず、毛穴・産毛・薄い赤み・自然な陰影を控えめに残す。CG 的質感・過度な美肌加工・不自然な光沢を名指しで抑制する</li>
+        <li data-i="03">瞳: 大きくしすぎず、自然な白目の量・左右差・まぶたの厚みを残す</li>
+        <li data-i="04">手: 自然な本数・関節・長さ・重なり方にし、スマートフォンの持ち方も現実的にする。破綻が集中するのは顔・手・瞳の3点</li>
+        <li data-i="05">ブックマーク 5,864 / 表示 45万と、この週の日本語プロンプト系では最も伸びた</li>
+      </ul>
+      <div class="pull">
+        3日前に配信した @kimuai08 の Web デザイン版と構造が同じで、AI 感は「未定義の変数をモデルが分布の平均で埋める」ことから生まれる。領域ごとに何が未定義かが違うだけで、Web デザインなら業界固有の語彙、人物写真なら撮影条件がそれにあたる。引き算の指示をテンプレ化しておけば、モデルが変わっても使い回せる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,904</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/pongpong2225/status/2089638754768310363">@pongpong2225</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-18</dd>
+        <dt>CATEGORY</dt>
+        <dd>🧠 プロンプト設計・画像生成</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/pongpong2225/status/2089638754768310363">x.com/pongpong2225/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://www.anthropic.com/research/Claude-accelerates-protein-design">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-08-19/">
+      ← 前日 · 2026-08-19
+      <span class="big">Claude が Gmail からメールを「送れる」ようになった — Drive の書き込みも承認つきで解禁</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-08-20/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260820.0738</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

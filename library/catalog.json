@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-19T08:26:50+09:00",
+ "generated": "2026-08-20T08:22:35+09:00",
  "count": 65,
  "items": [
   {
@@ -15,7 +15,12 @@
     "コスト設計"
    ],
    "description": "毎朝のAIニュースに動画を付けた。外部APIに払っているのは音声合成だけで1本約1円。生成AIに何を作らせないかを決めるだけで、費用も品質のばらつきも同時に落ちる。",
-   "extra_links": []
+   "extra_links": [
+    {
+     "label": "note版",
+     "url": "https://note.com/rsensui/n/n186173a6e555"
+    }
+   ]
   },
   {
    "type": "manga",

@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №004</span>
+    <span class="tick">BOOKMARK №009</span>
     <span class="sep">/</span>
     <span>2026-08-19</span>
     <span class="sep">/</span>
     <span>@thsottiaux</span>
     <span class="sep">/</span>
-    <span>496 ITEMS</span>
+    <span>502 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:22 THU</span>
+    <span>JST 07:32 FRI</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,19 +305,19 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-08-19/">NEWS</a>
+      <a href="../news/2026-08-20/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:22 · THU</div>
+    <div class="meta">JST · 07:32 · FRI</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-08-19 <span>/</span> №004
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-08-19 <span>/</span> №009
     </div>
     <div class="cat-line">
       <span>💻 AI開発ツール・安全性</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">Codex が誤ってファイルを消す問題への多層対策（OpenAI 公式・Codex 責任者）</h1>
     <div class="strap">
-      <span><span class="label">№</span>004 / 496</span>
+      <span><span class="label">№</span>009 / 502</span>
       <span><span class="label">SRC</span><a href="https://x.com/thsottiaux/status/2089891927659585918" target="_blank" rel="noopener noreferrer">x.com/thsottiaux ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/492_thsottiaux_Codex%E3%81%AE%E7%A0%B4%E5%A3%8A%E7%9A%84%E6%93%8D%E4%BD%9C%E3%83%AA%E3%82%B9%E3%82%AF%E3%82%92%E4%B8%8B%E3%81%92%E3%82%8B%E5%A4%9A%E5%B1%A4%E5%AF%BE%E7%AD%96.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">004<span class="ord">BOOKMARK / 496</span></aside>
+    <aside class="numeral">009<span class="ord">BOOKMARK / 502</span></aside>
     <article class="prose">
 <p><strong>有益度:</strong> ⭐⭐⭐⭐⭐</p><p><strong>エンゲージメント:</strong> Likes 6710 / RT 255 / Replies 0 / Bookmarks 951 / Views 946012</p><h2>日本語訳全文</h2><p>こんにちは！</p><p>Codex が作業中に破壊的な操作をしてしまうリスクを、この数週間でさらに下げました。その変更をまとめます。</p><p>数週間前、Codex の GPT-5.6 がユーザーの依頼していない破壊的な操作をした、という報告が少数寄せられ、調査を始めました。いちばん深刻だったのは、一時作業を片付けるはずのコマンドが、代わりにユーザーのファイルを消してしまう可能性があったというパターンです。これは当然あってはならないことです。</p><p>わかったのは次の2点です。</p><ul><li>Codex は作業中に一時フォルダを作り、あとで片付けます。まれに GPT-5.6 がこの片付けを誤りました。ひとつのパターンは、<code>$HOME</code> のようなシステム環境変数を一時作業用に流用してしまうこと。片付けコマンドの組み立てが崩れると、一時フォルダではなく実際のホームディレクトリを指してしまいます。</li><li>一時パスに何が既に置かれているか確認しないまま、削除・上書きしようとするケースもありました。</li></ul><p>対策は複数の層に入れました。</p><ul><li>Codex に対して、削除対象を実行前に確認する／一時ディレクトリは毎回新規に作る／システム環境変数を流用しない／復旧可能な操作を優先する／範囲が曖昧なら止まる、を明示的に指示。</li><li>危険度の高い削除コマンドを検出してレビューに回す実行時チェックを強化。コマンドが弾かれた場合は、モデルにより安全な方法を取るよう誘導。</li><li>Full access（フルアクセス）を誤って有効化しにくくし、警告を明確化。特に危険な権限の組み合わせをさらに制限。</li><li>Auto-review が破壊的操作をより正確に検出するよう更新。</li><li>観測された失敗を再生する専用の評価を構築。これらのリスクに焦点を当てた強化学習タスクと採点器も追加中で、学習データからも破壊的操作を除外している。</li></ul><p>この再生評価では、通常のコーディング作業をこなす能力を保ったまま、問題挙動を大幅に減らせました。</p><p>ユーザー側でやってほしいことが2つあります。</p><ul><li>Codex アプリを最新に保つこと。安全性・性能ほか常に改善しています。</li><li>サンドボックスモード（&quot;Ask for approval&quot; か &quot;Approve for me&quot;）のどちらかを使うこと。Full access は、信頼できて復旧もできる環境だけにしてください。</li></ul><p>それでは、よい Codex ライフを！</p><h2>まとめ</h2><p>OpenAI の Codex 責任者 Thibault Sottiaux が、GPT-5.6 搭載 Codex による意図しないファイル削除の調査結果と対策を公開した。原因は「一時フォルダの片付け」処理の失敗で、<code>$HOME</code> などのシステム環境変数を一時作業に流用した結果、片付けコマンドが実際のホームディレクトリを指してしまうパターンが最も深刻だった。対策はモデル指示・実行時チェック・権限UI・Auto-review・評価/学習データの5層に入っており、再生評価では通常のコーディング能力を落とさずに問題挙動が大幅に減ったとしている。ユーザー側の推奨は「アプリを最新に保つ」「Full access ではなく承認付きサンドボックスモードを使う」の2点。</p>
     </article>
@@ -359,9 +359,9 @@
       <span>← 新しいブックマーク</span>
       <span class="big">MiniMax H3 でリリックビデオを作る手順とプロンプト全公開</span>
     </a>
-    <a class="btn next" href="./499_pongpong2225_AI%E6%84%9F%E3%82%92%E6%B6%88%E3%81%99%E7%94%BB%E5%83%8F%E7%94%9F%E6%88%90%E3%83%97%E3%83%AD%E3%83%B3%E3%83%97%E3%83%8818%E9%81%B8.md.html">
+    <a class="btn next" href="./505_EEJ_OOXO_AI%E5%8B%95%E7%94%BB%E3%81%AE%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%E3%82%B7%E3%83%BC%E3%83%88%E3%81%AF%E5%BD%B9%E5%89%B2%E3%82%92%E5%88%86%E3%81%91%E3%81%A6%E4%BD%9C%E3%82%8B.md.html">
       <span>古いブックマーク →</span>
-      <span class="big">画像生成の「AI感」を消すプロンプト 18 選</span>
+      <span class="big">AI動画のキャラクターシートは役割を分けて作る</span>
     </a>
   </div>
 </section>
@@ -384,14 +384,14 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 496 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 502 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-08-19/">TODAY</a></li>
+          <li><a href="../news/2026-08-20/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -418,7 +418,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-08-20</span>
+      <span>BUILD 2026-08-21</span>
     </div>
   </div>
 </footer>

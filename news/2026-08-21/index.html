@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-08-21 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-08-21 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0821</span>
+    <span class="sep">/</span>
+    <span>2026-08-21</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260821.0750</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-08-21/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:50 · THU</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · THURSDAY · AUGUST 21, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>08<span class="dot">.</span>21</h1>
+    <div class="strap">
+      <span>Slack · Codex · Next.js · CodexとChatGPT</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 AIエージェント × チーム開発 <span class="sep">/</span> SLACK (@SLACKHQ) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Slack Code — AIコーディングを個人のタブからチームの仕事へ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-21/topic_1.png" data-alt="Slack Code — AIコーディングを個人のタブからチームの仕事へ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-21/topic_1.png" alt="Slack Code — AIコーディングを個人のタブからチームの仕事へ" />
+      </div>
+      <p class="lede">
+        Slackが「Slack Code」を発表した。コーディングエージェントとの作業を専用のcode channelへ開き、会話、計画、差分、ライブプレビュー、承認をチームで共有する。プロジェクト単位で自動作成され、終了後はアーカイブされるため、作業の経緯も検索可能な記録として残る。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">会話からエージェントを呼ぶと、その案件専用のcode channelが立ち上がる</li>
+        <li data-i="02">会話、計画、コード差分、ライブプレビューを専用タブで追える</li>
+        <li data-i="03">本番反映など高リスクな操作は、専門家の承認をチャンネル内で求める</li>
+        <li data-i="04">Anthropic、Cognition、GitHub、ChatGPT、Vercelなどが対応を進めている</li>
+        <li data-i="05">将来はソフトウェア開発以外のカスタムエージェントにもAPIを開く方針</li>
+      </ul>
+      <div class="pull">
+        AIコーディングの速さだけでなく、途中の判断を誰が見て、どこで止めるかまで製品化した。PMやデザイナーも差分とプレビューを見て軌道修正でき、エージェント作業を個人技からチーム運用へ移せる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">491</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/SlackHQ/status/2090415566351659267">@SlackHQ</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-20</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 AIエージェント × チーム開発</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/SlackHQ/status/2090415566351659267">x.com/SlackHQ/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · OPENAI CODEX / GIT</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 AI開発ツール <span class="sep">/</span> OPENAI CODEX / GITHUB RELEASES <span class="sep">/</span> NEWS
+      </div>
+      <h2>Codex CLI 0.149.0 — 複数エージェントを見渡し、既存セッションへ追指示できる</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-21/topic_2.png" data-alt="Codex CLI 0.149.0 — 複数エージェントを見渡し、既存セッションへ追指示できる" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-21/topic_2.png" alt="Codex CLI 0.149.0 — 複数エージェントを見渡し、既存セッションへ追指示できる" />
+      </div>
+      <p class="lede">
+        OpenAIがCodex CLI 0.149.0を公開した。TUIに複数タスクを検索・起動・停止できる対話型の`codex agents`画面を追加し、`codex queue`で既存のローカルまたはリモートセッションへメッセージを送れるようにした。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">codex agentsでタスクの検索、起動、オープン、名前変更、停止ができる</li>
+        <li data-i="02">codex queueで既存セッションへ追加メッセージを送れる</li>
+        <li data-i="03">/cd、/pwd、/cwdでTUI内の作業ディレクトリを管理できる</li>
+        <li data-i="04">codex doctorがエンドポイント保護、ネットワーク、プロキシ、デスクトップアプリ、更新接続を診断する</li>
+        <li data-i="05">再開・フォークしたスレッドが元の権限プロファイルを復元するよう修正された</li>
+      </ul>
+      <div class="pull">
+        並列実行の機能だけでなく、動いているタスクを把握し、途中から指示を足す運用面がCLIに入った。複数エージェントを日常的に回すための管理機能が揃い始めている。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/openai/codex/releases/tag/rust-v0.149.0">OpenAI Codex / GitHub Releases</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-20</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 AI開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/openai/codex/releases/tag/rust-v0.149.0">https://github.com/openai/codex/releases/tag/rust-v0.149.0</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · NEXTJS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 セキュリティ <span class="sep">/</span> NEXT.JS <span class="sep">/</span> NEWS
+      </div>
+      <h2>Next.js、8月26日のCritical脆弱性修正を事前告知</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-21/topic_3.png" data-alt="Next.js、8月26日のCritical脆弱性修正を事前告知" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-21/topic_3.png" alt="Next.js、8月26日のCritical脆弱性修正を事前告知" />
+      </div>
+      <p class="lede">
+        Next.jsが、2026年8月26日にセキュリティ更新を公開すると事前告知した。対象は重大度Criticalの脆弱性1件で、修正版は16.3.2と15.5.24になる予定だ。詳細は修正版の公開後に示される。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">公開予定日は2026年8月26日</li>
+        <li data-i="02">対象は重大度Criticalの脆弱性1件</li>
+        <li data-i="03">修正版はNext.js 16.3.2と15.5.24</li>
+        <li data-i="04">公開後に速やかなアップグレードを求めている</li>
+        <li data-i="05">今後の事前告知を追うRSSフィードも案内された</li>
+      </ul>
+      <div class="pull">
+        修正版公開前に日付と対象バージョンが分かるため、担当者は緊急更新の時間を先に確保できる。Next.jsを運用するチームは、26日にリリースノート確認、検証、反映を行う段取りを組んでおきたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">73</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://nextjs.org/blog/upcoming-nextjs-security-release-august-2026">Next.js</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-20</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://nextjs.org/blog/upcoming-nextjs-security-release-august-2026">https://nextjs.org/blog/upcoming-nextjs-security-release-august-2026</a></dd>
+        <dd><a href="https://x.com/nextjs/status/2090522000905355335">x.com/nextjs/status/2090522000905355335</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · OPENAI DEVELOPERS </span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 AI開発ツール <span class="sep">/</span> OPENAI DEVELOPERS (@OPENAIDEVS) <span class="sep">/</span> NEWS
+      </div>
+      <h2>CodexとChatGPT Work、開発過程を読み取り専用リンクで共有</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-21/topic_4.png" data-alt="CodexとChatGPT Work、開発過程を読み取り専用リンクで共有" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-21/topic_4.png" alt="CodexとChatGPT Work、開発過程を読み取り専用リンクで共有" />
+      </div>
+      <p class="lede">
+        OpenAI Developersが、CodexとChatGPT Workの共有スレッドを案内した。完成したコードだけでなく、プロンプト、エージェントの作業過程、判断の流れを読み取り専用リンクとして同僚へ渡せる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">共有対象はCodexとChatGPT Workのスレッド</li>
+        <li data-i="02">リンク先は読み取り専用で、共有相手が元スレッドを変更しない</li>
+        <li data-i="03">プロンプトとエージェントの作業過程をそのまま共有できる</li>
+        <li data-i="04">PRレビュー時に、変更へ至った文脈をスクリーンショットで集め直す手間を減らせる</li>
+      </ul>
+      <div class="pull">
+        AIコーディングでは最終差分だけを見ても、どの制約を与え、どこで判断を変えたかが分かりにくい。生成過程をレビュー材料にできれば、コードと指示の両方を改善できる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">252</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2090555241343418814">@OpenAIDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-20</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 AI開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2090555241343418814">x.com/OpenAIDevs/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · OLLAMA OLLAMA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 ローカルLLM × クラウド <span class="sep">/</span> OLLAMA (@OLLAMA) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Ollama Cloud、Kimi K3を契約者の過半数へ展開</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-21/topic_5.png" data-alt="Ollama Cloud、Kimi K3を契約者の過半数へ展開" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-21/topic_5.png" alt="Ollama Cloud、Kimi K3を契約者の過半数へ展開" />
+      </div>
+      <p class="lede">
+        Ollamaが、クラウド契約者向けに進めているKimi K3のロールアウトが対象の半数を超えたと発表した。米国・欧州ホストとZero Data Retentionを掲げ、Claude CodeやOpenCodeからOllama経由で起動できる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">2026年8月20日時点で契約者の過半数へ展開済み</li>
+        <li data-i="02">米国・欧州でホストする</li>
+        <li data-i="03">Zero Data Retentionを掲げる</li>
+        <li data-i="04">Claude Codeではollama launch claude --model kimi-k3:cloudで起動する</li>
+        <li data-i="05">OpenCodeでもOllama経由で利用できる</li>
+      </ul>
+      <div class="pull">
+        ローカルLLMの入口として使われてきたOllamaが、同じ操作感でクラウドの大型モデルも選べる方向へ広がっている。既存のClaude Code運用を大きく変えず、モデルとホスティング先を切り替えやすくなる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">332</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ollama/status/2090505028998140182">@ollama</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-20</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 ローカルLLM × クラウド</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ollama/status/2090505028998140182">x.com/ollama/…</a></dd>
+        <dd><a href="https://x.com/ollama/status/2089914983840989255">x.com/ollama/status/2089914983840989255</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · MANUS KEITAROAIGC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔖 AI × ビジネス活用 <span class="sep">/</span> けいたろう@MANUSフェロー (@KEITARO_AIGC) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>〈知見〉AI-Ready化は、モデル選びより先に社内データの意味を揃える</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-21/topic_6.png" data-alt="〈知見〉AI-Ready化は、モデル選びより先に社内データの意味を揃える" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-21/topic_6.png" alt="〈知見〉AI-Ready化は、モデル選びより先に社内データの意味を揃える" />
+      </div>
+      <p class="lede">
+        経済産業省の「AI-Ready」解説を実務へ落とす記事では、社内データの量ではなく、意味、関係性、更新時点、確認責任を説明できる状態が重要だと整理している。入口は全社横断のデータ基盤ではなく、判断頻度の高い業務を1つ選び、用途と項目の意味を棚卸しすることだ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">AI-Readyは特定の製品名ではなく、AIを効果的かつ安全に使えるデータの状態を指す</li>
+        <li data-i="02">最初に対象業務を1つ選び、使う文書、表、メモを列挙する</li>
+        <li data-i="03">項目名だけでなく、意味、更新者、更新時点、関連資料を残す</li>
+        <li data-i="04">AIへ渡す前の入力確認と、AI出力後の原資料確認を分ける</li>
+        <li data-i="05">着手順はデータ量ではなく、判断頻度、誤ったときの影響、更新の多さで決める</li>
+      </ul>
+      <div class="pull">
+        表が整っていても列の意味や更新時点が曖昧なら、AIは読みやすい誤答を返せる。モデル比較の前に、よく使う表を1つ選び、意味と責任者を説明できるようにする方が導入の失敗を減らせる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">107</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/keitaro_aigc/status/2090202667574591772">@keitaro_aigc</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔖 AI × ビジネス活用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/keitaro_aigc/status/2090202667574591772">x.com/keitaro_aigc/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · OOXO EEJOOXO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔖 AI動画制作 <span class="sep">/</span> OOXO (@EEJ_OOXO) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>〈知見〉AI動画の参照画像は、枚数より役割を分ける</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-21/topic_7.png" data-alt="〈知見〉AI動画の参照画像は、枚数より役割を分ける" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-21/topic_7.png" alt="〈知見〉AI動画の参照画像は、枚数より役割を分ける" />
+      </div>
+      <p class="lede">
+        AI動画向けのキャラクターシートは、顔を多角度で詰め込むより、正面顔、全身、製品、背景、色調の役割を分けた方がモデルの混乱を抑えやすい。提案されている基本形は、左に正面顔、右に全身の前後姿を置く2パネル構成だ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">顔の同一性は正面クローズアップ1枚へ寄せる</li>
+        <li data-i="02">全身側は体格、衣装、シルエットを伝える役割に絞る</li>
+        <li data-i="03">ほくろ、傷痕、装飾品など同一性に効く特徴は別途見せる</li>
+        <li data-i="04">製品や小道具はキャラクターシートから分け、製品シートにする</li>
+        <li data-i="05">色味や照明演出は最終プロンプトへ回し、キャラクターシートは中立照明とグレー背景にする</li>
+      </ul>
+      <div class="pull">
+        参照画像を増やすほど精度が上がるとは限らない。各画像が何を固定するのかを1つずつ決めると、人物、製品、背景の情報が競合しにくくなり、修正箇所も切り分けやすい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">732</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/EEJ_OOXO/status/2089624347388633438">@EEJ_OOXO</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-18</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔖 AI動画制作</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/EEJ_OOXO/status/2089624347388633438">x.com/EEJ_OOXO/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · CLAUDEDEVS CLAUDED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔖 CLAUDE CODE <span class="sep">/</span> CLAUDEDEVS (@CLAUDEDEVS) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Claude CodeのConcise出力 — 通常応答は短く、必要なときだけ詳しく</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-21/topic_8.png" data-alt="Claude CodeのConcise出力 — 通常応答は短く、必要なときだけ詳しく" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-21/topic_8.png" alt="Claude CodeのConcise出力 — 通常応答は短く、必要なときだけ詳しく" />
+      </div>
+      <p class="lede">
+        Claude Codeに「Concise」出力スタイルが追加された。結論から短く答える設定で、詳しい説明を求めたときは必要な情報を省かずに返す。`/config`のOutput style、または`settings.json`の`&quot;outputStyle&quot;: &quot;Concise&quot;`で有効にできる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">通常応答を結論先行で短くする公式設定</li>
+        <li data-i="02">/configからOutput styleを変更できる</li>
+        <li data-i="03">settings.jsonではoutputStyleにConciseを指定する</li>
+        <li data-i="04">設計判断や原因分析など、詳しく必要な場面では追加説明を求められる</li>
+      </ul>
+      <div class="pull">
+        ターミナルでは、長い応答が差分やログを押し流す。日常の実装はConcise、設計や障害調査は詳しく、と切り替えると画面の情報密度を作業に合わせられる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">17,423</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2090245922685063634">@ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-20</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔖 Claude Code</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2090245922685063634">x.com/ClaudeDevs/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/SlackHQ/status/2090415566351659267">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-08-20/">
+      ← 前日 · 2026-08-20
+      <span class="big">Claude が設計したタンパク質バインダー、15標的中14で結合成功 — 業界標準の2〜3倍のヒット率</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-08-21/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260821.0750</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

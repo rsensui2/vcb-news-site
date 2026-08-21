@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №020</span>
+    <span class="tick">BOOKMARK №022</span>
     <span class="sep">/</span>
     <span>2026-08-09</span>
     <span class="sep">/</span>
     <span>@yagiryuuu</span>
     <span class="sep">/</span>
-    <span>502 ITEMS</span>
+    <span>504 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:32 FRI</span>
+    <span>JST 07:17 SAT</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,19 +305,19 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-08-20/">NEWS</a>
+      <a href="../news/2026-08-21/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:32 · FRI</div>
+    <div class="meta">JST · 07:17 · SAT</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-08-09 <span>/</span> №020
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-08-09 <span>/</span> №022
     </div>
     <div class="cat-line">
       <span>📖 技術解説・アーキテクチャ</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">【保存版】「Cloudflare OS」についてまとめ — Gadget と Gatekeeper をコードから読む</h1>
     <div class="strap">
-      <span><span class="label">№</span>020 / 502</span>
+      <span><span class="label">№</span>022 / 504</span>
       <span><span class="label">SRC</span><a href="https://x.com/yagiryuuu/status/2086302130957373770" target="_blank" rel="noopener noreferrer">x.com/yagiryuuu ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/484_yagiryuuu_CloudflareOS%E3%81%BE%E3%81%A8%E3%82%81Gadget%E3%81%A8Gatekeeper.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">020<span class="ord">BOOKMARK / 502</span></aside>
+    <aside class="numeral">022<span class="ord">BOOKMARK / 504</span></aside>
     <article class="prose">
 <p><strong>記事URL:</strong> https://x.com/i/article/2086299182290415616</p><p><strong>カテゴリ:</strong> 📖 技術解説・アーキテクチャ</p><p><strong>有益度:</strong> ⭐⭐⭐⭐⭐</p><p><strong>エンゲージメント:</strong> Likes 230 / RT 10 / Replies 1 / Bookmarks 614 / Views 156693</p><h2>X Article 本文</h2><p>Cloudflareが「Cloudflare OS」をオープンソースで公開しました。</p><p>ソースコードを手元にcloneして実際に動かしてみたら、これは単なる社内ツールの公開じゃなく、「会社でAIをどう使うか」の設計図そのものでした。今日はコードの中身まで踏み込んで解説します。</p><p>結論から言うと、これは「社員にChatGPTを配る」の、次のフェーズの話。AIを業務に入れたい会社は関係してきます。</p><h3>Cloudflare OSとは何か</h3><p>・Cloudflare社内で、エンジニアから営業まで数千人が毎日使っている「会社でAIを安全に使い倒す基盤」の公開版</p><p>・エージェントにタスクを頼むチャット、AIに業務アプリを作らせる仕組み、権限管理の3つがワンセット</p><p>・「うちの会社用にコピーして『自社OS』にしてくれ」というスタンスでの公開</p><p>普通のOSではありませんが、Cloudflare自身が「OS」と呼ぶ理由があります。実際にソースを開くと、バックエンドが「カーネル」、外部サービス連携が「デバイスドライバ」、AIが作るアプリが「プロセス」という構造で作られている。会社のAI活用を、OSがコンピュータを管理するのと同じ思想で管理しにきています。</p><h3>「Gadget」という考え方</h3><p>ここが大事なポイント。</p><p>・「スライドを作って」と頼むと、自分専用のスライドアプリのインスタンスがサンドボックス内に生成される</p><p>・全ユーザーが自分のコピーを持つので、アプリのバグで他人のデータが漏れる構造がそもそも存在しない</p><p>・機能が足りなければ「この機能を足して」と言うだけ。他人に影響しないから、自由に改造していい</p><p>これは、この25年の「中央のSaaSにみんなで接続する」モデルの逆張りです。</p><p>今までは、アプリを作った人がサーバーでホストして、全員がそこに接続していた。Cloudflare OSはスマホアプリに近くて、全員が自分のコピーを動かす。だから、機能要望を出して開発者が対応するのを待つ必要がない。ユーザーが自分でAIに頼んで直せる。</p><p>「AIが誰でも開発者にした」という前提に立つと、中央集権的なソフトウェアの形が意味をなさなくなる、という設計になっている。</p><h3>セキュリティ層「Gatekeeper」</h3><p>エージェントに社内のGitHubやNotionを触らせたい。でも情報漏洩が怖い。この板挟みへの回答が、Gatekeeperという仕組みです。</p><p>・エージェントもアプリも、初期状態では何の権限も持たない。GitHubリポジトリなどのリソースを「紹介」して初めて、そこだけ触れる</p><p>・全操作がログに残り、副作用のある操作は人間の承認待ちになる</p><p>・MCPのように全ツールを最初から見せる方式と違い、その場の仕事に必要な分だけを渡す</p><p>コードを読んで一番感心したのが、承認の仕組みです。</p><p>普通の「人間が承認するまでAIが止まる」方式だと、エージェントに仕事を頼んで離席し、戻ってきたら最初の1ステップの承認待ちで止まっていた、が起きる。だから人は「面倒だから全部自動承認」に逃げて、危険な運用になる。</p><p>Cloudflare OSは違って、承認待ちの操作は結果をシミュレートして、エージェントを先に進ませる。人間は後でまとめて承認・却下すればいい。「高リスクな操作はエージェントが提案し、人間が決める」。この線引きが、一時しのぎではなく恒久的な正解として設計されています。</p><h3>手元で動かしてみた</h3><p>実際に手元にcloneして試してみました。</p><p>・pnpm run-local だけでローカルで立ち上がって、ブラウザで触れる</p><p>・同梱の外部サービス連携（Gatekeeper）は16種類。GitHub、Google、Notion、Slack、Supabase、Linear、Confluence、スケジューラなど、サービスごとに権限管理の実装が分かれている</p><p>・本番は自分のCloudflareアカウントに数分でデプロイできる導線もある</p><p>作りを追うと、認証まわりの徹底ぶりが目立ちます。</p><p>誰がサインインできるかの設定だけは、管理画面からいじれないよう、あえて環境変数側に固定してある。</p><p>「管理者アカウントが乗っ取られても、認証設定だけは変えられない」ための設計です。</p><h3>なぜこれが「事業の話」なのか</h3><p>多くの会社のAI活用は、今こういう状態です。</p><p>・社員にChatGPTやCopilotのアカウントを配った</p><p>・でも各自がチャットで使うだけで止まっている</p><p>・実データに触らせたりアプリを作らせようとすると、情報漏洩が怖くて情シスが止める</p><p>Cloudflare OSが示しているのは、その次のフェーズです。</p><p>・社員がAIに「自分専用の業務アプリ」を作らせる</p><p>・作ったアプリが社内に増えていく</p><p>・それを、権限ゼロから必要な分だけ渡す仕組みの上で、安全に回す</p><p>「社員にAIを配る」の次は、「社員が作ったAIアプリが社内に溢れる」フェーズが来る。そのとき効いてくるのは、高機能なAIそのものより、それを暴走させずに管理する土台です。</p><p>そしてその参考実装が、実際に数千人で運用された状態で、無料で全部読める。これがこの公開の一番の価値だと思っています。</p><h3>まとめ</h3><p>・Cloudflare OSは、社内でAIを安全に使うための基盤をまるごとオープンソース化したもの</p><p>・核は「Gadget」。全員が自分専用の業務アプリのコピーを持ち、AIに自由に改造させられる</p><p>・「Gatekeeper」で、権限ゼロから必要な分だけ渡す。承認待ちでも止まらない設計が秀逸</p><p>・まだアーリーアクセス段階。ただし「会社のAI化」の設計思想として、今読む価値がある</p><p>去年、AIにどう仕事をさせるかを設計する仕事が生まれた。次は、社員全員がAIとどう働く場所を作るかを設計する仕事が生まれます。</p><p>その最初の完成形が、いま無料で公開されています。</p><h2>Summary</h2><p>Cloudflare OS のソースコードを clone して実際に動かした上での構造解説。バックエンドを「カーネル」、外部サービス連携を「デバイスドライバ」、AIが作るアプリを「プロセス」と呼ぶ設計思想を確認し、中核となる2つの仕組み — 全ユーザーが自分専用インスタンスを持つ「Gadget」と、権限ゼロから必要分だけ渡す「Gatekeeper」— をコードレベルで説明している。特に「承認待ちの操作は結果をシミュレートしてエージェントを先へ進ませ、人間は後でまとめて承認/却下する」という承認設計を高く評価。</p><h2>Key points</h2><ul><li>Cloudflare 社内でエンジニアから営業まで数千人が毎日使う基盤の公開版。チャット・アプリ生成・権限管理の3点セット</li><li>内部構造は OS のメタファで実装: バックエンド=カーネル、外部連携=デバイスドライバ、生成アプリ=プロセス</li><li><strong>Gadget</strong>: 依頼するとサンドボックス内に自分専用のアプリインスタンスが生成される。全員が自分のコピーを持つため、バグで他人のデータが漏れる構造が存在しない</li><li>機能不足は「この機能を足して」と言うだけ。開発者の対応待ちが不要になる、中央集権SaaSの逆張り</li><li><strong>Gatekeeper</strong>: エージェントもアプリも初期権限ゼロ。リソースを「紹介」して初めてそこだけ触れる。全操作がログに残る</li><li>MCP のように全ツールを最初から見せる方式と対比し、その場の仕事に必要な分だけを渡す</li><li>承認設計が秀逸: 承認待ちの操作は結果をシミュレートして先へ進め、人間は後でまとめて承認・却下。「面倒だから全部自動承認」への逃げ道を潰す</li><li><code>pnpm run-local</code> でローカル起動可能。同梱の外部サービス連携は16種類（GitHub / Google / Notion / Slack / Supabase / Linear / Confluence / スケジューラ 等）</li><li>誰がサインインできるかの設定だけは管理画面から変更不可で環境変数に固定。管理者アカウント乗っ取り時も認証設定は守られる</li></ul><h2>Takeaway</h2><p>エージェントに権限を渡す設計の実装リファレンスとして読む価値が高い。特に「承認待ちでエージェントを止めない（シミュレートして進める）」は、承認フローを入れると必ず起きる&quot;全部自動承認への逃避&quot;を構造で防ぐ発想で、自前のエージェント運用にも移植できる。全ツールを常時見せる MCP 的アプローチとの対比も、コンテキスト設計の観点で示唆的。</p>
     </article>
@@ -384,14 +384,14 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 502 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 504 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-08-20/">TODAY</a></li>
+          <li><a href="../news/2026-08-21/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -418,7 +418,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-08-21</span>
+      <span>BUILD 2026-08-22</span>
     </div>
   </div>
 </footer>

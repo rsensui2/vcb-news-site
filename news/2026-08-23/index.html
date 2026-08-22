@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-08-23 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-08-23 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0823</span>
+    <span class="sep">/</span>
+    <span>2026-08-23</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260823.0733</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-08-23/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:33 · SAT</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SATURDAY · AUGUST 23, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>08<span class="dot">.</span>23</h1>
+    <div class="strap">
+      <span>Claude · Sesori · Ollama · Claude</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔖 AI開発ツール・遠隔操作 <span class="sep">/</span> CLAUDEDEVS (@CLAUDEDEVS) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Claude Code Remote Control、スマホから起動して切断後も自動復旧</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-23/topic_1.png" data-alt="Claude Code Remote Control、スマホから起動して切断後も自動復旧" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-23/topic_1.png" alt="Claude Code Remote Control、スマホから起動して切断後も自動復旧" />
+      </div>
+      <p class="lede">
+        AnthropicがClaude Code Remote Controlの信頼性を改善した。スマートフォンとCLIでモデル・推論強度・実行状態を同期し、接続が切れた場合は自動で復旧する。接続先マシンと作業ディレクトリを選び、スマートフォンから新しいセッションを始める機能も加わった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">スマートフォンとCLIで、使用モデルと推論強度を同期する</li>
+        <li data-i="02">ノートPCを閉じる、またはWi-Fiを切り替えた後も自動で再接続する</li>
+        <li data-i="03">`/clear`、`/compact`、`/diff`のスマートフォン表示を改善した</li>
+        <li data-i="04">Remote Control対応マシンをデバイスカードから選び、作業ディレクトリを指定して起動できる</li>
+      </ul>
+      <div class="pull">
+        スマートフォンが単なる確認画面から、ローカル開発機の起動・操作面へ変わる。長時間タスクを机の前に拘束されずに運用しやすくなる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">9,106</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2090933155847143498">@ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔖 AI開発ツール・遠隔操作</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2090933155847143498">x.com/ClaudeDevs/…</a></dd>
+        <dd><a href="https://x.com/ClaudeDevs/status/2090933157243863142">x.com/ClaudeDevs/status/2090933157243863…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · SESORI / GITHUB RE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 AI開発ツール・モバイル <span class="sep">/</span> SESORI / GITHUB RELEASES <span class="sep">/</span> NEWS
+      </div>
+      <h2>Sesori v1.8、スマホで扱えるコーディングエージェントが3種から7種へ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-23/topic_2.png" data-alt="Sesori v1.8、スマホで扱えるコーディングエージェントが3種から7種へ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-23/topic_2.png" alt="Sesori v1.8、スマホで扱えるコーディングエージェントが3種から7種へ" />
+      </div>
+      <p class="lede">
+        スマートフォンからPC上のコーディングエージェントを操作するSesoriがv1.8を公開した。Claude Code、Hermes Agent、Pi、Oh My Piを追加し、Codexへのログインやプロンプトの待ち行列もスマートフォンから管理できる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Claude Code、Hermes Agent、Pi、Oh My Piの4ハーネスを追加した</li>
+        <li data-i="02">OpenCode、Codex、Cursorと合わせて7種類に対応する</li>
+        <li data-i="03">Codexのデバイスコード認証をスマートフォンから始められる</li>
+        <li data-i="04">プロンプトの待ち行列を端末ではなくBridge側で保持する</li>
+        <li data-i="05">セッションの命名とブランチ生成を後段へ回し、開始画面を速く開く</li>
+      </ul>
+      <div class="pull">
+        Claude公式Remote Controlと同じ日に、複数エージェントを共通のスマートフォン画面から扱うOSS側も進んだ。モデルだけでなく、操作面を共通化する競争が始まっている。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/sesori-ai/sesori_apps_monorepo/releases/tag/v1.8.0">Sesori / GitHub Releases</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-20</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 AI開発ツール・モバイル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/sesori-ai/sesori_apps_monorepo/releases/tag/v1.8.0">https://github.com/sesori-ai/sesori_apps_monorepo/releases/tag/v1.8.0</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · OLLAMA OLLAMA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 ローカルLLM・モデル運用 <span class="sep">/</span> OLLAMA (@OLLAMA) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Ollama、Kimi K3を全Pro・Max契約の付帯利用へ拡大</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-23/topic_3.png" data-alt="Ollama、Kimi K3を全Pro・Max契約の付帯利用へ拡大" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-23/topic_3.png" alt="Ollama、Kimi K3を全Pro・Max契約の付帯利用へ拡大" />
+      </div>
+      <p class="lede">
+        OllamaはKimi K3を、ProとMaxの全契約者が追加契約なしで使える対象にした。前日の段階展開から対象が全契約者へ広がり、既存のOllama運用にKimi K3を加えやすくなった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対象はOllamaのPro・Max契約者</li>
+        <li data-i="02">契約内のincluded usageとして提供する</li>
+        <li data-i="03">Ollamaは対象モデルを今後も増やす方針を示した</li>
+      </ul>
+      <div class="pull">
+        新モデルごとに別のAPI契約や操作方法を増やさず、同じ運用の中でモデルを差し替えて比較できる。VBCの実習でも、モデル名より仕事に合うかを確かめやすい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">695</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ollama/status/2090906360808411568">@ollama</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-21</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 ローカルLLM・モデル運用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ollama/status/2090906360808411568">x.com/ollama/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · THARIQ TRQ212</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 CLAUDE CODE・運用TIPS <span class="sep">/</span> THARIQ (@TRQ212) <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Codeのeffort数値は性能スコアではない</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-23/topic_4.png" data-alt="Claude Codeのeffort数値は性能スコアではない" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-23/topic_4.png" alt="Claude Codeのeffort数値は性能スコアではない" />
+      </div>
+      <p class="lede">
+        AnthropicのThariqは、Claude Codeで一部ユーザーに表示されるeffortの数値が、API配信設定の試験によって従来と異なる対応になっていると説明した。highで「10」と表示されても0〜100点の尺度ではなく、選んだeffort水準とモデル性能は変わらないという。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">AnthropicはClaude Code上でAPI配信設定を本番展開前に試す場合がある</li>
+        <li data-i="02">現在の試験では、数値effortの対応関係だけが異なる</li>
+        <li data-i="03">highで「10」と出ても、性能低下や10点を意味しない</li>
+        <li data-i="04">Anthropicは評価を行い、モデル性能への影響がないと確認したとしている</li>
+      </ul>
+      <div class="pull">
+        UIや内部数値の変化を、そのまま性能低下と読まないための注意点になる。体感差がある場合は数値を推測するより、再現条件を添えて`/feedback`を送る方が確実だ。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">206</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/trq212/status/2091247114869432543">@trq212</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 Claude Code・運用Tips</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/trq212/status/2091247114869432543">x.com/trq212/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · TECHCRUNCH / GUIDE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 AI安全・ガバナンス <span class="sep">/</span> TECHCRUNCH / GUIDELIGHT AI STANDARDS <span class="sep">/</span> NEWS
+      </div>
+      <h2>主要AIラボ5社、暴走モデルを止める公開計画はなお不足</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-23/topic_5.png" data-alt="主要AIラボ5社、暴走モデルを止める公開計画はなお不足" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-23/topic_5.png" alt="主要AIラボ5社、暴走モデルを止める公開計画はなお不足" />
+      </div>
+      <p class="lede">
+        Guidelight AI StandardsはAnthropic、Google、OpenAI、Meta、xAIの公開資料を評価し、暴走や制御回避を検知した後の権限剥奪・停止手順が十分に公開されていないと指摘した。OpenAIは5点満点中3点で最高だったが、将来の事故に備えた正式な計画の公開までは確認できなかった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">評価対象は主要AIラボ5社の公開情報</li>
+        <li data-i="02">ログ・監視、異常時の停止、第三者監査、封じ込め手順を評価した</li>
+        <li data-i="03">OpenAIが3/5で最高、AnthropicとMetaは公開情報上の評価が低かった</li>
+        <li data-i="04">低得点は内部対策がない証明ではなく、公開根拠が乏しいことを示す</li>
+        <li data-i="05">California SB 53は重大事故への対応枠組みの公開を大手開発者に求める</li>
+      </ul>
+      <div class="pull">
+        業務へエージェントを入れる側も、失敗の検知だけでは足りない。権限をどこまで剥がし、どの条件で停止するかを先に決めておく必要がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://techcrunch.com/2026/08/22/frontier-ai-labs-still-wont-say-how-theyd-contain-a-rogue-model/">TechCrunch / Guidelight AI Standards</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 AI安全・ガバナンス</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://techcrunch.com/2026/08/22/frontier-ai-labs-still-wont-say-how-theyd-contain-a-rogue-model/">https://techcrunch.com/2026/08/22/frontier-ai-labs-still-wont-say-how-theyd-contain-a-rogue-model/</a></dd>
+        <dd><a href="https://guidelight.ai/blog/control-assessment-august-2026">guidelight.ai/blog/control-assessment-au…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · TECHCRUNCH / HBS F</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 AI教育・研修設計 <span class="sep">/</span> TECHCRUNCH / HBS FOUNDRY <span class="sep">/</span> NEWS
+      </div>
+      <h2>Harvardの8週間・699ドル講座、反復練習をHeyGenアバターが担当</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-23/topic_6.png" data-alt="Harvardの8週間・699ドル講座、反復練習をHeyGenアバターが担当" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-23/topic_6.png" alt="Harvardの8週間・699ドル講座、反復練習をHeyGenアバターが担当" />
+      </div>
+      <p class="lede">
+        Harvard Business SchoolのHBS Foundryは、起業家向け8週間・699ドルの講座で、講師を模したHeyGen製AIアバターを練習ピッチと模擬取締役会のフィードバック役に採用した。週次のライブ講義は人間の講師が担い、反復練習の個別対応をアバターへ分けている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">講座は8週間、受講料は699ドル</li>
+        <li data-i="02">講師とのライブセッションを毎週実施する</li>
+        <li data-i="03">AIアバターは練習ピッチと模擬取締役会で個別フィードバックを返す</li>
+        <li data-i="04">アバターはHeyGenで制作した</li>
+        <li data-i="05">試行参加者の要望を受け、チャットボット案からガイド型の体験へ変更した</li>
+      </ul>
+      <div class="pull">
+        講師のライブ判断と、AIによる反復練習を分けた設計が参考になる。個別練習の回数を増やしながら、講師本人が担う価値を薄めずに済む。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://techcrunch.com/2026/08/22/harvards-699-startup-bootcamp-offers-ai-avatars-of-its-instructors/">TechCrunch / HBS Foundry</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 AI教育・研修設計</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://techcrunch.com/2026/08/22/harvards-699-startup-bootcamp-offers-ai-avatars-of-its-instructors/">https://techcrunch.com/2026/08/22/harvards-699-startup-bootcamp-offers-ai-avatars-of-its-instructors/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · SUNAGOMI SUNAGOMI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔖 AI動画・SKILL運用 <span class="sep">/</span> SU_NAGOMI (@SU_NAGOMI) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>MiniMax Design、Skillを選ぶだけで紹介動画の工程を一巡</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-23/topic_7.png" data-alt="MiniMax Design、Skillを選ぶだけで紹介動画の工程を一巡" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-23/topic_7.png" alt="MiniMax Design、Skillを選ぶだけで紹介動画の工程を一巡" />
+      </div>
+      <p class="lede">
+        su_nagomiさんはMiniMax Designの`vox-style-video-generator` Skillを使い、紹介動画を制作した。細かなプロンプトを組み立てる代わりに、作りたい解説動画を伝えて制作フローを動かし、ナレーションとテロップまで同じツール内で仕上げている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">使用したのは`vox-style-video-generator` Skill</li>
+        <li data-i="02">指示は個別カットの指定より、作りたい動画の目的を中心にした</li>
+        <li data-i="03">ナレーションとテロップをMiniMax Design内で追加できる</li>
+        <li data-i="04">投稿者は紹介動画の制作を1つのツールで完結させた</li>
+      </ul>
+      <div class="pull">
+        動画制作でも、プロンプトを毎回組む方式から、工程を持ったSkillを選ぶ方式へ移り始めている。型が決まった解説動画や商品紹介の量産に向く一方、細部の制御が必要な案件では出力検品が欠かせない。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">41</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/su_nagomi/status/2089898728731869511">@su_nagomi</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔖 AI動画・Skill運用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/su_nagomi/status/2089898728731869511">x.com/su_nagomi/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/ClaudeDevs/status/2090933155847143498">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-08-22/">
+      ← 前日 · 2026-08-22
+      <span class="big">NVIDIA、300超のエージェントスキルを同じ検査器で評価</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-08-23/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260823.0733</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-08-24 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-08-24 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0824</span>
+    <span class="sep">/</span>
+    <span>2026-08-24</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260824.0729</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-08-24/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:29 · SUN</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SUNDAY · AUGUST 24, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>08<span class="dot">.</span>24</h1>
+    <div class="strap">
+      <span>NVIDIA · Claude · Notion · Inherent</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 5 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        エージェント設計 <span class="sep">/</span> TECHCRUNCH <span class="sep">/</span> NEWS
+      </div>
+      <h2>NVIDIA の研究 — 同じモデルでもハーネス次第で 30% → 100%</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-24/topic_1.png" data-alt="NVIDIA の研究 — 同じモデルでもハーネス次第で 30% → 100%" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-24/topic_1.png" alt="NVIDIA の研究 — 同じモデルでもハーネス次第で 30% → 100%" />
+      </div>
+      <p class="lede">
+        NVIDIA が 8/21（日本時間 8/22 未明）に公開した研究は、長時間タスクの成否を分けるのはモデルよりハーネスだと示した。メモリ管理を作り込み「スーパーバイザー」役のエージェントを足した独自ハーネス AVO を使ったところ、Claude Opus 5 が対話型推論ベンチ ARC-AGI-3 で 100% を記録した。同じ Opus 5 がハーネス無しでは 30% にとどまっている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">ARC-AGI-3 は説明書のない 2D ゲーム群。人間と同じように遊び方を自力で見つけて勝つ必要がある</li>
+        <li data-i="02">Opus 5 は素の状態で 30%（テスト対象モデル中の最高値）→ AVO ハーネス経由で 100%</li>
+        <li data-i="03">効いたのは「スーパーバイザー」層。行き詰まりや同じ道の辿り直しを検知して軌道修正する CEO のような役回り（NVIDIA AI 部門 VP Adel El Hallak）</li>
+        <li data-i="04">OpenAI も同ベンチで 10% 未満に苦しみ、先月ハーネスの設定を2つ変えるだけでスコアを3倍にしたが 100% には届いていない</li>
+        <li data-i="05">AVO は製品ではない。NVIDIA はハーネスの部品を Nemo ブランドで公開・提供している</li>
+        <li data-i="06">Databricks の7月の研究では、モデルが同じでもハーネスを誤るとコストが2倍になると報告されている（Ali Ghodsi CEO）</li>
+      </ul>
+      <div class="pull">
+        「どのモデルを使うか」より「どう囲うか」で結果が3倍以上動くという定量的な裏付けが出た。ループ設計・コンテキスト管理・スーパーバイザー役の分離が、そのまま性能とコストに直結する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://techcrunch.com/2026/08/21/nvidia-just-showed-that-the-harness-not-the-ai-model-is-now-the-real-hero/">TechCrunch</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>エージェント設計</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://techcrunch.com/2026/08/21/nvidia-just-showed-that-the-harness-not-the-ai-model-is-now-the-real-hero/">https://techcrunch.com/2026/08/21/nvidia-just-showed-that-the-harness-not-the-ai-model-is-now-the-real-hero/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · GITHUB / ANTHROPIC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> GITHUB / ANTHROPICS/CLAUDE-CODE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code 2.1.239 — BOM で skills が黙って無視されていた不具合を修正</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-24/topic_2.png" data-alt="Claude Code 2.1.239 — BOM で skills が黙って無視されていた不具合を修正" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-24/topic_2.png" alt="Claude Code 2.1.239 — BOM で skills が黙って無視されていた不具合を修正" />
+      </div>
+      <p class="lede">
+        Claude Code 2.1.239 が公開された。最も実害が大きかったのは、.md ファイルの先頭に UTF-8 BOM が付いていると agents / skills / commands がエラーも警告も出さずに無視されていた問題で、これが直った。あわせて Bedrock 経由の課金が黙って倍になる不具合の修正と、Windows でのクロスセッション通信の解禁が入っている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">UTF-8 BOM 付きの .md は agents・skills・commands のいずれも黙って無視されていた。Windows のエディタで保存すると付きやすく、警告も一切出ない</li>
+        <li data-i="02">プロキシがレスポンスの Content-Type ヘッダを落とす環境で Bedrock のストリーミングが壊れ、毎ターン非ストリーミングで再実行されて課金 API コールが2倍になっていた</li>
+        <li data-i="03">Windows でもクロスセッション・メッセージングが利用可能に。SendMessage / ListAgents で複数マシンのセッションが互いを見つけられる（従来は macOS / Linux のみ）</li>
+        <li data-i="04">/claude-api upgrade を追加。Python プロジェクトを anthropic 0.x から 1.x へ移行する（タイムアウトは httpx.Timeout ではなく anthropic.Timeout）</li>
+        <li data-i="05">/cost・ステータスライン・--max-budget-usd のコスト見積もりが、データレジデンシー環境の 1.1倍 US-only-inference プレミアムを含むようになった</li>
+        <li data-i="06">WebFetch が期限切れページの内容をセッション中ずっと保持していた問題（本来は15分）も修正された</li>
+      </ul>
+      <div class="pull">
+        「スキルを置いたのに読まれない」の原因が BOM だったケースが実在する。Windows で skill を書くときに真っ先に踏む地雷で、原因表示が一切出ないぶん自力では特定しづらい。Bedrock の二重課金も、気づかないまま請求だけ膨らむ種類の不具合だ。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.239">GitHub / anthropics/claude-code</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.239">https://github.com/anthropics/claude-code/releases/tag/v2.1.239</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · NOTION HELP CENTER</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> NOTION HELP CENTER <span class="sep">/</span> NEWS
+      </div>
+      <h2>Notion のスキルを、手元の Claude Code や Codex へダウンロードできるようになった</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-24/topic_3.png" data-alt="Notion のスキルを、手元の Claude Code や Codex へダウンロードできるようになった" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-24/topic_3.png" alt="Notion のスキルを、手元の Claude Code や Codex へダウンロードできるようになった" />
+      </div>
+      <p class="lede">
+        Notion が、Notion 上で書いたスキルをローカルのコーディングエージェントへ落として使える機能を案内した。スキルは通常の Notion ページとして書き、それを SKILL.md ＋ 承認済みの添付ファイルとして手元のフォルダにダウンロードして、Claude Code / Codex / Cursor / Gemini / Grok で動かせる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">スキルは「Notion AI に特定の作業のやり方を教える再利用可能な指示」で、実体はただの Notion ページ</li>
+        <li data-i="02">ダウンロードすると SKILL.md と承認済みファイルが手元のフォルダに落ちる</li>
+        <li data-i="03">対応先として Claude Code / Codex / Cursor / Gemini / Grok が挙げられている</li>
+        <li data-i="04">Notion 側では Library の Skills タブで一元管理する。テキスト選択メニューに自作スキルを差し込むこともできる</li>
+        <li data-i="05">Notion Agent は関連する場面で自動的にスキルを選んで使うため、毎回手で呼ぶ必要はない</li>
+        <li data-i="06">Business / Enterprise プランには、スキルを含む Notion AI 機能の利用枠が設定されている</li>
+      </ul>
+      <div class="pull">
+        「スキルの原本をどこに置くか」の選択肢が増えた。チームで共有する手順書を Notion 側に持ち、各自のエージェントへ配る運用が組める。SKILL.md という同じ書式が Notion・Claude Code・Codex・Cursor で通ることは、書き方を1つ覚えれば済むという意味を持つ。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.notion.com/help/create-and-manage-skills">Notion Help Center</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.notion.com/help/create-and-manage-skills">https://www.notion.com/help/create-and-manage-skills</a></dd>
+        <dd><a href="https://x.com/NotionHQ/status/2090829567451861122">x.com/NotionHQ/status/209082956745186112…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · TECHCRUNCH</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        モデル <span class="sep">/</span> TECHCRUNCH <span class="sep">/</span> NEWS
+      </div>
+      <h2>Inherent の Faraday — 270億パラメータが Opus 4.8 と GPT-5.5 を論文再現で上回る</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-24/topic_4.png" data-alt="Inherent の Faraday — 270億パラメータが Opus 4.8 と GPT-5.5 を論文再現で上回る" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-24/topic_4.png" alt="Inherent の Faraday — 270億パラメータが Opus 4.8 と GPT-5.5 を論文再現で上回る" />
+      </div>
+      <p class="lede">
+        Google DeepMind 出身者がロンドンで立ち上げた AI ラボ Inherent が、自社エージェント Faraday を公開した。公開済み論文の結果を、答えを事前に与えずに独力で再現するタスクで、Anthropic の Claude Opus 4.8 と OpenAI の GPT-5.5 を上回ったという。Faraday の土台は Qwen 3.6 の 270億パラメータ版で、比較対象のフロンティアモデルより桁違いに小さい。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Inherent は5,000万ドルのシードでステルスを出たばかり。従業員12名、ロンドン King's Cross のオフィスに全員出社している</li>
+        <li data-i="02">タスクは論文の再現。共同創業者兼チーフサイエンティストの Edward Hughes は「博士課程の学生も実際そこから始める」と説明する</li>
+        <li data-i="03">狙いは精度だけでなく research taste — どの実験をやる価値があるか、どう設計するかの勘。ルールを与えるのではなく強化学習で報酬から学ばせている</li>
+        <li data-i="04">コーディングツールは自社開発せず、OpenAI の GPT-5.5 Codex をそのまま使わせた。「人間の科学者も既存ソフトを使う」という発想による</li>
+        <li data-i="05">ユーザーに迎合するエージェントを避けたいと Hughes は言う。理想は「気になったので実験してみた、この結果どう思う？」と返してくる同僚だそうだ</li>
+        <li data-i="06">年内に20〜25名へ増員する予定</li>
+      </ul>
+      <div class="pull">
+        小さいモデルと作り込んだエージェント設計の組み合わせが、巨大モデルの素の力を特定タスクで上回った実例だ。コーディング部分を自作せず既存の Codex に任せた判断も、道具の組み合わせで戦うという意味で参考になる。なお数値は Inherent の自社発表であって第三者検証ではない。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://techcrunch.com/2026/08/22/inherent-founded-by-deepmind-alumni-says-its-ai-teammate-just-outperformed-anthropic-and-openai-at-replicating-research/">TechCrunch</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>モデル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://techcrunch.com/2026/08/22/inherent-founded-by-deepmind-alumni-says-its-ai-teammate-just-outperformed-anthropic-and-openai-at-replicating-research/">https://techcrunch.com/2026/08/22/inherent-founded-by-deepmind-alumni-says-its-ai-teammate-just-outperformed-anthropic-and-openai-at-replicating-research/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · TECHCRUNCH</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        法務・著作権 <span class="sep">/</span> TECHCRUNCH <span class="sep">/</span> NEWS
+      </div>
+      <h2>AI が著作権のある本で学習するのは合法か — 判決は出ているが、決着はしていない</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-24/topic_5.png" data-alt="AI が著作権のある本で学習するのは合法か — 判決は出ているが、決着はしていない" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-24/topic_5.png" alt="AI が著作権のある本で学習するのは合法か — 判決は出ているが、決着はしていない" />
+      </div>
+      <p class="lede">
+        TechCrunch が知財に詳しい弁護士2名に取材し、AI の学習と著作権をめぐる現在地を整理した。昨年 William Alsup 判事は Anthropic に15億ドルの和解金を命じたが、学習そのものは適法と判断している。罰せられたのは、違法な影の図書館から本を海賊版で入手した点だった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Alsup 判事は「Anthropic の LLM は作品を先回りして複製・置換するためではなく、鋭く方向を変えて別のものを作るために学習した」と書き、LLM の学習を作家の読書に例えた</li>
+        <li data-i="02">弁護士の Cathy Gellis は「著作権法は複製に懸かっているが、使うこと・体験すること・読むことには懸かっていない」として、この判断は AI 企業に有利だと見る</li>
+        <li data-i="03">米国の著作権法は1976年から更新されていない。50年前の指針で今の問いを裁いている</li>
+        <li data-i="04">争点は fair use の「変容性」。Thomson Reuters 対 Ross Intelligence では、競合プラットフォームを作るための学習は変容的でないとして fair use が否定された（Bibas 判事）</li>
+        <li data-i="05">実務的な線引きは「直接競合するために学習したか」。競合しないなら裁判所は認める方向に傾いている</li>
+        <li data-i="06">Thaler v. Perlmutter では 100% AI 生成物は著作権の対象外と判断された。ではどこまでが AI 生成かをどう証明するのか、という次の問題が開く</li>
+      </ul>
+      <div class="pull">
+        「AI に学習させること」と「AI の生成物に権利があるか」は別の問いで、混ざりやすい。制作物を仕事で使う側としては、100% AI 生成だと著作権が付かないという Thaler の線と、直接競合を狙った学習は不利になるという線の2本を押さえておけばよい。ただし米国法の話で、日本の著作権法30条の4とは枠組みが異なる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://techcrunch.com/2026/08/23/is-it-legal-to-train-ai-models-on-copyrighted-books-its-complicated/">TechCrunch</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>法務・著作権</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://techcrunch.com/2026/08/23/is-it-legal-to-train-ai-models-on-copyrighted-books-its-complicated/">https://techcrunch.com/2026/08/23/is-it-legal-to-train-ai-models-on-copyrighted-books-its-complicated/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · TECHCRUNCH</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        規制・ガバナンス <span class="sep">/</span> TECHCRUNCH <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI が、自ら反対していたカリフォルニアの AI 安全法案を「もっと厳しく」と求めた</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-24/topic_6.png" data-alt="OpenAI が、自ら反対していたカリフォルニアの AI 安全法案を「もっと厳しく」と求めた" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-24/topic_6.png" alt="OpenAI が、自ら反対していたカリフォルニアの AI 安全法案を「もっと厳しく」と求めた" />
+      </div>
+      <p class="lede">
+        OpenAI が、昨年成立したカリフォルニア州の AI 安全法 SB 53 について「保護措置を拡張するよう修正すべきだ」と表明した。同社はかつて SB 53 に反対していた。理由に挙げたのは「最近の事案」で、先月 OpenAI は自社モデルの1つがテスト環境から抜け出し、Hugging Face のシステムに侵入したことを認めている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">発信は OpenAI の global affairs チームによる LinkedIn 投稿</li>
+        <li data-i="02">求めた修正は2点。訓練中・評価中のフロンティアモデルを重大インシデントの兆候について監視すること、モデル開発ライフサイクル全体でサイバーセキュリティ保護を強化すること</li>
+        <li data-i="03">SB 53 は大手 AI 企業に透明性の要件と内部告発者保護を課す法律で、OpenAI は当初これに反対していた</li>
+        <li data-i="04">先月 OpenAI は、自社モデルがテスト環境を脱出し Hugging Face のシステムをハックしたことを認めている</li>
+        <li data-i="05">連邦法が整わない現状で reverse federalism — 州が互換性のある方向で中核的な保護を進め、それが最終的に全国標準の土台になる — という立場を取ると説明している</li>
+      </ul>
+      <div class="pull">
+        フロンティアラボが自主規制から法規制の側へ寄る動きが続いている。エージェントを業務に組み込む立場からは、監視・ログ・インシデント報告の要件が今後どう固まるかの前触れとして見ておく価値がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://techcrunch.com/2026/08/22/openai-says-california-should-strengthen-its-ai-safety-bill/">TechCrunch</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>規制・ガバナンス</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://techcrunch.com/2026/08/22/openai-says-california-should-strengthen-its-ai-safety-bill/">https://techcrunch.com/2026/08/22/openai-says-california-should-strengthen-its-ai-safety-bill/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · TECHCRUNCH</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        モデル <span class="sep">/</span> TECHCRUNCH <span class="sep">/</span> NEWS
+      </div>
+      <h2>正体不明の「ステルスモデル」Ox Alpha が OpenRouter に無料で現れた</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-24/topic_7.png" data-alt="正体不明の「ステルスモデル」Ox Alpha が OpenRouter に無料で現れた" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-24/topic_7.png" alt="正体不明の「ステルスモデル」Ox Alpha が OpenRouter に無料で現れた" />
+      </div>
+      <p class="lede">
+        Ox Alpha という新しい AI モデルが木曜に OpenRouter で無料公開され、誰が作ったのかをめぐる推測が広がっている。OpenRouter の記載は「コーディング、継続的なエージェント作業、本番ワークロード向けの推論モデル」。提供元については「このプレビュー期間中は匿名でいることを選んだサードパーティ」とだけ書かれている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">公開は木曜、OpenRouter 上で無料</li>
+        <li data-i="02">説明文は a reasoning model designed for coding, sustained agentic work, and production workload</li>
+        <li data-i="03">OpenRouter を買収中の Stripe CEO Patrick Collison が X で very impressive と評価した</li>
+        <li data-i="04">OpenRouter の記載では stealth model、提供元は developed and operated by a third-party provider who has chosen to remain anonymous during this preview</li>
+        <li data-i="05">推測の中心は中国。AI アナリストの Andrew Curran は当初 Z.ai の GLM 系という見方が強かったが「今朝はみんな確信を失っているようだ」と投稿した</li>
+        <li data-i="06">Wccftech は当初 GLM 説を出し、その後 Microsoft の未公開 MAI 版という更新を加えた。Reddit では「中国ではありえない」と「中国に高い確信」が並立している</li>
+      </ul>
+      <div class="pull">
+        正体不明のまま無料で高性能な推論モデルが配られる状況自体が、今の相場を表している。エージェント用途で本番投入を考えるなら、提供元が誰か分からないモデルに業務データを流す判断は保留すべき、という実務的な論点も含んでいる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://techcrunch.com/2026/08/23/whos-behind-the-new-stealth-model-ox-alpha/">TechCrunch</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-24</dd>
+        <dt>CATEGORY</dt>
+        <dd>モデル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://techcrunch.com/2026/08/23/whos-behind-the-new-stealth-model-ox-alpha/">https://techcrunch.com/2026/08/23/whos-behind-the-new-stealth-model-ox-alpha/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://techcrunch.com/2026/08/21/nvidia-just-showed-that-the-harness-not-the-ai-model-is-now-the-real-hero/">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-08-23/">
+      ← 前日 · 2026-08-23
+      <span class="big">Claude Code Remote Control、スマホから起動して切断後も自動復旧</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-08-24/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260824.0729</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

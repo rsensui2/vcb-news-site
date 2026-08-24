@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-08-25 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-08-25 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0825</span>
+    <span class="sep">/</span>
+    <span>2026-08-25</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260825.0737</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-08-25/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:37 · MON</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · MONDAY · AUGUST 25, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>08<span class="dot">.</span>25</h1>
+    <div class="strap">
+      <span>NVIDIA · Anthropic · OpenAI · Claude</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 6 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AIインフラ <span class="sep">/</span> NVIDIA NEWSROOM / CNBC <span class="sep">/</span> NEWS
+      </div>
+      <h2>NVIDIA、推論専用チップ「Groq 3 LPX」が量産開始 — Gemma 4 31B で毎秒3,400トークン</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-25/topic_1.png" data-alt="NVIDIA、推論専用チップ「Groq 3 LPX」が量産開始 — Gemma 4 31B で毎秒3,400トークン" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-25/topic_1.png" alt="NVIDIA、推論専用チップ「Groq 3 LPX」が量産開始 — Gemma 4 31B で毎秒3,400トークン" />
+      </div>
+      <p class="lede">
+        NVIDIA が米国時間 8/24 の Hot Chips で、推論専用アクセラレータ「NVIDIA Groq 3 LPX」の量産開始を発表した。昨年12月に約200億ドルで買収した Groq の資産をベースにした製品で、トークンを1つずつ吐き出すデコード段だけを速くすることに振り切っている。Vera Rubin NVL72 の構成に組み込む形で提供され、最初の採用先は AI クラウドの Nebius。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">オープンモデル Gemma 4 31B・コンテキスト10万トークンで毎秒3,400出力トークン（計測は Artificial Analysis）</li>
+        <li data-i="02">NVIDIA の主張で応答性は競合プラットフォームの約4倍。エージェントのコーディングタスクが「数時間ではなく数分」で終わる水準</li>
+        <li data-i="03">Vera Rubin NVL72 を推論ワークロード向けに拡張する位置づけ。7種のチップと5種のラックで構成（BlueField-4 DPU・Vera CPU ラック・Spectrum-6 SPX Ethernet ほか）</li>
+        <li data-i="04">買収額は約200億ドル（2025年12月）。Tom's Hardware によると製造は Samsung、ダイ上に 500MB の SRAM を載せてメモリ帯域のボトルネックを回避する設計</li>
+        <li data-i="05">最初の採用は AI クラウドの Nebius。Nebius Token Factory へ統合し年内オンライン。Groq 自身の推論クラウドも早期導入を予定</li>
+        <li data-i="06">Jensen Huang「Vera Rubin はエージェンティック AI の時代に向けたワークロード最適化構成。LPX が超高速なトークン生成で性能フロンティアを押し上げる」</li>
+      </ul>
+      <div class="pull">
+        エージェントの体感速度は賢さよりトークンの吐き出し速度で決まる場面が多い。ループを何十周も回す使い方だと、1周あたりの待ち時間がそのまま1日の処理量になる。推論専用ハードが量産に入ったのは、来年以降の運用コストと速度の前提が変わる合図。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://nvidianews.nvidia.com/news/nvidia-groq-3-lpx-now-in-full-production-with-world-class-speed-for-agentic-ai">NVIDIA Newsroom / CNBC</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-24</dd>
+        <dt>CATEGORY</dt>
+        <dd>AIインフラ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://nvidianews.nvidia.com/news/nvidia-groq-3-lpx-now-in-full-production-with-world-class-speed-for-agentic-ai">https://nvidianews.nvidia.com/news/nvidia-groq-3-lpx-now-in-full-production-with-world-class-speed-for-agentic-ai</a></dd>
+        <dd><a href="https://www.cnbc.com/2026/08/24/nvidia-says-groq-racks-will-be-online-this-year-after-20-billion-deal.html">www.cnbc.com/2026/08/24/nvidia-says-groq…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · ANTHROPIC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI開発ツール <span class="sep">/</span> ANTHROPIC 公式ブログ <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic、MCPコネクタの「会社まとめて認可」が正式提供に</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-25/topic_2.png" data-alt="Anthropic、MCPコネクタの「会社まとめて認可」が正式提供に" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-25/topic_2.png" alt="Anthropic、MCPコネクタの「会社まとめて認可」が正式提供に" />
+      </div>
+      <p class="lede">
+        Claude の Team / Enterprise プランで、MCP コネクタの認可を IT 管理者が ID プロバイダ側で一括設定できる enterprise-managed auth が 8/24 に正式提供（GA）になった。これまでは「管理者が組織でコネクタを有効化する」「各ユーザーが自分で OAuth 認可する」の2段階が必要で、後半の個別認可が現場の詰まりどころだった。管理者が Okta で一度設定すれば、社員は初回ログイン時に権限を自動で引き継ぐ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">MCP の Enterprise-Managed Authorization (EMA) 拡張の最初の実装。EMA 自体は 6/18 に MCP 側で stable になっていた</li>
+        <li data-i="02">対応コネクタに Datadog・Notion・Slack が追加。既存対応は Asana・Atlassian・Canva・Figma・Granola・Linear・Supabase。Exa・Miro・Zoom は近日対応</li>
+        <li data-i="03">ID プロバイダは現時点で Okta のみ（他社対応は近日）</li>
+        <li data-i="04">Claude チャット・Claude Code・Cowork をまたいでアクセス権が一貫する</li>
+        <li data-i="05">対象は Claude Team / Enterprise プラン。ヘルプセンターから access を申請する</li>
+        <li data-i="06">Supabase も同日、自社 MCP サーバーの enterprise-managed auth 対応を Anthropic・Okta と共同で告知</li>
+      </ul>
+      <div class="pull">
+        社内に AI エージェントを配るとき実際に止まるのは技術ではなく「全員に個別認可させる」運用のところ。そこが ID プロバイダ側に寄ると配る側の負担が消える。裏を返せば、誰がどのツールに触れるかの権限設計を情シス側で先に決めておく必要が出てくる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,636</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://claude.com/blog/enterprise-managed-auth">Anthropic 公式ブログ</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-24</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://claude.com/blog/enterprise-managed-auth">https://claude.com/blog/enterprise-managed-auth</a></dd>
+        <dd><a href="https://x.com/ClaudeDevs/status/2091953609185657251">x.com/ClaudeDevs/status/2091953609185657…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · OPENAI DEVELOPERS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI開発ツール <span class="sep">/</span> OPENAI DEVELOPERS <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI と AWS、Kiro 上の GPT-5.6 を最適化 — タスク完了コストが約82%減</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-25/topic_3.png" data-alt="OpenAI と AWS、Kiro 上の GPT-5.6 を最適化 — タスク完了コストが約82%減" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-25/topic_3.png" alt="OpenAI と AWS、Kiro 上の GPT-5.6 を最適化 — タスク完了コストが約82%減" />
+      </div>
+      <p class="lede">
+        OpenAI が 8/24、AWS と共同で Kiro 上の GPT-5.6 を価格性能面で最適化したと発表した。要件・技術設計・タスク文脈を先に固めてからモデルに渡す Kiro の spec-driven なやり方と組み合わせることで、同じ作業を終えるまでのコストが下がったという内容。GPT-5.6 の Sol / Terra / Luna が Kiro の IDE・CLI・Web で使える。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Terminal-Bench 2.1 で、GPT-5.6 Terra がタスクを完了するまでのコストが約82%減（OpenAI 発表）</li>
+        <li data-i="02">Kiro のクレジット倍率は Sol 2.4x / Terra 1.2x / Luna 0.6x</li>
+        <li data-i="03">Coding Agent Index は Sol 80 / Terra 77.4 / Luna 74.6</li>
+        <li data-i="04">Terminal-Bench 2.1 のスコアは Sol 88.8% / Terra 87.4% / Luna 84.7%</li>
+        <li data-i="05">提供リージョンは AWS US-East-1（北バージニア）と AWS Europe（フランクフルト）。クロスリージョン推論に対応</li>
+        <li data-i="06">あわせて GPT-5.6 Luna の価格が80%減、Terra が20%減</li>
+      </ul>
+      <div class="pull">
+        速いモデルや賢いモデルを選ぶより「文脈を先に固めてから渡す」ほうがコストに効く、という主張をモデル提供元がベンチ数値で出してきた。仕様を書いてから作らせる進め方が料金明細に出るという話になっている。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">394</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2091966982015103068">@OpenAIDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-24</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2091966982015103068">x.com/OpenAIDevs/…</a></dd>
+        <dd><a href="https://openai.com/index/gpt-5-6-in-kiro/">openai.com/index/gpt-5-6-in-kiro/</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · CLAUDEDEVSANTHROPI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI開発ツール <span class="sep">/</span> CLAUDEDEVS（ANTHROPIC 公式） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude の Web・デスクトップ、長文の描画を作り直して約4倍なめらかに</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-25/topic_4.png" data-alt="Claude の Web・デスクトップ、長文の描画を作り直して約4倍なめらかに" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-25/topic_4.png" alt="Claude の Web・デスクトップ、長文の描画を作り直して約4倍なめらかに" />
+      </div>
+      <p class="lede">
+        Anthropic が 8/24、Claude の Web 版とデスクトップ版のストリーミング描画を作り直したと告知した。返答全体を毎フレーム描き直すのをやめ、まだ変化している箇所だけを更新する方式に変えたことで、長い回答の表示が体感で約4倍なめらかになったという。モデル自体は変わっていない。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">長い回答のストリーミング表示が約4倍なめらかに</li>
+        <li data-i="02">非力なノートPCでは停止（stall）が9分の1、最悪のフリーズ時間は4.5分の1</li>
+        <li data-i="03">120Hz の MacBook では最初から最後まで 120fps を維持</li>
+        <li data-i="04">変更したのはレンダラーのみ。「まだ変化している箇所だけを触る」設計に置き換えた</li>
+        <li data-i="05">モデルの速度や品質は変わっていない</li>
+      </ul>
+      <div class="pull">
+        出力が速くなったのではなく「読める形で出てくる」ようになった改善。調査・設計・レビューのように長文を返させる使い方ほど効く。地味だが AI を一日中開いている人ほど体感差が大きい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,068</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2092006814804214163">@ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-24</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2092006814804214163">x.com/ClaudeDevs/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · THIBAULT SOTTIAUXO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI開発ツール <span class="sep">/</span> THIBAULT SOTTIAUX（OPENAI / CODEX） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Codex の利用枠が急に減る問題、原因3つを特定して修正</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-25/topic_5.png" data-alt="Codex の利用枠が急に減る問題、原因3つを特定して修正" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-25/topic_5.png" alt="Codex の利用枠が急に減る問題、原因3つを特定して修正" />
+      </div>
+      <p class="lede">
+        「Codex の利用枠の減りが速い」という報告が続いていた件について、OpenAI の Thibault Sottiaux が 8/23 に原因3点を公表し、8/24 に修正の反映と利用枠のリセット配布を告知した。ユーザーの使い方ではなく実装側の非効率が原因だったという説明になっている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">原因① 長いセッションで画像を扱い、compaction（圧縮）を複数回はさんだときの非効率</li>
+        <li data-i="02">原因② Computer History 機能の p95 以上の使用量が高かった</li>
+        <li data-i="03">原因③ 会話タイトルを自動生成する機能が想定より枠を消費していた</li>
+        <li data-i="04">タイガーチームを編成して翌日に修正を出荷。利用枠のリセットは 8/24 14:00 PST 前後に反映</li>
+        <li data-i="05">別途「効率を大幅に上げる新しい手法」を見つけたとして翌週に着手予定と予告</li>
+      </ul>
+      <div class="pull">
+        上限に当たるとまず自分の使い方を疑うが、今回は実装側の消費が原因だった。エージェントを長時間回す運用では、画像・履歴機能・自動生成タイトルのような裏で動くものが枠を食う。自分のループでも意図せず毎周回で消えている入力がないか見直す材料になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">9,856</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/thsottiaux/status/2091407991736332689">@thsottiaux</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-24</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/thsottiaux/status/2091407991736332689">x.com/thsottiaux/…</a></dd>
+        <dd><a href="https://x.com/thsottiaux/status/2091688655828246890">x.com/thsottiaux/status/2091688655828246…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · LEVEL1TECHS FORUMS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ローカルLLM <span class="sep">/</span> LEVEL1TECHS FORUMS / @STEEVE <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉ローカルLLMが「バカに感じる」のはモデルのせいではない</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-25/topic_6.png" data-alt="〈知見〉ローカルLLMが「バカに感じる」のはモデルのせいではない" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-25/topic_6.png" alt="〈知見〉ローカルLLMが「バカに感じる」のはモデルのせいではない" />
+      </div>
+      <p class="lede">
+        同じモデル・同じ重みでも、量子化の形式と推論スタックの設定で出力が別物になるという検証記事。Qwen 3.6-27B / 3.8-27B に9.6万トークン超の長文タスクを与え、BF16 を基準に各フォーマットのトークン一致率を測っている。結論は「重みの量子化より KV キャッシュの量子化のほうが壊す」「NVFP4 は長い文脈で崩れる」。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">NVFP4（混合）が最悪。8.8万トークン地点で約50%のトークンが BF16 と食い違い、ツール呼び出しが完了しなかった</li>
+        <li data-i="02">AWQ W4A16 も約40%のトークンが食い違い、ツール呼び出しを正しく閉じられなかった</li>
+        <li data-i="03">公式 FP8 での 8.8万トークン地点の不一致は約15〜20%</li>
+        <li data-i="04">INT8 W8A16 が最良。劣化はごくわずかで、ツール呼び出しも完走した</li>
+        <li data-i="05">KV キャッシュを INT4 にするとツール呼び出し中にトークンが飛んで失敗。INT8 なら復帰、BF16 なら正しいまま</li>
+        <li data-i="06">壊れ方の実例: インターフェース名が GigabitEthernet0/0/1.201 → 0/1/4 に化ける、show mac address table を打つべき場面で show run を打つ</li>
+        <li data-i="07">テンソル並列の設定でも結果が変わる。TP2 で失敗したタスクが TP1・TP4 では成功した</li>
+      </ul>
+      <div class="pull">
+        ローカルLLM は動いた時点で使えると判断しがちだが、短いやり取りでは差が出ず、長い文脈のツール実行で初めて壊れる。エージェントに長時間の作業を任せるなら量子化の選択がそのまま失敗率になる。手元で動かすなら INT8 系を基準に、KV キャッシュは削らないのが安全側。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">528</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917">Level1Techs Forums / @steeve</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>ローカルLLM</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917">https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917</a></dd>
+        <dd><a href="https://x.com/steeve/status/2091654530417185092">x.com/steeve/status/2091654530417185092</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · AI/ / SPEAKER DECK</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI×ビジネス活用 <span class="sep">/</span> タイミー AI/データ部門 / SPEAKER DECK <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉2〜3時間で作ったスキルが社内利用1位に — 効いたのは4,400行の社内知識</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-25/topic_7.png" data-alt="〈知見〉2〜3時間で作ったスキルが社内利用1位に — 効いたのは4,400行の社内知識" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-25/topic_7.png" alt="〈知見〉2〜3時間で作ったスキルが社内利用1位に — 効いたのは4,400行の社内知識" />
+      </div>
+      <p class="lede">
+        タイミーの AI/データ部門が公開した、Claude Code スキル「bq-analysis」が社内で最も使われるまでの実データ付きレポート。作った本人の実働は2〜3時間だが、その後4か月かけて社内用語・指標定義・計測仕様を書き足し続け、最終的に約4,400行の参照資料を伴うスキルになった。使う人の主役はエンジニアではなく、SQL を書かない PdM だった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">初回コミットは 2/9、3ファイル・582行。実働は2〜3時間</li>
+        <li data-i="02">6月までに 582行 → 1,823行（3.1倍）。最終構成は約4,400行の社内参照資料</li>
+        <li data-i="03">内訳は用語辞書20% / 指標定義10% / 計測仕様60%超。コードではなく社内の前提が本体</li>
+        <li data-i="04">58日間・Claude Code 利用者約200名での到達率は PdM 65% / データアナリスト45% / エンジニア36%</li>
+        <li data-i="05">週1日以上使う割合は PdM 77%（利用日数の中央値10日）、アナリスト40%（中央値5日）、エンジニア41%（中央値4日）</li>
+        <li data-i="06">リポジトリの29コミットのうち作者本人は9コミット（31%）。残りは利用者側からの改善</li>
+        <li data-i="07">別集計では利用回数1,546回で全ジャンル中トップ</li>
+      </ul>
+      <div class="pull">
+        スキルを作る価値は手順を書くことではなく、社内にしかない前提を言語化することにある、という実例。作る時間は2〜3時間でも、効いたのは4か月分の知識の積み上げだった。同じことをやるなら最初に書くべきは処理手順ではなく用語と指標の定義になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">292</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://speakerdeck.com/mikimhk/how-a-skill-born-from-a-chance-encounter-became-the-most-used-tool-in-the-company">タイミー AI/データ部門 / Speaker Deck</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-24</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI×ビジネス活用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://speakerdeck.com/mikimhk/how-a-skill-born-from-a-chance-encounter-became-the-most-used-tool-in-the-company">https://speakerdeck.com/mikimhk/how-a-skill-born-from-a-chance-encounter-became-the-most-used-tool-in-the-company</a></dd>
+        <dd><a href="https://x.com/SuguruKun_ai/status/2091885681786364083">x.com/SuguruKun_ai/status/20918856817863…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · BEKUAI / X ARTICLE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ <span class="sep">/</span> ベク (@BEKU_AI) / X ARTICLE <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Claude Code で作ったツールを公開する前に確認すべき8項目</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-25/topic_8.png" data-alt="Claude Code で作ったツールを公開する前に確認すべき8項目" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-25/topic_8.png" alt="Claude Code で作ったツールを公開する前に確認すべき8項目" />
+      </div>
+      <p class="lede">
+        Claude Code で作ったツールを一般公開する前に潰すべき穴を8つに整理した X Article。認可漏れ・APIキーのクライアント直書き・古い依存ライブラリ・入力欄とURLパラメータの無防備さ・プロンプトインジェクション・課金の青天井・ログ不在・公開後の放置、という順で並ぶ。各項目に Claude Code へそのまま投げる確認プロンプトと、自分で試せる検証手順が付いている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">最頻の事故は認可の抜け。ログインは通るが URL の ID を書き換えると他人のデータが見える。指示を「ログイン機能を付けて」で止めず「ユーザーは自分のデータにしかアクセスできないようにして」まで書く</li>
+        <li data-i="02">検証は人力で足りる。テストアカウントを2つ作り、A でログインしたまま B のデータ URL を開いて中身が見えたらアウト</li>
+        <li data-i="03">APIキーはブラウザ側に置かない。クライアントコードに置くと開発者ツールで誰でも読める。漏れたキーは無効化して作り直すまでが対応</li>
+        <li data-i="04">AI は学習データの都合でサポート終了済みライブラリを平気で選ぶ。npm audit を流して脆弱性0件を確認してから公開する</li>
+        <li data-i="05">AI を組み込んだツールは、①渡す情報を最小化 ②ユーザー入力は指示ではなく処理対象データとして渡す ③監査させる の3点が最低ライン</li>
+        <li data-i="06">課金の青天井が金銭的インパクト最大。ツール側の回数制限＋プロバイダ管理画面の月次上限額を公開前に設定する</li>
+        <li data-i="07">公開した日が一番安全。Dependabot（GitHub 無料・プライベートリポジトリでも可）を ON にして、アラートが来たら Claude Code に直させる</li>
+        <li data-i="08">開発に使ったのとは別の AI に同じ監査プロンプトを流すと、別の穴が出てくる</li>
+      </ul>
+      <div class="pull">
+        バイブコーディングで作ったものを外に出す段階でそのまま使えるチェックリスト。認可・APIキー・課金上限の3つは、公開したときに実際に事故が起きる箇所。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">230</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/beku_AI/status/2091801296068333917">@beku_AI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-24</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/beku_AI/status/2091801296068333917">x.com/beku_AI/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://nvidianews.nvidia.com/news/nvidia-groq-3-lpx-now-in-full-production-with-world-class-speed-for-agentic-ai">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-08-24/">
+      ← 前日 · 2026-08-24
+      <span class="big">NVIDIA の研究 — 同じモデルでもハーネス次第で 30% → 100%</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-08-25/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260825.0737</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

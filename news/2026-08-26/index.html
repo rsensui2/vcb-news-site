@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-08-26 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-08-26 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0826</span>
+    <span class="sep">/</span>
+    <span>2026-08-26</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260826.0735</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-08-26/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:35 · TUE</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · TUESDAY · AUGUST 26, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>08<span class="dot">.</span>26</h1>
+    <div class="strap">
+      <span>Next.js · Claude · Vercel · CodeRabbit</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 6 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 セキュリティ / フレームワーク <span class="sep">/</span> NEXT.JS BLOG / GITHUB SECURITY ADVISORY <span class="sep">/</span> NEWS
+      </div>
+      <h2>Next.js が8月のセキュリティ更新を1日前倒しで公開 — 認証不要のリモートコード実行が2件</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-26/topic_1.png" data-alt="Next.js が8月のセキュリティ更新を1日前倒しで公開 — 認証不要のリモートコード実行が2件" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-26/topic_1.png" alt="Next.js が8月のセキュリティ更新を1日前倒しで公開 — 認証不要のリモートコード実行が2件" />
+      </div>
+      <p class="lede">
+        8/20 に「8/26 に critical 1件を直す」と予告されていた Next.js のセキュリティリリースが、上流依存にもう1件 critical が見つかったため 8/25 に前倒しで公開された。修正版は v16.3.3 (Active LTS) と v15.5.24 (Maintenance LTS)。2件とも認証不要のリモートコード実行で、片方は Windows ホストに回避策がない。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">AVIF の件（GHSA-2xp9-vwfh-vxw4）: `sharp` が使う libheif の欠陥で、攻撃者が用意した AVIF 画像を Next.js が最適化した時点で認証不要の RCE。修正版は上流が直るまで AVIF 最適化を無効化して回避している</li>
+        <li data-i="02">Windows の件（CVE-2026-75604）: Pages Router と App Router を併用し Cache Components を使っていないアプリが、Windows のファイルシステム上で動いている場合に認証不要の RCE。既知の回避策なし</li>
+        <li data-i="03">Linux と macOS は Windows の件の影響を受けない</li>
+        <li data-i="04">対処は `npm install next@16.3.3`（16.3系）または `npm install next@15.5.24`（15.5系）だけ</li>
+        <li data-i="05">8/20 の事前告知では critical 1件・8/26 予定だったが、上流依存にもう1件見つかったとして日程が前倒しになった</li>
+        <li data-i="06">報告経路は Vercel の Open Source Bug Bounty（HackerOne）</li>
+      </ul>
+      <div class="pull">
+        バイブコーディングで作ったアプリの多くが Next.js を土台にしている。特に AVIF の件は「画像を置いてあるだけ」で刺さるので、自分の書いたコードが安全かどうかとは無関係に該当する。バージョンを上げるだけで済む話なので、デプロイ済みのものも含めて今日中に片付けたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://nextjs.org/blog/august-2026-security-release">Next.js Blog / GitHub Security Advisory</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 セキュリティ / フレームワーク</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://nextjs.org/blog/august-2026-security-release">https://nextjs.org/blog/august-2026-security-release</a></dd>
+        <dd><a href="https://github.com/vercel/next.js/security/advisories/GHSA-p293-qw3h-jr36">github.com/vercel/next.js/security/advis…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · CLAUDE ANTHROPIC B</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 AI開発ツール / CLAUDE <span class="sep">/</span> CLAUDE (ANTHROPIC) BLOG / TECHCRUNCH <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude の記憶がチャットと Cowork で1つになった — 会話中に書き込む方式へ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-26/topic_2.png" data-alt="Claude の記憶がチャットと Cowork で1つになった — 会話中に書き込む方式へ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-26/topic_2.png" alt="Claude の記憶がチャットと Cowork で1つになった — 会話中に書き込む方式へ" />
+      </div>
+      <p class="lede">
+        Anthropic が 8/25、Claude のチャットと Claude Cowork の記憶を同一のものに統合した。これまで Cowork には記憶がなく、チャットで説明した前提を Cowork でもう一度説明し直す必要があった。あわせて、会話が終わってから要約する方式をやめ、会話の途中でトピック単位に書き込む方式へ変わっている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">チャットで覚えたことが Cowork にも、Cowork で覚えたことがチャットにも反映される</li>
+        <li data-i="02">ただし記憶が共有されるのは Cowork がクラウドで動いているときだけ。手元の PC でローカル実行している Cowork セッションは記憶を使わない</li>
+        <li data-i="03">記憶の作られ方が変更。会話中にトピックを追加するので「締め切りが9月に動いた」と言えば次の会話ではもう知っている</li>
+        <li data-i="04">記憶の実体は Memory 設定の Topics 配下にある短いファイルの一覧。1件ずつ読み・編集・削除できる。社名の表記を1ファイル直せば以降の全会話に効く</li>
+        <li data-i="05">対象は Free / Pro / Max。Web・デスクトップ・モバイル。iOS / Android はアプリを最新版に更新する必要がある</li>
+        <li data-i="06">健康・信条などセンシティブな話題は既定で記憶しない（設定で有効化は可能）。政府発行 ID・社会保障番号・犯罪歴・在留資格は設定に関わらず保存しない</li>
+      </ul>
+      <div class="pull">
+        エージェントに毎回同じ前提を貼り直す作業がそのまま消える。記憶が「編集できる短いファイル」として見えるのも効く。間違って覚えられた前提を後から直せるからだ。ローカル実行だけ対象外なので、Cowork をどちらで走らせているかは意識しておきたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it">Claude (Anthropic) Blog / TechCrunch</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 AI開発ツール / Claude</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it">https://claude.com/blog/claudes-memory-works-everywhere-and-you-decide-whats-in-it</a></dd>
+        <dd><a href="https://techcrunch.com/2026/08/25/claude-cowork-finally-remembers-what-you-told-the-app-in-chat/">techcrunch.com/2026/08/25/claude-cowork-…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · VERCEL CHANGELOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🔧 エージェント基盤 / 認証 <span class="sep">/</span> VERCEL CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Vercel Connect が正式提供に — エージェントに長期シークレットを持たせない接続層</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-26/topic_3.png" data-alt="Vercel Connect が正式提供に — エージェントに長期シークレットを持たせない接続層" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-26/topic_3.png" alt="Vercel Connect が正式提供に — エージェントに長期シークレットを持たせない接続層" />
+      </div>
+      <p class="lede">
+        アプリやエージェントから外部 SaaS に安全につなぐための層「Vercel Connect」が 8/25 に GA になった。API キーやトークンを保存する代わりに、実行時に短命でスコープを絞ったトークンを都度発行し、自動で更新・失効させる。GA にあわせてロールベースのアクセス制御と監査ログが入った。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">100以上のプリセットコネクタ（Notion、Workday など）。マネージドコネクタとして Slack / GitHub / Linear / Salesforce / Snowflake / Microsoft。汎用 OAuth・API キー・MCP サーバーにも対応</li>
+        <li data-i="02">長期シークレットを保存せず、実行時に短命・スコープ付きトークンを要求する方式。承認が要る場面では認可フローが自動で走る</li>
+        <li data-i="03">アプリ単位の権限とユーザー委任の権限を切り替えられる。エージェントには read-only など絞ったスコープだけを渡せる</li>
+        <li data-i="04">GA での追加はロールベースのアクセス制御、認可と活動の監査ログ、プロジェクト横断のトークン・トリガー可観測性、署名をサーバー側で検証する Webhook トリガー</li>
+        <li data-i="05">AI SDK・MCP クライアント・Better Auth・Auth.js・eve・Chat SDK と統合</li>
+        <li data-i="06">全プランで使える。Hobby は月 500 トークンリクエスト + 1,000 トリガーまで無料、Pro は 1,000 トークンリクエストあたり $3・1,000 トリガーあたり $0.95</li>
+      </ul>
+      <div class="pull">
+        エージェントに外部サービスを触らせるとき一番危ないのは、全権限の API キーをコードや環境変数に置いたまま渡すやり方だ。それを「実行時に必要な分だけ発行する」に置き換える製品が、監査ログ込みで正式提供になった。個人開発でも Hobby 枠でそのまま試せる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/vercel-connect-ga">Vercel Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>🔧 エージェント基盤 / 認証</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/vercel-connect-ga">https://vercel.com/changelog/vercel-connect-ga</a></dd>
+        <dd><a href="https://vercel.com/changelog/vercel-connect-now-supports-linq">vercel.com/changelog/vercel-connect-now-…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · CODERABBIT BLOG / </span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 AI開発ツール / コードレビュー <span class="sep">/</span> CODERABBIT BLOG / GITHUB <span class="sep">/</span> NEWS
+      </div>
+      <h2>CodeRabbit が Cursor 用プラグインを公開 — レビュー用サブエージェントと承認付き autofix</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-26/topic_4.png" data-alt="CodeRabbit が Cursor 用プラグインを公開 — レビュー用サブエージェントと承認付き autofix" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-26/topic_4.png" alt="CodeRabbit が Cursor 用プラグインを公開 — レビュー用サブエージェントと承認付き autofix" />
+      </div>
+      <p class="lede">
+        コードレビュー SaaS の CodeRabbit が 8/25、Cursor 向けの公式プラグインを公開した。CodeRabbit のレビューエンジンを Cursor の Agent ワークフローに組み込み、実装の文脈を保ったまま IDE の中でレビューを回せる。サブエージェント・コマンド・フック・ルール・スキルを1つのプラグインとして固めた形。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">`code-reviewer` サブエージェントが同梱。メインの Agent が作業を続けている裏で、レビューを別コンテキストで走らせられる</li>
+        <li data-i="02">呼び出しは自然文（「Review my code」）でもコマンド（`/coderabbit-review uncommitted`）でも可</li>
+        <li data-i="03">導入は Cursor Marketplace から入れるか、Cursor 内で `/add-plugin coderabbit`。初回に CodeRabbit CLI を自動インストールする</li>
+        <li data-i="04">ガード付き autofix: 既存の GitHub PR に `/coderabbit-autofix` で未解決の指摘を取得し、Cursor がローカルのコードを見て修正案を出す。1変更ごとに承認を求める</li>
+        <li data-i="05">レビューコメントに書かれた指示をそのまま実行しない・承認なしに push しない、と明記している（レビューコメント経由のプロンプトインジェクション対策）</li>
+      </ul>
+      <div class="pull">
+        書いた本人と同じエージェントにレビューさせても甘くなる。そこに別エンジン・別コンテキストのレビュアーを足すのは素直な答えだ。承認を1変更ずつ挟む設計と、レビューコメント内の指示を実行しないという明言は、エージェントに直させる運用をするなら押さえておきたい線引きになる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.coderabbit.ai/blog/coderabbit-plugin-for-cursor">CodeRabbit Blog / GitHub</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 AI開発ツール / コードレビュー</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.coderabbit.ai/blog/coderabbit-plugin-for-cursor">https://www.coderabbit.ai/blog/coderabbit-plugin-for-cursor</a></dd>
+        <dd><a href="https://github.com/coderabbitai/cursor-plugin">github.com/coderabbitai/cursor-plugin</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · IBM RESEARCH BLOG </span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🖥️ ローカルLLM / オープンモデル <span class="sep">/</span> IBM RESEARCH BLOG / OLLAMA <span class="sep">/</span> NEWS
+      </div>
+      <h2>IBM が Granite 4.2 を公開 — Apache 2.0、3B/8B/30B、思考モードの切り替え付き</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-26/topic_5.png" data-alt="IBM が Granite 4.2 を公開 — Apache 2.0、3B/8B/30B、思考モードの切り替え付き" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-26/topic_5.png" alt="IBM が Granite 4.2 を公開 — Apache 2.0、3B/8B/30B、思考モードの切り替え付き" />
+      </div>
+      <p class="lede">
+        IBM が 8/25、企業向けエージェントを想定した推論モデル群 Granite 4.2 を 3B / 8B / 30B の3サイズで公開した。全モデルに思考モードのオン・オフ切り替えが付き、上位2サイズはソフトウェア開発・ターミナル・Web 検索の実環境の中で強化学習を回している。同日 Ollama にも並び、手元で動かせる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">ライセンスは Apache 2.0。ダウンロード・ファインチューニング・商用投入に制限がない</li>
+        <li data-i="02">Ollama 上のダウンロード量は 3b が 2.2GB・8b が 5.3GB・30b が 18GB。コンテキストは 128K</li>
+        <li data-i="03">`enable_thinking` と `reasoning_effort` で思考の深さを制御できる。簡単な質問には短い推論予算だけ使う低コストモードもある</li>
+        <li data-i="04">ネイティブのツール呼び出し・構造化 JSON 出力・RAG に対応。日本語を含む12言語（英・独・西・仏・日・葡・亜・チェコ・伊・韓・蘭・中）</li>
+        <li data-i="05">学習は Granite 4.0 を土台に、教師ありファインチューニング → 数学・科学・コーディングの基礎 RL → 企業タスク向けの agentic RL という多段構成</li>
+        <li data-i="06">IBM 公式ブログはベンチマークを図で示すのみで、他モデルとの比較数値は本文に書かれていない</li>
+      </ul>
+      <div class="pull">
+        ローカルで動くサイズ（8B なら 5.3GB）でツール呼び出しと思考モードが最初から入っていて、Apache 2.0 なので商用利用に制限がない。社外にデータを出せない案件のエージェント基盤として、現実的な選択肢が1つ増えた。まず `ollama run granite4.2:8b` で手触りを見るのが早い。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://research.ibm.com/blog/introducing-granite-4-2">IBM Research Blog / Ollama</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>🖥️ ローカルLLM / オープンモデル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://research.ibm.com/blog/introducing-granite-4-2">https://research.ibm.com/blog/introducing-granite-4-2</a></dd>
+        <dd><a href="https://ollama.com/library/granite4.2">ollama.com/library/granite4.2</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · OPENAI DEVELOPERS </span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 コミュニティ / ハッカソン <span class="sep">/</span> OPENAI DEVELOPERS BLOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI Build Week の受賞作が発表 — 186カ国・約4.7万人・8,000プロジェクト</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-26/topic_6.png" data-alt="OpenAI Build Week の受賞作が発表 — 186カ国・約4.7万人・8,000プロジェクト" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-26/topic_6.png" alt="OpenAI Build Week の受賞作が発表 — 186カ国・約4.7万人・8,000プロジェクト" />
+      </div>
+      <p class="lede">
+        OpenAI が8日間かけて開催した世界規模のハッカソン「Build Week」の受賞作が 8/25 に公開された。Codex と GPT-5.6 を使って作るという条件で、186カ国から約47,000人が参加し8,000件超のプロジェクトが集まった。4部門・各2作品が選ばれている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">規模は186カ国・約47,000ビルダー・8,000プロジェクト超・8日間。デジタル7件と対面60件のコミュニティイベントを併催した</li>
+        <li data-i="02">Apps for Your Life: 1位 Second Voice（発話支援）、2位 AirBridge for Windows（PC の音声を Apple デバイスへ流す）</li>
+        <li data-i="03">Work &amp; Productivity: 1位 veTriage（獣医のトリアージ支援）、2位 Pulse（心停止時の対応補助）</li>
+        <li data-i="04">Developer Tools: 1位 Echo Canvas（空間オーディオを設計するブラウザ作業台）、2位 Sentinel（MCP のセキュリティ解析）</li>
+        <li data-i="05">Education: 1位 Mechanica（古代機械のインタラクティブな復元）、2位 Dấu（ベトナム語の声調発音コーチ）</li>
+        <li data-i="06">賞金は総額10万ドル。加えて DevDay パスと ChatGPT Pro が付与された</li>
+      </ul>
+      <div class="pull">
+        受賞作の顔ぶれが巨大な技術デモではなく、獣医のトリアージ、ベトナム語の声調、発話支援といった具体的な誰かの困りごとに寄っている。8日間で作れる規模で、テーマの選び方だけで勝負がついているということでもある。作るものに迷っているなら一覧を眺める価値がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://developers.openai.com/blog/build-week-winners">OpenAI Developers Blog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 コミュニティ / ハッカソン</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://developers.openai.com/blog/build-week-winners">https://developers.openai.com/blog/build-week-winners</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · TECHCRUNCH / BUSIN</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 業界ニュース / M&amp;A <span class="sep">/</span> TECHCRUNCH / BUSINESS INSIDER <span class="sep">/</span> NEWS
+      </div>
+      <h2>Hugging Face が130億ドル超での買収交渉と報道 — 相手は不明、成立もしていない</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-26/topic_7.png" data-alt="Hugging Face が130億ドル超での買収交渉と報道 — 相手は不明、成立もしていない" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-26/topic_7.png" alt="Hugging Face が130億ドル超での買収交渉と報道 — 相手は不明、成立もしていない" />
+      </div>
+      <p class="lede">
+        Business Insider が週末に、オープンソース AI のハブである Hugging Face が130億ドル以上での買収について交渉していると報じた。TechCrunch が 8/24 に追随している。ただし交渉相手は明らかにされておらず、合意にも至っていない。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">報道元は Business Insider。TechCrunch は「相手が誰かは不明」「合意には至っていない」と明記している</li>
+        <li data-i="02">直近の資金調達は2023年、ポストマネー45億ドル。Salesforce Ventures がリードし Alphabet・GV・IBM Ventures が参加した</li>
+        <li data-i="03">2026年前半に NVIDIA から企業価値70億ドルでの5億ドル出資提案があったが断っている</li>
+        <li data-i="04">CEO の Clem Delangue は「コミュニティのためのプラットフォームを作っている。彼らはデータとモデルを共有することで我々を信頼してくれている」と発言し、短期利益より長期の持続性を優先する姿勢を公言してきた</li>
+        <li data-i="05">成立すれば、モデル・データセット配布の事実上の共通インフラが特定企業の傘下に入ることになる</li>
+      </ul>
+      <div class="pull">
+        モデルを落とす先、データセットを探す先、Ollama や各種ツールが裏で叩いている先はほぼ全部 Hugging Face だ。ここの持ち主が変わると、無料枠・レート制限・ライセンス方針といった「タダで使えている前提」が動きうる。今すぐ動く話ではないが、自分がどれだけ依存しているかは一度把握しておきたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://techcrunch.com/2026/08/24/hugging-face-reportedly-in-talks-to-be-acquired-for-13b/">TechCrunch / Business Insider</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-24</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 業界ニュース / M&amp;A</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://techcrunch.com/2026/08/24/hugging-face-reportedly-in-talks-to-be-acquired-for-13b/">https://techcrunch.com/2026/08/24/hugging-face-reportedly-in-talks-to-be-acquired-for-13b/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · / SPEAKER DECK</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        🎨 AI×デザイン / 知見 <span class="sep">/</span> 原佑一 (サイバーエージェント) / SPEAKER DECK <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉AI が出す UI が「なんとなく惜しい」理由 — 数字の中央と目で見た中央は違う</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-26/topic_8.png" data-alt="〈知見〉AI が出す UI が「なんとなく惜しい」理由 — 数字の中央と目で見た中央は違う" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-26/topic_8.png" alt="〈知見〉AI が出す UI が「なんとなく惜しい」理由 — 数字の中央と目で見た中央は違う" />
+      </div>
+      <p class="lede">
+        サイバーエージェントのクリエイティブディレクター・原佑一氏による29枚のスライド。「なぜか少しズレて見える」デザインの原因を、錯視と重心という2つの観点から具体例つきで解説している。2024年8月公開の資料だが、8/22 に X で紹介されて改めて広く読まれた。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">上下のマージンが同じ数値だと、下にズレて見える。「上方距離過大の錯視」により人は上方向の距離を実際より長く見積もるため。対策は上マージンを少し広く取ること</li>
+        <li data-i="02">実例として Ameba ブログ20周年サイトでは上下マージンを 317px / 295px と非対称にして視覚的な中央を取っている</li>
+        <li data-i="03">同じ色でも面積が変わると違う色に見える。面積が大きいほど明るく、あるいは暗く極端に見える。例に挙がるのは `#237B31` と `#298737` の緑</li>
+        <li data-i="04">デザイナーは数値の中央ではなく重心で置いている。要素の密度や文字の詰まり方が、見た目の中心をずらす</li>
+      </ul>
+      <div class="pull">
+        AI に UI を作らせると、数値上はきれいに揃っているのに「なんか惜しい」ものが出てくる。原因の多くがここで説明されている。AI は数値で中央を取るが、人間の目は重心で見るからだ。指示を「中央に置いて」から「上マージンを少し広めに」に変えるだけで直る場面がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://speakerdeck.com/yuichi_hara7/mei-siiuiwozuo-rutameni-dezainagayi-shi-siteiru-tiyotutositakao-efang">原佑一 (サイバーエージェント) / Speaker Deck</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>🎨 AI×デザイン / 知見</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://speakerdeck.com/yuichi_hara7/mei-siiuiwozuo-rutameni-dezainagayi-shi-siteiru-tiyotutositakao-efang">https://speakerdeck.com/yuichi_hara7/mei-siiuiwozuo-rutameni-dezainagayi-shi-siteiru-tiyotutositakao-efang</a></dd>
+        <dd><a href="https://x.com/MacopeninSUTABA/status/2091300130821754987">x.com/MacopeninSUTABA/status/20913001308…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://nextjs.org/blog/august-2026-security-release">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-08-25/">
+      ← 前日 · 2026-08-25
+      <span class="big">NVIDIA、推論専用チップ「Groq 3 LPX」が量産開始 — Gemma 4 31B で毎秒3,400トークン</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-08-26/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260826.0735</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

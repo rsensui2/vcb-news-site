@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-08-28 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-08-28 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0828</span>
+    <span class="sep">/</span>
+    <span>2026-08-28</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260828.0735</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-08-28/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:35 · THU</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · THURSDAY · AUGUST 28, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>08<span class="dot">.</span>28</h1>
+    <div class="strap">
+      <span>Cursor · Finatext · Claude · Anthropic</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> CURSOR CHANGELOG / @CURSOR_AI <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cursor Cloud Agents、リポジトリなしでWebアプリを作って公開</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-28/topic_1.png" data-alt="Cursor Cloud Agents、リポジトリなしでWebアプリを作って公開" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-28/topic_1.png" alt="Cursor Cloud Agents、リポジトリなしでWebアプリを作って公開" />
+      </div>
+      <p class="lede">
+        Cursorは、Cloud AgentsをGitHubなどの既存リポジトリへ接続しなくても起動できるようにした。プロンプトから作業を始め、完成物をCursor Originへ保存し、ブラウザ内のライブプレビューを見ながら調整したうえでVercelへ公開できる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Start from scratchから開始</li>
+        <li data-i="02">Originへprivateまたはinternalで保存</li>
+        <li data-i="03">ブラウザ内でライブプレビュー</li>
+        <li data-i="04">Vercel接続で公開URLを発行</li>
+      </ul>
+      <div class="pull">
+        アイデアから動くURLまでを一つの画面でつなげられ、初学者が開発を始める前の準備が減る。保存先の公開範囲と外部サービスへの接続権限は、引き続き自分で確認する必要がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,070</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://cursor.com/changelog/start-from-scratch">Cursor Changelog / @cursor_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-27</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://cursor.com/changelog/start-from-scratch">https://cursor.com/changelog/start-from-scratch</a></dd>
+        <dd><a href="https://x.com/cursor_ai/status/2093077548649577777">x.com/cursor_ai/status/20930775486495777…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · FINATEXT / PR TIME</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        業務活用 <span class="sep">/</span> FINATEXT / PR TIMES <span class="sep">/</span> NEWS
+      </div>
+      <h2>Finatext、保険業務向けAIワークフロー基盤とMCPサーバーを提供</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-28/topic_2.png" data-alt="Finatext、保険業務向けAIワークフロー基盤とMCPサーバーを提供" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-28/topic_2.png" alt="Finatext、保険業務向けAIワークフロー基盤とMCPサーバーを提供" />
+      </div>
+      <p class="lede">
+        Finatextは、保険ビジネスプラットフォーム「Inspire」に、AIの推論、固定ルール、人の確認・承認を組み合わせるAIワークフロー基盤を追加した。外部のAIエージェントから契約・請求情報を参照・操作できるInspire MCPサーバーも提供する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">書類読取から査定見解までを一連化</li>
+        <li data-i="02">人の確認・承認を挿入可能</li>
+        <li data-i="03">外部業務システムにも対応</li>
+        <li data-i="04">権限に応じてAIの参照・操作範囲を制限</li>
+        <li data-i="05">保険金査定や問い合わせ対応を想定</li>
+      </ul>
+      <div class="pull">
+        定型処理はワークフロー、非定型の問いかけはMCP、重要判断は人という役割分担が明確だ。機微情報を扱う企業でエージェントを使うときの、現実的な設計パターンとして参考になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">14</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://prtimes.jp/main/html/rd/p/000000635.000012138.html">Finatext / PR TIMES</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-26</dd>
+        <dt>CATEGORY</dt>
+        <dd>業務活用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://prtimes.jp/main/html/rd/p/000000635.000012138.html">https://prtimes.jp/main/html/rd/p/000000635.000012138.html</a></dd>
+        <dd><a href="https://x.com/KazuKawabata/status/2092632859152719917">x.com/KazuKawabata/status/20926328591527…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · CLAUDE BY ANTHROPI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        研究 <span class="sep">/</span> CLAUDE BY ANTHROPIC / @CLAUDEAI <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Team、研究者向け枠を1万人に拡大</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-28/topic_3.png" data-alt="Claude Team、研究者向け枠を1万人に拡大" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-28/topic_3.png" alt="Claude Team、研究者向け枠を1万人に拡大" />
+      </div>
+      <p class="lede">
+        Anthropicは、大学・非営利研究機関の主任研究者と研究グループを対象に、Claude Teamの研究者向けプランを1万人分用意した。Standard席は12カ月無料、Premium席は通常100ドルに対して月15ドルで、Claude Science、Claude Code、Coworkなどを利用できる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">大学・非営利研究機関の主任研究者が対象</li>
+        <li data-i="02">1グループ1〜25席</li>
+        <li data-i="03">Premiumは利用枠5倍</li>
+        <li data-i="04">審査は通常5〜7営業日</li>
+        <li data-i="05">研究データをモデル学習に使わない</li>
+      </ul>
+      <div class="pull">
+        AIを研究者個人の補助から、研究室単位の共通基盤へ広げる施策だ。一般企業でも、個人利用からチーム運用へ移る際の参考になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">3,702</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://claude.com/programs/team-plan-for-scientists">Claude by Anthropic / @claudeai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-27</dd>
+        <dt>CATEGORY</dt>
+        <dd>研究</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://claude.com/programs/team-plan-for-scientists">https://claude.com/programs/team-plan-for-scientists</a></dd>
+        <dd><a href="https://x.com/claudeai/status/2093059087298601113">x.com/claudeai/status/209305908729860111…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · WIRED / ANTHROPICA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        エージェント <span class="sep">/</span> WIRED / @ANTHROPICAI <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic、AIが物理機器を扱うModel Hardware Standardを公開</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-28/topic_4.png" data-alt="Anthropic、AIが物理機器を扱うModel Hardware Standardを公開" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-28/topic_4.png" alt="Anthropic、AIが物理機器を扱うModel Hardware Standardを公開" />
+      </div>
+      <p class="lede">
+        Anthropicは、AIエージェントが顕微鏡、液体処理装置、量子計算機器、製造装置、ロボットアームなどを安全に操作するためのModel Hardware Standard（MHS）を研究プレビューした。機器の能力、制約、操作方法を共通仕様で記述し、複数の装置を組み合わせて扱えるようにする構想だ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">科学・ロボティクス・製造分野で参加者を募集</li>
+        <li data-i="02">速度や角度などの安全制約を記述</li>
+        <li data-i="03">創薬実験などで初期試験</li>
+        <li data-i="04">現時点ではオープンソース化していない</li>
+      </ul>
+      <div class="pull">
+        MHSはAIの操作対象を物理機器へ広げようとしている。できる操作だけでなく、してはいけない操作を仕様に埋め込む考え方が重要になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">222</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.wired.com/story/anthropic-standard-ai-agents-coming-to-the-physical-world/">WIRED / @AnthropicAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-27</dd>
+        <dt>CATEGORY</dt>
+        <dd>エージェント</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.wired.com/story/anthropic-standard-ai-agents-coming-to-the-physical-world/">https://www.wired.com/story/anthropic-standard-ai-agents-coming-to-the-physical-world/</a></dd>
+        <dd><a href="https://x.com/AnthropicAI/status/2093038428757918070">x.com/AnthropicAI/status/209303842875791…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · AXIOS / OPENAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ <span class="sep">/</span> AXIOS / @OPENAI <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI・Anthropicなど100超の組織、AI時代のサイバー防御を共同提言</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-28/topic_5.png" data-alt="OpenAI・Anthropicなど100超の組織、AI時代のサイバー防御を共同提言" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-28/topic_5.png" alt="OpenAI・Anthropicなど100超の組織、AI時代のサイバー防御を共同提言" />
+      </div>
+      <p class="lede">
+        OpenAI、Anthropic、AWS、Microsoftなど100を超える組織が、AIで高度な攻撃能力が広く使われる前に防御を強化するための共同提言を公表した。AI企業、セキュリティ企業、一般企業、政府に対して、防御手段の普及、情報共有、重要インフラの更新、支援資金の拡充を求めている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">署名は100組織超</li>
+        <li data-i="02">病院や水処理施設を懸念</li>
+        <li data-i="03">資金や人材の限られた組織への支援を強調</li>
+        <li data-i="04">具体的な期限や投資額は含まない</li>
+      </ul>
+      <div class="pull">
+        AIエージェントを業務へ入れる話と、既存システムを守る話は分けられなくなっている。権限、監視、更新、事故対応を同じ導入計画へ入れたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,542</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.axios.com/2026/08/27/openai-anthropic-issue-dire-cyber-threat-warning">Axios / @OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-27</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.axios.com/2026/08/27/openai-anthropic-issue-dire-cyber-threat-warning">https://www.axios.com/2026/08/27/openai-anthropic-issue-dire-cyber-threat-warning</a></dd>
+        <dd><a href="https://x.com/OpenAI/status/2093074192636018977">x.com/OpenAI/status/2093074192636018977</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · BOT / CURSOR COMMU</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        エージェント <span class="sep">/</span> @BOT / CURSOR COMMUNITY FORUM <span class="sep">/</span> NEWS
+      </div>
+      <h2>Grok Bot、SuperGrokとCursor Proの全契約者へ拡大</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-28/topic_6.png" data-alt="Grok Bot、SuperGrokとCursor Proの全契約者へ拡大" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-28/topic_6.png" alt="Grok Bot、SuperGrokとCursor Proの全契約者へ拡大" />
+      </div>
+      <p class="lede">
+        Grok Botは、利用対象を全SuperGrok契約者とCursor Pro契約者へ広げ、全ユーザーの週間利用枠をリセットした。従来の上位プラン中心の提供から、月額20ドルのCursor Proまで入口を下げた形だ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">SuperGrokとCursor Proの全契約者が対象</li>
+        <li data-i="02">週間利用枠をリセット</li>
+        <li data-i="03">独立したクラウド環境で長時間タスクを実行</li>
+        <li data-i="04">利用枠の減りが速い例を提供側が調査中</li>
+      </ul>
+      <div class="pull">
+        常駐型エージェントが一般的な開発ツールの契約に含まれ始めた。試しやすさは上がるが、実務利用では利用枠、権限、失敗時の復旧を先に確認したい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">17,338</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/bot/status/2092664183334846840">@bot</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-26</dd>
+        <dt>CATEGORY</dt>
+        <dd>エージェント</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/bot/status/2092664183334846840">x.com/bot/…</a></dd>
+        <dd><a href="https://forum.cursor.com/t/anyone-used-grokbot-on-the-api-very-high-costs/169551/7">forum.cursor.com/t/anyone-used-grokbot-o…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · MURASAMETECH</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ローカルLLM <span class="sep">/</span> @MURASAMETECH <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉Ollamaとllama.cpp、同じGPU・モデルでも速度に8%差</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-28/topic_7.png" data-alt="〈知見〉Ollamaとllama.cpp、同じGPU・モデルでも速度に8%差" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-28/topic_7.png" alt="〈知見〉Ollamaとllama.cpp、同じGPU・モデルでも速度に8%差" />
+      </div>
+      <p class="lede">
+        RTX 5060 Ti 16GBとGemma 4 12Bを同条件で比較した実機検証では、Ollamaが44.05 tokens/s、llama.cppが47.63 tokens/sだった。llama.cppが約8%速い一方、Ollamaはモデル管理や導入の手軽さに強みがある。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">GPUとモデルを固定</li>
+        <li data-i="02">Ollamaは44.05 tokens/s</li>
+        <li data-i="03">llama.cppは47.63 tokens/s</li>
+        <li data-i="04">API応答でもllama.cppが優位</li>
+        <li data-i="05">導入の手軽さはOllamaが優位</li>
+      </ul>
+      <div class="pull">
+        ローカルLLMの体感はGPUやモデルだけで決まらず、実行ランタイムでも変わる。目的がすぐ使うことか、性能を詰めることかを先に決めると、道具選びを単純化できる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">38</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/murasametech/status/2092459942657855508">@murasametech</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-26</dd>
+        <dt>CATEGORY</dt>
+        <dd>ローカルLLM</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/murasametech/status/2092459942657855508">x.com/murasametech/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://cursor.com/changelog/start-from-scratch">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-08-27/">
+      ← 前日 · 2026-08-27
+      <span class="big">評価中のAIが隔離を破り外部システムへ — OpenAIがHugging Face侵害の技術報告書を公開</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-08-28/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260828.0735</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

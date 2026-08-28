@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-08-29 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-08-29 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0829</span>
+    <span class="sep">/</span>
+    <span>2026-08-29</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260829.0732</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-08-29/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:32 · FRI</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · FRIDAY · AUGUST 29, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>08<span class="dot">.</span>29</h1>
+    <div class="strap">
+      <span>Claude · Anthropic · OpenAI · Appshots</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> CLAUDEDEVS <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code、ターミナル作業をデスクトップで再開</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-29/topic_1.png" data-alt="Claude Code、ターミナル作業をデスクトップで再開" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-29/topic_1.png" alt="Claude Code、ターミナル作業をデスクトップで再開" />
+      </div>
+      <p class="lede">
+        Anthropicは、ターミナルで進めていたClaude Codeのセッションをデスクトップアプリで再開できるようにした。デスクトップ側で`/resume`を実行すると、過去のセッションを選んで続きを進められる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">ターミナルとデスクトップ間でセッションを引き継げる</li>
+        <li data-i="02">デスクトップ側の入口は`/resume`</li>
+        <li data-i="03">新しい作業としてやり直さず、既存の会話と作業履歴を継続できる</li>
+      </ul>
+      <div class="pull">
+        CLIとGUIは、同じ仕事の入口を切り替えるための操作面になる。コンテクストを持ち直す手間を減らし、作業場所に合うほうを選びやすくなる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">4,748</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2093368017304371503">@ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2093368017304371503">x.com/ClaudeDevs/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · ANTHROPICAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI安全性 <span class="sep">/</span> ANTHROPICAI <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic、Claudeに小型モデルの安全性改善を48時間任せる</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-29/topic_2.png" data-alt="Anthropic、Claudeに小型モデルの安全性改善を48時間任せる" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-29/topic_2.png" alt="Anthropic、Claudeに小型モデルの安全性改善を48時間任せる" />
+      </div>
+      <p class="lede">
+        Anthropicの研究チームは、Claudeへ48時間とGPU 1基を与え、小型AIモデルの安全性を自律的に改善させる実験を行った。Claudeは手法の調査と提案から訓練、評価までを進め、10種類の不整合で能力を落とさず安全性スコアを改善した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">実験時間は48時間、使用GPUは1基</li>
+        <li data-i="02">欺瞞や迎合など10種類の不整合を対象にした</li>
+        <li data-i="03">最良手法は最適化対象外の評価とPetri行動監査にも一般化した</li>
+        <li data-i="04">最大4.7倍のモデルでも改善を確認した</li>
+        <li data-i="05">Sonnet 5が初期版Opus 4.8を追加訓練する試験も実施した</li>
+        <li data-i="06">自動アラインメントの実験環境を公開した</li>
+      </ul>
+      <div class="pull">
+        AIが別のAIを改善するループは、性能向上に続き、安全性の調整にも広がり始めた。ただし測定できない失敗は直せないため、何を評価指標にするかが自動化の成否を決める。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,072</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/AnthropicAI/status/2093386528668172373">@AnthropicAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI安全性</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/AnthropicAI/status/2093386528668172373">x.com/AnthropicAI/…</a></dd>
+        <dd><a href="https://x.com/AnthropicAI/status/2093386535618113627">x.com/AnthropicAI/status/209338653561811…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · OPENAI / OPENAIDEV</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        研究 <span class="sep">/</span> OPENAI / OPENAIDEVS <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI、生命科学向けRosalind Workbenchを研究プレビュー</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-29/topic_3.png" data-alt="OpenAI、生命科学向けRosalind Workbenchを研究プレビュー" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-29/topic_3.png" alt="OpenAI、生命科学向けRosalind Workbenchを研究プレビュー" />
+      </div>
+      <p class="lede">
+        OpenAIは、生命科学の問いを専門モデル、研究ツール、レビュー可能な成果物へつなぐRosalind Workbenchを研究プレビューした。シーケンス解析、文献と社内データの統合、次の実験計画までを、一つの検証可能な作業空間で扱う。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">GPT-Rosalindを中核にした生命科学向け作業環境</li>
+        <li data-i="02">Codexから利用する入口も用意</li>
+        <li data-i="03">シーケンス解析では入力、計画、QC指標、保存済み成果物を追跡</li>
+        <li data-i="04">ワークフローをチームで共有・再利用できる</li>
+        <li data-i="05">API利用には適格性と組織審査が必要</li>
+        <li data-i="06">研究プレビュー段階</li>
+      </ul>
+      <div class="pull">
+        専門AIの価値を回答の賢さだけでなく、データ、道具、承認、成果物の来歴を一つの流れにした。業務エージェントでも、途中の確認点と再利用できる成果物を残す設計が重要になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">292</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2093405504433447257">@OpenAIDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>研究</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2093405504433447257">x.com/OpenAIDevs/…</a></dd>
+        <dd><a href="https://openai.com/rosalind/">openai.com/rosalind/</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · OPENAIDEVS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        業務活用 <span class="sep">/</span> OPENAIDEVS <span class="sep">/</span> NEWS
+      </div>
+      <h2>Appshots、目の前のアプリをChatGPT WorkとCodexの文脈へ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-29/topic_4.png" data-alt="Appshots、目の前のアプリをChatGPT WorkとCodexの文脈へ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-29/topic_4.png" alt="Appshots、目の前のアプリをChatGPT WorkとCodexの文脈へ" />
+      </div>
+      <p class="lede">
+        OpenAIは、画面に開いているアプリの内容をChatGPT WorkとCodexへ渡すAppshotsの利用例を公開した。Slackスレッドの要約、フォーム入力、APIリファレンスを使った実装、Xの返信分析、DMの要返信判定などを、現在の画面を共有したまま依頼できる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対象はChatGPT WorkとCodex</li>
+        <li data-i="02">目の前のアプリの文脈をAIへ渡す</li>
+        <li data-i="03">Slack、フォーム、APIリファレンス、X、DMを利用例として提示</li>
+        <li data-i="04">画面の情報を理解して操作へつなげる</li>
+      </ul>
+      <div class="pull">
+        コピー＆ペーストで説明し直す作業を減らし、AIが人と同じ画面を起点に仕事を始められる。便利さと同時に、共有する画面へ機密情報が含まれていないかを確認する運用が欠かせない。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">295</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2093437797982204052">@OpenAIDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>業務活用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/OpenAIDevs/status/2093437797982204052">x.com/OpenAIDevs/…</a></dd>
+        <dd><a href="https://x.com/OpenAIDevs/status/2093437810359603456">x.com/OpenAIDevs/status/2093437810359603…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · GROK BOT</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        エージェント <span class="sep">/</span> GROK BOT <span class="sep">/</span> NEWS
+      </div>
+      <h2>Grok Bot、承認付きのオンライン購入に対応</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-29/topic_5.png" data-alt="Grok Bot、承認付きのオンライン購入に対応" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-29/topic_5.png" alt="Grok Bot、承認付きのオンライン購入に対応" />
+      </div>
+      <p class="lede">
+        Grok Botは、決済サービスのLinkを接続し、ユーザーに代わってオンライン購入を完了できるようになった。支出ごとに人が承認し、Botには決済ごとに安全な使い捨てカードが発行される。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Link接続後に買い物を依頼できる</li>
+        <li data-i="02">支出リクエストは毎回ユーザーが承認する</li>
+        <li data-i="03">決済には1回限りのカードを使う</li>
+        <li data-i="04">現在は米国ユーザー向け</li>
+        <li data-i="05">モバイル対応は段階的に提供予定</li>
+      </ul>
+      <div class="pull">
+        エージェントが検索や入力を越え、金銭を伴う取引まで担い始めた。権限を一括で渡さず、支出単位の承認と使い捨て資格情報を組み合わせる設計は、経費や発注の自動化でも参考になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">4,170</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/bot/status/2093419921007108385">@bot</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>エージェント</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/bot/status/2093419921007108385">x.com/bot/…</a></dd>
+        <dd><a href="https://x.com/bot/status/2093419922470961421">x.com/bot/status/2093419922470961421</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · GOOGLE AI / GOOGLE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        音声AI <span class="sep">/</span> GOOGLE AI / GOOGLEAI <span class="sep">/</span> NEWS
+      </div>
+      <h2>Gemini 3.5 Transcribe、雑音と言い淀みを整えて文字起こし</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-29/topic_6.png" data-alt="Gemini 3.5 Transcribe、雑音と言い淀みを整えて文字起こし" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-29/topic_6.png" alt="Gemini 3.5 Transcribe、雑音と言い淀みを整えて文字起こし" />
+      </div>
+      <p class="lede">
+        Googleは、音声をそのまま書き起こすだけでなく、背景雑音、専門用語、言い淀みを処理し、読みやすい文章へ整えるGemini 3.5 Transcribeを発表した。Gemini API、Google AI Studio、Gemini Enterprise Agent Platformから利用できる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Googleが自社で最も精度の高い音声認識モデルと説明</li>
+        <li data-i="02">リアルタイム文字起こし向け</li>
+        <li data-i="03">背景雑音と専門用語に対応</li>
+        <li data-i="04">言い淀みを整理して整形済みテキストを出力</li>
+        <li data-i="05">Gemini APIとGoogle AI Studioで提供</li>
+      </ul>
+      <div class="pull">
+        会議やインタビューの音声処理では、誤認識を減らすだけでなく、読み返せる文章へ整える工程までモデル側へ寄ってきた。議事録では原音と整形後テキストを区別して残したい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">388</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/">Google AI / GoogleAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-26</dd>
+        <dt>CATEGORY</dt>
+        <dd>音声AI</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/">https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5-transcribe/</a></dd>
+        <dd><a href="https://x.com/GoogleAI/status/2093356767992279503">x.com/GoogleAI/status/209335676799227950…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · YUGENMATUNI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AIスライド <span class="sep">/</span> まつにぃ (YUGEN_MATUNI) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>〈知見〉Copilot in PowerPointはSkillsだけで制御しない</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-29/topic_7.png" data-alt="〈知見〉Copilot in PowerPointはSkillsだけで制御しない" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-29/topic_7.png" alt="〈知見〉Copilot in PowerPointはSkillsだけで制御しない" />
+      </div>
+      <p class="lede">
+        PowerPointのCopilotでブランドに沿ったスライドを安定して作るには、Skillsへ指示を詰め込むだけでは足りない。投稿者は、Brand Kit、テンプレート、スライドマスターとサンプルスライド、Copilot Skillsの4層へ役割を分けている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Brand Kitは色、フォント、ロゴ、テンプレートを束ねる</li>
+        <li data-i="02">テンプレート内の完成済みサンプルがCopilotの主なお手本になる</li>
+        <li data-i="03">スライドマスターは背景、テーマ、ロゴ、フッターなどの土台に絞る</li>
+        <li data-i="04">ブランド色は図形への直接指定だけでなくテーマカラーへ登録する</li>
+        <li data-i="05">Skillsにはレイアウトの選択条件、禁止事項、編集可能範囲を書く</li>
+        <li data-i="06">Brand Kitの作成と利用にはMicrosoft Copilot Premiumが必要</li>
+      </ul>
+      <div class="pull">
+        AIスライド生成を安定させる鍵は、制御対象ごとに正しい置き場を決めることだ。長いプロンプトへ寄せすぎず、ブランド資産、完成見本、土台、AIの選択ルールを分けると、属人的な手直しを減らせる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">307</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/yugen_matuni/status/2092961998074257827">@yugen_matuni</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-27</dd>
+        <dt>CATEGORY</dt>
+        <dd>AIスライド</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/yugen_matuni/status/2092961998074257827">x.com/yugen_matuni/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/ClaudeDevs/status/2093368017304371503">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-08-28/">
+      ← 前日 · 2026-08-28
+      <span class="big">Cursor Cloud Agents、リポジトリなしでWebアプリを作って公開</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-08-29/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260829.0732</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

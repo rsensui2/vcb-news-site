@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-08-30 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-08-30 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0830</span>
+    <span class="sep">/</span>
+    <span>2026-08-30</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260830.0735</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-08-30/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:35 · SAT</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SATURDAY · AUGUST 30, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>08<span class="dot">.</span>30</h1>
+    <div class="strap">
+      <span>OpenAI · Claude · 米連邦地裁 · Cloudflare</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI開発ツール <span class="sep">/</span> OPENAI <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI、SpaceX傘下のCursorへのモデル提供を終了へ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-30/topic_1.png" data-alt="OpenAI、SpaceX傘下のCursorへのモデル提供を終了へ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-30/topic_1.png" alt="OpenAI、SpaceX傘下のCursorへのモデル提供を終了へ" />
+      </div>
+      <p class="lede">
+        OpenAIは、SpaceXによるCursor買収を受け、Cursorへのモデル提供契約を終了する方針を公表した。契約上の最大猶予を使い、提供停止日は2026年11月12日を提案している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">OpenAIとCursorの協業は約4年間続いていた</li>
+        <li data-i="02">契約の変更支配条項に基づき、提供を終了する</li>
+        <li data-i="03">OpenAIが提案した提供停止日は2026年11月12日</li>
+        <li data-i="04">今後登場するOpenAIモデルもCursorへ提供しない方針</li>
+        <li data-i="05">Cursorは8月14日にSpaceX傘下へ入ると発表していた</li>
+      </ul>
+      <div class="pull">
+        AI開発環境で使えるモデルは、性能だけでなく企業間契約でも変わる。Cursorを標準化している組織は、特定モデルを前提にした手順を見直し、代替モデルでも品質を再現できる状態を作っておきたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/">OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/">https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/</a></dd>
+        <dd><a href="https://cursor.com/blog/joining-spacex">cursor.com/blog/joining-spacex</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · ANTHROPIC / CLAUDE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI開発ツール <span class="sep">/</span> ANTHROPIC / CLAUDE CODE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code 2.1.248、制限モードとセッション間通信を追加</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-30/topic_2.png" data-alt="Claude Code 2.1.248、制限モードとセッション間通信を追加" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-30/topic_2.png" alt="Claude Code 2.1.248、制限モードとセッション間通信を追加" />
+      </div>
+      <p class="lede">
+        AnthropicはClaude Code 2.1.248を公開した。コマンド実行やWeb取得を外した`--restricted`モード、同一端末上のセッション間通信、エージェント単位のキャッシュ設定が加わり、長時間セッションの不具合も修正された。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">`--restricted`はコマンド実行、コード実行、WebFetchを既定で外す</li>
+        <li data-i="02">Bedrock、Vertex AI、Foundryでも同一端末のセッション間通信に対応した</li>
+        <li data-i="03">エージェントごとに5分または1時間のキャッシュTTLを指定できる</li>
+        <li data-i="04">OAuth更新時に起きていたプロンプトキャッシュミスを修正した</li>
+        <li data-i="05">Remote Controlの権限表示と再接続を改善した</li>
+      </ul>
+      <div class="pull">
+        自律実行を強めるほど、権限を狭める入口とセッション間の連携が同時に必要になる。用途別のエージェントへ最小限の権限を与え、必要な連携だけを許す設計へ進めやすくなった。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.248">Anthropic / Claude Code</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.248">https://github.com/anthropics/claude-code/releases/tag/v2.1.248</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · AP</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI政策 <span class="sep">/</span> AP <span class="sep">/</span> NEWS
+      </div>
+      <h2>米連邦地裁、国防総省によるAnthropicのリスク指定を無効化</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-30/topic_3.png" data-alt="米連邦地裁、国防総省によるAnthropicのリスク指定を無効化" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-30/topic_3.png" alt="米連邦地裁、国防総省によるAnthropicのリスク指定を無効化" />
+      </div>
+      <p class="lede">
+        米連邦地裁は、国防総省がAnthropicを供給網リスクに指定した措置を違法として無効化した。関連措置には恒久的な差し止めが命じられたが、政府側は上訴する見通しで、別系統の訴訟も残る。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Rita Lin判事が8月27日に判断した</li>
+        <li data-i="02">国防総省による供給網リスク指定を無効化した</li>
+        <li data-i="03">関連措置に恒久的な差し止めを命じた</li>
+        <li data-i="04">Anthropicは自律兵器と国内大量監視への利用制限を維持している</li>
+        <li data-i="05">政府側は上訴する見通しで、争い全体は確定していない</li>
+      </ul>
+      <div class="pull">
+        AI提供企業が設ける用途制限と政府調達の衝突に、司法が一つの線を引いた。企業のAI調達でも、性能と価格だけでなく、提供者の利用規約が自社の用途と両立するかを契約前に確認する必要がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://apnews.com/article/f15e3c30186385e73e72bee82d85b05c">AP</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI政策</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://apnews.com/article/f15e3c30186385e73e72bee82d85b05c">https://apnews.com/article/f15e3c30186385e73e72bee82d85b05c</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · CLOUDFLARE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI基盤 <span class="sep">/</span> CLOUDFLARE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cloudflare Workers AI、GLM-5.3の提供を開始</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-30/topic_4.png" data-alt="Cloudflare Workers AI、GLM-5.3の提供を開始" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-30/topic_4.png" alt="Cloudflare Workers AI、GLM-5.3の提供を開始" />
+      </div>
+      <p class="lede">
+        Cloudflareは、Z.aiのエージェント型コーディングモデルGLM-5.3をWorkers AIで提供開始した。100万トークンを超えるコンテクスト、関数呼び出し、推論、構造化出力をCloudflareのAPIから利用できる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">モデルIDは`@cf/zai-org/glm-5.3`</li>
+        <li data-i="02">コンテクスト長は1,048,576トークン</li>
+        <li data-i="03">入力は100万トークンあたり1.40ドル、キャッシュ入力は0.26ドル</li>
+        <li data-i="04">出力は100万トークンあたり4.40ドル</li>
+        <li data-i="05">Workers PaidまたはAI Gatewayの前払いクレジットが必要</li>
+      </ul>
+      <div class="pull">
+        長時間コーディング向けモデルを、自前のGPUなしで試せる。Cloudflare WorkersやDurable Objectsを使うエージェントでは、実行基盤とモデル呼び出しを同じ運用面へ寄せられる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-08-28-glm-5.3-workers-ai/">Cloudflare</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI基盤</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-08-28-glm-5.3-workers-ai/">https://developers.cloudflare.com/changelog/post/2026-08-28-glm-5.3-workers-ai/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · CLAUDEDEVS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI開発ツール <span class="sep">/</span> CLAUDEDEVS <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Codeの週次上限、9月14日から恒久的に25%増</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-30/topic_5.png" data-alt="Claude Codeの週次上限、9月14日から恒久的に25%増" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-30/topic_5.png" alt="Claude Codeの週次上限、9月14日から恒久的に25%増" />
+      </div>
+      <p class="lede">
+        Anthropicは、Claude Codeの標準週次上限を9月14日から恒久的に25%引き上げる。対象はPro、Max、Team、シート制Enterpriseで、現在の期間限定50%増は9月13日まで続くため、現状の枠からは約17%下がる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">恒久的な上限は標準枠から25%増える</li>
+        <li data-i="02">9月14日から適用される</li>
+        <li data-i="03">Pro、Max、Team、シート制Enterpriseが対象</li>
+        <li data-i="04">現在の期間限定50%増は9月13日まで</li>
+        <li data-i="05">現在の利用枠と比べると約17%減る</li>
+      </ul>
+      <div class="pull">
+        「25%増」だけを見ると枠が広がるように見えるが、今の一時枠からは縮む。長時間の並列実行や毎日の自動処理は、9月14日以降の実測を取り直したほうがよい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2093742321473065266">@ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-29</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2093742321473065266">x.com/ClaudeDevs/…</a></dd>
+        <dd><a href="https://www.anthropic.com/news/higher-limits-spacex">www.anthropic.com/news/higher-limits-spa…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · VOXYZAI / DUPLY-AI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        デザイン <span class="sep">/</span> VOXYZ_AI / DUPLY-AI <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉DESIGN.mdをAI向けのデザイン契約書にする</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-30/topic_6.png" data-alt="〈知見〉DESIGN.mdをAI向けのデザイン契約書にする" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-30/topic_6.png" alt="〈知見〉DESIGN.mdをAI向けのデザイン契約書にする" />
+      </div>
+      <p class="lede">
+        AIコーディングで画面の一貫性を保つ方法として、色、書体、余白、角丸、部品仕様、禁止例を一つのMarkdownへまとめる`DESIGN.md`が使われ始めている。Duply-AIの公開リポジトリでは、311製品のデザインシステムをAI向けファイルとして参照できる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">デザイントークンと採用理由を一つのファイルで共有する</li>
+        <li data-i="02">Cursor、Claude Code、v0、Lovable、Boltで利用できる</li>
+        <li data-i="03">公開リポジトリには311件の実例がある</li>
+        <li data-i="04">各ファイルは約360行で構成される</li>
+        <li data-i="05">Tailwind v4、CSS変数、JSONへ書き出せる</li>
+      </ul>
+      <div class="pull">
+        「モダンにして」のような曖昧な指示より、判断基準と禁止例を永続ファイルへ置くほうがページ間のぶれを減らせる。要件定義と同じように、デザインも再利用できるコンテクストとして蓄積できる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/Voxyz_ai/status/2093766772029559077">@Voxyz_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-29</dd>
+        <dt>CATEGORY</dt>
+        <dd>デザイン</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/Voxyz_ai/status/2093766772029559077">x.com/Voxyz_ai/…</a></dd>
+        <dd><a href="https://github.com/Duply-AI/design-md">github.com/Duply-AI/design-md</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · KENN</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発知見 <span class="sep">/</span> KENN <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉成功ログを畳み、エージェントのトークン消費を減らす</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-30/topic_7.png" data-alt="〈知見〉成功ログを畳み、エージェントのトークン消費を減らす" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-30/topic_7.png" alt="〈知見〉成功ログを畳み、エージェントのトークン消費を減らす" />
+      </div>
+      <p class="lede">
+        テストが数千本ある開発では、処理を並列化しても成功ログが数千行出れば、エージェントへ返すコンテクストを圧迫する。成功時は要約だけを返し、失敗時だけ詳細を展開するラッパーなら、調査に必要な情報を保ちながらトークン消費を抑えられる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">問題はテスト時間だけでなく、出力行数にもある</li>
+        <li data-i="02">成功時は件数と所要時間へ圧縮する</li>
+        <li data-i="03">失敗時は該当テストの詳細を残す</li>
+        <li data-i="04">元ログは別途保存し、再現に必要な情報を失わない</li>
+        <li data-i="05">CIや監視、検索結果の出力設計にも応用できる</li>
+      </ul>
+      <div class="pull">
+        AI開発では、コードの最適化だけでなくツール出力の形もコストと精度に効く。正常系は短く、異常系は具体的に返す設計は、日常の自動化へすぐ取り入れられる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/kenn/status/2093701458445439033">@kenn</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-29</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発知見</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/kenn/status/2093701458445439033">x.com/kenn/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-08-29/">
+      ← 前日 · 2026-08-29
+      <span class="big">Claude Code、ターミナル作業をデスクトップで再開</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-08-30/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260830.0735</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

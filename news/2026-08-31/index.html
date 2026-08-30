@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-08-31 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-08-31 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0831</span>
+    <span class="sep">/</span>
+    <span>2026-08-31</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260831.0734</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-08-31/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:34 · SUN</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SUNDAY · AUGUST 31, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>08<span class="dot">.</span>31</h1>
+    <div class="strap">
+      <span>Claude · Codex · Slackbot · Supabase</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI開発ツール <span class="sep">/</span> ANTHROPIC / CLAUDE CODE GITHUB <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code 2.1.251、権限境界の修正とキャッシュ可視化を同時に実施</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-31/topic_1.png" data-alt="Claude Code 2.1.251、権限境界の修正とキャッシュ可視化を同時に実施" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-31/topic_1.png" alt="Claude Code 2.1.251、権限境界の修正とキャッシュ可視化を同時に実施" />
+      </div>
+      <p class="lede">
+        AnthropicはClaude Code 2.1.251を公開した。モデル切替の前後に介入できるフック、`/cost`のプロンプトキャッシュ表示、`/usage`の支出上限表示を加え、承認後にシンボリックリンクを差し替えて許可範囲外へ到達できる不備などを修正している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">`PreModelSwitch`と`PostModelSwitch`で、モデル切替を停止・確認・注釈できる</li>
+        <li data-i="02">`/cost`にキャッシュヒット率、ミス、再キャッシュ量、warm/coldの表示を追加した</li>
+        <li data-i="03">ファイル操作、Grep/Glob、Workflow、プラグインコマンドの境界検査を強化した</li>
+        <li data-i="04">サブエージェントの最終回答がチームリードへ届かない不具合を修正した</li>
+        <li data-i="05">並列サブエージェント実行時のTUI遅延と、強制停止後に残るBashプロセスも修正した</li>
+      </ul>
+      <div class="pull">
+        長時間・並列でエージェントを動かすほど、キャッシュ費用と権限境界の観測が運用品質を左右する。今回の更新は便利機能より、承認後のパス差し替えを塞いだ点を先に評価したい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">488</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.251">Anthropic / Claude Code GitHub</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.251">https://github.com/anthropics/claude-code/releases/tag/v2.1.251</a></dd>
+        <dd><a href="https://x.com/ClaudeDevs/status/2093480633138057574">x.com/ClaudeDevs/status/2093480633138057…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · OPENAI / CODEX GIT</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI開発ツール <span class="sep">/</span> OPENAI / CODEX GITHUB <span class="sep">/</span> NEWS
+      </div>
+      <h2>Codex CLI 0.151.0、MCPの結果をモデルへ渡す前に検査可能に</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-31/topic_2.png" data-alt="Codex CLI 0.151.0、MCPの結果をモデルへ渡す前に検査可能に" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-31/topic_2.png" alt="Codex CLI 0.151.0、MCPの結果をモデルへ渡す前に検査可能に" />
+      </div>
+      <p class="lede">
+        OpenAIはCodex CLI 0.151.0を公開した。拡張機能がMCPツールの結果を検査・置換できる仕組みを加え、ネストしたサブエージェントのトークン消費を親ゴールの予算へ計上するようにした。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">MCPツールの結果をモデルへ渡す前に、拡張機能が検査・置換できる</li>
+        <li data-i="02">任意MCPサーバーの起動待ち時間を設定できる</li>
+        <li data-i="03">リポジトリ単位の設定をプラグインカタログへ統合する</li>
+        <li data-i="04">ネストしたサブエージェントの消費量を親ゴールの予算へ含める</li>
+        <li data-i="05">`/cd`後もサンドボックス制限を保ち、権限変更後の古いGuardian判定を再利用しない</li>
+      </ul>
+      <div class="pull">
+        MCP連携で得たデータをそのままモデルへ渡さず、組織側でマスキングや検証を挟める。複数エージェントの費用集計と権限継承も、業務利用の監査性に直結する。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/openai/codex/releases/tag/rust-v0.151.0">OpenAI / Codex GitHub</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-29</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/openai/codex/releases/tag/rust-v0.151.0">https://github.com/openai/codex/releases/tag/rust-v0.151.0</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · SLACK</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI×業務 <span class="sep">/</span> SLACK <span class="sep">/</span> NEWS
+      </div>
+      <h2>Slackbot、個人のスキルをチーム標準へ配る機能を強化</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-31/topic_3.png" data-alt="Slackbot、個人のスキルをチーム標準へ配る機能を強化" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-31/topic_3.png" alt="Slackbot、個人のスキルをチーム標準へ配る機能を強化" />
+      </div>
+      <p class="lede">
+        SlackはSlackbotに、社内データとWebを横断するDeep Research、最大25個のスキルを束ねるSkill Sets、全画面のBig Modeを追加した。スキルの社外共有、管理者向け利用状況ダッシュボード、定期タスク管理も同時に展開する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Big Modeは調査、文章作成、分析、ファイル生成を全画面で扱う</li>
+        <li data-i="02">Skill Setsは最大25個のスキルをまとめ、ユーザーグループやチャンネルへ配布できる</li>
+        <li data-i="03">Deep ResearchはSlack内の情報と公開Webを統合し、出典付きレポートを作る</li>
+        <li data-i="04">別のSlack組織へスキルのコピー用リンクを共有できる</li>
+        <li data-i="05">管理者はスキルの利用状況と権限を一元管理できる</li>
+      </ul>
+      <div class="pull">
+        AI活用の差が、良いプロンプトを持つ個人から、良い業務手順を組織へ配れるチームへ移る。スキルの作成だけでなく、配布、更新、権限、利用状況までを一つの運用として設計しやすくなった。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">462</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://slack.com/blog/news/slackbot-ai-workspace-for-deep-work">Slack</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-27</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI×業務</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://slack.com/blog/news/slackbot-ai-workspace-for-deep-work">https://slack.com/blog/news/slackbot-ai-workspace-for-deep-work</a></dd>
+        <dd><a href="https://x.com/SlackHQ/status/2093341534594662493">x.com/SlackHQ/status/2093341534594662493…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · SUPABASE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発基盤 <span class="sep">/</span> SUPABASE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Supabase、Linuxセルフホストの初期設定を1コマンドへ集約</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-31/topic_4.png" data-alt="Supabase、Linuxセルフホストの初期設定を1コマンドへ集約" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-31/topic_4.png" alt="Supabase、Linuxセルフホストの初期設定を1コマンドへ集約" />
+      </div>
+      <p class="lede">
+        SupabaseはLinux上のセルフホストを、セットアップスクリプト1本で始められるようにした。Dockerの導入、設定取得、URL入力、秘密鍵生成、イメージ取得までを自動化するが、バックアップや監視などの運用責任は利用者に残る。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Debian、Ubuntu、RHEL、CentOS、Fedoraをサポートする</li>
+        <li data-i="02">`curl -fsSL https://supabase.link/setup.sh | sh`で初期化できる</li>
+        <li data-i="03">Docker Engineと必要ツールを導入し、JWT鍵と管理画面パスワードを生成する</li>
+        <li data-i="04">セルフホストではバックアップ、高可用性、監視、OS更新を利用者が担う</li>
+        <li data-i="05">ローカル開発用CLIの構成を本番公開してはいけない</li>
+      </ul>
+      <div class="pull">
+        データの所在や閉域運用を理由にマネージド版を選べなかった組織でも、導入の入口は軽くなる。ただし、1コマンド化は運用責任を消さない。バックアップと更新計画を同時に作って初めて本番運用になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">469</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://supabase.com/docs/guides/self-hosting/docker">Supabase</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-30</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発基盤</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://supabase.com/docs/guides/self-hosting/docker">https://supabase.com/docs/guides/self-hosting/docker</a></dd>
+        <dd><a href="https://x.com/supabase/status/2093854985284895149">x.com/supabase/status/209385498528489514…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · QWEN</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AIモデル <span class="sep">/</span> QWEN <span class="sep">/</span> NEWS
+      </div>
+      <h2>Qwen3.8-Flash、OpenCode Goで1Mコンテキストを利用可能に</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-31/topic_5.png" data-alt="Qwen3.8-Flash、OpenCode Goで1Mコンテキストを利用可能に" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-31/topic_5.png" alt="Qwen3.8-Flash、OpenCode Goで1Mコンテキストを利用可能に" />
+      </div>
+      <p class="lede">
+        Qwenは、総125Bパラメータのうち6Bを有効化するQwen3.8-FlashをOpenCode Goへ追加した。1Mトークンのコンテキストと、画像・テキストを扱うマルチモーダル入力に対応する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">総125B・有効6BのMixture-of-Experts構成</li>
+        <li data-i="02">コンテキスト長は100万トークン</li>
+        <li data-i="03">画像とテキストを扱うマルチモーダルモデル</li>
+        <li data-i="04">OpenCode Goのモデル選択肢から利用できる</li>
+      </ul>
+      <div class="pull">
+        長いコードベースを扱うコーディングエージェントの選択肢が増えた。公称コンテキスト長だけで決めず、同じ課題で速度、修正精度、長文時の劣化を比較したい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,080</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/Alibaba_Qwen/status/2093227357951897687">@Alibaba_Qwen</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>AIモデル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/Alibaba_Qwen/status/2093227357951897687">x.com/Alibaba_Qwen/…</a></dd>
+        <dd><a href="https://x.com/opencode/status/2093222178338804132">x.com/opencode/status/209322217833880413…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · TECHCRUNCH /</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI法務 <span class="sep">/</span> TECHCRUNCH / 米連邦地裁記録 <span class="sep">/</span> NEWS
+      </div>
+      <h2>SonyとWarnerの音楽出版部門、Anthropicと共同創業者を提訴</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-31/topic_6.png" data-alt="SonyとWarnerの音楽出版部門、Anthropicと共同創業者を提訴" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-31/topic_6.png" alt="SonyとWarnerの音楽出版部門、Anthropicと共同創業者を提訴" />
+      </div>
+      <p class="lede">
+        Sony Music Publishing、Warner Chappellなどは、Claudeの学習に海賊版の音楽著作物を使ったとしてAnthropicを米連邦地裁へ提訴した。会社に加え、CEOのDario Amodei氏と共同創業者Benjamin Mann氏も被告に含めている。現時点では原告側の主張で、裁判所の判断は出ていない。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">8月28日にカリフォルニア北部地区連邦地裁へ提訴された</li>
+        <li data-i="02">原告はSony Music Publishing、Warner Chappellなど多数の音楽出版社</li>
+        <li data-i="03">訴状は違法なtorrent、scraping、downloadによる学習を主張している</li>
+        <li data-i="04">Dario Amodei氏とBenjamin Mann氏も個人として被告に含まれる</li>
+        <li data-i="05">Anthropicは主張に同意せず、法廷で争う意向を示した</li>
+      </ul>
+      <div class="pull">
+        生成AIの著作権論点が、出力の類似だけでなく、学習データの取得方法と経営陣個人の責任へ広がっている。企業がAIサービスを選ぶ際も、性能と同時にデータ調達の来歴を見る必要がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/">TechCrunch / 米連邦地裁記録</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-29</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI法務</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/">https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/</a></dd>
+        <dd><a href="https://dockets.justia.com/docket/california/candce/5%3A2026cv09217/477477">dockets.justia.com/docket/california/can…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · TOMOYUKIAISARUKUN9</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI×業務 <span class="sep">/</span> TOMOYUKI／AIシャイン（SARUKUN99） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>〈知見〉AIで業務システムを作るなら「持ち続けるコスト」まで見る</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-08-31/topic_7.png" data-alt="〈知見〉AIで業務システムを作るなら「持ち続けるコスト」まで見る" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-08-31/topic_7.png" alt="〈知見〉AIで業務システムを作るなら「持ち続けるコスト」まで見る" />
+      </div>
+      <p class="lede">
+        AIコーディングで業務システムを短時間に作れても、認証、バックアップ、非同期処理、監視まで人が抱えれば自社開発の負担は残る。投稿者はCloudflare WorkersとTursoを軸に、Workflows、Queues、Durable Objects、Email Service、Zero Trustを組み合わせ、「作れる」から「持ち続けられる」へ進む構成を整理した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Goodpatchでは185人が217個のアプリを作り、コード未経験者の86%がデプロイまで到達した</li>
+        <li data-i="02">年間約300万円を払っていたSaaSと同等の社内ツールを、Claude Codeで6〜7時間で作った事例がある</li>
+        <li data-i="03">kubellでは非エンジニアが業務を自動化し、部署全体で月160時間を削減した</li>
+        <li data-i="04">AIコーディングだけでは、DB、バックアップ、キュー、メール、認証、監視の負担は消えない</li>
+        <li data-i="05">自社固有の案件管理や見積はBuild、制度追随が必要な会計・給与・決済はBuyが向く</li>
+      </ul>
+      <div class="pull">
+        PoCで動くことと、現場が毎日使い続けられることは別の品質だ。BuildかBuyかは開発速度だけで決めず、制度変更への追随、自社固有の業務差、マネージドサービスへ寄せられる運用範囲の3点で判断したい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">55</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/sarukun99/status/2093896067515613534">@sarukun99</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-30</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI×業務</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/sarukun99/status/2093896067515613534">x.com/sarukun99/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.251">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-08-30/">
+      ← 前日 · 2026-08-30
+      <span class="big">OpenAI、SpaceX傘下のCursorへのモデル提供を終了へ</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-08-31/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260831.0734</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

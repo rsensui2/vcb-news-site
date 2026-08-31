@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №042</span>
+    <span class="tick">BOOKMARK №043</span>
     <span class="sep">/</span>
     <span>2026-07-28</span>
     <span class="sep">/</span>
     <span>@Aykutuces</span>
     <span class="sep">/</span>
-    <span>506 ITEMS</span>
+    <span>507 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:14 MON</span>
+    <span>JST 07:26 TUE</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,19 +305,19 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-08-30/">NEWS</a>
+      <a href="../news/2026-08-31/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:14 · MON</div>
+    <div class="meta">JST · 07:26 · TUE</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-07-28 <span>/</span> №042
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-07-28 <span>/</span> №043
     </div>
     <div class="cat-line">
       <span>📖 技術解説 / 🔧 インフラ</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">「MCPはもうAIのUSB-Cだけじゃない」— ステートレス化がインフラ選択に何をもたらすかの解説（トルコ語）</h1>
     <div class="strap">
-      <span><span class="label">№</span>042 / 506</span>
+      <span><span class="label">№</span>043 / 507</span>
       <span><span class="label">SRC</span><a href="https://x.com/Aykutuces/status/2082167918138106256" target="_blank" rel="noopener noreferrer">x.com/Aykutuces ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/453_Aykutuces_MCP%E3%82%B9%E3%83%86%E3%83%BC%E3%83%88%E3%83%AC%E3%82%B9%E5%8C%96%E3%81%8C%E6%84%8F%E5%91%B3%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">042<span class="ord">BOOKMARK / 506</span></aside>
+    <aside class="numeral">043<span class="ord">BOOKMARK / 507</span></aside>
     <article class="prose">
 <p><strong>有益度:</strong> ⭐⭐⭐⭐</p><p><strong>エンゲージメント:</strong> Likes 3246 / RT 265 / Bookmarks 3981 / Views 821859</p><h2>投稿本文（原文・トルコ語）</h2><p>MCP protokolü bugün en büyük güncellemesini aldı. Kimse ne olduğunu tam anlamadı ama bu tarih değiştiren tarafta.</p><p>Eski MCP: her session'ın state'ini serverda tutmak lazımdı. Yani serverless çalışmıyor, edge'e atamıyor, load balancer arkasına sticky session'la bağlıyordun. Enterprise için can sıkıcı, indie geliştirici için pahalı.</p><p>Yeni MCP: stateless. Artık server'ı Cloudflare Workers'a, Vercel Edge'e, tek satır YAML ile Kubernetes cluster'a atıyorsun. Load balancer round-robin, sonsuz yatay scale.</p><p>Üstüne üç yeni katman geldi:</p><blockquote>MCP Apps: agent'ın kendi UI'ını sandbox iframe içinde render ediyor</blockquote><blockquote>Tasks: uzun süren async operasyonlar</blockquote><blockquote>Enterprise Managed Auth: identity provider'dan merkezi erişim kontrolü</blockquote><p>MCP artık sadece &quot;AI'ın USB-C'si&quot; değil. Server'ı stateless, UI'ı render eder, uzun task'ları arka planda çalıştırır, SSO ile enterprise kilidini açar.</p><p>（引用ポスト: @ClaudeDevs 「MCP 2026-07-28 is live and it's the largest update to the protocol since launch. MCP is now stateless, making it easier to deploy and scale remote servers.」）</p><h2>概要</h2><p>MCP 2026-07-28 のステートレス化を、<strong>インフラ担当者の実務目線</strong>で言い直した解説ポスト。公式発表が「デプロイとスケールが容易になる」と書いている部分を、旧仕様で実際に何が面倒だったか（sticky session を張らねばならず、serverless に載らず、エッジに置けない）と、新仕様で何が選べるようになるか（Cloudflare Workers / Vercel Edge / YAML 一行で Kubernetes、ロードバランサは round-robin で無限水平スケール）に落として説明している。「誰もこれが何なのか正確には理解していないが、歴史を変える側の変更だ」という書き出しが要点をよく表している。</p><h2>まとめ</h2><ul><li><strong>旧 MCP の制約</strong>: セッションごとの state をサーバ側に保持する必要があった。結果として serverless では動かず、エッジに置けず、ロードバランサの背後では sticky session で紐付ける必要があった。<strong>エンタープライズには煩わしく、個人開発者にはコストが高い</strong></li><li><strong>新 MCP</strong>: ステートレス。サーバを Cloudflare Workers や Vercel Edge に置ける。YAML 一行で Kubernetes クラスタに載せられる。ロードバランサは round-robin でよく、水平スケールが事実上無制限</li><li><strong>上に乗った3つの新レイヤー</strong>:</li></ul><p>  - <strong>MCP Apps</strong> — エージェント自身の UI をサンドボックス iframe 内でレンダリングする</p><p>  - <strong>Tasks</strong> — 長時間実行の非同期オペレーション</p><p>  - <strong>Enterprise Managed Auth</strong> — ID プロバイダからのアクセス制御の中央集約</p><ul><li><strong>結論の一文</strong>: MCP はもはや「AI の USB-C」だけではない。サーバはステートレスで、UI をレンダリングし、長時間タスクをバックグラウンドで走らせ、SSO でエンタープライズの鍵を開ける</li><li>公式の @ClaudeDevs 投稿を引用しての解説であり、一次情報は公式リリース側にある</li></ul><h2>日本語訳全文</h2><p>MCP プロトコルは今日、最大の更新を受けた。誰もそれが何なのかを正確には理解していないが、これは歴史を変える側の変更だ。</p><p>旧 MCP: セッションごとの state をサーバ側に持つ必要があった。つまり serverless では動かず、エッジに置けず、ロードバランサの背後には sticky session で紐付けていた。エンタープライズには煩わしく、個人開発者にはコストが高い。</p><p>新 MCP: ステートレス。もうサーバは Cloudflare Workers にも Vercel Edge にも置けるし、YAML 一行で Kubernetes クラスタに投げられる。ロードバランサは round-robin、水平スケールは無限。</p><p>その上に3つの新しいレイヤーが乗った:</p><blockquote>MCP Apps: エージェント自身の UI をサンドボックス iframe 内でレンダリングする</blockquote><blockquote>Tasks: 長時間実行の非同期オペレーション</blockquote><blockquote>Enterprise Managed Auth: ID プロバイダからのアクセス制御の中央集約</blockquote><p>MCP はもう単なる「AI の USB-C」ではない。サーバはステートレスで、UI をレンダリングし、長時間タスクをバックグラウンドで走らせ、SSO でエンタープライズの鍵を開ける。</p><p>（引用ポスト: @ClaudeDevs 「MCP 2026-07-28 が公開。ローンチ以来プロトコル最大の更新です。MCP はステートレスになり、リモートサーバのデプロイとスケールが容易になります。」）</p><h2>参照リンク</h2><ul><li>元ポスト: https://x.com/Aykutuces/status/2082167918138106256</li><li>引用元（公式）: https://x.com/ClaudeDevs/status/2082164248697069935</li><li>公式ブログ: https://claude.com/blog/bringing-mcp-2026-07-28-to-claude</li></ul>
     </article>
@@ -384,14 +384,14 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 506 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 507 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-08-30/">TODAY</a></li>
+          <li><a href="../news/2026-08-31/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -418,7 +418,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-08-31</span>
+      <span>BUILD 2026-09-01</span>
     </div>
   </div>
 </footer>

@@ -1,7 +1,17 @@
 {
- "generated": "2026-09-01T08:27:29+09:00",
- "count": 66,
+ "generated": "2026-09-02T08:21:20+09:00",
+ "count": 68,
  "items": [
+  {
+   "type": "note",
+   "type_label": "note",
+   "title": "AI駆動開発の研修、「動画で学ぶ」と「一つ作りきる」は別物だと思う",
+   "date": "2026-08-31",
+   "url": "https://note.com/rsensui/n/n36b4134d0d52",
+   "tags": [],
+   "description": "",
+   "extra_links": []
+  },
   {
    "type": "note",
    "type_label": "note",
@@ -17,6 +27,16 @@
     "バイブコーディング",
     "AIエージェント"
    ],
+   "description": "",
+   "extra_links": []
+  },
+  {
+   "type": "note",
+   "type_label": "note",
+   "title": "Vibe Coding研修は「講師がホンモノか」で選べ",
+   "date": "2026-08-19",
+   "url": "https://note.com/rsensui/n/nd066199cb9bb",
+   "tags": [],
    "description": "",
    "extra_links": []
   },

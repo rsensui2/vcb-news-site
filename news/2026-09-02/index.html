@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-09-02 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-09-02 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0902</span>
+    <span class="sep">/</span>
+    <span>2026-09-02</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260902.0732</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-09-02/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:32 · TUE</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · TUESDAY · SEPTEMBER 2, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>09<span class="dot">.</span>02</h1>
+    <div class="strap">
+      <span>Claude · Gemini · Claude · Codex</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        フロンティアモデル <span class="sep">/</span> ANTHROPIC公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Fable 5.1、長時間エージェントのキャッシュ料金を75%削減</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-02/topic_1.png" data-alt="Claude Fable 5.1、長時間エージェントのキャッシュ料金を75%削減" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-02/topic_1.png" alt="Claude Fable 5.1、長時間エージェントのキャッシュ料金を75%削減" />
+      </div>
+      <p class="lede">
+        AnthropicはClaude Fable 5.1とClaude Mythos 5.1を発表した。基盤モデルは同じで、一般提供のFableと、サイバー防御・生命科学向けの制限アクセス版Mythosに安全対策の強度差を設けている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Fable 5.1は100万トークンのコンテキストと最大12万8,000トークンの出力に対応する</li>
+        <li data-i="02">入力は100万トークン当たり10ドル、出力は50ドルでFable 5から据え置き</li>
+        <li data-i="03">キャッシュ読み取りは100万トークン当たり0.25ドルで、Fable 5より75%低い</li>
+        <li data-i="04">Anthropicは典型的な処理で約25%、エージェント処理の比率が高い場合は最大45%のコスト減と試算する</li>
+        <li data-i="05">Terminal-Bench-Science 0.1は52.6%。数値はAnthropicの評価で、標準誤差は±3.5〜4.5ポイント</li>
+      </ul>
+      <div class="pull">
+        長時間ループでは、毎回読み直す仕様・履歴・ツール結果が請求の大半を占める。モデル単価だけでなく、同じ文脈をキャッシュへ寄せられる構成かどうかが運用費を決める。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">41,899</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.anthropic.com/claude-fable-and-mythos-5-1">Anthropic公式</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-01</dd>
+        <dt>CATEGORY</dt>
+        <dd>フロンティアモデル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.anthropic.com/claude-fable-and-mythos-5-1">https://www.anthropic.com/claude-fable-and-mythos-5-1</a></dd>
+        <dd><a href="https://x.com/claudeai/status/2094848572143407483">x.com/claudeai/status/209484857214340748…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · GOOGLE DEEPMIND</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        マルチモーダルAI <span class="sep">/</span> GOOGLE DEEPMIND公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Gemini、動画を全部読む方式から必要な区間を探す方式へ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-02/topic_2.png" data-alt="Gemini、動画を全部読む方式から必要な区間を探す方式へ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-02/topic_2.png" alt="Gemini、動画を全部読む方式から必要な区間を探す方式へ" />
+      </div>
+      <p class="lede">
+        Google DeepMindはGemini 3.7 Flash、3.6 Flash、3.5 Flash-Liteにエージェント型動画理解を追加した。固定フレームレートで全編を読む代わりに、モデルが映像、音声、字幕から必要な区間を動的に探す。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Googleの評価では、分析コストを最大66%、トークン消費を最大88%削減した</li>
+        <li data-i="02">精度は最大7%向上し、長尺動画ほど効率差が出やすい</li>
+        <li data-i="03">サブ秒の瞬間検索、異常検知、計数、長尺映像からの該当箇所探索を想定する</li>
+        <li data-i="04">Google AI StudioのGemini APIとGemini Enterprise Agent Platformで利用できる</li>
+        <li data-i="05">APIでprocessingをagenticに設定し、追加の機能料金はない</li>
+      </ul>
+      <div class="pull">
+        教材、会議録画、デモ動画を毎回すべて読ませる必要がなくなる。映像を検索対象として扱い、目的に応じて見る場所を選ぶ設計へ移せる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/">Google DeepMind公式</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-01</dd>
+        <dt>CATEGORY</dt>
+        <dd>マルチモーダルAI</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/">https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-agentic-video-in-gemini/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · ANTHROPIC / GITHUB</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI開発ツール <span class="sep">/</span> ANTHROPIC / GITHUB RELEASE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code 2.1.257、auto modeの境界を具体化</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-02/topic_3.png" data-alt="Claude Code 2.1.257、auto modeの境界を具体化" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-02/topic_3.png" alt="Claude Code 2.1.257、auto modeの境界を具体化" />
+      </div>
+      <p class="lede">
+        Claude Code 2.1.257はFable 5.1をFable系の既定モデルにした。機能追加だけでなく、クラウドのメタデータ資格情報、外向き通信の回避、他テナントへの到達をauto modeで自動承認しないContainment Escapeルールを追加している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">claude-fable-5-1をFable系の既定モデルにした</li>
+        <li data-i="02">fableとbestのエイリアスは未対応gatewayでは当面Fable 5のまま</li>
+        <li data-i="03">作業ディレクトリ外のファイルを初めて読む前に確認し、設定で読み取り自体を拒否できる</li>
+        <li data-i="04">サブエージェントのモデル指定を一括で強制する環境変数を追加した</li>
+        <li data-i="05">複合コマンドやリダイレクトで権限ルールを回避できた複数の不具合も修正した</li>
+      </ul>
+      <div class="pull">
+        自動で進めることと、境界を越えてよいことは別の設定だ。チーム導入では、モデル更新と同時に、作業ディレクトリ外の読み取りや資格情報への到達がどこで止まるかを確認したい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.257">Anthropic / GitHub Release</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-01</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.257">https://github.com/anthropics/claude-code/releases/tag/v2.1.257</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · OPENAI / GITHUB RE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI開発ツール <span class="sep">/</span> OPENAI / GITHUB RELEASE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Codex CLI 0.152.0、MCP出力をツール単位で制限</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-02/topic_4.png" data-alt="Codex CLI 0.152.0、MCP出力をツール単位で制限" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-02/topic_4.png" alt="Codex CLI 0.152.0、MCP出力をツール単位で制限" />
+      </div>
+      <p class="lede">
+        Codex CLI 0.152.0は、下書き内のVim検索や利用枠バナーからの操作を追加した。MCPツールごとの出力トークン上限にも対応し、再開したセッションでも同じ切り詰め方を保つ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Vimモードで/と?による検索、nとNによる候補移動に対応した</li>
+        <li data-i="02">レート制限バナーから利用状況、クレジット、上限リセット、プラン管理へ進める</li>
+        <li data-i="03">MCPサーバー名に: @ / .を使える</li>
+        <li data-i="04">MCPツールごとにoutput_token_limitを設定できる</li>
+        <li data-i="05">app-serverのthread/shellCommandは1時間を超えるタイムアウトも設定できる</li>
+        <li data-i="06">計画更新ツールは既定オフで、tools.update_plan.enabledをtrueにして有効化する</li>
+      </ul>
+      <div class="pull">
+        巨大なMCP応答をそのまま会話へ入れると、必要な文脈が押し出される。ツールごとの出力上限は、長いセッションの精度と再開時の再現性を守る設定になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/openai/codex/releases/tag/rust-v0.152.0">OpenAI / GitHub Release</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-01</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/openai/codex/releases/tag/rust-v0.152.0">https://github.com/openai/codex/releases/tag/rust-v0.152.0</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · VERCEL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        エージェント基盤 <span class="sep">/</span> VERCEL公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Vercel AI SDK、軽量コーディングエージェントfxを共通ハーネスへ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-02/topic_5.png" data-alt="Vercel AI SDK、軽量コーディングエージェントfxを共通ハーネスへ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-02/topic_5.png" alt="Vercel AI SDK、軽量コーディングエージェントfxを共通ハーネスへ" />
+      </div>
+      <p class="lede">
+        VercelはAI SDKのハーネス層へ、同社の軽量オープンソースエージェントfxを追加した。HarnessAgentの同じAPIから呼べるため、fx専用の統合を別に作らず、既存エージェントと差し替えられる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">公式アダプタは@ai-sdk/harness-fx</li>
+        <li data-i="02">@ai-sdk/harness-acpを使い、Agent Client Protocol経由でfxへ接続する</li>
+        <li data-i="03">Claude Code、Cline、Codex、Cursor、Deep Agents、Grok Build、OpenCode、Piと同じハーネス一覧に加わった</li>
+        <li data-i="04">セッション作成やストリーミング結果をHarnessAgentの共通形式で扱う</li>
+        <li data-i="05">fxはVercelが公開する軽量なオープンソースのコーディングエージェント</li>
+      </ul>
+      <div class="pull">
+        製品が特定のCLIへ直接依存すると、モデルや実行基盤を替えるたびに統合を書き直すことになる。共通ハーネスへ寄せれば、同じ課題を複数エージェントで比較しやすい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/fx-ai-sdk-harness-adapter">Vercel公式</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-31</dd>
+        <dt>CATEGORY</dt>
+        <dd>エージェント基盤</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/fx-ai-sdk-harness-adapter">https://vercel.com/changelog/fx-ai-sdk-harness-adapter</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · OPENAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI×ビジネス活用 <span class="sep">/</span> OPENAI公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>ChatGPT for Healthcare、Epicの患者情報を認可範囲で参照</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-02/topic_6.png" data-alt="ChatGPT for Healthcare、Epicの患者情報を認可範囲で参照" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-02/topic_6.png" alt="ChatGPT for Healthcare、Epicの患者情報を認可範囲で参照" />
+      </div>
+      <p class="lede">
+        OpenAIはChatGPT for HealthcareにEpic電子カルテ連携とHealthcare Public Dataプラグインを追加した。認可された患者情報をChatGPTへ取り込み、PubMedやDailyMedなど9つの公的情報源も同じ管理下のワークスペースで扱える。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">診療記録、検査結果、薬剤、専門医の記録をまとめ、根拠となるカルテ情報へ戻れる</li>
+        <li data-i="02">対応環境ではChatGPTを電子カルテ画面内へ組み込める</li>
+        <li data-i="03">公的情報プラグインはClinicalTrials.gov、CMS Coverage、RxNorm、DailyMed、PubMedなど9ソースに接続する</li>
+        <li data-i="04">27の臨床ユースケース、4,363件の評価で、医師が99.1%を安全と評価したとOpenAIは報告する</li>
+        <li data-i="05">個人向けChatGPT for Cliniciansでは電子カルテ連携を使えない</li>
+      </ul>
+      <div class="pull">
+        業務AIの差は、一般知識よりも、既存システムの権限を保ったまま固有データへ接続できるかに出る。医療以外でも、CRMや会計へ広げる前に読み取り範囲、監査ログ、人の確認工程を設計する必要がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources/">OpenAI公式</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-01</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI×ビジネス活用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources/">https://openai.com/index/chatgpt-connects-health-records-and-healthcare-sources/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · LM STUDIO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ローカルLLM <span class="sep">/</span> LM STUDIO公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>LM Studio Bionic、Linuxでローカルエージェントを実行</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-02/topic_7.png" data-alt="LM Studio Bionic、Linuxでローカルエージェントを実行" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-02/topic_7.png" alt="LM Studio Bionic、Linuxでローカルエージェントを実行" />
+      </div>
+      <p class="lede">
+        LM Studioはオープンモデル向けエージェントアプリBionicのLinux版を公開した。Mac、Windowsに加え、Linux環境でもローカルモデルまたはLM Studio Secure Cloud上のモデルを使い、コードやファイルを扱える。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">BionicはLM Studio本体とは別のエージェントアプリ</li>
+        <li data-i="02">Linux版はx64 AppImageとして配布される</li>
+        <li data-i="03">ローカルモデルとSecure Cloud上のオープンモデルを選べる</li>
+        <li data-i="04">コーディング、ファイル操作、Skills、シェルコマンドの承認フローを備える</li>
+        <li data-i="05">Arm版の提供は取得時点で確認できない</li>
+      </ul>
+      <div class="pull">
+        ローカルLLMの用途がチャットから、ファイルへ触るエージェントへ広がっている。Linuxワークステーションや社内サーバーで、機密データを外へ出さずに同じ運用を再現しやすくなる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">973</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/lmstudio/status/2094499384960467188">@lmstudio</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-31</dd>
+        <dt>CATEGORY</dt>
+        <dd>ローカルLLM</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/lmstudio/status/2094499384960467188">x.com/lmstudio/…</a></dd>
+        <dd><a href="https://lmstudio.ai/blog">lmstudio.ai/blog</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · ARAVIND SRINIVAS /</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ローカルLLM <span class="sep">/</span> ARAVIND SRINIVAS / PERPLEXITY <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Perplexity Mac、機密工程をローカルモデルへ振り分け</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-02/topic_8.png" data-alt="Perplexity Mac、機密工程をローカルモデルへ振り分け" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-02/topic_8.png" alt="Perplexity Mac、機密工程をローカルモデルへ振り分け" />
+      </div>
+      <p class="lede">
+        Perplexity Macアプリは、クラウドとMac上のローカルモデルを組み合わせるハイブリッド計算に対応した。Computerが処理内容を見て、血液検査、税務書類、訴訟資料など機密性の高い工程を端末内へ寄せる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Perplexity Macアプリの全ユーザーへ提供する</li>
+        <li data-i="02">ローカル処理はApple Siliconを使い、その工程ではクラウド側のトークン料金が発生しない</li>
+        <li data-i="03">端末内とWeb上の実行環境をタスクごとに使い分ける</li>
+        <li data-i="04">ローカルへ送るか判断する個人識別情報分類器を公開する</li>
+        <li data-i="05">分類精度、対応するローカルモデル、誤判定時の既定動作は公式スレッドでは示されていない</li>
+      </ul>
+      <div class="pull">
+        ローカルかクラウドかをアプリ単位で決めるのではなく、工程単位で分ける設計だ。プライバシー、性能、料金の優先順位を、扱うデータに応じて変えられる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,808</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/AravSrinivas/status/2094803607560585411">@AravSrinivas</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-01</dd>
+        <dt>CATEGORY</dt>
+        <dd>ローカルLLM</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/AravSrinivas/status/2094803607560585411">x.com/AravSrinivas/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://www.anthropic.com/claude-fable-and-mythos-5-1">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-09-01/">
+      ← 前日 · 2026-09-01
+      <span class="big">Grok Bot、Xの調査をコネクタ経由で実行</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-09-02/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260902.0732</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

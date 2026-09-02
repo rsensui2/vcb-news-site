@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ダイニーのAIエージェントが飲食経営を変える — Bookmarks · Vibe Coder Bootcamp</title>
+  <meta name="description" content="飲食店向けサービスを展開するダイニーの事例をもとに、POSや勤怠管理を人が操作する段階から、AIエージェントがデータ収集、判断、実行まで担う段階への変化を解説している。約120店舗を展開する企業で入金確認を約90％、採用業務を約40％減らす見込みなど、具体的な運用効果も紹介する。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+  /* Archive page — day sections */
+  .bm-archive { padding: 0 0 40px; background: var(--paper); }
+  .bm-day {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--hair);
+  }
+  .bm-day:first-of-type { padding-top: 40px; }
+  .bm-day-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+  .bm-day-head .date {
+    font-family: "Shippori Mincho B1", "Noto Serif JP", serif;
+    font-weight: 800;
+    font-size: clamp(40px, 6vw, 72px);
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin: 0;
+  }
+  .bm-day-head .date .sep { color: var(--accent); margin: 0 2px; }
+  .bm-day-head .count {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding: 8px 14px;
+    border: 1px solid var(--accent);
+    white-space: nowrap;
+  }
+  /* active nav underline */
+  .masthead nav a.is-active { border-bottom-color: var(--accent); color: var(--accent); }
+
+  /* Article page — prose */
+  .bm-article-head {
+    padding: 48px 0 40px;
+    border-bottom: 1px solid var(--hair);
+  }
+  .bm-article-head .breadcrumb {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mute);
+    margin-bottom: 18px;
+  }
+  .bm-article-head .breadcrumb a { color: var(--ink); border-bottom: 1px solid var(--hair); padding-bottom: 1px; }
+  .bm-article-head .breadcrumb a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  .bm-article-head .cat-line {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .bm-article-head .cat-line .sep { color: var(--mute); }
+  .bm-article-head h1.title {
+    font-family: "Shippori Mincho B1", "Noto Serif JP", serif;
+    font-weight: 800;
+    font-size: clamp(32px, 4.4vw, 58px);
+    line-height: 1.12;
+    letter-spacing: -0.005em;
+    margin: 0 0 24px;
+    color: var(--ink);
+  }
+  .bm-article-head .strap {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--mute);
+  }
+  .bm-article-head .strap span .label { color: var(--accent); margin-right: 6px; }
+  .bm-article-head .strap a { border-bottom: 1px solid var(--hair); padding-bottom: 2px; }
+  .bm-article-head .strap a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  .bm-body { padding: 72px 0; border-bottom: 1px solid var(--hair); }
+  .bm-body .container {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr) 300px;
+    gap: 48px;
+  }
+  .bm-body .numeral {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 96px;
+    font-weight: 800;
+    line-height: 0.85;
+    color: var(--ink);
+    position: sticky;
+    top: 40px;
+    align-self: start;
+    letter-spacing: -0.03em;
+  }
+  .bm-body .numeral .ord {
+    display: block;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.14em;
+    margin-top: 14px;
+    font-weight: 500;
+  }
+  .bm-body .prose {
+    font-size: 16px;
+    line-height: 1.9;
+    color: var(--ink-soft);
+    font-family: "Inter", "Noto Sans JP", sans-serif;
+  }
+  .bm-body .prose > *:first-child { margin-top: 0; }
+  .bm-body .prose h1 {
+    font-family: "Shippori Mincho B1", serif;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 1.25;
+    margin: 40px 0 18px;
+    color: var(--ink);
+  }
+  .bm-body .prose h2 {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 40px 0 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+  }
+  .bm-body .prose h2::before {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: var(--accent);
+  }
+  .bm-body .prose h3 {
+    font-family: "Shippori Mincho B1", serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.35;
+    margin: 32px 0 14px;
+    color: var(--ink);
+  }
+  .bm-body .prose p { margin: 0 0 18px; }
+  .bm-body .prose ul, .bm-body .prose ol {
+    border-left: 2px solid var(--ink);
+    padding: 4px 0 4px 24px;
+    margin: 18px 0 24px;
+    list-style: none;
+  }
+  .bm-body .prose ul li, .bm-body .prose ol li {
+    position: relative;
+    padding: 4px 0 4px 18px;
+    font-size: 15px;
+  }
+  .bm-body .prose ul li::before {
+    content: "·";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1;
+  }
+  .bm-body .prose blockquote {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 19px;
+    line-height: 1.6;
+    padding: 18px 0 18px 24px;
+    border-left: 4px solid var(--accent);
+    margin: 28px 0;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .bm-body .prose pre {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 18px 20px;
+    overflow-x: auto;
+    margin: 20px 0;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    line-height: 1.65;
+  }
+  .bm-body .prose code {
+    background: var(--paper-deep);
+    border: 1px solid var(--hair);
+    padding: 1px 6px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.9em;
+  }
+  .bm-body .prose pre code { background: transparent; border: 0; padding: 0; color: inherit; font-size: 13px; }
+  .bm-body .prose a { color: var(--accent); border-bottom: 1px solid rgba(200,52,31,0.25); }
+  .bm-body .prose a:hover { border-bottom-color: var(--accent); }
+
+  .bm-body .side {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: var(--mute);
+    border-top: 1px solid var(--hair);
+    padding-top: 24px;
+    position: sticky;
+    top: 40px;
+    align-self: start;
+  }
+  .bm-body .side dl { margin: 0; }
+  .bm-body .side dt {
+    color: var(--accent);
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-top: 18px;
+    margin-bottom: 6px;
+  }
+  .bm-body .side dt:first-child { margin-top: 0; }
+  .bm-body .side dd {
+    margin: 0 0 4px;
+    color: var(--ink);
+    word-break: break-all;
+    font-size: 12.5px;
+    line-height: 1.6;
+  }
+  .bm-body .side dd a { border-bottom: 1px solid var(--hair); padding-bottom: 1px; }
+  .bm-body .side dd a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  .bm-body .side .stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 18px;
+    margin-top: 8px;
+  }
+  .bm-body .side .stats .stat .num {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 24px;
+    color: var(--ink);
+    line-height: 1;
+    font-weight: 800;
+    display: block;
+  }
+  .bm-body .side .stats .stat .lab {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--mute);
+    margin-top: 4px;
+    display: block;
+    text-transform: uppercase;
+  }
+
+  /* card: stretched-link target must be local nav, not external */
+  .xcard .xcard-main-link { cursor: pointer; }
+
+  @media (max-width: 980px) {
+    .bm-body .container { grid-template-columns: 1fr; gap: 24px; }
+    .bm-body .numeral { position: static; font-size: 64px; }
+    .bm-body .side { position: static; }
+    .bm-day-head .date { font-size: 36px; }
+  }
+</style>
+</head>
+<body>
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">BOOKMARK №007</span>
+    <span class="sep">/</span>
+    <span>2026-08-31</span>
+    <span class="sep">/</span>
+    <span>@hayatatsu_drm</span>
+    <span class="sep">/</span>
+    <span>514 ITEMS</span>
+    <span class="sep">/</span>
+    <span>JST 07:19 THU</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+<header class="masthead">
+  <div class="container row">
+    <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
+    <nav>
+      <a href="../">HOME</a>
+      <a href="../news/2026-09-02/">NEWS</a>
+      <a href="./" class="is-active">BOOKMARKS</a>
+      <a href="../#archive">ARCHIVE</a>
+      <a href="../#about">ABOUT</a>
+    </nav>
+    <div class="meta">JST · 07:19 · THU</div>
+  </div>
+</header>
+
+<section class="bm-article-head">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-08-31 <span>/</span> №007
+    </div>
+    <div class="cat-line">
+      <span>💼 AI×ビジネス活用 / 🔁 エージェント運用設計</span>
+      <span class="sep">·</span><span>はやたつ@飲食経営 <span style="opacity:.7">@hayatatsu_drm</span></span>
+      <span class="sep">·</span><span>2026-08-31</span>
+    </div>
+    <h1 class="title">ダイニーのAIエージェントが飲食経営を変える</h1>
+    <div class="strap">
+      <span><span class="label">№</span>007 / 514</span>
+      <span><span class="label">SRC</span><a href="https://x.com/hayatatsu_drm/status/2094380970413797883" target="_blank" rel="noopener noreferrer">x.com/hayatatsu_drm ↗</a></span>
+      <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/522_hayatatsu_drm_%E3%83%80%E3%82%A4%E3%83%8B%E3%83%BC%E3%81%AEAI%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%81%8C%E9%A3%B2%E9%A3%9F%E7%B5%8C%E5%96%B6%E3%82%92%E5%A4%89%E3%81%88%E3%82%8B.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
+    </div>
+  </div>
+</section>
+
+<section class="bm-body">
+  <div class="container">
+    <aside class="numeral">007<span class="ord">BOOKMARK / 514</span></aside>
+    <article class="prose">
+<p><strong>有益度:</strong> ⭐⭐⭐⭐⭐</p><p><strong>エンゲージメント:</strong> Likes 202 / RT 28 / Replies 4 / Bookmarks 382 / Views 176,052</p><h2>投稿本文</h2><blockquote>https://x.com/i/article/2094380632344506368</blockquote><h2>日本語訳全文</h2><p>飲食店を経営している人は、これから数年で仕事のやり方がかなり変わるかもしれません。</p><p>POSレジ。</p><p>モバイルオーダー。</p><p>予約台帳。</p><p>CRM。</p><p>勤怠管理。</p><p>もちろん、これらも重要です。</p><p>ただ、今起きている変化を見ると、</p><p>「どのPOSを使うか」</p><p>「どのモバイルオーダーを導入するか」</p><p>という議論自体が、徐々に古くなっていく可能性があります。</p><p>なぜなら、次に来るのは</p><p>「人間がシステムを操作する時代」ではなく、「AIがシステムを操作する時代」</p><p>だからです。</p><p>その代表例として、今回かなり面白かったのが、飲食店向けサービスを展開するダイニーのAIエージェントです。</p><p>実際、ダイニーではすでにAIエージェントを活用し、採用管理や監査などの本部業務を自動化する事例が出ています。</p><p>約120店舗を展開する企業では、入金チェックの工数を約90％削減する見込みで、採用業務についても約40％削減。AI活用によって、現在の管理体制のまま250店舗まで対応できると試算されています。</p><p>これは単なる「業務効率化ツール」の話ではありません。</p><p>飲食店経営そのものが、かなり変わり始めています。</p><p>POSやモバイルオーダーの「次」が始まっている</p><p>これまで飲食DXといえば、</p><p>「POSを変えよう」</p><p>「モバイルオーダーを入れよう」</p><p>「CRMを導入しよう」</p><p>「勤怠システムを入れよう」</p><p>という話が中心でした。</p><p>ただ、これらは結局、</p><p>人間が操作するための道具</p><p>です。</p><p>売上を見るのも人間。</p><p>数字を分析するのも人間。</p><p>シフトを作るのも人間。</p><p>スタッフへ連絡するのも人間。</p><p>価格を変更するのも人間。</p><p>つまりシステムが増えれば便利にはなるものの、</p><p>最後に仕事をするのは人間</p><p>という構造自体は変わっていませんでした。</p><p>AIエージェントが面白いのは、ここを変えようとしている点です。</p><p>飲食テックは「馬→車→自動運転」に進化する</p><p>この変化は、乗り物に例えると非常に分かりやすいです。</p><p>第1世代は「馬」</p><p>従来のPOSやモバイルオーダー、予約管理、勤怠管理などです。</p><p>馬に乗れば人間だけで走るより圧倒的に速く移動できます。</p><p>ただし、</p><p>手綱を握る。</p><p>方向を決める。</p><p>餌を与える。</p><p>馬を管理する。</p><p>結局、人間がかなり働かなければいけません。</p><p>今までのSaaSも近いものがあります。</p><p>便利なシステムを導入しても、</p><p>データを入力して、数字を確認して、判断して、実行するのは人間です。</p><p>第2世代は「カーナビ付きの車」</p><p>次に登場したのが、</p><p>「今月は人件費が高いです」</p><p>「この店舗の売上が落ちています」</p><p>「この時間帯にスタッフが多すぎます」</p><p>とシステム側が教えてくれる世界です。</p><p>これはかなり便利です。</p><p>ただ、</p><p>カーナビが</p><p>「300m先を右折してください」</p><p>と教えてくれても、</p><p>実際にハンドルを切るのは自分です。</p><p>つまり、</p><p>分析してくれるけれど、実行は人間。</p><p>ここまでは普通のAIでもできます。</p><p>第3世代が「完全自動運転」</p><p>ここからがAIエージェントです。</p><p>人間がやるのは、</p><p>目的地を決めること。</p><p>例えば、</p><p>「来月600万円売りたい」</p><p>「原価率を30％以内にしたい」</p><p>「アルバイトを15人採用したい」</p><p>「人件費率をあと2％下げたい」</p><p>というゴールだけ渡す。</p><p>するとAIが、</p><p>必要なデータを集め、</p><p>問題を特定し、</p><p>改善案を考え、</p><p>必要なシステムを操作し、</p><p>実行まで進める。</p><p>極端に言えば、</p><p>経営者は「どこへ行きたいか」を決めるだけ。</p><p>ここまで来ると、飲食店経営はかなり変わります。</p><p>ChatGPTと「AIエージェント」は全く違う</p><p>ここは非常に重要です。</p><p>例えばChatGPTに、</p><p>「先月の人件費率を教えて」</p><p>と聞いたとします。</p><p>すると、</p><p>「人件費率は32％です」</p><p>と答えてくれる。</p><p>これが一般的なAIです。</p><p>もちろん便利です。</p><p>でも、そこで終わります。</p><p>AIエージェントになると、</p><p>「人件費率は32％です」</p><p>だけではありません。</p><p>さらに、</p><p>「目標の30％を超えています」</p><p>「原因は火曜日と水曜日の17時〜19時に人員が過剰だからです」</p><p>「来月からこの時間帯を1名減らせば30％前後まで改善できます」</p><p>と分析し、</p><p>最後に</p><p>「来月のシフトを修正しますか？」</p><p>まで進む。</p><p>そして承認すると、</p><p>実際にシフトを変更する。</p><p>これが、</p><p>「答えるAI」と「働くAI」の違い</p><p>です。</p><p>実際にダイニーでは「実行」まで始まっている</p><p>これは未来予想だけではありません。</p><p>ダイニーの公式導入事例を見ると、すでにAIエージェントによる業務自動化が始まっています。</p><p>ある企業では、複数の求人媒体から来る応募を一元化し、</p><p>応募者への返信、</p><p>面接日程調整、</p><p>Googleカレンダーを参照したスケジュール調整</p><p>などをAIが処理しています。</p><p>別の企業では、POSデータと連携し、</p><p>決済情報とレジデータを自動で突合。</p><p>これまで管理スタッフが毎朝行っていた入金確認の大部分をAIに任せる仕組みを構築しています。</p><p>さらに現在のダイニーでは、売上・原価・人件費を集約し、FLや利益状況を可視化したり、過去のPOSデータから売上予測を行ったりする経営管理機能も提供されています。</p><p>つまり、</p><p>「データを見る」</p><p>↓</p><p>「AIが分析する」</p><p>↓</p><p>「AIが改善策を出す」</p><p>↓</p><p>「AIが実行する」</p><p>というところまで、一気につながり始めているわけです。</p><p>むしろ中小・個人飲食店の方がAIエージェントは必要</p><p>AIと聞くと、</p><p>「大手チェーンが使うもの」</p><p>と思う経営者も多いと思います。</p><p>個人的には逆だと思っています。</p><p>例えば100店舗ある会社なら、</p><p>人事部があります。</p><p>経理部があります。</p><p>マーケティング担当があります。</p><p>システム担当があります。</p><p>店舗管理部があります。</p><p>ところが1〜5店舗くらいの会社では、</p><p>だいたい社長が全部やっています。</p><p>採用媒体を見る。</p><p>応募者へ返信する。</p><p>シフトを見る。</p><p>売上を見る。</p><p>原価を見る。</p><p>Google口コミを見る。</p><p>業者と連絡する。</p><p>請求書を見る。</p><p>スタッフからのLINEに返信する。</p><p>新メニューを考える。</p><p>Instagramも見る。</p><p>店舗にも立つ。</p><p>これを全部やっている経営者は珍しくありません。</p><p>だから、</p><p>社員を何人も採用できない会社ほど、AIエージェントのインパクトは大きい。</p><p>1人のAIが、</p><p>経理担当、</p><p>人事担当、</p><p>分析担当、</p><p>店舗管理担当、</p><p>マーケティング担当</p><p>の一部を担ってくれると考えると、かなり大きな話です。</p><p>飲食店では具体的に何がAI化されるのか</p><p>例えば採用。</p><p>これまでは、</p><p>求人媒体を見る</p><p>↓</p><p>応募者へメール</p><p>↓</p><p>日程調整</p><p>↓</p><p>面接</p><p>↓</p><p>入社書類送付</p><p>↓</p><p>雇用契約</p><p>↓</p><p>店舗へ共有</p><p>という業務を人間がやっていました。</p><p>これが将来的には、</p><p>「アルバイトを15人採用して」</p><p>と指示するだけになるかもしれません。</p><p>AIが求人応募を確認し、</p><p>返信し、</p><p>面接候補日を出し、</p><p>カレンダーを確認し、</p><p>日程を確定し、</p><p>入社手続きを進める。</p><p>人間は、</p><p>本当に人間が判断すべき部分だけを見る。</p><p>マニュアル作成も変わる</p><p>これも飲食店では大きいと思います。</p><p>飲食店には、</p><p>「レジ締めどうするんでしたっけ？」</p><p>「この料理の盛り付けどうでしたっけ？」</p><p>「遅刻するとき誰に連絡しますか？」</p><p>「このクレームの場合どう対応しますか？」</p><p>みたいな質問が大量にあります。</p><p>それを店長が毎回答えている会社も多い。</p><p>でも、社内の過去のやり取りやマニュアルをAIが理解していれば、</p><p>スタッフがAIに聞けばいい。</p><p>さらに面白いのが、</p><p>そもそもマニュアルを作る作業自体が減る</p><p>可能性です。</p><p>過去のチャット履歴などから、</p><p>「この会社ではこの質問にこう回答している」</p><p>という情報をAIが拾って整理してしまえばいい。</p><p>実際、12店舗を展開する企業のダイニー導入事例でも、数十個のLINEグループに情報が散らばり、バックオフィス担当者1人に業務が集中していた問題が紹介されています。AIを既存オペレーションへ追加することで仕組み化を進めた事例です。</p><p>これ、多店舗経営者ならかなり共感すると思います。</p><p>原価管理もAIに任せる世界になる</p><p>例えば、</p><p>「原価率を30％以内にしてください」</p><p>とAIに指示する。</p><p>最近、</p><p>米の価格が上がった。</p><p>肉の仕入れ価格も上がった。</p><p>するとAIが、</p><p>「このままだと来月の原価率は32.4％になります」</p><p>と予測する。</p><p>そして、</p><p>「この商品の価格を50円上げる」</p><p>「こちらの商品をおすすめ枠へ移動する」</p><p>「モバイルオーダー上の商品配置を変更する」</p><p>「利益率の高い商品の写真を大きくする」</p><p>といった施策を考える。</p><p>さらに、</p><p>AIエージェントなら、その施策を実行するところまでいく。</p><p>ここが一番ヤバいところです。</p><p>これまで経営コンサルタントや本部スタッフがやっていた仕事の一部を、</p><p>AIが24時間やるようになる可能性があります。</p><p>シフト作成も「人間が考えない」時代へ</p><p>飲食店では、</p><p>売上予測とシフト作成の精度が利益を大きく左右します。</p><p>雨。</p><p>気温。</p><p>曜日。</p><p>祝日。</p><p>近隣イベント。</p><p>前年売上。</p><p>直近売上。</p><p>予約数。</p><p>これらを全部見ながら店長がシフトを組むのは大変です。</p><p>でもAIなら、</p><p>過去データから</p><p>「明日の売上予測は42万円」</p><p>「18時〜20時がピーク」</p><p>「ホール4人、キッチン3人が適正」</p><p>と計算できる。</p><p>ダイニーの経営管理サービスでも、POSデータをもとに売上予測を行い、月末着地を先読みする機能がすでに提供されています。</p><p>この先、シフト・勤怠などのデータとの連携がさらに進めば、</p><p>「予測する」</p><p>だけではなく、</p><p>「最適な状態へ変更する」</p><p>ところまでAIに任せる世界が現実的になってきます。</p><p>一番重要なのは「人を減らすこと」ではない</p><p>AIの話になると、</p><p>「人件費削減」</p><p>「人を減らせる」</p><p>という方向へ行きがちです。</p><p>でも、飲食店におけるAIの本当の価値はそこではないと思います。</p><p>飲食店には、</p><p>人間にしかできない仕事があります。</p><p>目の前のお客様を見る。</p><p>料理を提供する。</p><p>スタッフを励ます。</p><p>常連のお客様と話す。</p><p>新人スタッフを育てる。</p><p>生産者と関係を作る。</p><p>店の空気を作る。</p><p>新しい料理を考える。</p><p>こういう部分こそ、</p><p>飲食店の価値です。</p><p>なのに現実は、</p><p>店長が事務所でExcelを触っていたり、</p><p>社長が深夜に応募者へメールを返していたり、</p><p>マネージャーが毎朝レジの数字を照合していたりする。</p><p>これはかなりもったいない。</p><p>面倒な仕事をAIに任せて、人間が人間にしかできない仕事へ戻る。</p><p>これがAIエージェントの本当の価値だと思います。</p><p>「ダイニー・ワークスペース」が面白い理由</p><p>動画内でも特に面白かったのが、</p><p>「ダイニー・ワークスペース」</p><p>という構想です。</p><p>POSや勤怠システムの入れ替えは、飲食店にとってかなり大変です。</p><p>レジを変える。</p><p>スタッフに説明する。</p><p>操作を覚えてもらう。</p><p>マニュアルを作る。</p><p>店舗数が多くなるほど大仕事になります。</p><p>一方、チャットならハードルが圧倒的に低い。</p><p>普段使っているチャットのように、</p><p>「これどうするの？」</p><p>と質問すればAIが答えてくれる。</p><p>動画内では、これまでLINEグループなどに蓄積されてきた過去のナレッジを読み込ませ、</p><p>例えば、</p><p>「ポテトサラダのレシピって何だっけ？」</p><p>と聞けばAIが回答するような世界も語られていました。</p><p>さらに重要なのが、</p><p>アルバイトまで含めて全員が使えること。</p><p>飲食店のDXでありがちなのが、</p><p>「本部しか使っていない」</p><p>「正社員しかアカウントを持っていない」</p><p>という問題です。</p><p>飲食店で一番人数が多いのはアルバイトです。</p><p>そこが使えなければ、</p><p>現場の情報は結局LINEへ戻ります。</p><p>だからAIを現場に浸透させるなら、</p><p>一部の幹部だけではなく、スタッフ全員が使える状態</p><p>を作る必要があります。</p><p>動画内では、まずAIを体感してもらうため、ワークスペースを無料提供する構想についても語られていました。</p><p>これが本当に広がったら、かなり面白いと思います。</p><p>飲食経営者が今やるべきこと</p><p>ここまで読むと、</p><p>「じゃあ自社でAIシステムを開発しないといけないの？」</p><p>と思うかもしれません。</p><p>僕はその必要はないと思っています。</p><p>むしろ飲食店経営者が、</p><p>AIシステムの開発に何百時間も使う方がもったいない。</p><p>経営者がやるべきことは、</p><p>AIそのものを作ることではなく、AIを使う側になること。</p><p>だと思います。</p><p>まず、</p><p>ChatGPTでもいい。</p><p>既存サービスでもいい。</p><p>実際に仕事の一部をAIへ任せてみる。</p><p>そしてスタッフにも、</p><p>「分からなかったら、まずAIに聞いてみて」</p><p>と言える会社にする。</p><p>この文化を作っておくだけでも、</p><p>半年後、1年後にはかなり差が出ると思います。</p><p>飲食DXの本番は、これからかもしれない</p><p>今まで飲食DXというと、</p><p>紙の伝票をなくした。</p><p>モバイルオーダーを導入した。</p><p>POSをクラウド化した。</p><p>予約台帳をデジタル化した。</p><p>という話が中心でした。</p><p>でも、これは言ってしまえば、</p><p>「人間の仕事をデジタルに置き換えた」</p><p>だけです。</p><p>次に始まるのは、</p><p>「その仕事自体をAIに任せる」</p><p>という変化です。</p><p>売上を見るAI。</p><p>原価を見るAI。</p><p>採用するAI。</p><p>シフトを考えるAI。</p><p>監査するAI。</p><p>販促を考えるAI。</p><p>そして、それぞれがバラバラではなく、</p><p>POS・CRM・勤怠・決済などのデータとつながって動く。</p><p>そうなったとき、</p><p>飲食店の本部組織のあり方まで変わります。</p><p>ダイニーは現在、POS・モバイルオーダー・顧客管理などを組み合わせた「All in One Restaurant Cloud」を掲げており、公式サイトでは導入店舗3,000店、利用会員数2,000万人突破としています。</p><p>だから今回のAIエージェントの話は、</p><p>単に</p><p>「新しい便利機能が追加されました」</p><p>という話ではないと思っています。</p><p>これまで人間が操作していた飲食店のシステムを、</p><p>今度はAI自身が操作する。</p><p>その入口が始まっている。</p><p>飲食店を経営しているなら、</p><p>POSやモバイルオーダーの商品比較だけではなく、</p><p>「AIエージェントによって、自分の仕事の何をなくせるのか？」</p><p>を一度考えてみるといいと思います。</p><p>これから店舗を増やしたい経営者ほど、</p><p>かなり重要なテーマになるはずです。</p><p>詳しくは下記動画で話してます。</p><p>https://youtu.be/bPedPa3XI18?si=QsxeLSO4y08ZVvCB</p><h2>概要</h2><p>飲食店向けサービスを展開するダイニーの事例をもとに、POSや勤怠管理を人が操作する段階から、AIエージェントがデータ収集、判断、実行まで担う段階への変化を解説している。約120店舗を展開する企業で入金確認を約90％、採用業務を約40％減らす見込みなど、具体的な運用効果も紹介する。</p>
+    </article>
+    <aside class="side">
+      <dl>
+        <dt>AUTHOR</dt><dd>はやたつ@飲食経営</dd>
+        <dt>HANDLE</dt><dd>@hayatatsu_drm</dd>
+        <dt>POSTED</dt><dd>2026-08-31</dd>
+        <dt>CATEGORY</dt><dd>💼 AI×ビジネス活用 / 🔁 エージェント運用設計</dd>
+        <dt>SOURCE</dt><dd><a href="https://x.com/hayatatsu_drm/status/2094380970413797883" target="_blank" rel="noopener noreferrer">x.com/hayatatsu_drm/status/209438097041379…</a></dd>
+        <dt>MARKDOWN</dt><dd><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/522_hayatatsu_drm_%E3%83%80%E3%82%A4%E3%83%8B%E3%83%BC%E3%81%AEAI%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%81%8C%E9%A3%B2%E9%A3%9F%E7%B5%8C%E5%96%B6%E3%82%92%E5%A4%89%E3%81%88%E3%82%8B.md" target="_blank" rel="noopener noreferrer">GitHub で原文を見る</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn prev" href="./521_GoogleResearch_TimesFM_3%E3%82%92%E7%99%BA%E8%A1%A8.md.html">
+      <span>← 新しいブックマーク</span>
+      <span class="big">時系列基盤モデルTimesFM-3を発表</span>
+    </a>
+    <a class="btn next" href="./512_steipete_OpenClaw%E3%82%92OpenClaw%E8%87%AA%E8%BA%AB%E3%81%A7%E4%BD%9C%E3%82%8B%E3%83%81%E3%83%BC%E3%83%A0%E9%96%8B%E7%99%BA.md.html">
+      <span>古いブックマーク →</span>
+      <span class="big">OpenClawをOpenClaw自身で作るチーム開発へ移行</span>
+    </a>
+  </div>
+</section>
+
+<section class="actions">
+  <div class="container">
+    <a href="./">← 一覧へ戻る</a>
+    <a class="primary" href="https://x.com/hayatatsu_drm/status/2094380970413797883" target="_blank" rel="noopener noreferrer">元ポストを X で見る</a>
+    <a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/522_hayatatsu_drm_%E3%83%80%E3%82%A4%E3%83%8B%E3%83%BC%E3%81%AEAI%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E3%81%8C%E9%A3%B2%E9%A3%9F%E7%B5%8C%E5%96%B6%E3%82%92%E5%A4%89%E3%81%88%E3%82%8B.md" target="_blank" rel="noopener noreferrer">GitHub で開く</a>
+  </div>
+</section>
+
+<footer class="foot" id="about">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">Vibe Coder Bootcamp</div>
+        <p>
+          AI の新しい動きを毎朝整理して、Vibe Coder が今日使える形で届けるフィード。
+          運営は泉水亮介。Slackコミュニティと連動した公開ログです。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          BOOKMARKS ARCHIVE · 514 ITEMS · EN+JP
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../">HOME</a></li>
+          <li><a href="../news/2026-09-02/">TODAY</a></li>
+          <li><a href="./">BOOKMARKS</a></li>
+          <li><a href="../#archive">ARCHIVE</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>SUBSCRIBE</h5>
+        <ul>
+          <li><a href="#">Slack に参加</a></li>
+          <li><a href="#">RSS</a></li>
+          <li><a href="#">X で購読</a></li>
+          <li><a href="#">メール通知</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://github.com/rsensui2/vibe-coder-demo">GitHub</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Colophon</a></li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 2026-09-03</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

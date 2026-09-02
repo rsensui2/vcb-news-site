@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №093</span>
+    <span class="tick">BOOKMARK №098</span>
     <span class="sep">/</span>
     <span>2026-06-24</span>
     <span class="sep">/</span>
     <span>@masaki_aihack</span>
     <span class="sep">/</span>
-    <span>509 ITEMS</span>
+    <span>514 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:19 WED</span>
+    <span>JST 07:19 THU</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,19 +305,19 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-09-01/">NEWS</a>
+      <a href="../news/2026-09-02/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:19 · WED</div>
+    <div class="meta">JST · 07:19 · THU</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-06-24 <span>/</span> №093
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-06-24 <span>/</span> №098
     </div>
     <div class="cat-line">
       <span>💻 AI（Claude Code / ワークフロー）</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">Claude Code の性能を「92 倍」引き出す方法 — 文脈管理 10 コマンド</h1>
     <div class="strap">
-      <span><span class="label">№</span>093 / 509</span>
+      <span><span class="label">№</span>098 / 514</span>
       <span><span class="label">SRC</span><a href="https://x.com/masaki_aihack/status/2069695349086900342" target="_blank" rel="noopener noreferrer">x.com/masaki_aihack ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/351_masaki_aihack_ClaudeCode%E3%81%AE%E6%80%A7%E8%83%BD%E3%82%9292%E5%80%8D%E5%BC%95%E3%81%8D%E5%87%BA%E3%81%9910%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">093<span class="ord">BOOKMARK / 509</span></aside>
+    <aside class="numeral">098<span class="ord">BOOKMARK / 514</span></aside>
     <article class="prose">
 <p><strong>有益度:</strong> ⭐⭐⭐⭐⭐</p><p><strong>エンゲージメント:</strong> Likes 1,944 / RT 127 / Replies 8 / Bookmarks 5,192 / Views 1,118,365</p><h2>概要</h2><p>Claude Code を「賢いチャット相手」ではなく「文脈を管理する秘書」として使い倒すための X Article（ブックマーク 5,192・閲覧 110 万超のヒット記事）。AI がうまく動かないのは性能ではなく「文脈（文脈＝コンテキスト）に迷っているから」という主張のもと、文脈を自分の手で設計・管理するための 10 個のコマンド／機能を解説する。</p><h2>まとめ</h2><ul><li><strong>問題提起</strong>: 多くの人は Claude Code を「文章を書いてくれる相手」として使うが、それは他のチャット AI でもできる「普通の使い方」。本当の強みは ①ファイルを直接読み書きできる ②短いコマンドで一気通貫に作業を進められる、の 2 点。</li><li><strong>10 のコマンド／機能</strong>:</li></ul><p>  1. <code>/clear</code> — 会話履歴を空にして頭だけリセット（CLAUDE.md や保存済み編集は残る）。別作業に移る時に使う。</p><p>  2. <code>/compact</code> — 文脈を要約して圧縮。「捨てる」clear に対し「畳んで残す」。長い作業の途中で。</p><p>  3. <code>/context</code> — トークンの使い道を色付きグリッドで可視化。重さの原因を特定し clear/compact を判断。</p><p>  4. <code>/rewind</code>（旧 /undo・/checkpoint）— 過去のチェックポイントに巻き戻す。修正で壊した時に原稿だけ戻す。空入力で Esc 2 回でも開く。</p><p>  5. <strong>プランモード</strong>（Shift+Tab / <code>/plan</code>）— 書き出す前に調査・計画させる。default→acceptEdits→plan の順で循環。</p><p>  6. <code>/effort</code> — 思考の本気度を low/medium/high/xhigh/max/ultracode の 6 段階で指定。旧「ultrathink」は v2.1.68 で非推奨に。Option/Alt+T で拡張思考を即トグル。</p><p>  7. <code>/memory</code> — CLAUDE.md（プロジェクト記憶）を編集。プロジェクト用とユーザー全体用の 2 層。文体ルールや NG ワードを仕込む。</p><p>  8. <strong>@ファイル指定</strong> — 探させず文脈を直接渡す（パス補完つき）。<code>@articles/</code> でフォルダ一覧も軽く渡せる。</p><p>  9. <code>/goal</code> — 完了条件まで複数ターン自走。判定用モデルが毎ターン条件達成をチェック。<code>/loop</code>（v2.1.139 以降）と使い分け。</p><p>  10. <code>/btw</code> — 作業を止めずに単発の脱線質問。回答はオーバーレイ表示で履歴に残らない。</p><ul><li><strong>結論</strong>: 10 個に共通するのはただ 1 つ、「AI に会話を垂れ流すのではなく、文脈を自分で設計・管理する」こと。</li></ul><h2>原文（X Article 冒頭）</h2><blockquote>Claude Code を、ただの賢いチャット相手として使っているなら、その実力の半分も引き出せていません。</blockquote><blockquote>文章の生成。スライド作成。ブログ記事の量産。それなら、ChatGPT でもできます。</blockquote><blockquote>本当の価値は、別のところにあるのです。</blockquote>
     </article>
@@ -384,14 +384,14 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 509 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 514 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-09-01/">TODAY</a></li>
+          <li><a href="../news/2026-09-02/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -418,7 +418,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-09-02</span>
+      <span>BUILD 2026-09-03</span>
     </div>
   </div>
 </footer>

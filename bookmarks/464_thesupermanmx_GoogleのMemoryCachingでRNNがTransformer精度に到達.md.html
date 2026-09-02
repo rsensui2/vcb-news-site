@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №043</span>
+    <span class="tick">BOOKMARK №048</span>
     <span class="sep">/</span>
     <span>2026-08-01</span>
     <span class="sep">/</span>
     <span>@thesupermanmx</span>
     <span class="sep">/</span>
-    <span>509 ITEMS</span>
+    <span>514 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:19 WED</span>
+    <span>JST 07:19 THU</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,19 +305,19 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-09-01/">NEWS</a>
+      <a href="../news/2026-09-02/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:19 · WED</div>
+    <div class="meta">JST · 07:19 · THU</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-08-01 <span>/</span> №043
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-08-01 <span>/</span> №048
     </div>
     <div class="cat-line">
       <span>📖 技術解説 / 論文</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">Google の Memory Caching (MC) — RNN が Transformer 精度に並び、線形計算量を維持</h1>
     <div class="strap">
-      <span><span class="label">№</span>043 / 509</span>
+      <span><span class="label">№</span>048 / 514</span>
       <span><span class="label">SRC</span><a href="https://x.com/thesupermanmx/status/2083556033931403600" target="_blank" rel="noopener noreferrer">x.com/thesupermanmx ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/464_thesupermanmx_Google%E3%81%AEMemoryCaching%E3%81%A7RNN%E3%81%8CTransformer%E7%B2%BE%E5%BA%A6%E3%81%AB%E5%88%B0%E9%81%94.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">043<span class="ord">BOOKMARK / 509</span></aside>
+    <aside class="numeral">048<span class="ord">BOOKMARK / 514</span></aside>
     <article class="prose">
 <p><strong>有益度:</strong> ⭐⭐⭐⭐</p><p><strong>エンゲージメント:</strong> Likes 1557 / RT 275 / Bookmarks 1504 / Views 463505</p><h2>投稿本文（原文）</h2><p>Google has quietly published a method that might end the entire transformer era.</p><p>For a decade, every major AI model on earth, ChatGPT, Claude, Gemini, has been chained to the exact same architecture. The Transformer.</p><p>It changed everything by letting models look at entire sequences at once. But it has a fatal flaw. Its memory consumption scales quadratically. $O(L^2)$. As context windows grow to millions of tokens, the compute cost explodes. It requires massive data centers, thousands of GPUs, and fortunes in electricity.</p><p>For years, researchers tried to replace Transformers with old-school Recurrent Neural Networks (RNNs) to get lightning-fast linear speed. The problem? RNNs have fixed-size memory. When texts get long, they forget. They choke on complex reasoning and recall tasks. So everyone went back to Transformers.</p><p>Until Google dropped a bombshell new paper. They introduced Memory Caching (MC).</p><p>Instead of forcing an RNN to rely on a fixed, static memory, Google's technique lets the model's effective memory capacity grow dynamically with the sequence length. It acts like virtual memory for neural networks. By caching checkpoints of hidden states and integrating smart mechanisms like sparse selective retrieval, the model dynamically looks back at what it needs, without the crushing mathematical overhead of a Transformer.</p><p>The results completely break the old rules of sequence modeling:</p><p>• Matches Transformer-level accuracy on complex in-context recall tasks.</p><p>• Completely closes the performance gap that kept RNNs sidelined for years.</p><p>• Maintains linear complexity, making long-context processing radically cheaper and faster.</p><p>We've spent years believing that massive, heavy attention mechanisms are the only way to build intelligent systems. Google just proved you can have the infinite memory of a Transformer with the blistering speed and efficiency of an RNN.</p><p>The era of brute-forcing scale with quadratic attention is hitting a wall.</p><h2>概要</h2><p>Google が発表した <strong>Memory Caching (MC)</strong> の解説スレッド。RNN 系列モデルの積年の弱点だった「固定サイズの記憶」を、<strong>隠れ状態のチェックポイントをキャッシュする</strong>ことで解消し、実効的な記憶容量を系列長とともに動的に増やす手法。</p><p>Transformer の Attention は系列長 L に対して $O(L^2)$ で計算・メモリが膨らむ。100万トークン級のコンテキストではこれが電力とGPUのコストに直結する。一方 RNN は $O(L)$ と安いが、固定サイズの状態に全部を押し込むので長文で忘れる。<strong>MC はこの二者択一を崩す</strong>というのが主張。</p><h2>まとめ</h2><ul><li><strong>問題設定</strong>: Transformer = 高精度だが $O(L^2)$ / RNN = 線形で速いが固定メモリゆえ長文で忘れる</li><li><strong>MC のアイデア</strong>: 隠れ状態のチェックポイントをキャッシュし、<strong>ニューラルネットにおける仮想メモリのように</strong>振る舞わせる。実効記憶容量が系列長に応じて動的に伸びる</li><li><strong>retrieval</strong>: sparse selective retrieval（疎な選択的検索）で、必要なときだけ過去を参照しに行く。全トークン間の総当たり Attention を回避</li><li><strong>主張されている結果</strong>:</li></ul><p>  - 複雑な in-context recall タスクで <strong>Transformer 級の精度に到達</strong></p><p>  - RNN を長年退けてきた性能ギャップを解消</p><p>  - <strong>線形計算量を維持</strong> — 長コンテキスト処理が劇的に安く速くなる</p><h2>日本語訳全文</h2><p>Google が、Transformer の時代を終わらせるかもしれない手法を静かに公開しました。</p><p>この10年、地球上のあらゆる主要 AI モデル — ChatGPT、Claude、Gemini — は、まったく同じアーキテクチャに縛られてきました。<strong>Transformer</strong> です。</p><p>Transformer は、モデルが系列全体を一度に見られるようにしたことですべてを変えました。しかし致命的な欠陥があります。<strong>メモリ消費が二乗で増える</strong> $O(L^2)$ という性質です。コンテキストウィンドウが数百万トークンへと伸びるにつれ、計算コストは爆発します。巨大なデータセンター、数千枚の GPU、そして莫大な電気代が必要になります。</p><p>研究者たちは長年、Transformer を旧来の RNN（再帰型ニューラルネットワーク）で置き換え、線形の高速性を得ようとしてきました。問題は何か？ <strong>RNN は記憶が固定サイズ</strong>だという点です。テキストが長くなると忘れてしまう。複雑な推論や想起タスクで詰まる。だから皆 Transformer に戻っていきました。</p><p>そこへ Google が衝撃的な新論文を投下しました。<strong>Memory Caching (MC)</strong> です。</p><p>RNN に固定的で静的な記憶を強いる代わりに、Google の手法は<strong>モデルの実効的な記憶容量が系列長とともに動的に増える</strong>ようにします。ニューラルネットにおける仮想メモリのように振る舞うのです。隠れ状態のチェックポイントをキャッシュし、<strong>疎な選択的検索（sparse selective retrieval）</strong>のような賢い機構を組み合わせることで、モデルは必要なものを動的に振り返って参照します — Transformer のような圧倒的な数学的オーバーヘッドを払うことなく。</p><p>結果は、系列モデリングの旧来の常識を完全に破壊しました:</p><ul><li>複雑な in-context recall（文脈内想起）タスクで <strong>Transformer 級の精度に到達</strong></li><li>RNN を長年脇に追いやってきた<strong>性能ギャップを完全に解消</strong></li><li><strong>線形計算量を維持</strong> — 長コンテキスト処理が劇的に安く、速くなる</li></ul><p>我々は何年ものあいだ、巨大で重い Attention 機構こそが知的システムを作る唯一の道だと信じてきました。Google は、<strong>Transformer の無限の記憶と、RNN の圧倒的な速度・効率の両方を手にできる</strong>ことを証明したのです。</p><p>二乗の Attention でスケールを力任せに押し切る時代は、壁に突き当たりつつあります。</p>
     </article>
@@ -384,14 +384,14 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 509 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 514 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-09-01/">TODAY</a></li>
+          <li><a href="../news/2026-09-02/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -418,7 +418,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-09-02</span>
+      <span>BUILD 2026-09-03</span>
     </div>
   </div>
 </footer>

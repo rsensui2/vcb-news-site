@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-09-03 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-09-03 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0903</span>
+    <span class="sep">/</span>
+    <span>2026-09-03</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260903.0735</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-09-03/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:35 · WED</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · WEDNESDAY · SEPTEMBER 3, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>09<span class="dot">.</span>03</h1>
+    <div class="strap">
+      <span>Gemini · OpenAIのAstra · Claude · Figma</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        フロンティアモデル <span class="sep">/</span> GOOGLE公式 / @GOOGLE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Gemini 3.8、長時間エージェントとサイバー防御を同じ基盤で強化</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-03/topic_1.png" data-alt="Gemini 3.8、長時間エージェントとサイバー防御を同じ基盤で強化" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-03/topic_1.png" alt="Gemini 3.8、長時間エージェントとサイバー防御を同じ基盤で強化" />
+      </div>
+      <p class="lede">
+        GoogleはGemini 3.8 Flashと、信頼できる防御担当者向けのGemini 3.8 Flash Cyberを公開した。前者はコーディングと長時間のエージェント処理、後者は脆弱性の発見と自動パッチに重点を置く。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">3.8 Flashの導入価格は100万トークン当たり入力0.75ドル、出力3.75ドルで、2026年末まで適用される</li>
+        <li data-i="02">HLE-Verifiedは54.9%。複雑な課題では推論とツール呼び出しを増やして精度を上げる設計</li>
+        <li data-i="03">Flash Cyberは20言語を含む社内評価で成功率70％超とGoogleが報告</li>
+        <li data-i="04">Chrome Securityでは大型商用モデルより正しいパッチを2.6倍多く生成したという</li>
+        <li data-i="05">Flash CyberはFairwind Program経由の限定提供で、一般公開ではない</li>
+      </ul>
+      <div class="pull">
+        安価なモデルを短く使うだけでなく、必要な場面では長く働かせる設計が主力モデルに入った。高いサイバー能力は用途と利用者を分ける運用も標準になりつつある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">9,066</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/">Google公式 / @Google</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-02</dd>
+        <dt>CATEGORY</dt>
+        <dd>フロンティアモデル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/">https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/</a></dd>
+        <dd><a href="https://x.com/Google/status/2095175518068904380">x.com/Google/status/2095175518068904380</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · OPENAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI安全性 <span class="sep">/</span> OPENAI公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAIのAstra、Critical級のサイバー能力で提供範囲を制限</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-03/topic_2.png" data-alt="OpenAIのAstra、Critical級のサイバー能力で提供範囲を制限" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-03/topic_2.png" alt="OpenAIのAstra、Critical級のサイバー能力で提供範囲を制限" />
+      </div>
+      <p class="lede">
+        OpenAIは次期モデルAstraが、Preparedness Frameworkで初めてCriticalのサイバー能力に達したと判断した。一般提供は予定しているが、最先端のサイバー機能は少数のテスターから始め、Daybreak Blueで防御用途へ広げる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Criticalは、人の逐次指示なしに未知の脆弱性を見つけ、堅牢な対象へ攻撃手順を組み立てられる水準</li>
+        <li data-i="02">AstraはExploitBenchで100％を記録したとOpenAIが報告</li>
+        <li data-i="03">直近のV8脆弱性20件による社内評価で、2件のゼロデイを組み合わせて利用した</li>
+        <li data-i="04">不許可のサイバー要求を拒否した割合は91.5％で、GPT-5.6 Solは59％だった</li>
+        <li data-i="05">ChatGPTやCodexでは監視が作業を止め、人の確認を求める場合がある</li>
+      </ul>
+      <div class="pull">
+        モデル選定では能力だけでなく、誰がどの機能を使えるか、監視が何を止めるかまで確認する必要がある。長時間エージェントでは、正当な作業が止まる運用も設計に含めたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://openai.com/index/path-to-astra/">OpenAI公式</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-01</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI安全性</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://openai.com/index/path-to-astra/">https://openai.com/index/path-to-astra/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · ANTHROPIC / CLAUDE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AIビジネス <span class="sep">/</span> ANTHROPIC公式 / @CLAUDEDEVS <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Commerce Agents、買い物と店舗運営の実装例を公開</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-03/topic_3.png" data-alt="Claude Commerce Agents、買い物と店舗運営の実装例を公開" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-03/topic_3.png" alt="Claude Commerce Agents、買い物と店舗運営の実装例を公開" />
+      </div>
+      <p class="lede">
+        Anthropicは買い物客向けと店舗運営向けのエージェントを構築するblueprintを公開した。小売、旅行、通信、チケット向けの参照実装と、既存バックエンドへ接続するClaude Codeプラグインを含む。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Messages API、Agent SDK、Claude Managed Agentsで使える実装を収録</li>
+        <li data-i="02">買い物エージェントは商品検索、比較、好みの記憶、カート作成、返品案内まで扱う</li>
+        <li data-i="03">価格と商品を実在するカタログへ限定し、操作的なアップセルを避ける</li>
+        <li data-i="04">店舗向けエージェントの本番反映は人の承認を待つ</li>
+        <li data-i="05">Anthropicは導入先でカート金額が最大35％増え、購入完了率が60％高まった事例を紹介</li>
+      </ul>
+      <div class="pull">
+        業務エージェントは汎用チャットから、業種別の実装ひな型へ移っている。実行範囲、承認、決済の引き渡し方まで含む参照実装は、自社業務へ落とす際の出発点になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">4,660</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://claude.com/blog/claude-for-commerce-agents">Anthropic公式 / @ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-02</dd>
+        <dt>CATEGORY</dt>
+        <dd>AIビジネス</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://claude.com/blog/claude-for-commerce-agents">https://claude.com/blog/claude-for-commerce-agents</a></dd>
+        <dd><a href="https://x.com/ClaudeDevs/status/2095233745167282602">x.com/ClaudeDevs/status/2095233745167282…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · FIGMA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AIデザイン <span class="sep">/</span> FIGMA公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Figma、生成したプラグインとシェーダーをコードまで渡せる形へ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-03/topic_4.png" data-alt="Figma、生成したプラグインとシェーダーをコードまで渡せる形へ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-03/topic_4.png" alt="Figma、生成したプラグインとシェーダーをコードまで渡せる形へ" />
+      </div>
+      <p class="lede">
+        Figmaはデザインエージェントで作ったプラグインとシェーダーについて、公開、コード取得、MCP経由の編集を強化した。Canvas上の表現を第三者エージェントやReact実装へ渡し、デザインからコードへの接続を広げる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Community公開とOrganization／Enterpriseの組織内限定共有に対応</li>
+        <li data-i="02">アニメーションや操作に反応するシェーダーを生成できる</li>
+        <li data-i="03">生成コードを閲覧、ダウンロードし、別のエージェントで編集できる</li>
+        <li data-i="04">Figma MCPで生成物を読み書きし、React実装へ渡せる</li>
+        <li data-i="05">生成スクリプトは独立したサンドボックスで動かす</li>
+      </ul>
+      <div class="pull">
+        AIデザインの価値は、きれいな画面を一度作ることから、後工程が読めるコードと契約を残すことへ移っている。制作物を実装へ渡せるかが生成品質と同じくらい重要になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.figma.com/blog/how-we-built-generative-plugins-and-shaders/">Figma公式</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-01</dd>
+        <dt>CATEGORY</dt>
+        <dd>AIデザイン</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.figma.com/blog/how-we-built-generative-plugins-and-shaders/">https://www.figma.com/blog/how-we-built-generative-plugins-and-shaders/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · SALESFORCE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        エンタープライズAI <span class="sep">/</span> SALESFORCE公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Salesforce Winter ’27、AIが業務フロー全体を動かす前提へ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-03/topic_5.png" data-alt="Salesforce Winter ’27、AIが業務フロー全体を動かす前提へ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-03/topic_5.png" alt="Salesforce Winter ’27、AIが業務フロー全体を動かす前提へ" />
+      </div>
+      <p class="lede">
+        SalesforceはWinter ’27で、AIが単発の質問へ答える段階から、案件選定、問い合わせ解決、予約、保険引受などを最初から最後まで動かす段階へ進める。一般提供は2026年10月12日の予定。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">音声による自動予約は15分の通話を秒単位へ短縮すると説明</li>
+        <li data-i="02">Agentic Commerce Searchはコンバージョン13％増、カート追加17％増を報告</li>
+        <li data-i="03">100超の事前構築SkillとPluginを用意</li>
+        <li data-i="04">Claude Code marketplaceでSalesforce Development pluginを提供</li>
+        <li data-i="05">A2A準拠の他社エージェントと相互運用できる</li>
+      </ul>
+      <div class="pull">
+        企業導入の比較軸は、回答精度よりも既存データ、Skillの再利用、人の承認、他社エージェントとの接続へ広がる。業務の最後まで閉じられるかを検証する必要がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.salesforce.com/news/stories/winter-2027-product-release-announcement/">Salesforce公式</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-31</dd>
+        <dt>CATEGORY</dt>
+        <dd>エンタープライズAI</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.salesforce.com/news/stories/winter-2027-product-release-announcement/">https://www.salesforce.com/news/stories/winter-2027-product-release-announcement/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · ANTHROPIC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        コンテキスト工学 <span class="sep">/</span> ANTHROPIC公式ドキュメント <span class="sep">/</span> NEWS
+      </div>
+      <h2>Fable 5.1の運用知見、履歴の追記とツール呼び出しの一括化が要点</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-03/topic_6.png" data-alt="Fable 5.1の運用知見、履歴の追記とツール呼び出しの一括化が要点" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-03/topic_6.png" alt="Fable 5.1の運用知見、履歴の追記とツール呼び出しの一括化が要点" />
+      </div>
+      <p class="lede">
+        AnthropicのFable 5.1向け公式ガイドは、会話履歴を追記だけで保つことと、独立したツール呼び出しを一度にまとめることを勧めている。モデル更新だけでなく、エージェントを動かす器の修正が必要になる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">thinking blockを含む過去ターンは返された形のまま追記する</li>
+        <li data-i="02">新規アカウントでは別会話へのthinking block再利用が400またはdropの対象</li>
+        <li data-i="03">独立したツール呼び出しをまとめると往復回数とトークンを減らせる</li>
+        <li data-i="04">毎ターンの注意書きはturn-scoped system messageのclear_atで見えなくする</li>
+        <li data-i="05">キャッシュ値下げにより早すぎるcompactionが最安とは限らない</li>
+      </ul>
+      <div class="pull">
+        モデルが賢くなっても、履歴を書き換えたり、ツールを1件ずつ呼んだりするハーネスでは性能と費用を損なう。長時間ループでは履歴の不変性とまとめて取得する設計を点検したい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-1">Anthropic公式ドキュメント</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-01</dd>
+        <dt>CATEGORY</dt>
+        <dd>コンテキスト工学</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-1">https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-1</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · GOOGLE RESEARCH</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI研究 <span class="sep">/</span> GOOGLE RESEARCH公式 <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>TimesFM-3、複数の時系列を追加学習なしでまとめて予測</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-03/topic_7.png" data-alt="TimesFM-3、複数の時系列を追加学習なしでまとめて予測" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-03/topic_7.png" alt="TimesFM-3、複数の時系列を追加学習なしでまとめて予測" />
+      </div>
+      <p class="lede">
+        Google Researchは多変量予測へ対応した時系列基盤モデルTimesFM-3を公開した。売上、来店数、天候、販促など複数の系列を、タスク固有の追加学習なしで1回のフォワードパスから予測する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">3億3,000万パラメータで、1兆超の時点データで事前学習</li>
+        <li data-i="02">複数の予測対象を同時に扱い、点予測と分位点予測に対応</li>
+        <li data-i="03">過去だけ分かる補助変数と将来値が分かる補助変数を扱える</li>
+        <li data-i="04">タスク固有のfine-tuningなしで予測する</li>
+        <li data-i="05">Googleは主要ベンチマークで既存モデルを上回ったと報告</li>
+      </ul>
+      <div class="pull">
+        需要予測を案件ごとの専用モデル開発から、業務アプリへ組み込む基盤機能へ近づける。店舗別売上、在庫、天候をまとめて扱う用途を試しやすくなる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">11,464</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/GoogleResearch/status/2094483372718580066">@GoogleResearch</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-31</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI研究</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/GoogleResearch/status/2094483372718580066">x.com/GoogleResearch/…</a></dd>
+        <dd><a href="https://www.research.google/blog/timesfm-3-a-zero-shot-foundation-model-for-multivariate-forecasting/">www.research.google/blog/timesfm-3-a-zer…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · / HAYATATSUDRM</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AIビジネス <span class="sep">/</span> ダイニー導入事例 / @HAYATATSU_DRM <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>ダイニー、採用と入金監査をAIへ渡し120店舗の本部負荷を削減</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-03/topic_8.png" data-alt="ダイニー、採用と入金監査をAIへ渡し120店舗の本部負荷を削減" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-03/topic_8.png" alt="ダイニー、採用と入金監査をAIへ渡し120店舗の本部負荷を削減" />
+      </div>
+      <p class="lede">
+        ダイニーの導入事例では、株式会社doubleが複数の採用媒体、Googleカレンダー、決済、POSをAIエージェントでつないだ。採用日程の調整と毎朝の入金確認を自動化し、現行7人の管理体制で250店舗まで対応できると試算する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">採用候補者への返信と面接日程の設定を自動化し、採用業務を約40％削減</li>
+        <li data-i="02">管理部約10人が毎朝30分から1時間かけていた入金確認は約90％削減の見通し</li>
+        <li data-i="03">明細写真、決済データ、現金、POS、赤伝票を突合して異常を通知</li>
+        <li data-i="04">約120店舗を7人で管理し、同じ人員で250店舗まで対応できると試算</li>
+        <li data-i="05">効果数値には実現済みと見込みが混在する</li>
+      </ul>
+      <div class="pull">
+        AIエージェントの価値は回答の速さより、散らばった業務データをつないで定型処理を終わらせることに出る。中小企業でも、人を増やす前に管理業務の流れを組み替える選択肢になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">202</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/hayatatsu_drm/status/2094380970413797883">@hayatatsu_drm</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-31</dd>
+        <dt>CATEGORY</dt>
+        <dd>AIビジネス</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/hayatatsu_drm/status/2094380970413797883">x.com/hayatatsu_drm/…</a></dd>
+        <dd><a href="https://dinii.jp/casestudy/interview/double_ai/">dinii.jp/casestudy/interview/double_ai/</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-09-02/">
+      ← 前日 · 2026-09-02
+      <span class="big">Claude Fable 5.1、長時間エージェントのキャッシュ料金を75%削減</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-09-03/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260903.0735</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

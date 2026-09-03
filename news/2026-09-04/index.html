@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-09-04 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-09-04 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0904</span>
+    <span class="sep">/</span>
+    <span>2026-09-04</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260904.0806</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-09-04/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 08:06 · THU</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · THURSDAY · SEPTEMBER 4, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>09<span class="dot">.</span>04</h1>
+    <div class="strap">
+      <span>GPT-6 · Cursorの自社マシン実行 · Codex · Qwen3.8-Max</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        フロンティアモデル <span class="sep">/</span> OPENAI公式 / OPENAI公式X <span class="sep">/</span> NEWS
+      </div>
+      <h2>GPT-6 Astra、長期作業の文脈を「圧縮」から「記録と検索」へ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-04/topic_1.png" data-alt="GPT-6 Astra、長期作業の文脈を「圧縮」から「記録と検索」へ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-04/topic_1.png" alt="GPT-6 Astra、長期作業の文脈を「圧縮」から「記録と検索」へ" />
+      </div>
+      <p class="lede">
+        OpenAIはGPT-6 Astraの段階提供を始めた。性能向上に加えて、Codexでは文脈窓が埋まった後も作業メモを残し、過去の会話やツール出力を検索して要件やテスト結果を取り戻す実験機能が入る。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">一部組織から始め、今後数日でChatGPT Plus、Pro、Business、Enterprise、API、Amazon Bedrockへ広げる</li>
+        <li data-i="02">APIのモデルIDはgpt-6-astra。標準価格は100万トークン当たり入力10ドル、出力50ドル</li>
+        <li data-i="03">Codexでは過去の文脈窓を検索でき、compactionで落ちやすかった失敗理由や要件を取り戻せる</li>
+        <li data-i="04">OSWorld 2.0は72.6%。模擬所要時間はGPT-5.6 Solの約75分から約40分になったとOpenAIが報告</li>
+        <li data-i="05">Enterpriseは初期状態で無効。高度なサイバー作業では監視により正当な作業も止まる場合がある</li>
+      </ul>
+      <div class="pull">
+        長時間エージェントは、作業の経緯と検証結果を失わずに終えられるかで評価する。価格に加えて、文脈の保持方式と安全監視による中断も実務テストに入れたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://openai.com/index/gpt-6-astra/">OpenAI公式 / OpenAI公式X</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-03</dd>
+        <dt>CATEGORY</dt>
+        <dd>フロンティアモデル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://openai.com/index/gpt-6-astra/">https://openai.com/index/gpt-6-astra/</a></dd>
+        <dd><a href="https://x.com/OpenAI/status/2095595757072191802">x.com/OpenAI/status/2095595757072191802</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · CURSOR / CURSORX</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        エージェント基盤 <span class="sep">/</span> CURSOR公式 / CURSOR公式X <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cursorの自社マシン実行、コードは社内、推論はクラウド</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-04/topic_2.png" data-alt="Cursorの自社マシン実行、コードは社内、推論はクラウド" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-04/topic_2.png" alt="Cursorの自社マシン実行、コードは社内、推論はクラウド" />
+      </div>
+      <p class="lede">
+        CursorはCloud Agentsのファイル編集やコマンド実行を、利用者が管理するマシンで動かせるようにした。コードとシークレットは自社環境に置けるが、推論、計画、エージェントループはCursorクラウドに残るため、名称だけで完全なオンプレミス運用とは判断できない。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">自社workerからCursorクラウドへ外向きのHTTPS接続を張り、Cursor側から社内ネットワークへの接続開始を避ける</li>
+        <li data-i="02">個人向けのMy Machinesと、需要に応じてworkerを増減するチーム向けPoolsを提供</li>
+        <li data-i="03">workerの休止とスナップショット復帰に対応</li>
+        <li data-i="04">AWS Lambda、Cloudflare、Coder、Daytona、E2B、Modal、Namespace、Vercelなどに対応</li>
+        <li data-i="05">ツール出力は推論に使われ、会話はCursor側で処理・保存される場合がある</li>
+      </ul>
+      <div class="pull">
+        企業が確認すべき境界は、「セルフホスト」という呼称より、コード、シークレット、ツール出力、会話、推論がそれぞれどこを通るかだ。導入審査ではデータの移動経路を層ごとに図示したい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://cursor.com/blog/self-hosted-machines">Cursor公式 / Cursor公式X</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-02</dd>
+        <dt>CATEGORY</dt>
+        <dd>エージェント基盤</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://cursor.com/blog/self-hosted-machines">https://cursor.com/blog/self-hosted-machines</a></dd>
+        <dd><a href="https://x.com/cursor_ai/status/2095257412781396114">x.com/cursor_ai/status/20952574127813961…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · OPENAI / GITHUB</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発者ツール <span class="sep">/</span> OPENAI公式 / GITHUB <span class="sep">/</span> NEWS
+      </div>
+      <h2>Codex CLI 0.153.0、切断後も二重実行せずに戻る</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-04/topic_3.png" data-alt="Codex CLI 0.153.0、切断後も二重実行せずに戻る" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-04/topic_3.png" alt="Codex CLI 0.153.0、切断後も二重実行せずに戻る" />
+      </div>
+      <p class="lede">
+        OpenAIはCodex CLI 0.153.0で、リモートマーケットプレイスからプラグインを管理するCLIと、アプリサーバー切断後のセッション再接続を追加した。送信状態が不明な要求を自動で再実行せず、人の確認へ回す設計が長時間運用の事故を減らす。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">プラグインの一覧、導入、削除をCLIから行える</li>
+        <li data-i="02">再接続時に下書きと会話を保ち、結果が不明な要求は確認待ちに置く</li>
+        <li data-i="03">Guardianのレビュー履歴をcompaction、再起動、フォークをまたいで維持する</li>
+        <li data-i="04">記憶済みのMCPツール承認を選択中のアプリアカウント単位へ限定</li>
+        <li data-i="05">auto_recap設定、Vimモードのundoとredo、履歴表示の改善も含む</li>
+      </ul>
+      <div class="pull">
+        長時間エージェントでは、新機能よりも再接続と重複防止が運用品質を左右する。止まった後にどこから安全に再開できるかを、成功時と同じ重さで設計したい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/openai/codex/releases/tag/rust-v0.153.0">OpenAI公式 / GitHub</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-03</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発者ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/openai/codex/releases/tag/rust-v0.153.0">https://github.com/openai/codex/releases/tag/rust-v0.153.0</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · ALIBABA CLOUD / QW</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        フロンティアモデル <span class="sep">/</span> ALIBABA CLOUD公式 / QWEN公式X <span class="sep">/</span> NEWS
+      </div>
+      <h2>Qwen3.8-Max、2.4兆パラメーターで10日超の開発を掲げる</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-04/topic_4.png" data-alt="Qwen3.8-Max、2.4兆パラメーターで10日超の開発を掲げる" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-04/topic_4.png" alt="Qwen3.8-Max、2.4兆パラメーターで10日超の開発を掲げる" />
+      </div>
+      <p class="lede">
+        Alibaba CloudはQwen3.8-Maxを2.4兆パラメーターのMoEモデルとして公開した。画像、動画、テキストを入力でき、100万トークンの文脈と最大262,144トークンの出力を備え、10日を超える自律コーディングをうたう。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">国際向けモデルIDはqwen3.8-maxで、東京、バージニア、フランクフルトなどから利用できる</li>
+        <li data-i="02">Function Calling、Structured Outputs、Context Caching、Prefix Completionに対応</li>
+        <li data-i="03">中国リージョンと国際リージョンではWeb SearchやBatch Inferenceなどの対応範囲が異なる</li>
+        <li data-i="04">Fine-tuningは非対応</li>
+        <li data-i="05">10日超とproduction-gradeはベンダーの表現で、タスクと完成判定の条件は非公開</li>
+      </ul>
+      <div class="pull">
+        長く動いたことと、仕事を正しく終えたことは別だ。長期モデルは完了条件、検証回数、中断復帰、消費トークンをそろえた代表タスクで比べたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.alibabacloud.com/help/en/model-studio/qwen3-8-max">Alibaba Cloud公式 / Qwen公式X</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-02</dd>
+        <dt>CATEGORY</dt>
+        <dd>フロンティアモデル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.alibabacloud.com/help/en/model-studio/qwen3-8-max">https://www.alibabacloud.com/help/en/model-studio/qwen3-8-max</a></dd>
+        <dd><a href="https://x.com/Alibaba_Qwen/status/2094968708288680276">x.com/Alibaba_Qwen/status/20949687082886…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · MICROSOFT AZURE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        コンテキスト工学 <span class="sep">/</span> MICROSOFT AZURE公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Microsoftのコンテキスト設計、安いモデルより先に毎回送る情報を減らす</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-04/topic_5.png" data-alt="Microsoftのコンテキスト設計、安いモデルより先に毎回送る情報を減らす" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-04/topic_5.png" alt="Microsoftのコンテキスト設計、安いモデルより先に毎回送る情報を減らす" />
+      </div>
+      <p class="lede">
+        Microsoftは、モデルが毎ターン見る指示、ツール、文書、履歴を選び直すことを、エージェントの費用と品質を改善する中心手段に挙げた。長期作業では不要な情報の再送が費用を増やし、必要な事実も埋もれさせるため、ツール選択の誤りややり直しまで招く。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">モデル自体は記憶を持たず、毎ターンのコンテキスト再送が長期タスクの費用を膨らませる</li>
+        <li data-i="02">実行履歴、利用可能な情報、ツール一覧は作業が続くほど増える</li>
+        <li data-i="03">情報量を増やしても品質は保証されず、関連性と検索しやすさが重要になる</li>
+        <li data-i="04">Microsoft Foundry上のAIを管理された投資として運用する4回シリーズの第3回</li>
+      </ul>
+      <div class="pull">
+        モデルの単価を比べる前に、毎ターン送る文書とツール定義を見直せる。トークン量と完了までのターン数を同時に測ると、費用と品質の両方を悪化させる文脈が見つかる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://azure.microsoft.com/en-us/blog/the-economics-of-agent-optimization-context-engineering-for-enterprise-ai-agents/">Microsoft Azure公式</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-02</dd>
+        <dt>CATEGORY</dt>
+        <dd>コンテキスト工学</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://azure.microsoft.com/en-us/blog/the-economics-of-agent-optimization-context-engineering-for-enterprise-ai-agents/">https://azure.microsoft.com/en-us/blog/the-economics-of-agent-optimization-context-engineering-for-enterprise-ai-agents/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · GITHUB / GITHUBX</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ループ工学 <span class="sep">/</span> GITHUB公式 / GITHUB公式X <span class="sep">/</span> NEWS
+      </div>
+      <h2>ループエンジニアリング、GitHubが示す「合格と停止」の設計</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-04/topic_6.png" data-alt="ループエンジニアリング、GitHubが示す「合格と停止」の設計" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-04/topic_6.png" alt="ループエンジニアリング、GitHubが示す「合格と停止」の設計" />
+      </div>
+      <p class="lede">
+        GitHubはループエンジニアリングを、単発の指示から、エージェントを囲む反復可能な仕組みへ移す実践として整理した。毎朝のissue確認なら、取得、要約、修正案、検証、停滞時のエスカレーションまでを一つの運用として設計する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Ralph loopをplan、act、checkの反復例とし、文脈や計算資源を消費する限界も示す</li>
+        <li data-i="02">Skills、観測性、検証、ルーティング、チェックポイントを加えて単なる再試行と分ける</li>
+        <li data-i="03">squadは役割を分けた複数エージェント、fleetは並列実行を指す</li>
+        <li data-i="04">harnessはモデル周辺のツール、権限、メモリ、文脈、オーケストレーションの総体</li>
+        <li data-i="05">hill climbingは評価結果を使い、エージェントとharnessを改善する反復を指す</li>
+      </ul>
+      <div class="pull">
+        ループの本体は、成功するまで同じ指示を回すことではない。何を見て合格とするか、どこで止めるか、誰へ渡すかを仕組みに落とすことが成果を分ける。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/ai-and-ml/decoding-the-new-ai-lingo-loops-harnesses-squads-hill-climbing-oh-my/">GitHub公式 / GitHub公式X</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-02</dd>
+        <dt>CATEGORY</dt>
+        <dd>ループ工学</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/ai-and-ml/decoding-the-new-ai-lingo-loops-harnesses-squads-hill-climbing-oh-my/">https://github.blog/ai-and-ml/decoding-the-new-ai-lingo-loops-harnesses-squads-hill-climbing-oh-my/</a></dd>
+        <dd><a href="https://x.com/github/status/2095240769669902567">x.com/github/status/2095240769669902567</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · DATABRICKS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        エンタープライズAI <span class="sep">/</span> DATABRICKS公式 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Databricksの2万組織調査、本番化を分けるのは評価とガバナンス</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-04/topic_7.png" data-alt="Databricksの2万組織調査、本番化を分けるのは評価とガバナンス" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-04/topic_7.png" alt="Databricksの2万組織調査、本番化を分けるのは評価とガバナンス" />
+      </div>
+      <p class="lede">
+        Databricksは自社のData + AI Platformを使う2万超の組織を対象に、AIエージェントの利用状況をまとめた。複数エージェントシステムが4カ月未満で327%増え、評価ツールやAIガバナンスを使う組織ほどAIプロジェクトの本番化率が高いと報告している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対象は世界2万超の利用組織で、Fortune 500の60%超を含むとDatabricksが説明</li>
+        <li data-i="02">複数エージェントシステムは4カ月未満で327%増加</li>
+        <li data-i="03">評価ツールを使う企業はAIプロジェクトの本番化が約6倍と報告</li>
+        <li data-i="04">AIガバナンスを使う企業は本番化が12倍超と報告</li>
+        <li data-i="05">6倍と12倍超は相関であり、評価やガバナンス単独の因果効果とは断定できない</li>
+      </ul>
+      <div class="pull">
+        デモやエージェント数を増やすだけでは本番化につながらない。評価の実行率、承認の証跡、監査可能性を、導入件数と並ぶ成果指標にしたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.databricks.com/resources/ebook/state-of-ai-agents">Databricks公式</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-01</dd>
+        <dt>CATEGORY</dt>
+        <dd>エンタープライズAI</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.databricks.com/resources/ebook/state-of-ai-agents">https://www.databricks.com/resources/ebook/state-of-ai-agents</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · COJI  / ARTIFACT S</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発事例 <span class="sep">/</span> COJI 溝口浩二 / ARTIFACT SHARE <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>ひとりソフトウェアファクトリー、コードを読まなくてもゲートは二重にする</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-04/topic_8.png" data-alt="ひとりソフトウェアファクトリー、コードを読まなくてもゲートは二重にする" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-04/topic_8.png" alt="ひとりソフトウェアファクトリー、コードを読まなくてもゲートは二重にする" />
+      </div>
+      <p class="lede">
+        溝口浩二氏は、1人でCodexとClaude Codeを使い、Artifact Shareを開発する工程と実績を公開した。人はコードやレビュー本文を読まず、同一仕様・同一コミットに対する二重レビュー、CI、最初と最後の判断へ注意を絞る一方、本番不具合も9件出たと明示している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">4カ月でTypeScript約25万行、Pull Request 1,144件、Issue 777件に達した</li>
+        <li data-i="02">公開後4週間で233件をマージし、revertは0件、本番不具合は9件だった</li>
+        <li data-i="03">仕様と実装をCodexとClaude Codeで並列レビューし、両方のblockerがゼロになるまで回す</li>
+        <li data-i="04">同じクラスの指摘は3巡で打ち切り、2巡目以降は直前からの差分だけを見る</li>
+        <li data-i="05">先送りした指摘はマージ後にissue化、規則化、修正、理由付き破棄のいずれかへ処分する</li>
+      </ul>
+      <div class="pull">
+        コードを読む作業を減らしても、品質確認は残る。人の注意を判断とゲート設計へ移し、売上や開発量と同時に、不具合、レビュー負荷、先送りの残高も測ると再現性を判断しやすい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">37</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/techtalkjp/status/2095473228240363820">@techtalkjp</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-03</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発事例</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/techtalkjp/status/2095473228240363820">x.com/techtalkjp/…</a></dd>
+        <dd><a href="https://artifactshare.com/a/8op3kvcy3x">artifactshare.com/a/8op3kvcy3x</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://openai.com/index/gpt-6-astra/">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-09-03/">
+      ← 前日 · 2026-09-03
+      <span class="big">Gemini 3.8、長時間エージェントとサイバー防御を同じ基盤で強化</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-09-04/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260904.0806</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

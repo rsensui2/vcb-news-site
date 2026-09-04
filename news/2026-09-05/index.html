@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-09-05 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-09-05 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0905</span>
+    <span class="sep">/</span>
+    <span>2026-09-05</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260905.0731</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-09-05/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:31 · FRI</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · FRIDAY · SEPTEMBER 5, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>09<span class="dot">.</span>05</h1>
+    <div class="strap">
+      <span>Muse · Claude · GPT-6 · Cursor</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        フロンティアモデル <span class="sep">/</span> ARTIFICIAL ANALYSIS / VERCEL <span class="sep">/</span> NEWS
+      </div>
+      <h2>Muse Spark 1.3は指数61、同水準モデルで最安のタスク単価</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-05/topic_1.png" data-alt="Muse Spark 1.3は指数61、同水準モデルで最安のタスク単価" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-05/topic_1.png" alt="Muse Spark 1.3は指数61、同水準モデルで最安のタスク単価" />
+      </div>
+      <p class="lede">
+        MetaのMuse Spark 1.3は、Artificial Analysis Intelligence Indexで一般提供のxhighが61、限定プレビューのmaxが62を記録した。xhighは前世代から4ポイント伸び、指数59以上では評価タスク当たりのコストが最も低い0.55ドルだった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">xhighのAPI価格は100万トークン当たり入力1.25ドル、出力4.25ドル、キャッシュ入力0.15ドルで据え置き</li>
+        <li data-i="02">Tau3-Bench Bankingは前世代の35%から47%、Terminal-Bench 2.1は80%から85%へ上昇</li>
+        <li data-i="03">100万トークンのコンテキストと、テキスト・画像・動画入力に対応</li>
+        <li data-i="04">maxはTau3-Bench Bankingで52%を記録したが、価格は未公表</li>
+        <li data-i="05">AA-LCRは前世代から4ポイント下がり、すべての評価で改善したわけではない</li>
+      </ul>
+      <div class="pull">
+        モデルの単価だけでなく、完了までのターン数を含むタスク単価で比較できる材料が増えた。同じ課題を複数モデルで走らせ、品質、費用、所要時間を一緒に測りたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://artificialanalysis.ai/articles/muse-spark-1-3">Artificial Analysis / Vercel</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-02</dd>
+        <dt>CATEGORY</dt>
+        <dd>フロンティアモデル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://artificialanalysis.ai/articles/muse-spark-1-3">https://artificialanalysis.ai/articles/muse-spark-1-3</a></dd>
+        <dd><a href="https://vercel.com/changelog/muse-spark-1-3-now-available-on-ai-gateway">vercel.com/changelog/muse-spark-1-3-now-…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · ANTHROPICGITHUB</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI開発ツール <span class="sep">/</span> ANTHROPIC公式GITHUB <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code 2.1.260、差分確認と権限境界を同時に修正</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-05/topic_2.png" data-alt="Claude Code 2.1.260、差分確認と権限境界を同時に修正" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-05/topic_2.png" alt="Claude Code 2.1.260、差分確認と権限境界を同時に修正" />
+      </div>
+      <p class="lede">
+        Claude Code 2.1.260では、会話の横に未コミット差分を出すパネルが加わった。括弧を含むパスの権限ルールが無視され、読み取り専用フォルダへ書き込める不具合も修正されている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">フルスクリーンの/diffで、Claudeが編集中の差分を会話と並べて確認できる</li>
+        <li data-i="02">Edit、Write、Readの括弧付きパスが権限判定から落ちる不具合を修正</li>
+        <li data-i="03">正規表現として解釈できない拒否ルールは、すべての編集を止めずリテラルパスを守る</li>
+        <li data-i="04">/costとステータス行に、ツール定義の変更やTTL切れなどキャッシュミスの想定原因を表示</li>
+        <li data-i="05">ヘッドレス実行へ/reload-pluginsとテキスト形式の/advisorを追加</li>
+      </ul>
+      <div class="pull">
+        長時間の開発ループでは、差分を追えることと権限が設定どおり効くことが品質の前提になる。便利な新機能だけでなく、読み取り専用領域へ実際に書けないかも回帰テストへ入れたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.260">Anthropic公式GitHub</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-03</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.260">https://github.com/anthropics/claude-code/releases/tag/v2.1.260</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · VERCEL / OPENAIGIT</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        モデル提供基盤 <span class="sep">/</span> VERCEL / OPENAI公式GITHUB <span class="sep">/</span> NEWS
+      </div>
+      <h2>GPT-6 Astra、Vercel AI GatewayとAmazon Bedrockへ接続先を拡大</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-05/topic_3.png" data-alt="GPT-6 Astra、Vercel AI GatewayとAmazon Bedrockへ接続先を拡大" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-05/topic_3.png" alt="GPT-6 Astra、Vercel AI GatewayとAmazon Bedrockへ接続先を拡大" />
+      </div>
+      <p class="lede">
+        GPT-6 Astraを既存の開発エージェントから呼ぶ経路が広がった。Vercel AI Gatewayではopenai/gpt-6-astraをCodexやHermesから選べ、Codex CLI 0.153.3ではAmazon BedrockのMantleとRuntimeのモデル選択画面へ追加された。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Vercel AI GatewayはAI SDK、Chat Completions互換API、Codex、Hermesの設定例を公開</li>
+        <li data-i="02">vercel ai-gateway coding-agents setupで既存エージェントへ同じゲートウェイキーを設定できる</li>
+        <li data-i="03">Codex CLI 0.153.3はBedrockのglobalルートとUSルートのモデル選択に対応</li>
+        <li data-i="04">0.153.3は非同期の確認質問を、対応ツールとテキスト入力へ合わせる修正も含む</li>
+        <li data-i="05">モデル本体の性能ではなく、企業向けの接続経路がそろった点が今回の更新</li>
+      </ul>
+      <div class="pull">
+        新モデルを試すとき、認証、課金、観測を作り直さずに切り替えられる経路があると比較が速い。導入先ではモデル名だけでなく、どのクラウドとゲートウェイを通るかを記録したい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/gpt-6-astra-now-available-on-vercel-ai-gateway">Vercel / OpenAI公式GitHub</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-04</dd>
+        <dt>CATEGORY</dt>
+        <dd>モデル提供基盤</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/gpt-6-astra-now-available-on-vercel-ai-gateway">https://vercel.com/changelog/gpt-6-astra-now-available-on-vercel-ai-gateway</a></dd>
+        <dd><a href="https://github.com/openai/codex/releases/tag/rust-v0.153.3">github.com/openai/codex/releases/tag/rus…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · VERCEL / CURSOR</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        エージェント実行基盤 <span class="sep">/</span> VERCEL / CURSOR <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cursor Cloud Agentsの実行先にVercel Sandbox</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-05/topic_4.png" data-alt="Cursor Cloud Agentsの実行先にVercel Sandbox" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-05/topic_4.png" alt="Cursor Cloud Agentsの実行先にVercel Sandbox" />
+      </div>
+      <p class="lede">
+        Cursor Cloud Agentsのコード実行環境をVercel Sandboxに置く構成が公開された。推論ループとエージェント制御はCursorが担い、リポジトリ操作、コマンド、テストはリクエストごとのFirecracker microVMで動く。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">CursorのSelf-Hosted Machines APIを使うため、対象はEnterpriseプラン</li>
+        <li data-i="02">Vercel FunctionsとWorkflowがキュー取得、環境作成、監視、後片付けを担う</li>
+        <li data-i="03">エージェント要求ごとに独立したSandboxを割り当てる</li>
+        <li data-i="04">常駐VMを持たないscale-to-zeroと、失敗時の永続的な再試行に対応</li>
+        <li data-i="05">Sandbox内の資格情報は短命で、利用者ごとのスコープに絞る</li>
+      </ul>
+      <div class="pull">
+        セルフホストという呼び名だけではデータ境界は分からない。コード実行、推論、会話、資格情報がどこに置かれるかを層ごとに確認すると、企業導入の審査が具体的になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/run-cursor-cloud-agents-vercel-sandbox">Vercel / Cursor</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-03</dd>
+        <dt>CATEGORY</dt>
+        <dd>エージェント実行基盤</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/run-cursor-cloud-agents-vercel-sandbox">https://vercel.com/changelog/run-cursor-cloud-agents-vercel-sandbox</a></dd>
+        <dd><a href="https://cursor.com/blog/self-hosted-machines">cursor.com/blog/self-hosted-machines</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · FIGMA / COINBASE D</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI×デザイン <span class="sep">/</span> FIGMA / COINBASE DESIGN SYSTEM <span class="sep">/</span> NEWS
+      </div>
+      <h2>CoinbaseのCode Connect検証、実装時間を22.3%短縮</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-05/topic_5.png" data-alt="CoinbaseのCode Connect検証、実装時間を22.3%短縮" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-05/topic_5.png" alt="CoinbaseのCode Connect検証、実装時間を22.3%短縮" />
+      </div>
+      <p class="lede">
+        Coinbase Design Systemチームは、FigmaのCode Connectをコーディングエージェントへ渡す比較実験を行った。同じデザイン、同じ曖昧な指示、同じモデルで比べ、平均でトークン11.5%、実装時間22.3%、費用22.5%を削減したと報告している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Code ConnectはFigma上の部品を本番コードのコンポーネントへ対応づける</li>
+        <li data-i="02">導入後は既存部品の選択が安定し、アイコン名の作り話もほぼ消えた</li>
+        <li data-i="03">数百コンポーネントの対応表をClaude Codeで並列移行し、約4時間で全体をそろえた</li>
+        <li data-i="04">エージェントSkillは実装方針、Code Connectはデザイン起点の文脈を担当する</li>
+        <li data-i="05">評価はSonnet 4.6、空のコードベース、3回の比較で実施した社内検証</li>
+      </ul>
+      <div class="pull">
+        デザインからコードへの変換は、生成モデルの見た目より既存部品への正しい対応づけが効く。Skillと設計データを役割分担させると、品質と費用を同時に改善できる可能性がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.figma.com/blog/how-coinbase-used-code-connect-to-shrink-token-costs/">Figma / Coinbase Design System</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-02</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI×デザイン</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.figma.com/blog/how-coinbase-used-code-connect-to-shrink-token-costs/">https://www.figma.com/blog/how-coinbase-used-code-connect-to-shrink-token-costs/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · CLAUDEX / ANTHROPI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        デスクトップエージェント <span class="sep">/</span> CLAUDE公式X / ANTHROPICサポート <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Claudeがバックグラウンドでデスクトップを操作</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-05/topic_6.png" data-alt="Claudeがバックグラウンドでデスクトップを操作" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-05/topic_6.png" alt="Claudeがバックグラウンドでデスクトップを操作" />
+      </div>
+      <p class="lede">
+        Claude CoworkとClaude Codeで、アプリを開き、クリックし、文字を入力するcomputer useがベータ提供された。macOS 15以降では別ウィンドウで動き、人がマウスとキーボードを使っている間も作業を続けられる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対象はClaude DesktopのmacOS版とWindows版、Pro・Maxプラン</li>
+        <li data-i="02">コネクタ、ブラウザ、画面操作の順に適した手段を選ぶ</li>
+        <li data-i="03">アプリごとに初回許可が必要で、一部の機密性が高いアプリは初期状態で遮断される</li>
+        <li data-i="04">画面を理解するためスクリーンショットを取得し、表示中の個人情報も見える可能性がある</li>
+        <li data-i="05">デスクトップにはClaudeとアプリの間を隔離するサンドボックスがなく、金融、医療、法務の操作は非推奨</li>
+      </ul>
+      <div class="pull">
+        デスクトップ操作の自動化は、専用APIがない業務にも届く。その分、許可するアプリ、画面に出す情報、人が確認する操作を先に決めてから使う必要がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">11,499</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/claudeai/status/2095226833293685100">@claudeai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-03</dd>
+        <dt>CATEGORY</dt>
+        <dd>デスクトップエージェント</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/claudeai/status/2095226833293685100">x.com/claudeai/…</a></dd>
+        <dd><a href="https://support.claude.com/en/articles/14128542-let-claude-use-your-computer-in-cowork">support.claude.com/en/articles/14128542-…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · CLAUDE DEVELOPERSX</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI×ビジネス活用 <span class="sep">/</span> CLAUDE DEVELOPERS公式X / ANTHROPIC <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Claude Commerce Agents、4業種の参照実装を公開</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-05/topic_7.png" data-alt="Claude Commerce Agents、4業種の参照実装を公開" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-05/topic_7.png" alt="Claude Commerce Agents、4業種の参照実装を公開" />
+      </div>
+      <p class="lede">
+        Anthropicは買い物客向けと店舗運営向けのエージェントを、オープンソースの参照実装として公開した。小売、旅行、通信、エンターテインメントのデモに加え、既存バックエンドへつなぐClaude Codeプラグインを含む。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">買い物エージェントは検索、比較、カート、注文・規約の案内、記憶を担当</li>
+        <li data-i="02">店舗運営エージェントは売上分析、在庫、価格、販促案を扱い、書き込みは人の承認まで保留する</li>
+        <li data-i="03">Messages API、Claude Agent SDK、Managed Agentsで同じSkillとツール契約を使える</li>
+        <li data-i="04">参照実装は実在の注文や決済を行わず、認証と法令対応は導入側の責任</li>
+        <li data-i="05">導入企業ではカート金額が最大35%増え、購入完了率が60%高まった事例があるとAnthropicが説明</li>
+      </ul>
+      <div class="pull">
+        業務エージェントを作るとき、デモだけでなく承認、出典確認、変更上限、評価まで含む土台を参照できる。VBCでは、読み取りと書き込みの境界を教材にしやすい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">4,660</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2095233745167282602">@ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-03</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI×ビジネス活用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2095233745167282602">x.com/ClaudeDevs/…</a></dd>
+        <dd><a href="https://claude.com/blog/claude-for-commerce-agents">claude.com/blog/claude-for-commerce-agen…</a></dd>
+        <dd><a href="https://github.com/anthropics/commerce-agents">github.com/anthropics/commerce-agents</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · GOOGLEX / VERCEL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        フロンティアモデル <span class="sep">/</span> GOOGLE公式X / VERCEL <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Gemini 3.8 Flashは速度と価格帯を維持して推論を更新</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-05/topic_8.png" data-alt="Gemini 3.8 Flashは速度と価格帯を維持して推論を更新" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-05/topic_8.png" alt="Gemini 3.8 Flashは速度と価格帯を維持して推論を更新" />
+      </div>
+      <p class="lede">
+        GoogleはGemini 3.8 Flashと、サイバー防御向けのGemini 3.8 Flash Cyberを公開した。Flashは3.7の速度と低価格帯を保ちながら、コーディング、長時間のエージェント処理、多段推論を伸ばしたとしている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">開発者はGoogle Antigravity、Google AI Studio、Android Studioから利用できる</li>
+        <li data-i="02">企業向けはGemini Enterprise、一般向けはGoogle AI Pro・Ultraや検索のAI Modeなどへ展開</li>
+        <li data-i="03">Vercel AI Gatewayでもgoogle/gemini-3.8-flashとして利用可能</li>
+        <li data-i="04">Vercelの設定ツールはClaude Code、Codex、Cursorなどへ同じゲートウェイキーを接続できる</li>
+        <li data-i="05">Flash Cyberはサイバー防御に特化した別モデルとして案内された</li>
+      </ul>
+      <div class="pull">
+        高速モデルでも、単発回答だけでなく長く続く作業が比較対象になった。既存の軽量モデルと同じ課題を走らせ、途中の要件保持と完了までの費用を測りたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">9,066</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/Google/status/2095175518068904380">@Google</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-03</dd>
+        <dt>CATEGORY</dt>
+        <dd>フロンティアモデル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/Google/status/2095175518068904380">x.com/Google/…</a></dd>
+        <dd><a href="https://vercel.com/changelog/gemini-3-8-flash-now-available-on-ai-gateway">vercel.com/changelog/gemini-3-8-flash-no…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://artificialanalysis.ai/articles/muse-spark-1-3">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-09-04/">
+      ← 前日 · 2026-09-04
+      <span class="big">GPT-6 Astra、長期作業の文脈を「圧縮」から「記録と検索」へ</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-09-05/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260905.0731</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

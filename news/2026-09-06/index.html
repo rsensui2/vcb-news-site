@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-09-06 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-09-06 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0906</span>
+    <span class="sep">/</span>
+    <span>2026-09-06</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260906.0731</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-09-06/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:31 · SAT</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SATURDAY · SEPTEMBER 6, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>09<span class="dot">.</span>06</h1>
+    <div class="strap">
+      <span>Claude · ant · Ling · AIが選ぶサービスは一致するか</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ニュース <span class="sep">/</span> ANTHROPIC / GITHUB RELEASES <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Codeで未使用Skillsを点検</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-06/topic_1.png" data-alt="Claude Codeで未使用Skillsを点検" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-06/topic_1.png" alt="Claude Codeで未使用Skillsを点検" />
+      </div>
+      <p class="lede">
+        Claude Code 2.1.261に、使われていないSkillsと文脈の消費量を調べる /skill-doctor が加わった。コマンド出力をモデルへ直接渡す文字数の上限設定や、組織ポリシーの読み込み失敗理由を表示する診断も追加された。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">/skill-doctorで未使用Skillsと文脈の消費量を確認</li>
+        <li data-i="02">コマンドとタスクの出力上限を最大128K文字に設定可能</li>
+        <li data-i="03">/statusとclaude doctorで組織ポリシーの問題を診断</li>
+      </ul>
+      <div class="pull">
+        追加したSkillsが実際に使われているかを、整理する前に確かめられる。出力上限は大きくするほど文脈を使うので、必要な作業に合わせて調整したい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.261">Anthropic / GitHub Releases</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-04T00:00:00</dd>
+        <dt>CATEGORY</dt>
+        <dd>ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.261">https://github.com/anthropics/claude-code/releases/tag/v2.1.261</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · ANTHROPIC / CLAUDE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ニュース <span class="sep">/</span> ANTHROPIC / CLAUDE PLATFORM DOCS <span class="sep">/</span> NEWS
+      </div>
+      <h2>ant applyでエージェント構成を同期</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-06/topic_2.png" data-alt="ant applyでエージェント構成を同期" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-06/topic_2.png" alt="ant applyでエージェント構成を同期" />
+      </div>
+      <p class="lede">
+        Anthropicは9月3日、ant CLI 1.30.0に ant apply を追加した。エージェント、環境、Skills、メモリストア、デプロイをリポジトリ内のファイルで定義し、表示された変更計画を承認するとClaude API側へ反映できる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Markdown・YAML・JSONでリソースを定義</li>
+        <li data-i="02">claude-lock.jsonで実IDと変更検知用ハッシュを保持</li>
+        <li data-i="03">--dry-runで適用前に差分を確認</li>
+      </ul>
+      <div class="pull">
+        チームで使うエージェントの構成を、コードと同じレビューに載せられる。同時適用を防ぐ仕組みも用意し、まず変更計画だけを確認する使い方から試したい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://platform.claude.com/docs/en/cli-sdks-libraries/cli/apply">Anthropic / Claude Platform Docs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-03T00:00:00</dd>
+        <dt>CATEGORY</dt>
+        <dd>ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://platform.claude.com/docs/en/cli-sdks-libraries/cli/apply">https://platform.claude.com/docs/en/cli-sdks-libraries/cli/apply</a></dd>
+        <dd><a href="https://platform.claude.com/docs/en/release-notes/overview">platform.claude.com/docs/en/release-note…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · VERCEL / CHANGELOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ニュース <span class="sep">/</span> VERCEL / CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Ling 3.0 Flash Santeの無料提供</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-06/topic_3.png" data-alt="Ling 3.0 Flash Santeの無料提供" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-06/topic_3.png" alt="Ling 3.0 Flash Santeの無料提供" />
+      </div>
+      <p class="lede">
+        Vercelは9月4日、医療分野を想定したLing 3.0 Flash SanteをAI Gatewayで提供し、10月4日まで無料と案内した。無料期間が終わると課金が始まるモデルIDと、提供が止まる無料専用IDを選べる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">無料期間は2026年10月4日まで</li>
+        <li data-i="02">通常IDは期間後に課金、末尾-freeのIDは期間後に停止</li>
+        <li data-i="03">256Kトークンの文脈と関数呼び出しに対応</li>
+      </ul>
+      <div class="pull">
+        試用後の請求を避けたい場合は、期間後に停止するIDを選べる。無料という条件だけでなく、用途と期間後の挙動まで確認して試す材料になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/ling-3-0-flash-sante-is-now-available-on-ai-gateway-for-free">Vercel / Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-04T00:00:00</dd>
+        <dt>CATEGORY</dt>
+        <dd>ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/ling-3-0-flash-sante-is-now-available-on-ai-gateway-for-free">https://vercel.com/changelog/ling-3-0-flash-sante-is-now-available-on-ai-gateway-for-free</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · ARMATURE /</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ニュース <span class="sep">/</span> ARMATURE / 自社実験 <span class="sep">/</span> NEWS
+      </div>
+      <h2>AIが選ぶサービスは一致するか</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-06/topic_4.png" data-alt="AIが選ぶサービスは一致するか" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-06/topic_4.png" alt="AIが選ぶサービスは一致するか" />
+      </div>
+      <p class="lede">
+        Armatureはコーディングエージェント16,893実行のうち、51のコードベース・5,292セッションを有効として公開した。3種類のエージェントが同じツールを選んだのは比較条件の42%で、同じ依頼でも言語や既存コードによって選ぶサービスが変わった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">全16,893実行のうち公開分析は5,292セッション</li>
+        <li data-i="02">Claude Code・Codex・Cursorの選択一致は比較条件の42%</li>
+        <li data-i="03">合成リポジトリとAIの判定役を使った、事業者自身の調査</li>
+      </ul>
+      <div class="pull">
+        AIの推薦をそのまま採用する前に、費用や既存構成の条件を明示したい。開発ツールの成長支援を売るArmature自身の実験であり、市場シェアや全利用者の行動を表す数字ではない。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://armature.tech/blog/which-tools-coding-agents-install">Armature / 自社実験</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-03T00:00:00</dd>
+        <dt>CATEGORY</dt>
+        <dd>ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://armature.tech/blog/which-tools-coding-agents-install">https://armature.tech/blog/which-tools-coding-agents-install</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · ANDREW NG / X ARTI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        知見 <span class="sep">/</span> ANDREW NG / X ARTICLE <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>〈知見〉Andrew Ngのエージェント技能マップ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-06/topic_5.png" data-alt="〈知見〉Andrew Ngのエージェント技能マップ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-06/topic_5.png" alt="〈知見〉Andrew Ngのエージェント技能マップ" />
+      </div>
+      <p class="lede">
+        Andrew Ngはコーディングエージェントを使う力を、作業の指揮、自律性の調整、成果のレビュー、環境の整備、仕組みの理解に整理した。数十人のAIエンジニアへの聞き取りと自身のチーム経験から、計画、実装と検証、配備と監視の各工程を行き来する開発の進め方を説明している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">計画、実装と検証、配備と監視を行き来する</li>
+        <li data-i="02">任せる範囲と人が介入する時点を調整する</li>
+        <li data-i="03">長時間の自律実行は費用に見合うかも評価する</li>
+      </ul>
+      <div class="pull">
+        自分の苦手な工程を見つけるチェックリストとして読める。コードを作らせる練習に加え、動作の証拠をどう確認するかも一緒に練習したい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">6,296</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/AndrewYNg/status/2095890279865721217">@AndrewYNg</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-04T15:02:37+00:00</dd>
+        <dt>CATEGORY</dt>
+        <dd>知見</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/AndrewYNg/status/2095890279865721217">x.com/AndrewYNg/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · ERIC PROVENCHER / </span></aside>
+    <div class="main">
+      <div class="cat-line">
+        知見 <span class="sep">/</span> ERIC PROVENCHER / X ARTICLE <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>〈知見〉GPT-6 Astraの指示を見直す</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-06/topic_6.png" data-alt="〈知見〉GPT-6 Astraの指示を見直す" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-06/topic_6.png" alt="〈知見〉GPT-6 Astraの指示を見直す" />
+      </div>
+      <p class="lede">
+        Eric Provencherは、GPT-6 Astraに合わせてSkillsやAGENTS.mdに残った古い前提を点検するよう勧めている。Skillの説明は使う場面を短く明確にし、詳細は必要になったときに読む構成にするという提案だ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">説明が長く多すぎると、Codex側で説明が短縮される</li>
+        <li data-i="02">複数の手順は入口から必要な文書へ案内する</li>
+        <li data-i="03">別モデルを使う共同開発者への影響も考える</li>
+      </ul>
+      <div class="pull">
+        使う場面が曖昧な説明や、軽微な修正にも大量の読み込みを求める指示から点検したい。Skillsを一括削除するという話ではなく、必要な知識を残して整理するための提案だ。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">4,146</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/pvncher/status/2095991462416490862">@pvncher</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-04T21:44:40+00:00</dd>
+        <dt>CATEGORY</dt>
+        <dd>知見</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/pvncher/status/2095991462416490862">x.com/pvncher/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · YASSER ELGAMMAL / </span></aside>
+    <div class="main">
+      <div class="cat-line">
+        知見 <span class="sep">/</span> YASSER ELGAMMAL / DEV <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉完了条件をハーネスに残す</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-06/topic_7.png" data-alt="〈知見〉完了条件をハーネスに残す" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-06/topic_7.png" alt="〈知見〉完了条件をハーネスに残す" />
+      </div>
+      <p class="lede">
+        Yasser ElgammalはLaravel CMSを例に、エージェントの作業を支えるファイル群を、ルール・Skills・手順・文脈・役割・ツール別の入口に分けた。「ボタンができた」だけで終えず、権限、動作、不正な状態、関連テストまで確かめる完了条件を置いている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">常時ルールと、仕事ごとの手順・文脈を分ける</li>
+        <li data-i="02">CodexとCursorの入口は共有文書への案内に絞る</li>
+        <li data-i="03">操作できる人と、操作後の状態まで完了条件に書く</li>
+      </ul>
+      <div class="pull">
+        同じ確認を毎回頼んでいるなら、完了条件を一か所へ残す題材になる。記事の構成例を丸ごと増やすより、自分の作業で抜けやすい確認から取り入れたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://dev.to/yasserelgammal/what-is-an-ai-harness-a-practical-guide-with-a-laravel-cms-example-3d4g">Yasser Elgammal / DEV</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-03T00:00:00</dd>
+        <dt>CATEGORY</dt>
+        <dd>知見</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://dev.to/yasserelgammal/what-is-an-ai-harness-a-practical-guide-with-a-laravel-cms-example-3d4g">https://dev.to/yasserelgammal/what-is-an-ai-harness-a-practical-guide-with-a-laravel-cms-example-3d4g</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · / X ARTICLE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        知見 <span class="sep">/</span> 鷲巣大輔 / X ARTICLE <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>〈知見〉再判断の条件を先に決める</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-06/topic_8.png" data-alt="〈知見〉再判断の条件を先に決める" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-06/topic_8.png" alt="〈知見〉再判断の条件を先に決める" />
+      </div>
+      <p class="lede">
+        鷲巣大輔氏は、ダッシュボードが使われなくなった自身の経験から、画面と意思決定の手続きがつながっていなかった問題を振り返った。何の数字がどの条件になったら、誰が何を再判断するのかを先に決め、画面は後から作るという提案だ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">問題を画面に出しても、契約の承認手続きは通ってしまった</li>
+        <li data-i="02">誰が再判断を起こし、継続の理由を説明するかを決める</li>
+        <li data-i="03">他社の制度設計と、実際の効果が確認できた範囲を区別</li>
+      </ul>
+      <div class="pull">
+        AIで業務画面を作るときにも、見る人と次の行動を先に決めておきたい。著者は当時の撤退提言の正しさや、紹介した他社制度の実績を断定していない。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">638</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/WashizuD/status/2095768443006177767">@WashizuD</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-04T06:58:28+00:00</dd>
+        <dt>CATEGORY</dt>
+        <dd>知見</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/WashizuD/status/2095768443006177767">x.com/WashizuD/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.261">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-09-05/">
+      ← 前日 · 2026-09-05
+      <span class="big">Muse Spark 1.3は指数61、同水準モデルで最安のタスク単価</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-09-06/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260906.0731</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

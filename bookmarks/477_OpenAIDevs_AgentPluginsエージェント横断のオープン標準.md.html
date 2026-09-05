@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №042</span>
+    <span class="tick">BOOKMARK №044</span>
     <span class="sep">/</span>
     <span>2026-08-06</span>
     <span class="sep">/</span>
     <span>@OpenAIDevs</span>
     <span class="sep">/</span>
-    <span>516 ITEMS</span>
+    <span>518 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:13 SAT</span>
+    <span>JST 07:18 SUN</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,19 +305,19 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-09-04/">NEWS</a>
+      <a href="../news/2026-09-05/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:13 · SAT</div>
+    <div class="meta">JST · 07:18 · SUN</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-08-06 <span>/</span> №042
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-08-06 <span>/</span> №044
     </div>
     <div class="cat-line">
       <span>💻 AI/開発ツール</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">Introducing Agent Plugins — Agent Skills と MCP をまとめて配る、エージェント横断のオープン標準</h1>
     <div class="strap">
-      <span><span class="label">№</span>042 / 516</span>
+      <span><span class="label">№</span>044 / 518</span>
       <span><span class="label">SRC</span><a href="https://x.com/OpenAIDevs/status/2085398373511918022" target="_blank" rel="noopener noreferrer">x.com/OpenAIDevs ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/477_OpenAIDevs_AgentPlugins%E3%82%A8%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%83%88%E6%A8%AA%E6%96%AD%E3%81%AE%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E6%A8%99%E6%BA%96.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">042<span class="ord">BOOKMARK / 516</span></aside>
+    <aside class="numeral">044<span class="ord">BOOKMARK / 518</span></aside>
     <article class="prose">
 <p><strong>有益度:</strong> ⭐⭐⭐⭐⭐</p><p><strong>エンゲージメント:</strong> Likes 6861 / RT 628 / Replies 332 / Bookmarks 4207 / Views 2093853</p><h2>投稿本文（原文）</h2><p>Build a plugin once and use it across compatible agent clients.</p><p>Introducing Agent Plugins, an open standard developed with @awsdevelopers, @cursor_ai, @github, @code, and @vercel that packages Agent Skills and supports MCP server configurations in a shared format.</p><h2>スレッド全体</h2><h3>Part 1 (親ポスト)</h3><p>Build a plugin once and use it across compatible agent clients.</p><p>Introducing Agent Plugins, an open standard developed with @awsdevelopers, @cursor_ai, @github, @code, and @vercel that packages Agent Skills and supports MCP server configurations in a shared format.</p><h3>Part 2</h3><p>Compatible agentic clients at launch:</p><p>• Codex</p><p>• @ChatGPT</p><p>• @cursor_ai</p><p>• @github Copilot</p><p>• @kirodotdev</p><p>• @code</p><h2>日本語訳全文</h2><h3>Part 1 (親ポスト)</h3><p>プラグインを一度作れば、対応するあらゆるエージェントクライアントで使える。</p><p>Agent Plugins を発表します。AWS Developers、Cursor、GitHub、VS Code、Vercel と共同で策定したオープン標準で、Agent Skills をパッケージ化し、MCP サーバー設定を共通フォーマットでサポートします。</p><h3>Part 2</h3><p>ローンチ時点で対応するエージェントクライアント:</p><p>• Codex</p><p>• ChatGPT</p><p>• Cursor</p><p>• GitHub Copilot</p><p>• Kiro</p><p>• VS Code</p><h2>公式ドキュメントからの補足（developers.openai.com/codex/plugins）</h2><p>プラグインは以下の要素を1つ以上まとめた配布単位:</p><ul><li><strong>Skills</strong>: 特定の作業のための再利用可能な指示。必要になったときにエージェントがロードする</li><li><strong>Connectors</strong>: GitHub / Slack / Google Drive などへの接続。ツールを公開し、カスタム UI も持てる</li><li><strong>MCP servers</strong>: 外部システムに対してツール定義・認証・構造化データ返却・アクション実行を担う。Connectors の実体でもある</li><li><strong>Browser extensions</strong>: そのワークフローに必要なブラウザ機能</li><li><strong>Hooks</strong>: 設定したライフサイクル地点で走るコマンド（有効化前にレビューして信頼すること、と公式が警告）</li><li><strong>Scheduled task templates</strong>: 定期タスクの再利用可能な雛形</li></ul><p>配布はマーケットプレイスソース経由（プロジェクト／チーム単位の repo marketplace など）。ChatGPT と Codex は<strong>同一の公開プラグインカタログ</strong>を共有する。Codex CLI では <code>/plugins</code> でブラウザを開いてインストールし、新規セッションから利用可能になる。</p><h2>Summary</h2><p>OpenAI が、AWS・Cursor・GitHub・VS Code・Vercel と共同で策定した「Agent Plugins」というオープン標準を発表した。Agent Skills（エージェント向けの再利用可能な手順書）と MCP サーバー設定を1つのパッケージにまとめ、共通フォーマットで配布できるようにするもの。ローンチ時点で Codex / ChatGPT / Cursor / GitHub Copilot / Kiro / VS Code の6クライアントが対応する。プラグインには Skills・Connectors・MCP サーバーに加え、ブラウザ拡張・Hooks・定期タスク雛形も同梱でき、ChatGPT と Codex は同一の公開カタログを共有する。</p><h2>Key points</h2><ul><li><strong>「一度作れば全クライアントで動く」が設計目標</strong>: エージェントごとにスキルを移植する手間をなくす</li><li><strong>策定は OpenAI 単独ではない</strong>: AWS Developers / Cursor / GitHub / VS Code / Vercel との共同。競合を含む横断標準として立ち上げた</li><li><strong>ローンチ対応6クライアント</strong>: Codex、ChatGPT、Cursor、GitHub Copilot、Kiro、VS Code</li><li><strong>Skills と MCP を1パッケージに束ねる</strong>: 「手順書」と「ツール接続」がバラバラだった配布単位を統合した</li><li><strong>同梱できるのは6種</strong>: Skills / Connectors / MCP servers / ブラウザ拡張 / Hooks / 定期タスク雛形</li><li><strong>Hooks はセキュリティ注意点として明記</strong>: ライフサイクル地点で任意コマンドが走るため、公式が「有効化前にレビューして信頼を確認しろ」と警告している</li><li><strong>配布はマーケットプレイス経由</strong>: repo marketplace でチーム内配布も可能。ChatGPT / Codex は共通の公開カタログ</li><li><strong>反響は桁違い</strong>: 209万インプレッション・ブックマーク4207件</li></ul><h2>Takeaway</h2><p>Anthropic が Agent Skills をオープン仕様として出した流れを、OpenAI が「配布パッケージ」のレイヤーまで引き上げて業界標準化しにきた形。MCP が「エージェント⇄ツール」の接続を標準化したのに対し、Agent Plugins は「Skill + MCP設定 + hooks + 定期タスク」をまとめて配る単位を標準化する。つまり *エージェント運用ノウハウそのものが流通可能な資産になる* ということで、社内で育てたスキルを Cursor でも Copilot でも VS Code でも同じパッケージで配れる。</p><p>注意点は Hooks。ライフサイクルで任意コマンドが走る仕様なので、外部マーケットプレイスからプラグインを入れる運用は、npm の postinstall と同じクラスのサプライチェーンリスクを持つ。公式が名指しで警告しているのは、そこが最大の攻撃面だと分かっているから。組織導入するなら「hooks を含むプラグインは要レビュー」を最初にルール化しておくべき。</p>
     </article>
@@ -384,14 +384,14 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 516 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 518 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-09-04/">TODAY</a></li>
+          <li><a href="../news/2026-09-05/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -418,7 +418,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-09-05</span>
+      <span>BUILD 2026-09-06</span>
     </div>
   </div>
 </footer>

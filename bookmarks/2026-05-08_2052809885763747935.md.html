@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №192</span>
+    <span class="tick">BOOKMARK №194</span>
     <span class="sep">/</span>
     <span>2026-05-09</span>
     <span class="sep">/</span>
     <span>@trq212</span>
     <span class="sep">/</span>
-    <span>516 ITEMS</span>
+    <span>518 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:13 SAT</span>
+    <span>JST 07:18 SUN</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,19 +305,19 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-09-04/">NEWS</a>
+      <a href="../news/2026-09-05/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:13 · SAT</div>
+    <div class="meta">JST · 07:18 · SUN</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-05-09 <span>/</span> №192
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-05-09 <span>/</span> №194
     </div>
     <div class="cat-line">
       <span>💻 技術Tips</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">Thariq: Claude Code を使った「HTMLの理不尽なまでの有効性」</h1>
     <div class="strap">
-      <span><span class="label">№</span>192 / 516</span>
+      <span><span class="label">№</span>194 / 518</span>
       <span><span class="label">SRC</span><a href="https://x.com/trq212/status/2052809885763747935" target="_blank" rel="noopener noreferrer">x.com/trq212 ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/2026-05-08_2052809885763747935.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">192<span class="ord">BOOKMARK / 516</span></aside>
+    <aside class="numeral">194<span class="ord">BOOKMARK / 518</span></aside>
     <article class="prose">
 <ul><li>Author: Thariq (@trq212)</li><li>Category: 💻</li><li>Usefulness: ★★★</li><li>URL: https://x.com/trq212/status/2052809885763747935</li><li>Time: Fri May 08 17:56:30 +0000 2026</li><li>Engagement: 704返信 / 1258リポスト / 10729いいね / 20699ブックマーク / 6456554表示</li></ul><h2>本文</h2><p>(本文は X Article 本体に含まれる)</p><h2>日本語訳全文</h2><p>Markdown は AI エージェントが我々と意思疎通するためのデフォルトファイル形式になった。シンプルで、ポータブルで、リッチテキストもそこそこ表現でき、編集も楽だ。Claude は markdown 内に ASCII で図を描くのもかなり上手くなった。</p><p>しかしエージェントが強くなるにつれ、私は markdown が制約になっていると感じ始めた。100行を超える markdown は読む気がしない。もっとリッチな視覚化、色、図表が欲しいし、それを簡単に共有したい。</p><p>そして私は最近、こうしたファイルを自分で編集することはほとんどなく、仕様書・参照資料・ブレストの出力として使っている。編集するときも結局 Claude にプロンプトで指示するので、markdown の最大の利点（人間が編集できる）も消えてしまう。</p><p>そこで私は出力フォーマットとして markdown より HTML を好むようになった。Claude Code チームの他のメンバーの間でも増えている。その理由を書く。</p><p>(サンプル: https://thariqs.github.io/html-effectiveness)</p><h3>なぜ HTML か？</h3><p><strong>情報密度</strong> — HTML は markdown よりもはるかにリッチな情報を表現できる。テーブル、CSS によるデザインデータ、SVG イラスト、コードスニペット、JS によるインタラクション、ワークフロー、空間データ、画像。Claude が読める情報のうち、HTML で効率的に表現できないものはほぼない。</p><p><strong>視覚的な分かりやすさ・読みやすさ</strong> — 実際 100 行超の markdown は読まない。HTML は構造を視覚的に整理でき、タブ・図・リンクで巡回でき、モバイル対応もできる。</p><p><strong>共有のしやすさ</strong> — Markdown はブラウザがそのまま綺麗にレンダリングしないので共有しづらい。HTML は S3 にアップすればリンク 1 本で共有できる。スペックや報告書を実際に読んでもらえる確率が大幅に上がる。</p><p><strong>双方向インタラクション</strong> — HTML ならスライダーやノブで調整させたり、結果を「コピーして Claude にペースト」させたりもできる。</p><p><strong>データ取り込み</strong> — Claude AI や Claude Design ではなく Claude Code で HTML を作る理由は、Claude Code がファイルシステム、MCP（Slack/Linear など）、ブラウザ（Claude in Chrome）、git history など膨大なコンテキストを取り込めるから。</p><p><strong>楽しい</strong> — Claude と HTML を作るのは単純に楽しく、自分が制作に深く関わっている実感が出る。</p><h3>始め方</h3><p>「これを <code>/html</code> スキルにするんでしょ？」と思われそうだが、しないでほしい。素朴に「HTML ファイルを作って」「HTML アーティファクトを作って」と頼むだけでいい。コツは、そのアーティファクトに何をさせたいか・どう使いたいかを自分で分かっていること。</p><h3>ユースケース</h3><ul><li><strong>仕様・計画・探索</strong> — Markdown のプラン 1 枚ではなく HTML ファイルの「網」を作る。ブレスト、モックアップ、コードスニペット、実装プランを順に積み、満足したら新セッションでまとめて実装させる。検証エージェントにも同じファイル群を渡せる。</li><li><strong>コードレビュー・コード理解</strong> — diff、注釈、フローチャート、モジュール図を埋め込める。GitHub のデフォルト diff より分かりやすい。すべての PR に「HTML コード説明書」を添付している。</li><li><strong>デザイン・プロトタイプ</strong> — Claude Design は HTML ベース。React や Swift が最終形でも、まず HTML でデザインさせ、その後言語に翻訳させる。アニメーションのチューニング用にスライダーを差し込ませることもある。</li><li><strong>レポート・リサーチ・学習</strong> — Slack、コードベース、git history、Web を横断して合成し、長文 HTML、インタラクティブな解説、スライドにする。SVG で図解させる。</li><li><strong>使い捨て編集 UI</strong> — Linear チケット 30 件をドラッグで Now/Next/Later/Cut に振り分けて「copy as markdown」させる、フィーチャーフラグの設定エディタ、左右並列のプロンプトチューナーなど、その場限りの専用 UI を HTML 1 枚で作らせる。「export」ボタンで結果を Claude にペーストし直せる形にするのがコツ。</li><li>その他、データセット選別、注釈付け、色やイージング曲線・cron 式・正規表現みたいな「言葉で書きにくい値」のピッカー。</li></ul><h3>よくある質問</h3><ul><li><strong>トークン効率悪い？</strong> Markdown より食うのは事実。だが表現力と「実際に読まれる確率」が上がるので結果的に得。Opus 4.7 の 1MM コンテキストなら気にならない。</li><li><strong>Markdown はいつ使う？</strong> ほぼ使わなくなった。</li><li><strong>どう見る？</strong> ブラウザでローカルに開く、または S3 にアップ。</li><li><strong>生成が遅い？</strong> 2-4倍。だが価値はある。</li><li><strong>バージョン管理は？</strong> 最大の弱点。HTML diff はノイジーで読みづらい。</li><li><strong>デザインがダサくならない？</strong> Frontend design plugin を使う。自社テイストに合わせるなら、コードベースから design system HTML を 1 枚作って参照させる。</li></ul><h3>Loop に入っている感</h3><p>結局のところ、HTML を使う本当の理由は「Claude のループに自分が入っている感」だ。プランを深く読まなくなった結果 Claude の判断に委ねるしかなくなる、と恐れていた。HTML にしたらむしろ今までで一番ループに入っている。皆さんもそうあれ。</p><h2>まとめ</h2><p>Claude Code チームの Thariq による「HTML is the new markdown」論。AI エージェント時代の出力フォーマットとして、Markdown よりも HTML の方が情報密度・視覚性・共有性・双方向性すべてで優位、と主張。Opus 4.7 の 1MM context window が前提。</p>
     </article>
@@ -390,14 +390,14 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 516 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 518 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-09-04/">TODAY</a></li>
+          <li><a href="../news/2026-09-05/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -424,7 +424,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-09-05</span>
+      <span>BUILD 2026-09-06</span>
     </div>
   </div>
 </footer>

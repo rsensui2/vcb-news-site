@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №029</span>
+    <span class="tick">BOOKMARK №031</span>
     <span class="sep">/</span>
     <span>2026-08-15</span>
     <span class="sep">/</span>
     <span>@casthirotaka</span>
     <span class="sep">/</span>
-    <span>516 ITEMS</span>
+    <span>518 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:13 SAT</span>
+    <span>JST 07:18 SUN</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,19 +305,19 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-09-04/">NEWS</a>
+      <a href="../news/2026-09-05/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:13 · SAT</div>
+    <div class="meta">JST · 07:18 · SUN</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-08-15 <span>/</span> №029
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-08-15 <span>/</span> №031
     </div>
     <div class="cat-line">
       <span>💻 AI開発ツール・動画生成</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">イメージ通りの動画を作る方法 | 天才はSeedance2.5をこう使う</h1>
     <div class="strap">
-      <span><span class="label">№</span>029 / 516</span>
+      <span><span class="label">№</span>031 / 518</span>
       <span><span class="label">SRC</span><a href="https://x.com/casthirotaka/status/2088460345371402441" target="_blank" rel="noopener noreferrer">x.com/casthirotaka ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/489_casthirotaka_Seedance2.5%E5%8F%82%E7%85%A7%E7%B4%A0%E6%9D%90%E3%81%AE%E5%BD%B9%E5%89%B2%E5%88%86%E6%8B%85%E3%83%97%E3%83%AD%E3%83%B3%E3%83%97%E3%83%88%E8%A8%AD%E8%A8%88.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">029<span class="ord">BOOKMARK / 516</span></aside>
+    <aside class="numeral">031<span class="ord">BOOKMARK / 518</span></aside>
     <article class="prose">
 <p><strong>リンク:</strong> https://x.com/i/article/2088437862685650944</p><p><strong>カテゴリ:</strong> 💻 AI開発ツール・動画生成</p><p><strong>有益度:</strong> ⭐⭐⭐⭐⭐</p><p><strong>エンゲージメント:</strong> Likes 194 / RT 25 / Replies 2 / Bookmarks 690 / Views 180351</p><h2>投稿本文（原文）</h2><p>https://t.co/5M1Q6xL40Z</p><h2>X Article 本文</h2><p>今、Seedance 2.5にチャレンジしている人たちは</p><p>『上手いプロンプト』の型を探し、思いつく限りを検証しているだろう。</p><p>だが、、、</p><p>プロンプトが責任を持てる範囲は、思っているより狭い</p><p>Seedance 2.5 は1回の生成で画像30枚・動画10本・音声10本を参照として受け取る（ByteDance公式、2026年7月31日発表）。</p><p>この仕様が意味するのは、プロンプトが全部を説明する前提で作られていないということ。</p><p>判断基準は1つ。</p><p>その情報を一番正確に持っているのは誰か。</p><p>動きの正解を一番正確に持っているのは、動きを撮った動画そのものであって、それを説明した文章ではない。</p><p>プロンプトに書いてはいけないこと5つ</p><ol><li>形容詞を積み上げた雰囲気の描写</li></ol><p>公式ガイドの記述は「Try not to pile on adjectives.（形容詞を積み上げようとするな）」。</p><p>続けて「動きとレンズの選択について具体的であるほうが、たいていうまくいく」としている。</p><ol><li>動きの「名前」</li></ol><p><code>playful cheeky mini-dance</code> のような概念名は、解釈の幅がそのまま出力の幅になる。</p><p>実際にこの指定で返ってきたのは、</p><p>「相手に近づく→手を前に出す→相手を見る」という人前で踊る映像だった。</p><p>狙いは「一人でふざけながら歩いている、少し雑で速い動き」で、これは踊りですらない。</p><ol><li>身体の各部位の動きを文章で分解したもの</li></ol><p>腕の振り方、肩の揺れ方、それに連動するカメラの反応まで部位ごとに分解して書き直しても、出力は変わらなかった。</p><p>公式ガイドはモーション参照について「長く曖昧な段落より有用（more useful than a long vague paragraph）」と書いている。</p><p>分解して長くしても、参照1本の情報量には届かない。</p><ol><li>参照素材がすでに持っている情報</li></ol><p>公式が公開しているプロンプト例は、参照ごとに取る情報を指定している。</p><p>『@Clay Render 1 からはカメラの動き・ペース・ショットサイズの切り替わり・被写体の軌道・立ち位置を参照する。@Image 2 からはキャラクター設計・シーン・素材・照明・色・雰囲気を参照する』</p><p>参照がすでに持っている情報を文章で重ねて書くと、参照と文章が別々のことを言い出して破綻する。</p><ol><li>互いに矛盾する指示</li></ol><p>密度の高い段落は、内部で指示同士が衝突する。</p><p>守れない指示が混ざった瞬間、AIはどれを捨てるかを自分で決める。</p><p>プロンプトに書くべきこと5つ</p><ol><li>参照ファイルごとの役割</li></ol><p>公式ガイドの指示は「参照の役割を明確に述べる（Mention reference roles clearly）」。</p><p>挙げられている役割は、商品の同一性、キャラクターの一貫性、白模型による動き、グリーンスクリーンの演技、音声、スタイル、部分修正。</p><p>ファイルを添付しただけでは役割は決まらない。</p><ol><li>その参照から使わないもの</li></ol><p>役割を与えると同時に、そこから拾ってほしくない情報を明示する。</p><p>実際に機能した書き方はこれ。</p><p>Do not copy the location, clothing, text, people or story from @Video1.</p><p>Copy only the body rhythm, arm gestures, walking rhythm and body-linked camera motion.</p><p>「動きだけ真似しろ、場所と服と人物は真似するな」と切り分ける。</p><ol><li>譲れない要素の列挙</li></ol><p>公式のモーション参照ガイドは、プロンプトの組み立てをこう指示する。</p><p>「アップロードした参照に名前を付けることから始め、次に譲れない詳細を列挙する。</p><p>identity（同一性）</p><p>shape（形）</p><p>scale（大きさ）</p><p>floor plan（配置）</p><p>product design</p><p>pose</p><p>timing</p><p>voice</p><p>shot order</p><ol><li>何を残し、何を変えるか</li></ol><p>残すもの（演技、タイミング、視線、立ち位置、カメラの動き）と、変えるもの（人物、環境、衣装）を分けて書く。</p><p>この区別を書かないと、AIは全部を作り直す自由を持つ。</p><ol><li>優先順位</li></ol><p>全部を同時に守れない場面で、何を先に守るかを指定する。</p><p>実際のプロンプトではこう書いた。</p><p>PRIORITY:</p><ol><li>Match the body rhythm and arm movement of @Video1.</li><li>Match the body-linked camera motion of @Video1.</li><li>Preserve the POV perspective and environment from @Image1.</li><li>Keep the movement playful and casual rather than choreographed.</li></ol><p>どれを正解にするかを、先に決める</p><p>作りたい映像を要素に割って、要素ごとに「正解を持っている素材」を決める。</p><p>さらに、要素ごとに守らせる強さを3段階で分ける。</p><p>固定：</p><p>勝手に作り替えさせない（人物、商品の形、動きの元素材）</p><p>誘導：</p><p>方向だけ与えて解釈は許す（高級マンション、夜、暖色の照明、楽しい雰囲気）</p><p>おまかせ：</p><p>AIに任せる（ソファの形、本棚の小物、壁面の細部）</p><p>全部を固定すると映像が不自然になり、全部をおまかせにすると狙いから外れる。</p><p> どこを固定してどこを緩めるかの設計そのものが、プロンプトの仕事になる。</p><p>作り方は3通り。難しい動きは先に撮る</p><p>3つ目が重要になる根拠は、</p><p>ByteDance公式が Seedance 2.5 の改善余地として「複数の被写体が相互作用するシーンの安定性」を自ら挙げていること。</p><p>開発元が難所だと認めている領域を、文章で押し切ろうとするのは分が悪い。</p><p>先に撮る方式が成立するのは、</p><p>AIの仕事を「演技を発明すること」から「すでに成立している演技の見た目を変えること」に置き換えられるため。</p><p>立ち位置、タイミング、視線、接触は人間が撮った素材が持ち、AIは同一性と環境だけを担当する。</p><p>X上では、3人の別人が演じた1本の素材を、全員同じ人物に変換した事例が共有されている。</p><p>（Seedance 2.0使用、合成もマスクもなしと投稿者は説明している。第三者の投稿のため、制作工程の詳細までは検証していない）</p><p>向かないケースも明確にある。</p><p>元素材なしで全部を生成したい、接触が複雑すぎる、顔が完全に隠れる、誰がどこにいるか曖昧、元の素材の段階で立ち位置が崩れている。</p><p>この5つに当たるなら、先に撮っても解決しない。</p><p>公式が示すプロンプトの型</p><p>基本の並び順は、</p><p>Subject（誰・何が）→ Action（何をする）→ Camera（どう撮る）→ Style（どんな質感か）</p><p>30秒の一本撮りなら、公式は時間配分まで示している。</p><p>00–06秒 引きの画で状況を見せる</p><p>06–14秒 寄りの画で本題の動きに入る</p><p>14–24秒 カメラを動かすかインサートを入れて展開する</p><p>24–30秒 収束させる</p><p>参照を使う場合にそのまま埋めて使える型👇</p><p>この型が効くのは、書く量が減るからではない。</p><p>文章の仕事が「映像を描写すること」から「素材の役割分担を指揮すること」に変わるため。</p><p>動きの正解は動画が持ち、顔の正解は画像が持ち、空間の正解は白模型が持つ。プロンプトはその配置を決める。</p><p>最後まで読んでいただきありがとうございます。</p><p>X（@casthirotaka）では、こうした実務に効く話を日々発信しています。</p><p>フォローしていただけると嬉しいです。</p><h2>スレッド全体</h2><h3>Part 1 (親ポスト)</h3><p>https://t.co/5M1Q6xL40Z</p><h3>Part 2</h3><p>初心者版もチェック🔰 https://t.co/nJUK2e9zD4</p><h2>まとめ</h2><p>Seedance 2.5 は1回の生成で画像30枚・動画10本・音声10本を参照として受け取れる（ByteDance公式、2026-07-31発表）。この仕様を踏まえると、プロンプトの役割は「映像を言葉で描写する」ことではなく「どの素材がどの要素の正解を持つかを指揮する」ことに変わる。動きの正解は動画が、顔の正解は画像が、空間の正解は白模型が持つ。</p>
     </article>
@@ -384,14 +384,14 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 516 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 518 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-09-04/">TODAY</a></li>
+          <li><a href="../news/2026-09-05/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -418,7 +418,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-09-05</span>
+      <span>BUILD 2026-09-06</span>
     </div>
   </div>
 </footer>

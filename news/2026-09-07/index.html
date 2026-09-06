@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-09-07 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-09-07 の Vibe Coder Bootcamp モーニングディスパッチ — 6本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0907</span>
+    <span class="sep">/</span>
+    <span>2026-09-07</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>06 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260907.0721</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-09-07/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:21 · SUN</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SUNDAY · SEPTEMBER 7, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>09<span class="dot">.</span>07</h1>
+    <div class="strap">
+      <span>Ollama試験版 · Codex · OKF · 〈知見〉会話を残すか</span>
+      <span><span class="count">06</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ローカルLLM <span class="sep">/</span> OLLAMA公式リリース <span class="sep">/</span> NEWS
+      </div>
+      <h2>Ollama試験版、ChatGPT Desktopでローカルモデルを利用</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-07/topic_1.png" data-alt="Ollama試験版、ChatGPT Desktopでローカルモデルを利用" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-07/topic_1.png" alt="Ollama試験版、ChatGPT Desktopでローカルモデルを利用" />
+      </div>
+      <p class="lede">
+        自分のパソコンで動かすOllamaのAIモデルを、ChatGPT Desktopから直接使える試験版が公開された。設定はmacOSのOllamaアプリから行う。v0.34.0-rc1には、決めた形式で回答を返す「構造化出力」の改善や、会話を圧縮した後の画像処理の修正も含まれる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">v0.34.0-rc1は正式版前の試験版</li>
+        <li data-i="02">設定の入口はmacOSのOllamaアプリ</li>
+        <li data-i="03">Apple Siliconで構造化出力を改善</li>
+        <li data-i="04">OpenAI互換クライアントのツール検索・会話圧縮に対応</li>
+      </ul>
+      <div class="pull">
+        使い慣れた画面で、手元のモデルを試す選択肢が増える。業務利用を判断する際は、回答品質と処理速度に加え、データの送信先も確認したい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/ollama/ollama/releases/tag/v0.34.0-rc1">Ollama公式リリース</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-05T23:49:00Z</dd>
+        <dt>CATEGORY</dt>
+        <dd>ローカルLLM</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/ollama/ollama/releases/tag/v0.34.0-rc1">https://github.com/ollama/ollama/releases/tag/v0.34.0-rc1</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · OPENAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> OPENAI公式リリース <span class="sep">/</span> NEWS
+      </div>
+      <h2>Codex 0.153.4のモデル選択修正</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-07/topic_2.png" data-alt="Codex 0.153.4のモデル選択修正" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-07/topic_2.png" alt="Codex 0.153.4のモデル選択修正" />
+      </div>
+      <p class="lede">
+        端末から使う開発支援AI、Codex CLIの0.153.4で、GPT-6 Astraがモデル選択一覧に表示されない問題が修正された。使うモデルを指定していない場合は、Astraが自動で選ばれる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">同梱のモデル選択一覧でAstraを表示</li>
+        <li data-i="02">モデル未設定の場合にAstraを既定化</li>
+        <li data-i="03">非同期の確認質問は対応ツールがある時だけ使用</li>
+      </ul>
+      <div class="pull">
+        モデルを指定せず使っている人は、更新後に選択中のモデルを確かめたい。比較実験では、使ったモデル名とCLIの版を一緒に記録しておくと結果を比べやすい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/openai/codex/releases/tag/rust-v0.153.4">OpenAI公式リリース</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-04T23:25:48Z</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/openai/codex/releases/tag/rust-v0.153.4">https://github.com/openai/codex/releases/tag/rust-v0.153.4</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · OKF AGENT MEMORY</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        エージェント記憶 <span class="sep">/</span> OKF AGENT MEMORY公式リリース <span class="sep">/</span> NEWS
+      </div>
+      <h2>OKF Agent Memoryの記憶はGitで差分を追える</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-07/topic_3.png" data-alt="OKF Agent Memoryの記憶はGitで差分を追える" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-07/topic_3.png" alt="OKF Agent Memoryの記憶はGitで差分を追える" />
+      </div>
+      <p class="lede">
+        OKF Agent Memory v0.1.0は、AIの記憶を人が読めるファイルとして保存する。変更履歴を管理するGitで書き換わった箇所を確認でき、外部ツールを接続する共通規格MCPを通じて、必要な記憶を検索できる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">記憶はknowledge/内のMarkdownとYAMLで保持</li>
+        <li data-i="02">記憶の変更をgit diffやレビューで確認できる</li>
+        <li data-i="03">人が確認した情報とAIの草稿を区別</li>
+        <li data-i="04">必要な記憶だけを検索して読み込む設計</li>
+      </ul>
+      <div class="pull">
+        「AIが何を覚えたか」をファイルで点検できる。人の決定とAIの推測を分けて残す設計は、仕事の引き継ぎにも参考になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/okf-memory/okf-agent-memory/releases/tag/v0.1.0">OKF Agent Memory公式リリース</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-05T22:08:49Z</dd>
+        <dt>CATEGORY</dt>
+        <dd>エージェント記憶</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/okf-memory/okf-agent-memory/releases/tag/v0.1.0">https://github.com/okf-memory/okf-agent-memory/releases/tag/v0.1.0</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · AGENTPATTERNSAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ループ設計 <span class="sep">/</span> AGENTPATTERNS.AI <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉会話を残すか、要約するか、毎回始め直すか</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-07/topic_4.png" data-alt="〈知見〉会話を残すか、要約するか、毎回始め直すか" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-07/topic_4.png" alt="〈知見〉会話を残すか、要約するか、毎回始め直すか" />
+      </div>
+      <p class="lede">
+        AIとの会話を残す、要約して引き継ぐ、毎回始め直す。AgentPatterns.aiは、反復作業で渡す文脈をこの三方式で整理している。複数の発見を比べる調査には会話の蓄積、独立した実装作業には保存記録から始め直す方法が向く、という考察だ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">蓄積は発見同士を比べやすいが文脈が膨らむ</li>
+        <li data-i="02">圧縮は情報を減らせるが判断理由を落としうる</li>
+        <li data-i="03">毎回リセットする方式は保存記録の質が鍵</li>
+        <li data-i="04">調査結果を保存し、実装に入る段階で会話を始め直す例</li>
+      </ul>
+      <div class="pull">
+        長い仕事をAIに任せるときは、途中で何をファイルに残すかを決めておきたい。調査の比較材料や採用理由が欠けると、会話を切り替えた後に判断を再現しにくい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://agentpatterns.ai/loop-engineering/loop-strategy-spectrum/">AgentPatterns.ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-06-18</dd>
+        <dt>CATEGORY</dt>
+        <dd>ループ設計</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://agentpatterns.ai/loop-engineering/loop-strategy-spectrum/">https://agentpatterns.ai/loop-engineering/loop-strategy-spectrum/</a></dd>
+        <dd><a href="https://www.agentpatterns.ai/loop-engineering/loop-strategy-spectrum/">www.agentpatterns.ai/loop-engineering/lo…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · ZDNET JAPAN</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AIと業務設計 <span class="sep">/</span> ZDNET JAPANの調査紹介 <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉AI導入数と業務の準備は別に測る</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-07/topic_5.png" data-alt="〈知見〉AI導入数と業務の準備は別に測る" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-07/topic_5.png" alt="〈知見〉AI導入数と業務の準備は別に測る" />
+      </div>
+      <p class="lede">
+        ZDNET Japanが紹介したDeloitteの調査では、現行の業務プロセスがAIエージェント導入に対応している企業は16%だった。ここでは同記事が伝える調査値を紹介する。元の調査の実施時期・対象者・設問までは照合していない。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Deloitte調査を紹介した二次報道</li>
+        <li data-i="02">業務プロセスが導入に対応する企業は16%</li>
+        <li data-i="03">実施時期・対象者・設問は元調査と未照合</li>
+      </ul>
+      <div class="pull">
+        社内の試行では、作ったエージェントの数と並べて、担当者・確認手順・運用費を追いたい。導入数だけで業務の準備が整ったとは判断できず、紹介した調査値も自社の成果を保証するものではない。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://japan.zdnet.com/article/35252062/">ZDNET Japanの調査紹介</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-04T06:30:00+09:00</dd>
+        <dt>CATEGORY</dt>
+        <dd>AIと業務設計</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://japan.zdnet.com/article/35252062/">https://japan.zdnet.com/article/35252062/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · OPEN DESIGN</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AIとデザイン <span class="sep">/</span> OPEN DESIGN公式サイト <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉Open Designから制作物を読み取り専用で渡す</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-07/topic_6.png" data-alt="〈知見〉Open Designから制作物を読み取り専用で渡す" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-07/topic_6.png" alt="〈知見〉Open Designから制作物を読み取り専用で渡す" />
+      </div>
+      <p class="lede">
+        Open Designの公式サイトは、od mcpで制作物を他のAIツールから参照できると説明している。Claude CodeやCodexなどからファイルを読み取り、検索できる。接続する規格はMCPで、この参照機能には書き込み用の操作がない。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">od mcpで他のAIツールから参照可能に</li>
+        <li data-i="02">ファイル・制作物・メタデータを読み取る</li>
+        <li data-i="03">MCPの公開面は読み取り専用。書き込みと外部呼び出しはなし</li>
+      </ul>
+      <div class="pull">
+        デザインと実装を別のツールで進める際、同じ制作物を参照させる方法として使える。参照できる範囲と編集できる範囲を分けて設計する例でもある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://opendesigner.io/mcp">Open Design公式サイト</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-07</dd>
+        <dt>CATEGORY</dt>
+        <dd>AIとデザイン</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://opendesigner.io/mcp">https://opendesigner.io/mcp</a></dd>
+        <dd><a href="https://opendesigner.io/">opendesigner.io/</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://github.com/ollama/ollama/releases/tag/v0.34.0-rc1">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-09-06/">
+      ← 前日 · 2026-09-06
+      <span class="big">Claude Codeで未使用Skillsを点検</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-09-07/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260907.0721</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

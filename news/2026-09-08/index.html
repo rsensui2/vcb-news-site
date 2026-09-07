@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-09-08 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-09-08 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0908</span>
+    <span class="sep">/</span>
+    <span>2026-09-08</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260908.0727</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-09-08/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:27 · MON</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · MONDAY · SEPTEMBER 8, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>09<span class="dot">.</span>08</h1>
+    <div class="strap">
+      <span>OpenClawの更新で返信の復旧を改善 · 〈知見〉Codexの利用量は待機回数も見る · 〈知見〉AIレビューはどこで終える？ · 動画解析をGeminiに任せるSkill</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        エージェント運用 <span class="sep">/</span> OPENCLAW公式リリース <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenClawの更新で返信の復旧を改善</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-08/topic_1.png" data-alt="OpenClawの更新で返信の復旧を改善" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-08/topic_1.png" alt="OpenClawの更新で返信の復旧を改善" />
+      </div>
+      <p class="lede">
+        OpenClaw v2026.9.2は、再起動後に処理中・待機中・委任中の返信を復旧する仕組みを改善した。GPT-6 Astraの選択にも対応し、長い会話での画面応答を改善し、再起動なしで反映できる設定も増やしている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">処理中・待機中・委任中の返信を再起動後に復旧</li>
+        <li data-i="02">AstraはAPIキーまたは対象アカウントで選択</li>
+        <li data-i="03">会話の参照範囲の既定も変更。共有環境は要点検</li>
+      </ul>
+      <div class="pull">
+        更新前にバックアップと会話の参照範囲を確認したい。共有環境では、別のエージェントからどの会話が見えるかも点検対象になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/openclaw/openclaw/releases/tag/v2026.9.2">OpenClaw公式リリース</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-05T20:00:07Z</dd>
+        <dt>CATEGORY</dt>
+        <dd>エージェント運用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/openclaw/openclaw/releases/tag/v2026.9.2">https://github.com/openclaw/openclaw/releases/tag/v2026.9.2</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · YUICHI UEMURA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        利用量と待機 <span class="sep">/</span> YUICHI UEMURA本人のログ調査 <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>〈知見〉Codexの利用量は待機回数も見る</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-08/topic_2.png" data-alt="〈知見〉Codexの利用量は待機回数も見る" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-08/topic_2.png" alt="〈知見〉Codexの利用量は待機回数も見る" />
+      </div>
+      <p class="lede">
+        Yuichi Uemuraが、Codexの親エージェントによる短い待機と再開の反復を手元のログで調べた。203回の待機呼び出しのうち170回がタイムアウトした。親が再開するたびに会話の文脈が再び入力され、その処理にも利用量が生じると説明している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">手元のログでは203回中170回がタイムアウト</li>
+        <li data-i="02">親の再開で会話の文脈が再び入力される</li>
+        <li data-i="03">同条件の比較ではなく、モデル固有の原因とは断定不可</li>
+      </ul>
+      <div class="pull">
+        利用枠の減りが速いときは、子の作業量と親の再開回数を分けて調べると原因を追いやすい。設定例を試す前に、使用版の待機処理を確かめたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">645</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/u1/status/2096890699883123119">@u1</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-07T09:17:55Z</dd>
+        <dt>CATEGORY</dt>
+        <dd>利用量と待機</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/u1/status/2096890699883123119">x.com/u1/…</a></dd>
+        <dd><a href="https://x.com/i/article/2096877589805907968">x.com/i/article/2096877589805907968</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · NEWS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        レビューの運用 <span class="sep">/</span> 溝口浩二本人の実践記事 <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>〈知見〉AIレビューはどこで終える？</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-08/topic_3.png" data-alt="〈知見〉AIレビューはどこで終える？" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-08/topic_3.png" alt="〈知見〉AIレビューはどこで終える？" />
+      </div>
+      <p class="lede">
+        溝口浩二氏が、一人で運営するArtifact Shareの開発手順を詳しく記した。AIのレビュー指摘を、実害がある問題・別途扱う改善・対応不要に分け、再レビューでは修正差分を中心に確認する。完成条件を決めて、指摘が増え続ける状況を抑える運用だ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">仕様と実装を別々にレビューする</li>
+        <li data-i="02">その場で直す問題と、後から扱う改善を区別</li>
+        <li data-i="03">先送り項目はマージ後にIssue化などの処置を確定</li>
+      </ul>
+      <div class="pull">
+        受け入れ条件と、先送りした指摘の扱いをセットで決める考え方が参考になる。本人記事は本番の不具合も記しており、コード確認を省いて安全になるという証明ではない。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">375</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/techtalkjp/status/2096752188580380720">@techtalkjp</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-07T00:07:32Z</dd>
+        <dt>CATEGORY</dt>
+        <dd>レビューの運用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/techtalkjp/status/2096752188580380720">x.com/techtalkjp/…</a></dd>
+        <dd><a href="https://zenn.dev/coji/articles/solo-software-factory-without-reading-code">zenn.dev/coji/articles/solo-software-fac…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · AGENT NATIVE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        動画とAI <span class="sep">/</span> AGENT NATIVEの配布元記事 <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>動画解析をGeminiに任せるSkill</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-08/topic_4.png" data-alt="動画解析をGeminiに任せるSkill" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-08/topic_4.png" alt="動画解析をGeminiに任せるSkill" />
+      </div>
+      <p class="lede">
+        Agent Nativeが、CodexやClaudeなどからGemini APIで動画を解析するSkillを公開している。配布ページは9月6日更新。映像と音声を渡し、要約や特定の場面の説明を時刻付きで返す構成で、Gemini APIキーが必要になる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">元動画と音声をGemini APIへ送る構成</li>
+        <li data-i="02">要約や場面説明に時刻付きの根拠を添える</li>
+        <li data-i="03">解析後のアップロード削除も手順に含む</li>
+      </ul>
+      <div class="pull">
+        普段使うエージェントから、動画の確認も頼める。切り抜きに使う秒数は元動画で確かめ、社内動画では外部送信の範囲も確認したい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">346</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/agentnative_/status/2096644622332383734">@agentnative_</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-06T17:00:06Z</dd>
+        <dt>CATEGORY</dt>
+        <dd>動画とAI</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/agentnative_/status/2096644622332383734">x.com/agentnative_/…</a></dd>
+        <dd><a href="https://agentnative.inc/resources/give-agents-video-analysis-skill">agentnative.inc/resources/give-agents-vi…</a></dd>
+        <dd><a href="https://ai.google.dev/gemini-api/docs/video-understanding">ai.google.dev/gemini-api/docs/video-unde…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · HARNESS-OF-HARNESS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        長時間の開発 <span class="sep">/</span> HARNESS-OF-HARNESS論文・著者サイト <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉計画・実装・テストを繰り返すHoH</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-08/topic_5.png" data-alt="〈知見〉計画・実装・テストを繰り返すHoH" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-08/topic_5.png" alt="〈知見〉計画・実装・テストを繰り返すHoH" />
+      </div>
+      <p class="lede">
+        Harness-of-Harness（HoH）は、既存のコーディングエージェントを計画・実装・テストの反復で動かす研究だ。検証できる小さな変更を積み重ね、実装時のテストと独立した評価を分ける。論文は3種類のモデルと実行基盤の組み合わせで改善を報告している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">小さく検証できる変更単位で進める</li>
+        <li data-i="02">実装中のテストと独立評価を分ける</li>
+        <li data-i="03">3回反復の平均相対改善52.25%は著者の評価値</li>
+      </ul>
+      <div class="pull">
+        自分の仕事では、各回の成果物と評価結果を残す設計に応用できる。論文の改善率は特定の評価条件に基づき、業務全般の速度向上率ではない。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://arxiv.org/abs/2609.01481">Harness-of-Harness論文・著者サイト</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-01T16:17:18Z</dd>
+        <dt>CATEGORY</dt>
+        <dd>長時間の開発</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://arxiv.org/abs/2609.01481">https://arxiv.org/abs/2609.01481</a></dd>
+        <dd><a href="https://flesymeb.github.io/HarnessOfHarness/">flesymeb.github.io/HarnessOfHarness/</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · NEWS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AIとデザイン <span class="sep">/</span> デジタル庁公式リソース <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉デザインの公式資料をMarkdownで渡す</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-08/topic_6.png" data-alt="〈知見〉デザインの公式資料をMarkdownで渡す" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-08/topic_6.png" alt="〈知見〉デザインの公式資料をMarkdownで渡す" />
+      </div>
+      <p class="lede">
+        デジタル庁デザインシステムは、サイトのドキュメントとアクセシビリティガイドラインをMarkdown形式でも配布している。掲載されているのは8月19日版で、FigmaデータやHTML・Reactの実装例も別途用意されている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">ドキュメントと利用しやすさの指針をMarkdownで配布</li>
+        <li data-i="02">FigmaデータとHTML・Reactの実装例も用意</li>
+        <li data-i="03">8月19日版の資料紹介。新発表ではない</li>
+      </ul>
+      <div class="pull">
+        デザインをAIに頼む際、参照する公式資料と版を揃える用途に使える。見た目の指示に加え、利用しやすさの要件も渡せる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://design.digital.go.jp/dads/resources/">デジタル庁公式リソース</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-08-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>AIとデザイン</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://design.digital.go.jp/dads/resources/">https://design.digital.go.jp/dads/resources/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · SAILPOINTZDNET</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AIの業務導入 <span class="sep">/</span> SAILPOINT公式調査・ZDNET寄稿 <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉AIの操作権限と管理責任者を決める</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-08/topic_7.png" data-alt="〈知見〉AIの操作権限と管理責任者を決める" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-08/topic_7.png" alt="〈知見〉AIの操作権限と管理責任者を決める" />
+      </div>
+      <p class="lede">
+        9月7日のZDNET寄稿が引用するSailPoint調査は、2025年の調査だ。大企業でセキュリティ責任を持つIT専門家353人への調査では、80%がAIエージェントの意図しない動作を報告した。現在の全企業の実態を表す数字としては読めない。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対象は大企業のIT専門家353人、2025年の調査</li>
+        <li data-i="02">80%が意図しない動作、保護ポリシー整備は44%</li>
+        <li data-i="03">権限・実行履歴・責任者を管理する必要性を提起</li>
+      </ul>
+      <div class="pull">
+        社内で任せる仕事ごとに、アクセス先・操作権限・責任者を決める際の参考になる。導入率だけを見て、自社の準備状況を判断しないようにしたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.sailpoint.com/ja/press-releases/sailpoint-research-ai-agent-adoption">SailPoint公式調査・ZDNET寄稿</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2025-07-31</dd>
+        <dt>CATEGORY</dt>
+        <dd>AIの業務導入</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.sailpoint.com/ja/press-releases/sailpoint-research-ai-agent-adoption">https://www.sailpoint.com/ja/press-releases/sailpoint-research-ai-agent-adoption</a></dd>
+        <dd><a href="https://japan.zdnet.com/article/35252138/">japan.zdnet.com/article/35252138/</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://github.com/openclaw/openclaw/releases/tag/v2026.9.2">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-09-07/">
+      ← 前日 · 2026-09-07
+      <span class="big">Ollama試験版、ChatGPT Desktopでローカルモデルを利用</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-09-08/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260908.0727</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

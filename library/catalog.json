@@ -1,7 +1,33 @@
 {
- "generated": "2026-09-07T08:20:04+09:00",
- "count": 69,
+ "generated": "2026-09-08T08:20:05+09:00",
+ "count": 71,
  "items": [
+  {
+   "type": "article",
+   "type_label": "記事（エージェント経営）",
+   "title": "AIで増やしたアウトプットは、売上のどこに繋がっているか──「AI導入がうまくいかない」の正体",
+   "date": "2026-09-07",
+   "url": "https://ai-agent.co.jp/articles/ai-output-to-business-impact/",
+   "tags": [
+    "現場ログ",
+    "経営",
+    "ビジネスモデル",
+    "AI導入",
+    "アウトプット革命"
+   ],
+   "description": "AIを入れて資料は10倍。売上は横ばい。原因はAIではなく、増やしたものが顧客数か1社あたりの売上を動かす形になっていないこと。1人＋AIで月商1,500万円超に至った5段の連鎖と、自己診断の3問。",
+   "extra_links": []
+  },
+  {
+   "type": "note",
+   "type_label": "note",
+   "title": "AI入れて事業が伸びるかどうかは、結局「どこに繋がってるか」だけって話",
+   "date": "2026-09-07",
+   "url": "https://note.com/rsensui/n/n6d794a05ac41",
+   "tags": [],
+   "description": "",
+   "extra_links": []
+  },
   {
    "type": "note",
    "type_label": "note",

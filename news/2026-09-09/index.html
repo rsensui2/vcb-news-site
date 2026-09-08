@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-09-09 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-09-09 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0909</span>
+    <span class="sep">/</span>
+    <span>2026-09-09</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260909.0724</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-09-09/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:24 · TUE</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · TUESDAY · SEPTEMBER 9, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>09<span class="dot">.</span>09</h1>
+    <div class="strap">
+      <span>ChatGPT · Claude · MiniCPM5-2Bを手元の端末で試す · Deep</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI画像制作 <span class="sep">/</span> OPENAI <span class="sep">/</span> NEWS
+      </div>
+      <h2>ChatGPT Images 2.5で部分編集をしやすく</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-09/topic_1.png" data-alt="ChatGPT Images 2.5で部分編集をしやすく" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-09/topic_1.png" alt="ChatGPT Images 2.5で部分編集をしやすく" />
+      </div>
+      <p class="lede">
+        OpenAIは9月8日、画像の一部だけを直す精度と、編集を繰り返した際の一貫性を改善したChatGPT Images 2.5を公開した。生成の待ち時間もImages 2.0比で最大50%短くしたと説明している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">参照写真の被写体や、変更を指示していない部分を保ちやすくした。</li>
+        <li data-i="02">Sketchで描いたラフを参照にでき、画像上のコメントでも修正箇所を伝えられる。</li>
+        <li data-i="03">APIには速さを重視するFlareと、精密な制作向けのSunburstを追加した。</li>
+        <li data-i="04">ChatGPT・ChatGPT Work・Codexの全プランへ順次展開。速度と品質はOpenAIの説明に基づく。</li>
+      </ul>
+      <div class="pull">
+        商品画像やチラシでは、元画像を残して一部分を直す仕事が多い。同じ素材で修正を重ね、残したい要素が維持されるかを試すと違いを確かめやすい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://openai.com/index/introducing-chatgpt-images-2-5/">OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-08</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI画像制作</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://openai.com/index/introducing-chatgpt-images-2-5/">https://openai.com/index/introducing-chatgpt-images-2-5/</a></dd>
+        <dd><a href="https://developers.openai.com/api/docs/models/gpt-image-2.5-flare">developers.openai.com/api/docs/models/gp…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · ANTHROPIC / GITHUB</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI開発ツール <span class="sep">/</span> ANTHROPIC / GITHUB <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code 2.1.265のプラグイン配布と再開処理</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-09/topic_2.png" data-alt="Claude Code 2.1.265のプラグイン配布と再開処理" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-09/topic_2.png" alt="Claude Code 2.1.265のプラグイン配布と再開処理" />
+      </div>
+      <p class="lede">
+        Claude Code 2.1.265は、複数のプラグインをまとめたフォルダを指定して読み込む機能を追加した。サブエージェントを再開した際に、同じ入力を再利用するプロンプトキャッシュが効かなくなる不具合も修正している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">--plugin-dir配下のプラグイン追加・削除を、実行中にも検知する。</li>
+        <li data-i="02">再開時にツール一覧やシステム指示が変わり、キャッシュを再利用できなくなる問題を修正。</li>
+        <li data-i="03">ディスクに保存するツール結果に1GBの上限を設け、切り詰めた場合は会話内に表示。</li>
+        <li data-i="04">Remote Controlで返答の最後より先に終了通知が出る不具合も修正した。</li>
+      </ul>
+      <div class="pull">
+        長い作業を再開して使う人に関わる更新だ。自作プラグインを配布する場合は、フォルダ構成と読み込み結果も合わせて確認したい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.265">Anthropic / GitHub</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-08</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.265">https://github.com/anthropics/claude-code/releases/tag/v2.1.265</a></dd>
+        <dd><a href="https://code.claude.com/docs/en/changelog">code.claude.com/docs/en/changelog</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · OPENBMB / HUGGING </span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ローカルLLM <span class="sep">/</span> OPENBMB / HUGGING FACE <span class="sep">/</span> NEWS
+      </div>
+      <h2>MiniCPM5-2Bを手元の端末で試す</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-09/topic_3.png" data-alt="MiniCPM5-2Bを手元の端末で試す" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-09/topic_3.png" alt="MiniCPM5-2Bを手元の端末で試す" />
+      </div>
+      <p class="lede">
+        OpenBMBがローカル実行向け言語モデルMiniCPM5-2Bの重みを公開した。総パラメータ数は約25億、文脈長は131,072トークンで、Apple Silicon向けMLX版やGGUF版も案内している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">標準のLlamaForCausalLM構成を採用し、Apache-2.0で公開。</li>
+        <li data-i="02">GGUF版はllama.cpp・Ollama・LM Studio、MLX版はApple Silicon向け。</li>
+        <li data-i="03">ツール呼び出しを想定した手順と、vLLM・SGLangでの実行例を提供。</li>
+        <li data-i="04">掲載された性能比較は開発元の評価。日本語の業務精度や実機速度は個別の検証が必要。</li>
+      </ul>
+      <div class="pull">
+        小型モデルを自分の端末で試す候補が増えた。短い分類や情報抽出など用途を絞り、普段の入力で正答率と応答時間を測るところから始められる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://huggingface.co/openbmb/MiniCPM5-2B">OpenBMB / Hugging Face</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-06</dd>
+        <dt>CATEGORY</dt>
+        <dd>ローカルLLM</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://huggingface.co/openbmb/MiniCPM5-2B">https://huggingface.co/openbmb/MiniCPM5-2B</a></dd>
+        <dd><a href="https://huggingface.co/openbmb/MiniCPM5-2B-GGUF">huggingface.co/openbmb/MiniCPM5-2B-GGUF</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · LANGCHAIN</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        コンテキスト設計 <span class="sep">/</span> LANGCHAIN <span class="sep">/</span> NEWS
+      </div>
+      <h2>Deep Agentsは担当に応じて会話を渡し分ける</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-09/topic_4.png" data-alt="Deep Agentsは担当に応じて会話を渡し分ける" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-09/topic_4.png" alt="Deep Agentsは担当に応じて会話を渡し分ける" />
+      </div>
+      <p class="lede">
+        LangChainはDeep Agentsで、サブエージェントへ親の会話を引き継ぐforkと、新しい文脈で始めるisolatedの使い分けを公開した。調査の経緯を引き継いで実装する担当と、独立して成果を点検する担当で、渡す情報を変えられる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">既定のisolatedは、親が指定したタスクの説明から始める。</li>
+        <li data-i="02">forkは親の会話履歴と状態を引き継ぎ、同じ資料の再読を減らせる。</li>
+        <li data-i="03">公式例は修正の実装にfork、独立レビューや単独の調査にisolatedを使う。</li>
+        <li data-i="04">forkはプロンプトキャッシュの再利用を考慮した設計。ただし削減量は作業による。</li>
+      </ul>
+      <div class="pull">
+        実装を引き継ぐ人には経緯が役立ち、独立した点検では先入観が邪魔になることもある。AIへの仕事の分け方にも同じ観点を使える。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.langchain.com/blog/organizing-context-in-a-multi-agent-harness">LangChain</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-08</dd>
+        <dt>CATEGORY</dt>
+        <dd>コンテキスト設計</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.langchain.com/blog/organizing-context-in-a-multi-agent-harness">https://www.langchain.com/blog/organizing-context-in-a-multi-agent-harness</a></dd>
+        <dd><a href="https://docs.langchain.com/oss/python/deepagents/subagents">docs.langchain.com/oss/python/deepagents…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · JAMES PHOENIX</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        エージェント設計の知見 <span class="sep">/</span> JAMES PHOENIX <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉設計と実行でモデルを分ける</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-09/topic_5.png" data-alt="〈知見〉設計と実行でモデルを分ける" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-09/topic_5.png" alt="〈知見〉設計と実行でモデルを分ける" />
+      </div>
+      <p class="lede">
+        James Phoenixは、用途を絞ったAI処理について、高性能モデルで実行スクリプトを作り、日々の処理は低価格モデルに任せる設計を紹介している。入力の分解や振り分け、検証をコード側へ移し、モデルが答える範囲を小さくする考え方だ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対象は「一種類の文書・一つの問い・決まった出力形式」に絞れる仕事。</li>
+        <li data-i="02">実行例ではツールを持たせず、応答を1ターンに限定する。</li>
+        <li data-i="03">正解が分かる入力を50〜100件ほど幅広く試し、失敗の種類ごとにスクリプトを直す手順を提案。</li>
+        <li data-i="04">個人の設計知見であり、汎用エージェントで同じ効果が出るという実証ではない。</li>
+      </ul>
+      <div class="pull">
+        定型の抽出や分類を繰り返す仕事なら、まず正解付きの評価用データを用意したい。安いモデルへ替えた後も、品質を比較する基準が残る。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://understandingdata.com/posts/build-expensive-run-cheap">James Phoenix</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-07</dd>
+        <dt>CATEGORY</dt>
+        <dd>エージェント設計の知見</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://understandingdata.com/posts/build-expensive-run-cheap">https://understandingdata.com/posts/build-expensive-run-cheap</a></dd>
+        <dd><a href="https://understandingdata.com/posts/the-harness-is-cheaper-now/">understandingdata.com/posts/the-harness-…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · OPENAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI導入と教育 <span class="sep">/</span> OPENAI <span class="sep">/</span> NEWS
+      </div>
+      <h2>報道教育へ400超のChatGPT Edu利用枠</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-09/topic_6.png" data-alt="報道教育へ400超のChatGPT Edu利用枠" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-09/topic_6.png" alt="報道教育へ400超のChatGPT Edu利用枠" />
+      </div>
+      <p class="lede">
+        OpenAIは9月8日、CUNY NewmarkとNorthwestern Medillの大学院生・教員向けに、400超のChatGPT Edu利用枠を提供すると発表した。報道機関向けの研修や教材を含む支援も広げる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">2026〜2027年度に向け、両校のジャーナリズム・技術拠点と連携。</li>
+        <li data-i="02">公開記録の分析、翻訳、アーカイブ検索などを利用例として挙げる。</li>
+        <li data-i="03">OpenAI Academy for News Organizationsで実務例や手順書を提供。</li>
+        <li data-i="04">EduワークスペースのデータはOpenAIのモデル学習に使わないと明記。</li>
+      </ul>
+      <div class="pull">
+        業界に合う教材や利用場面を、ツールの提供と一緒に整える事例だ。社内導入でも、試す仕事と結果を確かめる担当まで決める参考になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://openai.com/index/supporting-journalism-from-classrooms-to-newsrooms/">OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-08</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI導入と教育</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://openai.com/index/supporting-journalism-from-classrooms-to-newsrooms/">https://openai.com/index/supporting-journalism-from-classrooms-to-newsrooms/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · GOOGLE DEEPMIND</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AIの科学応用 <span class="sep">/</span> GOOGLE DEEPMIND <span class="sep">/</span> NEWS
+      </div>
+      <h2>約90億の遺伝子変異予測をAlphaGenome Atlasで公開</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-09/topic_7.png" data-alt="約90億の遺伝子変異予測をAlphaGenome Atlasで公開" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-09/topic_7.png" alt="約90億の遺伝子変異予測をAlphaGenome Atlasで公開" />
+      </div>
+      <p class="lede">
+        Google DeepMindは9月8日、ヒトゲノムで起こり得る約90億の一塩基変異について、分子への影響を予測したAlphaGenome Atlasを公開した。事前計算した結果を、Web画面・API・Google AntigravityのSkillから参照できる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">約1ペタバイトの予測データと、影響を順位付けするAVIスコアを提供。</li>
+        <li data-i="02">遺伝子の働きを調節する領域も含め、予測の根拠となる特徴を表示する。</li>
+        <li data-i="03">非商用の研究用途で利用可能。Atlasの商用提供はGoogle Cloudで近日予定。</li>
+        <li data-i="04">臨床用途での検証・承認は受けていない。予測結果は実験による確かめが必要。</li>
+      </ul>
+      <div class="pull">
+        大量の予測を事前に計算し、検索しやすいデータと操作手段を配る事例だ。研究者が個別の仮説を調べるまでの作業を減らす狙いがある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/">Google DeepMind</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-08</dd>
+        <dt>CATEGORY</dt>
+        <dd>AIの科学応用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/">https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/</a></dd>
+        <dd><a href="https://deepmind.google/science/alphagenome/">deepmind.google/science/alphagenome/</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://openai.com/index/introducing-chatgpt-images-2-5/">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-09-08/">
+      ← 前日 · 2026-09-08
+      <span class="big">OpenClawの更新で返信の復旧を改善</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-09-09/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260909.0724</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

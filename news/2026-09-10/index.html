@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-09-10 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-09-10 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0910</span>
+    <span class="sep">/</span>
+    <span>2026-09-10</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260910.0728</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-09-10/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:28 · WED</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · WEDNESDAY · SEPTEMBER 10, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>09<span class="dot">.</span>10</h1>
+    <div class="strap">
+      <span>OpenAIが流体の難問の証明を公開 · Claude · Claude · LM</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI研究 <span class="sep">/</span> OPENAI <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAIが流体の難問の証明を公開</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-10/topic_1.png" data-alt="OpenAIが流体の難問の証明を公開" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-10/topic_1.png" alt="OpenAIが流体の難問の証明を公開" />
+      </div>
+      <p class="lede">
+        OpenAIは9月8日、Navier–Stokes方程式のミレニアム問題について、未公開モデルを使うエージェント群が証明を得たと発表した。滑らかな外力がある条件で、エネルギーを有限に保ちながら流速が有限時間で発散する構成を示し、論文とLeanによる形式化を公開した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対象は公式問題文のC・Dに対応する、滑らかな外力を伴う場合。</li>
+        <li data-i="02">解決に至ったグループでは約1万のエージェントが並行して取り組んだと説明。</li>
+        <li data-i="03">証明の形式化と検証にはGPT-6 Astraを使い、さらに約17時間を要した。</li>
+        <li data-i="04">ミレニアム賞の受賞を主張する意図はないと明記している。</li>
+      </ul>
+      <div class="pull">
+        複数の仮説を並行して調べ、得た知見を共有し、最後に形式的に検証する研究手順が公開された。業務でも、探索役と検証役を分ける設計を考える材料になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://openai.com/index/navier-stokes-solution/">OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-08</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI研究</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://openai.com/index/navier-stokes-solution/">https://openai.com/index/navier-stokes-solution/</a></dd>
+        <dd><a href="https://cdn.openai.com/pdf/32d9f210-8b73-45e0-91bc-82a30aef8a9a/navier-stokes.pdf">cdn.openai.com/pdf/32d9f210-8b73-45e0-91…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · ANTHROPIC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI開発ツール <span class="sep">/</span> ANTHROPIC <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Codeに思考量の上限設定</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-10/topic_2.png" data-alt="Claude Codeに思考量の上限設定" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-10/topic_2.png" alt="Claude Codeに思考量の上限設定" />
+      </div>
+      <p class="lede">
+        Claude Code 2.1.267は、モデルが考える量の上限を組織側で設定するmaxEffortLevelを追加した。5MBを超える大きな会話を再開すると、並列ツール呼び出しとフックの出力が欠落する不具合も修正した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">effort上限はBedrock・Vertex・Foundryを含む全プロバイダに適用される。</li>
+        <li data-i="02">--system-prompt-snapshot offで、保存済みのシステム指示を再利用せず毎回描画できる。</li>
+        <li data-i="03">/compact後に-p --resumeで再開すると、不要な続行ターンが挿入される問題を修正。</li>
+        <li data-i="04">マーケットプレイスのパス検査や、読み取れない管理設定の扱いも修正した。</li>
+      </ul>
+      <div class="pull">
+        長い開発作業を途中から再開する人に関わる更新だ。上限設定を使う場合は、日々の処理に必要な品質を保てる範囲を実際のタスクで確かめたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.267">Anthropic</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.267">https://github.com/anthropics/claude-code/releases/tag/v2.1.267</a></dd>
+        <dd><a href="https://code.claude.com/docs/en/changelog">code.claude.com/docs/en/changelog</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · ANTHROPIC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        API運用 <span class="sep">/</span> ANTHROPIC <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude APIの費用をどこから減らすか</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-10/topic_3.png" data-alt="Claude APIの費用をどこから減らすか" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-10/topic_3.png" alt="Claude APIの費用をどこから減らすか" />
+      </div>
+      <p class="lede">
+        Anthropicは9月8日、Claude APIの費用を点検する手順を公開した。同じ入力を再利用するキャッシュ、古いモデル向けに増えた指示、タスクごとの思考量を見直すため、claude-api Skillに監査・比較用のコマンドを追加している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">prompt-auditは、重複した確認や矛盾する指示などを調べる。</li>
+        <li data-i="02">cost-optimizeは費用の内訳を調べ、キャッシュ・入力・出力・一括処理を見直す。</li>
+        <li data-i="03">hillclimbは評価データを学習用とテスト用に分け、モデルと設定の組み合わせを探す。</li>
+        <li data-i="04">キャッシュは同じモデルとバイト単位で一致する先頭部分が必要。Opus 5とFable 5.1は会話途中のeffort変更でもキャッシュを維持できる。</li>
+      </ul>
+      <div class="pull">
+        一律に思考量を減らすと、必要な調査まで省かれることがある。費用と正答率を同じ入力で比べれば、残すべき処理を決めやすい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://claude.com/blog/reducing-cost-and-improving-performance-with-claude-platform">Anthropic</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-08</dd>
+        <dt>CATEGORY</dt>
+        <dd>API運用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://claude.com/blog/reducing-cost-and-improving-performance-with-claude-platform">https://claude.com/blog/reducing-cost-and-improving-performance-with-claude-platform</a></dd>
+        <dd><a href="https://platform.claude.com/docs/en/build-with-claude/prompt-caching">platform.claude.com/docs/en/build-with-c…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · LM STUDIO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ローカルLLM <span class="sep">/</span> LM STUDIO <span class="sep">/</span> NEWS
+      </div>
+      <h2>LM Studio 0.4.24の読み込み設定</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-10/topic_4.png" data-alt="LM Studio 0.4.24の読み込み設定" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-10/topic_4.png" alt="LM Studio 0.4.24の読み込み設定" />
+      </div>
+      <p class="lede">
+        LM Studio 0.4.24は9月9日、GGUF形式のモデルを読み込む際に、llama.cppの高度な引数を上書きする機能を追加した。テキストと画像を一緒に渡した際のメッセージ分割や、画面の文脈長表示も修正している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">高度な引数の上書きはLM Studio Engine Protocol経由で提供。</li>
+        <li data-i="02">DSpark・DFlashの補助モデルとの互換性判定を改善。</li>
+        <li data-i="03">/api/v1/chatがテキストと画像を別々のユーザーメッセージへ分ける不具合を修正。</li>
+      </ul>
+      <div class="pull">
+        ローカルの画像付き会話や独自の読み込み設定を使う人に関わる。更新前後で同じ入力を試し、意図した設定が反映されるかを確認したい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://lmstudio.ai/changelog/lmstudio/lmstudio-v0.4.24">LM Studio</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>ローカルLLM</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://lmstudio.ai/changelog/lmstudio/lmstudio-v0.4.24">https://lmstudio.ai/changelog/lmstudio/lmstudio-v0.4.24</a></dd>
+        <dd><a href="https://lmstudio.ai/changelog/lmstudio">lmstudio.ai/changelog/lmstudio</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · GOOGLE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        業務・画像制作 <span class="sep">/</span> GOOGLE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Google AIプランの機能と対象地域</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-10/topic_5.png" data-alt="Google AIプランの機能と対象地域" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-10/topic_5.png" alt="Google AIプランの機能と対象地域" />
+      </div>
+      <p class="lede">
+        Googleは9月9日、Google AIの各プランに含まれる機能を整理した秋の更新を案内した。Gmail・Docs・Keepの音声操作、Google Pics、Sheets canvas、ChromeやPhotosと連携するGemini Sparkについて、利用できるプランと地域を示している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">GmailとKeepの音声機能はPlus・Pro・Ultra、DocsはPro・Ultraが対象。</li>
+        <li data-i="02">画像制作のGoogle Picsと、表を対話型のミニアプリにするSheets canvasはPro・Ultra。</li>
+        <li data-i="03">Gemini SparkのChrome・Photos連携は米国のPro・Ultra向け。</li>
+        <li data-i="04">個々の機能の初公開日とは別に、9月9日付でプランの内容を案内した。</li>
+      </ul>
+      <div class="pull">
+        使いたい機能から契約を確かめるための一覧だ。日本での提供や組織アカウントの条件を、個人向けプランの案内だけで判断しないようにしたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://blog.google/products-and-platforms/products/google-one/fall-2026-ai-plan-updates/">Google</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>業務・画像制作</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://blog.google/products-and-platforms/products/google-one/fall-2026-ai-plan-updates/">https://blog.google/products-and-platforms/products/google-one/fall-2026-ai-plan-updates/</a></dd>
+        <dd><a href="https://blog.google/products-and-platforms/products/workspace/voice-features-gmail-docs-keep/">blog.google/products-and-platforms/produ…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · ACCENTURE / GOOGLE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        企業のAI導入 <span class="sep">/</span> ACCENTURE / GOOGLE CLOUD <span class="sep">/</span> NEWS
+      </div>
+      <h2>Gemini導入を支える1,000人の計画</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-10/topic_6.png" data-alt="Gemini導入を支える1,000人の計画" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-10/topic_6.png" alt="Gemini導入を支える1,000人の計画" />
+      </div>
+      <p class="lede">
+        AccentureとGoogle Cloudは9月8日、Gemini Enterpriseの導入を支援する共同ビジネスグループを発足した。顧客の現場に入って実装を進めるエンジニア1,000人の体制を築く計画を掲げている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">約5万人のGoogle Cloud関連スキルを持つAccenture人材が基盤。</li>
+        <li data-i="02">業界別の導入手順、実験から全社展開への移行、利用定着を支援する。</li>
+        <li data-i="03">1,000人はこれから構築する体制の計画値。現在の在籍人数ではない。</li>
+        <li data-i="04">YouTubeでの平均対応時間37%短縮は、共同グループ設立前の事例として掲載。</li>
+      </ul>
+      <div class="pull">
+        ツールを契約した後に、現場へ合わせる人と継続利用の支援が必要になる。自社導入でも、試作担当に加えて運用と改善の担当を決める参考になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://newsroom.accenture.com/news/2026/accenture-and-google-cloud-deepen-partnership-with-formation-of-new-accenture-gemini-enterprise-business-group">Accenture / Google Cloud</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-08</dd>
+        <dt>CATEGORY</dt>
+        <dd>企業のAI導入</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://newsroom.accenture.com/news/2026/accenture-and-google-cloud-deepen-partnership-with-formation-of-new-accenture-gemini-enterprise-business-group">https://newsroom.accenture.com/news/2026/accenture-and-google-cloud-deepen-partnership-with-formation-of-new-accenture-gemini-enterprise-business-group</a></dd>
+        <dd><a href="https://www.googlecloudpresscorner.com/2026-09-08-Accenture-and-Google-Cloud-Deepen-Partnership-with-Formation-of-New-Accenture-Gemini-Enterprise-Business-Group">www.googlecloudpresscorner.com/2026-09-0…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · RAVENDB</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        社内データとAI <span class="sep">/</span> RAVENDB <span class="sep">/</span> NEWS
+      </div>
+      <h2>既存SQLをAIへつなぐQuill</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-10/topic_7.png" data-alt="既存SQLをAIへつなぐQuill" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-10/topic_7.png" alt="既存SQLをAIへつなぐQuill" />
+      </div>
+      <p class="lede">
+        RavenDBは9月8日、既存のSQLデータベースから必要な情報を同期し、AI向けの検索・取得に使うQuillを発表した。元の業務データベースを移行せず、AIが参照するデータの範囲を別に設定する設計だ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">PostgreSQL・SQL Server・MySQLに対応し、クラウドでも自社環境でも配置できる。</li>
+        <li data-i="02">同期する情報を絞り、AIごとに参照できる範囲を決められる。</li>
+        <li data-i="03">検索・情報取得・エージェント機能をまとめ、SlackやDiscordなどへの接続も案内。</li>
+        <li data-i="04">短期間で本番導入できるという説明は提供元の主張。自社の構成で検証が必要。</li>
+      </ul>
+      <div class="pull">
+        社内データのすべてをAIに見せる前に、何を同期し、誰が参照するのかを決める製品だ。既存システムとの境界を設計する例として読める。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.globenewswire.com/news-release/2026/09/08/3357703/0/en/ravendb-launches-quill-to-bring-production-ai-agents-to-enterprise-sql-systems-no-migration-required.html">RavenDB</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-08</dd>
+        <dt>CATEGORY</dt>
+        <dd>社内データとAI</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.globenewswire.com/news-release/2026/09/08/3357703/0/en/ravendb-launches-quill-to-bring-production-ai-agents-to-enterprise-sql-systems-no-migration-required.html">https://www.globenewswire.com/news-release/2026/09/08/3357703/0/en/ravendb-launches-quill-to-bring-production-ai-agents-to-enterprise-sql-systems-no-migration-required.html</a></dd>
+        <dd><a href="https://ravendb.net/quill">ravendb.net/quill</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · SHOGO KAJIYAMA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        動画編集の知見 <span class="sep">/</span> SHOGO KAJIYAMA <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>〈知見〉FFmpeg Skillの編集と出力確認</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-10/topic_8.png" data-alt="〈知見〉FFmpeg Skillの編集と出力確認" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-10/topic_8.png" alt="〈知見〉FFmpeg Skillの編集と出力確認" />
+      </div>
+      <p class="lede">
+        FFmpeg Skillの作者がv0.12.0の変更点を紹介した。動画編集のツールを21から28へ増やし、処理前の実行環境チェックや、書き出したファイルを確認してから完了を返す仕組みを加えたと説明している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">ピクセル単位の切り抜き、回転・反転、逆再生、手ブレ補正などを案内。</li>
+        <li data-i="02">複数音声トラックの指定や、後から切り替えられる字幕の保持にも対応。</li>
+        <li data-i="03">使えるエンコーダーやフォントを事前に調べ、失敗時には原因と再試行の可否を返す。</li>
+        <li data-i="04">作者による機能紹介。すべての機能を実機で確認したものではない。</li>
+      </ul>
+      <div class="pull">
+        AIに動画編集を任せるときは、変換の指示に加えて出力を確かめる仕組みが役立つ。元ファイルを保ち、尺・字幕・音声トラックを確認する運用の参考になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,401</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/kebura_P/status/2096964158994755604">@kebura_P</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-07</dd>
+        <dt>CATEGORY</dt>
+        <dd>動画編集の知見</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/kebura_P/status/2096964158994755604">x.com/kebura_P/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://openai.com/index/navier-stokes-solution/">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-09-09/">
+      ← 前日 · 2026-09-09
+      <span class="big">ChatGPT Images 2.5で部分編集をしやすく</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-09-10/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260910.0728</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

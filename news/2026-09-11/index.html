@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-09-11 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-09-11 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0911</span>
+    <span class="sep">/</span>
+    <span>2026-09-11</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260911.0719</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-09-11/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:19 · THU</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · THURSDAY · SEPTEMBER 11, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>09<span class="dot">.</span>11</h1>
+    <div class="strap">
+      <span>Claude · 金融データを内蔵したChatGPT · 社内データに質問して分析画面を作る · GPT-Live-1で会話と推論を分担</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI開発ツール <span class="sep">/</span> ANTHROPIC <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Codeの料金表示と接続修正</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-11/topic_1.png" data-alt="Claude Codeの料金表示と接続修正" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-11/topic_1.png" alt="Claude Codeの料金表示と接続修正" />
+      </div>
+      <p class="lede">
+        Claude Code 2.1.268は、自社用の接続口で設定した料金をクライアントにも配り、/costと利用額の表示を揃える機能を追加した。一部の互換APIで毎ターンHTTP 400が発生する不具合や、WebFetchが終わらない問題も修正している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">gateway.yamlの料金設定をクライアントへ配布。</li>
+        <li data-i="02">2.1.265以降の互換API接続エラーを修正。</li>
+        <li data-i="03">WebFetchの待機期限は既定300秒。設定で変更できる。</li>
+      </ul>
+      <div class="pull">
+        自前の接続先を使うチームに関わる更新だ。更新後は、普段の依頼が通るかと料金表示が合うかを同じ作業で確かめたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.268">Anthropic</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-10</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.268">https://github.com/anthropics/claude-code/releases/tag/v2.1.268</a></dd>
+        <dd><a href="https://code.claude.com/docs/en/changelog">code.claude.com/docs/en/changelog</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · OPENAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AIと業務 <span class="sep">/</span> OPENAI <span class="sep">/</span> NEWS
+      </div>
+      <h2>金融データを内蔵したChatGPT</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-11/topic_2.png" data-alt="金融データを内蔵したChatGPT" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-11/topic_2.png" alt="金融データを内蔵したChatGPT" />
+      </div>
+      <p class="lede">
+        OpenAIは9月10日、ChatGPT for Financial Servicesを発表した。GPT-6 Astraと金融データを組み合わせ、企業調査、財務モデル、顧客向け資料の作成を支援する。対象は利用条件を満たす金融機関。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Daloopa・PitchBook・LSEG News・Crunchbaseなどのデータを内蔵。</li>
+        <li data-i="02">数値の根拠となる表や文章を引用で確認できる。</li>
+        <li data-i="03">管理者がExcel・Word・PowerPointの社内テンプレートを配布。</li>
+      </ul>
+      <div class="pull">
+        業種に合うAIを考える際は、参照するデータと成果物の書式まで含めて設計する参考になる。既存のデータ契約との共有サインインは準備中で、すべて提供済みとは限らない。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://openai.com/index/introducing-chatgpt-financial-services/">OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-10</dd>
+        <dt>CATEGORY</dt>
+        <dd>AIと業務</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://openai.com/index/introducing-chatgpt-financial-services/">https://openai.com/index/introducing-chatgpt-financial-services/</a></dd>
+        <dd><a href="https://www.reuters.com/business/openai-launches-chatgpt-financial-services-industry-2026-09-10/">www.reuters.com/business/openai-launches…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · OPENAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        社内データ分析 <span class="sep">/</span> OPENAI <span class="sep">/</span> NEWS
+      </div>
+      <h2>社内データに質問して分析画面を作る</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-11/topic_3.png" data-alt="社内データに質問して分析画面を作る" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-11/topic_3.png" alt="社内データに質問して分析画面を作る" />
+      </div>
+      <p class="lede">
+        ChatGPT WorkのData agentは、許可された社内データに接続し、質問をもとに調査して共有可能なダッシュボードを作る。社内用語や指標の定義を参照し、接続アカウントの既存権限を引き継ぐ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">BigQuery・Snowflake・Databricksなどのデータに接続。</li>
+        <li data-i="02">テーブル・行・列の閲覧制限をクエリにも適用。</li>
+        <li data-i="03">Slackやメールへの共有、接続先での操作は承認した内容を実行。</li>
+      </ul>
+      <div class="pull">
+        先に売上や継続率の定義を揃えておくと、質問する人が変わっても分析を比べやすい。導入時は、見られるデータの範囲と指標の定義を一緒に点検したい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://openai.com/index/put-data-to-work/">OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-10</dd>
+        <dt>CATEGORY</dt>
+        <dd>社内データ分析</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://openai.com/index/put-data-to-work/">https://openai.com/index/put-data-to-work/</a></dd>
+        <dd><a href="https://www.xda-developers.com/openai-chatgpt-data-agent-announcement/">www.xda-developers.com/openai-chatgpt-da…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · OPENAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        音声AI <span class="sep">/</span> OPENAI <span class="sep">/</span> NEWS
+      </div>
+      <h2>GPT-Live-1で会話と推論を分担</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-11/topic_4.png" data-alt="GPT-Live-1で会話と推論を分担" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-11/topic_4.png" alt="GPT-Live-1で会話と推論を分担" />
+      </div>
+      <p class="lede">
+        OpenAIは9月10日、GPT-Live-1をAPIで公開した。相手の声を聞きながら話し、途中の割り込みにも対応する音声モデルで、深い推論やツール操作は別のモデルやエージェントへ任せられる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">会話のトーンやペースを指示で調整。</li>
+        <li data-i="02">推論・操作の担当にはGPT-6 Astraや外部モデルを選べる。</li>
+        <li data-i="03">発話を中断しても裏側の作業は自動では取り消されない。</li>
+      </ul>
+      <div class="pull">
+        音声で注文や予約を受ける仕組みでは、会話の中断と処理の取消しを分けて設計する必要がある。話し方に加え、確認・権限・作業状態をアプリ側で管理する点が実装の要になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://openai.com/index/introducing-gpt-live-1-in-the-api/">OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-10</dd>
+        <dt>CATEGORY</dt>
+        <dd>音声AI</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://openai.com/index/introducing-gpt-live-1-in-the-api/">https://openai.com/index/introducing-gpt-live-1-in-the-api/</a></dd>
+        <dd><a href="https://developers.openai.com/api/docs/guides/live">developers.openai.com/api/docs/guides/li…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · OPENAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI開発ツール <span class="sep">/</span> OPENAI <span class="sep">/</span> NEWS
+      </div>
+      <h2>Codexの作業場所を分ける実験機能</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-11/topic_5.png" data-alt="Codexの作業場所を分ける実験機能" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-11/topic_5.png" alt="Codexの作業場所を分ける実験機能" />
+      </div>
+      <p class="lede">
+        Codex CLI 0.154.0は、別の作業用チェックアウトを作る実験的なworktree機能を追加した。Codexが作業を続けている間に、提案された選択肢や自由文で質問に答える機能も加わった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">--worktreeや/worktreeで作業用チェックアウトを作成・再開。</li>
+        <li data-i="02">進行中の質問へ入力中の原稿を失わずに回答。</li>
+        <li data-i="03">GPT-6 Astraをモデル選択とAmazon Bedrockの一覧に追加。</li>
+        <li data-i="04">非推奨だったcodex mcp-serverの入口は削除。</li>
+      </ul>
+      <div class="pull">
+        同じリポジトリで別の変更を進めるとき、ファイルの混線を避ける選択肢になる。worktree機能は実験段階なので、既存作業を残せる小さな変更から試したい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/openai/codex/releases/tag/rust-v0.154.0">OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/openai/codex/releases/tag/rust-v0.154.0">https://github.com/openai/codex/releases/tag/rust-v0.154.0</a></dd>
+        <dd><a href="https://github.com/openai/codex/pull/42652">github.com/openai/codex/pull/42652</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · ANTHROPIC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AIサービスの調達 <span class="sep">/</span> ANTHROPIC <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Marketplaceの購入先が増加</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-11/topic_6.png" data-alt="Claude Marketplaceの購入先が増加" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-11/topic_6.png" alt="Claude Marketplaceの購入先が増加" />
+      </div>
+      <p class="lede">
+        Anthropicは9月9日、Claude MarketplaceにCursor、CrowdStrike、Factory、Gamma、Vercelを追加したと案内した。既存のAnthropic利用契約で約束した支出の一部を、対象のClaude搭載製品の購入に充てられる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">既存のAnthropic利用コミットメントがある企業向け。</li>
+        <li data-i="02">パートナー製品の請求はAnthropicが管理。</li>
+        <li data-i="03">振り向けられる金額や適用条件は担当窓口で確認。</li>
+      </ul>
+      <div class="pull">
+        個別に契約していた開発・資料作成ツールを調達する際の選択肢が増える。価格が下がるとは限らないため、既存契約と対象製品の条件を比較したい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/claudeai/status/2097718980437831935">@claudeai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>AIサービスの調達</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/claudeai/status/2097718980437831935">x.com/claudeai/…</a></dd>
+        <dd><a href="https://claude.com/marketplace">claude.com/marketplace</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · VERCEL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        アプリ制作 <span class="sep">/</span> VERCEL <span class="sep">/</span> NEWS
+      </div>
+      <h2>v0で認証やメールを接続</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-11/topic_7.png" data-alt="v0で認証やメールを接続" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-11/topic_7.png" alt="v0で認証やメールを接続" />
+      </div>
+      <p class="lede">
+        Vercelは9月9日、v0にResend、Amazon OpenSearch、MongoDB Atlas、Algolia、Clerkの接続機能を追加した。作りたいものを伝えるとチャットに接続カードを出し、接続後の設定も行う。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">接続先に必要な環境変数や設定を自動で用意。</li>
+        <li data-i="02">提供元が公開するagent skillsがあれば自動で読み込む。</li>
+        <li data-i="03">ResendではReact Emailを使うメール機能も生成。</li>
+      </ul>
+      <div class="pull">
+        画面の試作から、ログインやメール送信を含むアプリへ進む手間を減らす更新だ。接続した後は、自分のアカウントで実際の操作が通るかまで確かめたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/v0-adds-one-click-integrations-for-email-auth-search-and-databases">Vercel</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>アプリ制作</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/v0-adds-one-click-integrations-for-email-auth-search-and-databases">https://vercel.com/changelog/v0-adds-one-click-integrations-for-email-auth-search-and-databases</a></dd>
+        <dd><a href="https://vercel.com/marketplace/clerk">vercel.com/marketplace/clerk</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · OPENCLAW</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        エージェント運用 <span class="sep">/</span> OPENCLAW <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenClawの更新を事前に試す</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-11/topic_8.png" data-alt="OpenClawの更新を事前に試す" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-11/topic_8.png" alt="OpenClawの更新を事前に試す" />
+      </div>
+      <p class="lede">
+        OpenClaw 2026.9.3は、本番へ反映する前に隔離した状態で更新を試す仕組みを拡充した。複数の作業場所で同じSkill集合を使うSkill Workshopの管理も改善している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">コアとプラグインの変更を隔離環境で検証。</li>
+        <li data-i="02">温まったプロンプトキャッシュやworkerビルドを再利用。</li>
+        <li data-i="03">Node 24系は24.16.0以上、26系は26.1.0以上が必要。</li>
+      </ul>
+      <div class="pull">
+        常駐エージェントを更新する人は、先にNodeの対応版を確認したい。Node 22・25などは対象外で、単に「24以上ならよい」とは判断できない。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/openclaw/openclaw/releases/tag/v2026.9.3">OpenClaw</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-08</dd>
+        <dt>CATEGORY</dt>
+        <dd>エージェント運用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/openclaw/openclaw/releases/tag/v2026.9.3">https://github.com/openclaw/openclaw/releases/tag/v2026.9.3</a></dd>
+        <dd><a href="https://docs.openclaw.ai/cli/update">docs.openclaw.ai/cli/update</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.268">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-09-10/">
+      ← 前日 · 2026-09-10
+      <span class="big">OpenAIが流体の難問の証明を公開</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-09-11/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260911.0719</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

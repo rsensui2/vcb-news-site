@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-09-12 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-09-12 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0912</span>
+    <span class="sep">/</span>
+    <span>2026-09-12</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260912.0746</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-09-12/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:46 · FRI</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · FRIDAY · SEPTEMBER 12, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>09<span class="dot">.</span>12</h1>
+    <div class="strap">
+      <span>Agents · SWE-2は開発性能と費用を合わせて改善 · Copilotの操作権限を企業で統一 · GitHub</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        エージェント開発 <span class="sep">/</span> OPENAI <span class="sep">/</span> NEWS
+      </div>
+      <h2>Agents APIで実行管理をOpenAIに任せる</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-12/topic_1.png" data-alt="Agents APIで実行管理をOpenAIに任せる" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-12/topic_1.png" alt="Agents APIで実行管理をOpenAIに任せる" />
+      </div>
+      <p class="lede">
+        OpenAIはAgents APIの公開ベータを開始した。Codexの実行基盤で、長時間のセッションや文脈、ツール利用を管理する。コードやファイルを扱う環境はOpenAI提供、自社環境、提携先から選べる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">OpenAIがエージェントの処理ループを運用。</li>
+        <li data-i="02">長時間のセッションと文脈の管理に対応。</li>
+        <li data-i="03">実行環境はOpenAI・自社・提携先から選択。</li>
+      </ul>
+      <div class="pull">
+        業務固有の道具や手順に開発を集中しやすくなる。Vercelとの連携では、指示を追加しても作業ファイルを引き継ぐ構成が示されている。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://openai.com/index/introducing-the-agents-api/">OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-10</dd>
+        <dt>CATEGORY</dt>
+        <dd>エージェント開発</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://openai.com/index/introducing-the-agents-api/">https://openai.com/index/introducing-the-agents-api/</a></dd>
+        <dd><a href="https://vercel.com/changelog/build-with-openai-agents-api-on-vercel">vercel.com/changelog/build-with-openai-a…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · COGNITION</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発モデル <span class="sep">/</span> COGNITION <span class="sep">/</span> NEWS
+      </div>
+      <h2>SWE-2は開発性能と費用を合わせて改善</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-12/topic_2.png" data-alt="SWE-2は開発性能と費用を合わせて改善" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-12/topic_2.png" alt="SWE-2は開発性能と費用を合わせて改善" />
+      </div>
+      <p class="lede">
+        CognitionはコーディングモデルSWE-2を発表した。Kimi K3を追加学習し、Devin DesktopとCLIで提供を始めた。同社のFrontierCode 1.1 Main評価では正答率50.0%を記録している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Kimi K3をもとに追加学習。</li>
+        <li data-i="02">Devin Desktop・CLIで提供開始。</li>
+        <li data-i="03">FrontierCode 1.1 Mainは同社評価で50.0%。</li>
+        <li data-i="04">思考量ごとに性能と費用の選択肢を用意。</li>
+      </ul>
+      <div class="pull">
+        高い設定を常用する前に、自分の修正作業で品質と費用を比べたい。評価結果はCognitionによるもので、どの仕事でも同じ優位性があるとは限らない。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://cognition.com/blog/swe-2">Cognition</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-10</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発モデル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://cognition.com/blog/swe-2">https://cognition.com/blog/swe-2</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · GITHUB</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        権限管理 <span class="sep">/</span> GITHUB <span class="sep">/</span> NEWS
+      </div>
+      <h2>Copilotの操作権限を企業で統一</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-12/topic_3.png" data-alt="Copilotの操作権限を企業で統一" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-12/topic_3.png" alt="Copilotの操作権限を企業で統一" />
+      </div>
+      <p class="lede">
+        GitHub Copilot BusinessとEnterpriseの管理者が、エージェントの操作を禁止・人の承認が必要・確認なしで許可に分けて管理できるようになった。コマンド、ファイルの読み書き、接続先ドメインが対象になる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">個人設定や自動承認で企業の制限を緩められない。</li>
+        <li data-i="02">チームごとに異なるポリシーを設定できる。</li>
+        <li data-i="03">Copilot app・CLI・Agent Hostを使うVS Codeで一般提供。</li>
+      </ul>
+      <div class="pull">
+        AIに任せられる範囲を、各自の判断だけに頼らず揃えられる。まず自社で使うクライアントが対象かを確かめ、承認が必要な操作を決めておきたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-09-enterprise-managed-permissions-for-github-copilot-agent-operations/">GitHub</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>権限管理</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-09-enterprise-managed-permissions-for-github-copilot-agent-operations/">https://github.blog/changelog/2026-09-09-enterprise-managed-permissions-for-github-copilot-agent-operations/</a></dd>
+        <dd><a href="https://docs.github.com/en/enterprise-cloud@latest/copilot/reference/enterprise-administrators/enterprise-managed-settings">docs.github.com/en/enterprise-cloud@late…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · VERCEL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール連携 <span class="sep">/</span> VERCEL <span class="sep">/</span> NEWS
+      </div>
+      <h2>GitHub Copilotを共通の呼び出し口で使う</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-12/topic_4.png" data-alt="GitHub Copilotを共通の呼び出し口で使う" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-12/topic_4.png" alt="GitHub Copilotを共通の呼び出し口で使う" />
+      </div>
+      <p class="lede">
+        VercelのAI SDKに、GitHub Copilotを扱う公式アダプターが加わった。Claude CodeやCodexなどと同じHarnessAgentの仕組みで呼び出せるため、アプリ側のコードを保ちながらエージェントを切り替えられる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">公式パッケージは@ai-sdk/harness-github-copilot。</li>
+        <li data-i="02">HarnessAgentから他の対応エージェントと同じ形で利用。</li>
+        <li data-i="03">内部の接続にはAgent Client Protocolを使う。</li>
+        <li data-i="04">Harnessパッケージは実験段階で、変更の可能性がある。</li>
+      </ul>
+      <div class="pull">
+        同じ依頼を複数のエージェントで試すアプリを作りやすくなる。呼び出し方が揃っても、利用条件や挙動まで同じになるわけではない。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/github-copilot-ai-sdk-harness-adapter">Vercel</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-10</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール連携</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/github-copilot-ai-sdk-harness-adapter">https://vercel.com/changelog/github-copilot-ai-sdk-harness-adapter</a></dd>
+        <dd><a href="https://ai-sdk.dev/v7/providers/ai-sdk-harnesses/github-copilot">ai-sdk.dev/v7/providers/ai-sdk-harnesses…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · VERCEL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        実行環境 <span class="sep">/</span> VERCEL <span class="sep">/</span> NEWS
+      </div>
+      <h2>Vercel Sandboxの保存容量が64 GBに</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-12/topic_5.png" data-alt="Vercel Sandboxの保存容量が64 GBに" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-12/topic_5.png" alt="Vercel Sandboxの保存容量が64 GBに" />
+      </div>
+      <p class="lede">
+        Vercel Sandboxの保存容量が32 GBから64 GBへ増えた。Vercelの管理イメージ、自作イメージ、旧runtime指定で作る環境も対象と案内している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">保存容量は32 GBから64 GBへ倍増。</li>
+        <li data-i="02">大きなリポジトリや依存パッケージを置きやすくなる。</li>
+        <li data-i="03">ビルド成果物や一時データを使う処理向け。</li>
+      </ul>
+      <div class="pull">
+        コードと成果物を同じ作業環境に置く際の余裕が増える。これはディスク容量の変更で、メモリやCPUが倍増するという意味ではない。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/vercel-sandbox-64-gb-storage">Vercel</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-11</dd>
+        <dt>CATEGORY</dt>
+        <dd>実行環境</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/vercel-sandbox-64-gb-storage">https://vercel.com/changelog/vercel-sandbox-64-gb-storage</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · VERCEL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        外部サービス管理 <span class="sep">/</span> VERCEL <span class="sep">/</span> NEWS
+      </div>
+      <h2>Vercel Connectの管理者を絞れる</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-12/topic_6.png" data-alt="Vercel Connectの管理者を絞れる" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-12/topic_6.png" alt="Vercel Connectの管理者を絞れる" />
+      </div>
+      <p class="lede">
+        Vercel Connectで、外部サービスへの接続設定を作成・管理できる人を制限できるようになった。ProとEnterpriseのチームが対象で、Ownerがチーム設定から制限を有効にする。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">有効化後はOwnerかConnector Manager権限が必要。</li>
+        <li data-i="02">チームで管理する認証情報を使って外部サービスに接続。</li>
+        <li data-i="03">設定場所はTeam SettingsのConnector Permissions。</li>
+      </ul>
+      <div class="pull">
+        外部サービスとAIをつなぐ際、接続設定を変更できる担当者を明確にできる。接続を利用する操作の承認と、接続自体を管理する権限は分けて考えたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/control-who-can-manage-connectors-in-vercel-connect">Vercel</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-11</dd>
+        <dt>CATEGORY</dt>
+        <dd>外部サービス管理</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/control-who-can-manage-connectors-in-vercel-connect">https://vercel.com/changelog/control-who-can-manage-connectors-in-vercel-connect</a></dd>
+        <dd><a href="https://vercel.com/docs/rbac/access-roles/extended-permissions">vercel.com/docs/rbac/access-roles/extend…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · ANTHROPIC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AIの安全な運用 <span class="sep">/</span> ANTHROPIC <span class="sep">/</span> NEWS
+      </div>
+      <h2>AnthropicがAI悪用の事例を公開</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-12/topic_7.png" data-alt="AnthropicがAI悪用の事例を公開" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-12/topic_7.png" alt="AnthropicがAI悪用の事例を公開" />
+      </div>
+      <p class="lede">
+        Anthropicは9月の脅威情報レポートで、2025年12月から2026年8月に検知・阻止したAI悪用の事例を公開した。サイバー攻撃、監視、詐欺など7分野を扱い、関係するアカウントへの対応と防御策の改善を説明している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対象は過去に検知・阻止した活動。</li>
+        <li data-i="02">7分野の目立つ事例を紹介し、一般的な発生率は示していない。</li>
+        <li data-i="03">攻撃の速さ・規模・深さにAIが与える影響を整理。</li>
+      </ul>
+      <div class="pull">
+        AIによる操作を導入するときは、実行記録と権限の管理も運用に含めたい。紹介された事例から、AI利用全体の危険度や特定モデルの優劣を直接推定できない。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.anthropic.com/threat-intelligence-report-september-2026">Anthropic</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-10</dd>
+        <dt>CATEGORY</dt>
+        <dd>AIの安全な運用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.anthropic.com/threat-intelligence-report-september-2026">https://www.anthropic.com/threat-intelligence-report-september-2026</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · VLLM PROJECT</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ローカルAI <span class="sep">/</span> VLLM PROJECT <span class="sep">/</span> NEWS
+      </div>
+      <h2>vLLM MetalでMacのローカルAIを拡張</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-12/topic_8.png" data-alt="vLLM MetalでMacのローカルAIを拡張" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-12/topic_8.png" alt="vLLM MetalでMacのローカルAIを拡張" />
+      </div>
+      <p class="lede">
+        vLLM Metal 0.29.0が公開され、Apple SiliconのMacで扱えるモデルと検索用の埋め込みモデルが増えた。LFM2系などへの対応を広げ、公式のQwen3-Embeddingと多言語E5にも対応する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Apple Silicon・macOS 15以降・arm64 Python 3.12が対象。</li>
+        <li data-i="02">公式Qwen3-Embeddingと多言語E5を利用可能。</li>
+        <li data-i="03">一部のハイブリッドモデルのキャッシュは実験段階。</li>
+      </ul>
+      <div class="pull">
+        Mac上で文章を検索用の数値に変換し、ローカルの文書検索を試す選択肢が増える。対応モデル、必要なメモリ、キャッシュの制約を確認してから使いたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/vllm-project/vllm-metal/releases/tag/v0.29.0">vLLM Project</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-11</dd>
+        <dt>CATEGORY</dt>
+        <dd>ローカルAI</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/vllm-project/vllm-metal/releases/tag/v0.29.0">https://github.com/vllm-project/vllm-metal/releases/tag/v0.29.0</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://openai.com/index/introducing-the-agents-api/">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-09-11/">
+      ← 前日 · 2026-09-11
+      <span class="big">Claude Codeの料金表示と接続修正</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-09-12/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260912.0746</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

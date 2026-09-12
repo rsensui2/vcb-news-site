@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-09-13 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-09-13 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0913</span>
+    <span class="sep">/</span>
+    <span>2026-09-13</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260913.0751</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-09-13/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:51 · SAT</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SATURDAY · SEPTEMBER 13, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>09<span class="dot">.</span>13</h1>
+    <div class="strap">
+      <span>Claude · Claudeの利用費とつまずきをチーム別に見る · Tako · Vercel</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ニュース <span class="sep">/</span> GITHUB.COM <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Codeの評価・再開処理が改善</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-13/topic_1.png" data-alt="Claude Codeの評価・再開処理が改善" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-13/topic_1.png" alt="Claude Codeの評価・再開処理が改善" />
+      </div>
+      <p class="lede">
+        Claude Code 2.1.269は、プラグインの評価を再現可能な形で実行する機能と、VS Codeでサブエージェントの状態を確認する画面を追加しました。長いセッションの再開やキャッシュ利用も修正。翌12日の2.1.270では、読み取り専用のgitコマンドで余分な承認を求める不具合が修正されています。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">プラグイン評価をJSON・HTMLで出力</li>
+        <li data-i="02">VS Codeにエージェントの状態・停止・履歴表示</li>
+        <li data-i="03">2.1.270でgitの余分な承認要求を修正</li>
+      </ul>
+      <div class="pull">
+        作業手順をプラグインにまとめている人は、同じ評価を繰り返して改善を確かめられます。更新後は普段の作業と再開操作を一度試しておくと安心です。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.269">github.com</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-11T19:17:55Z</dd>
+        <dt>CATEGORY</dt>
+        <dd>ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.269">https://github.com/anthropics/claude-code/releases/tag/v2.1.269</a></dd>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.270">github.com/anthropics/claude-code/releas…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · SUPPORTCLAUDECOM</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ニュース <span class="sep">/</span> SUPPORT.CLAUDE.COM <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claudeの利用費とつまずきをチーム別に見る</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-13/topic_2.png" data-alt="Claudeの利用費とつまずきをチーム別に見る" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-13/topic_2.png" alt="Claudeの利用費とつまずきをチーム別に見る" />
+      </div>
+      <p class="lede">
+        AnthropicはClaude Enterprise向けにsmart reportsのベータ版を公開しました。最長28日間の会話記録から一部を分析し、仕事の種類、費用、繰り返すつまずき、共有Skillにできる手順をまとめます。個人の業績評価や雇用判断のための機能ではありません。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対象はClaude Enterprise、初期設定はオフ</li>
+        <li data-i="02">ベータ中は組織ごとに月10レポートまで無料</li>
+        <li data-i="03">個人・人事・健康・法務などの会話は分析から除外</li>
+      </ul>
+      <div class="pull">
+        利用回数だけでは、どの仕事が楽になったかは分かりません。費用の大きい作業や繰り返す失敗を見つけ、接続設定や共通手順の改善につなげられます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://support.claude.com/en/articles/16893491-get-started-with-smart-reports">support.claude.com</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-10</dd>
+        <dt>CATEGORY</dt>
+        <dd>ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://support.claude.com/en/articles/16893491-get-started-with-smart-reports">https://support.claude.com/en/articles/16893491-get-started-with-smart-reports</a></dd>
+        <dd><a href="https://support.claude.com/en/articles/12138966-release-notes">support.claude.com/en/articles/12138966-…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · VERCELCOM</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ニュース <span class="sep">/</span> VERCEL.COM <span class="sep">/</span> NEWS
+      </div>
+      <h2>Tako SearchがデータとWebを一度に検索</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-13/topic_3.png" data-alt="Tako SearchがデータとWebを一度に検索" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-13/topic_3.png" alt="Tako SearchがデータとWebを一度に検索" />
+      </div>
+      <p class="lede">
+        Tako Searchは整理されたデータとWebの検索結果をまとめて返し、出典やデータカードをAIへ渡します。Vercel AI Gatewayでは9月30日まで検索機能を無料で利用でき、別のTakoアカウントやAPIキーは不要です。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">モデルを替えても同じ検索連携を利用</li>
+        <li data-i="02">ドメイン・公開日でWeb検索を絞り込める</li>
+        <li data-i="03">検索の無料期間は9月30日まで</li>
+      </ul>
+      <div class="pull">
+        社内向けの調査AIでも、回答と根拠を一緒に確認しやすくなります。検索結果の質は、自社でよく使う質問を入れて確かめるのが出発点です。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/tako-search-is-free-on-ai-gateway-through-september-30th">vercel.com</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-10</dd>
+        <dt>CATEGORY</dt>
+        <dd>ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/tako-search-is-free-on-ai-gateway-through-september-30th">https://vercel.com/changelog/tako-search-is-free-on-ai-gateway-through-september-30th</a></dd>
+        <dd><a href="https://developer.tako.com/blog/tako-search-2-0/">developer.tako.com/blog/tako-search-2-0/…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · VERCELCOM</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ニュース <span class="sep">/</span> VERCEL.COM <span class="sep">/</span> NEWS
+      </div>
+      <h2>Vercel Sandboxの実行地域が20か所に</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-13/topic_4.png" data-alt="Vercel Sandboxの実行地域が20か所に" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-13/topic_4.png" alt="Vercel Sandboxの実行地域が20か所に" />
+      </div>
+      <p class="lede">
+        Vercel Sandboxの対応地域が4か所から20か所へ広がりました。データベースなどに近い地域でAIのコード実行環境を作れます。ProとEnterpriseでは、作成できなかった場合に試す代替地域も指定できます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">地域の選択は全プランで利用可能</li>
+        <li data-i="02">既定の地域はiad1のまま</li>
+        <li data-i="03">既存のSandboxは作成済みの地域に残る</li>
+      </ul>
+      <div class="pull">
+        処理のたびに離れた地域へ通信する構成では、待ち時間の短縮につながります。代替地域も含めて、データを扱ってよい場所と合わせて選べます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/vercel-sandbox-is-now-available-in-all-regions">vercel.com</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-10</dd>
+        <dt>CATEGORY</dt>
+        <dd>ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/vercel-sandbox-is-now-available-in-all-regions">https://vercel.com/changelog/vercel-sandbox-is-now-available-in-all-regions</a></dd>
+        <dd><a href="https://vercel.com/docs/sandbox/concepts/regions">vercel.com/docs/sandbox/concepts/regions…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · GITHUBBLOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ニュース <span class="sep">/</span> GITHUB.BLOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>GitHubのAI ScanをAPIで設定</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-13/topic_5.png" data-alt="GitHubのAI ScanをAPIで設定" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-13/topic_5.png" alt="GitHubのAI ScanをAPIで設定" />
+      </div>
+      <p class="lede">
+        GitHubは、プルリクエストを調べるAI Scanの有効・無効をREST APIで管理する機能を公開プレビューにしました。組織とリポジトリの両方に設定用のAPIが用意され、対象を絞った導入を自動化できます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">GitHub Advanced Security利用者が対象</li>
+        <li data-i="02">組織で無効なら個別リポジトリで上書きできない</li>
+        <li data-i="03">GitHub Enterprise Serverは今回の対象外</li>
+      </ul>
+      <div class="pull">
+        複数のアプリを運用するチームは、どのリポジトリで検査が有効かを確認しやすくなります。導入先を一つずつ画面で設定する手間も減らせます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-10-ai-scan-for-pull-request-apis-in-public-preview/">github.blog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-10</dd>
+        <dt>CATEGORY</dt>
+        <dd>ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-10-ai-scan-for-pull-request-apis-in-public-preview/">https://github.blog/changelog/2026-09-10-ai-scan-for-pull-request-apis-in-public-preview/</a></dd>
+        <dd><a href="https://docs.github.com/en/rest/code-scanning/code-scanning?apiVersion=2026-03-10">docs.github.com/en/rest/code-scanning/co…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · GITHUBBLOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ニュース <span class="sep">/</span> GITHUB.BLOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>GitHub Actionsのキャッシュ権限を選べる</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-13/topic_6.png" data-alt="GitHub Actionsのキャッシュ権限を選べる" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-13/topic_6.png" alt="GitHub Actionsのキャッシュ権限を選べる" />
+      </div>
+      <p class="lede">
+        GitHub Actionsに、キャッシュの読み書きをワークフローやジョブごとに制限するcache-modeが加わりました。全プランで一般提供され、読み取りのみ、読み書き、書き込みのみ、利用禁止の4種類を指定できます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">ジョブの設定がワークフローの設定に優先</li>
+        <li data-i="02">再利用先へ渡す権限は呼び出し元の範囲内</li>
+        <li data-i="03">低信頼イベントに書き込みを許すと警告</li>
+      </ul>
+      <div class="pull">
+        外部からの変更を検査する処理と、本番用の成果物を作る処理で、必要な権限を分けられます。設定を省略した場合は既存の安全な既定値が続きます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-10-control-github-actions-cache-access-with-cache-mode/">github.blog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-10</dd>
+        <dt>CATEGORY</dt>
+        <dd>ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-10-control-github-actions-cache-access-with-cache-mode/">https://github.blog/changelog/2026-09-10-control-github-actions-cache-access-with-cache-mode/</a></dd>
+        <dd><a href="https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax">docs.github.com/en/actions/reference/wor…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · XCOM</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        知見 <span class="sep">/</span> X.COM <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>〈知見〉ChatGPT Sitesの共同制作と共有範囲</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-13/topic_7.png" data-alt="〈知見〉ChatGPT Sitesの共同制作と共有範囲" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-13/topic_7.png" alt="〈知見〉ChatGPT Sitesの共同制作と共有範囲" />
+      </div>
+      <p class="lede">
+        ChatGPT公式はSitesの共同編集、指定相手への非公開共有、データベースの確認、独自ドメインなどの更新を紹介しています。社内ツールに使うときは、編集する人と閲覧する人を分けて考えると便利です。公式ヘルプでは、サイトの共有範囲とアプリ内のログインは別の設定と説明されています。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">編集を一緒に進める相手を招待できる</li>
+        <li data-i="02">共有前に別の利用者からの見え方を確認</li>
+        <li data-i="03">利用できる機能はプラン・地域・設定で異なる</li>
+      </ul>
+      <div class="pull">
+        小さな社内ツールでも、誰が編集でき、誰が開けるかを先に決めておくと運用しやすくなります。共有後は別の利用者のアカウントから、見える内容と操作できる範囲を確かめましょう。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ChatGPT/status/2098457920291946894">@ChatGPT</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-11T17:05:30Z</dd>
+        <dt>CATEGORY</dt>
+        <dd>知見</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ChatGPT/status/2098457920291946894">x.com/ChatGPT/…</a></dd>
+        <dd><a href="https://help.openai.com/en/articles/20001339">help.openai.com/en/articles/20001339</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · XCOM</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        知見 <span class="sep">/</span> X.COM <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>〈知見〉AIで作ったアプリのアクセス権を試す</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-13/topic_8.png" data-alt="〈知見〉AIで作ったアプリのアクセス権を試す" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-13/topic_8.png" alt="〈知見〉AIで作ったアプリのアクセス権を試す" />
+      </div>
+      <p class="lede">
+        八木利生太郎氏はMoltbookの事例を題材に、AIで作ったアプリのアクセス制限などを確認する観点を紹介しています。元のWiz調査は2月2日公開で、最新の漏えい事件ではありません。Wizによると問題の中心はDB側の権限設定であり、Supabaseの公開用キーがブラウザにあること自体で危険と決まるわけではありません。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">2つのテストアカウントで他人のデータに届かないか確認</li>
+        <li data-i="02">DBの行単位の権限で読み取り・書き込みの両方を検証</li>
+        <li data-i="03">秘密キーや認証トークンは公開用キーと区別して管理</li>
+      </ul>
+      <div class="pull">
+        ログイン画面が動くかに加えて、その人に許されたデータだけ扱えるかを確かめたいところです。AIへの指示に加え、実際のアクセス結果まで見ると確認漏れを減らせます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/yagiryuuu/status/2097955568183050569">@yagiryuuu</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-10T07:49:20Z</dd>
+        <dt>CATEGORY</dt>
+        <dd>知見</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/yagiryuuu/status/2097955568183050569">x.com/yagiryuuu/…</a></dd>
+        <dd><a href="https://www.wiz.io/blog/exposed-moltbook-database-reveals-millions-of-api-keys">www.wiz.io/blog/exposed-moltbook-databas…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.269">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-09-12/">
+      ← 前日 · 2026-09-12
+      <span class="big">Agents APIで実行管理をOpenAIに任せる</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-09-13/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260913.0751</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

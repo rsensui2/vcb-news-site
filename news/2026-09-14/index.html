@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-09-14 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-09-14 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0914</span>
+    <span class="sep">/</span>
+    <span>2026-09-14</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260914.0737</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-09-14/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:37 · SUN</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SUNDAY · SEPTEMBER 14, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>09<span class="dot">.</span>14</h1>
+    <div class="strap">
+      <span>Anthropicが外部評価者の常時受け入れを表明 · Copilotが修正済みのレビュー指摘を閉じる · VS · TailscaleのAI接続は利用者のIDで管理</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ニュース <span class="sep">/</span> DARIOAMODEI.COM <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropicが外部評価者の常時受け入れを表明</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-14/topic_1.png" data-alt="Anthropicが外部評価者の常時受け入れを表明" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-14/topic_1.png" alt="Anthropicが外部評価者の常時受け入れを表明" />
+      </div>
+      <p class="lede">
+        AnthropicのDario Amodei氏は、AIの能力向上に安全対策が追いつく時間を確保するため、開発の速度を調整する案を示しました。同社はまず、外部評価者に社員に近い継続的なアクセスを与え、安全対策や訓練中のモデルを検査できる体制を整えると表明しています。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">外部評価者による安全対策・事故・訓練過程の検査</li>
+        <li data-i="02">不利な評価結果も原則として公表できる契約を想定</li>
+        <li data-i="03">業界・国家間の調整は今後の提案</li>
+      </ul>
+      <div class="pull">
+        AIを選ぶ際は性能表に加え、問題が起きたとき誰が調べ、何が公開されるかも比較材料になります。導入企業にとっても、実行記録と第三者による確認を残す考え方が参考になります。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://darioamodei.com/post/we-must-pace-the-frontier">darioamodei.com</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-12T14:01:10Z</dd>
+        <dt>CATEGORY</dt>
+        <dd>ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://darioamodei.com/post/we-must-pace-the-frontier">https://darioamodei.com/post/we-must-pace-the-frontier</a></dd>
+        <dd><a href="https://x.com/DarioAmodei/status/2098773920774074715">x.com/DarioAmodei/status/209877392077407…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · GITHUBBLOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ニュース <span class="sep">/</span> GITHUB.BLOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Copilotが修正済みのレビュー指摘を閉じる</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-14/topic_2.png" data-alt="Copilotが修正済みのレビュー指摘を閉じる" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-14/topic_2.png" alt="Copilotが修正済みのレビュー指摘を閉じる" />
+      </div>
+      <p class="lede">
+        GitHub Copilot code reviewは、修正を含むコミットを再レビューした際、解消した自分の指摘を自動で閉じるようになりました。提案を適用するときのコミット文も変更内容に合わせて作成します。内部の検査ではビルドやテストなどの道具を使い、Lite設定でも複数エージェントの結果をまとめます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">再レビューで修正済みと判断した指摘を解決済みに</li>
+        <li data-i="02">未対応の指摘は開いたまま残す</li>
+        <li data-i="03">ビルド・テストを含む検証手段を拡大</li>
+      </ul>
+      <div class="pull">
+        残った指摘を追いやすくなります。自動で閉じた項目も、差分やテスト結果と照らして確認しましょう。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-11-auto-resolution-and-analysis-updates-in-copilot-code-review/">github.blog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-11</dd>
+        <dt>CATEGORY</dt>
+        <dd>ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-11-auto-resolution-and-analysis-updates-in-copilot-code-review/">https://github.blog/changelog/2026-09-11-auto-resolution-and-analysis-updates-in-copilot-code-review/</a></dd>
+        <dd><a href="https://docs.github.com/en/copilot/concepts/agents/code-review">docs.github.com/en/copilot/concepts/agen…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · GITHUBBLOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ニュース <span class="sep">/</span> GITHUB.BLOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>VS Code Agentsの利用状況をCopilotで集計</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-14/topic_3.png" data-alt="VS Code Agentsの利用状況をCopilotで集計" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-14/topic_3.png" alt="VS Code Agentsの利用状況をCopilotで集計" />
+      </div>
+      <p class="lede">
+        GitHubのCopilot利用状況レポートに、VS Codeの専用Agentsウィンドウの利用人数、セッション数、ユーザーメッセージ数が加わりました。1日・28日単位で組織全体と利用者別に確認できます。通常のエディター内のAgent Modeとは別の集計です。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">専用Agentsウィンドウの活動が対象</li>
+        <li data-i="02">該当データがなければ項目なし、またはnull</li>
+        <li data-i="03">閲覧権限と利用状況計測ポリシーの有効化が必要</li>
+      </ul>
+      <div class="pull">
+        どのチームで使われているかを把握し、研修後の定着を確認できます。利用回数だけを成果とみなさず、手戻りや作業時間と合わせて見ると改善点を探しやすくなります。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-11-add-vs-code-agents-to-copilot-usage-metrics/">github.blog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-11</dd>
+        <dt>CATEGORY</dt>
+        <dd>ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-11-add-vs-code-agents-to-copilot-usage-metrics/">https://github.blog/changelog/2026-09-11-add-vs-code-agents-to-copilot-usage-metrics/</a></dd>
+        <dd><a href="https://docs.github.com/en/rest/copilot/copilot-usage-metrics">docs.github.com/en/rest/copilot/copilot-…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · VERCELCOM</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        導入事例 <span class="sep">/</span> VERCEL.COM <span class="sep">/</span> NEWS
+      </div>
+      <h2>TailscaleのAI接続は利用者のIDで管理</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-14/topic_4.png" data-alt="TailscaleのAI接続は利用者のIDで管理" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-14/topic_4.png" alt="TailscaleのAI接続は利用者のIDで管理" />
+      </div>
+      <p class="lede">
+        VercelはTailscaleのAI接続サービスApertureの構築事例を公開しました。Apertureは社内ネットワークの利用者IDとAIへのアクセスを結び付け、個々の社員やエージェントへAPIキーを配る負担を減らします。事例では、モデルへの接続をAI Gateway、コードの実行場所をSandboxに任せる構成が説明されています。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">利用者の追加・削除とAIアクセスを連動</li>
+        <li data-i="02">モデルごとの費用と使用量を共通の接続口で取得</li>
+        <li data-i="03">実行用Sandboxもネットワーク上のIDで確認</li>
+      </ul>
+      <div class="pull">
+        人やAIが増えるたびに鍵を配る運用から、誰に何を許すかを管理する運用へ移せます。Aperture自体の新規発表ではなく、既存サービスの構築事例です。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/customers/how-tailscale-built-a-customer-facing-model-router-on-ai-gateway">vercel.com</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-11T00:00:00-04:00</dd>
+        <dt>CATEGORY</dt>
+        <dd>導入事例</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/customers/how-tailscale-built-a-customer-facing-model-router-on-ai-gateway">https://vercel.com/customers/how-tailscale-built-a-customer-facing-model-router-on-ai-gateway</a></dd>
+        <dd><a href="https://tailscale.com/blog/aperture-public-beta/">tailscale.com/blog/aperture-public-beta/…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · VERCELCOM</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        導入事例 <span class="sep">/</span> VERCEL.COM <span class="sep">/</span> NEWS
+      </div>
+      <h2>Featuredは3人の開発チームで広報AIを運営</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-14/topic_5.png" data-alt="Featuredは3人の開発チームで広報AIを運営" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-14/topic_5.png" alt="Featuredは3人の開発チームで広報AIを運営" />
+      </div>
+      <p class="lede">
+        Vercelの導入事例によると、広報支援サービスFeaturedは3人のエンジニアで3ブランドと10万人超の利用者を支えています。374のサイトを移し、17モデルへの接続と長時間の処理を共通基盤にまとめました。同社のエージェント経由のメディア向け提案は月10万件超としています。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">17モデルへの接続処理を共通化</li>
+        <li data-i="02">長時間の調査や候補選別をWorkflow SDKで実行</li>
+        <li data-i="03">会話中心の画面への改修を約1週間で実施と説明</li>
+      </ul>
+      <div class="pull">
+        少人数でAIサービスを運営する際、独自のデータや業務設計に時間を割くための事例です。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/customers/how-featureds-users-make-100k-media-pitches-per-month-on-vercel">vercel.com</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-11T00:00:00-04:00</dd>
+        <dt>CATEGORY</dt>
+        <dd>導入事例</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/customers/how-featureds-users-make-100k-media-pitches-per-month-on-vercel">https://vercel.com/customers/how-featureds-users-make-100k-media-pitches-per-month-on-vercel</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · WWWNETLIFYCOM</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ニュース <span class="sep">/</span> WWW.NETLIFY.COM <span class="sep">/</span> NEWS
+      </div>
+      <h2>Netlifyから公開サイトをSNSへ紹介しやすく</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-14/topic_6.png" data-alt="Netlifyから公開サイトをSNSへ紹介しやすく" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-14/topic_6.png" alt="Netlifyから公開サイトをSNSへ紹介しやすく" />
+      </div>
+      <p class="lede">
+        NetlifyにプロジェクトをSNSへ共有するボタンが加わりました。X、LinkedIn、Reddit、Facebook、Blueskyを選ぶと、プロジェクトのリンクを含む投稿画面が開きます。ボタンを押しただけで投稿が送信される仕組みではありません。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">5つのSNSに対応</li>
+        <li data-i="02">プロジェクトのリンクを投稿画面へ引き継ぐ</li>
+        <li data-i="03">投稿する内容は送信前に確認</li>
+      </ul>
+      <div class="pull">
+        試作したアプリの公開後、制作の経緯や使い方を添えて紹介する手間を減らせます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.netlify.com/changelog/2026-09-11-social-media-share-buttons/">www.netlify.com</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-11</dd>
+        <dt>CATEGORY</dt>
+        <dd>ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.netlify.com/changelog/2026-09-11-social-media-share-buttons/">https://www.netlify.com/changelog/2026-09-11-social-media-share-buttons/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · ARXIVORG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        知見 <span class="sep">/</span> ARXIV.ORG <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉AIが直した手順を未使用の課題で試す</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-14/topic_7.png" data-alt="〈知見〉AIが直した手順を未使用の課題で試す" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-14/topic_7.png" alt="〈知見〉AIが直した手順を未使用の課題で試す" />
+      </div>
+      <p class="lede">
+        HarnessDevは、AIに実行手順や道具の使い方を含むハーネスを作らせ、その後の自己改良を調べた研究です。64回の版変更のうち、開発中の評価と未使用課題の評価が同じ方向へ動いたのは34回でした。この数字は改善成功率ではなく、2種類の評価の方向が一致した割合です。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">構築実験は6モデル・5ベンチマーク・2,207課題</li>
+        <li data-i="02">最終版が未使用課題でも最良だったのは9系列中2系列</li>
+        <li data-i="03">実行モデルを替えると改善の結果も変わる</li>
+      </ul>
+      <div class="pull">
+        手順をAIに直させたら、改善に使わなかった別の仕事でも試す必要があります。成功率と利用量を一緒に比較し、変更前へ戻せる版を残すと効果を確かめやすくなります。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://arxiv.org/abs/2609.01437">arxiv.org</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-01</dd>
+        <dt>CATEGORY</dt>
+        <dd>知見</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://arxiv.org/abs/2609.01437">https://arxiv.org/abs/2609.01437</a></dd>
+        <dd><a href="https://self-developing-agents.github.io/">self-developing-agents.github.io/</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://darioamodei.com/post/we-must-pace-the-frontier">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-09-13/">
+      ← 前日 · 2026-09-13
+      <span class="big">Claude Codeの評価・再開処理が改善</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-09-14/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260914.0737</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

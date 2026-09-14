@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-09-15 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-09-15 の Vibe Coder Bootcamp モーニングディスパッチ — 6本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0915</span>
+    <span class="sep">/</span>
+    <span>2026-09-15</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>06 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260915.0722</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-09-15/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:22 · MON</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · MONDAY · SEPTEMBER 15, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>09<span class="dot">.</span>15</h1>
+    <div class="strap">
+      <span>Browser · Cloudflare · Deep · Claude</span>
+      <span><span class="count">06</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ニュース <span class="sep">/</span> DEVELOPERS.CLOUDFLARE.COM <span class="sep">/</span> NEWS
+      </div>
+      <h2>Browser Runでブラウザーの接続先を限定</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-15/topic_1.png" data-alt="Browser Runでブラウザーの接続先を限定" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-15/topic_1.png" alt="Browser Runでブラウザーの接続先を限定" />
+      </div>
+      <p class="lede">
+        CloudflareのBrowser Runに、ブラウザーがHTTP・HTTPSで接続できるホスト名を限定するguardrailsが加わりました。PuppeteerやPlaywrightなどでセッション開始時に設定し、許可していない接続先への要求を遮断します。操作せずに実行中の画面を見る、Live Viewの読み取り専用リンクも追加されました。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">許可リストはセッション開始時に設定し、その間は固定</li>
+        <li data-i="02">空の許可リストで外部HTTP・HTTPS通信を遮断</li>
+        <li data-i="03">Quick ActionsとKitesurfは対象外</li>
+      </ul>
+      <div class="pull">
+        AIにWeb操作を任せるとき、使ってよいサイトを実行環境側で絞れます。HTMLからPDFを作る用途でも、意図しない外部画像やスクリプトの読み込みを防げます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-09-14-guardrails/">developers.cloudflare.com</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-14</dd>
+        <dt>CATEGORY</dt>
+        <dd>ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-09-14-guardrails/">https://developers.cloudflare.com/changelog/post/2026-09-14-guardrails/</a></dd>
+        <dd><a href="https://developers.cloudflare.com/browser-run/features/guardrails/">developers.cloudflare.com/browser-run/fe…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · DEVELOPERSCLOUDFLA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ニュース <span class="sep">/</span> DEVELOPERS.CLOUDFLARE.COM <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cloudflare DLPで機密データの送信先を調べる</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-15/topic_2.png" data-alt="Cloudflare DLPで機密データの送信先を調べる" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-15/topic_2.png" alt="Cloudflare DLPで機密データの送信先を調べる" />
+      </div>
+      <p class="lede">
+        Cloudflareは、情報漏洩対策機能DLPのPassive Detectionを一般提供しました。Gatewayを通るHTTP通信の一部を抽出して調べ、機密情報の種類や送信先、既存ルールの適用状況を表示します。遮断ルールを作る前から調査できますが、この機能自体が通信を遮断するわけではありません。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Gatewayを通るHTTP要求・応答の一部が検査対象</li>
+        <li data-i="02">HTTPSの検査にはTLS復号などの前提設定が必要</li>
+        <li data-i="03">元の要求・応答本文は保存せず、検出情報を表示</li>
+      </ul>
+      <div class="pull">
+        社内のデータがどのサービスへ送られているかを把握し、実態に合わせてルールを作れます。AIサービスへの入力を調べる場合も、全通信の検査ではない点を踏まえて使う機能です。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-09-14-passive-detection/">developers.cloudflare.com</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-14</dd>
+        <dt>CATEGORY</dt>
+        <dd>ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-09-14-passive-detection/">https://developers.cloudflare.com/changelog/post/2026-09-14-passive-detection/</a></dd>
+        <dd><a href="https://developers.cloudflare.com/cloudflare-one/data-loss-prevention/passive-detection/">developers.cloudflare.com/cloudflare-one…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · GITHUBCOM</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ニュース <span class="sep">/</span> GITHUB.COM <span class="sep">/</span> NEWS
+      </div>
+      <h2>Deep Agentsが長い会話の再試行と費用表示を修正</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-15/topic_3.png" data-alt="Deep Agentsが長い会話の再試行と費用表示を修正" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-15/topic_3.png" alt="Deep Agentsが長い会話の再試行と費用表示を修正" />
+      </div>
+      <p class="lede">
+        Deep Agents 0.7.14は、会話の圧縮後にもモデルへ渡す情報量を確認し、入力上限を超えた際の再試行を制限します。縮められない要求はエラーで終了し、同じ大きさの要求を繰り返す事態を防ぎます。同日公開のDeep Agents Code 0.1.69では、子エージェントの費用表示にそのモデルの単価を使い、最終利用量で補正する修正も入りました。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">圧縮処理1回につき、小さくした要求での再試行は最大1回</li>
+        <li data-i="02">システム指示とツール定義も入力量の確認対象</li>
+        <li data-i="03">入力のトークン数は推定値で、モデルの上限設定が必要</li>
+        <li data-i="04">Code 0.1.69は子エージェントの暫定費用表示を修正</li>
+      </ul>
+      <div class="pull">
+        長時間のAI作業では、失敗した要求を無制限に再送しない設計が必要です。費用の表示改善と実際の利用量削減は別なので、停止理由と確定した費用を一緒に確認しましょう。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/langchain-ai/deepagents/releases/tag/deepagents%3D%3D0.7.14">github.com</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-14T14:45:29Z</dd>
+        <dt>CATEGORY</dt>
+        <dd>ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/langchain-ai/deepagents/releases/tag/deepagents%3D%3D0.7.14">https://github.com/langchain-ai/deepagents/releases/tag/deepagents%3D%3D0.7.14</a></dd>
+        <dd><a href="https://github.com/langchain-ai/deepagents/pull/6267">github.com/langchain-ai/deepagents/pull/…</a></dd>
+        <dd><a href="https://github.com/langchain-ai/deepagents/releases/tag/deepagents-code%3D%3D0.1.69">github.com/langchain-ai/deepagents/relea…</a></dd>
+        <dd><a href="https://github.com/langchain-ai/deepagents/pull/6251">github.com/langchain-ai/deepagents/pull/…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · GITHUBCOM</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ニュース <span class="sep">/</span> GITHUB.COM <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code 2.1.270でGit閲覧時の許可要求を修正</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-15/topic_4.png" data-alt="Claude Code 2.1.270でGit閲覧時の許可要求を修正" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-15/topic_4.png" alt="Claude Code 2.1.270でGit閲覧時の許可要求を修正" />
+      </div>
+      <p class="lede">
+        Claude Code 2.1.270は、長く続いているセッションで、Bashから実行する読み取り専用のGitコマンドにも予期せず許可を求める不具合を修正しました。2.1.269で入った問題への修正です。公開ノートに記載された変更はこの1件です。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対象はBash経由の読み取り専用Gitコマンド</li>
+        <li data-i="02">しばらく実行していたセッションで発生</li>
+        <li data-i="03">2.1.269で入った不具合を2.1.270で修正</li>
+      </ul>
+      <div class="pull">
+        差分や履歴の確認で作業が止まりやすくなった人は、利用中の版を確認する手がかりになります。許可を一括で無効化する前に、既知の不具合かを切り分けられます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.270">github.com</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-12T19:45:44Z</dd>
+        <dt>CATEGORY</dt>
+        <dd>ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.270">https://github.com/anthropics/claude-code/releases/tag/v2.1.270</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · DEVELOPERSCLOUDFLA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ニュース <span class="sep">/</span> DEVELOPERS.CLOUDFLARE.COM <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cloudflare Accessで毎回の再認証を要求</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-15/topic_5.png" data-alt="Cloudflare Accessで毎回の再認証を要求" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-15/topic_5.png" alt="Cloudflare Accessで毎回の再認証を要求" />
+      </div>
+      <p class="lede">
+        Cloudflare Accessは、SAML方式で連携する認証サービスに対して、ログインのたびに改めて本人確認を求められるようになりました。force_authnを有効にすると、署名の有無にかかわらず認証要求へForceAuthnを付けます。既定値は無効です。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">既存の認証セッションだけに頼らないログインを要求</li>
+        <li data-i="02">署名付き・署名なしのSAML要求に対応</li>
+        <li data-i="03">APIではforce_authnをtrueに設定</li>
+      </ul>
+      <div class="pull">
+        社内アプリの重要な操作画面など、改めて本人確認を求めたい用途の選択肢です。実際の画面や認証手順は連携先の認証サービスも含めて確認する必要があります。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-09-14-saml-force-authentication/">developers.cloudflare.com</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-14</dd>
+        <dt>CATEGORY</dt>
+        <dd>ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-09-14-saml-force-authentication/">https://developers.cloudflare.com/changelog/post/2026-09-14-saml-force-authentication/</a></dd>
+        <dd><a href="https://developers.cloudflare.com/cloudflare-one/integrations/identity-providers/generic-saml/">developers.cloudflare.com/cloudflare-one…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · WWWLANGCHAINCOM</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        知見 <span class="sep">/</span> WWW.LANGCHAIN.COM <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉OpenWikiでコードと説明書を一緒に更新</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-15/topic_6.png" data-alt="〈知見〉OpenWikiでコードと説明書を一緒に更新" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-15/topic_6.png" alt="〈知見〉OpenWikiでコードと説明書を一緒に更新" />
+      </div>
+      <p class="lede">
+        Credit Genieの導入事例では、OpenWikiが夜間にコードの変更を調べ、説明書の更新をプルリクエストとして作成します。各リポジトリの文書は検索用ポータルへ集約し、AIにも変更前にopenwikiフォルダーを読むよう指示しています。9月10日公開の事例を、説明書の保守方法として紹介します。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">夜間の変更確認から説明書更新のPRを作成</li>
+        <li data-i="02">人は横断検索ポータル、AIはリポジトリ内の文書を参照</li>
+        <li data-i="03">リポジトリ間の依存関係との連携は今後の計画</li>
+      </ul>
+      <div class="pull">
+        人が読む説明書とAIに渡す文脈を、同じコード変更から更新する考え方が参考になります。この事例には更新PRの自動マージも含まれますが、導入時は文書の正しさを確かめる工程を設けたいところです。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.langchain.com/blog/how-credit-genie-uses-openwiki-to-keep-codebase-knowledge-fresh-searchable-and-automated">www.langchain.com</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-10</dd>
+        <dt>CATEGORY</dt>
+        <dd>知見</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.langchain.com/blog/how-credit-genie-uses-openwiki-to-keep-codebase-knowledge-fresh-searchable-and-automated">https://www.langchain.com/blog/how-credit-genie-uses-openwiki-to-keep-codebase-knowledge-fresh-searchable-and-automated</a></dd>
+        <dd><a href="https://github.com/langchain-ai/openwiki">github.com/langchain-ai/openwiki</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://developers.cloudflare.com/changelog/post/2026-09-14-guardrails/">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-09-14/">
+      ← 前日 · 2026-09-14
+      <span class="big">Anthropicが外部評価者の常時受け入れを表明</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-09-15/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260915.0722</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

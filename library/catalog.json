@@ -1,7 +1,47 @@
 {
- "generated": "2026-09-15T08:22:25+09:00",
- "count": 71,
+ "generated": "2026-09-16T08:23:01+09:00",
+ "count": 75,
  "items": [
+  {
+   "type": "note",
+   "type_label": "note",
+   "title": "AI秘書をSlackに常駐させる最後の1区間──Appレベルトークンと、秘密の置き場所",
+   "date": "2026-09-15",
+   "url": "https://note.com/rsensui/n/n74524ecef07b",
+   "tags": [],
+   "description": "",
+   "extra_links": []
+  },
+  {
+   "type": "note",
+   "type_label": "note",
+   "title": "Claude APIを使う前に知っておくこと──非エンジニアのための注意点チェックリスト",
+   "date": "2026-09-15",
+   "url": "https://note.com/rsensui/n/n265d8567e36c",
+   "tags": [],
+   "description": "",
+   "extra_links": []
+  },
+  {
+   "type": "note",
+   "type_label": "note",
+   "title": "「AIに毎回指示するのをやめたい」の壁を、二段で越える",
+   "date": "2026-09-15",
+   "url": "https://note.com/rsensui/n/nf12553d36829",
+   "tags": [],
+   "description": "",
+   "extra_links": []
+  },
+  {
+   "type": "note",
+   "type_label": "note",
+   "title": "長いプロンプトは「真ん中」が読まれない──md／システムプロンプトの中だるみ対策",
+   "date": "2026-09-15",
+   "url": "https://note.com/rsensui/n/n3d4bd63e214b",
+   "tags": [],
+   "description": "",
+   "extra_links": []
+  },
   {
    "type": "article",
    "type_label": "記事（エージェント経営）",

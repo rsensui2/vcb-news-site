@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-09-16 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-09-16 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0916</span>
+    <span class="sep">/</span>
+    <span>2026-09-16</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260916.0722</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-09-16/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:22 · TUE</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · TUESDAY · SEPTEMBER 16, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>09<span class="dot">.</span>16</h1>
+    <div class="strap">
+      <span>Copilotの自動選択で費用と品質の優先度を指定 · Gemini · Claude · AI</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ニュース <span class="sep">/</span> GITHUB.BLOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Copilotの自動選択で費用と品質の優先度を指定</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-16/topic_1.png" data-alt="Copilotの自動選択で費用と品質の優先度を指定" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-16/topic_1.png" alt="Copilotの自動選択で費用と品質の優先度を指定" />
+      </div>
+      <p class="lede">
+        GitHub Copilotのモデル自動選択に、費用重視のEfficiency、均衡を取るBalance、品質重視のIntelligenceが加わりました。どの設定でも候補モデルは共通で、依頼の内容に応じて選びます。品質重視でも、簡単な依頼には小さなモデルを使う場合があります。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">VS Code、Copilot CLI、Copilot appへ順次提供</li>
+        <li data-i="02">費用・品質・応答時間の優先度を選択</li>
+        <li data-i="03">料金は実際に選ばれたモデルに基づく</li>
+        <li data-i="04">有料プランの自動選択には引き続き10%割引</li>
+      </ul>
+      <div class="pull">
+        普段の修正と難しい設計で、AIに求める水準を切り替えやすくなります。同じ作業で結果と費用を比べ、自分の用途に合う設定を探せます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-14-configure-cost-and-quality-in-copilot-auto-model-selection/">github.blog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-14</dd>
+        <dt>CATEGORY</dt>
+        <dd>ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-14-configure-cost-and-quality-in-copilot-auto-model-selection/">https://github.blog/changelog/2026-09-14-configure-cost-and-quality-in-copilot-auto-model-selection/</a></dd>
+        <dd><a href="https://docs.github.com/en/copilot/concepts/models/auto-model-selection">docs.github.com/en/copilot/concepts/mode…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · VERCELCOM</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ニュース <span class="sep">/</span> VERCEL.COM <span class="sep">/</span> NEWS
+      </div>
+      <h2>Gemini 3.8 Liveで会話中も推論とツールを実行</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-16/topic_2.png" data-alt="Gemini 3.8 Liveで会話中も推論とツールを実行" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-16/topic_2.png" alt="Gemini 3.8 Liveで会話中も推論とツールを実行" />
+      </div>
+      <p class="lede">
+        Vercel AI Gatewayで、Googleの音声対話モデルGemini 3.8 LiveとExtended Thinking版が利用できるようになりました。標準版は97言語の自動切り替えや会話中のツール呼び出しに対応します。Extended Thinking版は、音声のやり取りと並行して複数段階の推論を進めます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">AI SDKのrealtime APIから接続</li>
+        <li data-i="02">短命トークンとWebSocketを使用</li>
+        <li data-i="03">Extended Thinking版は処理中の進捗も声で伝えられる</li>
+      </ul>
+      <div class="pull">
+        音声で依頼を受け、調べ物の途中にも応答するアプリを作る選択肢です。試作では答えの正しさに加え、待ち時間の伝え方や割り込み時の挙動も確かめたいところです。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/gemini-3-8-live-models-now-available-on-ai-gateway">vercel.com</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-15</dd>
+        <dt>CATEGORY</dt>
+        <dd>ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/gemini-3-8-live-models-now-available-on-ai-gateway">https://vercel.com/changelog/gemini-3-8-live-models-now-available-on-ai-gateway</a></dd>
+        <dd><a href="https://vercel.com/ai-gateway/models/gemini-3.8-live-extended-thinking">vercel.com/ai-gateway/models/gemini-3.8-…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · GITHUBCOM</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ニュース <span class="sep">/</span> GITHUB.COM <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code 2.1.273で子エージェントの結果通知を修正</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-16/topic_3.png" data-alt="Claude Code 2.1.273で子エージェントの結果通知を修正" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-16/topic_3.png" alt="Claude Code 2.1.273で子エージェントの結果通知を修正" />
+      </div>
+      <p class="lede">
+        Claude Code 2.1.273は、子エージェントの最終応答に利用量やモデルIDがない場合、失敗扱いとなって結果が届かない不具合を修正しました。途中でバックグラウンドへ移した子エージェントの残りのメッセージが、SDKなどの出力から抜ける問題にも対応しています。権限判定や管理者設定の適用に関する修正も含まれます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">子エージェントの完了結果が欠落する条件を修正</li>
+        <li data-i="02">文脈量の二重計上による早すぎる圧縮を修正</li>
+        <li data-i="03">MCP接続の自動復旧を断念した際に通知</li>
+      </ul>
+      <div class="pull">
+        長い作業をAIへ任せる場合、処理の完了と結果の受け取りを分けて確認する必要があります。結果が来ない、会話が早く圧縮されるといった症状の切り分けに使える更新です。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.273">github.com</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-15T20:23:03Z</dd>
+        <dt>CATEGORY</dt>
+        <dd>ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.273">https://github.com/anthropics/claude-code/releases/tag/v2.1.273</a></dd>
+        <dd><a href="https://raw.githubusercontent.com/anthropics/claude-code/main/CHANGELOG.md">raw.githubusercontent.com/anthropics/cla…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · VERCELCOM</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ニュース <span class="sep">/</span> VERCEL.COM <span class="sep">/</span> NEWS
+      </div>
+      <h2>AI SDKが対応エージェントのサブスク認証を利用</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-16/topic_4.png" data-alt="AI SDKが対応エージェントのサブスク認証を利用" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-16/topic_4.png" alt="AI SDKが対応エージェントのサブスク認証を利用" />
+      </div>
+      <p class="lede">
+        複数のコーディングエージェントを同じ呼び出し方で動かすAI SDKのharness層が、各エージェントのサブスクリプション認証に対応しました。対応する実行環境では、ホスト側にある認証情報を利用します。明示したAPI認証情報が優先され、ai-gatewayモードではサブスク認証を読みません。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">directモードは明示した認証情報がなければサブスクを参照</li>
+        <li data-i="02">autoモードはGateway認証情報がない場合に同様に動作</li>
+        <li data-i="03">実際のトークンはホスト側で管理・更新</li>
+      </ul>
+      <div class="pull">
+        既存の契約を使ってエージェントを組み込む選択肢が増えます。利用できる認証方式は各エージェントに依存するため、接続確認と利用量の確認をセットで行いましょう。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/ai-sdk-harness-native-subscription-authentication">vercel.com</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-14</dd>
+        <dt>CATEGORY</dt>
+        <dd>ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/ai-sdk-harness-native-subscription-authentication">https://vercel.com/changelog/ai-sdk-harness-native-subscription-authentication</a></dd>
+        <dd><a href="https://ai-sdk.dev/providers/ai-sdk-harnesses">ai-sdk.dev/providers/ai-sdk-harnesses</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · GITHUBCOM</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ニュース <span class="sep">/</span> GITHUB.COM <span class="sep">/</span> NEWS
+      </div>
+      <h2>Ollama 0.34.1でMacのモデル作成と一覧取得を改善</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-16/topic_5.png" data-alt="Ollama 0.34.1でMacのモデル作成と一覧取得を改善" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-16/topic_5.png" alt="Ollama 0.34.1でMacのモデル作成と一覧取得を改善" />
+      </div>
+      <p class="lede">
+        Ollama 0.34.1では、MLX形式のsafetensorsからモデルを作る機能が実験扱いを外れました。Apple Siliconのメモリ処理や、大きなモデル一覧の取得も改善しています。一方、GGUFモデルの作成では、safetensorsの変換と量子化にllama.cppのツールを使う方式へ変わりました。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">MLXモデル作成の実験扱いを終了</li>
+        <li data-i="02">開発側の一覧取得テストは3.1秒から294ミリ秒へ短縮</li>
+        <li data-i="03">同じトークンの繰り返し検出を100回に変更</li>
+        <li data-i="04">新規モデルではtypical_pを設定できなくなった</li>
+      </ul>
+      <div class="pull">
+        MacでローカルAIを運用する人は、モデルの読み込みだけでなく作成手順も確認したい更新です。速度の数値は開発側の条件での測定であり、自分のモデル数や端末で再確認が必要です。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/ollama/ollama/releases/tag/v0.34.1">github.com</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-14T22:14:03Z</dd>
+        <dt>CATEGORY</dt>
+        <dd>ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/ollama/ollama/releases/tag/v0.34.1">https://github.com/ollama/ollama/releases/tag/v0.34.1</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · GITHUBBLOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ニュース <span class="sep">/</span> GITHUB.BLOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Copilotがリポジトリの分類項目を提案</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-16/topic_6.png" data-alt="Copilotがリポジトリの分類項目を提案" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-16/topic_6.png" alt="Copilotがリポジトリの分類項目を提案" />
+      </div>
+      <p class="lede">
+        GitHub Copilotが、リポジトリの管理用属性を作るときに選択肢を提案する機能を公開プレビューしました。たとえば外部公開の有無を表すinternet-facingという属性なら、yes・noのような値を提案します。対象はCopilot BusinessとEnterpriseです。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">企業・組織レベルの属性定義が対象</li>
+        <li data-i="02">提案した選択肢をワンクリックで採用</li>
+        <li data-i="03">管理者がポリシーで利用可否を制御</li>
+      </ul>
+      <div class="pull">
+        複数のリポジトリへ共通ルールを適用するには、分類の揺れを減らすことが先決です。提案をたたき台に、社内で意味が通じる項目と値を決められます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-15-github-copilot-suggests-custom-properties-definitions/">github.blog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-15</dd>
+        <dt>CATEGORY</dt>
+        <dd>ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-15-github-copilot-suggests-custom-properties-definitions/">https://github.blog/changelog/2026-09-15-github-copilot-suggests-custom-properties-definitions/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · GITHUBBLOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ニュース <span class="sep">/</span> GITHUB.BLOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>GitHubの企業共通セキュリティ設定を組織管理者にも適用</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-16/topic_7.png" data-alt="GitHubの企業共通セキュリティ設定を組織管理者にも適用" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-16/topic_7.png" alt="GitHubの企業共通セキュリティ設定を組織管理者にも適用" />
+      </div>
+      <p class="lede">
+        GitHub Advanced Securityの設定を、企業内の組織管理者も上書きできないように固定できるようになりました。従来の適用対象はリポジトリ所有者まででした。企業の管理者は、設定を固定しない、リポジトリ所有者まで固定、組織所有者まで固定の3通りから選べます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">企業レベルの設定を組織全体へ適用</li>
+        <li data-i="02">組織・リポジトリ管理者による上書きを防止</li>
+        <li data-i="03">Enforcement欄で適用範囲を選択</li>
+      </ul>
+      <div class="pull">
+        チームごとに設定が変わり、共通の検査が外れる事態を防ぐための機能です。管理を一元化する場合は、変更を受け付ける担当と手順も決めておくと運用しやすくなります。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-15-enforce-github-advanced-security-configurations/">github.blog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-15</dd>
+        <dt>CATEGORY</dt>
+        <dd>ニュース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-15-enforce-github-advanced-security-configurations/">https://github.blog/changelog/2026-09-15-enforce-github-advanced-security-configurations/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://github.blog/changelog/2026-09-14-configure-cost-and-quality-in-copilot-auto-model-selection/">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-09-15/">
+      ← 前日 · 2026-09-15
+      <span class="big">Browser Runでブラウザーの接続先を限定</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-09-16/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260916.0722</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

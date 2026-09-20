@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №016</span>
+    <span class="tick">BOOKMARK №028</span>
     <span class="sep">/</span>
     <span>2026-09-07</span>
     <span class="sep">/</span>
     <span>@kebura_P</span>
     <span class="sep">/</span>
-    <span>543 ITEMS</span>
+    <span>555 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:11 WED</span>
+    <span>JST 07:15 MON</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,19 +305,19 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-09-15/">NEWS</a>
+      <a href="../news/2026-09-16/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:11 · WED</div>
+    <div class="meta">JST · 07:15 · MON</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-09-07 <span>/</span> №016
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-09-07 <span>/</span> №028
     </div>
     <div class="cat-line">
       <span>💻 AI・開発 / 📖 知見</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">FFmpeg Skill v0.12.0の編集機能</h1>
     <div class="strap">
-      <span><span class="label">№</span>016 / 543</span>
+      <span><span class="label">№</span>028 / 555</span>
       <span><span class="label">SRC</span><a href="https://x.com/kebura_P/status/2096964158994755604" target="_blank" rel="noopener noreferrer">x.com/kebura_P ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/545_kebura_P_ffmpeg-skill-012.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">016<span class="ord">BOOKMARK / 543</span></aside>
+    <aside class="numeral">028<span class="ord">BOOKMARK / 555</span></aside>
     <article class="prose">
 <h2>概要</h2><p>FFmpeg Skillのツールが21から28に増え、編集機能と出力確認を追加した。</p><h2>日本語訳全文</h2><p>FFmpeg Skill Update 🎬</p><p>Ver.0.9.2→Ver.0.12.0</p><p>「この動画を9:16にして」「無音カットして」「字幕入れて」</p><p>に加えて、今はこんな指示もできます。</p><p>「この部分だけピクセル単位でクロップして」</p><p>「この写真、ズームしながらクリップにして」(Ken Burns風)</p><p>「動画を回転/反転して」</p><p>「この動画にロゴ動画を合成して」「グリーンバックを抜いて」</p><p>「この動画、逆再生にして」</p><p>「手ブレを直して」</p><p>「連番の画像から動画作って」</p><p>「単色/グラデーションの背景クリップ作って」</p><p>「劣化なしでそのまま書き出して」</p><p>「字幕は画質そのままで、後から切り替えられる形で入れて」</p><p>「ハイライトは音量じゃなくて長さで選んで」</p><p>「AI解析用に軽い解像度でプレビュー書き出して」</p><p>できることが21→28個のツールに増えました。</p><p>🔍 AIが「わかった上で」処理するように</p><p>・「今この環境でこのツールが実際に使えるか」を実行前に事前チェック</p><p>・GPUエンコーダー/フォント代替の有無も把握</p><p>・複数の音声トラックを持つファイル(吹き替え・別言語版など)で、使うトラックをほぼ全ツールで指定可能に</p><p>・字幕トラックの言語などの詳細も読み取れるように</p><p>・字幕タイミングをタイムコード(hh:mm:ss:ff)形式でも指定可能に</p><p>・9:16化などのクロップで、切り取る位置(左寄せ/右寄せなど)も指定可能に</p><p>・音声を再エンコードするかしないか、各ツールが正直に申告するように</p><p>✅ 「壊れない・嘘をつかない」を徹底</p><p>・書き出しが本当に成功したか毎回確認してから「完了」と報告、失敗時のゴミファイルも残さない</p><p>・元の動画ファイルを誤って上書き・破損させない安全策</p><p>・失敗した時、原因とやり直せるかをAIが判別</p><p>・色変換で再エンコードが必要になった場合も、字幕や追加の音声トラックをできる限り残すように</p><p>・同期のズレを検出した時、信頼度が低い場合はAIに警告</p><p>・最新FFmpeg / Windows環境でも安定動作(Windowsのパス周りのバグ修正含む)</p><p>🛠️ 開発・保守の仕組みも強化</p><p>・「AIがして良いこと/判断すべきでないこと」を明文化(勝手にAIが「見た目の良さ」を判断しない設計)</p><p>・生FFmpegコマンドへの逃げ道を塞ぐテストを追加</p><p>・ドキュメントと実際のコードの挙動がズレたら自動テストで検知</p><p>・OSSとしてのContributing手順を整備、バージョンタグを打つとGitHub Releaseが自動生成される仕組みを追加</p><p>・GPU対応について「対応してるとは言うが動作保証はしない」ことを正直に明記</p><p>Claude Code / Cursor / Codex対応、MCPあり、ローカル処理でクラウド不要は変わらず。</p><p>Current: v0.12.0</p><p>https://t.co/5Uuz4Zs09B</p><p>#FFmpeg #AIVideo #AI #MCP #ClaudeCode #OpenSource</p><h2>原文リンク</h2><p>https://x.com/kebura_P/status/2096964158994755604</p>
     </article>
@@ -384,14 +384,14 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 543 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 555 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-09-15/">TODAY</a></li>
+          <li><a href="../news/2026-09-16/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -418,7 +418,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-09-16</span>
+      <span>BUILD 2026-09-21</span>
     </div>
   </div>
 </footer>

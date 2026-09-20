@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-09-21 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-09-21 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0921</span>
+    <span class="sep">/</span>
+    <span>2026-09-21</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260921.0728</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-09-21/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:28 · SUN</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SUNDAY · SEPTEMBER 21, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>09<span class="dot">.</span>21</h1>
+    <div class="strap">
+      <span>Claude · Claude · mcp-handlerがWebMCPに実験対応 · v0で社内の非公開部品を使える</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> ANTHROPIC / CLAUDE CODEリリースノート <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Codeが共通の指示書AGENTS.mdに対応</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-21/topic_1.png" data-alt="Claude Codeが共通の指示書AGENTS.mdに対応" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-21/topic_1.png" alt="Claude Codeが共通の指示書AGENTS.mdに対応" />
+      </div>
+      <p class="lede">
+        Claude Code 2.1.277は、CLAUDE.mdがない場合に開発AIへの指示書AGENTS.mdを読み込むようになりました。設定画面で切り替えられますが、Bedrock・Vertex・Foundryなどのクラウド経由にはまだ対応していません。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">CLAUDE.mdがない場合の代替として読む</li>
+        <li data-i="02">/configのProject instructionsで変更</li>
+        <li data-i="03">Bedrock・Vertex・Foundryは現時点で対象外</li>
+      </ul>
+      <div class="pull">
+        複数の開発AIで指示書を共有しやすくなります。既存のCLAUDE.mdが優先される点を確かめてから整理しましょう。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.277">Anthropic / Claude Codeリリースノート</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-18</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.277">https://github.com/anthropics/claude-code/releases/tag/v2.1.277</a></dd>
+        <dd><a href="https://x.com/trq212/status/2101009392611278961">x.com/trq212/status/2101009392611278961</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · ANTHROPIC / CLAUDE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI運用 <span class="sep">/</span> ANTHROPIC / CLAUDE CODEリリースノート <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Codeの自動判定費用を確認しやすく</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-21/topic_2.png" data-alt="Claude Codeの自動判定費用を確認しやすく" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-21/topic_2.png" alt="Claude Codeの自動判定費用を確認しやすく" />
+      </div>
+      <p class="lede">
+        Claude Code 2.1.278は、auto modeで操作の安全性を調べる処理を、対応環境ではサーバー側に任せる設定を既定にしました。サーバー側で行う判定には追加料金がかからず、従来の有料判定へ戻る場合は警告が出ます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">API・Enterpriseや対応クラウドが対象</li>
+        <li data-i="02">/statusでAuto mode serverを確認</li>
+        <li data-i="03">判定が従来方式に戻ると課金が続く</li>
+      </ul>
+      <div class="pull">
+        自動実行の費用を調べる際、通常の推論と安全判定を分けて確認できます。サーバー側判定の対応状況は接続経路や地域によって異なります。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.278">Anthropic / Claude Codeリリースノート</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI運用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.278">https://github.com/anthropics/claude-code/releases/tag/v2.1.278</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · VERCEL / MCP-HANDL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI連携 <span class="sep">/</span> VERCEL / MCP-HANDLER公式文書 <span class="sep">/</span> NEWS
+      </div>
+      <h2>mcp-handlerがWebMCPに実験対応</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-21/topic_3.png" data-alt="mcp-handlerがWebMCPに実験対応" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-21/topic_3.png" alt="mcp-handlerがWebMCPに実験対応" />
+      </div>
+      <p class="lede">
+        mcp-handler 2.2.0が、ブラウザー内のAIへ操作機能を渡すWebMCPに実験対応しました。サーバーがセッションCookie認証に対応していれば、指定したツールをログイン中の利用者として呼び出せます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">公開するツールを許可リストで指定</li>
+        <li data-i="02">セッションCookie認証への対応が必要</li>
+        <li data-i="03">対応ブラウザーなどでスクリプトを追加</li>
+      </ul>
+      <div class="pull">
+        既存の検索や業務操作を、Web画面内のAIに渡す方法が増えます。実験段階のため、まず参照だけを行う機能で動作を確かめるのがよさそうです。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/webmcp-mcp-handler">Vercel / mcp-handler公式文書</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-18</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI連携</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/webmcp-mcp-handler">https://vercel.com/changelog/webmcp-mcp-handler</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · VERCEL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AIとデザイン <span class="sep">/</span> VERCEL公式更新情報 <span class="sep">/</span> NEWS
+      </div>
+      <h2>v0で社内の非公開部品を使える</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-21/topic_4.png" data-alt="v0で社内の非公開部品を使える" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-21/topic_4.png" alt="v0で社内の非公開部品を使える" />
+      </div>
+      <p class="lede">
+        v0が、Vercelの共有環境変数に登録した認証情報で非公開パッケージを取得できるようになりました。社内で共通の見た目や機能を持つ部品を、そのまま画面づくりに使えます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">npm用はNPM_TOKEN、独自の配布元はNPM_RC</li>
+        <li data-i="02">共有設定は開発用・確認用の環境に適用</li>
+        <li data-i="03">認証情報はモデルや作業用ファイルへ渡さない設計</li>
+      </ul>
+      <div class="pull">
+        試作の段階から社内のデザインや実装を使いやすくなります。既存部品を再利用できれば、本番向けに作り直す手間を減らせそうです。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/v0-now-reads-npm-credentials-from-shared-environment-variables">Vercel公式更新情報</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-18</dd>
+        <dt>CATEGORY</dt>
+        <dd>AIとデザイン</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/v0-now-reads-npm-credentials-from-shared-environment-variables">https://vercel.com/changelog/v0-now-reads-npm-credentials-from-shared-environment-variables</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · VERCEL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        モデル提供 <span class="sep">/</span> VERCEL公式更新情報 <span class="sep">/</span> NEWS
+      </div>
+      <h2>GLM 5.3 FlashXをAI Gatewayから利用</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-21/topic_5.png" data-alt="GLM 5.3 FlashXをAI Gatewayから利用" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-21/topic_5.png" alt="GLM 5.3 FlashXをAI Gatewayから利用" />
+      </div>
+      <p class="lede">
+        Vercel AI GatewayがGLM 5.3 FlashXに対応しました。Vercelは毎秒約200トークンの出力速度を案内しており、コード生成やツールを繰り返し使う処理向けの選択肢になります。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">モデル指定はzai/glm-5.3-flashx</li>
+        <li data-i="02">約200トークン毎秒は提供元の案内値</li>
+        <li data-i="03">AI Gatewayで利用量と費用を確認できる</li>
+      </ul>
+      <div class="pull">
+        AIの返答待ちが長い処理で、速度と品質を比較する候補が増えます。案内された速度が手元の処理でも出るかは、実際の入力で確かめる必要があります。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/glm-5-3-flashx-now-available-on-ai-gateway">Vercel公式更新情報</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-18</dd>
+        <dt>CATEGORY</dt>
+        <dd>モデル提供</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/glm-5-3-flashx-now-available-on-ai-gateway">https://vercel.com/changelog/glm-5-3-flashx-now-available-on-ai-gateway</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · GITHUB</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発レビュー <span class="sep">/</span> GITHUB公式更新情報 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Copilotレビューで残る指摘を追いやすく</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-21/topic_6.png" data-alt="Copilotレビューで残る指摘を追いやすく" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-21/topic_6.png" alt="Copilotレビューで残る指摘を追いやすく" />
+      </div>
+      <p class="lede">
+        GitHub Copilotのコードレビューが、未対応・前回から解決済み・再レビューで新たに見つかった指摘を分けて表示するようになりました。指摘には短いタイトルが付き、対応条件を満たす修正提案をまとめて採用する際のコミット文も生成します。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">未対応と解決済みを概要で見分ける</li>
+        <li data-i="02">再レビューで見つかった既存の問題も表示</li>
+        <li data-i="03">利用者が未解決のまま残すと返信した指摘を維持</li>
+      </ul>
+      <div class="pull">
+        修正と再レビューを重ねても、残った問題を見失いにくくなります。AIが解決済みとした項目も、テスト結果と合わせて確認しましょう。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-18-copilot-code-review-an-improved-review-experience/">GitHub公式更新情報</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-18</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発レビュー</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-18-copilot-code-review-an-improved-review-experience/">https://github.blog/changelog/2026-09-18-copilot-code-review-an-improved-review-experience/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · GITHUB / NPM</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        公開と権限 <span class="sep">/</span> GITHUB / NPM公式文書 <span class="sep">/</span> NEWS
+      </div>
+      <h2>npmに直接公開を許可しないトークン</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-21/topic_7.png" data-alt="npmに直接公開を許可しないトークン" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-21/topic_7.png" alt="npmに直接公開を許可しないトークン" />
+      </div>
+      <p class="lede">
+        npmに、パッケージを公開前の確認場所へ提出できる自動処理用の認証情報「stage-onlyトークン」が加わりました。このトークンでは直接公開できず、保守担当者が二要素認証を使って承認してから公開します。既存パッケージが対象で、導入するかどうかは選べます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">自動処理はnpm stage publishで提出</li>
+        <li data-i="02">直接のnpm publishは拒否される</li>
+        <li data-i="03">タグ変更や廃止指定の権限は残る</li>
+        <li data-i="04">既存トークンの公開権限は変わらない</li>
+      </ul>
+      <div class="pull">
+        自動化に任せる範囲と、人が公開を決める段階を分けられます。stage-onlyにも書き込み権限が残るため、読み取り専用とは区別して管理します。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-18-stage-only-npm-tokens-for-safer-automation/">GitHub / npm公式文書</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-18</dd>
+        <dt>CATEGORY</dt>
+        <dd>公開と権限</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-18-stage-only-npm-tokens-for-safer-automation/">https://github.blog/changelog/2026-09-18-stage-only-npm-tokens-for-safer-automation/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.277">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-09-16/">
+      ← 前日 · 2026-09-16
+      <span class="big">Copilotの自動選択で費用と品質の優先度を指定</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-09-21/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260921.0728</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

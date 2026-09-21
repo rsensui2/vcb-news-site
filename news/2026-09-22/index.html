@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-09-22 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-09-22 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0922</span>
+    <span class="sep">/</span>
+    <span>2026-09-22</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260922.0726</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-09-22/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:26 · MON</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · MONDAY · SEPTEMBER 22, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>09<span class="dot">.</span>22</h1>
+    <div class="strap">
+      <span>Grok · GitHub · Vercelのビルド利用量を確認 · TeamsボットをVercelから接続</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        モデル・料金 <span class="sep">/</span> VERCEL <span class="sep">/</span> NEWS
+      </div>
+      <h2>Grok 4.7をAI Gatewayで試せる</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-22/topic_1.png" data-alt="Grok 4.7をAI Gatewayで試せる" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-22/topic_1.png" alt="Grok 4.7をAI Gatewayで試せる" />
+      </div>
+      <p class="lede">
+        Vercel AI GatewayにGrok 4.7が加わり、9月27日まで利用料金が40%割引になります。一度に扱える文脈の長さは50万トークンで、推論の深さを4段階から選べます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">割引は9月27日まで自動適用</li>
+        <li data-i="02">モデルIDはspacexai/grok-4.7</li>
+        <li data-i="03">推論はlow・medium・high・xhighの4段階</li>
+      </ul>
+      <div class="pull">
+        比較するときは、同じ課題で精度・待ち時間・利用料金を記録すると選びやすくなります。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/grok-4-7-now-available-and-40-off-on-ai-gateway-fx-eve">Vercel</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-21T00:00:00</dd>
+        <dt>CATEGORY</dt>
+        <dd>モデル・料金</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/grok-4-7-now-available-and-40-off-on-ai-gateway-fx-eve">https://vercel.com/changelog/grok-4-7-now-available-and-40-off-on-ai-gateway-fx-eve</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · GITHUB</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> GITHUB <span class="sep">/</span> NEWS
+      </div>
+      <h2>GitHub CopilotにもGrok 4.7</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-22/topic_2.png" data-alt="GitHub CopilotにもGrok 4.7" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-22/topic_2.png" alt="GitHub CopilotにもGrok 4.7" />
+      </div>
+      <p class="lede">
+        GitHub CopilotでGrok 4.7の段階的な提供が始まりました。VS CodeやCopilot CLIなどのモデル選択欄から利用でき、料金は提供元の定価に基づく従量制です。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Pro・Pro+・Max・Business・Enterpriseが対象</li>
+        <li data-i="02">順次提供のため、まだ表示されない場合がある</li>
+        <li data-i="03">組織の管理者はモデルポリシーで利用を制御</li>
+      </ul>
+      <div class="pull">
+        Copilotでの料金と、Vercelの期間限定割引は別の条件です。普段使う接続先の料金を確認しましょう。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot/">GitHub</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-21T00:00:00</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot/">https://github.blog/changelog/2026-09-21-grok-4-7-is-now-available-in-github-copilot/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · VERCEL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発基盤 <span class="sep">/</span> VERCEL <span class="sep">/</span> NEWS
+      </div>
+      <h2>Vercelのビルド利用量を確認</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-22/topic_3.png" data-alt="Vercelのビルド利用量を確認" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-22/topic_3.png" alt="Vercelのビルド利用量を確認" />
+      </div>
+      <p class="lede">
+        Vercelでデプロイごとの請求対象時間とCPU分を確認できるようになりました。画面、CLI、REST APIから、各ビルドが利用量に占める分を調べられます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">請求対象時間はビルドと後処理の合計を分単位で切り上げ</li>
+        <li data-i="02">CPU分は請求対象時間にvCPU数を掛けて算出</li>
+        <li data-i="03">CLIでの表示は59.23.1以降に対応</li>
+      </ul>
+      <div class="pull">
+        時間が短いビルドでも、CPU数が多ければ利用量は増えます。時間とCPU数を合わせて見るのがポイントです。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/deployments-now-show-billable-duration-and-cpu-minutes">Vercel</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-21T00:00:00</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発基盤</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/deployments-now-show-billable-duration-and-cpu-minutes">https://vercel.com/changelog/deployments-now-show-billable-duration-and-cpu-minutes</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · VERCEL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        業務チャット <span class="sep">/</span> VERCEL <span class="sep">/</span> NEWS
+      </div>
+      <h2>TeamsボットをVercelから接続</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-22/topic_4.png" data-alt="TeamsボットをVercelから接続" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-22/topic_4.png" alt="TeamsボットをVercelから接続" />
+      </div>
+      <p class="lede">
+        Vercel ConnectがMicrosoft Teamsに対応しました。アプリやエージェントがチャネルでの呼びかけやDMを受け取り、ボットとして返信できます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">テナント管理者とAzureサブスクリプションが初期設定に必要</li>
+        <li data-i="02">EntraアプリとAzure Botの登録はVercelが担当</li>
+        <li data-i="03">トークンは必要時に取得し、自動更新</li>
+      </ul>
+      <div class="pull">
+        Teamsを使う職場でも、チャットから呼べる業務アプリを作りやすくなります。導入時は管理者と接続先の環境を決めておきましょう。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/vercel-connect-microsoft-teams">Vercel</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-21T00:00:00</dd>
+        <dt>CATEGORY</dt>
+        <dd>業務チャット</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/vercel-connect-microsoft-teams">https://vercel.com/changelog/vercel-connect-microsoft-teams</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · GITHUB</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ <span class="sep">/</span> GITHUB <span class="sep">/</span> NEWS
+      </div>
+      <h2>GitHubの認証情報をCSVで棚卸し</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-22/topic_5.png" data-alt="GitHubの認証情報をCSVで棚卸し" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-22/topic_5.png" alt="GitHubの認証情報をCSVで棚卸し" />
+      </div>
+      <p class="lede">
+        GitHub Enterprise Cloudで、企業のGitHub環境にアクセスできる鍵やトークンの一覧をCSVに出せるようになりました。所有者や権限、利用日などを確認でき、トークンの値そのものは出力されません。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Enterprise所有者または専用権限を持つ利用者が対象</li>
+        <li data-i="02">CSVは全件を書き出してから列で絞り込む</li>
+        <li data-i="03">同じ認証情報が複数の組織で使われると行が重複する</li>
+      </ul>
+      <div class="pull">
+        一覧を作っても認証情報は失効しません。不要な権限を見つけたら、利用中の処理への影響を確認して別途対処します。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-21-github-enterprise-adds-credential-inventory-exports/">GitHub</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-21T00:00:00</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-21-github-enterprise-adds-credential-inventory-exports/">https://github.blog/changelog/2026-09-21-github-enterprise-adds-credential-inventory-exports/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · NEWS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        コンテキスト設計 <span class="sep">/</span> 今野健介氏 <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>〈知見〉Jevで読む記憶を絞る</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-22/topic_6.png" data-alt="〈知見〉Jevで読む記憶を絞る" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-22/topic_6.png" alt="〈知見〉Jevで読む記憶を絞る" />
+      </div>
+      <p class="lede">
+        今野健介氏が、検索済みの記憶候補をJevで選別してCodexやClaude Codeに渡す実装を紹介しました。「62.5%削減」は候補件数の上限を8件から3件に減らした場合の計算値で、総トークンや料金の削減実測ではありません。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">ローカル検索を残し、その後に候補を選別</li>
+        <li data-i="02">ダミーデータでの実通信で、2候補を1候補に絞れたと報告</li>
+        <li data-i="03">全体の費用効果は未測定で、Jev側にも処理が発生</li>
+      </ul>
+      <div class="pull">
+        試す際は必要な記憶が残っているかを確かめ、CodexやClaude Codeへ渡す文字数も記録しましょう。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">81</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/dansyu_callenge/status/2101789813443801556">@dansyu_callenge</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-21T00:00:00</dd>
+        <dt>CATEGORY</dt>
+        <dd>コンテキスト設計</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/dansyu_callenge/status/2101789813443801556">x.com/dansyu_callenge/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · OIKON</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        検索の使い方 <span class="sep">/</span> OIKON氏 <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>〈知見〉Jevで意図から探すデモ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-22/topic_7.png" data-alt="〈知見〉Jevで意図から探すデモ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-22/topic_7.png" alt="〈知見〉Jevで意図から探すデモ" />
+      </div>
+      <p class="lede">
+        Oikon氏が、Jevを使って意図から検索するブラウザ拡張のデモを紹介しています。短い紹介投稿で、検索精度や速度、一般公開の条件までは示されていません。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">ブラウザ拡張の検索用途を紹介</li>
+        <li data-i="02">紹介者の感想と、性能の実測は区別する</li>
+        <li data-i="03">導入判断には元デモや公開条件の確認が必要</li>
+      </ul>
+      <div class="pull">
+        探したい内容を言葉で伝える検索の使い方が見えてきます。自分の資料で役立つかは、探し漏れを含めて試す必要があります。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">559</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/oikon48/status/2101795788938695127">@oikon48</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-21T00:00:00</dd>
+        <dt>CATEGORY</dt>
+        <dd>検索の使い方</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/oikon48/status/2101795788938695127">x.com/oikon48/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://vercel.com/changelog/grok-4-7-now-available-and-40-off-on-ai-gateway-fx-eve">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-09-21/">
+      ← 前日 · 2026-09-21
+      <span class="big">Claude Codeが共通の指示書AGENTS.mdに対応</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-09-22/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260922.0726</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

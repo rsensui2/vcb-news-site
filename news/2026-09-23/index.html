@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-09-23 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-09-23 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0923</span>
+    <span class="sep">/</span>
+    <span>2026-09-23</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260923.0728</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-09-23/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:28 · TUE</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · TUESDAY · SEPTEMBER 23, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>09<span class="dot">.</span>23</h1>
+    <div class="strap">
+      <span>Claude · GPT-6 · Worker · GitHub</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        モデル・料金 <span class="sep">/</span> ANTHROPIC <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Opus 5.5、料金と移行時の変更点</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-23/topic_1.png" data-alt="Claude Opus 5.5、料金と移行時の変更点" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-23/topic_1.png" alt="Claude Opus 5.5、料金と移行時の変更点" />
+      </div>
+      <p class="lede">
+        AnthropicがClaude Opus 5.5を公開しました。通常のAPI単価は100万トークンあたり入力4ドル・出力20ドルで、Opus 5より20%低くなります。同社は典型的な作業全体の費用を約40%減らせると報告していますが、この数字は単価の値下げ幅とは異なります。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">キャッシュ読み取りは100万トークンあたり0.20ドル</li>
+        <li data-i="02">推論の無効化・推論トークン数の固定・ツール呼び出しの強制指定はエラーになる</li>
+        <li data-i="03">Vercel AI Gatewayでも提供。移行前に既存リクエストの設定を確認</li>
+        <li data-i="04">推論量はeffortで調整。JSON形式の指定にはstructured outputsを使う</li>
+      </ul>
+      <div class="pull">
+        料金だけを見てモデル名を差し替えると、従来の設定で処理が止まる場合があります。まず同じ課題で費用と結果を比べ、APIの変更点も確認しましょう。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.anthropic.com/claude-opus-5-5">Anthropic</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>モデル・料金</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.anthropic.com/claude-opus-5-5">https://www.anthropic.com/claude-opus-5-5</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · OPENAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        モデル選び <span class="sep">/</span> OPENAI <span class="sep">/</span> NEWS
+      </div>
+      <h2>GPT-6 SolとLuna、API価格は従来の半額に</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-23/topic_2.png" data-alt="GPT-6 SolとLuna、API価格は従来の半額に" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-23/topic_2.png" alt="GPT-6 SolとLuna、API価格は従来の半額に" />
+      </div>
+      <p class="lede">
+        GPT-6 SolとGPT-6 Lunaの提供が、API・Codex・ChatGPT Workで始まりました。OpenAIは、GPT-5.6のプロモーション価格と比べて両モデルのAPI価格を50%下げたと案内しています。Solは複雑な開発作業、Lunaは処理量を重視する用途に向けたモデルです。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Solの標準API単価は入力2ドル・出力10ドル／100万トークン。長い入力などは割増</li>
+        <li data-i="02">Plus・Pro・Business・Enterprise・Edu向けに順次提供</li>
+        <li data-i="03">Vercel AI Gatewayからも両モデルを呼び出せる</li>
+      </ul>
+      <div class="pull">
+        日常の作業をどのモデルに任せるか、比較対象が増えます。料金に加えて、同じ仕事を完了するまでの時間と手直しの量で選ぶと判断しやすくなります。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://community.openai.com/t/announcing-gpt-6-sol-and-gpt-6-luna-in-the-api-codex-and-chatgpt/1399925">OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>モデル選び</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://community.openai.com/t/announcing-gpt-6-sol-and-gpt-6-luna-in-the-api-codex-and-chatgpt/1399925">https://community.openai.com/t/announcing-gpt-6-sol-and-gpt-6-luna-in-the-api-codex-and-chatgpt/1399925</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · CLOUDFLARE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        検証環境 <span class="sep">/</span> CLOUDFLARE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Worker Previewsでブランチごとに動作確認</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-23/topic_3.png" data-alt="Worker Previewsでブランチごとに動作確認" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-23/topic_3.png" alt="Worker Previewsでブランチごとに動作確認" />
+      </div>
+      <p class="lede">
+        Cloudflareが、変更を別々に管理するGitブランチごとに実行環境とURLを用意するWorker Previewsを公開しました。コード・設定・ログを分けて確認でき、Durable ObjectsとContainersの状態もブランチ単位で分離します。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">npx wrangler previewで作成。Git連携ではpush時の自動作成に対応</li>
+        <li data-i="02">変数・秘密情報・接続先の共通設定と個別設定を持てる</li>
+        <li data-i="03">別のWorkerを呼ぶ接続設定は、現時点では接続先の本番環境を呼ぶ</li>
+      </ul>
+      <div class="pull">
+        AIが作った変更を動かして確かめる場所を用意できます。ただし接続先まで自動で分離されるとは限らないため、外部データを書き換える処理は設定を確認してから試しましょう。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://blog.cloudflare.com/worker-previews/">Cloudflare</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>検証環境</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://blog.cloudflare.com/worker-previews/">https://blog.cloudflare.com/worker-previews/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · GITHUB</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> GITHUB <span class="sep">/</span> NEWS
+      </div>
+      <h2>GitHub CopilotでもOpus 5.5を選択可能に</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-23/topic_4.png" data-alt="GitHub CopilotでもOpus 5.5を選択可能に" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-23/topic_4.png" alt="GitHub CopilotでもOpus 5.5を選択可能に" />
+      </div>
+      <p class="lede">
+        GitHub CopilotでClaude Opus 5.5の段階的な提供が始まりました。対象はPro+・Max・Business・Enterpriseで、VS CodeやCopilot CLIなどのモデル選択欄から利用できます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">料金は提供元の定価に基づく従量制</li>
+        <li data-i="02">組織の管理者はモデルポリシーで利用を制御</li>
+        <li data-i="03">段階提供のため、まだ選択欄に表示されない場合がある</li>
+      </ul>
+      <div class="pull">
+        普段の開発画面で他モデルと比べられます。組織利用では、契約プランと管理者の設定を先に確認してください。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot/">GitHub</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot/">https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · VERCEL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        エージェントの作業環境 <span class="sep">/</span> VERCEL <span class="sep">/</span> NEWS
+      </div>
+      <h2>Vercel Sandbox、Drivesで作業ファイルを保持</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-23/topic_5.png" data-alt="Vercel Sandbox、Drivesで作業ファイルを保持" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-23/topic_5.png" alt="Vercel Sandbox、Drivesで作業ファイルを保持" />
+      </div>
+      <p class="lede">
+        Vercel Sandboxで、実行をまたいでファイルを残せるDrivesの公開ベータが始まりました。Hobby・Pro・Enterpriseが対象で、作業フォルダや依存ライブラリを別のSandboxから再利用できます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">1つのDriveを読み書き用に接続できるSandboxは、同時に1つまで</li>
+        <li data-i="02">読み取り専用スナップショットは複数Sandboxで共有できる</li>
+        <li data-i="03">1つのSandboxに最大4つまで接続。同じリージョンで使う</li>
+      </ul>
+      <div class="pull">
+        毎回同じ準備を繰り返すエージェントでは、ファイルを残す場所が役立ちます。複数の処理が同じファイルを同時に書き換えないよう、書き込み担当を決めて使いましょう。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/drives-for-vercel-sandbox-are-now-in-public-beta">Vercel</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>エージェントの作業環境</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/drives-for-vercel-sandbox-are-now-in-public-beta">https://vercel.com/changelog/drives-for-vercel-sandbox-are-now-in-public-beta</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · GITHUB</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ <span class="sep">/</span> GITHUB <span class="sep">/</span> NEWS
+      </div>
+      <h2>GitHubのSSH接続、古い設定を確認</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-23/topic_6.png" data-alt="GitHubのSSH接続、古い設定を確認" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-23/topic_6.png" alt="GitHubのSSH接続、古い設定を確認" />
+      </div>
+      <p class="lede">
+        GitHubはSSHの古い署名方式などを段階的に廃止すると発表しました。10月14日以降に新規登録するRSA鍵は3072ビット以上が必要になります。既存のRSA鍵はSHA-2対応クライアントで引き続き使え、HTTPS経由のGit操作は今回の変更の対象外です。完全廃止日の年表記は告知内で矛盾しているため、確定日としては扱えません。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">11月4日・12月9日に、旧方式を一時停止するテストを予定</li>
+        <li data-i="02">SHA-1署名のssh-rsaなどが廃止対象</li>
+        <li data-i="03">新しい鍵にはEd25519を推奨。既存RSA鍵はSHA-2対応を確認</li>
+      </ul>
+      <div class="pull">
+        古いCI環境やデプロイ用クライアントを使う場合は、接続方式と対応バージョンを確認する機会です。RSA鍵をすべて作り直す必要があるという告知ではありません。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-22-security-improvements-for-ssh/">GitHub</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-22-security-improvements-for-ssh/">https://github.blog/changelog/2026-09-22-security-improvements-for-ssh/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · HEYGEN RESEARCH / </span></aside>
+    <div class="main">
+      <div class="cat-line">
+        動画制作の評価 <span class="sep">/</span> HEYGEN RESEARCH / JOSHUA XU <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>〈知見〉動画生成は動きと読みやすさも評価する</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-23/topic_7.png" data-alt="〈知見〉動画生成は動きと読みやすさも評価する" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-23/topic_7.png" alt="〈知見〉動画生成は動きと読みやすさも評価する" />
+      </div>
+      <p class="lede">
+        HeyGenのCode2Video Benchmarkは、コードから作った動画を見た目と動きまで評価する取り組みです。視聴者を引きつける力、指示どおりに作られているか、構図、動きの滑らかさやテンポ、仕上がりの5つの観点で評価します。元レポートは9月18日公開で、ここでは新着発表ではなく制作の知見として紹介します。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">エラーなく描画できても、文字の重なりや不自然な動きは残る</li>
+        <li data-i="02">同じ指示から作った2本の動画を観点別に比較</li>
+        <li data-i="03">評価データや実行記録の公開ではKaggleと連携</li>
+      </ul>
+      <div class="pull">
+        動画の検品は、生成処理の成功だけでは終わりません。文字が途中で重ならないか、動きが内容を伝えているかまで再生して確かめるための視点になります。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">255</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/joshua_xu_/status/2102091146851909763">@joshua_xu_</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-18</dd>
+        <dt>CATEGORY</dt>
+        <dd>動画制作の評価</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/joshua_xu_/status/2102091146851909763">x.com/joshua_xu_/…</a></dd>
+        <dd><a href="https://www.heygen.com/research/introducing-code2video-benchmark">www.heygen.com/research/introducing-code…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://www.anthropic.com/claude-opus-5-5">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-09-22/">
+      ← 前日 · 2026-09-22
+      <span class="big">Grok 4.7をAI Gatewayで試せる</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-09-23/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260923.0728</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,24 +1,27 @@
 {
- "generated": "2026-09-22T08:21:57+09:00",
+ "generated": "2026-09-23T08:21:59+09:00",
  "count": 77,
  "items": [
   {
-   "type": "note",
-   "type_label": "note",
-   "title": "今話題のJevとは何か？入れてみたら、ほとんどの場所で要らなかった",
+   "type": "article",
+   "type_label": "記事（エージェント経営）",
+   "title": "話題のJevを入れてみたら、ほとんどの場所で要らなかった──判断をコード・Jev・LLMに仕分ける",
    "date": "2026-09-22",
-   "url": "https://note.com/rsensui/n/n2618a2dcefe0",
+   "url": "https://ai-agent.co.jp/articles/what-is-jev/",
    "tags": [
+    "現場ログ",
     "Jev",
-    "生成AI",
     "AIエージェント",
-    "ClaudeCode",
-    "VibeCoding",
-    "VibeCoderBootcamp",
-    "バイブコーディング"
+    "Slack",
+    "設計"
    ],
-   "description": "",
-   "extra_links": []
+   "description": "文章を書かない判断専用AI「Jev」を自社のAI秘書に組み込んだ。定期ジョブ15本でJevを使ったのは0本、入ったのはSlackの空気読みだけ。判断をコード・Jev・LLMに仕分ける2つの問いを紹介する。",
+   "extra_links": [
+    {
+     "label": "note版",
+     "url": "https://note.com/rsensui/n/n2618a2dcefe0"
+    }
+   ]
   },
   {
    "type": "note",

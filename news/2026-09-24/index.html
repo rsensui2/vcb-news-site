@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-09-24 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-09-24 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0924</span>
+    <span class="sep">/</span>
+    <span>2026-09-24</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260924.0719</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-09-24/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:19 · WED</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · WEDNESDAY · SEPTEMBER 24, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>09<span class="dot">.</span>24</h1>
+    <div class="strap">
+      <span>Claude · Codex · GitHub · CopilotアプリのローカルSandboxをプロジェクト単位で設定</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 6 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> ANTHROPIC / CLAUDE-CODE GITHUB RELEASES <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code、既定のOpusが5.5に。再開まわりも大幅修正</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-24/topic_1.png" data-alt="Claude Code、既定のOpusが5.5に。再開まわりも大幅修正" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-24/topic_1.png" alt="Claude Code、既定のOpusが5.5に。再開まわりも大幅修正" />
+      </div>
+      <p class="lede">
+        Claude Code 2.1.280 で Claude Opus 5.5（claude-opus-5-5）が既定の Opus モデルになりました。コンテキストは100万トークン、API単価は入力4ドル／出力20ドル（100万トークンあたり）、キャッシュ読み取りは0.20ドルです。翌日の 2.1.281 では、Claude apps gateway の Bedrock upstream に STS でのロール引き受けと Guardrail 適用が加わり、セッション再開時に履歴が変形してプロンプトキャッシュが切れる不具合がまとめて直りました。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">2.1.280: Opus 5.5 が既定に。1Mコンテキスト、入力$4／出力$20（per Mtok）、キャッシュ読み取り$0.20</li>
+        <li data-i="02">2.1.280: CLAUDE_CODE_MAX_MCP_DESCRIPTION_LENGTH で MCP 説明文の2,048文字上限を変更できる</li>
+        <li data-i="03">2.1.280: シンボリックリンク越しの書き込みが「リンク先」で判定されるよう修正。acceptEdits や auto mode が作業ツリー外への書き込みを通さなくなった</li>
+        <li data-i="04">2.1.281: Bedrock upstream に assume_role（別AWSアカウント可・開発者ごとのセッション可）と guardrail {id, version} を追加</li>
+        <li data-i="05">2.1.281: settings.json の &quot;attribution&quot;: false でコミット／PRの帰属表示を隠せる。ただし古いCLIはこのキーを含む設定ファイルごと無視するため、混在環境ではオブジェクト形式を維持する</li>
+        <li data-i="06">2.1.281: 巨大セッションの再開で直近数件しか復元されない、ツール実行中に終了したセッションの再開が壊れる、といった不具合を修正</li>
+      </ul>
+      <div class="pull">
+        アップデート後は明示指定がなければ Opus 5.5 が使われるので、料金設定とモデル固定の有無を /model で一度確認しておくのが安全です。長時間セッションの再開に失敗していた人は、2.1.281 まで上げるだけで直る可能性があります。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.280">Anthropic / claude-code GitHub Releases</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.280">https://github.com/anthropics/claude-code/releases/tag/v2.1.280</a></dd>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.281">github.com/anthropics/claude-code/releas…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · OPENAI / CODEX GIT</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> OPENAI / CODEX GITHUB RELEASES <span class="sep">/</span> NEWS
+      </div>
+      <h2>Codex 0.156、フルスクリーンと/usage。0.156.1でSol／Luna</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-24/topic_2.png" data-alt="Codex 0.156、フルスクリーンと/usage。0.156.1でSol／Luna" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-24/topic_2.png" alt="Codex 0.156、フルスクリーンと/usage。0.156.1でSol／Luna" />
+      </div>
+      <p class="lede">
+        Codex CLI 0.156.0 で、次回起動から使える任意のフルスクリーンUI（/tui）、既定オンになった音声会話、利用状況を見る /usage ダッシュボードが入りました。worktree サポートも既定オンになり、エージェントのコマンドセンターからステータス絞り込みと worktree セッション作成ができます。翌日の 0.156.1 はホットフィックスで、モデルピッカーに GPT-6 Sol と GPT-6 Luna が追加され、レート制限時の切替案内では Luna が推奨されます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">/tui で次回起動から任意のフルスクリーンUI。トランスクリプト検索、マウス選択、右クリックコピーに対応</li>
+        <li data-i="02">音声会話が既定オン。F8でトグル、/voice settings で声を選べる。Linux／Windows向けの音声ランタイムを同梱</li>
+        <li data-i="03">/usage でアカウント利用状況・トークン総量・プラグイン／スキルの活動を確認できる</li>
+        <li data-i="04">worktree サポートが既定オン。コマンドセンターからステータス絞り込みと worktree セッション作成</li>
+        <li data-i="05">/daemon でローカル背景サーバーを更新、--no-daemon で迂回できる</li>
+        <li data-i="06">0.156.1: モデルピッカーに GPT-6 Sol / Luna を追加。レート制限時の切替案内は Luna を推奨</li>
+      </ul>
+      <div class="pull">
+        音声が既定オンになったのは共有オフィスだと事故のもとです。上げる前に /voice settings でオフにする手順を決めておき、上げた後は /usage とモデルピッカーで Sol／Luna が見えるか確認するのが安全です。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/openai/codex/releases/tag/rust-v0.156.0">OpenAI / codex GitHub Releases</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/openai/codex/releases/tag/rust-v0.156.0">https://github.com/openai/codex/releases/tag/rust-v0.156.0</a></dd>
+        <dd><a href="https://github.com/openai/codex/releases/tag/rust-v0.156.1">github.com/openai/codex/releases/tag/rus…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · GITHUB CHANGELOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> GITHUB CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>GitHub CopilotにGPT-6 SolとLunaが追加</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-24/topic_3.png" data-alt="GitHub CopilotにGPT-6 SolとLunaが追加" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-24/topic_3.png" alt="GitHub CopilotにGPT-6 SolとLunaが追加" />
+      </div>
+      <p class="lede">
+        GitHub Copilot のモデル選択に、GPT-6 Astra に続いて GPT-6 Sol と GPT-6 Luna が加わりました。Sol は対話・エージェント両方向けのバランス型で、丁寧な多段検証が要る開発作業に向きます。Luna は軽量・低コスト寄りで、GPT-6 ファミリーでは最も安い選択肢です。どちらも従量課金で、ロールアウトは段階的です。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Sol は Copilot Pro+ / Max / Business / Enterprise 向け</li>
+        <li data-i="02">Luna は Copilot Pro を含む各プラン向けで、GPT-6 ファミリー最安</li>
+        <li data-i="03">VS Code、Visual Studio、Copilot CLI、cloud agent、Copilotアプリ、github.com、モバイル（iOS/Android）、JetBrains、Xcode、Eclipse のピッカーから選べる</li>
+        <li data-i="04">どちらも従量課金（usage-based billing）</li>
+        <li data-i="05">Business / Enterprise は Copilot 設定のモデルポリシーで制御。既定では新規モデルが自動で有効になる</li>
+        <li data-i="06">ロールアウトは段階的で、まだ見えない環境もある</li>
+      </ul>
+      <div class="pull">
+        重い実装は Sol、短い修正や件数の多い処理は Luna、と用途で切り分けられるようになりました。Business / Enterprise は新規モデルが自動で有効になる設定なので、管理者は意図した通りか一度ポリシーを見ておくと安心です。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-22-openais-gpt-6-sol-and-gpt-6-luna-now-available/">GitHub Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-22-openais-gpt-6-sol-and-gpt-6-luna-now-available/">https://github.blog/changelog/2026-09-22-openais-gpt-6-sol-and-gpt-6-luna-now-available/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · GITHUB CHANGELOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ <span class="sep">/</span> GITHUB CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>CopilotアプリのローカルSandboxをプロジェクト単位で設定</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-24/topic_4.png" data-alt="CopilotアプリのローカルSandboxをプロジェクト単位で設定" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-24/topic_4.png" alt="CopilotアプリのローカルSandboxをプロジェクト単位で設定" />
+      </div>
+      <p class="lede">
+        GitHub Copilot アプリで、ローカルSandbox がパブリックプレビューになりました。ローカルリポジトリと作業ツリーのセッションに対して、ファイル・ネットワーク・認証情報へのアクセス範囲をプロジェクト単位で設定できます。プロジェクト設定はアプリが要求するポリシーで、エンタープライズ管理設定があればさらに厳しい側が効きます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">設定できるのは3種類。Filesystem（追加の読み書き／読み取り専用／拒否フォルダ）、Network（外向き通信とローカルネットワーク）、Credentials（HTTPS git 用の認証情報と GitHub CLI の認証情報）</li>
+        <li data-i="02">既定はオフ。アプリ設定でプロジェクトを選び「Sandbox new sessions」をオンにする</li>
+        <li data-i="03">反映されるのは新規セッションから。実行中のセッションは /sandbox on でその場だけ有効化できる（プロジェクト既定は変わらない）</li>
+        <li data-i="04">OSが要求ポリシーを強制できない場合、サンドボックスなしで動かさずエラーで止まる</li>
+        <li data-i="05">クラウドSandboxセッションやリモートホスト上のセッションには適用されない</li>
+        <li data-i="06">Copilotアプリと Copilot CLI のSandbox設定は別々に管理する</li>
+      </ul>
+      <div class="pull">
+        エージェントが手元のファイルや認証情報に触れる範囲を、プロジェクトごとに決められるようになりました。顧客リポジトリを扱うときだけ厳しくする、といった使い分けができます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-23-local-sandboxing-in-the-github-copilot-app/">GitHub Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-23-local-sandboxing-in-the-github-copilot-app/">https://github.blog/changelog/2026-09-23-local-sandboxing-in-the-github-copilot-app/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · CLOUDFLARE CHANGEL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        インフラ <span class="sep">/</span> CLOUDFLARE CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cloudflare Workers BuildsがCursor Originに対応</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-24/topic_5.png" data-alt="Cloudflare Workers BuildsがCursor Originに対応" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-24/topic_5.png" alt="Cloudflare Workers BuildsがCursor Originに対応" />
+      </div>
+      <p class="lede">
+        Cloudflare の Workers Builds が、Cursor Origin にホストされたリポジトリに対応しました。本番ブランチへの push で Worker を自動ビルド・デプロイし、非本番ブランチのビルドを有効にすると各ブランチにプレビューURLが発行されます。ビルド状態とプレビューリンクは Cursor Origin のPRへ投稿され、トリガーされたビルドごとにチェックランが作られます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">本番ブランチへの push で自動ビルド・デプロイ</li>
+        <li data-i="02">非本番ブランチのビルドを有効にすると、バージョン固有のプレビューURLと、最新ビルドを追う安定プレビューURLの2本が出る</li>
+        <li data-i="03">Cursor Origin のPRにビルド状態とプレビューリンクを投稿</li>
+        <li data-i="04">トリガーされたビルドごとにチェックランを作成</li>
+        <li data-i="05">設定手順は Cursor に Cloudflare アプリを入れ、アクセスを許すリポジトリを選ぶところから</li>
+      </ul>
+      <div class="pull">
+        リポジトリの正本を Cursor Origin に置いていても、GitHub と同じ流れで Workers の本番とプレビューを回せます。GitHub へミラーを作らずに、PR上でビルド結果を追えるのが利点です。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-09-22-cursor-origin-workers-builds/">Cloudflare Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>インフラ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-09-22-cursor-origin-workers-builds/">https://developers.cloudflare.com/changelog/post/2026-09-22-cursor-origin-workers-builds/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · VERCEL CHANGELOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        インフラ <span class="sep">/</span> VERCEL CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Vercel Blobのストア数が全プランで無制限に</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-24/topic_6.png" data-alt="Vercel Blobのストア数が全プランで無制限に" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-24/topic_6.png" alt="Vercel Blobのストア数が全プランで無制限に" />
+      </div>
+      <p class="lede">
+        Vercel Blob のストア作成上限（Hobby 100／Pro 500／Enterprise 1,000）が撤廃され、必要なだけ作れるようになりました。ストア作成は put() / copy() / list() と同じ Blob Advanced Operations として課金され、Pro は100万回あたり5ドル、Hobby は月2,000回の無料枠に含まれます。ストアの削除は無料です。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">旧上限（Hobby 100／Pro 500／Enterprise 1,000）を撤廃</li>
+        <li data-i="02">ストア作成は Advanced Operations 扱い。Pro は100万回あたり5.00ドル、Hobby は月2,000回の無料枠内</li>
+        <li data-i="03">削除は無料</li>
+        <li data-i="04">本番・ステージング・プレビューでストアを分け、環境ごとに別の認証情報を渡せる</li>
+        <li data-i="05">マルチテナントでは顧客ごとにストアを切り、1回の呼び出しでそのテナントだけエクスポート／削除できる</li>
+        <li data-i="06">同じデータを複数ストアに分けても、ストレージ・操作・転送の課金は変わらない</li>
+        <li data-i="07">ストア作成は使用量ページと Observability ダッシュボードの Blob Advanced Operations に表示される</li>
+      </ul>
+      <div class="pull">
+        パス名の命名規則で環境やテナントを分けていた運用を、ストアという固い境界に置き換えられます。プレビューブランチや移行用に作って終わったら消す、という使い方も削除が無料なのでやりやすくなりました。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/unlimited-vercel-blob-stores-on-every-plan">Vercel Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>インフラ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/unlimited-vercel-blob-stores-on-every-plan">https://vercel.com/changelog/unlimited-vercel-blob-stores-on-every-plan</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · KAROUKUNAI / X</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        知見・TIPS <span class="sep">/</span> @KAROUKUN_AI / X <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>〈知見〉Claude CodeからJevを使う3つの経路</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-24/topic_7.png" data-alt="〈知見〉Claude CodeからJevを使う3つの経路" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-24/topic_7.png" alt="〈知見〉Claude CodeからJevを使う3つの経路" />
+      </div>
+      <p class="lede">
+        過労くん（@karoukun_ai）が、Claude Code から Jev を使う経路を公式スキル・MCPサーバー・モデル選択用プロキシの3つに整理した記事です。あわせて、文脈の選別や出力の検証を担う有志の実装もまとめています。筆者自身が検証したのは招待の取得と公式スキルの導入までで、紹介したツールすべての動作確認ではないと明記されています。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Claude Code から Jev を使う経路を、公式スキル／MCPサーバー／モデル選択用プロキシの3系統に分けて整理</li>
+        <li data-i="02">文脈の選別（どの情報を渡すか）と出力の検証を担う有志実装も併記</li>
+        <li data-i="03">筆者の実体験は招待取得と公式スキル導入の範囲。関連ツール全部の検証報告ではないと断っている</li>
+        <li data-i="04">確率の高い回答でも誤りうる点と、モデルを切り替えるとプロンプトキャッシュに影響が出る点を注意として挙げている</li>
+      </ul>
+      <div class="pull">
+        新しいモデルを既存のエージェントに繋ぐとき、選択肢は「公式スキル／MCP／プロキシ」のどれかに落ち着きます。この3分類は Jev に限らず使える地図なので、自分の構成がどれに当たるかを先に決めると迷いが減ります。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">205</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/karoukun_ai/status/2101497267815686284">@karoukun_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-20</dd>
+        <dt>CATEGORY</dt>
+        <dd>知見・Tips</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/karoukun_ai/status/2101497267815686284">x.com/karoukun_ai/…</a></dd>
+        <dd><a href="https://x.com/i/article/2101489733046358016">x.com/i/article/2101489733046358016</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · MINNANOMOTION / X</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        知見・TIPS <span class="sep">/</span> @MINNANO_MOTION / X <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>〈知見〉UIの動きを「種類・イージング・速さ」から逆引きする</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-24/topic_8.png" data-alt="〈知見〉UIの動きを「種類・イージング・速さ」から逆引きする" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-24/topic_8.png" alt="〈知見〉UIの動きを「種類・イージング・速さ」から逆引きする" />
+      </div>
+      <p class="lede">
+        UIモーションの実例を「動きの種類・イージング・速さ」から逆引きできる辞典サイト MOTION MOVEMENT REFERENCE が紹介されています。完成物をギャラリーで眺める形ではなく、動きの属性で絞り込んで探せるのが特徴です。投稿は3,859ブックマークを集めており、その場で見るより作業中に引きに来る使われ方がうかがえます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">動きの種類・イージング・速さという属性でモーションの実例を検索できる</li>
+        <li data-i="02">ギャラリー型と違い、再現に必要なパラメータ（どのイージングを何ミリ秒で）に辿り着ける</li>
+        <li data-i="03">AIに動きを指示するときの語彙として使える。「かっこよく」ではなく「ease-out で 250ms のスライドイン」と書けると出力が安定する</li>
+        <li data-i="04">3,859ブックマーク／179,415ビュー。保存率の高さが参照用途であることを示している</li>
+      </ul>
+      <div class="pull">
+        LPやアプリの「なんか気持ち悪い動き」を直すとき、言葉にできないと議論が収束しません。動きを属性で言語化できる辞書を1つ持っておくと、実装者にもAIにも同じ絵を渡せます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">2,530</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/minnano_motion/status/2102662637796667623">@minnano_motion</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>知見・Tips</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/minnano_motion/status/2102662637796667623">x.com/minnano_motion/…</a></dd>
+        <dd><a href="https://motion-reference.takayustudio.jp/index.html">motion-reference.takayustudio.jp/index.h…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.280">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-09-23/">
+      ← 前日 · 2026-09-23
+      <span class="big">Claude Opus 5.5、料金と移行時の変更点</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-09-24/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260924.0719</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

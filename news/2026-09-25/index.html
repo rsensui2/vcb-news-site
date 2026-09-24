@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-09-25 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-09-25 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0925</span>
+    <span class="sep">/</span>
+    <span>2026-09-25</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260925.0720</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-09-25/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:20 · THU</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · THURSDAY · SEPTEMBER 25, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>09<span class="dot">.</span>25</h1>
+    <div class="strap">
+      <span>Cursor · Vercel · GitHub · Copilotコードレビュー</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> CURSOR CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cursor、デプロイ監視とセキュリティレビューのBotを公開</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-25/topic_1.png" data-alt="Cursor、デプロイ監視とセキュリティレビューのBotを公開" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-25/topic_1.png" alt="Cursor、デプロイ監視とセキュリティレビューのBotを公開" />
+      </div>
+      <p class="lede">
+        CursorはRolloutsとSecurity ReviewをTeamsとEnterprise向けに公開した。RolloutsはPRからデプロイ後まで変更を追い、環境ごとの状態を判定する。Security ReviewはPRをコードベースの文脈で読み、悪用可能な問題を報告する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">RolloutsはPRの差分から監視計画を作り、ログ・メトリクス・トレースを照合する</li>
+        <li data-i="02">回帰を見つけると作者へ通知し、設定に応じてrevert PRを作る。自動マージや自動ロールバックはしない</li>
+        <li data-i="03">Security Reviewは認証の欠落、注入、秘密情報、危険な依存変更などを調べる</li>
+        <li data-i="04">両BotともTeamsとEnterpriseで利用できる</li>
+      </ul>
+      <div class="pull">
+        PRでの静的な確認から、デプロイ後の実測までつなげられる。導入時は監視データの接続先と、Botに許す操作範囲を先に決めたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://cursor.com/changelog/rollouts-and-security-reviewer">Cursor Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://cursor.com/changelog/rollouts-and-security-reviewer">https://cursor.com/changelog/rollouts-and-security-reviewer</a></dd>
+        <dd><a href="https://cursor.com/blog/rollouts-and-security-reviewer">cursor.com/blog/rollouts-and-security-re…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · VERCEL CHANGELOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AIエージェント <span class="sep">/</span> VERCEL CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Vercel Connect、TanStack AIのMCP認証に対応</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-25/topic_2.png" data-alt="Vercel Connect、TanStack AIのMCP認証に対応" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-25/topic_2.png" alt="Vercel Connect、TanStack AIのMCP認証に対応" />
+      </div>
+      <p class="lede">
+        Vercel ConnectがTanStack AI向けのMCP transportを提供した。OAuthで保護されたMCPサーバーへの接続で、短命のトークンをリクエスト時に取得する。アプリ側で永続トークンを保持する実装を減らせる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">connectMCPTransportがTanStack AIのtransport設定にConnect認証を付ける</li>
+        <li data-i="02">認証プロバイダはMCP要求の前に呼ばれ、毎回新しいトークンを使う</li>
+        <li data-i="03">同意が必要な場合はモデル実行前に同意URLへ誘導する</li>
+      </ul>
+      <div class="pull">
+        外部サービスのMCPをアプリに組み込む際、認証情報の保管と同意画面への遷移を一つの経路にまとめやすい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/vercel-connect-tanstack-ai">Vercel Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-24</dd>
+        <dt>CATEGORY</dt>
+        <dd>AIエージェント</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/vercel-connect-tanstack-ai">https://vercel.com/changelog/vercel-connect-tanstack-ai</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · GITHUB CHANGELOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ <span class="sep">/</span> GITHUB CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>GitHub Enterprise Cloud、高影響操作に再認証を要求可能に</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-25/topic_3.png" data-alt="GitHub Enterprise Cloud、高影響操作に再認証を要求可能に" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-25/topic_3.png" alt="GitHub Enterprise Cloud、高影響操作に再認証を要求可能に" />
+      </div>
+      <p class="lede">
+        GitHub Enterprise Cloudで、高影響操作の直前に本人の再認証を要求するProof of Presenceが公開プレビューになった。トークン作成やWebhook編集などを、IdPでの再認証またはMFAで守る。対象には企業アカウントとIdPの条件がある。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Enterprise Managed UsersとMicrosoft Entra IDの組み合わせが対象</li>
+        <li data-i="02">再認証のみ、または再認証とMFAを要求する設定を選べる</li>
+        <li data-i="03">成功後の同一ブラウザセッションでは2時間再チャレンジを省略する</li>
+        <li data-i="04">PRマージ前のチャレンジは近日対応予定</li>
+      </ul>
+      <div class="pull">
+        セッションを奪われた場合でも、高権限操作の前に利用者の存在を確かめられる。適用条件を満たす企業は、まずトークンやWebhookの操作経路を確認したい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-24-require-proof-of-presence-for-high-impact-actions/">GitHub Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-24</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-24-require-proof-of-presence-for-high-impact-actions/">https://github.blog/changelog/2026-09-24-require-proof-of-presence-for-high-impact-actions/</a></dd>
+        <dd><a href="https://docs.github.com/en/enterprise-cloud%40latest/admin/configuring-settings/hardening-security-for-your-enterprise/configuring-proof-of-presence">docs.github.com/en/enterprise-cloud%40la…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · GITHUB CHANGELOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> GITHUB CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Copilotコードレビュー、個人設定と企業の既定値を拡充</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-25/topic_4.png" data-alt="Copilotコードレビュー、個人設定と企業の既定値を拡充" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-25/topic_4.png" alt="Copilotコードレビュー、個人設定と企業の既定値を拡充" />
+      </div>
+      <p class="lede">
+        GitHubはCopilotコードレビューの個人設定ページを全Copilotプランへ広げた。新規pushやドラフトPRも含む自動レビューの条件と、LiteかBalancedの既定effortを個人で設定できる。Enterprise管理者は組織所有リポジトリの既定effortを指定できる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">個人のcode review設定ページはBusinessとEnterpriseを含む全プランで利用可能</li>
+        <li data-i="02">PR作成、共著、ドラフト解除に加え、新規pushやドラフトPRの自動レビューを設定できる</li>
+        <li data-i="03">Enterpriseの既定はLite、Balanced、GitHub既定から選べる</li>
+        <li data-i="04">組織とリポジトリの設定で企業の既定を上書きできる</li>
+      </ul>
+      <div class="pull">
+        レビュー依頼の頻度と深さをチームで揃えやすくなった。自動レビューの対象を増やす前に、費用と通知量を見積もるとよい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-23-copilot-code-review-more-ways-to-request-and-configure-reviews/">GitHub Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-23-copilot-code-review-more-ways-to-request-and-configure-reviews/">https://github.blog/changelog/2026-09-23-copilot-code-review-more-ways-to-request-and-configure-reviews/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · GITHUB CHANGELOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発基盤 <span class="sep">/</span> GITHUB CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>GitHub ActionsのJavaScriptアクション、Node 20が終了</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-25/topic_5.png" data-alt="GitHub ActionsのJavaScriptアクション、Node 20が終了" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-25/topic_5.png" alt="GitHub ActionsのJavaScriptアクション、Node 20が終了" />
+      </div>
+      <p class="lede">
+        GitHub ActionsランナーではJavaScriptアクション用のNode 20が使えなくなり、Node 24で実行される。旧版Nodeの利用を許す一時的な環境変数も廃止された。自作アクションはメタデータを更新し、利用側はNode 24対応版へ上げる必要がある。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">自作JavaScriptアクションはruns.usingをnode24へ変更して再リリースする</li>
+        <li data-i="02">ワークフローで使う外部アクションはNode 24対応版に更新する</li>
+        <li data-i="03">公式アクションの最新版はNode 24へ移行済み</li>
+        <li data-i="04">macOS 13.4以前とARM32のセルフホストランナーはNode 24の公式サポート外</li>
+      </ul>
+      <div class="pull">
+        古いアクションを固定したCIでは失敗につながる。まず自作アクションと固定バージョンを棚卸ししたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-23-node-20-is-no-longer-available-in-github-actions/">GitHub Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発基盤</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-23-node-20-is-no-longer-available-in-github-actions/">https://github.blog/changelog/2026-09-23-node-20-is-no-longer-available-in-github-actions/</a></dd>
+        <dd><a href="https://docs.github.com/en/actions/reference/workflows/workflow-syntax-for-github-actions">docs.github.com/en/actions/reference/wor…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · VERCEL CHANGELOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        音声AI <span class="sep">/</span> VERCEL CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Vercel AI GatewayでGemini 3.8の音声合成を利用可能に</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-25/topic_6.png" data-alt="Vercel AI GatewayでGemini 3.8の音声合成を利用可能に" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-25/topic_6.png" alt="Vercel AI GatewayでGemini 3.8の音声合成を利用可能に" />
+      </div>
+      <p class="lede">
+        Vercel AI GatewayにGemini 3.8 Flash-Lite TTSとFlash TTSが追加された。100以上の言語で音声を生成でき、Flash-Liteは大量生成、Flashは表現力や声の指定を重視する。AI SDKの音声生成APIから呼び出せる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Flash-Lite TTSは大量の音声生成向け</li>
+        <li data-i="02">Flash TTSは自然言語で声や話し方を指定できる</li>
+        <li data-i="03">AI SDKのexperimental_generateSpeechから利用できる</li>
+        <li data-i="04">利用量と費用をAI Gateway上で追跡できる</li>
+      </ul>
+      <div class="pull">
+        短い読み上げや対話デモを既存のGatewayで試せる。実運用前には声の品質と生成費用を実測したい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/gemini-3-8-text-to-speech-models-now-available-on-ai-gateway">Vercel Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>音声AI</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/gemini-3-8-text-to-speech-models-now-available-on-ai-gateway">https://vercel.com/changelog/gemini-3-8-text-to-speech-models-now-available-on-ai-gateway</a></dd>
+        <dd><a href="https://vercel.com/ai-gateway/models/gemini-3.8-flash-lite-tts">vercel.com/ai-gateway/models/gemini-3.8-…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · GITHUB CHANGELOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        運用・監査 <span class="sep">/</span> GITHUB CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Copilotアプリ、エージェントの動きをOpenTelemetryへ出力</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-25/topic_7.png" data-alt="Copilotアプリ、エージェントの動きをOpenTelemetryへ出力" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-25/topic_7.png" alt="Copilotアプリ、エージェントの動きをOpenTelemetryへ出力" />
+      </div>
+      <p class="lede">
+        GitHub Copilotアプリが企業管理設定からOpenTelemetryの送信に対応した。管理者はエージェントのセッション、モデル要求、ツール利用のトレースを組織の監視基盤へ送れる。プロンプトと応答の本文は既定で送られない。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">managed-settings.jsonのtelemetryで送信先を設定する</li>
+        <li data-i="02">セッション中のモデル要求とツール利用を追跡できる</li>
+        <li data-i="03">設定は企業内の利用者へ一括適用できる</li>
+        <li data-i="04">プロンプトと応答本文の収集は既定で無効</li>
+      </ul>
+      <div class="pull">
+        エージェントの動作をチームで追えるようになる。本文の収集を有効にする場合は機密情報の扱いを先に確認したい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-22-opentelemetry-in-the-github-copilot-app/">GitHub Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>運用・監査</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-22-opentelemetry-in-the-github-copilot-app/">https://github.blog/changelog/2026-09-22-opentelemetry-in-the-github-copilot-app/</a></dd>
+        <dd><a href="https://docs.github.com/en/copilot/how-tos/manage-and-track-spending/monitor-agent-activity-with-opentelemetry">docs.github.com/en/copilot/how-tos/manag…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · GITHUB CHANGELOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> GITHUB CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>JetBrains版Copilot、承認補助と組織共有Skillを追加</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-25/topic_8.png" data-alt="JetBrains版Copilot、承認補助と組織共有Skillを追加" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-25/topic_8.png" alt="JetBrains版Copilot、承認補助と組織共有Skillを追加" />
+      </div>
+      <p class="lede">
+        Copilot for JetBrains 1.18.0では、低リスク操作の承認補助が公開プレビューになった。組織で共有するSkillや管理された指示、Codex agentのplanモード、MCPツールの継続的な制御も加わった。利用環境によって一部機能の表示条件が異なる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">承認補助は低リスク操作を支援し、高リスク操作は確認を続ける</li>
+        <li data-i="02">組織のSkillと管理指示をローカルとエージェント双方で利用できる</li>
+        <li data-i="03">Codex agentのplanモードが使える</li>
+        <li data-i="04">MCPツール単位の有効・無効を保持できる</li>
+      </ul>
+      <div class="pull">
+        JetBrainsを使うチームにも共有Skillと承認設定を展開できる。更新後に組織Skillが見えるか確認したい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-22-new-features-and-improvements-in-copilot-for-jetbrains/">GitHub Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-22-new-features-and-improvements-in-copilot-for-jetbrains/">https://github.blog/changelog/2026-09-22-new-features-and-improvements-in-copilot-for-jetbrains/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://cursor.com/changelog/rollouts-and-security-reviewer">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-09-24/">
+      ← 前日 · 2026-09-24
+      <span class="big">Claude Code、既定のOpusが5.5に。再開まわりも大幅修正</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-09-25/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260925.0720</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

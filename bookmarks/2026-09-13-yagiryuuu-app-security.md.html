@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №035</span>
+    <span class="tick">BOOKMARK №036</span>
     <span class="sep">/</span>
     <span>2026-09-10</span>
     <span class="sep">/</span>
     <span>@yagiryuuu</span>
     <span class="sep">/</span>
-    <span>577 ITEMS</span>
+    <span>578 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:13 FRI</span>
+    <span>JST 07:13 SAT</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,19 +305,19 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-09-24/">NEWS</a>
+      <a href="../news/2026-09-25/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:13 · FRI</div>
+    <div class="meta">JST · 07:13 · SAT</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-09-10 <span>/</span> №035
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-09-10 <span>/</span> №036
     </div>
     <div class="cat-line">
       <span>💻 AI・開発ツール</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">AIだけで作ったアプリ、公開3日で150万件の情報漏洩。そうならないために気をつけること5選</h1>
     <div class="strap">
-      <span><span class="label">№</span>035 / 577</span>
+      <span><span class="label">№</span>036 / 578</span>
       <span><span class="label">SRC</span><a href="https://x.com/yagiryuuu/status/2097955568183050569" target="_blank" rel="noopener noreferrer">x.com/yagiryuuu ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/2026-09-13-yagiryuuu-app-security.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">035<span class="ord">BOOKMARK / 577</span></aside>
+    <aside class="numeral">036<span class="ord">BOOKMARK / 578</span></aside>
     <article class="prose">
 <h2>本文</h2><p>https://t.co/UABXDY3pWo</p><h2>X Article 本文</h2><p>今年1月、「Moltbook」というSNSが公開されました。</p><p>AIエージェントだけが投稿できるという変わったSNSで、作ったのもほぼAI。いわゆるバイブコーディングです。</p><p>公開から3日以内に、セキュリティ研究者がこう気づきます。</p><p> 「このアプリ、データベースの中身が誰でも読めるし、書き換えられる」</p><p>漏れていたのは、認証トークン約150万件、メールアドレス約3.5万件、非公開のメッセージ数千件。</p><p>運営はすぐ直しましたが、それまでの数日間は誰でも取り放題でした。</p><p>僕はAIツールの内製支援とセキュリティチェックを仕事にしています。</p><p>この事件、実は「AIで社内ツールを作った会社」で僕が一番よく見る穴とまったく同じでした。</p><p>何が起きたかと、そうならないために気をつけること5つを書きます。</p><p>====</p><p>何が起きたか</p><p>原因は、たった2つです。</p><p>1つ目。データベースに「自分のデータしか見られない」というルールが入っていなかった。</p><p>2つ目。データベースにつなぐための鍵が、ブラウザ側のコードにそのまま書いてあった。</p><p>ブラウザに書いてある鍵は、開発者ツールを開けば誰でも見えます。</p><p>その鍵でデータベースにつなぐと、ルールがないので全員分のデータが返ってくる。</p><p>つまり、アプリの画面を通さなくても、裏口から全部見えていたということです。</p><p>AIは「動くアプリ」はちゃんと作りました。</p><p>でも「他人には見せない」という部分は、頼まれてないので作らなかった。</p><p>ここがAIで作る時の一番の落とし穴です。</p><p>====</p><ol><li>「ログインできる」と「他人のが見えない」は別物</li></ol><p>アプリを開発する際、ログイン機能はほぼ必ず付いてきます。</p><p>「とりあえずログイン機能つけたから大丈夫」と思いがちなんですが、これが違います。</p><p>ログインは「誰か」を確認する機能。</p><p>「その人が何を見ていいか」は、別に作らないといけない。</p><p>Moltbookも、ログイン自体はありました。</p><p>でもログインした後に、他人のデータに手が届いてしまった。</p><p>チェックは簡単です。</p><p>テスト用のアカウントを2つ作って、Aでログインした状態でBのデータのURLを直接開いてみる。</p><p>見えたらアウトです。</p><p>AIへの指示はこれです。</p><p>「ユーザーは自分のデータにしかアクセスできないようにして。他人のデータのURLを開いても見えないようにして」</p><p>====</p><ol><li>データベース側にも「自分の分しか見えない」ルールを入れる</li></ol><p>1番はアプリ側の話でした。</p><p>でもMoltbookのように、アプリを通さず裏口からデータベースに直接つながれることがあります。</p><p>なので、データベース自体に「この人はこの行しか見えない」というルールを入れておく。</p><p>これがあると、鍵が漏れても他人の分は取れません。</p><p>最近のAI開発でよく使われるデータベースサービスは、この機能を持っています。</p><p>ただし初期設定ではオフのことが多い。AIも頼まれないと入れません。</p><p>指示はこれです。</p><p>「データベースの全テーブルで、自分の行しか読めないルールを有効にして」</p><p>====</p><ol><li>ブラウザ側に鍵を置かない</li></ol><p>Moltbookのもう一つの原因が、鍵がブラウザに書いてあったことです。</p><p>アプリには「サーバー側で動くコード」と「ブラウザ側で動くコード」があります。</p><p>ブラウザ側は、利用者のPCに丸ごと送られる。つまり、そこに書いた鍵は全員に配っているのと同じです。</p><p>見分け方は、開発者ツールを開いて「key」「token」「secret」で検索してみる。</p><p>それっぽい長い文字列が出てきたら要注意です。</p><p>指示はこれです。</p><p>「鍵やパスワードはサーバー側だけに置いて。ブラウザ側のコードには絶対に含めないで」</p><p>====</p><ol><li>公開前に「別のAI」に悪い人役をやらせる</li></ol><p>作ったAIに「安全？」と聞いても、「はい」と答えます。自分で作ったので。</p><p>なので、開発に使ったのとは別のAIに、攻撃者の目線でレビューさせます。</p><p>「このアプリに侵入するとしたら、どこから入る？」と聞く。</p><p>僕がクライアントのツールでこれをやると、気づけない穴がゴリゴリ出てきます。</p><p>Moltbookの2つの穴も、この質問で普通に見つかるレベルです。</p><p>指示はこれです。</p><p>「あなたは攻撃者です。このアプリで他人のデータを見る方法を全部挙げて。見つけたら直し方も出して」</p><p>====</p><ol><li>公開したら「誰が何を見たか」を記録して、最初の1週間は毎日見る</li></ol><p>Moltbookは、外部の研究者が見つけて連絡したから直りました。</p><p>自分たちでは気づいていなかった。</p><p>社内ツールでは、誰も連絡してくれません。</p><p>だから、「誰がいつログインして、何のデータを見たか」を記録に残しておく。</p><p>そして公開後の1週間は、その記録を毎日見る。</p><p>知らないアクセス元、深夜の大量アクセス、1人が全員分のデータを開いている。</p><p>こういうのは、記録を見ればすぐ分かります。</p><p>指示はこれです。</p><p>「誰がいつ何のデータにアクセスしたか、記録を残して。ただし記録の中にパスワードや個人情報は書かないで」</p><p>====</p><p>まとめ</p><p>Moltbookの事件を1行にすると、</p><p> 「AIは頼まれたものは作るけど、頼まれてないものは作らない」です。</p><p>社内ツールを作る時、僕らは「こういう機能が欲しい」は伝えます。</p><p>でも「他人には見せないで」「鍵はブラウザに置かないで」とは、言わない。</p><p>言わないから、入らない。</p><p>逆に言えば、この5つは全部、AIに一言足すだけで入ります。</p><p>まずは今動いているツールで、テストアカウントを2つ作って、他人のデータのURLを開いてみてください。</p><p>それだけで、Moltbookと同じ穴があるか分かります。</p><p>====</p><p>最後に一つ告知です。</p><p>弊社では、業務特化のAIエージェントを御社用にゼロから開発するサービスを提供しています。</p><p>研修やツール紹介ではなく、実際の業務フローをヒアリングして「明日から使えるもの」をそのままお渡しする形です。導入後の改善・内製化まで一貫してサポートします。</p><p>また、内製AIツールのセキュリティ・運用チェックと、その先の保守・改修までをエンジニアが伴走する形でも提供しています。作って終わりではなく、この記事の5つのような観点で「守り続ける体制」まで含めて整えるのが特徴です。</p><p>「うちのツール、他人のデータのURL開いたら見えるかも」と思った経営者・現場責任者の方は、ぜひ一度お話させてください。</p><p>初回ヒアリングは無料で、この記事で紹介した攻撃者目線のチェックのデモもその場でお見せしています。自分のシステムのどこが危ないかを一緒に整理するところから始められるので、お気軽にDMかLINEからご連絡ください。</p><p>「AI」と一言だけで大丈夫です↓</p><p>LINE: https://line-harness.r-yagi.workers.dev/r/x</p>
     </article>
@@ -390,14 +390,14 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 577 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 578 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-09-24/">TODAY</a></li>
+          <li><a href="../news/2026-09-25/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -424,7 +424,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-09-25</span>
+      <span>BUILD 2026-09-26</span>
     </div>
   </div>
 </footer>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jevで記憶候補を8件から3件へ絞る実装例 — Bookmarks · Vibe Coder Bootcamp</title>
-  <meta name="description" content="ローカル検索で得た記憶候補をJevが選別し、CodexやClaude Codeへ渡す構成。62.5%は候補件数の上限8件→3件の比較であり、総トークンや料金の実測削減率ではない。ダミー通信で候補選別を確認した個人の実装報告。" />
+  <title>Claude Opus 5.5で作るUIモーション設計 — Bookmarks · Vibe Coder Bootcamp</title>
+  <meta name="description" content="Opus 5.5でモーションデザインを作った。動画全体をコードで描画し、After Effectsは使っていない。再現用のプロンプトを公開する。" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
@@ -285,11 +285,11 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №020</span>
+    <span class="tick">BOOKMARK №001</span>
     <span class="sep">/</span>
-    <span>2026-09-21</span>
+    <span>2026-09-25</span>
     <span class="sep">/</span>
-    <span>@dansyu_callenge</span>
+    <span>@twoclipping</span>
     <span class="sep">/</span>
     <span>578 ITEMS</span>
     <span class="sep">/</span>
@@ -317,37 +317,43 @@
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-09-21 <span>/</span> №020
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-09-25 <span>/</span> №001
     </div>
     <div class="cat-line">
-      <span>💻 AI・開発 / 📖 知見</span>
-      <span class="sep">·</span><span>今野健介｜Claude×EC専門家 <span style="opacity:.7">@dansyu_callenge</span></span>
-      <span class="sep">·</span><span>2026-09-21</span>
+      <span>🎨 デザイン・UI/UX</span>
+      <span class="sep">·</span><span>zero <span style="opacity:.7">@twoclipping</span></span>
+      <span class="sep">·</span><span>2026-09-25</span>
     </div>
-    <h1 class="title">Jevで記憶候補を8件から3件へ絞る実装例</h1>
+    <h1 class="title">Claude Opus 5.5で作るUIモーション設計</h1>
     <div class="strap">
-      <span><span class="label">№</span>020 / 578</span>
-      <span><span class="label">SRC</span><a href="https://x.com/dansyu_callenge/status/2101789813443801556" target="_blank" rel="noopener noreferrer">x.com/dansyu_callenge ↗</a></span>
-      <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/2026-09-22-dansyu-jev-memory-filter.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
+      <span><span class="label">№</span>001 / 578</span>
+      <span><span class="label">SRC</span><a href="https://x.com/twoclipping/status/2103273003555402193" target="_blank" rel="noopener noreferrer">x.com/twoclipping ↗</a></span>
+      <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/2026-09-25_2103273003555402193.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
   </div>
 </section>
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">020<span class="ord">BOOKMARK / 578</span></aside>
+    <aside class="numeral">001<span class="ord">BOOKMARK / 578</span></aside>
     <article class="prose">
-<h2>要約</h2><p>ローカル検索で得た記憶候補をJevが選別し、CodexやClaude Codeへ渡す構成。62.5%は候補件数の上限8件→3件の比較であり、総トークンや料金の実測削減率ではない。ダミー通信で候補選別を確認した個人の実装報告。</p><h2>原文リンク</h2><p>https://x.com/dansyu_callenge/status/2101789813443801556</p><p>https://x.com/i/article/2101052397137317888</p>
+<h2>本文</h2><p>Opus 5.5でモーションデザインを作った。動画全体をコードで描画し、After Effectsは使っていない。再現用のプロンプトを公開する。</p><h2>日本語訳全文</h2><p>Opus 5.5のモーションデザインは驚くほどよくできる。この動画はすべてコードで作り、After Effectsは一切使っていない。再現できるよう、プロンプトのひな型を公開する。</p><p>&lt;入力&gt;</p><p>最初に次の条件を尋ねる。ひとつの形が変化していく先となるUI状態を8〜12個（ボタン、ローダー、プレーヤー、スライダー、トグル、タブ、チャート、コマンドパレット、トーストなど）。配色は白黒だけか、アクセントカラーを1色加える。音楽は約120 BPMで商用利用可能なものを選ぶ（Mixkitなど）。</p><p>&lt;/入力&gt;</p><p>&lt;演出方針&gt;</p><p>Dribbbleに載る水準のUIモーション。カットを割らず、ひとつの要素がサイズ・角丸・色を変えながらすべての状態に変化する。中身の切り替えには短いぼかしを使う。カーソルが実際にクリックとドラッグを行い、変化を引き起こす。背景は明るい暖色寄りのグレー、UIは白黒、書体は読みやすいものをひとつ（Geist）。動きにはスプリングを使うが、行き過ぎはごく小さく。各状態が画面いっぱいに見えるようカメラを寄せる。最終フレームを最初のフレームにつなげ、ループさせる。</p><p>弾みすぎるイージング、粒子の噴出、発光、UI部品へのグラデーション、線幅の揃わないアイコン、間延びした時間、既製テンプレートのような見た目は禁止。</p><p>&lt;/演出方針&gt;</p><p>&lt;構成&gt;</p><p>120 BPM、7小節。すべての拍で何かを起こす。ボタン→ローダー→チェック→Dynamic Island→再生・停止が変形する音楽プレーヤー→再生位置をスクラブ→音量スライダーへ変化し、上限を超えてドラッグすると伸びる→拍に合わせてトグルが切り替わる→ノブが液体のようなタブ表示に変わる→タブからチャートが開き、マウスを重ねるとツールチップが出る→⌘Kへ縮む→入力して絞り込む→Enter→トースト→ボタンに戻る。</p><p>&lt;/構成&gt;</p><p>&lt;実装&gt;</p><ol><li>1440×1440のHTMLファイルをひとつ作る。すべてのスタイルはseek(t)内で時刻から計算する。CSSトランジション、タイマー、フレーム間で持ち越す状態は使わない。</li><li>スプリングは閉形式のステップ応答で表す。目標値が何度も変わる値は、変化ごとのスプリングを足し合わせる。これで時間だけを入力とする純粋関数を保てる。</li><li>タブ表示の両端には別々のスプリングを使い、先端が後端より先に伸びるようにする。トグルのノブにも同じ方法を使う。</li><li>ドラッグ中はカーソル位置から値を直接計算する。離したら、その位置からスプリングで戻す。</li><li>numpyで音楽を解析して拍のグリッドを作り、強拍から始める。UI効果音は実測した音量ピークに合わせて置く。</li><li>Playwrightで各フレームにつき4枚のサブフレームを描画し、ffmpegのtmixで混ぜて60 fpsのモーションブラーを作る。</li><li>全編を描画する前に、各拍につき1フレームを出力する。拍からずれた箇所、窮屈な箇所、読みにくい箇所を直す。</li></ol><p>&lt;/実装&gt;</p><p>&lt;注意点&gt;</p><p>カメラが拡大する要素にwill-changeを指定すると、文字がぼやける。変形する容器の中で文字を切り替えるときは、入る文字と出る文字のタイミングを別々に設計し、重ならないようにする。最後のフレームはカーソルの位置と速度を含めて最初のフレームと一致させる。そうしないとループが引っかかる。</p><p>&lt;/注意点&gt;</p><p>&lt;開始&gt;</p><p>まず入力条件を尋ね、コードを書く前に拍グリッド上にUI状態の一覧を示す。</p><p>&lt;/開始&gt;</p>
     </article>
     <aside class="side">
       <dl>
-        <dt>AUTHOR</dt><dd>今野健介｜Claude×EC専門家</dd>
-        <dt>HANDLE</dt><dd>@dansyu_callenge</dd>
-        <dt>POSTED</dt><dd>2026-09-21</dd>
-        <dt>CATEGORY</dt><dd>💻 AI・開発 / 📖 知見</dd>
-        <dt>SOURCE</dt><dd><a href="https://x.com/dansyu_callenge/status/2101789813443801556" target="_blank" rel="noopener noreferrer">x.com/dansyu_callenge/status/2101789813443…</a></dd>
-        <dt>MARKDOWN</dt><dd><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/2026-09-22-dansyu-jev-memory-filter.md" target="_blank" rel="noopener noreferrer">GitHub で原文を見る</a></dd>
+        <dt>AUTHOR</dt><dd>zero</dd>
+        <dt>HANDLE</dt><dd>@twoclipping</dd>
+        <dt>POSTED</dt><dd>2026-09-25</dd>
+        <dt>CATEGORY</dt><dd>🎨 デザイン・UI/UX</dd>
+        <dt>SOURCE</dt><dd><a href="https://x.com/twoclipping/status/2103273003555402193" target="_blank" rel="noopener noreferrer">x.com/twoclipping/status/21032730035554021…</a></dd>
+        <dt>MARKDOWN</dt><dd><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/2026-09-25_2103273003555402193.md" target="_blank" rel="noopener noreferrer">GitHub で原文を見る</a></dd>
         
+        <dt>ENGAGEMENT</dt>
+        <dd>
+          <div class="stats">
+            <div class="stat"><span class="num">8,993</span><span class="lab">LIKES</span></div><div class="stat"><span class="num">500</span><span class="lab">RTS</span></div><div class="stat"><span class="num">14.8K</span><span class="lab">BMARKS</span></div><div class="stat"><span class="num">617K</span><span class="lab">VIEWS</span></div>
+          </div>
+        </dd>
       </dl>
     </aside>
   </div>
@@ -355,13 +361,10 @@
 
 <section class="page-nav">
   <div class="container">
-    <a class="btn prev" href="./2026-09-22-oikon-jev-intent-search.md.html">
-      <span>← 新しいブックマーク</span>
-      <span class="big">Jevを使った意図検索ブラウザ拡張の紹介</span>
-    </a>
-    <a class="btn next" href="./2026-09-23-nimo-jev-learning.md.html">
+    <span class="btn" style="opacity:.35;pointer-events:none">← 最新です</span>
+    <a class="btn next" href="./2026-09-25-ring-opus55-animation.md.html">
       <span>古いブックマーク →</span>
-      <span class="big">Jevの実践教材を紹介する投稿</span>
+      <span class="big">用 Opus 5.5 制作的小动画。</span>
     </a>
   </div>
 </section>
@@ -369,8 +372,8 @@
 <section class="actions">
   <div class="container">
     <a href="./">← 一覧へ戻る</a>
-    <a class="primary" href="https://x.com/dansyu_callenge/status/2101789813443801556" target="_blank" rel="noopener noreferrer">元ポストを X で見る</a>
-    <a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/2026-09-22-dansyu-jev-memory-filter.md" target="_blank" rel="noopener noreferrer">GitHub で開く</a>
+    <a class="primary" href="https://x.com/twoclipping/status/2103273003555402193" target="_blank" rel="noopener noreferrer">元ポストを X で見る</a>
+    <a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/2026-09-25_2103273003555402193.md" target="_blank" rel="noopener noreferrer">GitHub で開く</a>
   </div>
 </section>
 

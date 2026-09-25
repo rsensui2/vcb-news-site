@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-09-26 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-09-26 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0926</span>
+    <span class="sep">/</span>
+    <span>2026-09-26</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260926.0719</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-09-26/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:19 · FRI</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · FRIDAY · SEPTEMBER 26, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>09<span class="dot">.</span>26</h1>
+    <div class="strap">
+      <span>Claudeが新しい酵素系ARTを発見 · GitHubの自動セキュリティ修正がCopilot · SlackとTeamsのCopilotが会話の文脈をより多く利用 · Turnstile</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI研究 <span class="sep">/</span> ANTHROPIC <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claudeが新しい酵素系ARTを発見。機能の解明はこれから</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-26/topic_1.png" data-alt="Claudeが新しい酵素系ARTを発見。機能の解明はこれから" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-26/topic_1.png" alt="Claudeが新しい酵素系ARTを発見。機能の解明はこれから" />
+      </div>
+      <p class="lede">
+        Anthropicの研究チームは、Claudeのエージェント群がDNA配列から未記載の酵素系ARTを見つけたと報告した。配列はCRISPRに似た反復を持つが、その働きはまだ分かっていない。人間の研究者が実験で検証を進めている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">約950のエージェントが21時間、2億1000万トークンを使って探索した</li>
+        <li data-i="02">20万件超の逆転写酵素から3500件の候補を挙げ、詳しく調べる20件へ絞った</li>
+        <li data-i="03">ARTは逆転写酵素、隣接する遺伝子、反復DNA配列からなる</li>
+        <li data-i="04">初期実験では反復配列が短いRNAとして発現した</li>
+      </ul>
+      <div class="pull">
+        AIによる大量の仮説探索と人間の実験検証を組み合わせた事例。発見の規模と、未解明の部分を分けて捉えたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.anthropic.com/news/claude-discovers-novel-enzyme-system">Anthropic</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI研究</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.anthropic.com/news/claude-discovers-novel-enzyme-system">https://www.anthropic.com/news/claude-discovers-novel-enzyme-system</a></dd>
+        <dd><a href="https://www-cdn.anthropic.com/22573675ada52a8ca8a97a1a4b4326b2f208a071.pdf">www-cdn.anthropic.com/22573675ada52a8ca8…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · GITHUB CHANGELOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ <span class="sep">/</span> GITHUB CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>GitHubの自動セキュリティ修正がCopilot Memoryを利用</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-26/topic_2.png" data-alt="GitHubの自動セキュリティ修正がCopilot Memoryを利用" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-26/topic_2.png" alt="GitHubの自動セキュリティ修正がCopilot Memoryを利用" />
+      </div>
+      <p class="lede">
+        GitHubのagentic autofixは、Copilot Memoryを有効にしている環境で既存の記憶を参照するようになった。修正後はパターンを記憶に残し、次の警告やほかのCopilot機能で再利用できる。両機能は公開プレビューだ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">セキュリティ警告への修正案を作る際にリポジトリの既存記憶を参照する</li>
+        <li data-i="02">作成した修正パターンを新しい記憶として保存する</li>
+        <li data-i="03">記憶はCopilot code reviewやcloud agentにも役立つ可能性がある</li>
+      </ul>
+      <div class="pull">
+        繰り返し起きる警告に、リポジトリ固有の修正知識を使える。Memoryの有効化状況と記録内容を確認したい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-25-agentic-autofix-now-uses-copilot-memory/">GitHub Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-25-agentic-autofix-now-uses-copilot-memory/">https://github.blog/changelog/2026-09-25-agentic-autofix-now-uses-copilot-memory/</a></dd>
+        <dd><a href="https://docs.github.com/en/copilot/concepts/agents/copilot-memory">docs.github.com/en/copilot/concepts/agen…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · GITHUB CHANGELOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> GITHUB CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>SlackとTeamsのCopilotが会話の文脈をより多く利用</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-26/topic_3.png" data-alt="SlackとTeamsのCopilotが会話の文脈をより多く利用" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-26/topic_3.png" alt="SlackとTeamsのCopilotが会話の文脈をより多く利用" />
+      </div>
+      <p class="lede">
+        GitHub CopilotのSlack・Microsoft Teams連携で、会話中の添付ファイルや画像、転送メッセージなどを作業の文脈に使える範囲が広がった。Issue作成前の重複確認や、作業結果と元の会話を結ぶリンクも追加された。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Slackでは対応ファイル、添付、メッセージリンクを参照できる</li>
+        <li data-i="02">Teamsではインライン画像、転送メッセージ、チャンネルとスレッド履歴を利用できる</li>
+        <li data-i="03">Issue作成前に似たIssueを確認し、作成物へ直接リンクする</li>
+        <li data-i="04">次のメッセージからモデルを切り替え、その会話内で選択を維持する</li>
+      </ul>
+      <div class="pull">
+        チャットの決定をIssueや実装へ移す際、説明の転記を減らせる。公開プレビューの提供状況を確認して使いたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-25-updates-to-github-copilot-for-slack-and-microsoft-teams/">GitHub Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-25-updates-to-github-copilot-for-slack-and-microsoft-teams/">https://github.blog/changelog/2026-09-25-updates-to-github-copilot-for-slack-and-microsoft-teams/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · CLOUDFLARE BLOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        WEBセキュリティ <span class="sep">/</span> CLOUDFLARE BLOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Turnstile Spin、AIエージェントがボット対策を実装</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-26/topic_4.png" data-alt="Turnstile Spin、AIエージェントがボット対策を実装" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-26/topic_4.png" alt="Turnstile Spin、AIエージェントがボット対策を実装" />
+      </div>
+      <p class="lede">
+        Cloudflareは、AIコーディングエージェントがTurnstileをサイトに組み込むTurnstile Spinを公開した。ウィジェットの設置だけでなく、バックエンドからSiteverifyへトークンを送って検証するところまで扱う。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Turnstileはサイト訪問者にパズルを解かせない仕組み</li>
+        <li data-i="02">フロントエンドのウィジェットとバックエンドのSiteverify接続を一緒に実装する</li>
+        <li data-i="03">新規導入、検証漏れの修復、別のCAPTCHAからの移行を支援する</li>
+        <li data-i="04">コード変更は開発者側のエージェントが行い、確認してから反映する</li>
+      </ul>
+      <div class="pull">
+        フォームへウィジェットだけ置き、サーバー側の検証を忘れる事故を減らせる。導入後は実際の送信経路まで試したい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://blog.cloudflare.com/turnstile-spin/">Cloudflare Blog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>Webセキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://blog.cloudflare.com/turnstile-spin/">https://blog.cloudflare.com/turnstile-spin/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · CLOUDFLARE BLOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ <span class="sep">/</span> CLOUDFLARE BLOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cloudflare Containersの残存データ問題は修正済み</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-26/topic_5.png" data-alt="Cloudflare Containersの残存データ問題は修正済み" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-26/topic_5.png" alt="Cloudflare Containersの残存データ問題は修正済み" />
+      </div>
+      <p class="lede">
+        CloudflareはContainersとその上のSandboxesで、別テナントが以前使ったディスクの残存データを読める可能性があったと公表した。設定を修正し、古いディスクとスナップショットも退役させた。同社は悪用の証拠を確認していない。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">2026年9月4日にバグ報奨制度を通じて報告された</li>
+        <li data-i="02">薄いプロビジョニングに使うブロックのゼロ化が無効になっていた</li>
+        <li data-i="03">同社はゼロ化を戻し、旧ディスクとキャッシュ済みスナップショットを退役させた</li>
+        <li data-i="04">顧客側の設定変更は不要と案内している</li>
+      </ul>
+      <div class="pull">
+        共有コンテナの分離はアプリの認証だけで決まらない。ストレージの初期化設定も運用監査の対象になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://blog.cloudflare.com/containers-cross-tenant-vulnerability/">Cloudflare Blog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-24</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://blog.cloudflare.com/containers-cross-tenant-vulnerability/">https://blog.cloudflare.com/containers-cross-tenant-vulnerability/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · GITHUB CHANGELOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発運用 <span class="sep">/</span> GITHUB CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>GitHub Actionsの検索件数、2500件超は概数表示へ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-26/topic_6.png" data-alt="GitHub Actionsの検索件数、2500件超は概数表示へ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-26/topic_6.png" alt="GitHub Actionsの検索件数、2500件超は概数表示へ" />
+      </div>
+      <p class="lede">
+        GitHub Actionsの実行履歴を条件付きで検索した際、該当件数が2500件を超えるとAPIと画面に「2,500+」と表示される。大量検索がタイムアウトしたときに不正確な件数を返す問題への変更だ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">ワークフロー、イベント、状態、ブランチ、実行者による検索が対象</li>
+        <li data-i="02">ページ分割された結果は従来どおり最大1000件を返す</li>
+        <li data-i="03">正確な総数が必要な連携は日付などで検索条件を絞る必要がある</li>
+      </ul>
+      <div class="pull">
+        CIの実行数をAPIで集計する仕組みは、件数フィールドを正確な総数として扱っていないか確認したい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-25-changes-to-query-results-in-the-github-actions-api-and-ui/">GitHub Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発運用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-25-changes-to-query-results-in-the-github-actions-api-and-ui/">https://github.blog/changelog/2026-09-25-changes-to-query-results-in-the-github-actions-api-and-ui/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · CLOUDFLARE CHANGEL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        クラウド <span class="sep">/</span> CLOUDFLARE CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cloudflare Imagesに画像変換の利用分析を追加</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-26/topic_7.png" data-alt="Cloudflare Imagesに画像変換の利用分析を追加" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-26/topic_7.png" alt="Cloudflare Imagesに画像変換の利用分析を追加" />
+      </div>
+      <p class="lede">
+        Cloudflare Imagesに、画像変換リクエストをアカウント単位で見る分析画面が加わった。URLによる変換とImagesバインディング経由の変換を分けて確認できる。表示値はサンプリングに基づく推定だ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Images &amp; StreamからTransformationsのAnalyticsを開く</li>
+        <li data-i="02">URL変換では上位ゾーン、変換設定、オリジンホストを確認できる</li>
+        <li data-i="03">Imagesバインディングでは利用の多いWorkerスクリプトを確認できる</li>
+      </ul>
+      <div class="pull">
+        画像変換の負荷や料金が偏っている場所を探しやすくなる。推定値なので厳密な請求件数とは区別したい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-09-23-transformation-analytics/">Cloudflare Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-23</dd>
+        <dt>CATEGORY</dt>
+        <dd>クラウド</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-09-23-transformation-analytics/">https://developers.cloudflare.com/changelog/post/2026-09-23-transformation-analytics/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · ZEROX</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        制作ノウハウ <span class="sep">/</span> ZERO（X） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>コードだけでUIモーションを作る実装手順</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-26/topic_8.png" data-alt="コードだけでUIモーションを作る実装手順" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-26/topic_8.png" alt="コードだけでUIモーションを作る実装手順" />
+      </div>
+      <p class="lede">
+        zero氏は、Claude Opus 5.5を使って、一つのUI要素がボタンやスライダーなどへ連続変形する動画のプロンプトを公開した。HTMLで各時刻の状態を計算し、Playwrightとffmpegで描画する制作例だ。これは制作者の実例で、一般的な性能評価ではない。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">8〜12種類のUI状態を7小節の拍に合わせて配置する</li>
+        <li data-i="02">seek(t)で状態を時間だけから計算し、タイマーやCSSトランジションに頼らない</li>
+        <li data-i="03">Playwrightで1フレームにつき4枚を描き、ffmpegでモーションブラーを作る</li>
+        <li data-i="04">全編を描く前に各拍の静止画を確認する</li>
+      </ul>
+      <div class="pull">
+        AIへ映像を任せる際も、拍、状態遷移、検品フレームを先に指定すると手戻りを減らせる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">8,993</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/twoclipping/status/2103273003555402193">@twoclipping</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>制作ノウハウ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/twoclipping/status/2103273003555402193">x.com/twoclipping/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://www.anthropic.com/news/claude-discovers-novel-enzyme-system">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-09-25/">
+      ← 前日 · 2026-09-25
+      <span class="big">Cursor、デプロイ監視とセキュリティレビューのBotを公開</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-09-26/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260926.0719</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

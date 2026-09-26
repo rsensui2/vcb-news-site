@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-09-27 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-09-27 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0927</span>
+    <span class="sep">/</span>
+    <span>2026-09-27</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260927.0722</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-09-27/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:22 · SAT</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SATURDAY · SEPTEMBER 27, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>09<span class="dot">.</span>27</h1>
+    <div class="strap">
+      <span>Claude · Vercel · GitHub · Vercel</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> CLAUDE CODE RELEASES <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code 2.1.283、企業向けモデル制御と指示書監査</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-27/topic_1.png" data-alt="Claude Code 2.1.283、企業向けモデル制御と指示書監査" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-27/topic_1.png" alt="Claude Code 2.1.283、企業向けモデル制御と指示書監査" />
+      </div>
+      <p class="lede">
+        Claude Code 2.1.283では、組織が利用できるモデルをバージョン単位で固定する設定が加わった。古いモデル向けの指示が残っていないか、CLAUDE.mdやSkillsを調べる`/doctor prompt-audit`も使える。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">`availableModelsMatch: &quot;exact&quot;`で一覧にない新しいモデルを自動的にブロック</li>
+        <li data-i="02">`deniedModels`で許可済みの一覧から個別のモデルを除外できる</li>
+        <li data-i="03">`/doctor prompt-audit`が指示書、Skills、agents、commandsを点検</li>
+        <li data-i="04">`CLAUDE_CODE_GATEWAY_HINT_HEADERS=1`で同一プロンプトのリクエストを識別できる</li>
+      </ul>
+      <div class="pull">
+        企業でモデル更新を管理しつつ、古い指示が新モデルの動きを妨げていないか点検しやすくなる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.283">Claude Code Releases</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.283">https://github.com/anthropics/claude-code/releases/tag/v2.1.283</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · VERCEL CHANGELOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        インフラ <span class="sep">/</span> VERCEL CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Vercel Sandboxのメモリ使用量を可視化</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-27/topic_2.png" data-alt="Vercel Sandboxのメモリ使用量を可視化" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-27/topic_2.png" alt="Vercel Sandboxのメモリ使用量を可視化" />
+      </div>
+      <p class="lede">
+        Vercel Sandboxの観測画面とCLIにメモリ使用量が加わった。平均値とP75・P95を確認でき、メモリ上限に近づくSandboxを探せる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">ダッシュボードのMemory Usageカードは平均、P75、P95を表示</li>
+        <li data-i="02">詳細グラフには上限の85%を示す破線が入る</li>
+        <li data-i="03">Observabilityの`memoryUsedBytes`からクエリやアラートを作れる</li>
+        <li data-i="04">CLIの`vercel metrics`では`vercel.sandbox.memory_used_bytes`を取得できる</li>
+      </ul>
+      <div class="pull">
+        ビルドやエージェントの実行がメモリ不足で落ちる前に、負荷の偏りを見つけやすい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/vercel-sandbox-now-supports-memory-observability">Vercel Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>インフラ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/vercel-sandbox-now-supports-memory-observability">https://vercel.com/changelog/vercel-sandbox-now-supports-memory-observability</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · VERCEL CHANGELOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        DEVOPS <span class="sep">/</span> VERCEL CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>GitHub ActionsからVercelレジストリへOIDCでpush</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-27/topic_3.png" data-alt="GitHub ActionsからVercelレジストリへOIDCでpush" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-27/topic_3.png" alt="GitHub ActionsからVercelレジストリへOIDCでpush" />
+      </div>
+      <p class="lede">
+        `vercel/vcr-action/login`を使うと、GitHub ActionsからVercel Container RegistryへOIDCでログインできる。ジョブ終了時には短命のトークンを失効させるため、長期のレジストリ認証情報を保存せずに済む。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Vercelチーム側にリポジトリとワークフローに合うOIDCポリシーが必要</li>
+        <li data-i="02">GitHub Actionsのジョブに`id-token: write`を付ける</li>
+        <li data-i="03">既定はDocker認証で、PodmanとBuildahも選べる</li>
+        <li data-i="04">作成したlinux/amd64イメージは同一プロジェクトのSandbox用カスタムイメージにも使える</li>
+      </ul>
+      <div class="pull">
+        CIで長期シークレットを管理する手間を減らせる。導入にはVercel側の権限設定が要る。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/vcr-login-github-action">Vercel Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>DevOps</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/vcr-login-github-action">https://vercel.com/changelog/vcr-login-github-action</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · VERCEL CHANGELOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AIモデル <span class="sep">/</span> VERCEL CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Vercel AI GatewayにPixel Canaryを期間限定で無料提供</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-27/topic_4.png" data-alt="Vercel AI GatewayにPixel Canaryを期間限定で無料提供" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-27/topic_4.png" alt="Vercel AI GatewayにPixel Canaryを期間限定で無料提供" />
+      </div>
+      <p class="lede">
+        Vercel AI Gatewayにコーディング向けモデル`stealth/pixel-canary`が加わった。フロントエンドやモバイルUIの実装向けで、stealth期間中は無料で試せる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Vercel公表のNext.js評価では31問中28問を通過し、成功率は90.3%</li>
+        <li data-i="02">AGENTS.mdでNext.js文書を与えた条件では31問中30問を通過</li>
+        <li data-i="03">評価は最大4回の試行のいずれかが成功すれば合格とするpass@4</li>
+        <li data-i="04">ZDRに非対応で、送信内容が学習や改善に使われる可能性がある</li>
+      </ul>
+      <div class="pull">
+        UI実装向けモデルを比較する選択肢になる。無料期間とデータ利用条件を確認してから試したい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/pixel-canary-is-now-available-in-stealth-for-free-on-ai-gateway">Vercel Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>AIモデル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/pixel-canary-is-now-available-in-stealth-for-free-on-ai-gateway">https://vercel.com/changelog/pixel-canary-is-now-available-in-stealth-for-free-on-ai-gateway</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · SUPABASE CHANGELOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        データベース <span class="sep">/</span> SUPABASE CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>SupabaseのPostgreSQL更新、一部拡張は事前確認が必要</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-27/topic_5.png" data-alt="SupabaseのPostgreSQL更新、一部拡張は事前確認が必要" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-27/topic_5.png" alt="SupabaseのPostgreSQL更新、一部拡張は事前確認が必要" />
+      </div>
+      <p class="lede">
+        SupabaseはPostgreSQL 15.19と17.11への更新を発表した。44件のCVEへの対応を含む一方、ltree、pgcrypto、btree_gist、独自演算子を使う環境には確認が必要な場合がある。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">9月28日から新規プロジェクトには新版を適用し、既存プロジェクトはダッシュボードから更新できる</li>
+        <li data-i="02">マルチバイトやICUのltreeインデックスは再作成が必要な場合がある</li>
+        <li data-i="03">旧暗号方式で保存したpgcryptoのデータは既定で復号できなくなる</li>
+        <li data-i="04">公式記事の検出クエリが何も返さなければ対応は不要</li>
+      </ul>
+      <div class="pull">
+        マイナー更新でも拡張の利用状況次第で影響が出る。アップグレード前に公式の検出クエリで対象を確かめたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://supabase.com/changelog/postgres-15-19-17-11-breaking-changes">Supabase Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>データベース</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://supabase.com/changelog/postgres-15-19-17-11-breaking-changes">https://supabase.com/changelog/postgres-15-19-17-11-breaking-changes</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · GITHUB CHANGELOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発組織 <span class="sep">/</span> GITHUB CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Copilot利用指標APIがPRレビューの待ち時間を3段階に分解</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-27/topic_6.png" data-alt="Copilot利用指標APIがPRレビューの待ち時間を3段階に分解" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-27/topic_6.png" alt="Copilot利用指標APIがPRレビューの待ち時間を3段階に分解" />
+      </div>
+      <p class="lede">
+        GitHub Copilotの企業・組織向け利用指標APIに、プルリクエストのレビュー所要時間が加わった。初回レビューまで、初回から最終レビューまで、最終レビューからマージまでの中央値と90パーセンタイルを見られる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">`repos-1-day`の`pull_request_review_times`配列で提供</li>
+        <li data-i="02">対象は人が作り、別の人がレビューしたPR</li>
+        <li data-i="03">BotやCopilot code reviewによるレビューは時間計測の対象外</li>
+        <li data-i="04">過去分の補完はなく、対象マージがない日は空配列になる</li>
+      </ul>
+      <div class="pull">
+        レビューの遅れが初動、やり取り、承認後のどこにあるか分けて改善できる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-25-usage-metrics-api-adds-pull-request-review-stages/">GitHub Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発組織</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-25-usage-metrics-api-adds-pull-request-review-stages/">https://github.blog/changelog/2026-09-25-usage-metrics-api-adds-pull-request-review-stages/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · CLOUDFLARE CHANGEL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発運用 <span class="sep">/</span> CLOUDFLARE CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cloudflare Workersのtracingに例外記録とスパン操作を追加</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-27/topic_7.png" data-alt="Cloudflare Workersのtracingに例外記録とスパン操作を追加" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-27/topic_7.png" alt="Cloudflare Workersのtracingに例外記録とスパン操作を追加" />
+      </div>
+      <p class="lede">
+        Cloudflare WorkersのカスタムスパンAPIに`startSpan`、`getActiveSpan`、`recordException`などが加わった。既存のトレースへ属性や例外を残す実装がしやすくなる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">`startSpan(name)`はスパンを作るがアクティブにはしない</li>
+        <li data-i="02">`getActiveSpan()`は現在のスパンを返し、カスタムスパン外ではルートスパンを返す</li>
+        <li data-i="03">`recordException()`はError、文字列、所定の項目を持つオブジェクトを受け取る</li>
+        <li data-i="04">`setAttributes()`は複数属性を設定し、チェーン可能なスパンを返す</li>
+      </ul>
+      <div class="pull">
+        本番障害時に、処理の区間と例外を同じトレースで追いやすくなる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-09-25-custom-span-apis/">Cloudflare Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発運用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-09-25-custom-span-apis/">https://developers.cloudflare.com/changelog/post/2026-09-25-custom-span-apis/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · REXANWONG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        制作知見 <span class="sep">/</span> @REXAN_WONG <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Opus 5.5で動画を作るなら絵コンテと実製品素材を先に渡す</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-27/topic_8.png" data-alt="Opus 5.5で動画を作るなら絵コンテと実製品素材を先に渡す" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-27/topic_8.png" alt="Opus 5.5で動画を作るなら絵コンテと実製品素材を先に渡す" />
+      </div>
+      <p class="lede">
+        Rexan Wong氏は、Opus 5.5でモーショングラフィックを作る手順を投稿した。参考映像、ブランド素材、実製品の画面を渡して絵コンテを3案作り、各シーンの静止画を確認してから動きを付けるという制作例だ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">参考動画を1〜2本選び、映像のテンポと画面転換を示す</li>
+        <li data-i="02">HyperFramesかRemotionで各シーンをコード化してレンダリングする</li>
+        <li data-i="03">ブランド素材と実製品の画面を渡して絵コンテを3案作る</li>
+        <li data-i="04">静止画の段階でシーンを直し、完成後はカメラ操作を具体的に指示する</li>
+      </ul>
+      <div class="pull">
+        モデル任せの一発生成より、素材と検品の順番を決めた制作手順が参考になる。投稿者の経験談であり、モデルの一般的な性能評価ではない。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">4,131</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/rexan_wong/status/2103707054108299437">@rexan_wong</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-26</dd>
+        <dt>CATEGORY</dt>
+        <dd>制作知見</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/rexan_wong/status/2103707054108299437">x.com/rexan_wong/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.283">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-09-26/">
+      ← 前日 · 2026-09-26
+      <span class="big">Claudeが新しい酵素系ARTを発見。機能の解明はこれから</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-09-27/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260927.0722</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

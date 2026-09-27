@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-09-28 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-09-28 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0928</span>
+    <span class="sep">/</span>
+    <span>2026-09-28</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260928.0720</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-09-28/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:20 · SUN</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SUNDAY · SEPTEMBER 28, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>09<span class="dot">.</span>28</h1>
+    <div class="strap">
+      <span>Supabase · GitHub · Copilotの企業設定を画面上で検証可能に · Cloudflare</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        インフラ <span class="sep">/</span> 公式発表 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Supabase Logsは計測を開始、課金は2027年初まで猶予</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-28/topic_1.png" data-alt="Supabase Logsは計測を開始、課金は2027年初まで猶予" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-28/topic_1.png" alt="Supabase Logsは計測を開始、課金は2027年初まで猶予" />
+      </div>
+      <p class="lede">
+        Supabaseのログ生成量と読取量が使用量画面で計測されるようになった。現時点では制限を強制せず、課金開始も2027年初まで猶予がある。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">90%超のプロジェクトは含有枠内</li>
+        <li data-i="02">Logs Ingestは生成データ量で、超過分が課金対象</li>
+        <li data-i="03">Logs Queryは読取スキャン量で、直接の課金対象ではない</li>
+        <li data-i="04">Postgresのログ設定で生成量を調整できる</li>
+      </ul>
+      <div class="pull">
+        猶予中に使用量を見て、必要なら記録するログの量を調整できる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://supabase.com/changelog/logs-usage-based-pricing">公式発表</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>インフラ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://supabase.com/changelog/logs-usage-based-pricing">https://supabase.com/changelog/logs-usage-based-pricing</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · NEWS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> 公式発表 <span class="sep">/</span> NEWS
+      </div>
+      <h2>GitHub Issuesで個人用ビューと関連Issueの連携が拡充</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-28/topic_2.png" data-alt="GitHub Issuesで個人用ビューと関連Issueの連携が拡充" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-28/topic_2.png" alt="GitHub Issuesで個人用ビューと関連Issueの連携が拡充" />
+      </div>
+      <p class="lede">
+        GitHubのリポジトリIssuesページで、個人だけが使う保存ビューに対応した。「Relates to」関係はAPI、webhook、検索にも対応し、一般提供となった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">保存ビューは個人用で非公開</li>
+        <li data-i="02">Relates toはREST APIとGraphQL APIに対応</li>
+        <li data-i="03">webhookとタイムラインイベントにも反映</li>
+        <li data-i="04">Issues検索とProjects検索でも関連を扱える</li>
+      </ul>
+      <div class="pull">
+        自分用の絞り込みを保存しつつ、関連Issueを自動化から追いやすくなる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-25-personal-saved-views-for-repository-issues-and-more/">公式発表</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-25-personal-saved-views-for-repository-issues-and-more/">https://github.blog/changelog/2026-09-25-personal-saved-views-for-repository-issues-and-more/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · NEWS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI開発 <span class="sep">/</span> 公式発表 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Copilotの企業設定を画面上で検証可能に</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-28/topic_3.png" data-alt="Copilotの企業設定を画面上で検証可能に" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-28/topic_3.png" alt="Copilotの企業設定を画面上で検証可能に" />
+      </div>
+      <p class="lede">
+        GitHub Copilotの企業向けmanaged settingsに製品内バリデータが加わった。JSONの構文やチーム対応付けの誤りを、影響するファイルとJSON path付きで確認できる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">不正なJSONと未対応設定を検出</li>
+        <li data-i="02">無効なチームマッピングも検出</li>
+        <li data-i="03">対象はmanaged-settings.jsonとteam-mappings.jsonなど</li>
+        <li data-i="04">修正後は.github-privateの既定ブランチへ反映して再確認</li>
+      </ul>
+      <div class="pull">
+        企業ポリシーが適用されない設定ミスを見つけやすくなる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-25-enterprise-managed-settings-in-product-validator/">公式発表</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI開発</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-25-enterprise-managed-settings-in-product-validator/">https://github.blog/changelog/2026-09-25-enterprise-managed-settings-in-product-validator/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · NEWS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        インフラ <span class="sep">/</span> 公式発表 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cloudflare Workersの指標に段階デプロイを重ねて表示</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-28/topic_4.png" data-alt="Cloudflare Workersの指標に段階デプロイを重ねて表示" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-28/topic_4.png" alt="Cloudflare Workersの指標に段階デプロイを重ねて表示" />
+      </div>
+      <p class="lede">
+        Cloudflare WorkersのMetricsチャートに、リリースと段階デプロイの履歴が重なるようになった。エラーやCPU時間の変化を、どの版に何割のトラフィックを流したかと照合できる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">段階デプロイは一つの帯として表示</li>
+        <li data-i="02">ホバーで旧版・新版、所要時間、配分率を確認</li>
+        <li data-i="03">ロールバックは別のリリースとして表示</li>
+        <li data-i="04">アップロードだけの版や0%の版は表示されない</li>
+      </ul>
+      <div class="pull">
+        不具合が始まった配分段階を画面上で特定しやすい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-09-25-release-flows-workers-metrics/">公式発表</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>インフラ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-09-25-release-flows-workers-metrics/">https://developers.cloudflare.com/changelog/post/2026-09-25-release-flows-workers-metrics/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · NEWS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        自動化 <span class="sep">/</span> 公式発表 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Browser Runのクロール完了をQueuesで受け取れる</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-28/topic_5.png" data-alt="Browser Runのクロール完了をQueuesで受け取れる" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-28/topic_5.png" alt="Browser Runのクロール完了をQueuesで受け取れる" />
+      </div>
+      <p class="lede">
+        Cloudflare Browser Runのクロールジョブが、開始・更新・完了イベントをQueuesに送れるようになった。処理の進捗確認や後続処理の起動を、繰り返しの状態照会なしに組める。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">イベントはcrawl.started、crawl.updated、crawl.finished</li>
+        <li data-i="02">購読はアカウント単位</li>
+        <li data-i="03">Wranglerのqueues subscription createで設定</li>
+        <li data-i="04">イベント本文にはジョブIDや状態が含まれる</li>
+      </ul>
+      <div class="pull">
+        クロール完了後の取り込み処理をイベントで起動できる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-09-25-crawl-event-subscriptions/">公式発表</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>自動化</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-09-25-crawl-event-subscriptions/">https://developers.cloudflare.com/changelog/post/2026-09-25-crawl-event-subscriptions/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · NEWS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        メール <span class="sep">/</span> 公式発表 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Email Sendingの配信停止を送信ドメインごとに管理</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-28/topic_6.png" data-alt="Email Sendingの配信停止を送信ドメインごとに管理" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-28/topic_6.png" alt="Email Sendingの配信停止を送信ドメインごとに管理" />
+      </div>
+      <p class="lede">
+        Cloudflare Email Sendingのサプレッションに適用範囲が加わった。バウンスや苦情による自動サプレッションは送信ドメイン単位となり、別の送信ドメインへ波及しにくくなった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">accountはアカウント全体に適用</li>
+        <li data-i="02">sending_domainは指定した送信ドメインだけに適用</li>
+        <li data-i="03">APIでscopeを省略すると従来どおりaccount</li>
+        <li data-i="04">一覧APIではscope_typeとscope_valueで絞れる</li>
+      </ul>
+      <div class="pull">
+        複数ブランドのメール運用で、一つのドメインの問題が他の配信を止める範囲を抑えられる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-09-25-sending-domain-suppressions/">公式発表</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-25</dd>
+        <dt>CATEGORY</dt>
+        <dd>メール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-09-25-sending-domain-suppressions/">https://developers.cloudflare.com/changelog/post/2026-09-25-sending-domain-suppressions/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · UCHITASUCCESS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        制作知見 <span class="sep">/</span> うちた (@UCHITA_SUCCESS) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>操作できるAIスライドの作例を公開</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-28/topic_7.png" data-alt="操作できるAIスライドの作例を公開" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-28/topic_7.png" alt="操作できるAIスライドの作例を公開" />
+      </div>
+      <p class="lede">
+        うちた氏はOpus 5.5を使い、根拠の表示とその場での再計算ができるスライドの作例を公開した。投稿では、既存のプロンプトへ一つのブロックを追加して制作したと説明している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">根拠を押して開く操作を提示</li>
+        <li data-i="02">数値を動かすと再計算する作例</li>
+        <li data-i="03">社内プレゼンと商談を想定</li>
+        <li data-i="04">制作手順の詳細は投稿だけでは確認できない</li>
+      </ul>
+      <div class="pull">
+        静的な図として配るスライドから、聞き手が前提を確かめられる資料への発想につながる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,913</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/uchita_success/status/2103786580838420912">@uchita_success</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-26</dd>
+        <dt>CATEGORY</dt>
+        <dd>制作知見</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/uchita_success/status/2103786580838420912">x.com/uchita_success/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · THARIQ TRQ212</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発知見 <span class="sep">/</span> THARIQ (@TRQ212) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Claude Codeのeffortは実装と検証で使い分ける</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-28/topic_8.png" data-alt="Claude Codeのeffortは実装と検証で使い分ける" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-28/topic_8.png" alt="Claude Codeのeffortは実装と検証で使い分ける" />
+      </div>
+      <p class="lede">
+        Claude Code開発者のThariq氏は、effortを変えて同じ課題を試した結果を長文記事で公開した。通常の実装はlow・mediumで対話し、例外条件が多い検証やセキュリティではhighを使う運用を提案している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">高いeffortでは検証と例外条件の確認が増えたという観察</li>
+        <li data-i="02">HTMLサニタイザーの例ではlowが5回中1回、xhighが5回中5回成功</li>
+        <li data-i="03">effortを上げても方針そのものの誤りは解消しない</li>
+        <li data-i="04">開発者自身は実装と検証で水準を切り替える</li>
+      </ul>
+      <div class="pull">
+        作業ごとに時間と検証の深さを変える判断材料になる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">5,087</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/trq212/status/2103576349499855160">@trq212</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-26</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発知見</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/trq212/status/2103576349499855160">x.com/trq212/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://supabase.com/changelog/logs-usage-based-pricing">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-09-27/">
+      ← 前日 · 2026-09-27
+      <span class="big">Claude Code 2.1.283、企業向けモデル制御と指示書監査</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-09-28/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260928.0720</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

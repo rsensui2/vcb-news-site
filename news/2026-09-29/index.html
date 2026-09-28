@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-09-29 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-09-29 の Vibe Coder Bootcamp モーニングディスパッチ — 6本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №0929</span>
+    <span class="sep">/</span>
+    <span>2026-09-29</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>06 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20260929.0723</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-09-29/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:23 · MON</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · MONDAY · SEPTEMBER 29, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>09<span class="dot">.</span>29</h1>
+    <div class="strap">
+      <span>Claude · Cloudflareの新CLI「cf」はAIエージェントの操作を広げる · Vinext · KitesurfがWebMCPに対応</span>
+      <span><span class="count">06</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AIモデル <span class="sep">/</span> 公式発表 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Sonnet 5.5は速度30%以上向上、タスク単価も低下</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-29/topic_1.png" data-alt="Claude Sonnet 5.5は速度30%以上向上、タスク単価も低下" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-29/topic_1.png" alt="Claude Sonnet 5.5は速度30%以上向上、タスク単価も低下" />
+      </div>
+      <p class="lede">
+        AnthropicはClaude Sonnet 5.5を公開した。Sonnet 5とトークン単価は同じだが、同社の検証では出力が30%以上速く、タスクあたりの費用は最大30%低い。GitHub Copilotも同日に提供を発表した。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">入力100万トークン2ドル、出力100万トークン10ドルでSonnet 5と同額</li>
+        <li data-i="02">範囲が明確な日常業務、バグ修正、文書・スライド作成を主用途に想定</li>
+        <li data-i="03">GitHub CopilotのPro、Business、Enterpriseなどへ段階的に展開</li>
+      </ul>
+      <div class="pull">
+        日々の開発や資料作成では、難易度に応じてSonnet 5.5とOpus 5.5の仕上がりと費用を比べられる。速度と費用の数値はAnthropicの検証結果で、個々の作業では変わる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.anthropic.com/claude-sonnet-5-5">公式発表</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>AIモデル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.anthropic.com/claude-sonnet-5-5">https://www.anthropic.com/claude-sonnet-5-5</a></dd>
+        <dd><a href="https://github.blog/changelog/2026-09-28-claude-sonnet-5-5-in-github-copilot/">github.blog/changelog/2026-09-28-claude-…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · NEWS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> 公式発表 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cloudflareの新CLI「cf」はAIエージェントの操作を広げる</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-29/topic_2.png" data-alt="Cloudflareの新CLI「cf」はAIエージェントの操作を広げる" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-29/topic_2.png" alt="Cloudflareの新CLI「cf」はAIエージェントの操作を広げる" />
+      </div>
+      <p class="lede">
+        Cloudflareは新しいコマンドラインツール「cf」のオープンベータを公開した。従来のWranglerが扱う約280のコマンド経路から、Cloudflare APIの3000超の操作を対象に広げる設計で、JSON出力を既定にした。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">npm i -g cfでベータ版を導入</li>
+        <li data-i="02">API定義からコマンドを生成し、エージェント向けのコマンド探索を備える</li>
+        <li data-i="03">Workersから設定を始めるcloudflare.config.tsも導入</li>
+      </ul>
+      <div class="pull">
+        Cloudflareを使うAIエージェントの設定、配置、監視を一つの操作体系にまとめやすくなる。ベータ版のため、実運用前に使う機能を確認したい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://blog.cloudflare.com/cloudflare-cf-cli-launch/">公式発表</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://blog.cloudflare.com/cloudflare-cf-cli-launch/">https://blog.cloudflare.com/cloudflare-cf-cli-launch/</a></dd>
+        <dd><a href="https://github.com/cloudflare/cf">github.com/cloudflare/cf</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · NEWS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        WEB開発 <span class="sep">/</span> 公式発表 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Vinext 1.0でNext.jsアプリの配置先が増える</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-29/topic_3.png" data-alt="Vinext 1.0でNext.jsアプリの配置先が増える" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-29/topic_3.png" alt="Vinext 1.0でNext.jsアプリの配置先が増える" />
+      </div>
+      <p class="lede">
+        CloudflareはViteベースでNext.jsの機能を再実装するVinext 1.0を発表した。App RouterとPages Routerの両方を対象とし、Cloudflare Workers、Netlify、AWS Lambdaなどへの配置を想定する。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">npx vinext checkで既存アプリの移行可能性を確認</li>
+        <li data-i="02">Cloudflareによると重要な機能の互換テストはキャッシュ関連を除き99%超</li>
+        <li data-i="03">自動テストにはNext.jsのエンドツーエンドテストも活用</li>
+      </ul>
+      <div class="pull">
+        既存のNext.jsアプリを動かす基盤を選び直せる。公開前には、使っている機能とキャッシュの動作を対象アプリで試す必要がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://blog.cloudflare.com/vinext-nextjs-on-vite/">公式発表</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>Web開発</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://blog.cloudflare.com/vinext-nextjs-on-vite/">https://blog.cloudflare.com/vinext-nextjs-on-vite/</a></dd>
+        <dd><a href="https://github.com/cloudflare/vinext">github.com/cloudflare/vinext</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · NEWS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ブラウザ自動化 <span class="sep">/</span> 公式発表 <span class="sep">/</span> NEWS
+      </div>
+      <h2>KitesurfがWebMCPに対応、サイトの機能を直接呼べる</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-29/topic_4.png" data-alt="KitesurfがWebMCPに対応、サイトの機能を直接呼べる" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-29/topic_4.png" alt="KitesurfがWebMCPに対応、サイトの機能を直接呼べる" />
+      </div>
+      <p class="lede">
+        CloudflareはWorkers上で動くブラウザKitesurfの更新を発表し、WebMCPへの対応を追加した。対応サイトが公開する操作を、AIエージェントがクリックの模倣を介さず呼び出せる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Cloudflare Radarの公開プレイグラウンドでWebMCPの操作を試せる</li>
+        <li data-i="02">JavaScriptとWasm DOMの往復を減らし属性参照を軽くした</li>
+        <li data-i="03">Cloudflareの変更履歴にもWebMCP対応を記載</li>
+      </ul>
+      <div class="pull">
+        ブラウザを使うエージェントの操作経路が増えた。実際の成功率や速度は対象サイトごとの検証が必要だ。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://blog.cloudflare.com/kitesurf-update/">公式発表</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>ブラウザ自動化</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://blog.cloudflare.com/kitesurf-update/">https://blog.cloudflare.com/kitesurf-update/</a></dd>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-09-28-webmcp-api/">developers.cloudflare.com/changelog/post…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · NEWS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ <span class="sep">/</span> 公式発表 <span class="sep">/</span> NEWS
+      </div>
+      <h2>GitHub、AI支援のAndroid監査で脆弱性24件を報告</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-29/topic_5.png" data-alt="GitHub、AI支援のAndroid監査で脆弱性24件を報告" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-29/topic_5.png" alt="GitHub、AI支援のAndroid監査で脆弱性24件を報告" />
+      </div>
+      <p class="lede">
+        GitHub Security Labは公開済みのTaskflow AgentをAndroidアプリ監査に使った手順を紹介した。対象を絞った調査フローと複数回の確認を組み合わせ、記事執筆時点で24件の脆弱性を発見・報告したとしている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Taskflow Agentのコードと実行方法をGitHubで公開</li>
+        <li data-i="02">AndroidのコンポーネントやIntentを調べる監査フローを設計</li>
+        <li data-i="03">記事では公開済みの脆弱性の具体例を2つ解説</li>
+      </ul>
+      <div class="pull">
+        AIによるセキュリティ監査は、調べる範囲と検証手順を明確にすると再現しやすい。24件はこの調査の結果であり、一般的な検出率ではない。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-agent/">公式発表</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-agent/">https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-agent/</a></dd>
+        <dd><a href="https://github.com/GitHubSecurityLab/seclab-taskflow-agent">github.com/GitHubSecurityLab/seclab-task…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · NEWS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        業務アプリ <span class="sep">/</span> 公式発表 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Microsoft、Blazor向けAgentic UI部品を試験公開</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-09-29/topic_6.png" data-alt="Microsoft、Blazor向けAgentic UI部品を試験公開" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-09-29/topic_6.png" alt="Microsoft、Blazor向けAgentic UI部品を試験公開" />
+      </div>
+      <p class="lede">
+        MicrosoftはBlazorでエージェントの動作を画面に表示する実験的なAIコンポーネントを公開した。会話の逐次表示、ツール呼び出し、承認、共有状態を扱い、AgenticUIのサンプルコードも公開している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Microsoft.AspNetCore.Components.AIのプレリリース版として提供</li>
+        <li data-i="02">UIAgentが応答の逐次更新をContentBlockに変換</li>
+        <li data-i="03">サンプルは人の承認と共有状態の画面を含む</li>
+      </ul>
+      <div class="pull">
+        業務アプリにAIエージェントを組み込む際、進行状況と人の承認を見せる画面設計の具体例になる。現時点では実験的な機能だ。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://devblogs.microsoft.com/dotnet/build-agentic-ui-blazor/">公式発表</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-28</dd>
+        <dt>CATEGORY</dt>
+        <dd>業務アプリ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://devblogs.microsoft.com/dotnet/build-agentic-ui-blazor/">https://devblogs.microsoft.com/dotnet/build-agentic-ui-blazor/</a></dd>
+        <dd><a href="https://github.com/danroth27/AgenticUI">github.com/danroth27/AgenticUI</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://www.anthropic.com/claude-sonnet-5-5">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-09-28/">
+      ← 前日 · 2026-09-28
+      <span class="big">Supabase Logsは計測を開始、課金は2027年初まで猶予</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-09-29/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20260929.0723</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

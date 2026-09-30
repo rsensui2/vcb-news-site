@@ -285,15 +285,15 @@
 <body>
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">BOOKMARK №003</span>
+    <span class="tick">BOOKMARK №007</span>
     <span class="sep">/</span>
     <span>2026-09-26</span>
     <span class="sep">/</span>
     <span>@trq212</span>
     <span class="sep">/</span>
-    <span>581 ITEMS</span>
+    <span>585 ITEMS</span>
     <span class="sep">/</span>
-    <span>JST 07:13 TUE</span>
+    <span>JST 07:13 THU</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -305,19 +305,19 @@
     <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
     <nav>
       <a href="../">HOME</a>
-      <a href="../news/2026-09-28/">NEWS</a>
+      <a href="../news/2026-09-29/">NEWS</a>
       <a href="./" class="is-active">BOOKMARKS</a>
       <a href="../#archive">ARCHIVE</a>
       <a href="../#about">ABOUT</a>
     </nav>
-    <div class="meta">JST · 07:13 · TUE</div>
+    <div class="meta">JST · 07:13 · THU</div>
   </div>
 </header>
 
 <section class="bm-article-head">
   <div class="container">
     <div class="breadcrumb">
-      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-09-26 <span>/</span> №003
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-09-26 <span>/</span> №007
     </div>
     <div class="cat-line">
       <span>💻 AI・開発ツール</span>
@@ -326,7 +326,7 @@
     </div>
     <h1 class="title">Claude Codeのeffortをどう使い分けるか</h1>
     <div class="strap">
-      <span><span class="label">№</span>003 / 581</span>
+      <span><span class="label">№</span>007 / 585</span>
       <span><span class="label">SRC</span><a href="https://x.com/trq212/status/2103576349499855160" target="_blank" rel="noopener noreferrer">x.com/trq212 ↗</a></span>
       <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/2026-09-27_2103576349499855160.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
     </div>
@@ -335,7 +335,7 @@
 
 <section class="bm-body">
   <div class="container">
-    <aside class="numeral">003<span class="ord">BOOKMARK / 581</span></aside>
+    <aside class="numeral">007<span class="ord">BOOKMARK / 585</span></aside>
     <article class="prose">
 <h2>本文</h2><p>effortとは何か。いつ切り替え、なぜすべてをmaxにしないのか。評価結果と普段の作業での試行を詳しく調べた。結果は意外だった。https://t.co/KO2D51j34H</p><h2>日本語訳全文</h2><h3>記事：Claude Codeでeffortを使い分ける</h3><p>新しいClaudeモデルでは、Claude Codeのプロンプトキャッシュを壊さずにeffortを切り替えられる。どの水準をいつ使うべきかという質問が多かったので、評価結果と普段の作業を調べた。図や対話的な説明は https://claude.dev/blog/spending-your-effort/ にある。</p><p>effortを上げると、Claudeは検証や例外条件のテストを増やし、自分で判断する範囲も広げた。ハードウェア、コードレビュー、セキュリティのように検証が効く分野では、その追加作業が成果につながる。一方、素早く進めて人が途中で確認したい作業ならlowやmediumが合う。私の普段の開発では、まずClaudeに不足条件を質問させ、lowかmediumで実装し、人が確認した後、highで検証する。</p><p>#### effortとは</p><p>effortは、その作業に使ってほしい計算量の目安だ。作業の難しさにもある程度対応する。12時間与えられた仕事なら、相手は十分に作り込むことを期待していると考えるだろう。同じ仕事を1時間で頼まれたら、まず条件を満たすものを出して、その後で直すことになる。最低3時間は必要だと伝える場合もある。Claudeも妥当な形で仕事を進めるが、effortが高いほど自分で判断し、検証する。</p><p>Fable 5.1とOpus 5.5では、effortを上げるとベンチマーク得点と消費トークンがともに伸びる傾向が出た。記事には私が測ったTerminal-Bench 3.0のグラフを載せた。実務で何が変わるかを見るため、同じ依頼を複数のeffortで試した。</p><p>#### 作る仕事での違い</p><p>条件をあまり決めずに「個人用の運動記録アプリを作って」と頼んだ。lowでは記録画面と簡単なグラフになり、高いeffortほど機能と細部が増えた。maxではヒートチャートまで付いた。後から一緒に育てる土台が欲しければlow、一度で最も作り込んだ案が欲しければmaxが合う。</p><p>ある程度決めたデザイン課題として、Claude Codeの<code>/config</code>メニューの再設計も試した。どのeffortでもサブメニューと検索の改善が中心だった。lowは約1分で、考え方が伝わる操作可能なラフ案を出したが、Claude Codeらしい見た目には届かなかった。maxは約28分かけて実際の画面に近いモックアップと、複数の操作手順を出した。対話しながら方向を決めたい私には、この例ではlowが好ましかった。</p><p>詳細な仕様を先に作った場合も試した。Claudeに運動アプリについて詳しく質問させ、その仕様を複数のモデルとeffortで実装させた。仕様が明確だと、画面も実装も似たものになった。差は細部に現れ、maxでは一部を簡素化する判断もした。</p><p>通常の新機能開発でeffortを決める要因は、私がどれだけ途中で関わりたいかだ。lowは早く初稿を返し、highはより多くの作業を進める代わりに、私の代わりに仮定することも増える。私が使う手順は、仕様を渡して不足点を質問してもらう、lowで実装する、人が方向を確認して必要ならlowで直す、最後にhighで検証・テストする、というものだ。</p><p>#### 難しい課題では何が変わるか</p><p>ここまでの例はClaudeが解ける小さな課題だ。成否そのものが変わる難題を見るため、コミュニティ由来のTerminal-Bench 3.0を調べた。課題はセキュリティ、ハードウェア、機械学習、科学、ソフトウェア、運用、メディアなどに分かれる。全課題は https://github.com/harbor-framework/terminal-bench/releases/tag/v3.0.0 で読める。通常の仕事より規模も難しさも大きい。</p><p>例として、小型FPGAに収まる8ビットゲーム機をVerilogで作る課題、Takensの埋め込み定理をLean 4で形式証明する課題、分割された混合専門家モデルのチェックポイント16個を統合する課題、企業のEU域内貿易統計の月次申告を完了する課題、ポスター画像を編集可能なレイアウトへ作り直す課題がある。</p><p>隠れた例外条件が多い課題では高いeffortが効いた。JavaScriptを紛れ込ませるさまざまな手法を除去するHTMLサニタイザーの課題では、Fable 5.1がlowで5回中1回、xhighで5回中5回成功した。lowの試行は約2分でフィルターを一度に書き、手作りのページ一つで確認した。追跡したhighの試行は約33分かけ、初稿を攻撃者の視点で見直し、インストール済みパーサーのソースを読み、正常なHTMLが変わらないことを多数試し、標準のXSSテスト群を走らせ、ランダムな入力も検証した。性能最適化やセキュリティレビューのように本番での正確さが必要な作業なら、この追加コストに意味がある。ただし、すべての作業には要らない。全体の結果では、effortを増やすと例外条件の見落としは減る傾向がある一方、そもそもの方針が誤っている失敗までは直らなかった。</p><p>分野別に見ると、この違いが分かりやすい。ストレージエンジンのクラッシュを直し、compactionを壊さない<code>mvcc-lsm-compaction</code>では、Opus 5.5はlowで5回中0回、xhighで5回中4回成功した。lowは約1分で再現テストやビルドより先にコードを編集し、追加テストが元のバグを検出できたかも見なかった。xhighは約11分でクラッシュを再現し、compactionしない参照実装とのランダム比較テストを作り、未完成の修正ではテストが失敗することまで確認した。</p><p>Pythonで線形計画のCLIソルバーを書く<code>cli-2ph-simple</code>では、lowの5回中0回に対しhighは5回中5回成功した。lowは一度に実装し、小さな問題を少し試して約1万トークンで終え、大きな問題では遅いかもしれないと警告したが実測しなかった。highは別の総当たりソルバーとランダムな問題で比較し、大きな問題の速度も測り、極端に遅い・クラッシュする条件を見つけて探索方法を作り直した。</p><p>プロテオミクスデータから、8種類の処置のうち目標の組織に似るものを探す<code>gsea-proteomics</code>では、lowで5回中0回、highで5回中4回だった。lowはもっともらしい前処理を一つ選んで分析し、結果を報告した。highは前処理を二通り試し、有意な処置の一覧が変わると気づいて原因を調べ、適切な方法を選んだ。人が途中で関われるなら設定について質問できたかもしれないが、無人で進める条件ではhighが有利だった。</p><p>#### Claude Codeでの使い分け</p><ul><li>low: 発想出し、ラフ案、簡単な変更など、素早く返してもらいながら進めたい時。</li><li>medium: 新機能の実装など、普段のソフトウェア開発の多く。</li><li>high: 既存コードのバグ修正など、検証や例外条件が重要な時。</li><li>max: アプリの構築と検証を最後まで任せる、重要なソフトウェアの脆弱性を探すなど、難しい課題を自律的に進めてほしい時。</li></ul><p>Opus 5.5やFable 5.1では、課題に合わせ、会話の途中でもClaude Codeの<code>/effort</code>で水準を切り替えて試してほしい。</p><h3>スレッド全体</h3><p>#### Part 1 (親ポスト)</p><p>effortとは何か。いつ切り替え、なぜすべてをmaxにしないのか。評価結果と自分の試行を詳しく調べたところ、意外な結果が見えた。https://t.co/KO2D51j34H</p><p>#### Part 2</p><p>ベンチマークやデモの対話的な解説は、新しい開発者向けサイトで読める。https://t.co/oSTZrBggXM</p><p>#### Part 3</p><p>私は途中で自分も関わりたい時にlowをよく使う。maxを使うのは、ほぼ完全に任せたい時か、セキュリティ上の脆弱性を探したい時だけだ。https://t.co/KdDBikNwCL</p>
     </article>
@@ -390,14 +390,14 @@
           運営は泉水亮介。Slackコミュニティと連動した公開ログです。
         </p>
         <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
-          BOOKMARKS ARCHIVE · 581 ITEMS · EN+JP
+          BOOKMARKS ARCHIVE · 585 ITEMS · EN+JP
         </p>
       </div>
       <div>
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="../">HOME</a></li>
-          <li><a href="../news/2026-09-28/">TODAY</a></li>
+          <li><a href="../news/2026-09-29/">TODAY</a></li>
           <li><a href="./">BOOKMARKS</a></li>
           <li><a href="../#archive">ARCHIVE</a></li>
         </ul>
@@ -424,7 +424,7 @@
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 2026-09-29</span>
+      <span>BUILD 2026-10-01</span>
     </div>
   </div>
 </footer>

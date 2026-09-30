@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-10-01 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-10-01 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №1001</span>
+    <span class="sep">/</span>
+    <span>2026-10-01</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20261001.0717</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-10-01/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:17 · WED</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · WEDNESDAY · SEPTEMBER 1, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>10<span class="dot">.</span>01</h1>
+    <div class="strap">
+      <span>Next.js · GPT-6.1 · Claude · Cloudflare</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ <span class="sep">/</span> NEXT.JS BLOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Next.js、9月のセキュリティ修正を公開</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-01/topic_1.png" data-alt="Next.js、9月のセキュリティ修正を公開" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-01/topic_1.png" alt="Next.js、9月のセキュリティ修正を公開" />
+      </div>
+      <p class="lede">
+        Next.jsは9月のセキュリティリリースとして、16.3.8（Active LTS）と15.5.27（Maintenance LTS）を公開した。先週予告した修正のうち、依存先の遅れで延期していた分も含め、画像最適化のSSRFなど7件の脆弱性に対応している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">画像最適化のSSRF（High、CVE-2026-94483）は images.remotePatterns 未設定なら対象外</li>
+        <li data-i="02">自己ホスト環境のSSG・ISRでページのキャッシュが別ルートの内容に置き換わる問題（Medium）</li>
+        <li data-i="03">use cache の入れ子やDraft Modeで、本来見せない内容が混ざる問題（Medium）</li>
+        <li data-i="04">next dev のMCPエンドポイントからの情報漏えい（Low、本番は対象外）</li>
+        <li data-i="05">npm install next@16.3.8 または next@15.5.27 で更新</li>
+      </ul>
+      <div class="pull">
+        Next.jsで作ったアプリは、デプロイ先を問わずまず版数を確認して更新したい。自己ホストかVercelか、webpackかTurbopackかで影響が変わる項目があるため、自分の構成と照らして読む必要がある。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://nextjs.org/blog/september-2026-security-release">Next.js Blog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-30</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://nextjs.org/blog/september-2026-security-release">https://nextjs.org/blog/september-2026-security-release</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · GITHUB CHANGELOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AIモデル <span class="sep">/</span> GITHUB CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>GPT-6.1 SolがGitHub Copilotで一般提供</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-01/topic_2.png" data-alt="GPT-6.1 SolがGitHub Copilotで一般提供" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-01/topic_2.png" alt="GPT-6.1 SolがGitHub Copilotで一般提供" />
+      </div>
+      <p class="lede">
+        GitHubはOpenAIのGPT-6.1 SolをCopilotで一般提供し、段階的に展開を始めた。エージェント型のコーディングやターミナル作業向けで、GitHubの初期検証ではGPT-6やGPT-5.6系より少ないトークンと手順で作業を終えたという。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対象はCopilot Pro+、Max、Business、Enterprise</li>
+        <li data-i="02">VS Code、Copilot CLI、coding agent、JetBrains、Xcodeなどのモデル選択で利用可能</li>
+        <li data-i="03">料金は提供元の定価に基づく従量課金</li>
+        <li data-i="04">Business・Enterpriseは管理者がモデルポリシーで利用可否を制御</li>
+      </ul>
+      <div class="pull">
+        Copilotで選べるコーディング向けモデルが増え、Claude系モデルと費用や手数を比べやすくなる。ベンチマークの数値は計測環境で大きく変わるため、自分の作業で試して判断したい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-29-gpt-6-1-sol-in-github-copilot/">GitHub Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-29</dd>
+        <dt>CATEGORY</dt>
+        <dd>AIモデル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-29-gpt-6-1-sol-in-github-copilot/">https://github.blog/changelog/2026-09-29-gpt-6-1-sol-in-github-copilot/</a></dd>
+        <dd><a href="https://x.com/theo/status/2105000888192663582">x.com/theo/status/2105000888192663582</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · CLAUDE CODE RELEAS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> CLAUDE CODE RELEASES <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code、WebFetch停止と利用先制限に対応</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-01/topic_3.png" data-alt="Claude Code、WebFetch停止と利用先制限に対応" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-01/topic_3.png" alt="Claude Code、WebFetch停止と利用先制限に対応" />
+      </div>
+      <p class="lede">
+        Claude Code 2.1.285が公開された。環境変数でWebFetchツールを無効にできるようになり、管理設定 allowedProviders で端末が使えるAPIの提供元を制限できるようになった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">CLAUDE_CODE_DISABLE_WEB_FETCH でWebFetchを停止</li>
+        <li data-i="02">allowedProviders でAnthropic API、Bedrock、Vertex AIなど利用先を限定（管理設定）</li>
+        <li data-i="03">claude --desktop で現在のディレクトリや既存セッションをデスクトップアプリで開ける</li>
+        <li data-i="04">claude plugin configure でプラグインの設定項目を確認・保存</li>
+      </ul>
+      <div class="pull">
+        会社や研修の環境で、外部Webの取得や契約外のAPI利用を端末単位で止めやすくなる。管理者が配る設定で縛れる点が、個人設定との違いになる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.285">Claude Code Releases</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-29</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.285">https://github.com/anthropics/claude-code/releases/tag/v2.1.285</a></dd>
+        <dd><a href="https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md">github.com/anthropics/claude-code/blob/m…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · CLOUDFLARE CHANGEL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        インフラ <span class="sep">/</span> CLOUDFLARE CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cloudflare Sandbox SDKが1.0に</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-01/topic_4.png" data-alt="Cloudflare Sandbox SDKが1.0に" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-01/topic_4.png" alt="Cloudflare Sandbox SDKが1.0に" />
+      </div>
+      <p class="lede">
+        CloudflareはSandbox SDK 1.0を公開した。自分で書いたDurable Objectのクラスから、this.ctx.container を通じて各サンドボックスのコンテナを直接制御する形になった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">起動ごとにイメージとインスタンスサイズを選べ、デプロイで実行中のサンドボックスは再起動しない</li>
+        <li data-i="02">ファイルをスナップショットとして保存し、そこから起動できる（public beta）</li>
+        <li data-i="03">外向き通信をWorker側で処理し、認証情報をサンドボックスに渡さない</li>
+        <li data-i="04">0.xは2026年12月31日まで修正を継続。新方式への切り替えデプロイは一方向</li>
+      </ul>
+      <div class="pull">
+        AIエージェントにコードを実行させる環境を、起動・停止・保存まで自分のコードで管理できる。0.xから移る場合は、戻せない手順があるため移行ガイドで予行演習してから進めたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-09-30-sandbox-sdk-1-0/">Cloudflare Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-30</dd>
+        <dt>CATEGORY</dt>
+        <dd>インフラ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-09-30-sandbox-sdk-1-0/">https://developers.cloudflare.com/changelog/post/2026-09-30-sandbox-sdk-1-0/</a></dd>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-09-30-durable-object-scheduling-policy/">developers.cloudflare.com/changelog/post…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · GITHUB CHANGELOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> GITHUB CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Copilotの複数モデル協調がVS Codeでも利用可能に</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-01/topic_5.png" data-alt="Copilotの複数モデル協調がVS Codeでも利用可能に" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-01/topic_5.png" alt="Copilotの複数モデル協調がVS Codeでも利用可能に" />
+      </div>
+      <p class="lede">
+        GitHubは、複数のモデルを組み合わせて作業するHydraFusionの研究プレビューを、Copilot CLIに加えてVS CodeとGitHub Copilotアプリでも使えるようにした。モデル選択の一覧に表示されるが、単一のモデルではなく作業の進め方ごと選ぶ仕組みだ。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Single：1つのモデルがそのまま解く</li>
+        <li data-i="02">Cascade：軽いモデルの下書きを品質基準で判定し、足りなければ強いモデルへ回す</li>
+        <li data-i="03">Critique：別系統のモデルがレビューし、下書きしたモデルが1回直す</li>
+        <li data-i="04">VS Code 1.140以降、対象はPro、Pro+、Business、Enterprise</li>
+      </ul>
+      <div class="pull">
+        「下書きと別モデルによるレビュー」を人が手で組まなくても試せる。研究プレビューのため、仕様が変わる前提で使いたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-30-hydrafusion-in-vs-code-and-the-github-copilot-app/">GitHub Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-30</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-30-hydrafusion-in-vs-code-and-the-github-copilot-app/">https://github.blog/changelog/2026-09-30-hydrafusion-in-vs-code-and-the-github-copilot-app/</a></dd>
+        <dd><a href="https://github.blog/ai-and-ml/github-copilot/project-hydrafusion-frontier-quality-via-multi-model-orchestration/">github.blog/ai-and-ml/github-copilot/pro…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · TIBO THSOTTIAUX</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        料金・プラン <span class="sep">/</span> TIBO (@THSOTTIAUX) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>OpenAI、Pro $200の使用量計算を変更</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-01/topic_6.png" data-alt="OpenAI、Pro $200の使用量計算を変更" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-01/topic_6.png" alt="OpenAI、Pro $200の使用量計算を変更" />
+      </div>
+      <p class="lede">
+        OpenAIでCodexを担当するTibo氏は、Pro $200プランの新規受付を再開し、同時に使用量の計算方法を変えると投稿した。API料金に換算した利用枠は旧プランの半分になるという。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">5時間ごとの利用制限は再導入しない</li>
+        <li data-i="02">同じ週にGPT-6 SolとGPT-6 LunaのAPI価格を従来の50%に引き下げた</li>
+        <li data-i="03">使用量を消費しない機能をサブスクに追加すると予告</li>
+        <li data-i="04">サブスクとAPIの差は、価格低下とともに縮めていく方針</li>
+      </ul>
+      <div class="pull">
+        AIコーディングの費用は、サブスクと従量課金のどちらが得かが短期間で変わる。自分の週ごとの使用量をAPI料金で換算して比べておくと判断しやすい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">21,796</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/thsottiaux/status/2104823812042940713">@thsottiaux</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-29</dd>
+        <dt>CATEGORY</dt>
+        <dd>料金・プラン</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/thsottiaux/status/2104823812042940713">x.com/thsottiaux/…</a></dd>
+        <dd><a href="https://x.com/theo/status/2104683186215363058">x.com/theo/status/2104683186215363058</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · MOVEZ 0XMOVEZ</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI×デザイン <span class="sep">/</span> MOVEZ (@0XMOVEZ) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Opus 5.5の動画制作は周辺の仕組みで決まる</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-01/topic_7.png" data-alt="Opus 5.5の動画制作は周辺の仕組みで決まる" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-01/topic_7.png" alt="Opus 5.5の動画制作は周辺の仕組みで決まる" />
+      </div>
+      <p class="lede">
+        Movez氏は、Opus 5.5でコードから動画を作る方法を12段階にまとめた長文記事を公開した。モデルが書くのは動画ではなく任意の時刻の画面を描くプログラムで、品質の9割はプロンプト以外の仕組みで決まると整理している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">seek(t) 関数で各フレームを描き、ヘッドレスブラウザとffmpegで書き出す</li>
+        <li data-i="02">好きな動画の1フレームなど参照を渡すと、平凡な既定の見た目から抜け出せる</li>
+        <li data-i="03">雰囲気ではなく、場面ごとの状態を並べた仕様を書く</li>
+        <li data-i="04">書き出した静止画をモデル自身に採点させ、上位3つの問題を直す流れを繰り返す</li>
+        <li data-i="05">固まった手順はSkillにまとめ、次からは1文で呼び出す</li>
+      </ul>
+      <div class="pull">
+        「プロンプト1つで作った」と言われる作品の裏には、参照素材や確認の繰り返しがある。動画に限らず、AIに成果物を作らせるときの段取りとして応用できる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">7,067</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/0xMovez/status/2104216919033192746">@0xMovez</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-27</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI×デザイン</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/0xMovez/status/2104216919033192746">x.com/0xMovez/…</a></dd>
+        <dd><a href="https://x.com/patchy_dog/status/2103862188624785635">x.com/patchy_dog/status/2103862188624785…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · YOUSUKEZAN YOUSUKE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ <span class="sep">/</span> YOUSUKEZAN (@YOUSUKEZAN) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Webアプリの安全対策を学べる619ページの資料</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-01/topic_8.png" data-alt="Webアプリの安全対策を学べる619ページの資料" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-01/topic_8.png" alt="Webアプリの安全対策を学べる619ページの資料" />
+      </div>
+      <p class="lede">
+        yousukezan氏は、Webアプリケーションのセキュリティを扱う全619ページの資料をPDFで公開した。AIにレビューさせる人向けに全ページ版を置いたと説明し、続く投稿でレビュー用の演習環境も公開している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">認証・認可から入力処理、配備、監視、報告までを扱う</li>
+        <li data-i="02">教材用SNSの正常な通信と条件を変えた通信を比べ、原因の特定から再検証まで進める構成</li>
+        <li data-i="03">AIエージェントに渡すデータの信頼境界にも触れている</li>
+        <li data-i="04">PDFの著者表記は「yousukezan + AI」</li>
+      </ul>
+      <div class="pull">
+        AIで作ったアプリを公開する前に、何を確かめればよいかの手がかりになる。資料をAIに読ませてレビュー観点を引き出す使い方も想定されている。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">4,259</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/yousukezan/status/2105071734969999839">@yousukezan</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-30</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/yousukezan/status/2105071734969999839">x.com/yousukezan/…</a></dd>
+        <dd><a href="https://bogus.jp/webapp_security_review.pdf">bogus.jp/webapp_security_review.pdf</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="#" aria-disabled="true">📄 PDFをダウンロード</a>
+    <a href="https://nextjs.org/blog/september-2026-security-release">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-09-29/">
+      ← 前日 · 2026-09-29
+      <span class="big">Claude Sonnet 5.5は速度30%以上向上、タスク単価も低下</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-10-01/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20261001.0717</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

@@ -14,15 +14,15 @@
 
 <div class="dispatch">
   <div class="container row">
-    <span class="tick">DISPATCH №0929</span>
+    <span class="tick">DISPATCH №1001</span>
     <span class="sep">/</span>
-    <span>2026-09-29</span>
+    <span>2026-10-01</span>
     <span class="sep">/</span>
     <span>MORNING EDITION</span>
     <span class="sep">/</span>
-    <span>06 ITEMS</span>
+    <span>08 ITEMS</span>
     <span class="sep">/</span>
-    <span>BUILD 20260929.0723</span>
+    <span>BUILD 20261001.0717</span>
     <span class="sep">/</span>
     <span class="live">LIVE</span>
     <span class="sep">/</span>
@@ -40,13 +40,13 @@
     </button>
     <nav class="main-nav" id="main-nav">
       <a href="./">HOME</a>
-      <a href="./news/2026-09-29/">TODAY</a>
+      <a href="./news/2026-10-01/">TODAY</a>
       <a href="./#bookmarks">BOOKMARKS</a>
       <a href="./#archive">ARCHIVE</a>
       <a href="./#about">ABOUT</a>
       <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
     </nav>
-    <div class="meta">JST · 07:23 · MON</div>
+    <div class="meta">JST · 07:17 · WED</div>
   </div>
 </header>
 <script>
@@ -70,7 +70,7 @@
     <div class="grid">
       <div>
         <div class="eyebrow">
-          MORNING DISPATCH <span class="dot">·</span> MONDAY, SEPTEMBER 29, 2026 <span class="dot">·</span> ISSUE N°0929
+          MORNING DISPATCH <span class="dot">·</span> WEDNESDAY, SEPTEMBER 1, 2026 <span class="dot">·</span> ISSUE N°1001
         </div>
         <h1>
           VCB News<br>
@@ -83,10 +83,10 @@
       </aside>
     </div>
     <div class="hero-strap">
-      <span><span class="k">06</span>TODAY</span>
-      <span><span class="k">20</span>BOOKMARKS / 7D</span>
-      <span><span class="k">691</span>ARCHIVE</span>
-      <span><span class="k">1389</span>DELIVERED</span>
+      <span><span class="k">08</span>TODAY</span>
+      <span><span class="k">14</span>BOOKMARKS / 7D</span>
+      <span><span class="k">697</span>ARCHIVE</span>
+      <span><span class="k">1395</span>DELIVERED</span>
       <span>SINCE 2026-04-17</span>
       <span>07:15 JST DAILY</span>
     </div>
@@ -101,37 +101,38 @@
         今朝の配信
       </div>
       <div class="trail">
-        <a href="./news/2026-09-29/">全06件を詳細ページで読む →</a>
+        <a href="./news/2026-10-01/">全08件を詳細ページで読む →</a>
       </div>
     </div>
 
     <div class="today-sub today-sub--hero">
       <h3>今日の一面</h3>
-      <div class="meta">TOP STORY · 2026-09-29</div>
+      <div class="meta">TOP STORY · 2026-10-01</div>
     </div>
     <article class="feature">
       <header class="feature-head">
-        <div class="cat"><span class="rule"></span>AIモデル · 公式発表</div>
-        <h2><a href="./news/2026-09-29/#topic-1">Claude Sonnet 5.5は速度30%以上向上、タスク単価も低下</a></h2>
+        <div class="cat"><span class="rule"></span>セキュリティ · Next.js Blog</div>
+        <h2><a href="./news/2026-10-01/#topic-1">Next.js、9月のセキュリティ修正を公開</a></h2>
       </header>
-      <div class="media zoom-image" data-src="assets/images/2026-09-29/topic_1.png" data-alt="Claude Sonnet 5.5は速度30%以上向上、タスク単価も低下" role="button" tabindex="0" aria-label="スライド画像を拡大">
-        <img src="assets/images/2026-09-29/topic_1.png" alt="Claude Sonnet 5.5は速度30%以上向上、タスク単価も低下">
+      <div class="media zoom-image" data-src="assets/images/2026-10-01/topic_1.png" data-alt="Next.js、9月のセキュリティ修正を公開" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="assets/images/2026-10-01/topic_1.png" alt="Next.js、9月のセキュリティ修正を公開">
       </div>
       <div class="body">
         <p class="lede">
-          AnthropicはClaude Sonnet 5.5を公開した。Sonnet 5とトークン単価は同じだが、同社の検証では出力が30%以上速く、タスクあたりの費用は最大30%低い。GitHub Copilotも同日に提供を発表した。
+          Next.jsは9月のセキュリティリリースとして、16.3.8（Active LTS）と15.5.27（Maintenance LTS）を公開した。先週予告した修正のうち、依存先の遅れで延期していた分も含め、画像最適化のSSRFなど7件の脆弱性に対応している。
         </p>
         <ul class="keypoints">
-          <li data-i="K.01">入力100万トークン2ドル、出力100万トークン10ドルでSonnet 5と同額</li>
-          <li data-i="K.02">範囲が明確な日常業務、バグ修正、文書・スライド作成を主用途に想定</li>
-          <li data-i="K.03">GitHub CopilotのPro、Business、Enterpriseなどへ段階的に展開</li>
+          <li data-i="K.01">画像最適化のSSRF（High、CVE-2026-94483）は images.remotePatterns 未設定なら対象外</li>
+          <li data-i="K.02">自己ホスト環境のSSG・ISRでページのキャッシュが別ルートの内容に置き換わる問題（Medium）</li>
+          <li data-i="K.03">use cache の入れ子やDraft Modeで、本来見せない内容が混ざる問題（Medium）</li>
+          <li data-i="K.04">next dev のMCPエンドポイントからの情報漏えい（Low、本番は対象外）</li>
         </ul>
         <div class="footline">
           
-          <span><span class="label">SRC</span> <a href="https://www.anthropic.com/claude-sonnet-5-5">公式発表</a></span>
-          <span><span class="label">TOPIC</span> 01 / 06</span>
+          <span><span class="label">SRC</span> <a href="https://nextjs.org/blog/september-2026-security-release">Next.js Blog</a></span>
+          <span><span class="label">TOPIC</span> 01 / 08</span>
         </div>
-        <a class="feature-cta" href="./news/2026-09-29/#topic-1">
+        <a class="feature-cta" href="./news/2026-10-01/#topic-1">
           続きを読む <span class="arrow">→</span>
         </a>
       </div>
@@ -139,56 +140,74 @@
 
     <div class="today-sub today-sub--rest">
       <h3>ほかの配信</h3>
-      <div class="meta">06 ITEMS TOTAL</div>
+      <div class="meta">08 ITEMS TOTAL</div>
     </div>
     <div class="rest rest--horizontal">
-        <a class="rest-item" href="./news/2026-09-29/#topic-2">
+        <a class="rest-item" href="./news/2026-10-01/#topic-2">
           <div class="rest-num">02</div>
           <div class="rest-body">
-            <div class="cat">開発ツール · 公式発表</div>
-            <h4 class="rest-title">Cloudflareの新CLI「cf」はAIエージェントの操作を広げる</h4>
-            <p class="rest-note">Cloudflareを使うAIエージェントの設定、配置、監視を一つの操作体系にまとめやすくなる。ベータ版のため、実運用前に使う機能を確認したい。</p>
+            <div class="cat">AIモデル · GitHub Changelog</div>
+            <h4 class="rest-title">GPT-6.1 SolがGitHub Copilotで一般提供</h4>
+            <p class="rest-note">Copilotで選べるコーディング向けモデルが増え、Claude系モデルと費用や手数を比べやすくなる。ベンチマークの数値は計測環境で大きく変わるため、自分の作業で試して判断したい。</p>
           </div>
           <div class="rest-likes"></div>
         </a>
-        <a class="rest-item" href="./news/2026-09-29/#topic-3">
+        <a class="rest-item" href="./news/2026-10-01/#topic-3">
           <div class="rest-num">03</div>
           <div class="rest-body">
-            <div class="cat">Web開発 · 公式発表</div>
-            <h4 class="rest-title">Vinext 1.0でNext.jsアプリの配置先が増える</h4>
-            <p class="rest-note">既存のNext.jsアプリを動かす基盤を選び直せる。公開前には、使っている機能とキャッシュの動作を対象アプリで試す必要がある。</p>
+            <div class="cat">開発ツール · Claude Code Releases</div>
+            <h4 class="rest-title">Claude Code、WebFetch停止と利用先制限に対応</h4>
+            <p class="rest-note">会社や研修の環境で、外部Webの取得や契約外のAPI利用を端末単位で止めやすくなる。管理者が配る設定で縛れる点が、個人設定との違いになる。</p>
           </div>
           <div class="rest-likes"></div>
         </a>
-        <a class="rest-item" href="./news/2026-09-29/#topic-4">
+        <a class="rest-item" href="./news/2026-10-01/#topic-4">
           <div class="rest-num">04</div>
           <div class="rest-body">
-            <div class="cat">ブラウザ自動化 · 公式発表</div>
-            <h4 class="rest-title">KitesurfがWebMCPに対応、サイトの機能を直接呼べる</h4>
-            <p class="rest-note">ブラウザを使うエージェントの操作経路が増えた。実際の成功率や速度は対象サイトごとの検証が必要だ。</p>
+            <div class="cat">インフラ · Cloudflare Changelog</div>
+            <h4 class="rest-title">Cloudflare Sandbox SDKが1.0に</h4>
+            <p class="rest-note">AIエージェントにコードを実行させる環境を、起動・停止・保存まで自分のコードで管理できる。0.xから移る場合は、戻せない手順があるため移行ガイドで予行演習してから進めたい。</p>
           </div>
           <div class="rest-likes"></div>
         </a>
-        <a class="rest-item" href="./news/2026-09-29/#topic-5">
+        <a class="rest-item" href="./news/2026-10-01/#topic-5">
           <div class="rest-num">05</div>
           <div class="rest-body">
-            <div class="cat">セキュリティ · 公式発表</div>
-            <h4 class="rest-title">GitHub、AI支援のAndroid監査で脆弱性24件を報告</h4>
-            <p class="rest-note">AIによるセキュリティ監査は、調べる範囲と検証手順を明確にすると再現しやすい。24件はこの調査の結果であり、一般的な検出率ではない。</p>
+            <div class="cat">開発ツール · GitHub Changelog</div>
+            <h4 class="rest-title">Copilotの複数モデル協調がVS Codeでも利用可能に</h4>
+            <p class="rest-note">「下書きと別モデルによるレビュー」を人が手で組まなくても試せる。研究プレビューのため、仕様が変わる前提で使いたい。</p>
           </div>
           <div class="rest-likes"></div>
         </a>
-        <a class="rest-item" href="./news/2026-09-29/#topic-6">
+        <a class="rest-item" href="./news/2026-10-01/#topic-6">
           <div class="rest-num">06</div>
           <div class="rest-body">
-            <div class="cat">業務アプリ · 公式発表</div>
-            <h4 class="rest-title">Microsoft、Blazor向けAgentic UI部品を試験公開</h4>
-            <p class="rest-note">業務アプリにAIエージェントを組み込む際、進行状況と人の承認を見せる画面設計の具体例になる。現時点では実験的な機能だ。</p>
+            <div class="cat">料金・プラン · Tibo (@thsottiaux)</div>
+            <h4 class="rest-title">OpenAI、Pro $200の使用量計算を変更</h4>
+            <p class="rest-note">AIコーディングの費用は、サブスクと従量課金のどちらが得かが短期間で変わる。自分の週ごとの使用量をAPI料金で換算して比べておくと判断しやすい。</p>
           </div>
-          <div class="rest-likes"></div>
+          <div class="rest-likes">♡ <b>21,796</b></div>
+        </a>
+        <a class="rest-item" href="./news/2026-10-01/#topic-7">
+          <div class="rest-num">07</div>
+          <div class="rest-body">
+            <div class="cat">AI×デザイン · Movez (@0xMovez)</div>
+            <h4 class="rest-title">Opus 5.5の動画制作は周辺の仕組みで決まる</h4>
+            <p class="rest-note">「プロンプト1つで作った」と言われる作品の裏には、参照素材や確認の繰り返しがある。動画に限らず、AIに成果物を作らせるときの段取りとして応用できる。</p>
+          </div>
+          <div class="rest-likes">♡ <b>7,067</b></div>
+        </a>
+        <a class="rest-item" href="./news/2026-10-01/#topic-8">
+          <div class="rest-num">08</div>
+          <div class="rest-body">
+            <div class="cat">セキュリティ · yousukezan (@yousukezan)</div>
+            <h4 class="rest-title">Webアプリの安全対策を学べる619ページの資料</h4>
+            <p class="rest-note">AIで作ったアプリを公開する前に、何を確かめればよいかの手がかりになる。資料をAIに読ませてレビュー観点を引き出す使い方も想定されている。</p>
+          </div>
+          <div class="rest-likes">♡ <b>4,259</b></div>
         </a>
     </div>
-    <a class="rest-read-full rest-read-full--center" href="./news/2026-09-29/">
+    <a class="rest-read-full rest-read-full--center" href="./news/2026-10-01/">
       今日のディスパッチ全文 <span>→</span>
     </a>
   </div>
@@ -201,7 +220,7 @@
         <span class="en">§02 · Latest Bookmarks</span>
         最新ブックマーク
       </div>
-      <div class="trail"><a href="./bookmarks/">直近7日間 · 20件 · 全件を見る →</a></div>
+      <div class="trail"><a href="./bookmarks/">直近7日間 · 14件 · 全件を見る →</a></div>
     </div>
 
     <div class="bk-filter">
@@ -216,6 +235,111 @@
 
     <div class="xfeed">
 
+      <article class="xcard" data-url="https://x.com/theo/status/2105000888192663582" data-type="thread" tabindex="0" role="button" aria-label="Theo - t3.gg の🧵 スレッドを開く">
+        <header class="xcard-head">
+          <div class="xcard-avatar" style="--c:#4b72c4;">T</div>
+          <div class="xcard-who">
+            <span class="xcard-name">Theo - t3.gg <span class="xcard-cat">💻 AI・開発ツール</span></span>
+            <span class="xcard-handle">@theo · 9月30日</span>
+          </div>
+          <span class="xcard-type xcard-type--thread">🧵 スレッド</span>
+        </header>
+        <div class="xcard-body">
+          <p class="xcard-preview">Part 1 (親ポスト)
+
+この動画を作ったときはまだベンチマークがなかったので、自分で走らせるしかなかった。Terminal Bench 4のスコアを見て驚いた。
+
+Opus 5.5より高い性能を、約1/30の価格で。
+
+Part 2
+
+念のため言っておくと、コーディングで今いちばん強いのはOpus 5.5だと今も思っている。GPT-6.1 SolはAstraの代わりとしてずっと安く使える優れたモデルだが、コードを書く既定には使って…</p>
+        </div>
+        <footer class="xcard-foot">
+          <div class="xcard-stats"><span>♡ 2,985</span><span>🔁 97</span><span>🔖 555</span><span>👁 725K</span></div>
+          <a class="xcard-x" href="https://x.com/theo/status/2105000888192663582" target="_blank" rel="noopener noreferrer" aria-label="Xで開く">𝕏 <span aria-hidden="true">↗</span></a>
+        </footer>
+        <div class="xcard-full" hidden>
+          <div class="xcard-full-meta" data-title="" data-type="thread" data-type-label="🧵 スレッド" data-has-alt="1" data-primary-lang="ja"></div>
+          <div class="xcard-full-primary">Part 1 (親ポスト)
+
+この動画を作ったときはまだベンチマークがなかったので、自分で走らせるしかなかった。Terminal Bench 4のスコアを見て驚いた。
+
+Opus 5.5より高い性能を、約1/30の価格で。
+
+Part 2
+
+念のため言っておくと、コーディングで今いちばん強いのはOpus 5.5だと今も思っている。GPT-6.1 SolはAstraの代わりとしてずっと安く使える優れたモデルだが、コードを書く既定には使っていない。
+
+一方で、コードレビュー、設計分析、computer use、メール管理などでは完全にSolを既定にしている。
+
+Part 3
+
+Artificial AnalysisのTerminalBench計測ではスコアは低めだったが、コストの安さは同じく驚異的だった。6.1 Solは今やパレートフロンティアを支配している。
+
+Part 4
+
+私の数字が良かったのは、私がCodexを使い、AAはmini-swe-agentを使ったからのようだ。
+
+差が大きすぎるので、公式ハーネスでTerminalBench 4.0を自分でも回す必要があるかもしれない。</div>
+          <div class="xcard-full-alt" hidden>Part 1 (親ポスト)
+
+When I made this video, there were no benchmarks yet, so I had to run them myself. Jaw dropped when I saw the Terminal Bench 4 scores. 
+
+Performance better than Opus 5.5 for ~1/30th of the price 🤯
+
+Part 2
+
+To be clear, I still think Opus 5.5 is the current GOAT for coding. GPT-6.1 Sol is a great replacement for Astra at a WAY better price, but I don't default to it for code.
+
+I absolutely default to it for code reviews, architecture analysis, computer use, email management, and a
+
+Part 3
+
+AA's run of TerminalBench got lower scores, but similarly insane costs. 6.1 Sol now dominates the pareto frontier https://t.co/RDe1xRVJ9h
+
+Part 4
+
+Looks like my numbers were better because I used Codex and AA used mini-swe-agent (think pi but shit)
+
+Might have to do my own runs of TerminalBench 4.0 on official harnesses because the difference is insane.</div>
+        </div>
+      </article>
+      <article class="xcard" data-url="https://x.com/yousukezan/status/2105071734969999839" data-type="thread" tabindex="0" role="button" aria-label="yousukezan の🧵 スレッドを開く">
+        <header class="xcard-head">
+          <div class="xcard-avatar" style="--c:#2f7d91;">Y</div>
+          <div class="xcard-who">
+            <span class="xcard-name">yousukezan <span class="xcard-cat">🔧 セキュリティ</span></span>
+            <span class="xcard-handle">@yousukezan · 9月30日</span>
+          </div>
+          <span class="xcard-type xcard-type--thread">🧵 スレッド</span>
+        </header>
+        <div class="xcard-body">
+          <p class="xcard-preview">Part 1 (親ポスト)
+
+AIにレビューさせてる人がちらほらいて全部放り込んだほうが良い気もするので全ページあるレビュー版も置いときます。619ページあります。
+
+Part 2
+
+レビュー用の演習環境も置いときます
+https://t.co/M9VMa3SC5b</p>
+        </div>
+        <footer class="xcard-foot">
+          <div class="xcard-stats"><span>♡ 4,259</span><span>🔁 307</span><span>🔖 8,842</span><span>👁 1.1M</span></div>
+          <a class="xcard-x" href="https://x.com/yousukezan/status/2105071734969999839" target="_blank" rel="noopener noreferrer" aria-label="Xで開く">𝕏 <span aria-hidden="true">↗</span></a>
+        </footer>
+        <div class="xcard-full" hidden>
+          <div class="xcard-full-meta" data-title="" data-type="thread" data-type-label="🧵 スレッド" data-has-alt="0" data-primary-lang="ja"></div>
+          <div class="xcard-full-primary">Part 1 (親ポスト)
+
+AIにレビューさせてる人がちらほらいて全部放り込んだほうが良い気もするので全ページあるレビュー版も置いときます。619ページあります。
+
+Part 2
+
+レビュー用の演習環境も置いときます
+https://t.co/M9VMa3SC5b</div>
+        </div>
+      </article>
       <article class="xcard" data-url="https://x.com/claudeai/status/2104633115620823187" data-type="thread" tabindex="0" role="button" aria-label="Claude の🧵 スレッドを開く">
         <header class="xcard-head">
           <div class="xcard-avatar" style="--c:#556b2f;">C</div>
@@ -304,393 +428,522 @@ Part 8
 Anthropic says its automated behavioral audit found improvements or parity with Sonnet 5 on alignment and honesty. Cyber safeguards were added; routine software development is unaffected.</div>
         </div>
       </article>
-      <article class="xcard" data-url="https://x.com/patchy_dog/status/2103862188624785635" data-type="thread" tabindex="0" role="button" aria-label="ぱっちー の🧵 スレッドを開く">
+      <article class="xcard" data-url="https://x.com/theo/status/2104683186215363058" data-type="short" tabindex="0" role="button" aria-label="Theo - t3.gg の📝 ポストを開く">
         <header class="xcard-head">
-          <div class="xcard-avatar" style="--c:#4b72c4;">ぱ</div>
+          <div class="xcard-avatar" style="--c:#4b72c4;">T</div>
           <div class="xcard-who">
-            <span class="xcard-name">ぱっちー <span class="xcard-cat">🎨 AI・デザイン</span></span>
-            <span class="xcard-handle">@patchy_dog · 9月27日</span>
-          </div>
-          <span class="xcard-type xcard-type--thread">🧵 スレッド</span>
-        </header>
-        <div class="xcard-body">
-          <p class="xcard-preview">Part 1 (親ポスト)
-
-ぱっちーのプロモーションムービーを流行りに乗っかってOpus5.5で作ってみたペロ。
-
-GPT imagesで、まずコマ割りの画像生成
-その後、Grokで繋げてグリーンバックの動画に生成
-Opus5.5で、イケてるモーショングラフィックスでお願いしたら、こんな感じにできたペロ。
-
-恐ろしい時代ペロ https://t.co/hH8meq7MDn
-
-Part 2
-
-こちらはGPT imagesとGrokのみで…</p>
-        </div>
-        <footer class="xcard-foot">
-          <div class="xcard-stats"><span>♡ 329</span><span>🔁 11</span><span>🔖 360</span><span>👁 36.4K</span></div>
-          <a class="xcard-x" href="https://x.com/patchy_dog/status/2103862188624785635" target="_blank" rel="noopener noreferrer" aria-label="Xで開く">𝕏 <span aria-hidden="true">↗</span></a>
-        </footer>
-        <div class="xcard-full" hidden>
-          <div class="xcard-full-meta" data-title="" data-type="thread" data-type-label="🧵 スレッド" data-has-alt="0" data-primary-lang="ja"></div>
-          <div class="xcard-full-primary">Part 1 (親ポスト)
-
-ぱっちーのプロモーションムービーを流行りに乗っかってOpus5.5で作ってみたペロ。
-
-GPT imagesで、まずコマ割りの画像生成
-その後、Grokで繋げてグリーンバックの動画に生成
-Opus5.5で、イケてるモーショングラフィックスでお願いしたら、こんな感じにできたペロ。
-
-恐ろしい時代ペロ https://t.co/hH8meq7MDn
-
-Part 2
-
-こちらはGPT imagesとGrokのみで作ったダンス動画ペロ https://t.co/SbfaFLfwys</div>
-        </div>
-      </article>
-      <article class="xcard" data-url="https://x.com/inuro/status/2103525253028925858" data-type="short" tabindex="0" role="button" aria-label="inuro の📝 ポストを開く">
-        <header class="xcard-head">
-          <div class="xcard-avatar" style="--c:#556b2f;">I</div>
-          <div class="xcard-who">
-            <span class="xcard-name">inuro <span class="xcard-cat">🎨 AI×デザイン</span></span>
-            <span class="xcard-handle">@inuro · 9月26日</span>
+            <span class="xcard-name">Theo - t3.gg <span class="xcard-cat">💼 AI×ビジネス活用</span></span>
+            <span class="xcard-handle">@theo · 9月29日</span>
           </div>
           <span class="xcard-type xcard-type--short">📝 ポスト</span>
         </header>
         <div class="xcard-body">
-          <p class="xcard-preview">こういうのを見れば見るほど、いかにオリジナルを作ることが大事でそして困難なことか、逆説的に分かるので良い。そして向こう半年一年で、AIの手を借りて圧倒的な質のオリジナルが圧倒的な速度で出てくることも疑いない（既にその萌芽はあちこちに）</p>
+          <p class="xcard-preview">$200のClaude Codeサブスクリプションで、月に約9,000ドル分のOpus利用ができる。
+
+Opus 5.5が出てから、Claudeアカウント3つを使用量0%まで使い切った。
+
+使用量を分析すると、コストは2,086ドル、2,442ドル、2,182ドルだった。
+
+平均は週2,200ドルなので、月に約9,000ドル。</p>
         </div>
         <footer class="xcard-foot">
-          <div class="xcard-stats"><span>♡ 83</span><span>🔁 17</span><span>🔖 19</span><span>👁 14.1K</span></div>
-          <a class="xcard-x" href="https://x.com/inuro/status/2103525253028925858" target="_blank" rel="noopener noreferrer" aria-label="Xで開く">𝕏 <span aria-hidden="true">↗</span></a>
+          <div class="xcard-stats"><span>♡ 6,067</span><span>🔁 94</span><span>🔖 1,133</span><span>👁 1.7M</span></div>
+          <a class="xcard-x" href="https://x.com/theo/status/2104683186215363058" target="_blank" rel="noopener noreferrer" aria-label="Xで開く">𝕏 <span aria-hidden="true">↗</span></a>
+        </footer>
+        <div class="xcard-full" hidden>
+          <div class="xcard-full-meta" data-title="" data-type="short" data-type-label="📝 ポスト" data-has-alt="1" data-primary-lang="ja"></div>
+          <div class="xcard-full-primary">$200のClaude Codeサブスクリプションで、月に約9,000ドル分のOpus利用ができる。
+
+Opus 5.5が出てから、Claudeアカウント3つを使用量0%まで使い切った。
+
+使用量を分析すると、コストは2,086ドル、2,442ドル、2,182ドルだった。
+
+平均は週2,200ドルなので、月に約9,000ドル。</div>
+          <div class="xcard-full-alt" hidden>A $200 Claude Code sub gets you ~$9,000 of Opus usage per month.
+
+I have managed to run 3 Claude accounts down to 0% since Opus 5.5 dropped.
+
+When analyzing their usage, costs were $2,086, $2,442, and $2,182.
+
+Average is $2,200/week, so ~$9,000/month</div>
+        </div>
+      </article>
+      <article class="xcard" data-url="https://x.com/nasuvit_z/status/2104806495875715387" data-type="short" tabindex="0" role="button" aria-label="nasuuu の📝 ポストを開く">
+        <header class="xcard-head">
+          <div class="xcard-avatar" style="--c:#4b72c4;">N</div>
+          <div class="xcard-who">
+            <span class="xcard-name">nasuuu <span class="xcard-cat">📖 技術解説</span></span>
+            <span class="xcard-handle">@nasuvit_z · 9月29日</span>
+          </div>
+          <span class="xcard-type xcard-type--short">📝 ポスト</span>
+        </header>
+        <div class="xcard-body">
+          <p class="xcard-preview">豊洲会「AI臭い文章とは何なのか」LTスライドの完全版です。ご査収ください。
+https://t.co/iyFvpJj5G7</p>
+        </div>
+        <footer class="xcard-foot">
+          <div class="xcard-stats"><span>♡ 3,724</span><span>🔁 514</span><span>🔖 4,667</span><span>👁 1.3M</span></div>
+          <a class="xcard-x" href="https://x.com/nasuvit_z/status/2104806495875715387" target="_blank" rel="noopener noreferrer" aria-label="Xで開く">𝕏 <span aria-hidden="true">↗</span></a>
         </footer>
         <div class="xcard-full" hidden>
           <div class="xcard-full-meta" data-title="" data-type="short" data-type-label="📝 ポスト" data-has-alt="0" data-primary-lang="ja"></div>
-          <div class="xcard-full-primary">こういうのを見れば見るほど、いかにオリジナルを作ることが大事でそして困難なことか、逆説的に分かるので良い。そして向こう半年一年で、AIの手を借りて圧倒的な質のオリジナルが圧倒的な速度で出てくることも疑いない（既にその萌芽はあちこちに）</div>
+          <div class="xcard-full-primary">豊洲会「AI臭い文章とは何なのか」LTスライドの完全版です。ご査収ください。
+https://t.co/iyFvpJj5G7</div>
         </div>
       </article>
-      <article class="xcard" data-url="https://x.com/trq212/status/2103576349499855160" data-type="thread" tabindex="0" role="button" aria-label="Thariq の🧵 スレッドを開く">
+      <article class="xcard" data-url="https://x.com/thsottiaux/status/2104823812042940713" data-type="long" tabindex="0" role="button" aria-label="Tibo の📜 ロングポストを開く">
         <header class="xcard-head">
-          <div class="xcard-avatar" style="--c:#a0522d;">T</div>
+          <div class="xcard-avatar" style="--c:#7b6aa8;">T</div>
           <div class="xcard-who">
-            <span class="xcard-name">Thariq <span class="xcard-cat">💻 AI・開発ツール</span></span>
-            <span class="xcard-handle">@trq212 · 9月26日</span>
-          </div>
-          <span class="xcard-type xcard-type--thread">🧵 スレッド</span>
-        </header>
-        <div class="xcard-body">
-          <p class="xcard-preview">記事：Claude Codeでeffortを使い分ける
-
-新しいClaudeモデルでは、Claude Codeのプロンプトキャッシュを壊さずにeffortを切り替えられる。どの水準をいつ使うべきかという質問が多かったので、評価結果と普段の作業を調べた。図や対話的な説明は https://claude.dev/blog/spending-your-effort/ にある。
-
-effortを上げると、Claudeは検証や例外条件のテストを増…</p>
-        </div>
-        <footer class="xcard-foot">
-          <div class="xcard-stats"><span>♡ 5,087</span><span>🔁 405</span><span>🔖 8,036</span><span>👁 948K</span></div>
-          <a class="xcard-x" href="https://x.com/trq212/status/2103576349499855160" target="_blank" rel="noopener noreferrer" aria-label="Xで開く">𝕏 <span aria-hidden="true">↗</span></a>
-        </footer>
-        <div class="xcard-full" hidden>
-          <div class="xcard-full-meta" data-title="" data-type="thread" data-type-label="🧵 スレッド" data-has-alt="1" data-primary-lang="ja"></div>
-          <div class="xcard-full-primary">記事：Claude Codeでeffortを使い分ける
-
-新しいClaudeモデルでは、Claude Codeのプロンプトキャッシュを壊さずにeffortを切り替えられる。どの水準をいつ使うべきかという質問が多かったので、評価結果と普段の作業を調べた。図や対話的な説明は https://claude.dev/blog/spending-your-effort/ にある。
-
-effortを上げると、Claudeは検証や例外条件のテストを増やし、自分で判断する範囲も広げた。ハードウェア、コードレビュー、セキュリティのように検証が効く分野では、その追加作業が成果につながる。一方、素早く進めて人が途中で確認したい作業ならlowやmediumが合う。私の普段の開発では、まずClaudeに不足条件を質問させ、lowかmediumで実装し、人が確認した後、highで検証する。
-
-effortとは
-
-effortは、その作業に使ってほしい計算量の目安だ。作業の難しさにもある程度対応する。12時間与えられた仕事なら、相手は十分に作り込むことを期待していると考えるだろう。同じ仕事を1時間で頼まれたら、まず条件を満たすものを出して、その後で直すことになる。最低3時間は必要だと伝える場合もある。Claudeも妥当な形で仕事を進めるが、effortが高いほど自分で判断し、検証する。
-
-Fable 5.1とOpus 5.5では、effortを上げるとベンチマーク得点と消費トークンがともに伸びる傾向が出た。記事には私が測ったTerminal-Bench 3.0のグラフを載せた。実務で何が変わるかを見るため、同じ依頼を複数のeffortで試した。
-
-作る仕事での違い
-
-条件をあまり決めずに「個人用の運動記録アプリを作って」と頼んだ。lowでは記録画面と簡単なグラフになり、高いeffortほど機能と細部が増えた。maxではヒートチャートまで付いた。後から一緒に育てる土台が欲しければlow、一度で最も作り込んだ案が欲しければmaxが合う。
-
-ある程度決めたデザイン課題として、Claude Codeの/configメニューの再設計も試した。どのeffortでもサブメニューと検索の改善が中心だった。lowは約1分で、考え方が伝わる操作可能なラフ案を出したが、Claude Codeらしい見た目には届かなかった。maxは約28分かけて実際の画面に近いモックアップと、複数の操作手順を出した。対話しながら方向を決めたい私には、この例ではlowが好ましかった。
-
-詳細な仕様を先に作った場合も試した。Claudeに運動アプリについて詳しく質問させ、その仕様を複数のモデルとeffortで実装させた。仕様が明確だと、画面も実装も似たものになった。差は細部に現れ、maxでは一部を簡素化する判断もした。
-
-通常の新機能開発でeffortを決める要因は、私がどれだけ途中で関わりたいかだ。lowは早く初稿を返し、highはより多くの作業を進める代わりに、私の代わりに仮定することも増える。私が使う手順は、仕様を渡して不足点を質問してもらう、lowで実装する、人が方向を確認して必要ならlowで直す、最後にhighで検証・テストする、というものだ。
-
-難しい課題では何が変わるか
-
-ここまでの例はClaudeが解ける小さな課題だ。成否そのものが変わる難題を見るため、コミュニティ由来のTerminal-Bench 3.0を調べた。課題はセキュリティ、ハードウェア、機械学習、科学、ソフトウェア、運用、メディアなどに分かれる。全課題は https://github.com/harbor-framework/terminal-bench/releases/tag/v3.0.0 で読める。通常の仕事より規模も難しさも大きい。
-
-例として、小型FPGAに収まる8ビットゲーム機をVerilogで作る課題、Takensの埋め込み定理をLean 4で形式証明する課題、分割された混合専門家モデルのチェックポイント16個を統合する課題、企業のEU域内貿易統計の月次申告を完了する課題、ポスター画像を編集可能なレイアウトへ作り直す課題がある。
-
-隠れた例外条件が多い課題では高いeffortが効いた。JavaScriptを紛れ込ませるさまざまな手法を除去するHTMLサニタイザーの課題では、Fable 5.1がlowで5回中1回、xhighで5回中5回成功した。lowの試行は約2分でフィルターを一度に書き、手作りのページ一つで確認した。追跡したhighの試行は約33分かけ、初稿を攻撃者の視点で見直し、インストール済みパーサーのソースを読み、正常なHTMLが変わらないことを多数試し、標準のXSSテスト群を走らせ、ランダムな入力も検証した。性能最適化やセキュリティレビューのように本番での正確さが必要な作業なら、この追加コストに意味がある。ただし、すべての作業には要らない。全体の結果では、effortを増やすと例外条件の見落としは減る傾向がある一方、そもそもの方針が誤っている失敗までは直らなかった。
-
-分野別に見ると、この違いが分かりやすい。ストレージエンジンのクラッシュを直し、compactionを壊さないmvcc-lsm-compactionでは、Opus 5.5はlowで5回中0回、xhighで5回中4回成功した。lowは約1分で再現テストやビルドより先にコードを編集し、追加テストが元のバグを検出できたかも見なかった。xhighは約11分でクラッシュを再現し、compactionしない参照実装とのランダム比較テストを作り、未完成の修正ではテストが失敗することまで確認した。
-
-Pythonで線形計画のCLIソルバーを書くcli-2ph-simpleでは、lowの5回中0回に対しhighは5回中5回成功した。lowは一度に実装し、小さな問題を少し試して約1万トークンで終え、大きな問題では遅いかもしれないと警告したが実測しなかった。highは別の総当たりソルバーとランダムな問題で比較し、大きな問題の速度も測り、極端に遅い・クラッシュする条件を見つけて探索方法を作り直した。
-
-プロテオミクスデータから、8種類の処置のうち目標の組織に似るものを探すgsea-proteomicsでは、lowで5回中0回、highで5回中4回だった。lowはもっともらしい前処理を一つ選んで分析し、結果を報告した。highは前処理を二通り試し、有意な処置の一覧が変わると気づいて原因を調べ、適切な方法を選んだ。人が途中で関われるなら設定について質問できたかもしれないが、無人で進める条件ではhighが有利だった。
-
-Claude Codeでの使い分け
-
-- low: 発想出し、ラフ案、簡単な変更など、素早く返してもらいながら進めたい時。
-- medium: 新機能の実装など、普段のソフトウェア開発の多く。
-- high: 既存コードのバグ修正など、検証や例外条件が重要な時。
-- max: アプリの構築と検証を最後まで任せる、重要なソフトウェアの脆弱性を探すなど、難しい課題を自律的に進めてほしい時。
-
-Opus 5.5やFable 5.1では、課題に合わせ、会話の途中でもClaude Codeの/effortで水準を切り替えて試してほしい。
-
-スレッド全体
-
-Part 1 (親ポスト)
-effortとは何か。いつ切り替え、なぜすべてをmaxにしないのか。評価結果と自分の試行を詳しく調べたところ、意外な結果が見えた。https://t.co/KO2D51j34H
-
-Part 2
-ベンチマークやデモの対話的な解説は、新しい開発者向けサイトで読める。https://t.co/oSTZrBggXM
-
-Part 3
-私は途中で自分も関わりたい時にlowをよく使う。maxを使うのは、ほぼ完全に任せたい時か、セキュリティ上の脆弱性を探したい時だけだ。https://t.co/KdDBikNwCL</div>
-          <div class="xcard-full-alt" hidden>Part 1 (親ポスト)
-What is effort really? When do you change it it and why not just use max effort for everything?
-
-I dove deep into this problem, looking into evals and doing my own tests and I was quite surprised by the results. https://t.co/KO2D51j34H
-
-Part 2
-If you want to see interactive explainers of benchmarks and demos I built, you can read it on our new dev site here: https://t.co/oSTZrBggXM
-
-Part 3
-I use effort low a lot more when I want to stay in the loop, and effort max is basically only if I want zero input or want to find security vulnerabilities. https://t.co/KdDBikNwCL</div>
-        </div>
-      </article>
-      <article class="xcard" data-url="https://x.com/rexan_wong/status/2103707054108299437" data-type="long" tabindex="0" role="button" aria-label="Rexan Wong の📜 ロングポストを開く">
-        <header class="xcard-head">
-          <div class="xcard-avatar" style="--c:#2f7d91;">R</div>
-          <div class="xcard-who">
-            <span class="xcard-name">Rexan Wong <span class="xcard-cat">🎨 AI×デザイン</span></span>
-            <span class="xcard-handle">@rexan_wong · 9月26日</span>
+            <span class="xcard-name">Tibo <span class="xcard-cat">📰 業界ニュース</span></span>
+            <span class="xcard-handle">@thsottiaux · 9月29日</span>
           </div>
           <span class="xcard-type xcard-type--long">📜 ロングポスト</span>
         </header>
         <div class="xcard-body">
-          <p class="xcard-preview">Opus 5.5で作ったモーショングラフィックの動画が次々に共有されている。みんな「一つのプロンプトで作った」と言うが、私が一つの指示だけで作ったものはいまひとつだった。実際の作り方を調べて、うまくいく手順を見つけた。
+          <p class="xcard-preview">こんにちは。
 
-1. 手本にする動画を1〜2本選ぶ。言葉でスタイルを描写するより、具体的な映像を渡すほうがよい。手本がないと、中央揃えの文字、グラデーション背景、フェードインばかりの似た動画になりがち。参考映像はテンポ、文字、画面転換…</p>
+明日、Pro $200サブスクリプションの新規受付を再開します。あわせて、使用量の計算方法も変更します。計算すると、旧Pro $200プランと比べてAPI換算の金額は半分になります。
+
+先にこれを伝えたうえで、なぜこうするのか、そしてなぜ1か月前のPro $200プランより多くの仕事ができるのかを説明させてください。
+
+(a) 他の部分で妥協したくなかったので、5時間制限は再導入しないと約束します。週ごとの使用量を好きな…</p>
         </div>
         <footer class="xcard-foot">
-          <div class="xcard-stats"><span>♡ 4,131</span><span>🔁 312</span><span>🔖 11.1K</span><span>👁 304K</span></div>
-          <a class="xcard-x" href="https://x.com/rexan_wong/status/2103707054108299437" target="_blank" rel="noopener noreferrer" aria-label="Xで開く">𝕏 <span aria-hidden="true">↗</span></a>
+          <div class="xcard-stats"><span>♡ 21,796</span><span>🔁 1,619</span><span>🔖 4,764</span><span>👁 16.7M</span></div>
+          <a class="xcard-x" href="https://x.com/thsottiaux/status/2104823812042940713" target="_blank" rel="noopener noreferrer" aria-label="Xで開く">𝕏 <span aria-hidden="true">↗</span></a>
         </footer>
         <div class="xcard-full" hidden>
           <div class="xcard-full-meta" data-title="" data-type="long" data-type-label="📜 ロングポスト" data-has-alt="1" data-primary-lang="ja"></div>
-          <div class="xcard-full-primary">Opus 5.5で作ったモーショングラフィックの動画が次々に共有されている。みんな「一つのプロンプトで作った」と言うが、私が一つの指示だけで作ったものはいまひとつだった。実際の作り方を調べて、うまくいく手順を見つけた。
+          <div class="xcard-full-primary">こんにちは。
 
-1. 手本にする動画を1〜2本選ぶ。言葉でスタイルを描写するより、具体的な映像を渡すほうがよい。手本がないと、中央揃えの文字、グラデーション背景、フェードインばかりの似た動画になりがち。参考映像はテンポ、文字、画面転換の指針になる。参考: https://t.co/CibWaQ6c9Q
-2. HyperFramesかRemotionを導入する。Opusが各シーンをコードで作り、MP4までレンダリングできる。編集のたびに最初から作り直さず、該当箇所を直して再レンダリングできる。導入しなければ、動画の説明文や画面収録が必要な粗いHTMLにとどまりやすい。
-3. 21st.devの部品を使う。実際のボタンやカード、UI部品を使えば、間隔や見た目が不自然な架空の画面を避けられる。
-4. ここまでが準備。ロゴ、色、書体、実製品のスクリーンショット、参考動画、動画のイメージをOpusに渡し、絵コンテを3案出してもらう。ブランド素材がなければ、製品も色も推測で補われてしまう。3案あれば、最初の案を直し続けずに方向を選べる。
-5. 好きな絵コンテを選び、動きを付ける前に各シーンの静止画を1枚ずつ確認する。全編をレンダリングしてから4番目のシーンの誤りに気づくより、安く早く直せる。
-6. 動画を作ったら監督のように具体的な修正を伝える。「ズームを0.7倍に遅く」「ここはハードカット」「ボタンに寄る」のような指示が効く。「もっと良くして」では変更がばらつく。初稿から最後の仕上がりを決めるのは、この具体的なフィードバックだ。
+明日、Pro $200サブスクリプションの新規受付を再開します。あわせて、使用量の計算方法も変更します。計算すると、旧Pro $200プランと比べてAPI換算の金額は半分になります。
 
-同じモデルを使っても、渡す素材と文脈で仕上がりは変わる。</div>
-          <div class="xcard-full-alt" hidden>everyone's sharing motion graphic videos that Opus 5.5 made, and it's genuinely insane
+先にこれを伝えたうえで、なぜこうするのか、そしてなぜ1か月前のPro $200プランより多くの仕事ができるのかを説明させてください。
 
-everyone says they created it with &quot;one prompt&quot;, but my one prompt video looked mid
+(a) 他の部分で妥協したくなかったので、5時間制限は再導入しないと約束します。週ごとの使用量を好きなときに使い切れます。
+(b) サブスクリプションでは、時間とともに必ずより多くの仕事を、より高い品質でこなせることを保証します。モデルの効率が上がり、その改善をAPI価格の引き下げという形で還元していくので、1ドルあたりの価値は上がり続けます。
+(c) 見かけ上お得に見せるためにAPIの定価を人為的に吊り上げ、割引などで調整する、というインセンティブを自分たちに持たせたくありません。代わりに、APIのモデル価格を急速に下げつつ性能を上げ続けたい。今週、GPT-6 SolとGPT-6 Lunaを従来の50%の価格で提供し始めました。いずれは価格が十分に下がり、サブスクで得られる量とAPIで1ドルあたり得られる量に大きな差がなくなって、多くの人が必要な分だけ使用量を買うのが合理的になると考えています。
+(d) 明日、使用量を消費しない機能をサブスクリプションに追加します。中身はまだ明かしません。
 
-so i went through a bunch of these videos to see how they were actually made, and found the workflow that works
+明日の大きな発表の前に、透明性を持って伝えておきたかった。サブスクリプションを非常に魅力的にする新しいものがたくさん来ますが、良いニュースを浴びせる前に、この変更を理解してもらえるよう先に共有しました。
 
-here's how to generate pro level motion graphic videos w/ opus:
+Codexingly,
+Tibo</div>
+          <div class="xcard-full-alt" hidden>Hi,
 
-1. get reference videos to direct from -&gt; https://t.co/CibWaQ6c9Q
+Tomorrow we are re-opening the Pro $200 subscriptions to new subscribers, but together with it we are also changing how we calculate the usage for it. In effect, if you do the math, it will net out at half the dollar in API spend compared to the old Pro $200 plan. 
 
-pick 1-2 videos whose style you want and tell opus to match them. naming a style works way better than describing one
+Now that it's said, let me explain why this is happening and why you will still get more work done than if you were on the Pro $200 subscription one month ago.
 
-without a reference, opus falls back to its default look: centered text, gradient background, everything fading in
+(a) We didn't want to compromise in other ways and are committing to not reintroducing the 5h limit, so that you can fully use the weekly usage when you want.
+(b) On the subscription, we guarantee that over time you always get more work done and with an increasing level of quality. This means that you will continue to get more value per dollar spent as a result of models getting more efficient and us passing down the improvements in the form of API price reductions.
+(c) We don't want to put an incentive on ourselves to artificially inflate the API list prices to make it look like you are getting a lot (and workaround it through discounts, etc). Instead we want to continue to both rapidly reduce prices and increase capabilities of models on the API. This week we introduced GPT-6 Sol and GPT-6 Luna at 50% of their previous price. Over time, we see prices go low enough that it makes sense for most to buy usage as needed without there being a significant gap between what you get in a subscription and what you get in the API for a dollar spent.
+(d) Tomorrow, we are adding more things to the subscription that won't draw on the usage, I won't reveal what that is yet.
 
-that's why so many of these videos look the same. a reference gives it the pacing, the type and the transitions to copy
+I wanted to be transparent before all the big announcements tomorrow. Lots of new exciting things are coming to the subscriptions that will make it super compelling, but I wanted to make sure to share this change ahead of time so you can all understand it before we shower you with good news.
 
-2. install @HyperFrames_ or @Remotion so opus can build the video
-
-both let opus write every scene as code and render it straight to mp4. no video editor
-
-without one, opus can only describe a video or hand you a rough html page you have to screen record
-
-with it, every frame is exact, and when you ask for a change it edits one line and re-renders instead of starting over
-
-3. install @21st_dev for high quality components in the video
-
-real buttons, cards and UI components made by design engineers, instead of whatever opus invents on the spot
-
-without it, opus draws your product UI from scratch and it looks off. wrong spacing, placeholder boxes, fake-looking buttons
-
-anyone who's used good software can feel it in a second, and the whole video reads as cheap
-
-4. steps 1-3 were context + setup. now dump all of it into opus
-
-your brand (logo, colors, fonts), screenshots of your real product, the reference video, and a quick braindump of how you see the video
-
-then ask for 3 storyboard variants
-
-without this, opus guesses your colors, your font and what your product even does. the video could be for any startup
-
-with it, it could only be yours. and 3 variants means you pick a direction instead of fixing the first idea it had
-
-5. pick the storyboard you like
-
-ask for one still frame per scene before anything moves. fixing a storyboard is way cheaper than fixing a render
-
-without this step, you only find out scene 4 is wrong after the whole thing is animated, and every fix means re-rendering. a still frame takes seconds to change
-
-6. let claude cook
-
-then give notes like a director: &quot;slow every zoom to 0.7x&quot;, &quot;hard cut here&quot;, &quot;push in on the button&quot;
-
-without notes, the first render is usually 80% there, and that last 20% is what makes it look pro. vague notes like &quot;make it better&quot; get random changes. camera words get exactly the change you want
-
-everyone has the same model. the context you give it is what makes it look pro
-
-let it cooookk</div>
+Codexingly,
+Tibo</div>
         </div>
       </article>
-      <article class="xcard" data-url="https://x.com/uchita_success/status/2103786580838420912" data-type="thread" tabindex="0" role="button" aria-label="うちた の🧵 スレッドを開く">
+      <article class="xcard" data-url="https://x.com/0xMovez/status/2104216919033192746" data-type="article" tabindex="0" role="button" aria-label="Movez の📄 記事を開く">
         <header class="xcard-head">
-          <div class="xcard-avatar" style="--c:#d94a27;">う</div>
+          <div class="xcard-avatar" style="--c:#7b6aa8;">M</div>
           <div class="xcard-who">
-            <span class="xcard-name">うちた <span class="xcard-cat">🎨 AI・デザイン</span></span>
-            <span class="xcard-handle">@uchita_success · 9月26日</span>
+            <span class="xcard-name">Movez <span class="xcard-cat">🎨 デザイン</span></span>
+            <span class="xcard-handle">@0xMovez · 9月27日</span>
           </div>
-          <span class="xcard-type xcard-type--thread">🧵 スレッド</span>
+          <span class="xcard-type xcard-type--article">📄 記事</span>
         </header>
         <div class="xcard-body">
-          <p class="xcard-preview">Part 1 (親ポスト)
+          <h4 class="xcard-title">Opus 5.5でモーションデザインスタジオを作る12ステップ講座</h4>
+          <p class="xcard-preview">記事：Opus 5.5でモーションデザインスタジオを作る（完全講座）
 
-AIスライド作成の最終形態が見えた。
-
-ぬるぬる動く。
-押せば根拠が開き、動かせばその場で再計算。
-作る側の自動化の次は、見る側の体験が変わる。
-社内プレゼンや商談でどうぞ。
-
-しかもOpus5.5なら簡単に作れる。
-いつものプロンプトに1ブロック足すだけ👇 https://t.co/UTbBanw14V https://t.co/SEx2WrJh1z
-
-Part 2
-
-こちらのnoteと組合せで使うのが…</p>
+Opus 5.5でモーションデザインを試す人の多くは、同じ動画に行き着きます。グラデーション背景の中央にテキスト、すべてがフェードイン、最後にロゴ。
+参照を渡さず、レンダエンジンも渡さず、自分のフレームを見させることもしないからです。
+これは、その状態を再現可能な制作パイプラインに変える12ステップの講座です。動画の10%はプロンプト、残り90%はハーネスです。…</p>
         </div>
         <footer class="xcard-foot">
-          <div class="xcard-stats"><span>♡ 1,913</span><span>🔁 148</span><span>🔖 3,184</span><span>👁 395K</span></div>
-          <a class="xcard-x" href="https://x.com/uchita_success/status/2103786580838420912" target="_blank" rel="noopener noreferrer" aria-label="Xで開く">𝕏 <span aria-hidden="true">↗</span></a>
+          <div class="xcard-stats"><span>♡ 7,067</span><span>🔁 657</span><span>🔖 21K</span><span>👁 1.4M</span></div>
+          <a class="xcard-x" href="https://x.com/0xMovez/status/2104216919033192746" target="_blank" rel="noopener noreferrer" aria-label="Xで開く">𝕏 <span aria-hidden="true">↗</span></a>
         </footer>
         <div class="xcard-full" hidden>
-          <div class="xcard-full-meta" data-title="" data-type="thread" data-type-label="🧵 スレッド" data-has-alt="0" data-primary-lang="ja"></div>
-          <div class="xcard-full-primary">Part 1 (親ポスト)
+          <div class="xcard-full-meta" data-title="Opus 5.5でモーションデザインスタジオを作る12ステップ講座" data-type="article" data-type-label="📄 記事" data-has-alt="1" data-primary-lang="ja"></div>
+          <div class="xcard-full-primary">記事：Opus 5.5でモーションデザインスタジオを作る（完全講座）
 
-AIスライド作成の最終形態が見えた。
+Opus 5.5でモーションデザインを試す人の多くは、同じ動画に行き着きます。グラデーション背景の中央にテキスト、すべてがフェードイン、最後にロゴ。
+参照を渡さず、レンダエンジンも渡さず、自分のフレームを見させることもしないからです。
+これは、その状態を再現可能な制作パイプラインに変える12ステップの講座です。動画の10%はプロンプト、残り90%はハーネスです。
 
-ぬるぬる動く。
-押せば根拠が開き、動かせばその場で再計算。
-作る側の自動化の次は、見る側の体験が変わる。
-社内プレゼンや商談でどうぞ。
+2026年9月22日、AnthropicはClaude Opus 5.5をリリースしました。
+数時間のうちに、タイムラインはショーリール、ローンチ動画、ミュージックビデオ、5分の歴史映像で埋まりました。すべてコードからレンダリングされたものです。
+キャプションには「プロンプト1つ」、リプライには「モーションデザイナーは終わった」。
+どちらも半分だけ本当です。30語のプロンプトから生まれたクリップも実際にあります。
+一方で、9,500文字の監督ブリーフ、Skillのフォルダ、2つのAPIキー、12時間の自律実行から生まれたものもあります。
+Claude CodeチームのThariqはこの差を一言でまとめました。「投稿はワンショットと言うが、プロンプトはSkill・例・キー込みで1万文字ある」。
 
-しかもOpus5.5なら簡単に作れる。
-いつものプロンプトに1ブロック足すだけ👇 https://t.co/UTbBanw14V https://t.co/SEx2WrJh1z
+この講座では両極とその間のすべてを扱います。
+トレンドを決定づけた9つの投稿を読み、それぞれのプロンプトの型を写し、そのうえでエンジンを自分で組みます。
+seek(t)レンダラー、閉形式のバネ、ビートグリッド、合成音、そしてOpusに自分のフレームを直させる批評ループです。
 
-Part 2
+Part 1 · 実際に何が起きているのか
 
-こちらのnoteと組合せで使うのがオススメです↓
-https://t.co/6jjH2YnHO3</div>
-        </div>
-      </article>
-      <article class="xcard" data-url="https://x.com/twoclipping/status/2103273003555402193" data-type="long" tabindex="0" role="button" aria-label="zero の📜 ロングポストを開く">
-        <header class="xcard-head">
-          <div class="xcard-avatar" style="--c:#2a8f47;">Z</div>
-          <div class="xcard-who">
-            <span class="xcard-name">zero <span class="xcard-cat">🎨 デザイン・UI/UX</span></span>
-            <span class="xcard-handle">@twoclipping · 9月25日</span>
-          </div>
-          <span class="xcard-type xcard-type--long">📜 ロングポスト</span>
-        </header>
-        <div class="xcard-body">
-          <p class="xcard-preview">Opus 5.5のモーションデザインは驚くほどよくできる。この動画はすべてコードで作り、After Effectsは一切使っていない。再現できるよう、プロンプトのひな型を公開する。
+01. ピクセル：モデルは動画ではなくプログラムを書く
+Opus 5.5はテキストと画像を受け取り、テキストを出力します。MP4は出せません。このトレンドの動画はすべてOpusが書いたプログラムで、別の何かがそれをフレームに変えています。
+核になるのは決定性です。Opusは、任意の時刻の正確なフレームを描く関数 draw(t) または seek(t) を1つ書きます。
+ヘッドレスブラウザがそれを15秒・60fpsなら900回呼び、各フレームをスクリーンショットし、ffmpegがつなぎます。
+タイマーに依存しないので、レンダ結果は毎回同じで、修正は1行の編集と再レンダで済みます。
+Tommy Rossiがワンショット出力を調べたところ、Opusは依存ゼロの「ルートA」を好むことが分かりました。index.html 1枚、evalで呼ぶseek関数、Playwrightでのフレーム単位キャプチャ、ffmpegでのエンコードです。
+RemotionやHyperFramesが使える環境でも使いませんでした。フレームワークを使いたいなら明示してください。
 
-&lt;入力&gt;
-最初に次の条件を尋ねる。ひとつの形が変化していく先となるUI状態を8〜12個（ボタン、ローダー、プレーヤー、スライダー、トグル、タブ、チャート、コマンドパレット、トーストなど）。配色は白黒だけか、アクセントカラーを1色加える。音楽は約120 BP…</p>
-        </div>
-        <footer class="xcard-foot">
-          <div class="xcard-stats"><span>♡ 8,993</span><span>🔁 500</span><span>🔖 14.8K</span><span>👁 617K</span></div>
-          <a class="xcard-x" href="https://x.com/twoclipping/status/2103273003555402193" target="_blank" rel="noopener noreferrer" aria-label="Xで開く">𝕏 <span aria-hidden="true">↗</span></a>
-        </footer>
-        <div class="xcard-full" hidden>
-          <div class="xcard-full-meta" data-title="" data-type="long" data-type-label="📜 ロングポスト" data-has-alt="1" data-primary-lang="ja"></div>
-          <div class="xcard-full-primary">Opus 5.5のモーションデザインは驚くほどよくできる。この動画はすべてコードで作り、After Effectsは一切使っていない。再現できるよう、プロンプトのひな型を公開する。
+02. セットアップ：10分でスタジオを用意する
+チャットアプリでもアニメーションは書けますが、レンダし、音を聞き、自分のフレームを見られるのはClaude Code（またはシェルを持つエージェント）だけです。
+このフィードバックループこそが、「微妙」と言われる初回とバズる作品の違いのすべてです。
+次に、プロジェクト直下にハウスルールのファイルを置きます。Claude Codeは毎回CLAUDE.mdを読むので、ここで作る動画すべてにルールが繰り返し書かなくても適用されます。
+Opus 5.5の既定はmedium effortで、回答前に必ず考えます。リスト中のバズったワンショットはすべてxhighかmaxで動いていました。
+小さな修正や再レンダはmedium、新しい作品はxhigh、最初の3秒でローンチを背負うならmaxを使います。
 
-&lt;入力&gt;
-最初に次の条件を尋ねる。ひとつの形が変化していく先となるUI状態を8〜12個（ボタン、ローダー、プレーヤー、スライダー、トグル、タブ、チャート、コマンドパレット、トーストなど）。配色は白黒だけか、アクセントカラーを1色加える。音楽は約120 BPMで商用利用可能なものを選ぶ（Mixkitなど）。
-&lt;/入力&gt;
+Part 2 · 監督のようにプロンプトを書く
 
-&lt;演出方針&gt;
-Dribbbleに載る水準のUIモーション。カットを割らず、ひとつの要素がサイズ・角丸・色を変えながらすべての状態に変化する。中身の切り替えには短いぼかしを使う。カーソルが実際にクリックとドラッグを行い、変化を引き起こす。背景は明るい暖色寄りのグレー、UIは白黒、書体は読みやすいものをひとつ（Geist）。動きにはスプリングを使うが、行き過ぎはごく小さく。各状態が画面いっぱいに見えるようカメラを寄せる。最終フレームを最初のフレームにつなげ、ループさせる。
+03. ワンライナー：ショーリールのプロンプトとそれが効く理由
+9つの投稿のうち4つが同じ一文を使っていました。1行が15秒のカメラワーク、キネティックタイポ、音声を生んだ理由は理解する価値があります。
+「履歴書用のショーリール」は、既知のルールを持つジャンルを指定します。速いカット、ショットごとに新しい技法、最高の作品を最初に。Opusはリールがどういうものかをすでに知っています。
+「あなたはなんて素晴らしいモーションデザイナーなんだ」はモデル自身を主題にするので、製品説明ではなく技法を見せます。間違えようのある内容がありません。
+「15秒」は1パスで終わる短さで、6〜8ショット入る長さです。
+「全力で」はxhighやmaxの上に乗る努力の倍率として働きます。
+弱点：athemeroyのデータセットはこれを「ブリーフ感染」と呼んでいます。何百もの同一プロンプトが似通ったリールを生みました。セットアップのテストに使い、そこから先へ進んでください。
+ワンライナーはエンジンを試します。アイデアは試しません。アイデアが含まれていないからです。
 
-弾みすぎるイージング、粒子の噴出、発光、UI部品へのグラデーション、線幅の揃わないアイコン、間延びした時間、既製テンプレートのような見た目は禁止。
-&lt;/演出方針&gt;
+04. ブランド：リールを自分の製品に向ける
+何かを売っている人にとって最も役立つのはTony Dinhの投稿です。1年前に似たローンチ動画に1,000ドル以上払いましたが、今回は30分未満でした。
+効いたのは追加の3行です。製品URL、「実際の製品スクリーンショット・ロゴ・素材を使う」、「音楽必須」。Opusはサイトに行き、自分で素材を集めました。
+Rob Hallamは後半を証明しました。最初のリールの後、同じチャットで製品広告を頼むと、レンダラー・音声合成・書き出しパイプラインがすでにあったので速く出てきました。
+ブランドごとに1セッションを保ちましょう。
+achxviは話すキャラクターでさらに進めました。PocketsflowではElevenLabsのキーを渡し、製品を説明するキャラクターを頼みました。声とマスコットは、彼が今サービスとして売っているものです。
+APIキーは.envに置き、「ElevenLabsのキーは.envのELEVENLABS_API_KEY」と書きます。スクショするプロンプトに本物のキーを貼らないこと。achxviの公開プロンプトがジョークのプレースホルダーを使ったのはまさにこの理由です。
 
-&lt;構成&gt;
-120 BPM、7小節。すべての拍で何かを起こす。ボタン→ローダー→チェック→Dynamic Island→再生・停止が変形する音楽プレーヤー→再生位置をスクラブ→音量スライダーへ変化し、上限を超えてドラッグすると伸びる→拍に合わせてトグルが切り替わる→ノブが液体のようなタブ表示に変わる→タブからチャートが開き、マウスを重ねるとツールチップが出る→⌘Kへ縮む→入力して絞り込む→Enter→トースト→ボタンに戻る。
-&lt;/構成&gt;
+05. 参照：ルックに名前を付け、フレームを渡す
+参照がないと、Opusは既定に戻ります。中央テキスト、グラデーション背景、すべてフェードイン。
+Rexan Wongは何十ものバズったクリップを調べ、同じことを見つけました。スタイルは説明するより名前を挙げたほうが効き、参照動画やフレームはモデルに写すべきテンポ・書体・トランジションを与えます。
+Pleometricの2つの投稿が段階を示しています。純コードのTikTok作品は別のバズったアニメーションの1フレームから始まりました。
+Donald風の作品では、自分のPC-98画像ギャラリーをOpusに指しました。自分のライブラリは誰にも真似できない参照です。
+- フレーム：好きな動画の1フレームをスクショして添付し、何を取るか（配色・書体・粒子感）と何を取らないか（被写体）を言う。
+- 動画：ファイルかリンクを渡し、コードを書く前にffmpegでフレームを抜き出して、ショットごとのテンポを説明させる。
+- ライブラリ：自分の画像や過去作のフォルダ。まずそこからstyle_guide.mdを書かせる。
+- 参照元：whatships.com（ローンチ動画）、Dribbbleのモーション、競合のローンチ映像。
+Pleometricはp5.jsを提案しましたが、Opusは独自の紙のレンダラーを書くことを選びました。参照を渡すなら技法はモデルに選ばせましょう。
+再利用のために特定のフレームワークが必要な場合を除き、指定するのはルックと制約で、ライブラリではありません。
 
-&lt;実装&gt;
-1. 1440×1440のHTMLファイルをひとつ作る。すべてのスタイルはseek(t)内で時刻から計算する。CSSトランジション、タイマー、フレーム間で持ち越す状態は使わない。
-2. スプリングは閉形式のステップ応答で表す。目標値が何度も変わる値は、変化ごとのスプリングを足し合わせる。これで時間だけを入力とする純粋関数を保てる。
-3. タブ表示の両端には別々のスプリングを使い、先端が後端より先に伸びるようにする。トグルのノブにも同じ方法を使う。
-4. ドラッグ中はカーソル位置から値を直接計算する。離したら、その位置からスプリングで戻す。
-5. numpyで音楽を解析して拍のグリッドを作り、強拍から始める。UI効果音は実測した音量ピークに合わせて置く。
-6. Playwrightで各フレームにつき4枚のサブフレームを描画し、ffmpegのtmixで混ぜて60 fpsのモーションブラーを作る。
-7. 全編を描画する前に、各拍につき1フレームを出力する。拍からずれた箇所、窮屈な箇所、読みにくい箇所を直す。
-&lt;/実装&gt;
+06. 仕様：雰囲気ではなく状態リストを書く
+今週最もブックマークされたプロンプトはワンライナーではありませんでした。
+@twoclippingのUIモーフ（90.7万表示、1.9万ブックマーク）と@verboveのMakerMap映像は、どちらもXML仕様を使っていました。尋ねるべき入力、演出、ビートごとの状態リスト、ビルドルール、落とし穴。NFT_Chenのエディタ映像は同じ考えを物語にしたものです。偽のUIは、すべての要素が既知の状態を持つセットです。
+背後の考え方は「1つの形、カットしない」です。1つの要素がボタン、ローダー、プレーヤー、スライダー、チャート、コマンドパレットと状態ごとにサイズ・角丸・色をモーフし、カーソルが実際のクリックで各変化を起こし、最後のフレームが最初と一致してループします。
 
-&lt;注意点&gt;
-カメラが拡大する要素にwill-changeを指定すると、文字がぼやける。変形する容器の中で文字を切り替えるときは、入る文字と出る文字のタイミングを別々に設計し、重ならないようにする。最後のフレームはカーソルの位置と速度を含めて最初のフレームと一致させる。そうしないとループが引っかかる。
-&lt;/注意点&gt;
+Part 3 · エンジンを組む
 
-&lt;開始&gt;
-まず入力条件を尋ね、コードを書く前に拍グリッド上にUI状態の一覧を示す。
-&lt;/開始&gt;</div>
-          <div class="xcard-full-alt" hidden>opus 5.5 is f*cking cracked at motion design
+07. エンジン：seek(t)レンダラーを組む
+これはOpusが既定で選ぶルートAを整理して書いたものです。ファイルは2つ。ページは任意の瞬間を要求に応じて描き、レンダラーは時間を進めてフレームをffmpegに流します。
+フレームワークを使いたい場合は、同じプロンプトでルートBにします。
 
-this entire video is code, 0 after effects
+08. バネ：動きを高級に見せる
+安っぽい動きは固定カーブでAからBへイージングします。高級な動きには質量があります。加速し、ほんの少し行き過ぎ、落ち着く。
+モーフ映像はすべて閉形式のバネを指定しています。時間の純粋関数のままなので、seek(t)の決定性が保たれるからです。
+多くの人が見落とすコツ：値の目標が何度も変わるとき（カーソル、コンテナの幅）、バネを再スタートしないこと。
+変更ごとに、それぞれの開始時刻を持つバネを1つずつ足します。動きは連続したまま、0〜811フレームをシミュレートせずに812フレーム目を描けます。
+- きびきび：ボタン、トグル、先頭のエッジ
+- 標準：カード、コンテナ、カメラ
+- 重め：大きな文字、3Dオブジェクト、ロゴの組み
+- 遊び：マスコット、ステッカー（目に見える行き過ぎ）
+「すべてのイージングカーブをlib/motion.jsの閉形式バネに置き換えて。UIにはわずかな行き過ぎ、文字にはなし。目標が複数ある値はtrack()を使う」と頼めば、Opusはファイル全体を1パスでリファクタします。
 
-im open sourcing the prompt template for these motion designs
+09. 音：ビートに合わせてスコアを付ける
+Rob Hallamは音声が後から付けられたと思いました。違いました。
+@ooznのスティーブ・ジョブズ映像は、Nodeでサウンドトラックを合成し、すべてのカットを120BPMに合わせています。
+Voxの「small print」作品はPythonで音楽を合成し、それに合わせてレンダを1秒ずつ磨きました。「AI動画」が映画らしく感じられ始めるのは音からです。
+道は2つ。曲を用意するなら測る。用意しないなら映像と同じタイムライン上で合成する。
 
-steal it to recreate these ↓
+Part 4 · 1本のクリップからスタジオへ
 
-&lt;inputs&gt;
-Ask me for: 8 to 12 UI states I want the shape to become (e.g. button, loader, player, slider, toggle, tabs, chart, command palette, toast), pure black and white or one accent color, and a royalty-free song around 120 BPM (e.g. Mixkit, free for commercial use).
-&lt;/inputs&gt;
+10. 一晩：監督ブリーフを書く
+Donaldは5分間口述して寝て、起きると142秒・210万表示のミュージックビデオができていました。
+公開プロンプトは約9,500文字。@pradeepXkapoorの「Pip」ロボット映像は19,000文字のブリーフでした。どちらを読んでも同じ骨格が見えます。動画を説明するのではなく、クルーを雇っているのです。
+- 1行で映画：ログラインとジョーク。すべての判断をこれと照らし合わせられるように。
+- 参照：元動画、曲、画像ライブラリ、過去作のGitHubリポジトリ。何を残し、何を押し進めるか。
+- ツールとキー：読み込むSkill、使えるAPI（画像・動画・音声）、予算、ドキュメントの場所。「経済的に使う」。
+- キャラクターバイブル：プロポーション、シートから採った配色、表情、どんなスタイル変更にも耐えるアイデンティティの固定。
+- ビートシート：タイムスタンプ付きの幕、3〜5秒ごとの視覚的な見せ場、最初の2秒のフック。
+- 画面上のテキスト：歌詞やキャプションを大きく出すときと字幕のように置くとき。構図にその余白を残す。
+- 工程ゲート：計画→リグ→静止画→アニマティック→全体パス→仕上げ→音声→レンダ。ゲートを飛ばさない。
+- 批評ループ：静止画をレンダし、採点し、最悪の問題を3つ書き、直す。全スコアが8以上になるまで繰り返す。
+- 納品物：最終MP4、ループ確認、ポスターフレーム、コンタクトシート、READMEつきのきれいなソース。
+Donaldのブリーフの要は「生成してからトレースする」ことです。Seedance 2.5がキャラクターと物理を含むベースショットをレンダし、Opusがその上から動画全体をJavaScriptで描き直すので、視聴者に見えるのはコードで描いた層だけです。
+動画モデルは手書きしにくい動きを、JSの層は一貫して自分のものにできるルックを与えます。Pleometricは同じブリーフを自分のギャラリーで再実行し、まったく違う映画を得ました。
+John HeibelのPDoomリポジトリ（1.1Kスター）はサブエージェントの型を実例で示しています。Opusは並列で走らせたサブエージェントへの指示としてANIMATION_GUIDE.mdを、初回生成後にSTORYBOARD.mdを書き、src/ch/に9章を置きました。両ファイルを名指しで頼みましょう。
 
-&lt;direction&gt;
-Dribbble-level UI motion. One shape, never cut: every state is the same element morphing its size, radius and color while its content swaps with a short blur. A cursor drives every change with real clicks and drags. Light warm-gray canvas, black and white components, one clean UI font (Geist). Springs everywhere, a tiny overshoot at most. The camera zooms so each state fills the frame. The last frame is the first frame, so it loops.
-Banned: bouncy easing, particle bursts, glows, gradients on UI chrome, mismatched icon strokes, dead time, anything that looks like a template.
-&lt;/direction&gt;
+11. 批評：Opusに自分のフレームを見させる
+Opus 5.5は画像を読めます。つまり自分がレンダしたものを見られます。この1つの習慣が、バズったクリップと「ちょっと微妙」と投稿されたクリップを分けます。
+@mablesjosephの水彩ショートは率直でした。163回のモデル呼び出しと約7時間で、ワンショットではありません。Drewのローンチ当日の作品にも目に見える修正ラウンドがありました。反復は失敗ではなく方法です。
 
-&lt;structure&gt;
-120 BPM, 7 bars, something happens on every beat.
-Button → loader → check → dynamic island → music player with a play/pause morph → scrub the progress bar → it becomes a volume slider that stretches when dragged past max → a toggle flips on the beat → the knob becomes a liquid tab indicator → the tabs open into a chart that draws itself, with a tooltip on hover → it collapses into ⌘K → type to filter → enter → toast → back to the button.
-&lt;/structure&gt;
+12. 出荷：フォーマット、Skill、そしてサービス
+最後の3つの手で、良いクリップを繰り返せるビジネスに変えます。1つのタイムラインから全フォーマットを書き出す。パイプラインをSkillにまとめ、次の動画は1文で済むようにする。そして望むなら、achxviが同じ週にしたように、それを売る。
+- 1つのタイムラインから全フォーマット：シーンを固定ピクセルではなくレイアウト関数に対して書き、9:16・1:1・16:9を並列でレンダさせる。フォーマットごとに文字とUIを組み直し、16:9を縦に切り抜かない。
+- Skillにまとめる：講座全体が「/motion-reel for [URL], 20s, vertical, reference ./refs/frame.png」に縮まります。Skillフォルダをチームと共有するか、buildwithhanifのようにプラグインとして公開します。
+- 収益化：achxviのオファーは良い雛形です。音楽、任意スタイルのマスコット、製品機能、最後のオファー、任意の言語、修正3回まで。Tony Dinhの数字が価格の目安になります。1年前はこれに約1,000ドル払っていました。Skillと批評ループがあれば半日で納品できます。
 
-&lt;build&gt;
-1. One HTML file, square 1440x1440. Every style is computed from time inside seek(t): no CSS transitions, no timers, no state carried between frames.
-2. Springs are closed-form step responses. A value that changes target many times is the sum of one spring per change, so it stays a pure function of time.
-3. The tab indicator's two edges ride different springs, so the leading edge stretches ahead of the trailing one. Same trick for the toggle knob.
-4. Drags are direct manipulation: while the cursor is held, the value is computed from its position. On release it springs back from wherever it was.
-5. Analyze the song with numpy for the beat grid and start on a downbeat. Place every UI sound by its measured peak.
-6. Render with Playwright: 4 subframes per frame, blended with ffmpeg tmix for motion blur at 60fps.
-7. Render one frame per beat before the full render. Fix anything off the grid, cramped or hard to read.
-&lt;/build&gt;
+クローンするリポジトリ
+- ミュージックビデオ：https://github.com/JohnHeibel/PDoomVideo
+- スターター：https://github.com/JohnHeibel/ClaudeAnimationBase
+- Node canvas：https://github.com/buildwithhanif/claude-animation-skill
+- フレームワーク（HTML）：https://github.com/heygen-com/hyperframes
+- フレームワーク（React）：https://www.remotion.dev/docs/ai/skills
+- 長尺：https://github.com/WinterArc21/Battle-of-Austerlitz-Film
+- プロンプト集：https://github.com/guanmo-ai/awesome-ai-motion
+- データセット：https://github.com/athemeroy/awesome-opus-5-5-videos
 
-&lt;gotchas&gt;
-Never put will-change on anything the camera scales or the text renders blurry. Text that swaps inside a morphing container needs its own enter and exit timing or it overlaps. Make the last frame identical to the first, cursor position and speed included, or the loop stutters.
-&lt;/gotchas&gt;
+結論
+ワンライナーで手に入るのはクリップ。ハーネスで手に入るのはスタジオです。
+スタックを入れ、参照を盗み、状態リストを書き、seek(t)エンジンを自分のものにし、全スコアが8になるまでOpusに自分のフレームを見させる。
+そしてSkillにまとめ、二度と長いプロンプトを書かないことです。</div>
+          <div class="xcard-full-alt" hidden>How to build motion design studio with Opus 5.5 ( Full-course ) 
 
-&lt;start&gt;
-Ask me for the inputs, then show me the state list on the beat grid before you write any code.
-&lt;/start&gt;</div>
+Most people who try motion design with Opus 5.5 end up with the same video: centered text on a gradient, everything fading in, a logo at the end. 
+They don't give it a reference, don't give it a render engine, don't ask it to look at its own frames.
+This is the 12-step course that turns that mess into a repeatable studio pipeline. The prompt is 10% of the video. The other 90% is the harness. 
+Follow my Substack to get fresh AI alpha: movez.substack.com
+ 
+On September 22, 2026 Anthropic shipped Claude Opus 5.5. 
+Within hours the timeline filled with showreels, launch videos, music videos and five-minute history films, all of them rendered from code. 
+Captions said &quot;one prompt&quot;. Replies said &quot;motion designers are cooked&quot;.
+Both are half true. Some clips really came from a 30-word prompt. 
+
+Others came from a 9,500-character director's brief, a folder of skills, two API keys and a 12-hour autonomous run. 
+Thariq from the Claude Code team summed up the gap in one line: the post says one-shot, the prompt is 10k characters with skills, examples, keys.
+ 
+This course shows you both ends and everything in between. 
+You'll read every one of the 9 posts that defined the trend, copy the prompt pattern each one used, and then build the engine yourself. 
+ 
+A seek(t) renderer, closed-form springs, a beat grid, synthesized sound, and a critique loop that makes Opus fix its own frames.
+ 
+Part 1 ·  What is actually happening
+
+01. Pixels - model writes a program, not a video
+Opus 5.5 takes text and images in and puts text out. It cannot emit an MP4. Every video in this trend is a program that Opus wrote, and something else turned that program into frames.
+The core trick is determinism. Opus writes a single function, draw(t) or seek(t), that paints the exact frame for any moment in time. 
+A headless browser calls it 900 times for 15 seconds at 60 fps, screenshots each frame, and ffmpeg stitches them. 
+Nothing depends on a timer, so the render is identical every run and a change is a one-line edit plus a re-render.
+ 
+Tommy Rossi dug into the one-shot output and found Opus prefers route A with zero dependencies: one index.html, a seek function called through eval, Playwright capturing frame by frame, ffmpeg encoding. 
+ 
+It skipped Remotion and HyperFrames even when available. If you want a framework, say so explicitly.
+ 
+ 
+
+02. Setup - install the studio in 10 minutes
+The chat app can write an animation, but only Claude Code (or any agent with a shell) can render it, listen to it and look at its own frames. 
+That feedback loop is the whole difference between the &quot;mid&quot; first try people complain about and the viral ones.
+ 
+Then drop a house-rules file in the project root. Claude Code reads CLAUDE.md on every run, so these rules apply to every video you make here without repeating them.
+ 
+Opus 5.5 defaults to medium effort and always thinks before answering. Every viral one-shot in the list ran on xhigh or max. 
+Use medium for small fixes and re-renders, xhigh for new films, max when the first 3 seconds have to carry a launch.
+ 
+Part 2 · Prompting like a director
+
+03. One-liner - showreel prompt and why it works
+Four of the nine posts used the same sentence. It's worth understanding why a single line produced 15 seconds of camera moves, kinetic type and audio.
+ 
+&quot;showreel for a résumé&quot; sets a genre with known rules: fast cuts, a new technique every shot, the best work first. Opus already knows what a reel looks like.
+&quot;what an incredible motion designer you are&quot; makes the model the subject, so it shows techniques instead of explaining a product. No content to get wrong.
+&quot;15-second&quot; is short enough to finish in one pass and long enough for 6 to 8 shots.
+&quot;go all out&quot; works as an effort multiplier on top of xhigh or max.
+ 
+The original 15-second résumé reel on Max effort. The source of the prompt. Put it directly under the anatomy diagram.
+ 
+Same prompt on xhigh, one-shot including audio. Shows xhigh is enough, and that the sound was not added in post.
+ 
+
+The weakness: the athemeroy dataset calls it &quot;brief contagion&quot;. Hundreds of identical prompts produced reels that rhyme with each other. Use it to test your setup, then move on. Variants that shipped and worked:
+ 
+ 
+A one-liner tests the engine. It never tests the idea, because it doesn't contain one.
+ 
+
+04. Brand - point the reel at your product
+Tony Dinh's post is the most useful for anyone selling something. He paid over $1,000 for a similar launch video a year ago; this took under 30 minutes. 
+Three extra lines did it: the product URL, &quot;use actual product screenshot, logo, assets&quot;, and &quot;must have music&quot;. Opus went to the site and gathered the assets itself.
+Rob Hallam proved the second half: after his first reel, he asked for a product ad in the same chat, and it came out faster because the renderer, audio synth and export pipeline already existed. 
+Keep one session per brand.
+ 
+
+Shows: TypingMind reel in under 30 minutes, replacing a $1,000+ agency video. Full prompt is in the second reply.
+ 
+Why here: Place under the brand prompt so readers can compare his 3 extra lines with the template.
+
+Shows: Pocketsflow reel with a talking character voiced through ElevenLabs.
+ 
+Why here: Illustrates the voice + mascot upgrade in the next paragraph.
+achxvi took the same idea further with a talking character: the Pocketsflow version passed an ElevenLabs key and asked for a character who explains the product. Voice plus mascot is what he now sells as a service.
+Put API keys in .env and write &quot;the ElevenLabs key is ELEVENLABS_API_KEY in .env&quot;. Never paste a real key into a prompt you'll screenshot. achxvi's public prompt used a joke placeholder for exactly this reason.
+ 
+
+05. Reference - name a look, feed a frame
+Without a reference, Opus falls back to its default: centered text, gradient background, everything fading in. 
+Rexan Wong went through dozens of viral clips and found the same thing: naming a style beats describing one, and a reference video or frame gives the model pacing, type and transitions to copy.
+Pleometric's two posts show the ladder. The pure-code TikTok piece started from a single frame of another viral animation. 
+The Donald-style piece pointed Opus at his own PC-98 image gallery. Your own library is a reference nobody else can copy.
+A frame: screenshot one frame of a video you love, attach it, say what to take (palette, type, grain) and what not to take (subject).
+A video: give Opus the file or link and ask it to extract frames with ffmpeg and describe pacing shot by shot before writing code.
+A library: a folder of your images or past work. Ask Opus to write a style_guide.md from it first.
+Sources: whatships.com (launch videos), Dribbble motion, your competitors' launch films.
+ 
+ 
+Pleometric suggested p5.js and Opus chose to write its own paper renderer. When you give a reference, let the model pick the technique. 
+Specify the look and the constraints, not the library, unless you need a specific framework for reuse.
+Shows: Why most &quot;one prompt&quot; videos look the same, and the reference + framework + components fix.
+ 
+&quot;Its TikTok feed&quot; animation, pure code, started from one frame of another viral piece. The single-frame reference in action.
+ 
+
+ 
+
+06. Spec  - write the state list, not the vibe
+The most-bookmarked prompt of the week wasn't a one-liner. 
+@twoclipping's UI morph (907K views, 19K bookmarks) and @verbove's MakerMap film both used an XML spec: inputs to ask for, direction, a beat-by-beat state list, build rules, and gotchas. NFT_Chen's editor film is the same idea as a story: a fake UI is a set where every element has a known state.
+ 
+The concept behind them: one shape, never cut. A single element morphs size, radius and color from state to state (button, loader, player, slider, chart, command palette), a cursor drives each change with real clicks, and the last frame equals the first so it loops.
+Here is my own template built on that structure; the originals are linked in the resources.
+ 
+ 
+
+The UI morph loop (907K views) with the open-sourced XML template in the thread. The original of the spec pattern. Put it right after Fig 2.
+ 
+
+MakerMap: one shape morphing through the whole product, real data, one HTML file. Shows the same spec applied to a real product.
+ 
+
+Opus codes a cartoon video editor and edits inside it: timeline, waveform, export button, all drawn. 
+ 
+UI as a film set, the story version of the spec approach.
+ 
+Part 3 · Build the engine
+
+07. Engine - build the seek(t) renderer
+This is route A, the one Opus picks by default, written out cleanly. Two files. The page paints any moment on demand, the renderer walks time and pipes frames into ffmpeg.
+ 
+ 
+ 
+
+Prefer a framework? Same prompt, route B
+ 
+ 
+
+08. Springs - make motion feel expensive
+Cheap motion eases from A to B on a fixed curve. Expensive motion has mass: it accelerates, overshoots a hair, settles. 
+The morph films all specify closed-form springs because they stay a pure function of time, which keeps seek(t) deterministic.
+The trick that most people miss: when a value changes target several times (a cursor, a container's width), you don't restart the spring.
+You add one spring per change, each starting at its own time. The motion stays continuous, and you can still render frame 812 without simulating frames 0 to 811.
+ 
+
+Snappy UI: buttons, toggles, leading edges
+Default: cards, containers, camera
+Heavy: big type, 3D objects, logo lockups
+Playful: mascots, stickers (visible overshoot)&quot;
+ 
+Replace every easing curve with closed-form springs from lib/motion.js. Tiny overshoot on UI, none on type. Any value with more than one target uses track().&quot; Opus refactors the whole file in one pass.
+ 
+
+09. Sound - score it to the beat
+Rob Hallam thought the audio was added in post. It wasn't.
+@oozn's Steve Jobs film synthesized its soundtrack in Node with every cut locked to 120 BPM
+Vox's &quot;small print&quot; piece synthesized music in Python and then polished the render second by second against it. Sound is where &quot;AI video&quot; starts feeling like a film.
+ 
+Two paths. If you supply a track, measure it. If you don't, synthesize it on the same timeline as the picture.
+ 
+ 
+
+Steve Jobs biopic: Remotion + SVG, 23 transitions, soundtrack synthesized in Node, cuts on 120 BPM. 
+Proof that code-synthesized music can carry a 2-minute film.
+ 
+
+&quot;Small print&quot;: story, frames and music all by Opus, rendered with HyperFrames. Python-synthesized music, then a second-by-second polish pass.
+ 
+ 
+Part 4 · From one clip to a studio
+
+10. Overnight - write the director's brief
+Donald dictated for five minutes, went to sleep, and woke up to a 142-second music video with 2.1M views. 
+His public prompt runs about 9,500 characters. @pradeepXkapoor's &quot;Pip&quot; robot film used a 19,000-character brief. Read either and you see the same skeleton: they don't describe a video, they hire a crew.
+Film in one line. The logline and the joke, so every decision can be checked against it.
+References. Source video, song, image library, a GitHub repo of prior work. What to keep, what to push.
+Tools &amp; keys. Skills to load, APIs available (image, video, voice), budget, where docs live. &quot;Spend it economically.&quot;
+Character bible. Proportions, palette sampled from a sheet, expressions, an identity lock that survives every style change.
+Beat sheet. Acts with timestamps, a visual payoff every 3 to 5 seconds, a hook in the first 2.
+Text on screen. When lyrics or captions go huge, when they sit like subtitles. Composition leaves room for them.
+Workflow gates. Plan → rig → stills → animatic → full pass → polish → audio → render. Don't skip gates.
+Critique loop. Render stills, score them, write the 3 worst problems, fix, repeat until every score is 8+.
+Deliverables. Final MP4, loop check, poster frame, contact sheet, clean source with a README
+ 
+The key move in Donald's brief is generate-then-trace. Seedance 2.5 renders base shots with characters and physics, then Opus redraws the whole video in JavaScript on top, so the viewer only sees the code-drawn layer. 
+Video models give motion that's hard to hand-code; the JS layer gives a consistent, ownable look. Pleometric re-ran the same brief with his own gallery and got a completely different film.
+Spoke to my computer for 5 mins, Claude worked for 12 hours.&quot; The Claude Pop music video, 2.1M views. The headline example of L4.
+ 
+The full ~9,500-character dictated brief. Readers compare it against the director-brief template below.
+ 
+Donald's brief re-run with a PC-98 gallery; a mixed flow with bugs left in to keep it one-pass.
+ 
+ 
+John Heibel's PDoom repo (1.1K stars) shows the subagent pattern for real: Opus wrote ANIMATION_GUIDE.md to brief the subagents it ran in parallel and STORYBOARD.md after the first generation, with nine chapters in src/ch/. Ask for both files by name.
+ 
+ 
+
+11. Critique - make Opus watch its own frames
+Opus 5.5 reads images. That means it can look at what it rendered, and this single habit separates the clips that went viral from the ones posted with &quot;it's a bit mid&quot;.
+
+ @mablesjoseph's watercolor short was upfront about it: 163 model calls and nearly seven hours, not one shot. Drew's launch-day piece had visible cleanup rounds too. Iteration is the method, not a failure.
+ 
+ 
+ 
+
+Launch-day piece, 1.7M views, with visible cleanup rounds. Iteration is the method. Pair it with the next embed.
+ 
+
+Watercolor short, openly not one-shot: 163 model calls, about 6¾ hours. The honest counterweight to &quot;one prompt&quot; claims.
+ 
+ 
+
+12. Ship - formats, a skill, and a service
+Three last moves turn a good clip into a repeatable business. Export every format from one timeline. Package your pipeline as a skill so the next video is a sentence. And, if you want, do what achxvi did the same week: sell it.
+Every format from one timeline
+Write the scenes against a layout function, not fixed pixels, and ask Opus to render 9:16, 1:1 and 16:9 in parallel. 
+The MakerMap spec asked for exactly this. Reframe type and UI per format, don't crop a 16:9 render to vertical.
+ 
+
+Package it as a skill
+ 
+Now the whole course collapses into /motion-reel for [URL], 20s, vertical, reference ./refs/frame.png. Share the skill folder with your team or publish it as a plugin like buildwithhanif did.
+
+Turn it into revenue
+achxvi's offer is a good template: music, a mascot in any style, product features, an offer at the end, any language, up to 3 edits. 
+Tony Dinh's number anchors the price: people paid around $1,000 for this a year ago. A skill plus a critique loop lets you deliver in an afternoon.
+ 
+38-second vertical product film in 45 minutes, plus the reply offering it as a paid service. The &quot;turn it into revenue&quot; proof. Place directly under this paragraph.
+ 
+Repos to clone
+Music video: https://github.com/JohnHeibel/PDoomVideo
+Starter: https://github.com/JohnHeibel/ClaudeAnimationBase
+Node canvas: https://github.com/buildwithhanif/claude-animation-skill
+Framework (html): https://github.com/heygen-com/hyperframes
+Framework (react): https://www.remotion.dev/docs/ai/skills
+Long form: https://github.com/WinterArc21/Battle-of-Austerlitz-Film
+Prompt library: https://github.com/guanmo-ai/awesome-ai-motion
+Dataset: https://github.com/athemeroy/awesome-opus-5-5-videos
+ 
+Conclusion: 
+The one-liner gets you a clip. The harness gets you a studio.
+Install the stack, steal a reference, write the state list, own the seek(t) engine, and make Opus watch its own frames until every score is 8. 
+Then package it as a skill and never write the long prompt again.
+Follow my Substack to get the latest articles on AI, vibe-coding, and agentic systems.</div>
         </div>
       </article>
 
@@ -715,13 +968,17 @@ Ask me for the inputs, then show me the state list on the beat grid before you w
     </div>
     <div class="cal-nav">
       <button type="button" class="cal-prev" aria-label="前の月">←</button>
-      <div class="cal-title" id="cal-title">2026年 9月</div>
+      <div class="cal-title" id="cal-title">2026年 10月</div>
       <button type="button" class="cal-next" aria-label="次の月" disabled>→</button>
     </div>
   </div>
-  <div class="cal-month" data-month="2026-09">
+  <div class="cal-month" data-month="2026-10">
     <div class="cal-weekdays"><span>日</span><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span>土</span></div>
-    <div class="cal-grid"><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-01/" aria-label="2026-09-01 の配信を開く (ブックマーク2件)"><span class="cal-day">1</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-02/" aria-label="2026-09-02 の配信を開く (ブックマーク3件)"><span class="cal-day">2</span><span class="cal-count">3</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-03/" aria-label="2026-09-03 の配信を開く (ブックマーク4件)"><span class="cal-day">3</span><span class="cal-count">4</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-04/" aria-label="2026-09-04 の配信を開く (ブックマーク3件)"><span class="cal-day">4</span><span class="cal-count">3</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-05/" aria-label="2026-09-05 の配信を開く (ブックマーク4件)"><span class="cal-day">5</span><span class="cal-count">4</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-06/" aria-label="2026-09-06 の配信を開く (ブックマーク2件)"><span class="cal-day">6</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-07/" aria-label="2026-09-07 の配信を開く (ブックマーク6件)"><span class="cal-day">7</span><span class="cal-count">6</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-08/" aria-label="2026-09-08 の配信を開く (ブックマーク1件)"><span class="cal-day">8</span><span class="cal-count">1</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-09/" aria-label="2026-09-09 の配信を開く (ブックマーク10件)"><span class="cal-day">9</span><span class="cal-count">10</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-10/" aria-label="2026-09-10 の配信を開く (ブックマーク3件)"><span class="cal-day">10</span><span class="cal-count">3</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-11/" aria-label="2026-09-11 の配信を開く (ブックマーク1件)"><span class="cal-day">11</span><span class="cal-count">1</span></a><a class="cal-cell cal-cell--news" href="./news/2026-09-12/" aria-label="2026-09-12 の配信を開く"><span class="cal-day">12</span></a><a class="cal-cell cal-cell--news" href="./news/2026-09-13/" aria-label="2026-09-13 の配信を開く"><span class="cal-day">13</span></a><a class="cal-cell cal-cell--news" href="./news/2026-09-14/" aria-label="2026-09-14 の配信を開く"><span class="cal-day">14</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-15/" aria-label="2026-09-15 の配信を開く (ブックマーク2件)"><span class="cal-day">15</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-16/" aria-label="2026-09-16 の配信を開く (ブックマーク2件)"><span class="cal-day">16</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#d-2026-09-17" aria-label="2026-09-17 のブックマーク7件"><span class="cal-day">17</span><span class="cal-count">7</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#d-2026-09-18" aria-label="2026-09-18 のブックマーク1件"><span class="cal-day">18</span><span class="cal-count">1</span></a><div class="cal-cell cal-cell--inactive"><span class="cal-day">19</span></div><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#d-2026-09-20" aria-label="2026-09-20 のブックマーク2件"><span class="cal-day">20</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-21/" aria-label="2026-09-21 の配信を開く (ブックマーク7件)"><span class="cal-day">21</span><span class="cal-count">7</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-22/" aria-label="2026-09-22 の配信を開く (ブックマーク6件)"><span class="cal-day">22</span><span class="cal-count">6</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-23/" aria-label="2026-09-23 の配信を開く (ブックマーク6件)"><span class="cal-day">23</span><span class="cal-count">6</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-24/" aria-label="2026-09-24 の配信を開く (ブックマーク1件)"><span class="cal-day">24</span><span class="cal-count">1</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-25/" aria-label="2026-09-25 の配信を開く (ブックマーク1件)"><span class="cal-day">25</span><span class="cal-count">1</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-26/" aria-label="2026-09-26 の配信を開く (ブックマーク4件)"><span class="cal-day">26</span><span class="cal-count">4</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-27/" aria-label="2026-09-27 の配信を開く (ブックマーク1件)"><span class="cal-day">27</span><span class="cal-count">1</span></a><a class="cal-cell cal-cell--news" href="./news/2026-09-28/" aria-label="2026-09-28 の配信を開く"><span class="cal-day">28</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-29/" aria-label="2026-09-29 の配信を開く (ブックマーク1件)"><span class="cal-day">29</span><span class="cal-count">1</span></a><div class="cal-cell cal-cell--inactive"><span class="cal-day">30</span></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div></div>
+    <div class="cal-grid"><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><a class="cal-cell cal-cell--news" href="./news/2026-10-01/" aria-label="2026-10-01 の配信を開く"><span class="cal-day">1</span></a><div class="cal-cell cal-cell--inactive"><span class="cal-day">2</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">3</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">4</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">5</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">6</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">7</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">8</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">9</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">10</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">11</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">12</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">13</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">14</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">15</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">16</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">17</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">18</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">19</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">20</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">21</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">22</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">23</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">24</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">25</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">26</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">27</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">28</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">29</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">30</span></div><div class="cal-cell cal-cell--inactive"><span class="cal-day">31</span></div></div>
+  </div>
+  <div class="cal-month" data-month="2026-09" hidden>
+    <div class="cal-weekdays"><span>日</span><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span>土</span></div>
+    <div class="cal-grid"><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-01/" aria-label="2026-09-01 の配信を開く (ブックマーク2件)"><span class="cal-day">1</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-02/" aria-label="2026-09-02 の配信を開く (ブックマーク3件)"><span class="cal-day">2</span><span class="cal-count">3</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-03/" aria-label="2026-09-03 の配信を開く (ブックマーク4件)"><span class="cal-day">3</span><span class="cal-count">4</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-04/" aria-label="2026-09-04 の配信を開く (ブックマーク3件)"><span class="cal-day">4</span><span class="cal-count">3</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-05/" aria-label="2026-09-05 の配信を開く (ブックマーク4件)"><span class="cal-day">5</span><span class="cal-count">4</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-06/" aria-label="2026-09-06 の配信を開く (ブックマーク2件)"><span class="cal-day">6</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-07/" aria-label="2026-09-07 の配信を開く (ブックマーク6件)"><span class="cal-day">7</span><span class="cal-count">6</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-08/" aria-label="2026-09-08 の配信を開く (ブックマーク1件)"><span class="cal-day">8</span><span class="cal-count">1</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-09/" aria-label="2026-09-09 の配信を開く (ブックマーク10件)"><span class="cal-day">9</span><span class="cal-count">10</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-10/" aria-label="2026-09-10 の配信を開く (ブックマーク3件)"><span class="cal-day">10</span><span class="cal-count">3</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-11/" aria-label="2026-09-11 の配信を開く (ブックマーク1件)"><span class="cal-day">11</span><span class="cal-count">1</span></a><a class="cal-cell cal-cell--news" href="./news/2026-09-12/" aria-label="2026-09-12 の配信を開く"><span class="cal-day">12</span></a><a class="cal-cell cal-cell--news" href="./news/2026-09-13/" aria-label="2026-09-13 の配信を開く"><span class="cal-day">13</span></a><a class="cal-cell cal-cell--news" href="./news/2026-09-14/" aria-label="2026-09-14 の配信を開く"><span class="cal-day">14</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-15/" aria-label="2026-09-15 の配信を開く (ブックマーク2件)"><span class="cal-day">15</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-16/" aria-label="2026-09-16 の配信を開く (ブックマーク2件)"><span class="cal-day">16</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#d-2026-09-17" aria-label="2026-09-17 のブックマーク7件"><span class="cal-day">17</span><span class="cal-count">7</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#d-2026-09-18" aria-label="2026-09-18 のブックマーク1件"><span class="cal-day">18</span><span class="cal-count">1</span></a><div class="cal-cell cal-cell--inactive"><span class="cal-day">19</span></div><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#d-2026-09-20" aria-label="2026-09-20 のブックマーク2件"><span class="cal-day">20</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-21/" aria-label="2026-09-21 の配信を開く (ブックマーク7件)"><span class="cal-day">21</span><span class="cal-count">7</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-22/" aria-label="2026-09-22 の配信を開く (ブックマーク6件)"><span class="cal-day">22</span><span class="cal-count">6</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-23/" aria-label="2026-09-23 の配信を開く (ブックマーク6件)"><span class="cal-day">23</span><span class="cal-count">6</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-24/" aria-label="2026-09-24 の配信を開く (ブックマーク1件)"><span class="cal-day">24</span><span class="cal-count">1</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-25/" aria-label="2026-09-25 の配信を開く (ブックマーク1件)"><span class="cal-day">25</span><span class="cal-count">1</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-26/" aria-label="2026-09-26 の配信を開く (ブックマーク4件)"><span class="cal-day">26</span><span class="cal-count">4</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-27/" aria-label="2026-09-27 の配信を開く (ブックマーク2件)"><span class="cal-day">27</span><span class="cal-count">2</span></a><a class="cal-cell cal-cell--news" href="./news/2026-09-28/" aria-label="2026-09-28 の配信を開く"><span class="cal-day">28</span></a><a class="cal-cell cal-cell--news cal-cell--bookmark" href="./news/2026-09-29/" aria-label="2026-09-29 の配信を開く (ブックマーク4件)"><span class="cal-day">29</span><span class="cal-count">4</span></a><a class="cal-cell cal-cell--bookmark" href="./bookmarks/#d-2026-09-30" aria-label="2026-09-30 のブックマーク2件"><span class="cal-day">30</span><span class="cal-count">2</span></a><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div><div class="cal-cell cal-cell--empty"></div></div>
   </div>
   <div class="cal-month" data-month="2026-08" hidden>
     <div class="cal-weekdays"><span>日</span><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span>土</span></div>
@@ -778,6 +1035,13 @@ Ask me for the inputs, then show me the state list on the beat grid before you w
 })();
 </script>
     <ul class="archive-list archive-grid">
+      <li>
+        <span class="date">10.01 WED</span>
+        <span class="count">08 ITEMS</span>
+        <span class="headline"><a href="./news/2026-10-01/">Next.js、9月のセキュリティ修正を公開、GPT-6.1 SolがGitHub Copilotで一般提供 / Claude Code、WebFetch停止と利用先制限に対応</a></span>
+        <span class="tags">Next.js Blog / GitHub Changelog / Claude Code Releases / Cloudflare Changelog</span>
+        <span class="arrow">→</span>
+      </li>
       <li>
         <span class="date">09.29 MON</span>
         <span class="count">06 ITEMS</span>
@@ -1893,15 +2157,15 @@ Ask me for the inputs, then show me the state list on the beat grid before you w
       </div>
       <div class="about-stats">
         <div class="about-stat">
-          <div class="num">156</div>
+          <div class="num">157</div>
           <div class="lbl">Issues Published</div>
         </div>
         <div class="about-stat">
-          <div class="num">1074</div>
+          <div class="num">1082</div>
           <div class="lbl">Items Curated</div>
         </div>
         <div class="about-stat">
-          <div class="num">1389</div>
+          <div class="num">1395</div>
           <div class="lbl">Delivered</div>
         </div>
         <div class="about-stat">
@@ -1918,7 +2182,7 @@ Ask me for the inputs, then show me the state list on the beat grid before you w
     <h3>毎朝、<em>続きを。</em></h3>
     <p>毎朝 07:15 JST に最新の配信が並びます。</p>
     <div class="cta-row">
-      <a class="primary" href="./news/2026-09-29/">📄 今日のディスパッチを読む</a>
+      <a class="primary" href="./news/2026-10-01/">📄 今日のディスパッチを読む</a>
       <a href="#archive">📅 過去のアーカイブ</a>
       <a href="#bookmarks">🔖 ブックマーク</a>
     </div>
@@ -1941,7 +2205,7 @@ Ask me for the inputs, then show me the state list on the beat grid before you w
         <h5>SECTIONS</h5>
         <ul>
           <li><a href="./">HOME</a></li>
-          <li><a href="./news/2026-09-29/">TODAY</a></li>
+          <li><a href="./news/2026-10-01/">TODAY</a></li>
           <li><a href="./#bookmarks">BOOKMARKS</a></li>
           <li><a href="./#archive">ARCHIVE</a></li>
           <li><a href="./#about">About</a></li>
@@ -1958,7 +2222,7 @@ Ask me for the inputs, then show me the state list on the beat grid before you w
     <div class="colophon">
       <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
       <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
-      <span>BUILD 20260929.0723</span>
+      <span>BUILD 20261001.0717</span>
     </div>
   </div>
 </footer>

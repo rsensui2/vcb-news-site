@@ -1,7 +1,57 @@
 {
- "generated": "2026-10-01T08:24:58+09:00",
- "count": 78,
+ "generated": "2026-10-01T12:28:22+09:00",
+ "count": 146,
  "items": [
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "解説動画「この動画の中身」を作りました（4分06秒）",
+   "date": "2026-10-01",
+   "url": "",
+   "tags": [],
+   "description": "Ryoko の講義動画がどう動いているのかを、Ryoko 自身が解説する動画です。後半では、この仕組みを応用して作った TEKION Motion Slides と、作りながら気づいた「わかりやすさの正体」も紹介しています。 ／ 添付: lecture_inside_digest.pdf、lecture_inside.mp4",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "【VBC 特別講義】OpenAI DevDay 2026 まとめ（動画 約7分・Ryoko が解説）",
+   "date": "2026-09-30",
+   "url": "",
+   "tags": [],
+   "description": "日本時間の今朝未明に開かれた OpenAI DevDay 2026 の発表を、Ryoko が「何ができるようになるか」「いつから・誰が使えるか」に絞って解説する特別講義です。日本時間 9/30 朝6時時点の情報です。 ／ 添付: VBC_Special_OpenAI_DevDay_2026.pdf、VBC_Special_OpenAI_DevDay_2026.mp4",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "Ryoko解説動画の作成キットを配布します",
+   "date": "2026-09-28",
+   "url": "",
+   "tags": [],
+   "description": "Ryokoがスライドで説明する動画を作るためのZIPです。README、制作Skill、描画キット、見本が入っています。横型（16:9）と縦型（9:16）に対応しています。 ／ 添付: ryoko-lecture-video-kit-2026-09-28.zip",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "Vibe Coder Bootcamp 公開講座｜eラーニングの試作3本",
+   "date": "2026-09-26",
+   "url": "",
+   "tags": [],
+   "description": "Ryokoが講師を務める講義動画を3本作りました。公開講座をeラーニングにしたら、こんな形になるというサンプルです。まだ試作段階なので、声の調子、説明の速さ、画面の見やすさをぜひ見てください。 ／ 添付: 01_はじめまして.mp4、02_LLMとは.mp4、03_データベースとは.mp4",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "亮介が Opus 5.5 と作ったアニメ動画の作例を共有します",
+   "date": "2026-09-24",
+   "url": "",
+   "tags": [],
+   "description": "ポイントは、動画生成AIを使わず、コードで作っている こと。Claude Code（AI に作業を頼めるアプリ）の上で Opus 5.5 が「絵を描くプログラム」を書き、そのプログラムが1コマずつ絵を描いて動画にしています。 ／ 添付: 01_亮介が寝ている間に.mp4、02_AIエージェントとは_横.mp4、03_AIエージェントとは_縦.mp4",
+   "extra_links": []
+  },
   {
    "type": "note",
    "type_label": "note",
@@ -16,6 +66,36 @@
     "VibeCoding"
    ],
    "description": "",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "RyokoにStagehandを導入しました。ブラウザ操作をAIに任せる話です",
+   "date": "2026-09-23",
+   "url": "",
+   "tags": [],
+   "description": "「Stagehandって何？」から、Jevとの役割分担、ログイン済みChromeとの使い分けまで、12枚のスライドと約3分の動画にまとめました。 ／ 添付: stagehand-jev-slides.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "Mac Studio M5 Ultra 着弾 — ローカルAI検証レポート（LLMと動画生成）",
+   "date": "2026-09-23",
+   "url": "",
+   "tags": [],
+   "description": "代表の泉水が、発売日（9/22）に届いた Mac Studio M5 Ultra 256GB で、ローカルAIを検証しました。資料（PDF）と、Ryoko の解説動画（3分51秒・mp4）を添付します。 ／ 添付: M5Ultra_ローカルAI検証_2026-09-23_配布版.pdf、ryoko-kaisetsu-m5ultra-delivery-v2.mp4",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "Opus 5.5の料金・設定と、Ryokoで変わることを12枚にまとめました",
+   "date": "2026-09-23",
+   "url": "",
+   "tags": [],
+   "description": "PDFと付属の実習記録表を使い、普段の仕事を同じ条件で比べてみてください。公式発表の性能改善と、今回確認した接続動作は分けて説明しています。情報は2026年9月23日時点です。 ／ 添付: opus55-learner-slides.pdf、opus55-learner-slides.pptx、learner-handout.md",
    "extra_links": []
   },
   {
@@ -55,6 +135,26 @@
     "バイブコーディング"
    ],
    "description": "",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "今話題の Jev とは何か？ — 文章を書かない「判断専用AI」の使いどころ",
+   "date": "2026-09-22",
+   "url": "",
+   "tags": [],
+   "description": "9月に発表されて話題になっているAI「Jev」。ChatGPTやClaudeが記述式の答案を書くAIなら、Jevはマークシートを塗るAIです。用意した選択肢から答えを選ぶだけなので、速くて安い。では、どこで使うものなのか。TEKIONのAI秘書Ryokoに組み込んでみて分かった… ／ 添付: what-is-jev-manga-20p.pdf、what-is-jev-slides-15p.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "TEKION Slide Generator が Mac アプリになりました（Vibe Coder Bootcamp 受講生は無料でお使いいただけます）",
+   "date": "2026-09-16",
+   "url": "",
+   "tags": [],
+   "description": "Markdown の原稿を渡すと、構成 → デザイン → 生成 → 修正 → PowerPoint / PDF の書き出しまで通しでできるスライド生成ツールです。 ／ 添付: TEKION_Slide_Generator_サービス紹介_登壇版.pdf",
    "extra_links": []
   },
   {
@@ -98,6 +198,26 @@
    "extra_links": []
   },
   {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "サービス名を変えたら戻る場所（全10枚・実装が仕様書を追い越したときに、どっちを正にして、どこまで遡るかの話）",
+   "date": "2026-09-15",
+   "url": "",
+   "tags": [],
+   "description": "なぜこれが重要か ／ 添付: deck.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "GPT-6 Astraの特性と使い方をまとめました",
+   "date": "2026-09-09",
+   "url": "",
+   "tags": [],
+   "description": "GPT-6 Astraのモデルの特性を、OpenAIの公式ドキュメントを参照して資料にまとめました。PDFを添付します。 ／ 添付: GPT-6_Astraの使い方_GPT-5.6比較_2026-09-09.pdf",
+   "extra_links": []
+  },
+  {
    "type": "article",
    "type_label": "記事（エージェント経営）",
    "title": "AIで増やしたアウトプットは、売上のどこに繋がっているか──「AI導入がうまくいかない」の正体",
@@ -124,6 +244,46 @@
    "extra_links": []
   },
   {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "AIで増やしたアウトプットは、売上のどこに繋がっているか",
+   "date": "2026-09-07",
+   "url": "",
+   "tags": [],
+   "description": "「AI、入れてみたんですけど、うまくいかなくて」と言われることが増えました。提案書は半年で10倍、でも売上は横ばい。原因はAIではなく、増やしたものが「顧客数」か「1社あたりの売上」のどちらを動かすのか、誰も決めていないことです。 ／ 添付: ai-output-to-business-impact.pdf、slides-13p.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "AI秘書に何を頼み、何を頼まないか（全11枚・頼む仕事の切り分けと、記憶の置き場の設計）",
+   "date": "2026-09-06",
+   "url": "",
+   "tags": [],
+   "description": "なぜこれが重要か ／ 添付: deck.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "今日は GPT-6 Astra と Claude Fable 5.1 を朝から使い倒しています。",
+   "date": "2026-09-05",
+   "url": "",
+   "tags": [],
+   "description": "先ほどお送りした、Fable が作った佐藤勝彦さんの動画はいかがでしたでしょうか。 ／ 添付: AIゲーム進化-1年比較.mp4",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "【祝：出版記念コラボイベント決定】佐藤勝彦さんの新刊『小さな会社が「AI社員」で大逆転する方法』（9/11発売）に、私 Ryoko が登場します！",
+   "date": "2026-09-05",
+   "url": "",
+   "tags": [],
+   "description": "Ryoko です。号外CMを作ったので、まず添付の動画（43秒）を見てね。 ／ 添付: gogai-cm-43s-1080p-web.mp4",
+   "extra_links": []
+  },
+  {
    "type": "note",
    "type_label": "note",
    "title": "AIを「競合」として登壇でライブ実演したら、場の空気が変わった",
@@ -134,6 +294,26 @@
    "extra_links": []
   },
   {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "【号外】OpenClaw 2.0で、AIエージェントは「チームの仕事場」へ",
+   "date": "2026-09-01",
+   "url": "",
+   "tags": [],
+   "description": "OpenClaw 2.0（v2026.8.1）が公開されました。大きく変わったのは、AIの返答性能よりも仕事の進め方です。 ／ 添付: openclaw-2-explainer-for-vbc.pdf、2026-09-01_openclaw_2_general_explainer_with_ryoko_final.mp4",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "AIっぽい資料、直し方は3つ（全11枚・ハンズオン）",
+   "date": "2026-09-01",
+   "url": "",
+   "tags": [],
+   "description": "なぜこれが重要か ／ 添付: deck.pdf",
+   "extra_links": []
+  },
+  {
    "type": "note",
    "type_label": "note",
    "title": "AI駆動開発の研修、「動画で学ぶ」と「一つ作りきる」は別物だと思う",
@@ -141,6 +321,16 @@
    "url": "https://note.com/rsensui/n/n36b4134d0d52",
    "tags": [],
    "description": "",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "3つ目のアプリでSupabaseの無料枠が埋まった — 消す前に、選択肢は3つある（全10枚）",
+   "date": "2026-08-31",
+   "url": "",
+   "tags": [],
+   "description": "なぜこれが重要か ／ 添付: deck.pdf",
    "extra_links": []
   },
   {
@@ -162,6 +352,46 @@
    "extra_links": []
   },
   {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "新しい資料を配布します — 「AIが作った資料、なんかAIっぽい」の正体を数えました",
+   "date": "2026-08-26",
+   "url": "",
+   "tags": [],
+   "description": "AIに作らせた資料の見出し443枚、44.7%が同じ型だった （全10枚） ／ 添付: deck.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "非エンジニアのIDE設定で詰まるのは、インストールではなくフォルダだ — 最初の30分で決める5か所（全10枚）",
+   "date": "2026-08-26",
+   "url": "",
+   "tags": [],
+   "description": "なぜこれが重要か ／ 添付: deck.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "SampleProject（配布プロンプト集）を最新版に更新しました",
+   "date": "2026-08-25",
+   "url": "",
+   "tags": [],
+   "description": "Supabase・Clerk まわりのプロンプトを、2026年8月の最新方式（ネイティブ統合）に全面改訂しました。添付の zip が最新版です。今後の実装・宿題はこちらをお使いください。 ／ 添付: VBC_SampleProject_2026-08.zip",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "GraphEngineering って知ってますか",
+   "date": "2026-08-20",
+   "url": "",
+   "tags": [],
+   "description": "Ryokoの記憶のつくり方を2分50秒の動画にまとめました。 ／ 添付: Ryokoの記憶のつくり方_GraphEngineering.mp4",
+   "extra_links": []
+  },
+  {
    "type": "note",
    "type_label": "note",
    "title": "Vibe Coding研修は「講師がホンモノか」で選べ",
@@ -169,6 +399,36 @@
    "url": "https://note.com/rsensui/n/nd066199cb9bb",
    "tags": [],
    "description": "",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "送信ボタンの無いメールAI——「送らないでください」と書くのをやめた（全10枚）",
+   "date": "2026-08-19",
+   "url": "",
+   "tags": [],
+   "description": "なぜこれが重要か ／ 添付: deck.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "同じ企画を2種類の動画生成AIで作り比べました",
+   "date": "2026-08-19",
+   "url": "",
+   "tags": [],
+   "description": "今回のお題は「Ryoko × VCB ファッションルックブック」。添付した2本は、どちらも15秒で同じ方向性ですが、生成環境が違います。 ／ 添付: VCB-lookbook-seedance25-v2-1080p-h264.mp4、ryoko-vcb-lookbook-final.mp4",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "漫画『1円のニュース番組 ── AIに作らせない範囲を決める』（全28ページ）",
+   "date": "2026-08-19",
+   "url": "",
+   "tags": [],
+   "description": "毎朝のAIニュース動画を「1本1円」で回す。その裏側を、亮介とRyokoのやりとりで漫画にしました。 ／ 添付: one-yen-news-video.pdf",
    "extra_links": []
   },
   {
@@ -209,6 +469,96 @@
      "url": "https://note.com/rsensui/n/nfea67b11bed2"
     }
    ]
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "自分のサーバーに立てたエージェントを、壊さずに更新する（全12枚）",
+   "date": "2026-08-18",
+   "url": "",
+   "tags": [],
+   "description": "なぜこれが重要か ／ 添付: deck.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "Mac 1台で「曲」も「歌声」も「映像」も作りました",
+   "date": "2026-08-17",
+   "url": "",
+   "tags": [],
+   "description": "生成の従量課金：0円 ／ 添付: fuma_mv_kids_final.mp4、fuma_mv_hiphop_final.mp4、local-music-video-setup-prompt.md",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "「AIが書いたコードは安全ですか」——僕は自分の配布資料を数えてから答えた（全12枚）",
+   "date": "2026-08-17",
+   "url": "",
+   "tags": [],
+   "description": "なぜこれが重要か ／ 添付: deck.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "AIが「指定のスタックでは作れません」と言ってきたとき、僕が確かめる3つのこと（全13枚）",
+   "date": "2026-08-17",
+   "url": "",
+   "tags": [],
+   "description": "なぜこれが重要か ／ 添付: deck.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "グラフを「きれいに」作る前に、決めることが4つある──業務データを1本のHTMLレポートにする順番（全11枚）",
+   "date": "2026-08-16",
+   "url": "",
+   "tags": [],
+   "description": "なぜこれが重要か ／ 添付: deck.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "AIで作った社内アプリ、どうやって配る？──ログイン機能を作らずに「社内の人だけ」に届ける方法（全12枚）",
+   "date": "2026-08-16",
+   "url": "",
+   "tags": [],
+   "description": "なぜこれが重要か ／ 添付: deck.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "「刺さっていない」と分かったとき、広げるのではなく狭める──7月に送った543通の話（全10枚）",
+   "date": "2026-08-16",
+   "url": "",
+   "tags": [],
+   "description": "なぜこれが重要か ／ 添付: deck.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "AIの設計を、別のAIに実測で殴らせる──レビューを頼んだら設計書からデータベースが丸ごと消えた（全12枚）",
+   "date": "2026-08-15",
+   "url": "",
+   "tags": [],
+   "description": "なぜこれが重要か ／ 添付: deck.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "自分のエージェントにループを入れる──最初に書く4つの指示（全11枚）",
+   "date": "2026-08-14",
+   "url": "",
+   "tags": [],
+   "description": "なぜこれが重要か ／ 添付: deck.pdf",
+   "extra_links": []
   },
   {
    "type": "article",
@@ -262,6 +612,26 @@
    "extra_links": []
   },
   {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "NEXT PUBLIC を付けた鍵は、本当にブラウザから読めるのか──自分のサイトのビルド成果物を検索して確かめた（全12枚）",
+   "date": "2026-08-12",
+   "url": "",
+   "tags": [],
+   "description": "なぜこれが重要か ／ 添付: deck.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "「これはできますか？」をやめた会社──現場の要望が開発に通らないのは、熱量ではなく形式の問題だ（全11枚）",
+   "date": "2026-08-12",
+   "url": "",
+   "tags": [],
+   "description": "なぜこれが重要か ／ 添付: deck.pdf",
+   "extra_links": []
+  },
+  {
    "type": "note",
    "type_label": "note",
    "title": "AIで作った社内アプリ、どうやって配る？ ログイン機能を作らずに「社内の人だけ」に届ける方法",
@@ -269,6 +639,46 @@
    "url": "https://note.com/rsensui/n/n43d005578830",
    "tags": [],
    "description": "",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "今朝は128件集めて、配るのは8件──ニュース収集で効いているのは「落とす条件」だ（全11枚）",
+   "date": "2026-08-10",
+   "url": "",
+   "tags": [],
+   "description": "なぜこれが重要か ／ 添付: deck.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "「.envがありません」とAIが言い出したとき、僕が最初に疑うもの（全10枚）",
+   "date": "2026-08-10",
+   "url": "",
+   "tags": [],
+   "description": "なぜこれが重要か ／ 添付: deck.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "Vibe Codingで作ったアプリケーションを社内で安全に展開する方法として、Cloudflare Accessがとても有用です",
+   "date": "2026-08-10",
+   "url": "",
+   "tags": [],
+   "description": "受講生のみなさんから「アプリは作れたけど、これどうやって社内の人に使ってもらえばいいの？」という質問をよくいただきます。今回、その答えを1本の資料にまとめました。 ／ 添付: 社内向けアプリをCloudflare Accessで配る.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "【音声入力におすすめのマイク】BOYA Magic",
+   "date": "2026-08-10",
+   "url": "",
+   "tags": [],
+   "description": "なぜ音声入力なのか ／ 添付: マイク音質比較.mp4",
    "extra_links": []
   },
   {
@@ -282,6 +692,26 @@
    "extra_links": []
   },
   {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "動画も音声も、全部「自分のPCの中だけ」で作れる時代になりました",
+   "date": "2026-08-07",
+   "url": "",
+   "tags": [],
+   "description": "添付の動画、うちの2歳の息子です。誕生日に撮ったスタジオ写真「1枚だけ」から作りました。 ／ 添付: gohan_to_seiken_hoso_native.mp4",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "新作学習漫画『Ryokoで学ぶ スキルのつくりかた — 発動を決めるのは、背表紙だけ』（全40ページ）をお届けします。",
+   "date": "2026-08-07",
+   "url": "",
+   "tags": [],
+   "description": "「その説明、聞くの3回目だよ」——AIに毎回同じ指示を打ち込んでいませんか？ ／ 添付: skill-no-tsukurikata.pdf",
+   "extra_links": []
+  },
+  {
    "type": "note",
    "type_label": "note",
    "title": "グラフを「きれいに」作る前に、決めることが4つある──業務データをHTMLレポートにする順番",
@@ -289,6 +719,46 @@
    "url": "https://note.com/rsensui/n/n47036d1637a5",
    "tags": [],
    "description": "",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "自分の事業をAIに丸ごと監査させた──一番痛いところを、データから突きつけられた話（全10枚）",
+   "date": "2026-08-06",
+   "url": "",
+   "tags": [],
+   "description": "なぜこれが重要か ／ 添付: deck.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "「格好よくして」ではAIは動かない──UI改善を頼むときの4つの翻訳（全10枚）",
+   "date": "2026-08-06",
+   "url": "",
+   "tags": [],
+   "description": "なぜこれが重要か ／ 添付: deck.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "「社員全員にエージェントを配れますか」と聞かれたので、1体ぶんを数えてみた（全10枚）",
+   "date": "2026-08-05",
+   "url": "",
+   "tags": [],
+   "description": "なぜこれが重要か ／ 添付: deck.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "会社の情報をAIに渡す前の4つの型──非エンジニアが自分で設計するガードレール（全11枚）",
+   "date": "2026-08-05",
+   "url": "",
+   "tags": [],
+   "description": "なぜこれが重要か ／ 添付: deck.pdf",
    "extra_links": []
   },
   {
@@ -378,6 +848,26 @@
    "extra_links": []
   },
   {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "新作漫画を公開しました",
+   "date": "2026-08-04",
+   "url": "",
+   "tags": [],
+   "description": "誰も、終わりを書かなかった（全24ページ・読み切り） ／ 添付: owari-wo-kakanakatta.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "【8/8(土)インストール会・事前資料】OpenRyoko の仕組み、先にお見せします",
+   "date": "2026-08-04",
+   "url": "",
+   "tags": [],
+   "description": "先日ご案内した「OpenRyoko インストール会」に向けて、OpenRyoko の中身を解説した資料をつくりました。当日みなさんのサーバーに住むことになる「AI社員」が、 ／ 添付: OpenRyoko解説_Ryokoが働く仕組み.pdf",
+   "extra_links": []
+  },
+  {
    "type": "note",
    "type_label": "note",
    "title": "自動化のネタを探すのをやめた──自分がその日手でやった仕事を、毎晩AIに数えさせる",
@@ -385,6 +875,36 @@
    "url": "https://note.com/rsensui/n/n240f3b53e2c8",
    "tags": [],
    "description": "",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "【8/8(土)20時・参加無料】あなた専用のRyokoを、つくろう。— OpenRyoko インストール会",
+   "date": "2026-08-03",
+   "url": "",
+   "tags": [],
+   "description": "Slackから24時間呼び出せる「自分専用のAI秘書」を、自分専用のサーバーの上に一緒に構築するハンズオン会をやります！ ／ 添付: banner_v3a_coral.png",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "Vibeコーディングが組織に入ると、「言い訳」が消える（全10枚）",
+   "date": "2026-08-03",
+   "url": "",
+   "tags": [],
+   "description": "なぜこれが重要か ／ 添付: deck.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "「AIの出力が本当に正しいか、確かめる力が欲しい」──入力で防ぐの、その先にある3段（全9枚）",
+   "date": "2026-08-02",
+   "url": "",
+   "tags": [],
+   "description": "なぜこれが重要か ／ 添付: deck.pdf",
    "extra_links": []
   },
   {
@@ -424,6 +944,46 @@
      "url": "https://note.com/rsensui/n/nc399008c1e11"
     }
    ]
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "『作れる』はもう驚きじゃない — 次に価値が立つのは、ベテランの「勘」を残すことだ",
+   "date": "2026-07-31",
+   "url": "",
+   "tags": [],
+   "description": "先日の商談で、現場を持つ会社の方からこう相談されました。 ／ 添付: deck.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "講義資料：OpenAI 新文字起こしAPI徹底解説",
+   "date": "2026-07-30",
+   "url": "",
+   "tags": [],
+   "description": "7/28にOpenAIが発表した新しい文字起こしモデル gpt-transcribe（ファイル用・1時間約40円）と gpt-live-transcribe（ライブ用）の解説資料をお届けします。 ／ 添付: openai-transcribe-api-kougi.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "エージェントを『回し続ける』4つの型 — Claude『ループ入門』を日本語で読む",
+   "date": "2026-07-30",
+   "url": "",
+   "tags": [],
+   "description": "Claude Code チームが公開した「Getting Started with Loops」という記事を、日本語で読める教材デッキにしました。 ／ 添付: deck.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "同じプロンプトなのに、AIが自分で読みに来ない — スキルを分けているのは中身ではなく置き場所",
+   "date": "2026-07-29",
+   "url": "",
+   "tags": [],
+   "description": "先日の特別講義で、同じ日に2人の方が別々の詰まり方をしました。 ／ 添付: deck.pdf",
+   "extra_links": []
   },
   {
    "type": "article",
@@ -475,6 +1035,26 @@
    ]
   },
   {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "【新作漫画】Opus 5で変わった、AIへの指示の書き方（全20ページ）",
+   "date": "2026-07-27",
+   "url": "",
+   "tags": [],
+   "description": "Claude Opus 5 の登場で、プロンプト（AIへの指示）の考え方が変わってきているポイントがあります。その変化を漫画にまとめました。 ／ 添付: claude-model-generations.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "最新の Claude Code セミナー資料のご案内",
+   "date": "2026-07-27",
+   "url": "",
+   "tags": [],
+   "description": "最新の Claude Code の扱い方をまとめたセミナー資料「ClaudeCode徹底解剖」を共有します。 ／ 添付: ClaudeCode徹底解剖_セミナー資料.pdf",
+   "extra_links": []
+  },
+  {
    "type": "article",
    "type_label": "記事（エージェント経営）",
    "title": "毎朝6:50、AIが社内をひと通り見て何もしない──『読むだけ』ブリーフィングという設計",
@@ -516,6 +1096,26 @@
    ]
   },
   {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "【続報】TEKION Slide Generator v6 — 漫画版の解説も描きました",
+   "date": "2026-07-25",
+   "url": "",
+   "tags": [],
+   "description": "先ほどお配りした TEKION Slide Generator v6、「文章の解説より、まず雰囲気を掴みたい」という方のために、仕組みと使い方をストーリーで追える漫画版の解説（全18ページ）も作りました。添付の PDF をどうぞ。 ／ 添付: TEKION_Slide_Generator_v6_漫画版解説.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "【VBC受講生限定・β版配布】TEKION Slide Generator v6 — 「スライドを作って」で、デザイン済みデッキが返ってくる",
+   "date": "2026-07-25",
+   "url": "",
+   "tags": [],
+   "description": "いつも講義のデモで使っているスライド自動生成ツールの最新版 v6 を、Vibe Coder Bootcamp の受講生のみなさんに一足先にお配りします。まだβ版ですが、日常利用に耐えるところまで来たので、このタイミングで公開します。 ／ 添付: TEKION_Slide_Generator_v6_完全教科書.pdf、TEKION Slide Generatorv6.mov",
+   "extra_links": []
+  },
+  {
    "type": "manga",
    "type_label": "漫画",
    "title": "商談の最中に、外注400万円の代替をつくってみせた",
@@ -552,6 +1152,36 @@
      "url": "https://note.com/rsensui/n/nbcf4d3f861b4"
     }
    ]
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "【緊急開催】泉水がTEKION Slide Generator v6を開発するのを見守る会",
+   "date": "2026-07-24",
+   "url": "",
+   "tags": [],
+   "description": "〜Codex/Claude プラグインが面白いかもしれない〜 ／ 添付: 650bba1f-cb37-4572-94d7-b0dacf4f5d34.png",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "本日 7/23(木) 19:00〜 、「AI駆動経営」勉強会 #3 に登壇します",
+   "date": "2026-07-23",
+   "url": "",
+   "tags": [],
+   "description": "テーマは 「ループエンジニアリングで更に加速するAI駆動経営 — AI秘書Ryokoの更なる進化」 。 ／ 添付: AI駆動開発経営Vol3_ループエンジニアリング.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "API入門を、非エンジニアに",
+   "date": "2026-07-21",
+   "url": "",
+   "tags": [],
+   "description": "APIまわりは、毎回のコホートで必ず同じ質問が出るところです。 ／ 添付: deck.pdf",
+   "extra_links": []
   },
   {
    "type": "article",
@@ -755,6 +1385,36 @@
    ]
   },
   {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "新しい教材スライドを共有します。テーマは 「長いプロンプトは真ん中が読まれない」 です。",
+   "date": "2026-07-14",
+   "url": "",
+   "tags": [],
+   "description": "なぜ重要か ／ 添付: deck.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "スキルはゼロから作れる──「作った後どう動かすか」で詰まらないための最小ハンズオン（全10枚）",
+   "date": "2026-07-14",
+   "url": "",
+   "tags": [],
+   "description": "パーソナル回で「スキルの概念は分かった。でも、じゃあ実際どう作って、作った後どうやって動かすの？」で手が止まる方が続いています。今週も同じ詰まりが複数ありました。そこだけを潰す資料を作りました。 ／ 添付: deck.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "漫画『Ryokoで学ぶループエンジニアリング』を配布します（全102ページ）",
+   "date": "2026-07-14",
+   "url": "",
+   "tags": [],
+   "description": "AIに毎回指示するのではなく、仕事を任せ続けるための設計 — ループエンジニアリングの知見を、漫画1冊にまとめました。TEKION の AI秘書 Ryoko が、自分自身の失敗を題材に「AIを回し続けるとどこで壊れるのか、どう直すのか」を物語にしています。 ／ 添付: ryoko-loop-engineering-full-manga.pdf",
+   "extra_links": []
+  },
+  {
    "type": "article",
    "type_label": "記事（エージェント経営）",
    "title": "AIエージェントに『今週やったこと』を毎週報告させる──専用の計測を作らず、日々の記録から組む設計",
@@ -813,6 +1473,26 @@
      "url": "https://note.com/rsensui/n/nfcde83bd71e1"
     }
    ]
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "Claude APIを使う前に知っておくこと — 非エンジニアのための注意点チェックリスト（全10枚）",
+   "date": "2026-07-10",
+   "url": "",
+   "tags": [],
+   "description": "「Claude API を使うとき、何に気をつければいいですか」——授業でよく聞かれるこの質問を、一枚一枚のスライドで答え切りました。 ／ 添付: deck.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "特別資料: 「ループエンジニアリング — AIに仕事を任せ続ける技術」（39ページ）",
+   "date": "2026-07-09",
+   "url": "",
+   "tags": [],
+   "description": "この数週間、僕らのチームでは「AIに単発の指示を出す」のではなく「AIが自分で仕事を見つけて回し続ける仕組み」= ループエンジニアリング の研究と実運用を続けてきました。その成果物を、セミナー資料としてまとめたのでお配りします。 ／ 添付: loop-engineering-seminar-20260709.pdf",
+   "extra_links": []
   },
   {
    "type": "article",

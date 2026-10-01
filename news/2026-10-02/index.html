@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-10-02 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-10-02 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №1002</span>
+    <span class="sep">/</span>
+    <span>2026-10-02</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20261002.0717</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-10-02/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:17 · THU</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · THURSDAY · OCTOBER 2, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>10<span class="dot">.</span>02</h1>
+    <div class="strap">
+      <span>Google · Claude · Anthropic · Cloudflare</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        フロンティアモデル <span class="sep">/</span> GOOGLE DEEPMIND (@GOOGLEDEEPMIND) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Google、Gemini 4 Argonを発表</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-02/topic_1.png" data-alt="Google、Gemini 4 Argonを発表" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-02/topic_1.png" alt="Google、Gemini 4 Argonを発表" />
+      </div>
+      <p class="lede">
+        Google DeepMindは新しいフロンティアモデル「Gemini 4 Argon」を発表した。複雑で長い作業の途中でも深い推論を続けられるよう作ったとし、出力トークンの上限を100万に広げた。まずはFairwind Programに参加するサイバー防御の担当者など、限られたテスターに提供している。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対象はコーディング、法務・財務などの企業の知的業務、サイバーセキュリティ防御</li>
+        <li data-i="02">出力の上限は100万トークン。長い多段階の問題を1回で解く想定</li>
+        <li data-i="03">提供はFairwind Programの信頼済みテスターから。開発者・企業・一般へは順次広げる</li>
+        <li data-i="04">性能はGoogleの自社発表で、第三者の評価はまだ出ていない</li>
+      </ul>
+      <div class="pull">
+        長時間動くエージェントや大量のコード生成では、出力の上限がそのまま作業の単位を決める。一般向けの提供時期と料金が出たら、Claude系・GPT系と同じ作業で比べたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">42,107</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/GoogleDeepMind/status/2105388084154056939">@GoogleDeepMind</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-01</dd>
+        <dt>CATEGORY</dt>
+        <dd>フロンティアモデル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/GoogleDeepMind/status/2105388084154056939">x.com/GoogleDeepMind/…</a></dd>
+        <dd><a href="https://x.com/GoogleAI/status/2105388478683119904">x.com/GoogleAI/status/210538847868311990…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · ANTHROPICS/CLAUDE-</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI開発ツール <span class="sep">/</span> ANTHROPICS/CLAUDE-CODE（GITHUB RELEASES） <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code、Claude Modsと見落とし監視を追加</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-02/topic_2.png" data-alt="Claude Code、Claude Modsと見落とし監視を追加" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-02/topic_2.png" alt="Claude Code、Claude Modsと見落とし監視を追加" />
+      </div>
+      <p class="lede">
+        Claude Code 2.1.287が公開された。プラグインがより深い挙動まで変えられる「Claude Mods」が加わり、別のエージェントが作業を見守って見落としを指摘する組み込みmod「You should know」も使えるようになった。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">You should know は /plugin enable cc-plugin-you-should-know@builtin で有効化（テレメトリ有効のファーストパーティ環境向け）</li>
+        <li data-i="02">エージェント一覧で n:&lt;文字列&gt; によるセッション名・タスクの絞り込みが可能に</li>
+        <li data-i="03">MCPの2025-11-25版プロトコルのURL提示（サインインなど）に対応</li>
+        <li data-i="04">OpenTelemetryの user_prompt イベントに prompt_text を追加。prompt と同様にマスク設定が必要</li>
+        <li data-i="05">危険な rm の確認が外れる不具合など、権限まわりの修正も多数</li>
+      </ul>
+      <div class="pull">
+        自分とClaudeの両方が見逃しやすい点を、横から指摘させる仕組みが標準で入った。企業でテレメトリを集めている場合は、新しく増えた prompt_text の扱いを先に確認したい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.287">anthropics/claude-code（GitHub Releases）</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-01</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.287">https://github.com/anthropics/claude-code/releases/tag/v2.1.287</a></dd>
+        <dd><a href="https://claude.dev/">claude.dev/</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · CLAUDEDEVS CLAUDED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI開発ツール <span class="sep">/</span> CLAUDEDEVS (@CLAUDEDEVS) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Anthropic、開発者向けサイトClaude.devを開設</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-02/topic_3.png" data-alt="Anthropic、開発者向けサイトClaude.devを開設" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-02/topic_3.png" alt="Anthropic、開発者向けサイトClaude.devを開設" />
+      </div>
+      <p class="lede">
+        Anthropicの開発者向けアカウントが、Claudeで開発する人のための新サイト「Claude.dev」を公開した。技術記事、Claude CodeとAPIのガイド、開発チームのTipsを1か所にまとめている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">カテゴリはAgents、Engineering、Playbooks、Skills、Tutorials</li>
+        <li data-i="02">Claude Code modsの入門、Opus 5.5でのタスク費用、effortの使い分けなどの記事を掲載</li>
+        <li data-i="03">Claude Codeチームの使い方を紹介する動画もある</li>
+      </ul>
+      <div class="pull">
+        これまで公式ブログやドキュメントに散らばっていた実践的な情報を探しやすくなる。Claude Codeの新機能を試すときは、まずここで公式の使い方を確かめるとよい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">12,376</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2105391694741119047">@ClaudeDevs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-01</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/ClaudeDevs/status/2105391694741119047">x.com/ClaudeDevs/…</a></dd>
+        <dd><a href="https://claude.dev/">claude.dev/</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · CLOUDFLARE CHANGEL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        インフラ・クラウド <span class="sep">/</span> CLOUDFLARE CHANGELOG / BLOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cloudflare AI Searchが一般提供に</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-02/topic_4.png" data-alt="Cloudflare AI Searchが一般提供に" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-02/topic_4.png" alt="Cloudflare AI Searchが一般提供に" />
+      </div>
+      <p class="lede">
+        CloudflareはAI Searchを一般提供した。Workers AI、Vectorize、R2などを組み合わせた検索の仕組みを丸ごと任せられるサービスで、画像そのものの埋め込みやPDFのOCRにも対応した。料金は2026年11月1日から発生し、Workersの全プランに無料枠がある。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">新しく作るインスタンスは、意味検索と全文検索を組み合わせるハイブリッド検索が既定</li>
+        <li data-i="02">画像のピクセルを直接埋め込む検索に対応（Qwen3-VL-Embedding）</li>
+        <li data-i="03">OCRを有効にしたPDFは最大10 MiBまで扱える</li>
+        <li data-i="04">埋め込みや並べ替えのWorkers AI呼び出しはAI Searchの料金に含まれる</li>
+        <li data-i="05">課金開始の前週にリマインドメールが届く</li>
+      </ul>
+      <div class="pull">
+        社内文書やサイト内の検索をRAGで作るとき、検索基盤を自分で組まずに済む。いま試すなら、11月1日の課金開始までに無料枠に収まるかを確かめておきたい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-10-01-ai-search-generally-available/">Cloudflare Changelog / Blog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-01</dd>
+        <dt>CATEGORY</dt>
+        <dd>インフラ・クラウド</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-10-01-ai-search-generally-available/">https://developers.cloudflare.com/changelog/post/2026-10-01-ai-search-generally-available/</a></dd>
+        <dd><a href="https://blog.cloudflare.com/ai-search-ga/">blog.cloudflare.com/ai-search-ga/</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · GITHUB CHANGELOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI開発ツール <span class="sep">/</span> GITHUB CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>GitHub、非同期マージAPIを一般提供</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-02/topic_5.png" data-alt="GitHub、非同期マージAPIを一般提供" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-02/topic_5.png" alt="GitHub、非同期マージAPIを一般提供" />
+      </div>
+      <p class="lede">
+        GitHubは、プルリクエストを非同期でマージするAPIを一般提供した。単独のPRや積み重ねたPR（stacked PR）のマージ、マージキューへの追加、直接マージを扱え、権限があればルールの迂回も指定できる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">PUTでマージを依頼し、返ってきたリクエストIDをGETで確認する</li>
+        <li data-i="02">混み合ったリポジトリでも、1回のリクエストで完了を待たずに済む</li>
+        <li data-i="03">プログラムからのマージは、同期のREST APIやGraphQLよりこちらが推奨に</li>
+        <li data-i="04">stacked PRに対応する唯一のマージAPI</li>
+      </ul>
+      <div class="pull">
+        AIエージェントや自動化ツールにPRのマージまで任せる場合、タイムアウトしにくい公式の経路ができた。自作の自動マージ処理があれば、この方式への切り替えを検討したい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-10-01-github-async-merge-api-generally-available/">GitHub Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-01</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-10-01-github-async-merge-api-generally-available/">https://github.blog/changelog/2026-10-01-github-async-merge-api-generally-available/</a></dd>
+        <dd><a href="https://docs.github.com/en/rest/pulls/pulls">docs.github.com/en/rest/pulls/pulls</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · VERCEL CHANGELOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI開発ツール <span class="sep">/</span> VERCEL CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Vercel AI GatewayでMicrosoftの音声モデルが利用可能に</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-02/topic_6.png" data-alt="Vercel AI GatewayでMicrosoftの音声モデルが利用可能に" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-02/topic_6.png" alt="Vercel AI GatewayでMicrosoftの音声モデルが利用可能に" />
+      </div>
+      <p class="lede">
+        VercelはMicrosoft AI（MAI）と提携し、AI GatewayでMAIの音声モデルを使えるようにした。音声の生成と、話している途中から文字にするストリーミング文字起こしが含まれる。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">MAI-Voice-2.1は23言語の音声生成で、長い文章でも同じ話者の声を保つ</li>
+        <li data-i="02">MAI-Voice-2.1-Flashは応答の速さが必要な音声エージェント向け</li>
+        <li data-i="03">MAI-Transcribe-2 Streamingは音声を受け取りながら途中経過の文字起こしを返す</li>
+        <li data-i="04">AI SDK 7の generateSpeech から呼び出せる</li>
+        <li data-i="05">料金は各モデルの定価どおりで、Gatewayの上乗せはない</li>
+      </ul>
+      <div class="pull">
+        音声で答えるエージェントやライブ字幕を、テキストのモデルと同じGateway経由で組める。利用量の管理や切り替えを1か所にまとめやすくなる。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/microsoft-ai-models-are-now-available-on-ai-gateway">Vercel Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-01</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/microsoft-ai-models-are-now-available-on-ai-gateway">https://vercel.com/changelog/microsoft-ai-models-are-now-available-on-ai-gateway</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · SUPABASE CHANGELOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        インフラ・クラウド <span class="sep">/</span> SUPABASE CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Supabase、OrioleDBを有料プランでも公開ベータに</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-02/topic_7.png" data-alt="Supabase、OrioleDBを有料プランでも公開ベータに" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-02/topic_7.png" alt="Supabase、OrioleDBを有料プランでも公開ベータに" />
+      </div>
+      <p class="lede">
+        SupabaseはPostgresの新しい保存方式OrioleDBを公開ベータにした。Freeだけでなく、Pro・Team・Enterpriseのプランでもプロジェクトを作れるようになり、料金は通常のPostgresと同じ。本番での利用はまだ推奨されず、SLAもない。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">新規プロジェクトはOrioleDB beta18（Postgres 17.11）で動く</li>
+        <li data-i="02">プロジェクト作成時に選ぶ方式で、既存プロジェクトへの追加や後からの取り外しはできない</li>
+        <li data-i="03">PITR（時点復旧）と、別プロジェクトへのバックアップ復元は使えない</li>
+        <li data-i="04">pgvectorのHNSWインデックスなどは実験的な仕組みで動く</li>
+        <li data-i="05">ローカル開発は supabase init --use-orioledb で始められる</li>
+      </ul>
+      <div class="pull">
+        大量の更新でPostgresが重くなる場面への対策として、いつものSupabaseの機能のまま試せるようになった。ただし本番データを載せる段階ではないので、検証用の新しいプロジェクトで試したい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://supabase.com/changelog/orioledb-public-beta">Supabase Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-01</dd>
+        <dt>CATEGORY</dt>
+        <dd>インフラ・クラウド</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://supabase.com/changelog/orioledb-public-beta">https://supabase.com/changelog/orioledb-public-beta</a></dd>
+        <dd><a href="https://supabase.com/docs/guides/database/orioledb">supabase.com/docs/guides/database/oriole…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · OGAAIICHIRO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI活用の知見 <span class="sep">/</span> 大賀 愛一郎 (@OGA_AIICHIRO) <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>AIの文章を読みやすく直すスキル「yomiyasu」</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-02/topic_8.png" data-alt="AIの文章を読みやすく直すスキル「yomiyasu」" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-02/topic_8.png" alt="AIの文章を読みやすく直すスキル「yomiyasu」" />
+      </div>
+      <p class="lede">
+        大賀愛一郎氏は、AIが書いた日本語を自然な文章に書き直すスキル「yomiyasu」で、直す前と後の文章を並べた画像を公開した。特定の言葉を禁止するのではなく、誰が何をどうしたかという文の骨組みを取り戻すことに重点を置いている。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Claude CodeやCodexでスキルとして使える</li>
+        <li data-i="02">抽象的な比喩の動詞を、具体的な動作に置き換える</li>
+        <li data-i="03">利用者の意見を受けてv1.0.1を公開。AIらしさを消すあまり元の主張まで消え、事務連絡のようになる問題を直した</li>
+      </ul>
+      <div class="pull">
+        AIに書かせた資料やメールを人に読ませる前の一手間を、スキルとして決まった手順にできる。直しすぎて言いたいことが薄まらないか、修正後の文章も自分で読み返したい。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">5,417</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/oga_aiichiro/status/2105337708415730041">@oga_aiichiro</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-01</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI活用の知見</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/oga_aiichiro/status/2105337708415730041">x.com/oga_aiichiro/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://x.com/GoogleDeepMind/status/2105388084154056939">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-10-01/">
+      ← 前日 · 2026-10-01
+      <span class="big">Next.js、9月のセキュリティ修正を公開</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-10-02/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20261002.0717</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

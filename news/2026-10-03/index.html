@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-10-03 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-10-03 の Vibe Coder Bootcamp モーニングディスパッチ — 6本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №1003</span>
+    <span class="sep">/</span>
+    <span>2026-10-03</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>06 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20261003.0716</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-10-03/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:16 · FRI</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · FRIDAY · OCTOBER 3, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>10<span class="dot">.</span>03</h1>
+    <div class="strap">
+      <span>Claude · Cloudflare · npm · SvelteKit</span>
+      <span><span class="count">06</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> ANTHROPIC <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Codeの画面と動作をModsで拡張</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-03/topic_1.png" data-alt="Claude Codeの画面と動作をModsで拡張" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-03/topic_1.png" alt="Claude Codeの画面と動作をModsで拡張" />
+      </div>
+      <p class="lede">
+        Claude Code 2.1.287で、画面やツール呼び出しを変更できるClaude Modsが追加されました。作業の見落としを別エージェントが指摘する組み込みModも、対象セッションで有効にできます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">JavaScriptやTypeScriptの処理がClaude Code内で動く</li>
+        <li data-i="02">会話の横にパネルを出し、ツール呼び出しにも介入できる</li>
+        <li data-i="03">Modsは利用者の権限で動くため、導入元と処理内容の確認が必要</li>
+      </ul>
+      <div class="pull">
+        作業状況の表示や独自の確認処理を、Claude Codeの画面に組み込めます。拡張コードが触れる範囲を把握してから試したい機能です。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.287">Anthropic</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-01</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.287">https://github.com/anthropics/claude-code/releases/tag/v2.1.287</a></dd>
+        <dd><a href="https://code.claude.com/docs/en/plugins/mods/overview">code.claude.com/docs/en/plugins/mods/ove…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · CLOUDFLARE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> CLOUDFLARE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cloudflare AI Search、画像とPDFの検索を強化</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-03/topic_2.png" data-alt="Cloudflare AI Search、画像とPDFの検索を強化" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-03/topic_2.png" alt="Cloudflare AI Search、画像とPDFの検索を強化" />
+      </div>
+      <p class="lede">
+        Cloudflare AI Searchが一般提供になりました。画像の内容を直接検索する機能や、スキャンPDFから文字を読み取るOCRが加わり、対応するファイルの上限も広がりました。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">新規インスタンスは意味検索と全文検索を併用する</li>
+        <li data-i="02">OCR付きPDFやテキストは最大10 MiBに対応</li>
+        <li data-i="03">従量課金は11月1日開始、無料の月間利用枠も用意</li>
+      </ul>
+      <div class="pull">
+        社内資料の検索に、画像やスキャン文書も取り込みやすくなります。導入を試す際は、11月からの料金と対応ファイル形式を確認しましょう。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://blog.cloudflare.com/ai-search-ga/">Cloudflare</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-01</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://blog.cloudflare.com/ai-search-ga/">https://blog.cloudflare.com/ai-search-ga/</a></dd>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-10-01-ai-search-generally-available/">developers.cloudflare.com/changelog/post…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · GITHUB / NPM</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> GITHUB / NPM <span class="sep">/</span> NEWS
+      </div>
+      <h2>npm、タグの切り替えも短期認証で自動化</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-03/topic_3.png" data-alt="npm、タグの切り替えも短期認証で自動化" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-03/topic_3.png" alt="npm、タグの切り替えも短期認証で自動化" />
+      </div>
+      <p class="lede">
+        npmのtrusted publishingで、バージョンを指すdist-tagを短期のOIDC認証で管理できるようになりました。公開後にlatestやbetaを切り替えるためだけに、長期トークンを残す必要が減ります。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Allow npm dist-tagは新規・既存とも初期状態で無効</li>
+        <li data-i="02">タグ管理権限は直接公開の権限とは独立</li>
+        <li data-i="03">npm CLIは11.21.0以降または12.2.0以降が必要</li>
+      </ul>
+      <div class="pull">
+        パッケージの公開とタグ変更を、CIの認証にまとめられます。公開済み版を切り替える処理があるチームは、権限設定を確認する価値があります。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-30-opt-in-dist-tag-permissions-for-npm-trusted-publishing/">GitHub / npm</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-30</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-09-30-opt-in-dist-tag-permissions-for-npm-trusted-publishing/">https://github.blog/changelog/2026-09-30-opt-in-dist-tag-permissions-for-npm-trusted-publishing/</a></dd>
+        <dd><a href="https://docs.npmjs.com/trusted-publishers/">docs.npmjs.com/trusted-publishers/</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · SVELTE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> SVELTE <span class="sep">/</span> NEWS
+      </div>
+      <h2>SvelteKit 3、移行コマンドと型の改善を用意</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-03/topic_4.png" data-alt="SvelteKit 3、移行コマンドと型の改善を用意" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-03/topic_4.png" alt="SvelteKit 3、移行コマンドと型の改善を用意" />
+      </div>
+      <p class="lede">
+        Webアプリを作るフレームワークSvelteKitの3.0が公開されました。設定をvite.config.tsへ移し、型やエラー処理を改善しています。移行コマンドは自動で直せる箇所を処理し、残りをTODOとして示します。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">設定ファイルとライブラリ参照の書き方が変わる</li>
+        <li data-i="02">sv migrate sveltekit-3で移行を支援</li>
+        <li data-i="03">remote functionsは引き続き実験的機能</li>
+      </ul>
+      <div class="pull">
+        SvelteKitを使う既存アプリは、移行ガイドと自動処理の残りを照合して更新できます。メジャー更新なので、ビルドと画面の動作確認まで行いましょう。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://svelte.dev/blog/sveltekit-3-is-here">Svelte</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-01</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://svelte.dev/blog/sveltekit-3-is-here">https://svelte.dev/blog/sveltekit-3-is-here</a></dd>
+        <dd><a href="https://svelte.dev/docs/kit/migrating-to-sveltekit-3">svelte.dev/docs/kit/migrating-to-sveltek…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · FISSION-AI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> FISSION-AI <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenSpec、10種類の開発ツールに対応を拡大</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-03/topic_5.png" data-alt="OpenSpec、10種類の開発ツールに対応を拡大" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-03/topic_5.png" alt="OpenSpec、10種類の開発ツールに対応を拡大" />
+      </div>
+      <p class="lede">
+        AI開発の仕様と変更を管理するOpenSpec 1.14.0が公開されました。DeepSeek HarnessやGrok Build、Warpなど10種類のツールが追加され、保存済みの変更や作業状況も一覧で確認しやすくなりました。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">initとupdateが10種類のツールを追加サポート</li>
+        <li data-i="02">list --archivedで過去の変更を確認できる</li>
+        <li data-i="03">viewが各変更の成果物の完了・準備・停止状態を表示</li>
+      </ul>
+      <div class="pull">
+        複数のAI開発ツールを使うチームでも、仕様を起点に作業を進めやすくなります。使うツールを変える際に、変更履歴と未完了の作業を追う助けになります。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/Fission-AI/OpenSpec/releases/tag/v1.14.0">Fission-AI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-30</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/Fission-AI/OpenSpec/releases/tag/v1.14.0">https://github.com/Fission-AI/OpenSpec/releases/tag/v1.14.0</a></dd>
+        <dd><a href="https://github.com/Fission-AI/OpenSpec/blob/main/README.md">github.com/Fission-AI/OpenSpec/blob/main…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · GLEAN</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> GLEAN <span class="sep">/</span> NEWS
+      </div>
+      <h2>Glean、エージェント専用の認証を一般提供</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-03/topic_6.png" data-alt="Glean、エージェント専用の認証を一般提供" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-03/topic_6.png" alt="Glean、エージェント専用の認証を一般提供" />
+      </div>
+      <p class="lede">
+        Gleanは10月1日の更新でAgent Identityを一般提供にしました。エージェントに管理者が設定した専用の認証情報を割り当て、接続先でエージェント自身のアカウントとして動かせます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">管理者が専用のサービス認証情報を管理</li>
+        <li data-i="02">専用のSlack・Teamsアプリを設定できる</li>
+        <li data-i="03">7月の公開ベータから一般提供へ進んだ</li>
+      </ul>
+      <div class="pull">
+        業務エージェントの権限と実行者を、個人のアカウントから切り分けやすくなります。自動処理の履歴を誰の作業として残すか、運用設計の参考になります。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://docs.glean.com/release-notes/releases/2026-10-01-october-release">Glean</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-01</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://docs.glean.com/release-notes/releases/2026-10-01-october-release">https://docs.glean.com/release-notes/releases/2026-10-01-october-release</a></dd>
+        <dd><a href="https://www.glean.com/blog/introducing-agent-identity">www.glean.com/blog/introducing-agent-ide…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.287">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-10-02/">
+      ← 前日 · 2026-10-02
+      <span class="big">Google、Gemini 4 Argonを発表</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-10-03/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20261003.0716</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

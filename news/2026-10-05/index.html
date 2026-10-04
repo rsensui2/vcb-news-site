@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-10-05 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-10-05 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №1005</span>
+    <span class="sep">/</span>
+    <span>2026-10-05</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20261005.0720</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-10-05/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:20 · SUN</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SUNDAY · OCTOBER 5, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>10<span class="dot">.</span>05</h1>
+    <div class="strap">
+      <span>SupabaseとTurso · Claude · GitHub · DGX</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> SUPABASE / TURSO <span class="sep">/</span> NEWS
+      </div>
+      <h2>SupabaseとTurso、エージェントごとのDBを目指す</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-05/topic_1.png" data-alt="SupabaseとTurso、エージェントごとのDBを目指す" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-05/topic_1.png" alt="SupabaseとTurso、エージェントごとのDBを目指す" />
+      </div>
+      <p class="lede">
+        SupabaseはTursoの買収を発表しました。小さく素早く作れるデータベースを各エージェントに割り当て、アプリの成長に応じてPostgresへ進める構想です。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">既存ユーザーの利用方法は変更なし</li>
+        <li data-i="02">SupabaseはPostgres、TursoはSQLiteの開発を継続</li>
+        <li data-i="03">試作から本番へ同じ開発体験を目指す</li>
+      </ul>
+      <div class="pull">
+        AIが試作を大量に作ると、データの置き場所も増えます。タスクごとに分けて保管し、必要なアプリだけ本番へ育てる設計の参考になります。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://supabase.com/blog/supabase-is-acquiring-turso">Supabase / Turso</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-02</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://supabase.com/blog/supabase-is-acquiring-turso">https://supabase.com/blog/supabase-is-acquiring-turso</a></dd>
+        <dd><a href="https://turso.tech/blog/turso-is-joining-supabase">turso.tech/blog/turso-is-joining-supabas…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · ANTHROPIC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> ANTHROPIC <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code 2.1.289、権限ルールの不具合を修正</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-05/topic_2.png" data-alt="Claude Code 2.1.289、権限ルールの不具合を修正" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-05/topic_2.png" alt="Claude Code 2.1.289、権限ルールの不具合を修正" />
+      </div>
+      <p class="lede">
+        Claude Code 2.1.289では、拡張機能の承認やシンボリックリンク経由の参照で権限ルールが効かない不具合が修正されています。画面描画やプラグイン更新に関する修正も含まれます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">管理対象端末で複合コマンドのdeny・askを修正</li>
+        <li data-i="02">IDEからリンク経由で参照したファイルのRead制限を修正</li>
+        <li data-i="03">端末のフリーズや拡張機能の表示不具合にも対処</li>
+      </ul>
+      <div class="pull">
+        Claude Codeに拡張機能を入れているチームは更新内容を確認したいところです。更新後に禁止・確認ルールが意図どおり働くかを試すと、運用上の見落としを減らせます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.289">Anthropic</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-03T23:07:17Z</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.289">https://github.com/anthropics/claude-code/releases/tag/v2.1.289</a></dd>
+        <dd><a href="https://code.claude.com/docs/en/permissions">code.claude.com/docs/en/permissions</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · GITHUB</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> GITHUB <span class="sep">/</span> NEWS
+      </div>
+      <h2>GitHub Appのトークンが約520文字に</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-05/topic_3.png" data-alt="GitHub Appのトークンが約520文字に" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-05/topic_3.png" alt="GitHub Appのトークンが約520文字に" />
+      </div>
+      <p class="lede">
+        GitHub Appのインストール用トークンは、新規発行分が約520文字の形式へ切り替わりました。従来の40文字を前提としたチェックや保存欄は、連携の失敗につながる可能性があります。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">ghs_で始まる形式は維持</li>
+        <li data-i="02">権限・対象リポジトリ・1時間の有効期限は変わらない</li>
+        <li data-i="03">試験用ヘッダーは11月30日に廃止予定</li>
+      </ul>
+      <div class="pull">
+        GitHub連携が急に動かなくなったら、トークンを短く切っていないか確認しましょう。文字数チェック、保存先、ログの秘密情報を隠すルールが点検箇所です。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-10-02-stateless-github-app-installation-tokens-rolled-out/">GitHub</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-02</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-10-02-stateless-github-app-installation-tokens-rolled-out/">https://github.blog/changelog/2026-10-02-stateless-github-app-installation-tokens-rolled-out/</a></dd>
+        <dd><a href="https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/generating-an-installation-access-token-for-a-github-app">docs.github.com/en/apps/creating-github-…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · NVIDIA</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> NVIDIA <span class="sep">/</span> NEWS
+      </div>
+      <h2>DGX Sparkの64GB版、10月23日発売予定</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-05/topic_4.png" data-alt="DGX Sparkの64GB版、10月23日発売予定" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-05/topic_4.png" alt="DGX Sparkの64GB版、10月23日発売予定" />
+      </div>
+      <p class="lede">
+        NVIDIAはDGX Sparkの64GB構成を10月23日にメーカー各社から発売すると発表しました。GB10とDGX OSを備え、ローカルでAIモデルを動かす選択肢が増えます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">64GBの統合メモリを搭載</li>
+        <li data-i="02">NVIDIA Sync Cluster Assistantが複数台のネットワーク設定を支援</li>
+        <li data-i="03">モデル実行や学習の設定はネットワーク設定と別に必要</li>
+      </ul>
+      <div class="pull">
+        社内データを手元で扱うAI環境を検討する材料になります。複数台をつないだだけでモデルが動くわけではないので、実行ソフトの設定も見積もりたいところです。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://blogs.nvidia.com/blog/local-ai-dgx-spark-64gb-sync/">NVIDIA</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-02</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://blogs.nvidia.com/blog/local-ai-dgx-spark-64gb-sync/">https://blogs.nvidia.com/blog/local-ai-dgx-spark-64gb-sync/</a></dd>
+        <dd><a href="https://docs.nvidia.com/sync/latest/cluster-assistant.html">docs.nvidia.com/sync/latest/cluster-assi…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · ANTHROPIC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> ANTHROPIC <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Frontier Academy、実案件でAI導入を学ぶ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-05/topic_5.png" data-alt="Claude Frontier Academy、実案件でAI導入を学ぶ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-05/topic_5.png" alt="Claude Frontier Academy、実案件でAI導入を学ぶ" />
+      </div>
+      <p class="lede">
+        AnthropicはClaude Frontier Academyを発表しました。2027年末までに1万人の実装担当エンジニアを育てる目標で、研修の実技評価に合格した参加者は、所属企業の実案件に取り組む12週間のプログラムへ進みます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">企業の推薦による参加</li>
+        <li data-i="02">模擬導入と実技評価を経て実案件へ進む</li>
+        <li data-i="03">12週間の終了時にも評価を実施</li>
+      </ul>
+      <div class="pull">
+        研修の成果を、実案件の実装と評価まで追う設計です。社内のAI研修でも、受講後に担当する業務と確認方法を先に決めておく考え方が参考になります。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.anthropic.com/news/claude-frontier-academy">Anthropic</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-02</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.anthropic.com/news/claude-frontier-academy">https://www.anthropic.com/news/claude-frontier-academy</a></dd>
+        <dd><a href="https://www.linkedin.com/posts/claude_were-launching-claude-frontier-academy-to-activity-7511834937784819712-M8xz">www.linkedin.com/posts/claude_were-launc…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · AWS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> AWS <span class="sep">/</span> NEWS
+      </div>
+      <h2>AWS経由のClaude DesktopにWeb検索を追加</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-05/topic_6.png" data-alt="AWS経由のClaude DesktopにWeb検索を追加" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-05/topic_6.png" alt="AWS経由のClaude DesktopにWeb検索を追加" />
+      </div>
+      <p class="lede">
+        AWSは、Amazon Bedrockを使うClaude DesktopへWeb検索を接続する手順を公開しました。AgentCore Gatewayに検索ツールを加え、社内の認証を通して最新情報を取得する構成です。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">検索ツールはMCPで接続</li>
+        <li data-i="02">検索クエリはAWS内で処理される</li>
+        <li data-i="03">IAM Identity CenterとCognitoを使う認証例を掲載</li>
+      </ul>
+      <div class="pull">
+        AWSでClaudeを運用している組織は、検索と認証をまとめる構成を検討できます。Claude Desktop全体への一斉追加ではなく、管理者が接続を設定する手順です。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://aws.amazon.com/blogs/machine-learning/add-secure-web-search-to-claude-desktop-with-amazon-bedrock-agentcore/">AWS</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-02</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://aws.amazon.com/blogs/machine-learning/add-secure-web-search-to-claude-desktop-with-amazon-bedrock-agentcore/">https://aws.amazon.com/blogs/machine-learning/add-secure-web-search-to-claude-desktop-with-amazon-bedrock-agentcore/</a></dd>
+        <dd><a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/gateway-target-connector-web-search-tool.html">docs.aws.amazon.com/bedrock-agentcore/la…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · GITHUB</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> GITHUB <span class="sep">/</span> NEWS
+      </div>
+      <h2>GitHubの脆弱性報告に非公開コメント</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-05/topic_7.png" data-alt="GitHubの脆弱性報告に非公開コメント" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-05/topic_7.png" alt="GitHubの脆弱性報告に非公開コメント" />
+      </div>
+      <p class="lede">
+        GitHubでは、非公開の脆弱性報告を有効にした公開リポジトリで、書き込み権限を持つ人だけが読めるコメントを投稿できるようになりました。書き込み権限を持たない報告者に見せない調査メモも、セキュリティアドバイザリの履歴に残せます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">非公開の脆弱性報告を有効にした公開リポジトリが対象</li>
+        <li data-i="02">閲覧権限は現在のリポジトリ権限に従う</li>
+        <li data-i="03">投稿後に通常コメントへ変更できない</li>
+      </ul>
+      <div class="pull">
+        脆弱性の対応中に、調査や調整のメモを別の場所へ移す手間が減ります。投稿前に公開範囲を選ぶことが必要です。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-10-02-confidential-comments-on-repository-security-advisories/">GitHub</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-02</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-10-02-confidential-comments-on-repository-security-advisories/">https://github.blog/changelog/2026-10-02-confidential-comments-on-repository-security-advisories/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://supabase.com/blog/supabase-is-acquiring-turso">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-10-04/">
+      ← 前日 · 2026-10-04
+      <span class="big">Cloudflare、AI向けWeb検索APIをベータ公開</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-10-05/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20261005.0720</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

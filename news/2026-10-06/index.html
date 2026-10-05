@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-10-06 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-10-06 の Vibe Coder Bootcamp モーニングディスパッチ — 3本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №1006</span>
+    <span class="sep">/</span>
+    <span>2026-10-06</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>03 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20261006.0716</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-10-06/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:16 · MON</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · MONDAY · OCTOBER 6, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>10<span class="dot">.</span>06</h1>
+    <div class="strap">
+      <span>Codex · Gemini · 〈知見〉AI開発は完了条件を先に決める</span>
+      <span><span class="count">03</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> OPENAI <span class="sep">/</span> NEWS
+      </div>
+      <h2>Codex 0.160.1、WindowsへのMCP接続を修正</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-06/topic_1.png" data-alt="Codex 0.160.1、WindowsへのMCP接続を修正" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-06/topic_1.png" alt="Codex 0.160.1、WindowsへのMCP接続を修正" />
+      </div>
+      <p class="lede">
+        Codex 0.160.1は、Unix側からWindows上の外部ツールを起動する際の不具合を修正しました。明示的にリモートの環境変数を指定した場合でも、Windowsの起動に必要な値を残します。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">SYSTEMROOT・TEMP・TMPを接続先へ保持</li>
+        <li data-i="02">0.160系列に修正を取り込み</li>
+        <li data-i="03">未指定の秘密情報を除く方針は継続</li>
+      </ul>
+      <div class="pull">
+        外部ツールをつなぐMCP接続で、OSをまたいだ起動が失敗する場合の確認点になります。Windows側で接続できずに困っている人は、対象の構成と版を確認できます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/openai/codex/releases/tag/rust-v0.160.1">OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-05T18:29:37Z</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/openai/codex/releases/tag/rust-v0.160.1">https://github.com/openai/codex/releases/tag/rust-v0.160.1</a></dd>
+        <dd><a href="https://github.com/openai/codex/pull/51121">github.com/openai/codex/pull/51121</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · GOOGLE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> GOOGLE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Gemini CLI試験版、選択肢の確定を修正</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-06/topic_2.png" data-alt="Gemini CLI試験版、選択肢の確定を修正" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-06/topic_2.png" alt="Gemini CLI試験版、選択肢の確定を修正" />
+      </div>
+      <p class="lede">
+        Gemini CLIの10月3日nightly版は、選択肢をEnterやスペースで確定する処理を修正しました。WindowsのIDE端末などでの確定失敗や、改行コードによる二重確定に対処しています。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">選択リストと承認ダイアログを修正</li>
+        <li data-i="02">改行コードの違いによる誤動作に対処</li>
+        <li data-i="03">nightlyは試験版であり、安定版ではない</li>
+      </ul>
+      <div class="pull">
+        承認画面でキーが効かないときは、端末入力の問題も疑えます。普段の環境で試験版を急いで入れるより、修正対象を確認してから別の環境で試す材料になります。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/google-gemini/gemini-cli/releases/tag/v0.64.0-nightly.20261003.gfb972b2f8">Google</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-03T01:29:14Z</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/google-gemini/gemini-cli/releases/tag/v0.64.0-nightly.20261003.gfb972b2f8">https://github.com/google-gemini/gemini-cli/releases/tag/v0.64.0-nightly.20261003.gfb972b2f8</a></dd>
+        <dd><a href="https://github.com/google-gemini/gemini-cli/pull/29502">github.com/google-gemini/gemini-cli/pull…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · MIZCHI / ZENN</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        💻 実践TIPS <span class="sep">/</span> MIZCHI / ZENN <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>〈知見〉AI開発は完了条件を先に決める</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-06/topic_3.png" data-alt="〈知見〉AI開発は完了条件を先に決める" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-06/topic_3.png" alt="〈知見〉AI開発は完了条件を先に決める" />
+      </div>
+      <p class="lede">
+        mizchiさんはAI開発で人が担う仕事として、評価指標の設計、行動ログの観察、テストの優先順位付けを整理しています。まず仕事の完了条件を決め、一度実行させて失敗の理由を調べるという実践です。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">完了条件と評価指標を実行前に決める</li>
+        <li data-i="02">失敗を情報・権限・性能の不足に分ける</li>
+        <li data-i="03">自動化で得た時間を評価の改善へ回す</li>
+      </ul>
+      <div class="pull">
+        「動いた」だけでは、頼んだ仕事が終わったか判断できません。申込フォームなら登録・確認画面・通知まで、業務で使う一連の動作を完了条件にすると検品しやすくなります。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,484</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/mizchi/status/2107001240882475283">@mizchi</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-05T13:59:07+09:00</dd>
+        <dt>CATEGORY</dt>
+        <dd>💻 実践Tips</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/mizchi/status/2107001240882475283">x.com/mizchi/…</a></dd>
+        <dd><a href="https://zenn.dev/mizchi/articles/ai-coding-loop-formal">zenn.dev/mizchi/articles/ai-coding-loop-…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://github.com/openai/codex/releases/tag/rust-v0.160.1">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-10-05/">
+      ← 前日 · 2026-10-05
+      <span class="big">SupabaseとTurso、エージェントごとのDBを目指す</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-10-06/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20261006.0716</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

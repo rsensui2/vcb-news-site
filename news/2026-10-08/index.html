@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-10-08 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-10-08 の Vibe Coder Bootcamp モーニングディスパッチ — 6本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №1008</span>
+    <span class="sep">/</span>
+    <span>2026-10-08</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>06 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20261008.0715</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-10-08/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:15 · WED</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · WEDNESDAY · OCTOBER 8, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>10<span class="dot">.</span>08</h1>
+    <div class="strap">
+      <span>Claude · ChatGPT · AI · Claudeのセキュリティ検証</span>
+      <span><span class="count">06</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> ANTHROPIC / VERCEL <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Haiku 5.5、短い反復作業を低コストに</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-08/topic_1.png" data-alt="Claude Haiku 5.5、短い反復作業を低コストに" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-08/topic_1.png" alt="Claude Haiku 5.5、短い反復作業を低コストに" />
+      </div>
+      <p class="lede">
+        Anthropicは、要約や分類など短い反復作業に向けたClaude Haiku 5.5を公開しました。Haiku系列で初めて思考量を調整でき、Vercel AI Gatewayからも利用できます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">入力10万トークン以下は、100万トークンあたり入力0.10ドル・出力0.50ドル</li>
+        <li data-i="02">10万トークンを超える入力は料金が変わる</li>
+        <li data-i="03">難しい開発作業にはSonnetやOpusを推奨</li>
+      </ul>
+      <div class="pull">
+        大量の問い合わせ分類や短い要約を、同じ入力で既存モデルと比べる候補になります。料金だけで選ばず、正解率と処理時間を確かめましょう。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.anthropic.com/claude-haiku-5-5">Anthropic / Vercel</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-07</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.anthropic.com/claude-haiku-5-5">https://www.anthropic.com/claude-haiku-5-5</a></dd>
+        <dd><a href="https://vercel.com/changelog/claude-haiku-5-5-now-available-on-ai-gateway">vercel.com/changelog/claude-haiku-5-5-no…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · OPENAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> OPENAI <span class="sep">/</span> NEWS
+      </div>
+      <h2>ChatGPT、触って確かめる回答画面を導入</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-08/topic_2.png" data-alt="ChatGPT、触って確かめる回答画面を導入" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-08/topic_2.png" alt="ChatGPT、触って確かめる回答画面を導入" />
+      </div>
+      <p class="lede">
+        OpenAIはGPT-6を使うChatGPTのChat画面に、図やボタンを操作できるIntelligent UIを導入し始めました。説明を読むだけでなく、入力を変えながら仕組みを確かめられます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">10月7日はPlus・Pro・Business・Enterpriseへ順次展開</li>
+        <li data-i="02">Free・Goは翌日から展開予定</li>
+        <li data-i="03">今回の更新でWorkとCodexのモデルは変更されない</li>
+      </ul>
+      <div class="pull">
+        比較や学習の場面で、図の条件を変えて理解する使い方ができます。組織向けプランでは管理者の設定によって利用できる範囲が変わります。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://openai.com/index/gpt-6-for-everyone/">OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-07</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://openai.com/index/gpt-6-for-everyone/">https://openai.com/index/gpt-6-for-everyone/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · VERCEL / OPENAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> VERCEL / OPENAI <span class="sep">/</span> NEWS
+      </div>
+      <h2>AI Gateway、判断専用のDecisions APIに対応</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-08/topic_3.png" data-alt="AI Gateway、判断専用のDecisions APIに対応" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-08/topic_3.png" alt="AI Gateway、判断専用のDecisions APIに対応" />
+      </div>
+      <p class="lede">
+        Vercel AI GatewayがOpenAI互換のDecisions APIに対応しました。文章を生成する代わりに、同じ入力に対する選択肢やスコア、確率を返す仕組みです。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Yes/No・選択肢・採点を1回の依頼にまとめられる</li>
+        <li data-i="02">AI Gatewayでは、GPT-6 Luna Decisionsは文章生成版と別のモデルID</li>
+        <li data-i="03">問い合わせの振り分けや評価基準に沿う採点に使える</li>
+      </ul>
+      <div class="pull">
+        返答の文章から結論を抜き出す処理を減らせます。確率は正解の保証ではないので、過去の入力と正解を使って判断の基準を調整したいところです。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/openai-decisions-api-now-available-on-ai-gateway">Vercel / OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-07</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/openai-decisions-api-now-available-on-ai-gateway">https://vercel.com/changelog/openai-decisions-api-now-available-on-ai-gateway</a></dd>
+        <dd><a href="https://developers.openai.com/api/docs/guides/decisions">developers.openai.com/api/docs/guides/de…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · ANTHROPIC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> ANTHROPIC <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claudeのセキュリティ検証、用途別の申請枠へ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-08/topic_4.png" data-alt="Claudeのセキュリティ検証、用途別の申請枠へ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-08/topic_4.png" alt="Claudeのセキュリティ検証、用途別の申請枠へ" />
+      </div>
+      <p class="lede">
+        AnthropicはCyber Verification Programを拡大し、防御・許可された侵入テスト・特殊な安全システムの検証を用途別の申請枠に分けました。利用する能力に応じて審査条件と安全管理が異なります。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Defense Accessは防御や脆弱性の確認を対象</li>
+        <li data-i="02">Red Team Accessは許可された対象の検証で、現在は組織のみ</li>
+        <li data-i="03">Specialized Accessは限定された検証済み組織向け</li>
+      </ul>
+      <div class="pull">
+        自分が管理するコードのレビューや修正は通常モデルでも続けられます。専門的な検証を行う組織は、用途に合う枠と必要な管理条件を確認できます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.anthropic.com/news/cyber-verification-program">Anthropic</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-06</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.anthropic.com/news/cyber-verification-program">https://www.anthropic.com/news/cyber-verification-program</a></dd>
+        <dd><a href="https://support.claude.com/en/articles/14604842-cyber-verification-program">support.claude.com/en/articles/14604842-…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · VERCEL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> VERCEL <span class="sep">/</span> NEWS
+      </div>
+      <h2>Vercel Flags、日時で機能の公開条件を指定</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-08/topic_5.png" data-alt="Vercel Flags、日時で機能の公開条件を指定" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-08/topic_5.png" alt="Vercel Flags、日時で機能の公開条件を指定" />
+      </div>
+      <p class="lede">
+        Vercel Flagsが日時の属性に対応しました。キャンペーンの表示期間や登録日による条件を、機能のオン・オフを決めるルールに組み込めます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">管理画面とCLIから日時属性を設定できる</li>
+        <li data-i="02">アプリ側が判定時の値をミリ秒単位で渡す</li>
+        <li data-i="03">指定日時の前・後と、境界を含む比較に対応</li>
+      </ul>
+      <div class="pull">
+        期間限定ページの切り替えを、毎回の手作業からルールに移せます。開始・終了の境界とタイムゾーンを含めて確認しましょう。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/timestamp-attributes-are-now-supported-in-vercel-flags">Vercel</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-07</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/timestamp-attributes-are-now-supported-in-vercel-flags">https://vercel.com/changelog/timestamp-attributes-are-now-supported-in-vercel-flags</a></dd>
+        <dd><a href="https://vercel.com/docs/flags">vercel.com/docs/flags</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · / GITHUB</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> 大賀愛一郎 / GITHUB <span class="sep">/</span> NEWS
+      </div>
+      <h2>yomiyasu v1.0.8、推敲差分の検査を高速化</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-08/topic_6.png" data-alt="yomiyasu v1.0.8、推敲差分の検査を高速化" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-08/topic_6.png" alt="yomiyasu v1.0.8、推敲差分の検査を高速化" />
+      </div>
+      <p class="lede">
+        日本語の推敲スキルyomiyasu v1.0.8は、原文と推敲文の差分検査を高速化しました。直訳された専門用語や、文書の立場・時期に合う語尾の扱いも見直しています。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">7文書の自己比較で検査時間を最大99.1%短縮</li>
+        <li data-i="02">実際の原文・推敲文48組では約57.4%短縮</li>
+        <li data-i="03">数字は作者の測定で、LLMの生成時間は含まない</li>
+      </ul>
+      <div class="pull">
+        繰り返し推敲するときの検査待ちを短くできる可能性があります。文章の主張や否定、条件を保ったまま直せているかも読み比べて確認できます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/nanaism/yomiyasu/releases/tag/v1.0.8">大賀愛一郎 / GitHub</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-06T15:55:00Z</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/nanaism/yomiyasu/releases/tag/v1.0.8">https://github.com/nanaism/yomiyasu/releases/tag/v1.0.8</a></dd>
+        <dd><a href="https://github.com/nanaism/yomiyasu/blob/main/README.md">github.com/nanaism/yomiyasu/blob/main/RE…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://www.anthropic.com/claude-haiku-5-5">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-10-07/">
+      ← 前日 · 2026-10-07
+      <span class="big">Mistral Large 4、APIプレビューを開始</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-10-08/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20261008.0715</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

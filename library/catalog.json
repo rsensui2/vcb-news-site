@@ -1,7 +1,17 @@
 {
- "generated": "2026-10-07T08:20:44+09:00",
- "count": 149,
+ "generated": "2026-10-08T08:20:46+09:00",
+ "count": 150,
  "items": [
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "TEKION Slide Generatorでモーションスライドも作れるようになりました",
+   "date": "2026-10-08",
+   "url": "",
+   "tags": [],
+   "description": "TEKION Slide Generator（Mac版）に、モーションスライドを作るプラグイン「TEKION Motion Slides」を同梱しました。 ／ 添付: TEKION-Motion-Slides-demo.mp4",
+   "extra_links": []
+  },
   {
    "type": "slack",
    "type_label": "Slack配布",

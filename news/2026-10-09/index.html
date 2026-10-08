@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-10-09 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-10-09 の Vibe Coder Bootcamp モーニングディスパッチ — 6本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №1009</span>
+    <span class="sep">/</span>
+    <span>2026-10-09</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>06 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20261009.0717</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-10-09/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:17 · THU</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · THURSDAY · OCTOBER 9, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>10<span class="dot">.</span>09</h1>
+    <div class="strap">
+      <span>Theia · Codex · Vercel · Vercel</span>
+      <span><span class="count">06</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI・開発 <span class="sep">/</span> 公式発表 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Theia 1.76、Copilot契約をAI開発環境で利用</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-09/topic_1.png" data-alt="Theia 1.76、Copilot契約をAI開発環境で利用" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-09/topic_1.png" alt="Theia 1.76、Copilot契約をAI開発環境で利用" />
+      </div>
+      <p class="lede">
+        AI機能を備える開発環境Theia 1.76が、GitHub Copilotの契約で使えるモデルに対応しました。公式Copilot CLIを介して接続する実験的な機能で、自作のTheiaベースのツールでも利用できます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Copilot CLIの別途インストールが必要</li>
+        <li data-i="02">モデル一覧の自動取得とお気に入りに対応</li>
+        <li data-i="03">外部からAIセッションを操作するAPIは既定で無効</li>
+      </ul>
+      <div class="pull">
+        開発環境を選ぶ際に、すでに持つAI契約を使えるか確認できます。外部APIを使う場合は、公開する前に認証を設定しましょう。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://eclipsesource.com/blogs/2026/10/08/eclipse-theia-1-76-release-news-and-noteworthy/">公式発表</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-08</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI・開発</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://eclipsesource.com/blogs/2026/10/08/eclipse-theia-1-76-release-news-and-noteworthy/">https://eclipsesource.com/blogs/2026/10/08/eclipse-theia-1-76-release-news-and-noteworthy/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · NEWS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI・開発 <span class="sep">/</span> 公式発表 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Codex 0.162.0、作業コピーの管理を追加</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-09/topic_2.png" data-alt="Codex 0.162.0、作業コピーの管理を追加" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-09/topic_2.png" alt="Codex 0.162.0、作業コピーの管理を追加" />
+      </div>
+      <p class="lede">
+        Codex 0.162.0は、信頼したローカルプロジェクトからGit worktreeを作成・一覧表示するツールを追加しました。機能を有効にした環境が対象で、会話のコピー操作やWindowsとLinuxの修正も含みます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">worktree機能の有効化が前提</li>
+        <li data-i="02">会話を選択してコピーする操作を追加</li>
+        <li data-i="03">CRLF改行の保持と再試行の待ち時間を修正</li>
+      </ul>
+      <div class="pull">
+        修正ごとの作業コピーを分けると、複数の変更が混ざるのを防ぎやすくなります。既存の設定やOSに関わる修正も確認できます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/openai/codex/releases/tag/rust-v0.162.0">公式発表</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-08T18:55:59Z</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI・開発</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/openai/codex/releases/tag/rust-v0.162.0">https://github.com/openai/codex/releases/tag/rust-v0.162.0</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · NEWS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI・開発 <span class="sep">/</span> 公式発表 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Vercel Sandbox、作成完了を実行可能な状態に統一</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-09/topic_3.png" data-alt="Vercel Sandbox、作成完了を実行可能な状態に統一" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-09/topic_3.png" alt="Vercel Sandbox、作成完了を実行可能な状態に統一" />
+      </div>
+      <p class="lede">
+        コードを隔離して実行するVercel Sandboxは、保存状態の復元が終わってから作成処理を返すようになりました。起動エラーも最初のコマンドではなく、作成処理の段階で返ります。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">作成完了後はコマンド実行とファイル操作が可能</li>
+        <li data-i="02">復元の待ち時間が作成処理へ移る</li>
+        <li data-i="03">最初の操作までの合計時間は変わらない</li>
+      </ul>
+      <div class="pull">
+        エージェントが実行環境を用意するとき、起動の失敗と作業中の失敗を分けて扱いやすくなります。速度向上と混同せず、待機とエラー処理を確認しましょう。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/sandbox-create-waits-until-ready">公式発表</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-08</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI・開発</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/sandbox-create-waits-until-ready">https://vercel.com/changelog/sandbox-create-waits-until-ready</a></dd>
+        <dd><a href="https://vercel.com/docs/sandbox/sdk-reference">vercel.com/docs/sandbox/sdk-reference</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · NEWS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI・開発 <span class="sep">/</span> 公式発表 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Vercel、ミドルウェアへの本文転送を省略可能に</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-09/topic_4.png" data-alt="Vercel、ミドルウェアへの本文転送を省略可能に" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-09/topic_4.png" alt="Vercel、ミドルウェアへの本文転送を省略可能に" />
+      </div>
+      <p class="lede">
+        リクエストの振り分けを行うVercel Routing Middlewareで、送信された本文を転送しない設定が追加されました。本文を読まない処理に限って有効にすると、転送量を減らせます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">skipMiddlewareRequestBodyをtrueに設定</li>
+        <li data-i="02">Functionsと転送先には本文が届く</li>
+        <li data-i="03">既定はfalseで反映には再デプロイが必要</li>
+      </ul>
+      <div class="pull">
+        大きなアップロードを受けるアプリで、不要な転送を減らす選択肢になります。認証や検査で本文を使っていないか確認してから適用しましょう。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/skip-sending-request-bodies-to-routing-middleware">公式発表</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-08</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI・開発</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/skip-sending-request-bodies-to-routing-middleware">https://vercel.com/changelog/skip-sending-request-bodies-to-routing-middleware</a></dd>
+        <dd><a href="https://vercel.com/docs/project-configuration/vercel-json">vercel.com/docs/project-configuration/ve…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · NEWS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI・開発 <span class="sep">/</span> 公式発表 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Glyph Cluster、条件付きで無料の試験提供</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-09/topic_5.png" data-alt="Glyph Cluster、条件付きで無料の試験提供" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-09/topic_5.png" alt="Glyph Cluster、条件付きで無料の試験提供" />
+      </div>
+      <p class="lede">
+        Vercel AI Gatewayが、コードや長い入力の分析向けの推論モデルGlyph Clusterを試験提供しています。ProまたはEnterpriseのチームで、AI Gatewayクレジットを購入済みの場合、試験期間中は無料で使えます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">テキスト入力のみ対応</li>
+        <li data-i="02">自分で定義した関数ツールを呼び出せる</li>
+        <li data-i="03">入出力が学習やモデル改善に使われる可能性がある</li>
+      </ul>
+      <div class="pull">
+        公開コードでモデルの回答を比較する候補になります。データを保存しない保証は提供されないため、機密情報を入れる前に条件を確認しましょう。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/glyph-cluster-is-now-available-in-stealth-for-free-on-ai-gateway">公式発表</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-07</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI・開発</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/glyph-cluster-is-now-available-in-stealth-for-free-on-ai-gateway">https://vercel.com/changelog/glyph-cluster-is-now-available-in-stealth-for-free-on-ai-gateway</a></dd>
+        <dd><a href="https://vercel.com/ai-gateway/models/glyph-cluster">vercel.com/ai-gateway/models/glyph-clust…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · NEWS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI・開発 <span class="sep">/</span> 公式発表 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic、利用規約の変更を11月施行へ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-09/topic_6.png" data-alt="Anthropic、利用規約の変更を11月施行へ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-09/topic_6.png" alt="Anthropic、利用規約の変更を11月施行へ" />
+      </div>
+      <p class="lede">
+        AnthropicはClaudeの長時間・自律的な作業に合わせ、利用規約の禁止行為や条件を具体化しました。更新版の施行日は11月12日で、偽アカウントによる宣伝や、危険な物理操作などの扱いを説明しています。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">偽装した宣伝活動の規定を集約</li>
+        <li data-i="02">高リスク用途の人による確認要件を明確化</li>
+        <li data-i="03">通常の不満表明やモデル検証は虐待禁止の対象外</li>
+      </ul>
+      <div class="pull">
+        AIに外部への発信や機器操作を任せるサービスでは、任せる範囲と人が止める仕組みを見直す材料になります。具体的な適用条件は公式規約で確認できます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.anthropic.com/news/2026-usage-policy-update">公式発表</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-08</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI・開発</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.anthropic.com/news/2026-usage-policy-update">https://www.anthropic.com/news/2026-usage-policy-update</a></dd>
+        <dd><a href="https://www.anthropic.com/legal/aup">www.anthropic.com/legal/aup</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://eclipsesource.com/blogs/2026/10/08/eclipse-theia-1-76-release-news-and-noteworthy/">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-10-08/">
+      ← 前日 · 2026-10-08
+      <span class="big">Claude Haiku 5.5、短い反復作業を低コストに</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-10-09/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20261009.0717</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

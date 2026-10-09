@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-10-10 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-10-10 の Vibe Coder Bootcamp モーニングディスパッチ — 6本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №1010</span>
+    <span class="sep">/</span>
+    <span>2026-10-10</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>06 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20261010.0714</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-10-10/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:14 · FRI</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · FRIDAY · OCTOBER 10, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>10<span class="dot">.</span>10</h1>
+    <div class="strap">
+      <span>Vercel · Copilotレビューの費用と依頼権限を組織で管理 · Vercel · Grok</span>
+      <span><span class="count">06</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> VERCEL <span class="sep">/</span> NEWS
+      </div>
+      <h2>Vercel CLIでドメイン購入の準備をAIに依頼</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-10/topic_1.png" data-alt="Vercel CLIでドメイン購入の準備をAIに依頼" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-10/topic_1.png" alt="Vercel CLIでドメイン購入の準備をAIに依頼" />
+      </div>
+      <p class="lede">
+        Vercel CLIが、AIエージェントによるドメインの候補探しから購入手続きまでに対応しました。購入の確定には人の承認が必要で、価格や自動更新、登録者情報を確認してから支払います。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">候補検索・空き状況・価格確認をCLIから実行</li>
+        <li data-i="02">非対話実行では購入を確定せず、確認のためのコマンドを返す</li>
+        <li data-i="03">対話端末または管理画面で購入を承認</li>
+      </ul>
+      <div class="pull">
+        サイトを作った後の名前探しまでAIに頼めます。希望する名前と予算を伝え、最後に購入条件を確認する進め方が合いそうです。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/agents-can-now-buy-domains-with-the-vercel-cli">Vercel</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/agents-can-now-buy-domains-with-the-vercel-cli">https://vercel.com/changelog/agents-can-now-buy-domains-with-the-vercel-cli</a></dd>
+        <dd><a href="https://vercel.com/docs/cli/domains">vercel.com/docs/cli/domains</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · GITHUB</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> GITHUB <span class="sep">/</span> NEWS
+      </div>
+      <h2>Copilotレビューの費用と依頼権限を組織で管理</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-10/topic_2.png" data-alt="Copilotレビューの費用と依頼権限を組織で管理" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-10/topic_2.png" alt="Copilotレビューの費用と依頼権限を組織で管理" />
+      </div>
+      <p class="lede">
+        GitHub Copilotのコードレビューに、組織へ費用をまとめる設定と、レビューを依頼できる人を制限する設定が追加されました。個人の利用枠を消費する既定設定から、リポジトリを持つ組織への請求に変更できます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">組織への請求にはAI Creditsの有料利用を有効にする必要がある</li>
+        <li data-i="02">組織提供のライセンスを持つ人だけに依頼を制限可能</li>
+        <li data-i="03">組織で制限を有効にすると、リポジトリ側では解除できない</li>
+      </ul>
+      <div class="pull">
+        チーム開発では、個人の利用枠が尽きてレビューが止まる問題に対処できます。予算の設定と、誰に依頼を許すかを併せて確認しましょう。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-10-08-copilot-code-review-new-organization-billing-options-and-controls/">GitHub</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-08</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-10-08-copilot-code-review-new-organization-billing-options-and-controls/">https://github.blog/changelog/2026-10-08-copilot-code-review-new-organization-billing-options-and-controls/</a></dd>
+        <dd><a href="https://docs.github.com/en/copilot/concepts/agents/code-review">docs.github.com/en/copilot/concepts/agen…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · VERCEL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> VERCEL <span class="sep">/</span> NEWS
+      </div>
+      <h2>Vercel Pro、保存料金と30日保持へ変更予定</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-10/topic_3.png" data-alt="Vercel Pro、保存料金と30日保持へ変更予定" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-10/topic_3.png" alt="Vercel Pro、保存料金と30日保持へ変更予定" />
+      </div>
+      <p class="lede">
+        Vercelは、既存のProチームにもDeployment StorageとFunctions Storageの料金を適用すると案内しました。保存期間も30日に変わり、設定を変更しなければ10月23日から30日を超えるデプロイの削除が始まります。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">保存料金は1GB・月あたり0.10ドル</li>
+        <li data-i="02">課金開始日はチーム宛てのメールで確認</li>
+        <li data-i="03">削除されたデプロイはロールバックに使えない</li>
+      </ul>
+      <div class="pull">
+        過去の公開状態へ戻せる期間と保存費用に関わる変更です。必要な履歴を残す設定と、使っていないビルドや大きな素材の整理を先に確認しましょう。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/deployment-storage-pricing-expands-to-existing-teams">Vercel</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/deployment-storage-pricing-expands-to-existing-teams">https://vercel.com/changelog/deployment-storage-pricing-expands-to-existing-teams</a></dd>
+        <dd><a href="https://vercel.com/docs/deployment-retention">vercel.com/docs/deployment-retention</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · VERCEL / XAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> VERCEL / XAI <span class="sep">/</span> NEWS
+      </div>
+      <h2>Grok Imagine Video 1.5 LiteをAI Gatewayで利用</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-10/topic_4.png" data-alt="Grok Imagine Video 1.5 LiteをAI Gatewayで利用" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-10/topic_4.png" alt="Grok Imagine Video 1.5 LiteをAI Gatewayで利用" />
+      </div>
+      <p class="lede">
+        Vercel AI Gatewayで、文章や画像から音声付き動画を作るGrok Imagine Video 1.5 Liteが使えるようになりました。1〜15秒のクリップを、横長や縦型など複数の画面比率で生成できます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">480p・720p・1080pに対応</li>
+        <li data-i="02">画面比率は7種類</li>
+        <li data-i="03">モデル名はspacexai/grok-imagine-video-1.5-lite</li>
+      </ul>
+      <div class="pull">
+        短い広告や説明動画の素材を、アプリから生成する選択肢が増えました。同じ入力で画質や生成時間、費用を比べてから制作に組み込めます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/grok-imagine-video-1-5-lite-on-ai-gateway">Vercel / xAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-08</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/grok-imagine-video-1-5-lite-on-ai-gateway">https://vercel.com/changelog/grok-imagine-video-1-5-lite-on-ai-gateway</a></dd>
+        <dd><a href="https://vercel.com/ai-gateway/models/grok-imagine-video-1.5-lite">vercel.com/ai-gateway/models/grok-imagin…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · VERCEL / STEPFUN</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> VERCEL / STEPFUN <span class="sep">/</span> NEWS
+      </div>
+      <h2>Step 5 Preview、長い資料をAI Gatewayから入力</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-10/topic_5.png" data-alt="Step 5 Preview、長い資料をAI Gatewayから入力" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-10/topic_5.png" alt="Step 5 Preview、長い資料をAI Gatewayから入力" />
+      </div>
+      <p class="lede">
+        Vercel AI GatewayがStepFunのStep 5 Previewに対応しました。モデルは文章と画像を入力でき、100万トークンの範囲でコードや資料をまとめて扱います。今回はモデルの新発表ではなく、Gatewayでの提供開始です。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">モデル名はstepfun/step-5-preview</li>
+        <li data-i="02">文章と画像の入力に対応</li>
+        <li data-i="03">コードの修正や調査レポートなどを想定</li>
+      </ul>
+      <div class="pull">
+        複数の資料や画面を渡す作業で、既存モデルと比較する候補になります。入力できる量の大きさと、必要な根拠を正確に拾えるかは別々に確かめましょう。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/step-5-preview-now-available-on-ai-gateway">Vercel / StepFun</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-08</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/step-5-preview-now-available-on-ai-gateway">https://vercel.com/changelog/step-5-preview-now-available-on-ai-gateway</a></dd>
+        <dd><a href="https://vercel.com/ai-gateway/models/step-5-preview">vercel.com/ai-gateway/models/step-5-prev…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · GITHUB</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> GITHUB <span class="sep">/</span> NEWS
+      </div>
+      <h2>CodeQL 2.27.2、解析対象と環境条件を更新</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-10/topic_6.png" data-alt="CodeQL 2.27.2、解析対象と環境条件を更新" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-10/topic_6.png" alt="CodeQL 2.27.2、解析対象と環境条件を更新" />
+      </div>
+      <p class="lede">
+        コードの脆弱性を調べるCodeQL 2.27.2で、C++・Go・Rust・JavaScriptの解析が改善されました。10月9日の紹介記事に対し、元のリリース日は10月7日です。macOSとXcodeの組み合わせには解析方式の制限もあります。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">JavaScriptではWorkflow SDKの指示を認識</li>
+        <li data-i="02">Rustでは非同期処理のデータフローを改善</li>
+        <li data-i="03">macOS 27やXcode 27ではコンパイル言語のautobuild・manual方式に制限</li>
+      </ul>
+      <div class="pull">
+        AIが書いたコードも継続して検査する環境を整えたいところです。Macで解析しているチームは、OS更新前に対応条件を確認できます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-10-09-codeql-2-27-2-improves-c-go-rust-and-javascript-analysis/">GitHub</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-07</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-10-09-codeql-2-27-2-improves-c-go-rust-and-javascript-analysis/">https://github.blog/changelog/2026-10-09-codeql-2-27-2-improves-c-go-rust-and-javascript-analysis/</a></dd>
+        <dd><a href="https://codeql.github.com/docs/codeql-overview/codeql-changelog/codeql-cli-2.27.2/">codeql.github.com/docs/codeql-overview/c…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://vercel.com/changelog/agents-can-now-buy-domains-with-the-vercel-cli">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-10-09/">
+      ← 前日 · 2026-10-09
+      <span class="big">Theia 1.76、Copilot契約をAI開発環境で利用</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-10-10/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20261010.0714</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

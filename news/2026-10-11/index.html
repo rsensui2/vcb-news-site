@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-10-11 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-10-11 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №1011</span>
+    <span class="sep">/</span>
+    <span>2026-10-11</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20261011.0715</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-10-11/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:15 · SAT</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SATURDAY · OCTOBER 11, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>10<span class="dot">.</span>11</h1>
+    <div class="strap">
+      <span>Cloudflare · Clef-omni · Decision-1 · Copilot</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> CLOUDFLARE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cloudflare、MCP経由で作業スキルを取得</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-11/topic_1.png" data-alt="Cloudflare、MCP経由で作業スキルを取得" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-11/topic_1.png" alt="Cloudflare、MCP経由で作業スキルを取得" />
+      </div>
+      <p class="lede">
+        CloudflareのAPI MCPサーバーが、作業手順をまとめたCloudflare skillsの配信に対応しました。Skills over MCP拡張を使えるクライアントは、スキル一覧を探して必要なファイルを読み込めます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対応するMCPクライアントが必要</li>
+        <li data-i="02">skills/listで一覧を取得</li>
+        <li data-i="03">skill://形式でスキルのファイルを読む</li>
+      </ul>
+      <div class="pull">
+        AIに操作の道具と手順をまとめて渡せます。接続するクライアントが拡張に対応しているかを先に確認しましょう。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-10-10-cloudflare-mcp-skills/">Cloudflare</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-10</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-10-10-cloudflare-mcp-skills/">https://developers.cloudflare.com/changelog/post/2026-10-10-cloudflare-mcp-skills/</a></dd>
+        <dd><a href="https://developers.cloudflare.com/agents/model-context-protocol/cloudflare/servers-for-cloudflare/">developers.cloudflare.com/agents/model-c…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · CLOUDFLARE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> CLOUDFLARE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Clef-omni、音声と動画から選択肢を判断</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-11/topic_2.png" data-alt="Clef-omni、音声と動画から選択肢を判断" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-11/topic_2.png" alt="Clef-omni、音声と動画から選択肢を判断" />
+      </div>
+      <p class="lede">
+        Cloudflare Workers AIに、音声・動画も入力できる判断モデルClef-omniが加わりました。文章を生成するモデルではなく、あらかじめ用意した選択肢を評価し、音と映像を合わせて判断します。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">WAV・MP3の音声とMP4・WebMの動画に対応</li>
+        <li data-i="02">音声は最大4本、動画は最大2本</li>
+        <li data-i="03">動画1本は最大60秒</li>
+      </ul>
+      <div class="pull">
+        設備の映像を見て動作状態を分類するなど、選択肢が決まった確認作業で試せます。正解が分かる素材で精度を確かめてから使いましょう。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-10-09-clef-omni-workers-ai/">Cloudflare</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-10-09-clef-omni-workers-ai/">https://developers.cloudflare.com/changelog/post/2026-10-09-clef-omni-workers-ai/</a></dd>
+        <dd><a href="https://developers.cloudflare.com/workers-ai/models/clef-omni/">developers.cloudflare.com/workers-ai/mod…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · VERCEL / MICROSOFT</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> VERCEL / MICROSOFT <span class="sep">/</span> NEWS
+      </div>
+      <h2>Decision-1、問い合わせの分類をAI Gatewayで</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-11/topic_3.png" data-alt="Decision-1、問い合わせの分類をAI Gatewayで" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-11/topic_3.png" alt="Decision-1、問い合わせの分類をAI Gatewayで" />
+      </div>
+      <p class="lede">
+        Vercel AI Gatewayで、Microsoftの文章判断モデルDecision-1が使えるようになりました。はい・いいえの判定、カテゴリーの選択、基準に沿った採点に対応し、選択肢の確率も返します。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">複数の質問で同じ入力を共有できる</li>
+        <li data-i="02">別のAzureアカウントやデプロイは不要</li>
+        <li data-i="03">利用量と費用はAI Gatewayで確認</li>
+      </ul>
+      <div class="pull">
+        問い合わせを請求担当か技術担当かに振り分ける用途が考えられます。判断が曖昧なものだけ人へ渡す仕組みを、実際の分類例で検証できます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/microsoft-decision-1-now-available-on-ai-gateway">Vercel / Microsoft</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/microsoft-decision-1-now-available-on-ai-gateway">https://vercel.com/changelog/microsoft-decision-1-now-available-on-ai-gateway</a></dd>
+        <dd><a href="https://vercel.com/ai-gateway/models/microsoft-decision-1">vercel.com/ai-gateway/models/microsoft-d…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · GITHUB</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> GITHUB <span class="sep">/</span> NEWS
+      </div>
+      <h2>Copilot for JetBrains、既定モデルとMCP起動を制御</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-11/topic_4.png" data-alt="Copilot for JetBrains、既定モデルとMCP起動を制御" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-11/topic_4.png" alt="Copilot for JetBrains、既定モデルとMCP起動を制御" />
+      </div>
+      <p class="lede">
+        GitHub Copilot for JetBrainsに、企業が新しい会話の既定モデルを指定する設定と、MCPサーバーの自動起動を止める設定が加わりました。問題の診断から修正を依頼する操作も追加され、対応するIDEは2025.2以降になりました。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">管理者が新規会話の既定モデルを設定</li>
+        <li data-i="02">診断メニューのFixから修正を依頼</li>
+        <li data-i="03">JetBrains IDE 2025.1のサポート終了</li>
+      </ul>
+      <div class="pull">
+        開発チームで使うAIと外部ツールの起動条件を揃えやすくなります。古いIDEを使っている場合は、プラグイン更新と合わせて対応版を確認しましょう。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-10-10-new-controls-and-chat-improvements-in-copilot-for-jetbrains/">GitHub</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-10</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-10-10-new-controls-and-chat-improvements-in-copilot-for-jetbrains/">https://github.blog/changelog/2026-10-10-new-controls-and-chat-improvements-in-copilot-for-jetbrains/</a></dd>
+        <dd><a href="https://plugins.jetbrains.com/plugin/17718-github-copilot--your-ai-pair-programmer/versions">plugins.jetbrains.com/plugin/17718-githu…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · CLOUDFLARE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> CLOUDFLARE <span class="sep">/</span> NEWS
+      </div>
+      <h2>HTMLのMarkdown変換、6MiBまで対応</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-11/topic_5.png" data-alt="HTMLのMarkdown変換、6MiBまで対応" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-11/topic_5.png" alt="HTMLのMarkdown変換、6MiBまで対応" />
+      </div>
+      <p class="lede">
+        CloudflareのMarkdown for Agentsが、届いたHTMLを順次変換する方式になりました。展開後のHTMLの上限は2MiBから6MiBへ増え、トークン数を示す二つのヘッダーとContent-Lengthは変換結果からなくなります。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">展開後のHTMLを最大6MiBまで変換</li>
+        <li data-i="02">届いた内容から順次処理する</li>
+        <li data-i="03">トークン数を使うクライアントは自分で計算</li>
+      </ul>
+      <div class="pull">
+        AIがWebページを読み込む処理の変更です。ヘッダーの値を前提にした取得プログラムは、値がなくても動くか確認できます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-10-09-markdown-for-agents-in-process-conversion/">Cloudflare</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-10-09-markdown-for-agents-in-process-conversion/">https://developers.cloudflare.com/changelog/post/2026-10-09-markdown-for-agents-in-process-conversion/</a></dd>
+        <dd><a href="https://developers.cloudflare.com/fundamentals/reference/markdown-for-agents/">developers.cloudflare.com/fundamentals/r…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · CLOUDFLARE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> CLOUDFLARE <span class="sep">/</span> NEWS
+      </div>
+      <h2>HTTP/3の499増加、通信中断の記録を改善</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-11/topic_6.png" data-alt="HTTP/3の499増加、通信中断の記録を改善" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-11/topic_6.png" alt="HTTP/3の499増加、通信中断の記録を改善" />
+      </div>
+      <p class="lede">
+        Cloudflareは、利用者側が中断したHTTP/3の通信を早く止め、499として記録する処理を改善しました。記録上の499が増えても、失敗した通信そのものが増えたとは限りません。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Free・Pro・Business・Enterpriseで適用</li>
+        <li data-i="02">不要になったオリジン側の処理を削減</li>
+        <li data-i="03">499は利用者側の通信中断を示す</li>
+      </ul>
+      <div class="pull">
+        監視画面で499が増えたとき、サーバー障害と切り分ける材料になります。可用性の計算に499を含めている場合は、集計条件を見直せます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-10-09-http3-499-reporting-improvement/">Cloudflare</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-10-09-http3-499-reporting-improvement/">https://developers.cloudflare.com/changelog/post/2026-10-09-http3-499-reporting-improvement/</a></dd>
+        <dd><a href="https://developers.cloudflare.com/support/troubleshooting/http-status-codes/4xx-client-error/error-499/">developers.cloudflare.com/support/troubl…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · CLOUDFLARE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        📰 公式発表 <span class="sep">/</span> CLOUDFLARE <span class="sep">/</span> NEWS
+      </div>
+      <h2>R2の通信量を配信拠点別に確認</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-11/topic_7.png" data-alt="R2の通信量を配信拠点別に確認" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-11/topic_7.png" alt="R2の通信量を配信拠点別に確認" />
+      </div>
+      <p class="lede">
+        Cloudflare R2の管理画面で、リクエストを処理した拠点ごとの通信量を見られるようになりました。保存先のバケットと、ダウンロード・アップロードを選んで比較できます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">既定では通信量の上位5拠点を表示</li>
+        <li data-i="02">一度に最大6拠点を選択</li>
+        <li data-i="03">バケットと読み書きの方向で絞り込める</li>
+      </ul>
+      <div class="pull">
+        画像や動画を置くアプリで、通信量がどの拠点に集中しているかを確認できます。利用地域の把握や運用時の調査に使えます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-10-09-r2-bandwidth-by-location/">Cloudflare</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>📰 公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-10-09-r2-bandwidth-by-location/">https://developers.cloudflare.com/changelog/post/2026-10-09-r2-bandwidth-by-location/</a></dd>
+        <dd><a href="https://developers.cloudflare.com/r2/platform/metrics-analytics/">developers.cloudflare.com/r2/platform/me…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://developers.cloudflare.com/changelog/post/2026-10-10-cloudflare-mcp-skills/">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-10-10/">
+      ← 前日 · 2026-10-10
+      <span class="big">Vercel CLIでドメイン購入の準備をAIに依頼</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-10-11/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20261011.0715</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

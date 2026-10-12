@@ -1,7 +1,37 @@
 {
- "generated": "2026-10-12T08:25:29+09:00",
- "count": 150,
+ "generated": "2026-10-13T08:20:53+09:00",
+ "count": 153,
  "items": [
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "AIと作ったワークフローの完成判定と再現性の確かめ方（全11枚）",
+   "date": "2026-10-12",
+   "url": "",
+   "tags": [],
+   "description": "パーソナルで伴走している受講生が、記事を作るワークフローを立て直していました。 ／ 添付: deck.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "特別編の解説動画「AI エージェント時代の Git」ができました（11 分 38 秒）",
+   "date": "2026-10-12",
+   "url": "",
+   "tags": [],
+   "description": "Claude Code や Codex に「コミットして」「プッシュして」と頼むとき、Git の中で何が起きているのかを、最初から説明した動画です。AI エージェントを何本も同時に動かすときに使う「ワークツリー」まで扱っています。 ／ 添付: VBC_special_Git_and_AI_agents.mp4",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "Claude Codeで作業前にモデル・effort・権限モードを選ぶ基準（全11枚）",
+   "date": "2026-10-12",
+   "url": "",
+   "tags": [],
+   "description": "Claude Code の画面の下には「auto」や「effort」といったつまみが並んでいます。講義では、この選び方を毎回口頭で説明していました。 ／ 添付: deck.pdf",
+   "extra_links": []
+  },
   {
    "type": "slack",
    "type_label": "Slack配布",

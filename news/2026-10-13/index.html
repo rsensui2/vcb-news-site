@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-10-13 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-10-13 の Vibe Coder Bootcamp モーニングディスパッチ — 6本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №1013</span>
+    <span class="sep">/</span>
+    <span>2026-10-13</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>06 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20261013.0715</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-10-13/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:15 · MON</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · MONDAY · OCTOBER 13, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>10<span class="dot">.</span>13</h1>
+    <div class="strap">
+      <span>Muse · AI · Agents · GitHub</span>
+      <span><span class="count">06</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        モデル <span class="sep">/</span> META公式ブログ・研究ブログ <span class="sep">/</span> NEWS
+      </div>
+      <h2>Muse Wonder、会話の記憶と継続作業を重視</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-13/topic_1.png" data-alt="Muse Wonder、会話の記憶と継続作業を重視" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-13/topic_1.png" alt="Muse Wonder、会話の記憶と継続作業を重視" />
+      </div>
+      <p class="lede">
+        Metaは、個人や業務の作業を担うMuse WonderとMuse Wonder Fullを発表しました。会話をまたいで必要な情報を取り出すActive Memoryと、難所で別の手段を試すActive Focusを掲げ、Muse WonderはMeta Model APIとMuse Code、FullはMuse Codeの購読者向けに提供します。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Muse WonderとMuse Wonder Fullの2モデル</li>
+        <li data-i="02">Active Memoryで過去の会話から必要な情報を取得</li>
+        <li data-i="03">Active Focusで長い作業の試行・修正を継続</li>
+        <li data-i="04">FullはMuse Code購読者向け。Museへの展開は今後</li>
+      </ul>
+      <div class="pull">
+        AIに長い仕事を任せる際は、回答の正しさに加え、過去の条件を覚えているか、失敗後に立て直せるかを比較できます。性能評価はMetaの公表値なので、自分の業務でも試す必要があります。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://about.fb.com/news/2026/10/introducing-muse-wonder-models/">Meta公式ブログ・研究ブログ</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-12</dd>
+        <dt>CATEGORY</dt>
+        <dd>モデル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://about.fb.com/news/2026/10/introducing-muse-wonder-models/">https://about.fb.com/news/2026/10/introducing-muse-wonder-models/</a></dd>
+        <dd><a href="https://research.meta.ai/blog/muse-wonder">research.meta.ai/blog/muse-wonder</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · VERCELCHANGELOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> VERCEL公式CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>AI GatewayからMuse Wonderを利用</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-13/topic_2.png" data-alt="AI GatewayからMuse Wonderを利用" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-13/topic_2.png" alt="AI GatewayからMuse Wonderを利用" />
+      </div>
+      <p class="lede">
+        Vercel AI GatewayがMetaのMuse Wonderに対応しました。モデルIDはmeta/muse-wonder-1.0で、100万トークンの入力枠、テキスト・画像・PDF入力、ツール呼び出し、構造化出力を利用できます。Metaのアカウントを別途作らず、AI GatewayのAPIキーで呼び出せます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">モデルIDはmeta/muse-wonder-1.0</li>
+        <li data-i="02">入力枠は100万トークン</li>
+        <li data-i="03">画像・PDF入力とツール呼び出しに対応</li>
+        <li data-i="04">AI GatewayのAPIキーで利用できる</li>
+      </ul>
+      <div class="pull">
+        AI Gatewayを使っているアプリなら、既存の呼び出し方でモデルを比較できます。大きな入力枠を全部使う前に、必要な資料だけで精度と料金を確認すると判断しやすくなります。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/muse-wonder-now-available-on-ai-gateway">Vercel公式changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-12</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/muse-wonder-now-available-on-ai-gateway">https://vercel.com/changelog/muse-wonder-now-available-on-ai-gateway</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · CLOUDFLARECHANGELO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        エージェント <span class="sep">/</span> CLOUDFLARE公式CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Agents SDKでWeb検索から本文取得まで</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-13/topic_3.png" data-alt="Agents SDKでWeb検索から本文取得まで" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-13/topic_3.png" alt="Agents SDKでWeb検索から本文取得まで" />
+      </div>
+      <p class="lede">
+        Cloudflare Agents SDKに、Webを検索するweb_searchとページを読むweb_fetchが追加されました。検索結果はタイトル・URL・短い説明で返り、両方を渡すとAIが本文も読むよう案内されます。web_fetchはPDFや対応するOffice文書をMarkdownに変換し、長い本文は分割して返します。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">web_searchはAgents SDK v0.27.0以降</li>
+        <li data-i="02">web_fetchはv0.28.0以降</li>
+        <li data-i="03">検索と本文取得を組み合わせて使用</li>
+        <li data-i="04">取得先のホスト・サイズ・待ち時間を制御可能</li>
+      </ul>
+      <div class="pull">
+        検索結果の短い説明だけで答えるAIから、元ページを読んで答えるAIを作りやすくなります。調査用エージェントでは、検索と本文取得を別々の工程として確認できます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-10-12-web-search/">Cloudflare公式changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-12</dd>
+        <dt>CATEGORY</dt>
+        <dd>エージェント</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-10-12-web-search/">https://developers.cloudflare.com/changelog/post/2026-10-12-web-search/</a></dd>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-10-11-web-fetch/">developers.cloudflare.com/changelog/post…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · GITHUBCHANGELOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ <span class="sep">/</span> GITHUB公式CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>GitHub、誰の認証でpushしたかを記録</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-13/topic_4.png" data-alt="GitHub、誰の認証でpushしたかを記録" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-13/topic_4.png" alt="GitHub、誰の認証でpushしたかを記録" />
+      </div>
+      <p class="lede">
+        GitHubは、コミットをpushした認証済みユーザーを記録し、作者・コミッターと並べて表示する機能をEnterprise向けの限定プレビューで公開しました。Committer must match pusherルールを使うと、コミッターのメールがpush実行者の検証済みメールと一致しないpushを拒否できます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">push実行者を作者・コミッターと別に記録</li>
+        <li data-i="02">認証済みの実行者をUIとAPIに表示</li>
+        <li data-i="03">メールの一致を求めるリポジトリルールを追加</li>
+        <li data-i="04">Enterprise顧客向けの限定プレビュー</li>
+      </ul>
+      <div class="pull">
+        AIや自動化がコードを送る運用でも、作者欄の文字列だけに頼らず、どの認証で入った変更かを追えます。利用対象とプレビュー参加条件は先に確認が必要です。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-10-12-push-attribution-public-preview/">GitHub公式changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-12</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-10-12-push-attribution-public-preview/">https://github.blog/changelog/2026-10-12-push-attribution-public-preview/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · CLOUDFLARECHANGELO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        運用 <span class="sep">/</span> CLOUDFLARE公式CHANGELOG・WORKERS仕様 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Workers更新時の猶予、最大20分に</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-13/topic_5.png" data-alt="Workers更新時の猶予、最大20分に" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-13/topic_5.png" alt="Workers更新時の猶予、最大20分に" />
+      </div>
+      <p class="lede">
+        Cloudflare Workersは、ランタイム更新時に進行中のリクエストや接続を待つ猶予を、最大30秒から最大20分に延ばしました。新しいリクエストは更新後のランタイムへ渡り、旧プロセスは既存の処理を終えてから停止します。猶予前にWebSocketが切れる場合もあるため、再接続や安全な再試行は引き続き必要です。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">ランタイム更新時の猶予は最大20分</li>
+        <li data-i="02">従来は最大30秒</li>
+        <li data-i="03">長いHTTP応答やAIの逐次出力が対象</li>
+        <li data-i="04">再接続と保存済み状態からの復帰は必要</li>
+      </ul>
+      <div class="pull">
+        AIの回答を少しずつ返すアプリでは、ランタイム更新による途中切断を減らせます。必ず20分続く保証ではないので、会話の状態を保存して再開する設計は残します。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-10-12-longer-runtime-update-grace-period/">Cloudflare公式changelog・Workers仕様</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-12</dd>
+        <dt>CATEGORY</dt>
+        <dd>運用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-10-12-longer-runtime-update-grace-period/">https://developers.cloudflare.com/changelog/post/2026-10-12-longer-runtime-update-grace-period/</a></dd>
+        <dd><a href="https://developers.cloudflare.com/workers/platform/limits/#runtime-updates">developers.cloudflare.com/workers/platfo…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · ANTHROPIC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        研究 <span class="sep">/</span> ANTHROPIC研究ブログ <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈研究〉小型AIの自律複製、できた範囲を検証</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-13/topic_6.png" data-alt="〈研究〉小型AIの自律複製、できた範囲を検証" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-13/topic_6.png" alt="〈研究〉小型AIの自律複製、できた範囲を検証" />
+      </div>
+      <p class="lede">
+        Anthropicは、IoT機器でAIを動かす準備と、複数の機器へ処理を広げる能力を評価しました。認証を省いた簡略化環境では、外部で動くGLM-5.2が別ノードにLlama3.1-8Bの推論環境を構築し、複製の流れを完了しました。小型モデル自身が実環境で自律増殖したことを示す実験ではありません。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">推論環境の構築と一連の複製を分けて評価</li>
+        <li data-i="02">侵入部分は認証なしの簡略化環境</li>
+        <li data-i="03">GLM-5.2の推論は別のサーバーで実行</li>
+        <li data-i="04">小型モデルは個別工程と全工程で成功率が異なる</li>
+        <li data-i="05">監視・隔離・機器の初期設定強化を防御策として議論</li>
+      </ul>
+      <div class="pull">
+        AIの能力を読むときは、成功した作業と実験で省いた条件を分けると、リスクを過大にも過小にも見積もらずに済みます。製品の発表とは分けて扱う研究です。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.anthropic.com/research/self-replicating-ai">Anthropic研究ブログ</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-12</dd>
+        <dt>CATEGORY</dt>
+        <dd>研究</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.anthropic.com/research/self-replicating-ai">https://www.anthropic.com/research/self-replicating-ai</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://about.fb.com/news/2026/10/introducing-muse-wonder-models/">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-10-12/">
+      ← 前日 · 2026-10-12
+      <span class="big">Ollama 0.40.3、モデルの裏側の移行を一時停止</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-10-13/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20261013.0715</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

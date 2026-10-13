@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-10-14 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-10-14 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №1014</span>
+    <span class="sep">/</span>
+    <span>2026-10-14</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20261014.0718</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-10-14/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:18 · TUE</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · TUESDAY · OCTOBER 14, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>10<span class="dot">.</span>14</h1>
+    <div class="strap">
+      <span>Gemini · ArgonをAI · Agents · Workersの障害をMCPイベントで受け取る</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 5 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        モデル <span class="sep">/</span> GOOGLE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Gemini 4 Argon、一般提供と導入価格を案内</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-14/topic_1.png" data-alt="Gemini 4 Argon、一般提供と導入価格を案内" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-14/topic_1.png" alt="Gemini 4 Argon、一般提供と導入価格を案内" />
+      </div>
+      <p class="lede">
+        GoogleはGemini 4 Argonを一般提供し、有料API、Google AI Ultra向けAntigravity、Pro・Ultra向けGeminiアプリとSearchのAI Modeからの利用を案内しました。Gemini APIの入出力上限は合計100万トークンです。導入価格は100万トークンあたり入力2ドル・出力10ドルで、11月30日の導入期間終了後は入力4ドル・出力20ドルになります。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">有料APIと購読サービスで一般提供</li>
+        <li data-i="02">APIの入出力は合計100万トークンまで</li>
+        <li data-i="03">導入価格は入力2ドル・出力10ドル／100万トークン</li>
+        <li data-i="04">11月30日の導入期間終了後は入力4ドル・出力20ドル</li>
+      </ul>
+      <div class="pull">
+        長い資料や複数段階の仕事に使う候補が増えます。性能はGoogleの公表評価と自分の業務での結果を分け、通常価格でも採算が合うか確認すると選びやすくなります。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/">Google</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-13T00:00:00</dd>
+        <dt>CATEGORY</dt>
+        <dd>モデル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/">https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/</a></dd>
+        <dd><a href="https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/">blog.google/innovation-and-ai/technology…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · VERCEL / GITHUB</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> VERCEL / GITHUB <span class="sep">/</span> NEWS
+      </div>
+      <h2>ArgonをAI GatewayとCopilotから利用</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-14/topic_2.png" data-alt="ArgonをAI GatewayとCopilotから利用" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-14/topic_2.png" alt="ArgonをAI GatewayとCopilotから利用" />
+      </div>
+      <p class="lede">
+        Vercel AI GatewayがGemini 4 Argonに対応し、モデルID google/gemini-4-argonでテキスト・画像・PDF・動画の入力とツール呼び出しを利用できます。思考量はlow・medium・highの3段階です。GitHub CopilotでもPro+・Max・Business・Enterprise向けに段階的に提供し、組織の管理者はモデルポリシーで利用を制御できます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">AI GatewayのIDはgoogle/gemini-4-argon</li>
+        <li data-i="02">思考量はlow・medium・highの3段階</li>
+        <li data-i="03">CopilotはPro+・Max・Business・Enterpriseが対象</li>
+        <li data-i="04">Copilotへの提供は段階的。組織ではモデルポリシーを確認</li>
+      </ul>
+      <div class="pull">
+        既存のAI開発環境から試す経路が増えます。GatewayのAPI課金とCopilotの契約・従量課金をそれぞれ確認し、同じ作業を比べると判断できます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/gemini-4-argon-now-available-on-ai-gateway">Vercel / GitHub</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-13T00:00:00</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/gemini-4-argon-now-available-on-ai-gateway">https://vercel.com/changelog/gemini-4-argon-now-available-on-ai-gateway</a></dd>
+        <dd><a href="https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot/">github.blog/changelog/2026-10-13-gemini-…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · CLOUDFLARE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        エージェント <span class="sep">/</span> CLOUDFLARE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Agents SDK、ブラウザの状態を次のターンへ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-14/topic_3.png" data-alt="Agents SDK、ブラウザの状態を次のターンへ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-14/topic_3.png" alt="Agents SDK、ブラウザの状態を次のターンへ" />
+      </div>
+      <p class="lede">
+        Cloudflare Agents SDKに、ブラウザを次のターンでも使えるbrowserToolが加わりました。ブラウザのセッションが生きている間は、タブ・Cookie・ログイン状態を保ち、Durable Objectが休止しても再接続できます。既定のアイドル期限は10分で、失効やクラッシュ後は新しいブラウザになり、以前の状態は失われます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Agents SDK v0.28.0以降で利用</li>
+        <li data-i="02">タブ・Cookie・ログインをターン間で保持</li>
+        <li data-i="03">既定のアイドル期限は10分</li>
+        <li data-i="04">失効後はrestarted:true。元のログインは復元されない</li>
+      </ul>
+      <div class="pull">
+        ログインを伴う巡回や複数ページの調査を続けやすくなります。永久保存ではないため、再開時はログイン状態を確かめ、操作済みの仕事を重複させない設計が必要です。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-10-13-persistent-browser/">Cloudflare</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-13T00:00:00</dd>
+        <dt>CATEGORY</dt>
+        <dd>エージェント</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-10-13-persistent-browser/">https://developers.cloudflare.com/changelog/post/2026-10-13-persistent-browser/</a></dd>
+        <dd><a href="https://developers.cloudflare.com/agents/tools/browser/">developers.cloudflare.com/agents/tools/b…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · CLOUDFLARE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        運用 <span class="sep">/</span> CLOUDFLARE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Workersの障害をMCPイベントで受け取る</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-14/topic_4.png" data-alt="Workersの障害をMCPイベントで受け取る" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-14/topic_4.png" alt="Workersの障害をMCPイベントで受け取る" />
+      </div>
+      <p class="lede">
+        Cloudflare APIのMCPサーバーが、Workers Issuesの新規・再発障害を署名付きイベントでクライアントのwebhookへ届けるようになりました。events/listでイベントを見つけ、events/subscribeでアカウントまたは単一Workerを購読します。WorkerのIssuesを有効にし、指定の書き込み権限とMCP Events対応クライアントを用意する必要があります。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">新規・再発のWorkers Issueを通知</li>
+        <li data-i="02">events/listとevents/subscribeで購読</li>
+        <li data-i="03">署名付きwebhookでイベントを配信</li>
+        <li data-i="04">Notifications WriteとWorkers Observability Writeが必要</li>
+      </ul>
+      <div class="pull">
+        監視対象を何度も問い合わせる運用を減らし、障害発生をきっかけにAIの調査を始められます。通知を受けることと本番を修正する権限は、別々に決めて運用できます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-10-13-cloudflare-mcp-events/">Cloudflare</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-13T00:00:00</dd>
+        <dt>CATEGORY</dt>
+        <dd>運用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-10-13-cloudflare-mcp-events/">https://developers.cloudflare.com/changelog/post/2026-10-13-cloudflare-mcp-events/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · VERCEL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        画像 <span class="sep">/</span> VERCEL <span class="sep">/</span> NEWS
+      </div>
+      <h2>MAI-Image-2.6、生成と編集をAI Gatewayで</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-14/topic_5.png" data-alt="MAI-Image-2.6、生成と編集をAI Gatewayで" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-14/topic_5.png" alt="MAI-Image-2.6、生成と編集をAI Gatewayで" />
+      </div>
+      <p class="lede">
+        Vercel AI GatewayがMicrosoftのMAI-Image-2.6とMAI-Image-2.6-Flashに対応しました。画像の生成と編集ができ、参照画像は最大5枚、出力は最大1536×1536です。Vercelは品質を重視する最終素材に通常版、多数の試作や反復に速く低コストなFlash版を案内しています。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">画像の生成と既存画像の編集に対応</li>
+        <li data-i="02">参照画像は最大5枚</li>
+        <li data-i="03">出力は最大1536×1536</li>
+        <li data-i="04">品質重視の通常版と試作向けFlash版</li>
+      </ul>
+      <div class="pull">
+        試作と仕上げでモデルを使い分け、画像生成も既存のGateway経由で扱えます。文字の正確さや部分編集の結果は、用途に合う実物で確認してから採用します。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/mai-image-2-6-and-mai-image-2-6-flash-now-available-on-ai-gateway">Vercel</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-13T00:00:00</dd>
+        <dt>CATEGORY</dt>
+        <dd>画像</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/mai-image-2-6-and-mai-image-2-6-flash-now-available-on-ai-gateway">https://vercel.com/changelog/mai-image-2-6-and-mai-image-2-6-flash-now-available-on-ai-gateway</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · GITHUB</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ <span class="sep">/</span> GITHUB <span class="sep">/</span> NEWS
+      </div>
+      <h2>GitHub、Anthropicキーのpushを既定で保護</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-14/topic_6.png" data-alt="GitHub、Anthropicキーのpushを既定で保護" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-14/topic_6.png" alt="GitHub、Anthropicキーのpushを既定で保護" />
+      </div>
+      <p class="lede">
+        GitHubのシークレットスキャンがAnthropicのservice・user APIキーを新たに検出し、既定のpush保護対象に加えました。シークレットスキャンが有効なリポジトリでは、無料の公開リポジトリも含め、これらの秘密を含むコミットをブロックします。Salesforceを検知パートナーに追加し、CloudsmithのAPIキーも検出対象にしました。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Anthropicのservice・user APIキーを検出</li>
+        <li data-i="02">両キーを既定のpush保護対象に追加</li>
+        <li data-i="03">シークレットスキャン有効リポジトリが対象</li>
+        <li data-i="04">Salesforceのパートナー追加とCloudsmithキー検出</li>
+      </ul>
+      <div class="pull">
+        AI開発で扱うキーの誤送信を止める仕組みが増えます。自分のリポジトリでスキャンと保護が有効か確認し、環境変数や秘密管理と合わせて使えます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-10-13-secret-scanning-blocks-anthropic-keys-by-default-adds-salesforce/">GitHub</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-13T00:00:00</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-10-13-secret-scanning-blocks-anthropic-keys-by-default-adds-salesforce/">https://github.blog/changelog/2026-10-13-secret-scanning-blocks-anthropic-keys-by-default-adds-salesforce/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · SPACEXSI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AIサービス <span class="sep">/</span> @SPACEXSI <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>Grok・Cursor・Xの購読プランを統合</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-14/topic_7.png" data-alt="Grok・Cursor・Xの購読プランを統合" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-14/topic_7.png" alt="Grok・Cursor・Xの購読プランを統合" />
+      </div>
+      <p class="lede">
+        SpaceX Super Intelligenceは、Grok・Cursor・X PremiumをまとめたThe X Subscriptionを発表しました。公式スレッドではFreeからUltraまで5つのプランを案内し、既存の契約を維持するか新プランへ切り替え、アカウントを連携できると説明しています。提供は段階的で、利用可否と期間限定のオファーは課金設定で確認するよう案内しています。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">FreeからUltraまで5つのプラン</li>
+        <li data-i="02">Grok・Cursor・X Premiumをまとめて利用</li>
+        <li data-i="03">既存契約を維持する選択も可能</li>
+        <li data-i="04">段階提供。価格と利用量は課金画面で確認</li>
+      </ul>
+      <div class="pull">
+        複数のAIサービスを契約している人は、契約をまとめる選択肢が増えます。スレッドだけでは個別価格と利用上限を確定できないため、普段使う機能と実際の料金を比べてから切り替えます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">15,774</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/SpaceXSI/status/2109783335296008414">@SpaceXSI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-12T00:00:00</dd>
+        <dt>CATEGORY</dt>
+        <dd>AIサービス</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/SpaceXSI/status/2109783335296008414">x.com/SpaceXSI/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-10-13/">
+      ← 前日 · 2026-10-13
+      <span class="big">Muse Wonder、会話の記憶と継続作業を重視</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-10-14/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20261014.0718</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,7 +1,17 @@
 {
- "generated": "2026-10-14T08:30:57+09:00",
- "count": 153,
+ "generated": "2026-10-15T08:20:51+09:00",
+ "count": 154,
  "items": [
+  {
+   "type": "note",
+   "type_label": "note",
+   "title": "「作れる」はもう驚きじゃない──次に価値が立つのは、ベテランの「勘」を残すことだ",
+   "date": "2026-10-14",
+   "url": "https://note.com/rsensui/n/nee0d7d02e357",
+   "tags": [],
+   "description": "",
+   "extra_links": []
+  },
   {
    "type": "slack",
    "type_label": "Slack配布",

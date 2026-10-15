@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-10-16 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-10-16 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №1016</span>
+    <span class="sep">/</span>
+    <span>2026-10-16</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20261016.0716</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-10-16/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:16 · THU</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · THURSDAY · OCTOBER 16, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>10<span class="dot">.</span>16</h1>
+    <div class="strap">
+      <span>GitHub · Agentic · Vercel · Vercel</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ <span class="sep">/</span> GITHUB <span class="sep">/</span> NEWS
+      </div>
+      <h2>GitHub AI Scan、PRの差分から脆弱性を検出</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-16/topic_1.png" data-alt="GitHub AI Scan、PRの差分から脆弱性を検出" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-16/topic_1.png" alt="GitHub AI Scan、PRの差分から脆弱性を検出" />
+      </div>
+      <p class="lede">
+        GitHubがAI Scan for pull requestsを一般提供しました。PHP、Shell/Bash、Terraformなど、CodeQLで十分に扱えない言語や構成の変更を調べ、PR上にリスクの説明や修正案を表示します。所見は助言扱いで、チェックを失敗させたりマージを止めたりする機能ではありません。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">CodeQLの対象外を含むPR差分を検査</li>
+        <li data-i="02">所見は助言。マージを自動では止めない</li>
+        <li data-i="03">フォークとDependabotのPRは対象外</li>
+        <li data-i="04">非公開・internalではCode Security等が必要</li>
+        <li data-i="05">Code Security AI Creditsを消費。Copilot契約は不要</li>
+      </ul>
+      <div class="pull">
+        AIが書いた設定ファイルも、レビュー前の確認にかけやすくなります。検出結果を誰が確認し、どこで修正を必須にするかは、チーム側で決める必要があります。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-10-15-ai-scan-for-pull-requests-generally-available/">GitHub</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-15</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-10-15-ai-scan-for-pull-requests-generally-available/">https://github.blog/changelog/2026-10-15-ai-scan-for-pull-requests-generally-available/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · GITHUB</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> GITHUB <span class="sep">/</span> NEWS
+      </div>
+      <h2>Agentic autofix、修正を検証してドラフトPRへ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-16/topic_2.png" data-alt="Agentic autofix、修正を検証してドラフトPRへ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-16/topic_2.png" alt="Agentic autofix、修正を検証してドラフトPRへ" />
+      </div>
+      <p class="lede">
+        GitHubのAgentic autofixが一般提供になり、アラートの調査、修正案の作成、CodeQLでの再検査を経てドラフトPRを開けるようになりました。10月15日の発表ではGitHub Enterprise CloudのCode Security／Advanced Security利用者を対象としています。既定ブランチのアラートを最大25件まとめて依頼でき、管理者の有効化と課金設定が必要です。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">関連ファイルの調査からCodeQL再検査まで実行</li>
+        <li data-i="02">既定ブランチのアラートが対象</li>
+        <li data-i="03">最大25件を1本のドラフトPRにまとめる</li>
+        <li data-i="04">Code Security AI CreditsとActions分を消費</li>
+        <li data-i="05">生成された変更は人がレビュー・テストする</li>
+      </ul>
+      <div class="pull">
+        検知した問題を修正候補にするまでの作業を任せられます。AI Scanによる検出とは別の機能で、修正後の安全性や動作はPRのレビューでも確認します。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability/">GitHub</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-15</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability/">https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · VERCEL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        実行基盤 <span class="sep">/</span> VERCEL <span class="sep">/</span> NEWS
+      </div>
+      <h2>Vercel Daemons、常駐ワーカーをベータ提供</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-16/topic_3.png" data-alt="Vercel Daemons、常駐ワーカーをベータ提供" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-16/topic_3.png" alt="Vercel Daemons、常駐ワーカーをベータ提供" />
+      </div>
+      <p class="lede">
+        Vercel Daemonsのパブリックベータが始まりました。HTTPサーバーを用意せず、キューなどから仕事を取り続けるコンテナをアプリと同じプロジェクトに配置できます。リージョンごとに指定した台数を維持し、プロセス終了やクラッシュ時には再起動します。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Celery・BullMQ・Kafkaなどのワーカーに対応</li>
+        <li data-i="02">リージョンごとの台数を指定</li>
+        <li data-i="03">終了・クラッシュ時にインスタンスを再起動</li>
+        <li data-i="04">ベータでは自動増減・永続ストレージに未対応</li>
+        <li data-i="05">プレビュー環境へのデプロイは未対応</li>
+      </ul>
+      <div class="pull">
+        Webアプリと裏側のワーカーを同じ基盤で運用する選択肢が増えます。再起動で同じ仕事を重複処理しない仕組みと、外部に状態を保存する設計を合わせて考えられます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/vercel-daemons-is-now-in-public-beta">Vercel</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-15</dd>
+        <dt>CATEGORY</dt>
+        <dd>実行基盤</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/vercel-daemons-is-now-in-public-beta">https://vercel.com/changelog/vercel-daemons-is-now-in-public-beta</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · VERCEL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ストレージ <span class="sep">/</span> VERCEL <span class="sep">/</span> NEWS
+      </div>
+      <h2>Vercel Drives、Sandboxのファイルを永続化</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-16/topic_4.png" data-alt="Vercel Drives、Sandboxのファイルを永続化" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-16/topic_4.png" alt="Vercel Drives、Sandboxのファイルを永続化" />
+      </div>
+      <p class="lede">
+        Vercel Sandbox向けの永続ストレージVercel Drivesが、Hobby・Pro・Enterpriseで一般提供になりました。ディレクトリとしてマウントしたファイルはSandbox停止後も残り、次の実行や別のSandboxから利用できます。forkで独立して書き込めるコピーを作り、並列ワーカーの変更を分離することもできます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Sandbox停止後もファイルを保存</li>
+        <li data-i="02">別Sandboxから同じDriveをマウント可能</li>
+        <li data-i="03">forkしたDriveの変更は相互に干渉しない</li>
+        <li data-i="04">Hobby・Pro・Enterpriseで一般提供</li>
+      </ul>
+      <div class="pull">
+        AIの作業ファイルやデータセットを、実行のたびに準備し直す手間を減らせます。Daemonsの永続ストレージ対応とは別で、今回の対象はSandboxです。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/vercel-drives-is-now-generally-available">Vercel</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-15</dd>
+        <dt>CATEGORY</dt>
+        <dd>ストレージ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/vercel-drives-is-now-generally-available">https://vercel.com/changelog/vercel-drives-is-now-generally-available</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · OPENAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> OPENAI <span class="sep">/</span> NEWS
+      </div>
+      <h2>Codex 0.163.0、応答中でも指示を変更</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-16/topic_5.png" data-alt="Codex 0.163.0、応答中でも指示を変更" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-16/topic_5.png" alt="Codex 0.163.0、応答中でも指示を変更" />
+      </div>
+      <p class="lede">
+        Codexの安定版0.163.0が公開されました。応答中に追加の指示を送って方針を変えられ、割り込み時には実行中のCode Modeとその配下のツール呼び出しも停止します。設定を横断検索して変更する/configや、独立した読み取り専用ツールの並列実行も加わりました。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">/configで設定を検索・変更</li>
+        <li data-i="02">応答中の追加指示を即座に反映</li>
+        <li data-i="03">割り込み時は配下のツール呼び出しも停止</li>
+        <li data-i="04">/daemonから管理対象サーバーを再起動</li>
+        <li data-i="05">保存した会話の再開時に権限設定を復元</li>
+      </ul>
+      <div class="pull">
+        調査を待ってから指示を出し直す手間が減ります。外部ツールで既に完了した操作まで取り消す機能ではないため、途中で方針を変えた際も結果を確認して続けます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/openai/codex/releases/tag/rust-v0.163.0">OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-15</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/openai/codex/releases/tag/rust-v0.163.0">https://github.com/openai/codex/releases/tag/rust-v0.163.0</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · CLOUDFLARE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ネットワーク <span class="sep">/</span> CLOUDFLARE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cloudflare Gateway、許可通信をWorkersへ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-16/topic_6.png" data-alt="Cloudflare Gateway、許可通信をWorkersへ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-16/topic_6.png" alt="Cloudflare Gateway、許可通信をWorkersへ" />
+      </div>
+      <p class="lede">
+        Cloudflare GatewayとWorkersの連携が、全Zero Trustプランでパブリックベータになりました。HTTPポリシーのForwardに一致した許可済み通信で、自作のWorkerを実行できます。リクエストや応答の変換、案内ページの返却、通知などを、別のプロキシを運用せず組み込めます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">全Zero Trustプランのパブリックベータ</li>
+        <li data-i="02">Forwardアクションで自作Workerを実行</li>
+        <li data-i="03">ユーザー情報などGatewayの文脈を受け取る</li>
+        <li data-i="04">最終応答もGatewayが検査</li>
+        <li data-i="05">本文検査のBlockでWorkerが中断される場合あり</li>
+      </ul>
+      <div class="pull">
+        社内の通信ルールに応じた案内や記録をコードで追加できます。認証情報や通信内容をどこまで処理するかを決めてから、小さな対象範囲で試しやすくなります。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-10-15-gateway-workers-public-beta/">Cloudflare</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-15</dd>
+        <dt>CATEGORY</dt>
+        <dd>ネットワーク</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-10-15-gateway-workers-public-beta/">https://developers.cloudflare.com/changelog/post/2026-10-15-gateway-workers-public-beta/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · ANTHROPIC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        知見 <span class="sep">/</span> ANTHROPIC <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉Anthropic、巨大モノレポをScionへ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-16/topic_7.png" data-alt="〈知見〉Anthropic、巨大モノレポをScionへ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-16/topic_7.png" alt="〈知見〉Anthropic、巨大モノレポをScionへ" />
+      </div>
+      <p class="lede">
+        Anthropicは自社の巨大モノレポを、内製の版管理システムScionへ5か月で移行した経緯を公開しました。同社によると、1日あたりのマージは5月の約2,500件から9月の3万件超に増加しています。常時オンラインのエージェントを前提に処理をサーバーへ寄せ、CIのチェックアウト高速化とインフラ縮小を実現したと説明しています。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">原文10月13日公開、15日追記の技術事例</li>
+        <li data-i="02">常時オンライン・サーバー中心の設計</li>
+        <li data-i="03">同社公表でCPU・メモリの規模が約200分の1</li>
+        <li data-i="04">7人で版管理・レビュー基盤などを構築</li>
+        <li data-i="05">一般向けのGit代替としての公開予定はない</li>
+      </ul>
+      <div class="pull">
+        AIで変更を作る速度が上がると、レビューやCIが次の制約になります。自分の開発でも、生成量を増やす前に待ち時間が集中する工程を測る材料になります。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.anthropic.com/engineering/redesigning-source-control">Anthropic</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-13</dd>
+        <dt>CATEGORY</dt>
+        <dd>知見</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.anthropic.com/engineering/redesigning-source-control">https://www.anthropic.com/engineering/redesigning-source-control</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://github.blog/changelog/2026-10-15-ai-scan-for-pull-requests-generally-available/">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-10-15/">
+      ← 前日 · 2026-10-15
+      <span class="big">GitHub Actions、実行する依存コードをロック</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-10-16/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20261016.0716</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

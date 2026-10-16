@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-10-17 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-10-17 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №1017</span>
+    <span class="sep">/</span>
+    <span>2026-10-17</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20261017.0715</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-10-17/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:15 · FRI</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · FRIDAY · OCTOBER 17, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>10<span class="dot">.</span>17</h1>
+    <div class="strap">
+      <span>Beam · Glimpse · AI · Claude</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        モデル・開発ツール <span class="sep">/</span> VERCEL / REFLECTION AI <span class="sep">/</span> NEWS
+      </div>
+      <h2>Beam、公開重みのAIを期間限定で無料提供</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-17/topic_1.png" data-alt="Beam、公開重みのAIを期間限定で無料提供" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-17/topic_1.png" alt="Beam、公開重みのAIを期間限定で無料提供" />
+      </div>
+      <p class="lede">
+        Vercelは、ステルス名Cat Jamで提供していたモデルの正体がReflection AIのBeamだと明らかにしました。AI Gatewayでは、Reflection AI経由の利用が公開記念の期間限定で無料になります。重みはApache 2.0で公開されています。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">コード生成とエージェント作業向けの推論モデル</li>
+        <li data-i="02">100万トークンの文脈、ツール呼び出し、構造化出力に対応</li>
+        <li data-i="03">総501Bパラメータのうち、1トークンで23Bを使用</li>
+        <li data-i="04">reflection/beamは無料期間後に有料へ移行</li>
+        <li data-i="05">reflection/beam-freeは無料期間が終わると停止</li>
+      </ul>
+      <div class="pull">
+        既存のコーディングエージェントに入れて、品質や待ち時間を比較できます。自動課金を避けたい検証では、無料期間後に停止する名前を選ぶ方法があります。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/reflection-ai-beam-now-available-on-ai-gateway-for-free">Vercel / Reflection AI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-16</dd>
+        <dt>CATEGORY</dt>
+        <dd>モデル・開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/reflection-ai-beam-now-available-on-ai-gateway-for-free">https://vercel.com/changelog/reflection-ai-beam-now-available-on-ai-gateway-for-free</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · ELORIAN</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        画像・動画AI <span class="sep">/</span> ELORIAN <span class="sep">/</span> NEWS
+      </div>
+      <h2>Glimpse、画像や動画を見直しながら推論</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-17/topic_2.png" data-alt="Glimpse、画像や動画を見直しながら推論" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-17/topic_2.png" alt="Glimpse、画像や動画を見直しながら推論" />
+      </div>
+      <p class="lede">
+        Elorianは、考える途中で視覚情報を見直すモデルGlimpseを研究プレビューとして公開しました。画像や動画を処理するツール、コード実行、複数エージェントの協調を使い、APIとチャット画面から利用できます。公式記事の料金は100万トークンあたり入力0.60ドル、出力3ドルです。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">推論の途中で視覚情報を再確認</li>
+        <li data-i="02">画像変換・動画処理などのツールを利用</li>
+        <li data-i="03">APIとチャット画面で研究プレビューを提供</li>
+        <li data-i="04">料金は入力0.60ドル・出力3ドル／100万トークン</li>
+        <li data-i="05">一部評価で上位モデル並みとする結果は自社評価</li>
+      </ul>
+      <div class="pull">
+        図表や動画の読み取りに使える候補が増えます。自社の資料で読み落としや誤認識を確認し、価格と精度を比較したいモデルです。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://elorian.ai/blog/introducing-glimpse">Elorian</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-16</dd>
+        <dt>CATEGORY</dt>
+        <dd>画像・動画AI</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://elorian.ai/blog/introducing-glimpse">https://elorian.ai/blog/introducing-glimpse</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · CLOUDFLARE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        検索・社内文書 <span class="sep">/</span> CLOUDFLARE <span class="sep">/</span> NEWS
+      </div>
+      <h2>AI Search、日本語の自然文でキーワード検索</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-17/topic_3.png" data-alt="AI Search、日本語の自然文でキーワード検索" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-17/topic_3.png" alt="AI Search、日本語の自然文でキーワード検索" />
+      </div>
+      <p class="lede">
+        Cloudflare AI Searchのキーワード検索が、trigram設定で日本語・中国語・韓国語の質問に対応しました。従来は空白のない質問を一つの完全一致フレーズとして扱い、結果がほとんど返らないことがありました。設定を変更すると、文書全体の再インデックスが走ります。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">日本語・中国語・韓国語の自然文を検索可能</li>
+        <li data-i="02">keyword_tokenizerをtrigramに設定</li>
+        <li data-i="03">porterはこれらの言語に不向き</li>
+        <li data-i="04">空白なしの質問が完全一致扱いになる問題を改善</li>
+        <li data-i="05">設定変更時は全件再インデックス</li>
+      </ul>
+      <div class="pull">
+        社内規程に日本語で質問する検索システムを作りやすくなります。既存の運用では、設定変更後の再インデックスを見込んで切り替えます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-10-16-cjk-keyword-search/">Cloudflare</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-16</dd>
+        <dt>CATEGORY</dt>
+        <dd>検索・社内文書</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-10-16-cjk-keyword-search/">https://developers.cloudflare.com/changelog/post/2026-10-16-cjk-keyword-search/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · ANTHROPIC / GITHUB</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> ANTHROPIC / GITHUB RELEASES <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code、自動圧縮の切り替えを追加</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-17/topic_4.png" data-alt="Claude Code、自動圧縮の切り替えを追加" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-17/topic_4.png" alt="Claude Code、自動圧縮の切り替えを追加" />
+      </div>
+      <p class="lede">
+        Claude Code 2.1.302は、待機中の会話を自動圧縮するIdle compactionを、/configから切り替えられるようにしました。単体版Claude Designが12月14日までに終了する告知も追加されています。クラウドの定期ルーチンが途中失敗後に再実行され、同じ報告を投稿しうる不具合も修正しました。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">/configでIdle compactionをオン・オフ</li>
+        <li data-i="02">単体版Claude Designは12月14日までに終了と告知</li>
+        <li data-i="03">forkサブエージェントをSDKやVS Codeでも既定有効に</li>
+        <li data-i="04">同一イベントのフック同時実行を最大12個に制限</li>
+        <li data-i="05">クラウドの定期ルーチンによる二重処理を修正</li>
+      </ul>
+      <div class="pull">
+        会話の自動整理を自分の運用に合わせて調整できます。定期実行を使う場合は、途中失敗後の重複処理を抑える修正にも注目です。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.302">Anthropic / GitHub Releases</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-16</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.302">https://github.com/anthropics/claude-code/releases/tag/v2.1.302</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · GITHUB</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        提供終了・移行 <span class="sep">/</span> GITHUB <span class="sep">/</span> NEWS
+      </div>
+      <h2>Copilot、3モデルの提供を11月16日に終了</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-17/topic_5.png" data-alt="Copilot、3モデルの提供を11月16日に終了" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-17/topic_5.png" alt="Copilot、3モデルの提供を11月16日に終了" />
+      </div>
+      <p class="lede">
+        GitHub Copilotは11月16日、Claude Opus 4.8、Claude Opus 5、GPT-5.6 Terraの提供を終了する予定です。推奨の代替はOpus 5.5、GPT-6.1 SolまたはGPT-6 Lunaです。年払いの個人契約では、Opus 4.8が引き続き利用できます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">終了予定日は2026年11月16日</li>
+        <li data-i="02">対象はOpus 4.8・Opus 5・GPT-5.6 Terra</li>
+        <li data-i="03">Opus系の代替はClaude Opus 5.5</li>
+        <li data-i="04">Terraの代替はGPT-6.1 SolまたはGPT-6 Luna</li>
+        <li data-i="05">年払い個人契約のOpus 4.8は例外として継続</li>
+      </ul>
+      <div class="pull">
+        モデル名を固定している設定や連携は、期限までに見直す必要があります。組織のモデル利用ポリシーによっては、代替モデルを管理者が有効にする作業も必要です。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november/">GitHub</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-15</dd>
+        <dt>CATEGORY</dt>
+        <dd>提供終了・移行</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november/">https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · GITHUB</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        企業向け開発管理 <span class="sep">/</span> GITHUB <span class="sep">/</span> NEWS
+      </div>
+      <h2>GitHub、依存ライセンスをマージ前に検査</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-17/topic_6.png" data-alt="GitHub、依存ライセンスをマージ前に検査" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-17/topic_6.png" alt="GitHub、依存ライセンスをマージ前に検査" />
+      </div>
+      <p class="lede">
+        GitHub Enterprise Cloudで、企業のライセンス方針に依存パッケージが合うかを検査する機能が一般提供されました。Code Securityを有効にしたリポジトリへルールを適用すると、依存を追加・変更するPRで検査します。エージェントがパッケージの準拠状況を問い合わせるAPIも用意されています。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Enterprise CloudのCode Security有効リポジトリが対象</li>
+        <li data-i="02">企業共通のライセンス方針をルールで適用</li>
+        <li data-i="03">依存を追加・変更するPRへ不適合を注記</li>
+        <li data-i="04">依存の置き換えや例外承認などで対処</li>
+        <li data-i="05">準拠確認APIをコーディングエージェントから利用可能</li>
+      </ul>
+      <div class="pull">
+        AIが追加するライブラリも、企業の利用方針に沿って確認できます。マージ時の検査に加え、導入候補を選ぶ段階でAPIを使う運用が考えられます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-10-16-open-source-license-compliance-generally-available/">GitHub</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-16</dd>
+        <dt>CATEGORY</dt>
+        <dd>企業向け開発管理</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-10-16-open-source-license-compliance-generally-available/">https://github.blog/changelog/2026-10-16-open-source-license-compliance-generally-available/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · OGAAIICHIRO / GITH</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        日本語・業務文書 <span class="sep">/</span> @OGA_AIICHIRO / GITHUB RELEASES <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>yomiyasu、推敲後の数値や否定を検査</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-17/topic_7.png" data-alt="yomiyasu、推敲後の数値や否定を検査" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-17/topic_7.png" alt="yomiyasu、推敲後の数値や否定を検査" />
+      </div>
+      <p class="lede">
+        日本語推敲スキルyomiyasu v2.0.0は、書き直した文章を返す前に、数値や否定など原文の意味が保たれているかを検査します。相手や用途に合わせた表現と、Codexで名前を呼ぶだけで使う手順も改善しました。文章の読みやすさと内容の保持を合わせて確認する更新です。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">推敲後に数値や否定の変化を確認</li>
+        <li data-i="02">宛先や用途に合う言い回しへ調整</li>
+        <li data-i="03">Codexで名前を呼ぶ操作を改善</li>
+        <li data-i="04">v2.0.0のリリースノートを公開</li>
+      </ul>
+      <div class="pull">
+        メールや報告書の推敲では、流暢になっても金額や条件が変わると困ります。読みやすさを整えた後に内容も検査する手順を取り入れられます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">1,461</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/oga_aiichiro/status/2111017711287542140">@oga_aiichiro</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-16</dd>
+        <dt>CATEGORY</dt>
+        <dd>日本語・業務文書</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/oga_aiichiro/status/2111017711287542140">x.com/oga_aiichiro/…</a></dd>
+        <dd><a href="https://github.com/nanaism/yomiyasu/releases/tag/v2.0.0">github.com/nanaism/yomiyasu/releases/tag…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://vercel.com/changelog/reflection-ai-beam-now-available-on-ai-gateway-for-free">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-10-16/">
+      ← 前日 · 2026-10-16
+      <span class="big">GitHub AI Scan、PRの差分から脆弱性を検出</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-10-17/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20261017.0715</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

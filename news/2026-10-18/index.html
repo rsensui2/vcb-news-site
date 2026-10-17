@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-10-18 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-10-18 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №1018</span>
+    <span class="sep">/</span>
+    <span>2026-10-18</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20261018.0715</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-10-18/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:15 · SAT</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SATURDAY · OCTOBER 18, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>10<span class="dot">.</span>18</h1>
+    <div class="strap">
+      <span>DeepSeek更新版 · Muse · FLUX · 〈知見〉Claudeと検証器で量子回路を改善</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        モデル・開発 <span class="sep">/</span> DEEPSEEK / VERCEL <span class="sep">/</span> NEWS
+      </div>
+      <h2>DeepSeek更新版、性能と処理効率を改善</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-18/topic_1.png" data-alt="DeepSeek更新版、性能と処理効率を改善" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-18/topic_1.png" alt="DeepSeek更新版、性能と処理効率を改善" />
+      </div>
+      <p class="lede">
+        DeepSeekはV4.1 Flash 1017を公開し、前版より性能を高めながら処理時間と出力を減らしたと説明しています。重みも公開し、SearchとFetchのAPIを一般開放しました。各APIは1,000回0.75ドルで、対象ツール経由の無料利用は11月1日午前1時（日本時間）までです。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Web・アプリ・APIで更新版を提供</li>
+        <li data-i="02">自己フィードバックを使う強化学習で開発を改善</li>
+        <li data-i="03">重みをHugging FaceとModelScopeで公開</li>
+        <li data-i="04">Search・Fetchは各1,000回0.75ドル</li>
+        <li data-i="05">対象ツール経由の無料利用は11月1日午前1時まで</li>
+      </ul>
+      <div class="pull">
+        エージェントの費用は単価だけでなく、完了までの時間と出力量でも変わります。自分の作業で前版と比べる判断材料になります。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://api-docs.deepseek.com/news/news261017">DeepSeek / Vercel</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-17</dd>
+        <dt>CATEGORY</dt>
+        <dd>モデル・開発</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://api-docs.deepseek.com/news/news261017">https://api-docs.deepseek.com/news/news261017</a></dd>
+        <dd><a href="https://vercel.com/changelog/deepseek-v4-1-flash-1017-now-available-on-ai-gateway">vercel.com/changelog/deepseek-v4-1-flash…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · META / APPLE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ローカルLLM <span class="sep">/</span> META / APPLE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Muse Spark Open、複数のMacで実行可能に</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-18/topic_2.png" data-alt="Muse Spark Open、複数のMacで実行可能に" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-18/topic_2.png" alt="Muse Spark Open、複数のMacで実行可能に" />
+      </div>
+      <p class="lede">
+        Metaは816Bパラメータ、稼働42Bの公開重みモデルMuse Spark Openを公開しました。AppleはM5 Ultra搭載Mac Studioを複数台つないだ実行結果を示し、4台・入力8,192トークンの条件で毎秒36.73トークンを記録しています。Mac1台で動くモデルではなく、商用利用には独自ライセンスの条件があります。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">総816B・稼働42Bの混合エキスパート型</li>
+        <li data-i="02">100万トークンの文脈と画像入力に対応</li>
+        <li data-i="03">M5 Ultra搭載Mac Studioの複数台構成で実行</li>
+        <li data-i="04">Appleの4台構成で毎秒36.73トークン</li>
+        <li data-i="05">商用条件付きのMuse Model License</li>
+      </ul>
+      <div class="pull">
+        情報を外へ送らずに大規模モデルを動かす構成が具体化しました。導入には複数台のメモリ容量と接続条件の確認が必要です。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://research.meta.ai/blog/muse-spark-open">Meta / Apple</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-15</dd>
+        <dt>CATEGORY</dt>
+        <dd>ローカルLLM</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://research.meta.ai/blog/muse-spark-open">https://research.meta.ai/blog/muse-spark-open</a></dd>
+        <dd><a href="https://machinelearning.apple.com/research/mlx-distributed-inference">machinelearning.apple.com/research/mlx-d…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · BLACK FOREST LABS </span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AIデザイン <span class="sep">/</span> BLACK FOREST LABS / HUGGING FACE <span class="sep">/</span> NEWS
+      </div>
+      <h2>FLUX 3 Image Klein、生成と編集を手元で</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-18/topic_3.png" data-alt="FLUX 3 Image Klein、生成と編集を手元で" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-18/topic_3.png" alt="FLUX 3 Image Klein、生成と編集を手元で" />
+      </div>
+      <p class="lede">
+        Black Forest Labsは5.6Bパラメータの画像モデルFLUX 3 Image Kleinの重みを公開しました。画像生成・編集・最大10枚の参照に対応し、枠の座標で配置や編集範囲を指定できます。公式はINT8版がVRAM 8GBのGPUでも動くと説明していますが、必要メモリは実行条件で変わります。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">生成・編集・最大10枚の参照画像に対応</li>
+        <li data-i="02">4K出力と座標の枠による配置指定</li>
+        <li data-i="03">高速な蒸留版と追加学習向けベース版</li>
+        <li data-i="04">INT8版は公式説明でVRAM 8GBから</li>
+        <li data-i="05">年商500万ドル未満は条件付きで商用無料</li>
+      </ul>
+      <div class="pull">
+        画像の内容だけでなく置く場所まで指定できます。手元で使う場合はモデル形式、実行ソフト、商用ライセンスを合わせて確認しましょう。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://bfl.ai/blog/flux-3-image-klein">Black Forest Labs / Hugging Face</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-15</dd>
+        <dt>CATEGORY</dt>
+        <dd>AIデザイン</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://bfl.ai/blog/flux-3-image-klein">https://bfl.ai/blog/flux-3-image-klein</a></dd>
+        <dd><a href="https://huggingface.co/blog/flux-3">huggingface.co/blog/flux-3</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · ANTHROPIC / ARXIV</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ループ設計 <span class="sep">/</span> ANTHROPIC / ARXIV論文 <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉Claudeと検証器で量子回路を改善</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-18/topic_4.png" data-alt="〈知見〉Claudeと検証器で量子回路を改善" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-18/topic_4.png" alt="〈知見〉Claudeと検証器で量子回路を改善" />
+      </div>
+      <p class="lede">
+        Anthropicらの研究は、Claudeが量子回路の案を作り、独立した評価プログラムが正しさと資源量を検査する反復手法を報告しました。8課題のうち7課題でゲート数と量子ビット数をともに削減し、残る課題では両者の交換条件を改善しています。量子計算機の実用化そのものを達成した研究ではありません。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">元論文は10月15日公開</li>
+        <li data-i="02">自然文の仕様から回路を提案</li>
+        <li data-i="03">外部評価器が正しさと資源量を採点</li>
+        <li data-i="04">8課題中7課題でゲート数と量子ビット数を削減</li>
+        <li data-i="05">残る課題ではゲート数とメモリの交換条件を改善</li>
+      </ul>
+      <div class="pull">
+        AIに任せる仕事では、成果を自動で検査する仕組みが反復の質を支えます。研究が示すのは、その設計を専門課題にも使える可能性です。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.anthropic.com/research/designing-efficient-quantum-circuits">Anthropic / arXiv論文</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-15</dd>
+        <dt>CATEGORY</dt>
+        <dd>ループ設計</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.anthropic.com/research/designing-efficient-quantum-circuits">https://www.anthropic.com/research/designing-efficient-quantum-circuits</a></dd>
+        <dd><a href="https://arxiv.org/html/2610.22367">arxiv.org/html/2610.22367</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · VERCEL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        費用・文脈管理 <span class="sep">/</span> VERCEL <span class="sep">/</span> NEWS
+      </div>
+      <h2>AI Gateway、会話ごとの費用とキャッシュを表示</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-18/topic_5.png" data-alt="AI Gateway、会話ごとの費用とキャッシュを表示" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-18/topic_5.png" alt="AI Gateway、会話ごとの費用とキャッシュを表示" />
+      </div>
+      <p class="lede">
+        Vercel AI GatewayのログにSessionsビューが加わり、会話ごとにエージェント名、費用、モデル、キャッシュ利用率を確認できます。各ターンを前回と同じ提供元へ送る経路も表示し、同一のsessionIdを渡して自分で会話をまとめられます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Claude Code・Codex・Cursorなどを会話単位で表示</li>
+        <li data-i="02">費用・モデル・提供元・キャッシュ率を確認</li>
+        <li data-i="03">ターンごとの所要時間と経路を追跡</li>
+        <li data-i="04">同じ提供元への振り分けでキャッシュを活用</li>
+        <li data-i="05">sessionIdまたはx-session-idで会話を指定</li>
+      </ul>
+      <div class="pull">
+        費用が増えた会話を見つけ、入力の再利用が効いているかを調べやすくなります。モデル変更の前に作業単位の内訳を確認できます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/ai-gateway-logs-now-show-session-affinity">Vercel</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-17</dd>
+        <dt>CATEGORY</dt>
+        <dd>費用・文脈管理</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/ai-gateway-logs-now-show-session-affinity">https://vercel.com/changelog/ai-gateway-logs-now-show-session-affinity</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · CLOUDFLARE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発・検証 <span class="sep">/</span> CLOUDFLARE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Workersの定期処理をローカルで手動テスト</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-18/topic_6.png" data-alt="Workersの定期処理をローカルで手動テスト" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-18/topic_6.png" alt="Workersの定期処理をローカルで手動テスト" />
+      </div>
+      <p class="lede">
+        Cloudflare WorkersのLocal Explorerから、scheduled()へCron Triggerを1回送れるようになりました。設定済みの式やその場で書いた式、指定した時刻で試せます。ブラウザで作った設定は本番に反映されず、ローカルではcronが自動実行されない点にも注意が必要です。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Local ExplorerでCron Triggersを選択</li>
+        <li data-i="02">設定済み・その場のcron式を実行</li>
+        <li data-i="03">実行時刻とnoRetry()の状態を確認</li>
+        <li data-i="04">APIからも同じテストを実行可能</li>
+        <li data-i="05">ローカルのテスト設定は本番へ反映されない</li>
+      </ul>
+      <div class="pull">
+        予定時刻を待たずに定期処理の動作を確かめられます。AIエージェントによる検証にも、手動と同じAPIを使えます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-10-17-local-explorer-cron-triggers/">Cloudflare</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-17</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発・検証</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-10-17-local-explorer-cron-triggers/">https://developers.cloudflare.com/changelog/post/2026-10-17-local-explorer-cron-triggers/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · CLOUDFLARE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ドキュメント・エージェント <span class="sep">/</span> CLOUDFLARE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cloudflareの公式文書をCLIで検索</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-18/topic_7.png" data-alt="Cloudflareの公式文書をCLIで検索" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-18/topic_7.png" alt="Cloudflareの公式文書をCLIで検索" />
+      </div>
+      <p class="lede">
+        Cloudflare CLI 1.0.0-beta.16にcf docs searchが加わり、公式文書から最大5件をJSONで取得できます。AIエージェントは結果のURLからMarkdownの本文を読めます。同リリースではコマンド名をケバブケースに統一する互換性のない変更もあります。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">cf docs searchで公式文書を検索</li>
+        <li data-i="02">タイトル・説明・URLを最大5件のJSONで取得</li>
+        <li data-i="03">全文はMarkdownで取得可能</li>
+        <li data-i="04">検索にはインターネット接続が必要</li>
+        <li data-i="05">getCreditsからget-creditsなど名称変更あり</li>
+      </ul>
+      <div class="pull">
+        AIに最新の仕様を読ませてから実装を頼めます。CLI更新時は、既存の自動化が呼ぶコマンド名も確認しましょう。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-10-16-docs-search/">Cloudflare</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-16</dd>
+        <dt>CATEGORY</dt>
+        <dd>ドキュメント・エージェント</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-10-16-docs-search/">https://developers.cloudflare.com/changelog/post/2026-10-16-docs-search/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://api-docs.deepseek.com/news/news261017">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-10-17/">
+      ← 前日 · 2026-10-17
+      <span class="big">Beam、公開重みのAIを期間限定で無料提供</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-10-18/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20261018.0715</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

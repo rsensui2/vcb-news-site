@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-10-19 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-10-19 の Vibe Coder Bootcamp モーニングディスパッチ — 6本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №1019</span>
+    <span class="sep">/</span>
+    <span>2026-10-19</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>06 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20261019.0716</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-10-19/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:16 · SUN</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · SUNDAY · OCTOBER 19, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>10<span class="dot">.</span>19</h1>
+    <div class="strap">
+      <span>Anthropic · 〈知見〉Claude · 〈知見〉Harness² · 〈知見〉Kling</span>
+      <span><span class="count">06</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        公式発表 <span class="sep">/</span> ANTHROPIC <span class="sep">/</span> NEWS
+      </div>
+      <h2>Anthropic、株式5%を公益基金に拠出へ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-19/topic_1.png" data-alt="Anthropic、株式5%を公益基金に拠出へ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-19/topic_1.png" alt="Anthropic、株式5%を公益基金に拠出へ" />
+      </div>
+      <p class="lede">
+        Anthropicは株主承認を条件に、株式の5%を新設するAnthropic Public Benefit Fundへ拠出すると発表しました。基準から企業価値が50%増すごとに、取締役会の裁量で2%ずつ追加できる仕組みです。基金は全額出資のLLCとして設立し、寄付や特定層への直接分配を検討します。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">最初の5%拠出には株主の承認が必要</li>
+        <li data-i="02">企業価値50%増ごとに取締役会が2%追加を判断</li>
+        <li data-i="03">保有株をロビー活動や政治献金に使わない</li>
+        <li data-i="04">既存の創業者・社員の誓約と合わせ約20%が公益向け</li>
+      </ul>
+      <div class="pull">
+        AIによる成長の利益を社会へどう戻すかを、株式の仕組みで示した例です。雇用への影響は想定する使い道の一つで、分配先や実施時期が確定したわけではありません。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.anthropic.com/news/public-benefit-fund">Anthropic</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-18</dd>
+        <dt>CATEGORY</dt>
+        <dd>公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.anthropic.com/news/public-benefit-fund">https://www.anthropic.com/news/public-benefit-fund</a></dd>
+        <dd><a href="https://x.com/AnthropicAI/status/2111881963657412903">x.com/AnthropicAI/status/211188196365741…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · CLAUDEDEV</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        知見 <span class="sep">/</span> CLAUDE.DEV <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉Claude Code、レビューを何層にも重ねる</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-19/topic_2.png" data-alt="〈知見〉Claude Code、レビューを何層にも重ねる" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-19/topic_2.png" alt="〈知見〉Claude Code、レビューを何層にも重ねる" />
+      </div>
+      <p class="lede">
+        Claude Codeチームの解説では、PRを出す前にAIがテストなどを実行し、別の文脈で差分を確認します。PRにはAIとセキュリティのレビューを付け、人の承認数は変更の危険度に応じて決めます。6月から9月にマージ数が2倍以上となり、取り消しが必要な割合は40%以上減ったと報告しています。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">テストやビルドの実行結果を提出させる</li>
+        <li data-i="02">AIとセキュリティの指摘は修正か理由付きで解決</li>
+        <li data-i="03">危険度に応じて人の承認は0・1・2人</li>
+        <li data-i="04">過去の障害を評価セットにし、毎日レビューを採点</li>
+        <li data-i="05">3往復後は進め方を再検討する</li>
+      </ul>
+      <div class="pull">
+        AIが書く量が増えたら、確認する手段と責任の所在も整える必要があります。まずPRにテスト結果・リスク・戻し方を書く運用から取り入れられます。数値は同社の自己申告です。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://claude.dev/blog/solving-code-review-at-anthropic/">Claude.dev</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-15</dd>
+        <dt>CATEGORY</dt>
+        <dd>知見</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://claude.dev/blog/solving-code-review-at-anthropic/">https://claude.dev/blog/solving-code-review-at-anthropic/</a></dd>
+        <dd><a href="https://claude.com/resources/articles/code-review-is-now-generally-available">claude.com/resources/articles/code-revie…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · GOOGLE CLOUD AI RE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        知見 <span class="sep">/</span> GOOGLE CLOUD AI RESEARCH <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉Harness²、AIの道具と手順を試して改良</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-19/topic_3.png" data-alt="〈知見〉Harness²、AIの道具と手順を試して改良" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-19/topic_3.png" alt="〈知見〉Harness²、AIの道具と手順を試して改良" />
+      </div>
+      <p class="lede">
+        Harness²は、モデルの重みを固定したまま、プロンプトやメモリ、スキルなど周辺の仕組みを改良する研究用フレームワークです。変更案を同じタスクで試し、結果の違いから有効な変更を組み合わせます。採用した設定と、いつ・なぜ有効だったかの教訓を次のタスクへ残します。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">モデル本体を追加学習せず周辺の8要素を編集</li>
+        <li data-i="02">変更案を出す→同じ課題で試す→有効な変更を合成</li>
+        <li data-i="03">教訓をライブラリに残し次の改良に利用</li>
+        <li data-i="04">OpenCodeとCodexを実行役として選べる</li>
+        <li data-i="05">Apache 2.0の研究コードで、Googleの公式サポート製品ではない</li>
+      </ul>
+      <div class="pull">
+        スキルや指示書の改善を、実行結果で比べて残す考え方が参考になります。正解データのない課題では比較の判断自体にも誤りがあり得るため、自動改良が常に正しいとは限りません。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/google-research/harness2">Google Cloud AI Research</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-09</dd>
+        <dt>CATEGORY</dt>
+        <dd>知見</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/google-research/harness2">https://github.com/google-research/harness2</a></dd>
+        <dd><a href="https://arxiv.org/html/2610.14224">arxiv.org/html/2610.14224</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · KLING AI / KUAISHO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        知見 <span class="sep">/</span> KLING AI / KUAISHOU <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉Kling 4.0、参照素材で映像を組み立てる</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-19/topic_4.png" data-alt="〈知見〉Kling 4.0、参照素材で映像を組み立てる" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-19/topic_4.png" alt="〈知見〉Kling 4.0、参照素材で映像を組み立てる" />
+      </div>
+      <p class="lede">
+        Kling 4.0の公式ガイドは、画像・動画・被写体などを組み合わせる参照機能と、最大10枚のキーフレームによる演出を説明しています。参照素材の合計は最大15点、1回の生成は最大30秒です。9月30日付ガイドと10月15日の発売を伝えるIR資料を、映像制作の知見として読みます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">参照素材は合計15点まで。種類ごとの上限も適用</li>
+        <li data-i="02">画像は外見、動画は動きや構図の手がかりに使う</li>
+        <li data-i="03">最大10枚のキーフレームで場面の要所を指定</li>
+        <li data-i="04">1回で最大30秒の動画生成に対応</li>
+        <li data-i="05">4K・HDRの提供時期は公式資料間で説明に差がある</li>
+      </ul>
+      <div class="pull">
+        人物の外見とカメラの動きを別の参照素材で伝えられます。解像度やHDRは資料間で提供状況の記述が異なるため、利用画面の条件を確認して制作しましょう。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://kling.ai/blog/kling-4-ai-video-model">Kling AI / Kuaishou</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-09-30</dd>
+        <dt>CATEGORY</dt>
+        <dd>知見</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://kling.ai/blog/kling-4-ai-video-model">https://kling.ai/blog/kling-4-ai-video-model</a></dd>
+        <dd><a href="https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-officially-launches-next-generation-kling-40-raising/">ir.kuaishou.com/news-releases/news-relea…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · GITHUB CHANGELOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        知見 <span class="sep">/</span> GITHUB CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉GitHub、会話から複数リポジトリを調べる</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-19/topic_5.png" data-alt="〈知見〉GitHub、会話から複数リポジトリを調べる" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-19/topic_5.png" alt="〈知見〉GitHub、会話から複数リポジトリを調べる" />
+      </div>
+      <p class="lede">
+        GitHubのSlack・Teams連携では、一つの会話から複数のリポジトリを扱えます。公式例には、スレッドを元にした課題作成、修正PR、複数リポジトリのPR一覧、フロントとバックエンドをまたぐ不具合調査があります。共有したSlackメッセージやスレッドを文脈として参照できます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">同じ会話のままリポジトリを切り替える</li>
+        <li data-i="02">会話の内容から課題や修正PRを作成できる</li>
+        <li data-i="03">フロントとバックエンドをまたいで調査できる</li>
+        <li data-i="04">共有したSlackの会話を文脈に使える</li>
+      </ul>
+      <div class="pull">
+        チャット上の相談を、そのまま課題の整理や調査へ進める使い方です。依頼文には対象リポジトリと、作成・調査してほしい範囲を具体的に書くと確認しやすくなります。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-10-15-copilot-in-slack-and-teams-adds-model-and-repository-updates/">GitHub Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-15</dd>
+        <dt>CATEGORY</dt>
+        <dd>知見</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-10-15-copilot-in-slack-and-teams-adds-model-and-repository-updates/">https://github.blog/changelog/2026-10-15-copilot-in-slack-and-teams-adds-model-and-repository-updates/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · TAKANOMASANORI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        知見 <span class="sep">/</span> TAKANO_MASANORI <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>〈知見〉AIで内製する範囲は、保守まで含めて決める</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-19/topic_6.png" data-alt="〈知見〉AIで内製する範囲は、保守まで含めて決める" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-19/topic_6.png" alt="〈知見〉AIで内製する範囲は、保守まで含めて決める" />
+      </div>
+      <p class="lede">
+        この記事は、AIで実装が安くなってもSaaSや外注の利点が残る理由を、取引と契約の経済学から考えています。自社固有の知識や頻繁な変更を要する仕事は内製に向きやすい一方、AIで作ったシステムの監督・保守・結果の責任は自社に残ると論じています。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">自社固有の知識、変更頻度、外部との調整費を比較</li>
+        <li data-i="02">AIで変更は速くなるが、保守の責任は移転しない</li>
+        <li data-i="03">汎用サービスには分業と規模の利点が残る</li>
+        <li data-i="04">AIを使う提供者側の効率化も判断に影響する</li>
+      </ul>
+      <div class="pull">
+        作れるかに加え、誰が直し続けるかまで含めた判断材料になります。既存サービスの利用料と、自社の監督・保守に必要な時間を比較してみましょう。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">12</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/iototaku/status/2108885305290039495">@iototaku</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-10</dd>
+        <dt>CATEGORY</dt>
+        <dd>知見</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/iototaku/status/2108885305290039495">x.com/iototaku/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://www.anthropic.com/news/public-benefit-fund">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-10-18/">
+      ← 前日 · 2026-10-18
+      <span class="big">DeepSeek更新版、性能と処理効率を改善</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-10-19/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20261019.0716</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

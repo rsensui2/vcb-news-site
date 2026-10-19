@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-10-20 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-10-20 の Vibe Coder Bootcamp モーニングディスパッチ — 7本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №1020</span>
+    <span class="sep">/</span>
+    <span>2026-10-20</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>07 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20261020.0715</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-10-20/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:15 · MON</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · MONDAY · OCTOBER 20, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>10<span class="dot">.</span>20</h1>
+    <div class="strap">
+      <span>Claude · Clairic · Mercury · MiniMax</span>
+      <span><span class="count">07</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        公式発表 <span class="sep">/</span> ANTHROPIC / GITHUB RELEASES <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code、再開時に利用枠の消費を警告</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-20/topic_1.png" data-alt="Claude Code、再開時に利用枠の消費を警告" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-20/topic_1.png" alt="Claude Code、再開時に利用枠の消費を警告" />
+      </div>
+      <p class="lede">
+        Claude Code 2.1.304は、放置していた会話の再開で5時間の利用枠を大きく使いそうな場合、Pro・Max利用者に警告を出します。プロジェクトと最近の会話を読み、auto modeに環境を教える対話式セットアップも加わりました。作業ツリー終了時にブランチを確認なく削除し、コミットを失う恐れがあった不具合も修正しています。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">/auto-mode-setupで自動操作に使う環境を設定</li>
+        <li data-i="02">再開を続けるか、新しい会話を始めるか選べる</li>
+        <li data-i="03">Bedrock・Vertex・Foundryなどでもセットアップ可能</li>
+        <li data-i="04">--worktree終了時の無断削除を修正</li>
+      </ul>
+      <div class="pull">
+        長い会話を再開する前に、利用枠への影響を判断できます。自動操作を使う人は、環境設定と作業ツリーの修正も確認したい更新です。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.304">Anthropic / GitHub Releases</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-20</dd>
+        <dt>CATEGORY</dt>
+        <dd>公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.304">https://github.com/anthropics/claude-code/releases/tag/v2.1.304</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · CLOUDFLARE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        公式発表 <span class="sep">/</span> CLOUDFLARE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Clairic、書類から型に沿った値を抽出</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-20/topic_2.png" data-alt="Clairic、書類から型に沿った値を抽出" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-20/topic_2.png" alt="Clairic、書類から型に沿った値を抽出" />
+      </div>
+      <p class="lede">
+        Cloudflareは、入力文と欲しい項目の型を渡すと、数値や日付などを返す抽出モデルClairicをWorkers AIでプレビュー公開しました。値が入力から決まらない場合に備え、nullの確率や信頼度も返します。入力100万トークンあたり0.10ドルで、出力トークンへの課金はありません。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">文字列・数値・日付・リストなどの型を指定</li>
+        <li data-i="02">各回答の信頼度とp_nullを確認できる</li>
+        <li data-i="03">画像は最大4枚まで入力可能</li>
+        <li data-i="04">形式が正しくても、内容の正しさは保証しない</li>
+        <li data-i="05">長い計算は入力を抽出してコード側で処理</li>
+      </ul>
+      <div class="pull">
+        請求書などから項目を取り出す業務で、自動処理と人の確認を分ける材料になります。信頼度の閾値は、自分の書類で精度を確かめて決めましょう。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-10-19-clairic-workers-ai/">Cloudflare</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-10-19-clairic-workers-ai/">https://developers.cloudflare.com/changelog/post/2026-10-19-clairic-workers-ai/</a></dd>
+        <dd><a href="https://blog.cloudflare.com/clairic-extraction-model/">blog.cloudflare.com/clairic-extraction-m…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · VERCEL / INCEPTION</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        公式発表 <span class="sep">/</span> VERCEL / INCEPTION <span class="sep">/</span> NEWS
+      </div>
+      <h2>Mercury 3、拡散方式の高速生成を提供</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-20/topic_3.png" data-alt="Mercury 3、拡散方式の高速生成を提供" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-20/topic_3.png" alt="Mercury 3、拡散方式の高速生成を提供" />
+      </div>
+      <p class="lede">
+        Vercel AI GatewayでInceptionのMercury 3が利用可能になりました。文章を並行して修正していく拡散方式を使い、100万トークンの文脈に対応します。Inceptionは毎秒1,000トークン超の生成速度を報告しており、提供開始時の料金は50%引きです。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">モデル名はinception/mercury-3</li>
+        <li data-i="02">ブラウザ操作や対話支援など、待ち時間の短さを重視</li>
+        <li data-i="03">100万トークンの文脈長</li>
+        <li data-i="04">速度は提供元の自己申告、割引終了日は記載なし</li>
+      </ul>
+      <div class="pull">
+        応答待ちが多いエージェントでは、速度と回答品質を一緒に比べる候補になります。公表速度が自分の用途でも出るかは、入力や接続先をそろえて確認が必要です。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/mercury-3-now-available-on-ai-gateway">Vercel / Inception</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/mercury-3-now-available-on-ai-gateway">https://vercel.com/changelog/mercury-3-now-available-on-ai-gateway</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · VERCEL / MINIMAX</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        公式発表 <span class="sep">/</span> VERCEL / MINIMAX <span class="sep">/</span> NEWS
+      </div>
+      <h2>MiniMax M3.1 Flash、22日まで条件付き無料</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-20/topic_4.png" data-alt="MiniMax M3.1 Flash、22日まで条件付き無料" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-20/topic_4.png" alt="MiniMax M3.1 Flash、22日まで条件付き無料" />
+      </div>
+      <p class="lede">
+        Vercel AI Gatewayは、MiniMax M3.1 Flashを10月22日まで無料で提供すると案内しました。対象はMiniMax自身が処理するリクエストで、プロバイダーの順番指定が必要です。公開重みのマルチモーダルモデルで、100万トークンの文脈を扱います。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">無料対象になる処理先をorderで指定</li>
+        <li data-i="02">期間終了後はMiniMaxの通常料金</li>
+        <li data-i="03">コーディングや複数手順のエージェント作業向け</li>
+        <li data-i="04">AI SDK・Responses・Anthropic Messagesなどに対応</li>
+      </ul>
+      <div class="pull">
+        試すなら期限と処理先を確認して、小さなタスクで比較できます。性能向上の説明は提供元の評価であり、無料期間後の費用も含めて判断しましょう。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/minimax-m3-1-flash-now-available-on-ai-gateway-for-free">Vercel / MiniMax</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/minimax-m3-1-flash-now-available-on-ai-gateway-for-free">https://vercel.com/changelog/minimax-m3-1-flash-now-available-on-ai-gateway-for-free</a></dd>
+        <dd><a href="https://vercel.com/ai-gateway/models/minimax-m3.1-flash">vercel.com/ai-gateway/models/minimax-m3.…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · CLOUDFLARE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        公式発表 <span class="sep">/</span> CLOUDFLARE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cloudflare MCP、必要な権限を後から追加</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-20/topic_5.png" data-alt="Cloudflare MCP、必要な権限を後から追加" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-20/topic_5.png" alt="Cloudflare MCP、必要な権限を後から追加" />
+      </div>
+      <p class="lede">
+        Cloudflare API MCPサーバーが段階的な認可に対応しました。最小限の権限で接続し、作業中に不足する権限があれば、対応クライアントが利用者へ追加の許可を求めます。すでに許可した権限は保持されます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">接続時の同意画面でMinimalを選択</li>
+        <li data-i="02">不足した権限をinsufficient_scopeで通知</li>
+        <li data-i="03">段階的な認可に対応するクライアントが必要</li>
+      </ul>
+      <div class="pull">
+        AIに外部サービスを操作させる際、最初に渡す権限を絞れます。追加を求められたときも、その作業に必要な範囲か確かめて許可しましょう。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-10-19-cloudflare-mcp-step-up/">Cloudflare</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-10-19-cloudflare-mcp-step-up/">https://developers.cloudflare.com/changelog/post/2026-10-19-cloudflare-mcp-step-up/</a></dd>
+        <dd><a href="https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization#step-up-authorization-flow">modelcontextprotocol.io/specification/20…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · GITHUB</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        公式発表 <span class="sep">/</span> GITHUB <span class="sep">/</span> NEWS
+      </div>
+      <h2>GitHub、未認証のcloneに一時的な制限</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-20/topic_6.png" data-alt="GitHub、未認証のcloneに一時的な制限" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-20/topic_6.png" alt="GitHub、未認証のcloneに一時的な制限" />
+      </div>
+      <p class="lede">
+        GitHubは異常なアクセスが多い期間、公開リポジトリへの未認証HTTPS clone・fetchの一部で、一時的に認証を求める場合があると案内しました。正当なアクセスも影響を受けることがあります。認証して再試行するか、保護が解除されてから再試行できます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">認証済みHTTPS・SSH・pushは影響なし</li>
+        <li data-i="02">Web閲覧やAPI通信も対象外</li>
+        <li data-i="03">GitHub Actionsは組み込みのGITHUB_TOKENを推奨</li>
+        <li data-i="04">公開リポジトリ全般に認証を必須化する措置ではない</li>
+      </ul>
+      <div class="pull">
+        無人のCIやエージェントで突然cloneに失敗したら、認証が必要というエラーかを確認できます。自動取得では、適切な権限の認証をあらかじめ設定しておくと安定します。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-10-19-some-git-over-https-may-temporarily-require-authentication/">GitHub</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>公式発表</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-10-19-some-git-over-https-may-temporarily-require-authentication/">https://github.blog/changelog/2026-10-19-some-git-over-https-may-temporarily-require-authentication/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · META AI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        知見 <span class="sep">/</span> META AI <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉Muse Glimmer、手元で動くエージェント設計</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-20/topic_7.png" data-alt="〈知見〉Muse Glimmer、手元で動くエージェント設計" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-20/topic_7.png" alt="〈知見〉Muse Glimmer、手元で動くエージェント設計" />
+      </div>
+      <p class="lede">
+        Metaは、手元の機械で動くエージェントを想定した30BモデルMuse Glimmerの技術レポートを公開しました。文章と画像を入力でき、約4ビットに量子化して1枚のGPUで動かす設計です。公式投稿でもMacやPCでの実用的な速度を説明しています。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">30Bは300億パラメータの規模</li>
+        <li data-i="02">100以上の言語のデータで学習</li>
+        <li data-i="03">Apache 2.0ライセンスで公開</li>
+        <li data-i="04">ツール利用や複数手順の計画に重点</li>
+        <li data-i="05">同規模モデルを上回るという評価はMetaの自己申告</li>
+      </ul>
+      <div class="pull">
+        クラウドに常時接続しないエージェントを検討する際の資料になります。モデルの新規発表として扱わず、手元の機械での速度や必要メモリを確認する材料として読みましょう。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://ai.meta.com/research/publications/muse-glimmer-30b-an-on-device-agentic-model/">Meta AI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>知見</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://ai.meta.com/research/publications/muse-glimmer-30b-an-on-device-agentic-model/">https://ai.meta.com/research/publications/muse-glimmer-30b-an-on-device-agentic-model/</a></dd>
+        <dd><a href="https://x.com/AIatMeta/status/2112265822274302066">x.com/AIatMeta/status/211226582227430206…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.304">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-10-19/">
+      ← 前日 · 2026-10-19
+      <span class="big">Anthropic、株式5%を公益基金に拠出へ</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-10-20/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20261020.0715</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

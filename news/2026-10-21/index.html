@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-10-21 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-10-21 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №1021</span>
+    <span class="sep">/</span>
+    <span>2026-10-21</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20261021.0719</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-10-21/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:19 · TUE</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · TUESDAY · OCTOBER 21, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>10<span class="dot">.</span>21</h1>
+    <div class="strap">
+      <span>durable-harness · DeepInfer · OpenAI · GitHub</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 4 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> 公式発表 <span class="sep">/</span> NEWS
+      </div>
+      <h2>durable-harness、落ちた処理を記録から再開</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-21/topic_1.png" data-alt="durable-harness、落ちた処理を記録から再開" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-21/topic_1.png" alt="durable-harness、落ちた処理を記録から再開" />
+      </div>
+      <p class="lede">
+        Vercelは、AIエージェントの処理を記録し、中断後に続きから動かすdurable-harnessを公開しました。完了済みの呼び出しは記録を読み、途中だった道具の処理は再実行の方針に従って扱います。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Pi・OpenCode・Claude Code・Codexなどに対応</li>
+        <li data-i="02">完了したモデル呼び出しは再課金せず記録から復元</li>
+        <li data-i="03">道具ごとに再実行の可否を指定</li>
+        <li data-i="04">Claude CodeとCodexはVercel Sandboxで動作</li>
+        <li data-i="05">自社Postgresなどへの保存にも対応</li>
+      </ul>
+      <div class="pull">
+        長時間の作業をAIに任せる際、停止後に何をやり直すかを設計できます。返金や投稿のような処理は、単に再試行するだけでは重複を防げない点が大切です。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/blog/making-every-harness-durable">公式発表</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-19</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/blog/making-every-harness-durable">https://vercel.com/blog/making-every-harness-durable</a></dd>
+        <dd><a href="https://x.com/vercel/status/2112653833382027729">x.com/vercel/status/2112653833382027729</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · DEEPSEEKAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        推論基盤 <span class="sep">/</span> @DEEPSEEK_AI <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>DeepInfer、大規模推論の基盤を公開</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-21/topic_2.png" data-alt="DeepInfer、大規模推論の基盤を公開" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-21/topic_2.png" alt="DeepInfer、大規模推論の基盤を公開" />
+      </div>
+      <p class="lede">
+        DeepSeekは、DeepSeek-V4.1-Flashを動かす推論基盤DeepInferをオープンソースで公開しました。今回の公開範囲はオフライン推論で、完成した配信サービスをそのまま導入できるものではありません。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Apache 2.0ライセンスで公開</li>
+        <li data-i="02">対象はNVIDIA SM100とHuawei Ascend 950</li>
+        <li data-i="03">高速な計算・分散処理・構造化出力を実装</li>
+        <li data-i="04">配信サービスにはKVキャッシュや負荷分散などが別途必要</li>
+      </ul>
+      <div class="pull">
+        自社で大規模モデルを運用するチームが、推論の仕組みを調べる材料になります。一般的なPCで手軽に動かすローカルAIアプリとは、必要な機材が違います。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">31,072</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/deepseek_ai/status/2112476496283775135">@deepseek_ai</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-20</dd>
+        <dt>CATEGORY</dt>
+        <dd>推論基盤</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/deepseek_ai/status/2112476496283775135">x.com/deepseek_ai/…</a></dd>
+        <dd><a href="https://github.com/deepseek-ai/DeepInfer">github.com/deepseek-ai/DeepInfer</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · OPENAI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        API・費用 <span class="sep">/</span> OPENAI <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI API、キャッシュを最低12時間保持</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-21/topic_3.png" data-alt="OpenAI API、キャッシュを最低12時間保持" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-21/topic_3.png" alt="OpenAI API、キャッシュを最低12時間保持" />
+      </div>
+      <p class="lede">
+        OpenAI APIで、共通の指示や資料を最低12時間キャッシュする設定が加わりました。GPT-5.6以降のResponses APIが対象で、書き込みは通常入力料金の2.5倍になります。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">既定の最低保持時間は30分</li>
+        <li data-i="02">12時間の設定はprompt_cache_options.ttlで指定</li>
+        <li data-i="03">30分の書き込みは通常入力料金の1.25倍</li>
+        <li data-i="04">キャッシュの読み込み料金は保持時間によらず同じ</li>
+        <li data-i="05">12時間は削除期限ではなく最低保持時間</li>
+      </ul>
+      <div class="pull">
+        数時間おきに同じ資料を使う処理では、キャッシュを再利用しやすくなります。書き込みは割高なので、使う回数と読み込み量で費用を比較しましょう。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://developers.openai.com/api/docs/guides/prompt-caching">OpenAI</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-20</dd>
+        <dt>CATEGORY</dt>
+        <dd>API・費用</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://developers.openai.com/api/docs/guides/prompt-caching">https://developers.openai.com/api/docs/guides/prompt-caching</a></dd>
+        <dd><a href="https://developers.openai.com/api/docs/changelog">developers.openai.com/api/docs/changelog…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · NEWS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ <span class="sep">/</span> 公式発表 <span class="sep">/</span> NEWS
+      </div>
+      <h2>GitHub、npmの導入を検査するfirewall</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-21/topic_4.png" data-alt="GitHub、npmの導入を検査するfirewall" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-21/topic_4.png" alt="GitHub、npmの導入を検査するfirewall" />
+      </div>
+      <p class="lede">
+        GitHubは、npmパッケージを入れる際に危険な配布物を遮断するpackage firewallを公開プレビューにしました。GitHub Enterprise Cloud向けで、端末やAIエージェントの取得先をfirewallへ向ける設定が必要です。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">現時点はGitHub Enterprise Cloudのnpm向け</li>
+        <li data-i="02">公開直後の版に待機期間を設定</li>
+        <li data-i="03">悪意あるパッケージや脆弱性の情報で検査</li>
+        <li data-i="04">プレビュー中は無料、一般提供後は従量課金予定</li>
+        <li data-i="05">遮断されたパッケージの例外申請も可能</li>
+      </ul>
+      <div class="pull">
+        AIにパッケージの導入まで任せる企業が、導入時の検査をまとめて適用できます。有効化するだけで全通信が保護されるわけではなく、各端末の接続設定も必要です。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-10-20-github-package-firewall-in-public-preview">公式発表</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-20</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-10-20-github-package-firewall-in-public-preview">https://github.blog/changelog/2026-10-20-github-package-firewall-in-public-preview</a></dd>
+        <dd><a href="https://docs.github.com/enterprise-cloud@latest/code-security/how-tos/secure-your-supply-chain/secure-your-dependencies/protecting-endpoints-with-package-firewall">docs.github.com/enterprise-cloud@latest/…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · NEWS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> 公式発表 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code、Bedrock・Vertexの失敗を修正</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-21/topic_5.png" data-alt="Claude Code、Bedrock・Vertexの失敗を修正" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-21/topic_5.png" alt="Claude Code、Bedrock・Vertexの失敗を修正" />
+      </div>
+      <p class="lede">
+        Claude Code 2.1.305は、2.1.304で一部の接続先ですべてのリクエストが失敗する不具合を修正しました。ツール検索を受け付けないBedrock・Vertexやゲートウェイでは、ツール検索なしで再試行します。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">2.1.304で入った不具合への修正</li>
+        <li data-i="02">ツール検索が拒否される環境で再試行</li>
+        <li data-i="03">Workflow再開時の完了済みエージェントの再実行も修正</li>
+        <li data-i="04">/usageに警告の原因と修正方法を表示</li>
+      </ul>
+      <div class="pull">
+        2.1.304への更新後に動かなくなった人は、接続先の条件を確認できます。昨日の更新案内に対する続報として、該当環境では修正版を検討したいところです。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.305">公式発表</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-21</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.305">https://github.com/anthropics/claude-code/releases/tag/v2.1.305</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · NEWS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        研究 <span class="sep">/</span> 公式発表 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude設計のタンパク質、17件で結合を確認</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-21/topic_6.png" data-alt="Claude設計のタンパク質、17件で結合を確認" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-21/topic_6.png" alt="Claude設計のタンパク質、17件で結合を確認" />
+      </div>
+      <p class="lede">
+        Anthropicは、研究用Claudeが設計したタンパク質を実験し、サソリの神経毒に結合する17件を確認したと報告しました。211件を調べた結果で、毒を無力化する作用や治療効果は未確認です。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">研究用モデルが約64時間の設計作業</li>
+        <li data-i="02">31万8,484候補から選び、人の追加分を含め211件を実験</li>
+        <li data-i="03">Adaptyv BioとTwist Bioscienceが検証</li>
+        <li data-i="04">17件は4種類の毒のいずれかに結合</li>
+        <li data-i="05">全211件の設計とデータを公開</li>
+      </ul>
+      <div class="pull">
+        AIによる候補の設計を実験で確かめた研究例です。結合の確認から治療薬の開発までは、効果・安全性など多くの検証が残っています。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.anthropic.com/research/claude-scorpion-toxin-binder-design">公式発表</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-20</dd>
+        <dt>CATEGORY</dt>
+        <dd>研究</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.anthropic.com/research/claude-scorpion-toxin-binder-design">https://www.anthropic.com/research/claude-scorpion-toxin-binder-design</a></dd>
+        <dd><a href="https://x.com/AnthropicAI/status/2112579251555721573">x.com/AnthropicAI/status/211257925155572…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · NEWS</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        アプリ開発 <span class="sep">/</span> 公式発表 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Vercel Functions、WebSocketを一般提供</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-21/topic_7.png" data-alt="Vercel Functions、WebSocketを一般提供" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-21/topic_7.png" alt="Vercel Functions、WebSocketを一般提供" />
+      </div>
+      <p class="lede">
+        Vercel FunctionsのWebSocket対応が一般提供になりました。接続を保ちながら双方向にやり取りでき、AIチャットや共同作業のアプリに使えます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Vercel公表では1日1,500万接続を処理</li>
+        <li data-i="02">通常のFunctionsと同じ制限・料金体系</li>
+        <li data-i="03">CPU料金はメッセージの処理時間に応じて発生</li>
+        <li data-i="04">関数の最大実行時間で切断するため再接続を実装</li>
+        <li data-i="05">永続データは外部の保存先で共有</li>
+      </ul>
+      <div class="pull">
+        リアルタイム通信をVercel上で作りやすくなります。接続が永久に続くわけではないので、再接続とデータの復元まで含めて組み立てましょう。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/websocket-support-is-now-generally-available">公式発表</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-20</dd>
+        <dt>CATEGORY</dt>
+        <dd>アプリ開発</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/websocket-support-is-now-generally-available">https://vercel.com/changelog/websocket-support-is-now-generally-available</a></dd>
+        <dd><a href="https://vercel.com/docs/functions/websockets">vercel.com/docs/functions/websockets</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · IRUCECTION</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        知見 <span class="sep">/</span> @IRU_CECTION <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>〈知見〉imozuru、引用をたどり原文を集める</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-21/topic_8.png" data-alt="〈知見〉imozuru、引用をたどり原文を集める" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-21/topic_8.png" alt="〈知見〉imozuru、引用をたどり原文を集める" />
+      </div>
+      <p class="lede">
+        imozuruは、知らない分野の用語や著者を調べ、引用やリンクをたどって原文を集めるClaude Codeのスキルです。主張ごとに原文の場所を示し、利用者が確かめられる形で結果を保存します。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">問いと必要な主張を先に整理</li>
+        <li data-i="02">用語・人物・知見が集まる場から探索</li>
+        <li data-i="03">原文を保存し、主張に対応する箇所を提示</li>
+        <li data-i="04">必要な根拠がそろうか、新資料が減ったら探索を終了</li>
+      </ul>
+      <div class="pull">
+        検索上位の要約だけでは判断しづらい調査で、原文を読む手がかりになります。検索語は外部へ送られるため、機密を含む問いの扱いには注意が必要です。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">8,442</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/iru_cection/status/2110245336182874447">@iru_cection</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-14</dd>
+        <dt>CATEGORY</dt>
+        <dd>知見</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/iru_cection/status/2110245336182874447">x.com/iru_cection/…</a></dd>
+        <dd><a href="https://github.com/MaryCache/imozuru">github.com/MaryCache/imozuru</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://vercel.com/blog/making-every-harness-durable">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-10-20/">
+      ← 前日 · 2026-10-20
+      <span class="big">Claude Code、再開時に利用枠の消費を警告</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-10-21/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20261021.0719</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-10-22 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-10-22 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №1022</span>
+    <span class="sep">/</span>
+    <span>2026-10-22</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20261022.0721</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-10-22/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:21 · WED</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · WEDNESDAY · OCTOBER 22, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>10<span class="dot">.</span>22</h1>
+    <div class="strap">
+      <span>PHPに重大な脆弱性 · eMudhraの中間CA · Claude · Claude</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 5 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ <span class="sep">/</span> PHP 公式セキュリティ告知 <span class="sep">/</span> NEWS
+      </div>
+      <h2>PHPに重大な脆弱性、すぐ更新を</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-22/topic_1.png" data-alt="PHPに重大な脆弱性、すぐ更新を" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-22/topic_1.png" alt="PHPに重大な脆弱性、すぐ更新を" />
+      </div>
+      <p class="lede">
+        PHPの開発チームは、認証なしで外部からプログラムを実行される恐れがある重大な脆弱性2件を修正した、PHP 8.5.12、8.4.27、8.3.36、8.2.35を公開しました。Webのリクエストを処理するPHPはすべて対象で、特にApacheのmod_phpでは、アプリのコードが動く前に攻撃できることが確認されています。発見と公開前の調整には、AIを使ったセキュリティ企業やOpenAIが関わりました。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">CVE-2026-109618（メモリ不足時の処理中断）とCVE-2026-109619（解放済みの状態が次のリクエストに残る）</li>
+        <li data-i="02">対象はPHP-FPM・mod_php・php-cgi・FrankenPHP・LiteSpeedなど、Webを処理する全構成</li>
+        <li data-i="03">8.1以前は公式更新なし。7.4・8.0・8.1向けに最小限のソース修正を特別に提供</li>
+        <li data-i="04">Linuxディストリビューションには事前にパッチを配布済み</li>
+        <li data-i="05">WizはWordPress・Drupal・Joomlaで認証なしのコード実行を実演</li>
+        <li data-i="06">OpenAIは「Patch the Planet」として、保守者や研究者と公開前の準備を調整</li>
+      </ul>
+      <div class="pull">
+        WordPressなど、PHPで動くサイトを持つ人は今すぐ更新が必要です。アプリ側に欠陥がなくてもPHP本体から攻撃されるため、レンタルサーバーなら提供元の更新状況も確かめてください。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://www.php.net/releases/8_5_12.php">PHP 公式セキュリティ告知</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-21</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://www.php.net/releases/8_5_12.php">https://www.php.net/releases/8_5_12.php</a></dd>
+        <dd><a href="https://www.php.net/archive/2026.php">www.php.net/archive/2026.php</a></dd>
+        <dd><a href="https://www.wiz.io/blog/php2shell-php-rce">www.wiz.io/blog/php2shell-php-rce</a></dd>
+        <dd><a href="https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities">openai.com/index/coordinated-disclosure-…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · WE HAVE A PROBLEME</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ <span class="sep">/</span> WE HAVE A PROBLEM（EMUDHRA事案の告知サイト） <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>eMudhraの中間CA、秘密鍵が漏えい</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-22/topic_2.png" data-alt="eMudhraの中間CA、秘密鍵が漏えい" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-22/topic_2.png" alt="eMudhraの中間CA、秘密鍵が漏えい" />
+      </div>
+      <p class="lede">
+        インドの認証局eMudhraが発行した中間CA証明書8件で、秘密鍵の漏えいが判明しました。鍵の生成に欠陥があり、証明書から鍵を割り出せる状態だったため、この鍵があればどのサイトにもなりすませます。主要ブラウザとOSはすでに該当証明書を遮断しましたが、独自の証明書リストを持つ開発ツールやライブラリは、更新しないと信頼したままになります。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Firefox・Chromeは10月17日、Appleは19日、Microsoftは20日から遮断</li>
+        <li data-i="02">原因は認証局側の鍵生成の誤りで、2025年4月の作成時から鍵を割り出せた</li>
+        <li data-i="03">Node.js 22.23.4、Python certifi 2026.10.19、Go 1.27.3、Claude Code 2.1.303 などが修正版</li>
+        <li data-i="04">macOS標準のcurl・git・python3は古い証明書ファイルを参照するため、告知サイトに回避手順がある</li>
+        <li data-i="05">告知サイトのテストとcurlで、接続が拒否されれば安全</li>
+      </ul>
+      <div class="pull">
+        ブラウザだけ更新しても、サーバーやエージェントが使うランタイムの証明書リストが古いままだと偽のサイトを信じてしまいます。開発環境とサーバーの両方で、ランタイムと証明書パッケージの更新が必要です。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">7,536</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://emudhra.we-have-a-problem.com/">We have a problem（eMudhra事案の告知サイト）</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-20</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://emudhra.we-have-a-problem.com/">https://emudhra.we-have-a-problem.com/</a></dd>
+        <dd><a href="https://x.com/Iamwonderingif/status/2112860356339277842">x.com/Iamwonderingif/status/211286035633…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · ANTHROPIC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AIエージェント <span class="sep">/</span> ANTHROPIC 公式発表 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Duet、先回りして動く秘書アプリ</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-22/topic_3.png" data-alt="Claude Duet、先回りして動く秘書アプリ" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-22/topic_3.png" alt="Claude Duet、先回りして動く秘書アプリ" />
+      </div>
+      <p class="lede">
+        Anthropicは、Claudeが自分から動くエージェントとして働く新しいアプリ「Claude Duet」の研究プレビューを始めました。毎朝、つないだアプリ全体から重要な項目をまとめて届け、日中は数時間おきに確認して、対応が必要なときだけ連絡してきます。メッセージの送信、支払い、署名、削除の前には、実行内容を見せて承認を待ちます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">iOS・Androidの単体アプリとclaude.aiで提供</li>
+        <li data-i="02">まず米国のPro・Max加入者から、順番待ちリスト制</li>
+        <li data-i="03">利用上限は他のClaudeと共通で、裏での確認も消費する</li>
+        <li data-i="04">専用の仮想マシンとブラウザで動き、PCを閉じても作業を続ける</li>
+        <li data-i="05">証券の売買や口座間の送金は、承認があっても行わない</li>
+        <li data-i="06">パスワードやログイン用のトークンを直接見ない設計</li>
+      </ul>
+      <div class="pull">
+        聞かれたら答えるAIから、状況を見て声をかけてくる秘書型のエージェントへ広がっています。日本ではまだ使えませんが、どこまで任せてどこで人が承認するかの線引きは、自社でエージェントを作るときの参考になります。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://claude.com/resources/articles/claude-duet">Anthropic 公式発表</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-21</dd>
+        <dt>CATEGORY</dt>
+        <dd>AIエージェント</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://claude.com/resources/articles/claude-duet">https://claude.com/resources/articles/claude-duet</a></dd>
+        <dd><a href="https://x.com/claudeai/status/2112984664256241837">x.com/claudeai/status/211298466425624183…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · CLAUDE PLATFORM DO</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        API・SDK <span class="sep">/</span> CLAUDE PLATFORM DOCS <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude API、新版でtemperature廃止</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-22/topic_4.png" data-alt="Claude API、新版でtemperature廃止" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-22/topic_4.png" alt="Claude API、新版でtemperature廃止" />
+      </div>
+      <p class="lede">
+        Anthropicは、Claude APIの新しいバージョン「2026-10-21」を公開しました。2023-06-01以来の新版で、Messages APIでは temperature・top_p・top_k を送ると、どのモデルでも400エラーになります。各言語のSDKとant CLIの新版はこの版を既定で送るため、SDKを上げるだけで既存のコードが止まる場合があります。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">temperature・top_p・top_k は削除され、送ると400エラー</li>
+        <li data-i="02">アシスタント側のメッセージに文書ブロックを直接入れると400エラー</li>
+        <li data-i="03">Python SDK 2.0.0、TypeScript SDK 1.0.0、Go SDK 2.0.0 などが新版を既定で送る</li>
+        <li data-i="04">新しいSDKとant CLIのライセンスはMITからApache 2.0に変更</li>
+        <li data-i="05">Admin APIでも項目名が変わる（roles → role_ids など）</li>
+        <li data-i="06">Claude Platform on AWS・Microsoft Foundry・Google Cloudでも使える</li>
+      </ul>
+      <div class="pull">
+        依存関係の自動更新でSDKのメジャー版が上がると、temperature を指定しているコードがエラーになります。更新の前に移行ガイドを読み、パラメータを外しておく必要があります。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://platform.claude.com/docs/en/api/versioning">Claude Platform Docs</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-21</dd>
+        <dt>CATEGORY</dt>
+        <dd>API・SDK</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://platform.claude.com/docs/en/api/versioning">https://platform.claude.com/docs/en/api/versioning</a></dd>
+        <dd><a href="https://platform.claude.com/docs/en/release-notes/overview">platform.claude.com/docs/en/release-note…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · ANTHROPIC</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        セキュリティ <span class="sep">/</span> ANTHROPIC 公式発表 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Security、変更のたびに自動で再検査</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-22/topic_5.png" data-alt="Claude Security、変更のたびに自動で再検査" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-22/topic_5.png" alt="Claude Security、変更のたびに自動で再検査" />
+      </div>
+      <p class="lede">
+        Anthropicのセキュリティ診断ツールClaude Securityが、リポジトリをつなぐと最初に詳しく検査し、その後はコードの変更に合わせて継続的に再検査するようになりました。見つけた問題が直ると、Claude Code以外で修正した場合も自動で「修正済み」にし、再発すれば開き直します。Claude Enterprise向けのパブリックベータです。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">GitHubアプリ（GitHub Enterprise Server含む）か、GitLabなどのアクセストークンで接続</li>
+        <li data-i="02">プロジェクトごとに、デプロイ方法やセキュリティ方針を書く知識ベースを持てる</li>
+        <li data-i="03">コードから脅威モデルを作り、重要度と攻撃経路の説明を付ける</li>
+        <li data-i="04">API・Webhook・MCPコネクタから結果を扱える</li>
+        <li data-i="05">月2万5,000ドル分の無料クレジットを2か月（2026年12月31日までの利用）</li>
+        <li data-i="06">4月のベータ開始以降、100万件以上の脆弱性を発見（Anthropic発表）</li>
+      </ul>
+      <div class="pull">
+        AIがコードを大量に書くほど、たまに検査するだけでは追いつきません。変更のたびに自動で見張り、直ったかまで追う形は、セキュリティ確認の新しい標準になりそうです。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://claude.com/resources/articles/claude-security-now-scans-continuously-and-tracks-fixes">Anthropic 公式発表</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-21</dd>
+        <dt>CATEGORY</dt>
+        <dd>セキュリティ</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://claude.com/resources/articles/claude-security-now-scans-continuously-and-tracks-fixes">https://claude.com/resources/articles/claude-security-now-scans-continuously-and-tracks-fixes</a></dd>
+        <dd><a href="https://x.com/claudeai/status/2112962248218148878">x.com/claudeai/status/211296224821814887…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · OPENAI  / GOOGLE C</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI業界 <span class="sep">/</span> OPENAI 公式発表 / GOOGLE CLOUD BLOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAIのモデル、Google Cloudに</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-22/topic_6.png" data-alt="OpenAIのモデル、Google Cloudに" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-22/topic_6.png" alt="OpenAIのモデル、Google Cloudに" />
+      </div>
+      <p class="lede">
+        OpenAIとGoogle Cloudが提携し、OpenAIのモデルとCodexをGoogle CloudのModel Gardenで使えるようにしました。GPT-6 Astra、GPT-6.1 Sol、GPT-6 Lunaを、一部の企業向けに限定プレビューで提供し始めています。支払いはGoogle Cloud Marketplace経由で、既存のクラウド利用の約束額から充当できます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">対象はGPT-6 Astra・GPT-6.1 Sol・GPT-6 Luna</li>
+        <li data-i="02">現在は一部企業向けの限定プレビューで、利用は申し込み制</li>
+        <li data-i="03">請求はGoogle Cloudにまとまり、利用額の約束（コミット）から充当できる</li>
+        <li data-i="04">Codex CLIとデスクトップ版は、推論先をGoogle Cloudに接続できる</li>
+        <li data-i="05">Google AntigravityとGemini for businessでも近く利用可能に</li>
+      </ul>
+      <div class="pull">
+        Google Cloudで社内の仕組みを作っている会社も、契約を増やさずにOpenAIのモデルを選べるようになります。クラウドとモデルを別々に選ぶ流れが、さらに進みました。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://openai.com/index/openai-models-google-cloud">OpenAI 公式発表 / Google Cloud Blog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-21</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI業界</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://openai.com/index/openai-models-google-cloud">https://openai.com/index/openai-models-google-cloud</a></dd>
+        <dd><a href="https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-brings-openai-models-to-customers/">cloud.google.com/blog/products/ai-machin…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · GITHUB CHANGELOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> GITHUB CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>GitHub CLI、期限付きトークンを選択可能に</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-22/topic_7.png" data-alt="GitHub CLI、期限付きトークンを選択可能に" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-22/topic_7.png" alt="GitHub CLI、期限付きトークンを選択可能に" />
+      </div>
+      <p class="lede">
+        GitHub CLI（gh）で、有効期限付きで自動更新されるOAuthの認証情報を、パブリックプレビューとして選べるようになりました。v2.103.0以降で gh auth login --expiring を使うと、短命のアクセストークンを裏で自動更新するため、再ログインは不要です。トークンが漏れても、数時間で使えなくなります。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">v2.103.0以降で gh auth login --expiring</li>
+        <li data-i="02">毎回使うなら gh config set expiring_credentials enabled</li>
+        <li data-i="03">gitで使うなら gh auth setup-git と git 2.46以降を強く推奨</li>
+        <li data-i="04">gh auth token の結果を保存して使い回すスクリプトは、期限切れで止まる</li>
+        <li data-i="05">今は任意だが、将来は新規ログインの既定にする予定</li>
+      </ul>
+      <div class="pull">
+        AIエージェントにghを使わせる場面が増え、トークンが漏れたときの被害を小さくする設定です。トークンを外の道具へ渡している自動化は、毎回 gh auth token で取り直す形に直しておく必要があります。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-10-21-github-cli-opt-in-to-expiring-auto-refreshing-oauth-tokens">GitHub Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-21</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-10-21-github-cli-opt-in-to-expiring-auto-refreshing-oauth-tokens">https://github.blog/changelog/2026-10-21-github-cli-opt-in-to-expiring-auto-refreshing-oauth-tokens</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · VERCEL CHANGELOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AIモデル <span class="sep">/</span> VERCEL CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>判定専用モデル、27日まで無料</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-22/topic_8.png" data-alt="判定専用モデル、27日まで無料" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-22/topic_8.png" alt="判定専用モデル、27日まで無料" />
+      </div>
+      <p class="lede">
+        Vercel AI Gatewayで、Basetenの判定専用モデルMammoth-1（27B）とElephant-1（9B）が10月27日まで無料で使えます。文章の分類、問い合わせの振り分け、指定した基準での採点に使うモデルで、選択肢・確率・スコアを返します。どの確率なら自動で処理し、どこから人の確認に回すかは、アプリ側で決めます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">無料期間は10月27日まで</li>
+        <li data-i="02">モデル名は baseten/mammoth-1 と baseten/elephant-1</li>
+        <li data-i="03">コンテキストは16kトークン</li>
+        <li data-i="04">1回のリクエストで、窓口の選択・返金依頼か・緊急度などをまとめて聞ける</li>
+        <li data-i="05">AI SDKの decide、Decisions API、TypeSafe互換の呼び方に対応</li>
+      </ul>
+      <div class="pull">
+        問い合わせの仕分けや承認の判断のように、選ぶだけの処理は大きなモデルでなくても回せます。確率付きで返るため、人に回す線を数字で決められます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://vercel.com/changelog/basetens-mammoth-1-and-elephant-1-now-available-on-ai-gateway-for-free">Vercel Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-21</dd>
+        <dt>CATEGORY</dt>
+        <dd>AIモデル</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://vercel.com/changelog/basetens-mammoth-1-and-elephant-1-now-available-on-ai-gateway-for-free">https://vercel.com/changelog/basetens-mammoth-1-and-elephant-1-now-available-on-ai-gateway-for-free</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://www.php.net/releases/8_5_12.php">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-10-21/">
+      ← 前日 · 2026-10-21
+      <span class="big">durable-harness、落ちた処理を記録から再開</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-10-22/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20261022.0721</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

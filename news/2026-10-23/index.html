@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>2026-10-23 Morning Dispatch — Vibe Coder Bootcamp</title>
+<meta name="description" content="2026-10-23 の Vibe Coder Bootcamp モーニングディスパッチ — 8本のAI業界ニュース。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">DISPATCH №1023</span>
+    <span class="sep">/</span>
+    <span>2026-10-23</span>
+    <span class="sep">/</span>
+    <span>MORNING EDITION</span>
+    <span class="sep">/</span>
+    <span>08 ITEMS</span>
+    <span class="sep">/</span>
+    <span>BUILD 20261023.0727</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="container row">
+    <a href="../../" class="wordmark"><span class="bar"></span>VCB News &amp; Post Headline</a>
+    <button class="nav-toggle" type="button" aria-label="メニューを開閉" aria-expanded="false" aria-controls="main-nav">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a href="../../">HOME</a>
+      <a href="../../news/2026-10-23/">TODAY</a>
+      <a href="../../#bookmarks">BOOKMARKS</a>
+      <a href="../../#archive">ARCHIVE</a>
+      <a href="../../#about">ABOUT</a>
+      <a class="ext" href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">BOOTCAMP <span aria-hidden="true">↗</span></a>
+    </nav>
+    <div class="meta">JST · 07:27 · THU</div>
+  </div>
+</header>
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!btn || !nav) return;
+  function setOpen(open) {
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    nav.classList.toggle('is-open', open);
+    document.documentElement.classList.toggle('is-nav-open', open);
+  }
+  btn.addEventListener('click', function(){ setOpen(btn.getAttribute('aria-expanded') !== 'true'); });
+  nav.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setOpen(false); });
+})();
+</script>
+
+<section class="daily-head">
+  <div class="container">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;">
+      MORNING DISPATCH · THURSDAY · OCTOBER 23, 2026
+    </div>
+    <h1 class="date-huge">2026<span class="dot">.</span>10<span class="dot">.</span>23</h1>
+    <div class="strap">
+      <span>OpenAI · Claude · Ollama · Claude</span>
+      <span><span class="count">08</span>&nbsp;ITEMS · READ 6 min</span>
+    </div>
+  </div>
+</section>
+
+<article class="daily-topic" id="topic-1">
+  <div class="container">
+    <aside class="numeral">01<span class="ord">TOPIC 01 · FEATURED</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        API・SDK <span class="sep">/</span> OPENAI API ドキュメント <span class="sep">/</span> NEWS
+      </div>
+      <h2>OpenAI、判定だけ返すAPIを一般提供</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-23/topic_1.png" data-alt="OpenAI、判定だけ返すAPIを一般提供" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-23/topic_1.png" alt="OpenAI、判定だけ返すAPIを一般提供" />
+      </div>
+      <p class="lede">
+        OpenAIは、文章を生成する代わりに「条件に当てはまる確率」「決まった選択肢のどれか」「採点基準に沿ったスコア」だけを返すDecisions APIを一般提供にしました。パブリックベータからの切り替えで、OpenAIはResponses APIより約10倍速いとしています。問い合わせの分類、リクエストの振り分け、作業の優先順位づけなど、アプリの中で次の動きを決める場面に向けた仕組みです。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">エンドポイントは POST /v1/decisions、対応モデルは現在 gpt-6-luna のみ</li>
+        <li data-i="02">答えの型は3種類：確率（predicate）、選択肢（choice）、順序付きの採点（score）</li>
+        <li data-i="03">1リクエストで最大400問まで（ベータ時は200問）</li>
+        <li data-i="04">ベータ以降、プロンプトキャッシュ、JSON入力、問いごとの画像、会話履歴とツール呼び出し結果の評価に対応</li>
+        <li data-i="05">音声のGPT-Liveから直接呼び出せるほか、Private Linkと組織単位の利用量レポートにも対応</li>
+        <li data-i="06">自由な形式のJSONを作るなら従来どおりStructured Outputs、ツール呼び出しはfunction callingを使うよう案内</li>
+      </ul>
+      <div class="pull">
+        エージェントの分岐の判断に、毎回フルの文章生成を使わずに済みます。自前で作っていた分類器や、LLMに「AかBか答えて」と頼んでいた処理を、速く安く置き換える候補になります。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://developers.openai.com/api/docs/guides/decisions">OpenAI API ドキュメント</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>API・SDK</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://developers.openai.com/api/docs/guides/decisions">https://developers.openai.com/api/docs/guides/decisions</a></dd>
+        <dd><a href="https://x.com/OpenAIDevs/status/2113346642787086538">x.com/OpenAIDevs/status/2113346642787086…</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-2">
+  <div class="container">
+    <aside class="numeral">02<span class="ord">TOPIC 02 · CLAUDE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI業界 <span class="sep">/</span> CLAUDE 公式記事 <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Platform、Google Cloudで全機能</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-23/topic_2.png" data-alt="Claude Platform、Google Cloudで全機能" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-23/topic_2.png" alt="Claude Platform、Google Cloudで全機能" />
+      </div>
+      <p class="lede">
+        Anthropicは「Claude Models on Google Cloud（Anthropic managed）」を一般提供にしました。Google Cloudの利用者が、Anthropic本家のClaude APIと同じ機能一式を、Google CloudのIAM認証のまま使えます。新機能やベータは本家と同じ日に使えるようになり、請求はGoogle Cloudの請求書にまとまり、既存のGoogle Cloudの利用コミットからも差し引かれます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">Claude Managed Agents（ベータ）、コード実行、Computer use、Agent Skills、Files API、Web検索・取得、MCPコネクタ（ベータ）、プロンプトキャッシュ、バッチ処理を利用可能</li>
+        <li data-i="02">Claude Opus 5.5のFast Modeも一般提供。出力は最大2.5倍速く、料金は100万トークンあたり入力8ドル・出力40ドル</li>
+        <li data-i="03">使えるモデルはClaude Fable 5.1、Opus 5.5、Sonnet 5.5、Haiku 5.5。新モデルも発表と同時に追加</li>
+        <li data-i="04">エンドポイントは現在USとGlobal。開発環境のClaude Consoleも使える</li>
+        <li data-i="05">データ処理者はAnthropic。Googleがデータ処理者になる従来の「Google managed」も併存し、地域内のデータ保管やModel Armorなどが必要ならこちらを推奨</li>
+        <li data-i="06">既存の割引がある場合は、使い始める前にAnthropicかGoogle Cloudの担当者へ連絡するよう案内（さかのぼって適用されない）</li>
+      </ul>
+      <div class="pull">
+        Google Cloud中心の会社でも、Claudeの最新機能を遅れなく使えるようになります。今週発表されたOpenAIのモデルのGoogle Cloud提供に続き、AI各社がクラウドの垣根を越えて提供先を広げています。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://claude.com/resources/articles/claude-models-on-google-cloud-anthropic-managed">Claude 公式記事</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI業界</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://claude.com/resources/articles/claude-models-on-google-cloud-anthropic-managed">https://claude.com/resources/articles/claude-models-on-google-cloud-anthropic-managed</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-3">
+  <div class="container">
+    <aside class="numeral">03<span class="ord">TOPIC 03 · OLLAMA GITHUB RELE</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        ローカルLLM <span class="sep">/</span> OLLAMA GITHUB RELEASES / HUGGING FACE <span class="sep">/</span> NEWS
+      </div>
+      <h2>Ollama、コーディング用Flintに対応</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-23/topic_3.png" data-alt="Ollama、コーディング用Flintに対応" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-23/topic_3.png" alt="Ollama、コーディング用Flintに対応" />
+      </div>
+      <p class="lede">
+        Ollama 0.40.8で、Recursiveのコーディングエージェント向けモデル「Flint」を ollama run flint で手元で動かせるようになりました。Flintは総パラメータ約40Bのうち、1トークンごとに動くのは約2.5Bだけの混合エキスパート（MoE）構成で、Apache 2.0ライセンスで重みが公開されています。知らないコードの読解、バグの追跡、機能の実装、テストの追加といった、リポジトリ全体にまたがる作業を想定しています。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">総パラメータ39.8B、アクティブ約2.5B。256個の専門家から1トークンごとに6個を選ぶ構成</li>
+        <li data-i="02">文脈長は262,144トークン。推論と複数回のツール呼び出しに対応し、OpenAI互換のツール呼び出しが使える</li>
+        <li data-i="03">Recursiveの評価ではTerminal-Bench 2.1で54.9%、SWE-bench Verifiedで74.2%（自社測定）</li>
+        <li data-i="04">Ollama 0.40.8での対応は現時点でmacOSのみ。ほかのGPUは次のリリースで対応予定</li>
+        <li data-i="05">Hugging FaceにはBF16版（約80GB）とSGLang用の配信キットがあり、NVIDIA・Apple Silicon向けの量子化版は別に用意</li>
+      </ul>
+      <div class="pull">
+        動く部分が小さいので、Macでもコーディングエージェント用のモデルを手元で試しやすくなります。コードを外に出せない環境で、ローカルLLMでエージェントを回したい人の選択肢が増えました。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/ollama/ollama/releases/tag/v0.40.8">Ollama GitHub Releases / Hugging Face</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-21</dd>
+        <dt>CATEGORY</dt>
+        <dd>ローカルLLM</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/ollama/ollama/releases/tag/v0.40.8">https://github.com/ollama/ollama/releases/tag/v0.40.8</a></dd>
+        <dd><a href="https://huggingface.co/RecursiveSI/flint">huggingface.co/RecursiveSI/flint</a></dd>
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-4">
+  <div class="container">
+    <aside class="numeral">04<span class="ord">TOPIC 04 · CLAUDE CODE GITHUB</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> CLAUDE CODE GITHUB RELEASES <span class="sep">/</span> NEWS
+      </div>
+      <h2>Claude Code、新API版への移行コマンド</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-23/topic_4.png" data-alt="Claude Code、新API版への移行コマンド" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-23/topic_4.png" alt="Claude Code、新API版への移行コマンド" />
+      </div>
+      <p class="lede">
+        Claude Code 2.1.307で、/claude-api api-version が加わりました。手元のコードを、今週公開されたClaude APIの新しいバージョン「2026-10-21」に合わせて書き換えるためのコマンドです。あわせて、権限ルールやauto mode、サンドボックスなどがツール呼び出しを止めたり確認を求めたりするたびに、OpenTelemetryのイベントを出すようになりました。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">/claude-api api-version で、Claude APIのバージョン2026-10-21への移行を支援</li>
+        <li data-i="02">OpenTelemetryに claude_code.safety_event を追加。権限ルール、auto mode、安全チェック、フック、サンドボックスが止めた・確認した・差し戻した操作を記録</li>
+        <li data-i="03">接続が途中で切れるとHTTPのMCPツールが2回実行される問題を修正。今後は読み取り専用など、繰り返しても安全なツールだけ再試行</li>
+        <li data-i="04">macOSやLinuxがスリープした際に、MCPサーバーが失敗のまま残る問題を修正</li>
+        <li data-i="05">読めない形のツール呼び出しは、ターンを終える前に最大2回まで自動でやり直す</li>
+        <li data-i="06">同時に起動したforkサブエージェントが、互いの作業に手を出しにくくなった</li>
+      </ul>
+      <div class="pull">
+        temperatureの廃止などを含むAPIの破壊的変更への対応を、Claude Code自身に任せられます。MCPツールの二重実行の修正は、書き込みや送信をするツールを使う人にとって、実害を防ぐ変更です。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.307">Claude Code GitHub Releases</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.com/anthropics/claude-code/releases/tag/v2.1.307">https://github.com/anthropics/claude-code/releases/tag/v2.1.307</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-5">
+  <div class="container">
+    <aside class="numeral">05<span class="ord">TOPIC 05 · CLAUDE APPLIED AI</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AIエージェント <span class="sep">/</span> CLAUDE 公式記事（APPLIED AI） <span class="sep">/</span> NEWS
+      </div>
+      <h2>〈知見〉サブエージェントは増やしすぎない</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-23/topic_5.png" data-alt="〈知見〉サブエージェントは増やしすぎない" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-23/topic_5.png" alt="〈知見〉サブエージェントは増やしすぎない" />
+      </div>
+      <p class="lede">
+        AnthropicのApplied AIチームが、企業向けのエージェントでは、ルーターやプランナー、分野別のサブエージェントをメインのエージェントループにまとめたほうが良い場合が多い、という知見と移行の手順を公開しました。複数の企業導入を比べたところ、スキルを持たせた単一のエージェントが、何でも1つのプロンプトに詰め込む設計にも、サブエージェントに分ける設計にも、品質で勝つことが多かったとしています。費用と応答時間も下がりがちでした。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">スキル（必要なときだけ読み込む手順書）とツール検索で、文脈とツールを少しずつ開示するのが基本の形</li>
+        <li data-i="02">チームごとにサブエージェントを作ると組織図の写しになり、文脈の受け渡しで情報が落ちる、似たサブエージェントが乱立する、各チームが一文ずつ足したプロンプトが矛盾する、といった問題が起きる</li>
+        <li data-i="03">ある企業の比較では、単一ループのほうが複数エージェント構成よりおよそ2倍速く動いた</li>
+        <li data-i="04">多くの用途は「明確なシステムプロンプト1つ、薄いデータ取得ツール4〜5個、厳しい出力ガードレール」で足りるという指摘</li>
+        <li data-i="05">サブエージェントが向くのは、文脈の膨張で性能が落ちるとき、使い捨ての文脈で並列に作業したいとき、ツール選択や指示の衝突に悩むとき</li>
+        <li data-i="06">移行の判断を手順に沿って進めるキットとデモも公開</li>
+      </ul>
+      <div class="pull">
+        「とりあえずマルチエージェント」にしがちな設計を見直す材料になります。サブエージェントは不要だと言っているのではなく、文脈で仕事を区切れる場面に絞って使う、という整理です。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://claude.com/resources/articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop">Claude 公式記事（Applied AI）</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>AIエージェント</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://claude.com/resources/articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop">https://claude.com/resources/articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-6">
+  <div class="container">
+    <aside class="numeral">06<span class="ord">TOPIC 06 · CLOUDFLARE CHANGEL</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> CLOUDFLARE CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Cloudflare MCP、旧方式の/sseを廃止</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-23/topic_6.png" data-alt="Cloudflare MCP、旧方式の/sseを廃止" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-23/topic_6.png" alt="Cloudflare MCP、旧方式の/sseを廃止" />
+      </div>
+      <p class="lede">
+        Cloudflareが製品ごとに提供しているMCPサーバーが、/mcp だけを受け付けるようになりました。旧方式の /sse に接続すると「410 Gone」が返り、そのエラーの中に新しい /mcp のURLが示されます。MCPクライアントに /sse のURLを登録している場合は、書き換えが必要です。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">/sse へのリクエストは410 Goneを返し、正しい /mcp のURLを案内する</li>
+        <li data-i="02">設定を /mcp に変えれば引き続き使える（例：https://docs.mcp.cloudflare.com/mcp）</li>
+        <li data-i="03">/sse 経由でサインインしていた場合は、もう一度サインインを求められる</li>
+        <li data-i="04">すでに /mcp を使っている接続には影響なし</li>
+      </ul>
+      <div class="pull">
+        Claude CodeやCursorなどにCloudflareのMCPを古い設定でつないでいると、ある日突然つながらなくなります。MCPの通信方式がSSEから新しい方式へ移っていく流れの一例で、ほかのMCPサーバーの設定も見直すきっかけになります。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-10-22-cloudflare-mcp-servers-retire-sse/">Cloudflare Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://developers.cloudflare.com/changelog/post/2026-10-22-cloudflare-mcp-servers-retire-sse/">https://developers.cloudflare.com/changelog/post/2026-10-22-cloudflare-mcp-servers-retire-sse/</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-7">
+  <div class="container">
+    <aside class="numeral">07<span class="ord">TOPIC 07 · GITHUB CHANGELOG</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        開発ツール <span class="sep">/</span> GITHUB CHANGELOG <span class="sep">/</span> NEWS
+      </div>
+      <h2>Copilot、未設定の機能を既定値に</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-23/topic_7.png" data-alt="Copilot、未設定の機能を既定値に" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-23/topic_7.png" alt="Copilot、未設定の機能を既定値に" />
+      </div>
+      <p class="lede">
+        GitHubは、Copilot Business / Enterpriseで一般提供中の機能やクライアント機能について、9月に予告した「グローバル既定ポリシー」の適用を始めました。10月26日までに企業・組織ごとに順次反映され、管理者が個別に設定していない機能は、選ばれた既定値に一度だけそろえられます。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">10月22日から10月26日にかけて順次適用。組織によって反映のタイミングが違う</li>
+        <li data-i="02">未設定の機能だけが、既定値（有効・無効・各組織に任せる）に一度だけそろえられる</li>
+        <li data-i="03">すでに有効・無効を明示している機能は、そのまま変わらない</li>
+        <li data-i="04">プレビュー機能は引き続き、自分で選んだ場合だけ有効</li>
+        <li data-i="05">対象は「Features &amp; clients」と「MCP servers in Copilot」の設定。AI Controls → Copilot → Default policy for new features で確認できる</li>
+      </ul>
+      <div class="pull">
+        組織でCopilotを管理している人は、気づかないうちに機能やMCPサーバーの利用可否が変わる可能性があります。週明けまでに既定値を確認しておくべき変更です。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">—</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://github.blog/changelog/2026-10-22-global-default-for-copilot-features-generally-available">GitHub Changelog</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>開発ツール</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://github.blog/changelog/2026-10-22-global-default-for-copilot-features-generally-available">https://github.blog/changelog/2026-10-22-global-default-for-copilot-features-generally-available</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<article class="daily-topic" id="topic-8">
+  <div class="container">
+    <aside class="numeral">08<span class="ord">TOPIC 08 · LUINLEE / X</span></aside>
+    <div class="main">
+      <div class="cat-line">
+        AI×デザイン <span class="sep">/</span> @LUINLEE / X <span class="sep">/</span> BOOKMARK
+      </div>
+      <h2>〈知見〉AIの画面は説明を足しすぎない</h2>
+      <div class="slide-img zoom-image" data-src="../../assets/images/2026-10-23/topic_8.png" data-alt="〈知見〉AIの画面は説明を足しすぎない" role="button" tabindex="0" aria-label="スライド画像を拡大">
+        <img src="../../assets/images/2026-10-23/topic_8.png" alt="〈知見〉AIの画面は説明を足しすぎない" />
+      </div>
+      <p class="lede">
+        Claude OpusとGPT-6 AstraでUIを多く作ってきた開発者のZihua氏（@luinlee）が、AIっぽい雑な画面を避けるコツとして、AGENTS.mdに一文を書き足す方法を紹介しました。書き足すのは「Avoid unnecessary secondary labels and descriptions. Let the layout do the explaining.」（不要な補助ラベルや説明文を避け、説明はレイアウトに任せる）という指示です。AIが作る画面にありがちな、見出しの下の小さな説明文や、意味の重なったラベルを減らす狙いです。
+      </p>
+      <h3>キーポイント</h3>
+      <ul class="keypoints">
+        <li data-i="01">エージェントが毎回読む指示ファイル（AGENTS.md）に、方針を一文で入れておく</li>
+        <li data-i="02">減らす対象は、見出し下の補足説明や重複したラベルといった「足し算」の要素</li>
+        <li data-i="03">禁止語の一覧ではなく「説明はレイアウトに任せる」という方針で伝えている</li>
+        <li data-i="04">コードレビューの側で、補助ラベルや説明文を避けるチェック項目を設ける方法もあわせて紹介（投稿者の自社ツールの宣伝を含む）</li>
+      </ul>
+      <div class="pull">
+        Claude CodeやCodexで画面を作るとき、同じ一文をAGENTS.mdやCLAUDE.mdに入れるだけで試せます。生成後のレビューでも「この補足は本当に要るか」を確かめる観点として使えます。
+      </div>
+    </div>
+    <aside class="side">
+      <dl>
+        <dt>ENGAGEMENT</dt>
+        <dd><span class="likes">5,352</span><div class="likes-label">likes on X</div></dd>
+        <dt>SOURCE</dt>
+        <dd><a href="https://x.com/luinlee/status/2113085361836744764">@luinlee</a></dd>
+        <dt>PUBLISHED</dt>
+        <dd>2026-10-22</dd>
+        <dt>CATEGORY</dt>
+        <dd>AI×デザイン</dd>
+        <dt>LINKS</dt>
+        <dd><a href="https://x.com/luinlee/status/2113085361836744764">x.com/luinlee/…</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</article>
+
+<section class="actions">
+  <div class="container">
+    <a class="primary" href="./news-slides.pdf">📄 PDFをダウンロード</a>
+    <a href="https://developers.openai.com/api/docs/guides/decisions">🧵 X スレッドで読む</a>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <a class="btn" href="../2026-10-22/">
+      ← 前日 · 2026-10-22
+      <span class="big">PHPに重大な脆弱性、すぐ更新を</span>
+    </a>
+    <a class="btn next" href="#">
+      翌日 · （未配信） →
+      <span class="big">（未配信）</span>
+    </a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">VCB News &amp; Post Headline</div>
+        <p>
+          泉水亮介による AI モーニングディスパッチの公開ログ。運営は <a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp</a>。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          DAILY 07:15 JST · EN+JP · CURATED
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../../">HOME</a></li>
+          <li><a href="../../news/2026-10-23/">TODAY</a></li>
+          <li><a href="../../#bookmarks">BOOKMARKS</a></li>
+          <li><a href="../../#archive">ARCHIVE</a></li>
+          <li><a href="../../#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://vibe-coder-bootcamp.com" target="_blank" rel="noopener">Vibe Coder Bootcamp ↗</a></li>
+          <li><a href="https://tekion.jp" target="_blank" rel="noopener">株式会社TEKION Group ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp / TEKION Group</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 20261023.0727</span>
+    </div>
+  </div>
+</footer>
+
+<div class="img-modal" id="img-modal" hidden role="dialog" aria-modal="true" aria-label="画像ビュー">
+  <button type="button" class="img-modal-close" aria-label="閉じる">✕</button>
+  <div class="img-modal-backdrop" data-close></div>
+  <img class="img-modal-img" id="img-modal-img" alt="" />
+</div>
+<script>
+(function(){
+  var modal = document.getElementById('img-modal');
+  if (!modal) return;
+  var img = document.getElementById('img-modal-img');
+  var closeBtn = modal.querySelector('.img-modal-close');
+  var lastFocus = null;
+  function open(src, alt){
+    lastFocus = document.activeElement;
+    img.src = src;
+    img.alt = alt || '';
+    modal.hidden = false;
+    document.documentElement.classList.add('is-img-modal-open');
+    setTimeout(function(){ closeBtn.focus(); }, 0);
+  }
+  function close(){
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.documentElement.classList.remove('is-img-modal-open');
+    img.src = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  modal.addEventListener('click', function(e){ if (e.target.closest('[data-close]') || e.target === closeBtn) { e.preventDefault(); close(); } });
+  document.addEventListener('keydown', function(e){ if (!modal.hidden && e.key === 'Escape') { e.preventDefault(); close(); } });
+  document.querySelectorAll('.zoom-image').forEach(function(el){
+    var src = el.dataset.src || (el.querySelector('img') && el.querySelector('img').src) || '';
+    var alt = el.dataset.alt || (el.querySelector('img') && el.querySelector('img').alt) || '';
+    el.addEventListener('click', function(e){ e.preventDefault(); open(src, alt); });
+    el.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(src, alt); } });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,7 +1,27 @@
 {
- "generated": "2026-10-22T09:35:13+09:00",
- "count": 156,
+ "generated": "2026-10-23T08:28:53+09:00",
+ "count": 158,
  "items": [
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "1. 実行環境：PHP・Node.js等の実際のバージョン、サポート期限、フレームワーク、OS・コンテナを調べる",
+   "date": "2026-10-22",
+   "url": "",
+   "tags": [],
+   "description": "2. 脆弱性：点検時点の公式アドバイザリで、CVE、影響を受ける範囲・条件、修正版を照合する。2026年10月21日の修正版はPHP 8.2.35／8.3.36／8.4.27／8.5.12、Node.js 22.23.4／24.22.1／26.12.1。これは当該更新の基準であ… ／ 添付: security-guide.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "【セキュリティ点検のお願い】このプロンプトをClaude CodeやCursorへ貼り付けてください",
+   "date": "2026-10-22",
+   "url": "",
+   "tags": [],
+   "description": "こんにちは。TEKION Groupの泉水です。 ／ 添付: security-guide.pdf",
+   "extra_links": []
+  },
   {
    "type": "slack",
    "type_label": "Slack配布",

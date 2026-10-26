@@ -1,7 +1,27 @@
 {
- "generated": "2026-10-26T08:20:40+09:00",
- "count": 158,
+ "generated": "2026-10-27T08:20:41+09:00",
+ "count": 160,
  "items": [
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "CursorとClaude Codeの役割の違いとWindowsで最初に押す場所（全10枚）",
+   "date": "2026-10-26",
+   "url": "",
+   "tags": [],
+   "description": "初回講義のあと、「なぜCursorの上でClaude Codeを使うのか」と「Windowsの画面でどこを押せばいいのか」という質問が続けて届きました。講義ではMacの画面を見せながら口で説明したので、Windowsの方は手が止まりやすかったと思います。講義で見せた順番そのまま… ／ 添付: deck.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "VBC宿題のプロンプト0〜4番の進め方と、要件を後から変えるときの直し方（全10枚）",
+   "date": "2026-10-26",
+   "url": "",
+   "tags": [],
+   "description": "第2回の講義で「第1回の宿題で、ログイン機能は難しそうだからいらないと言ってしまった。後から入れてと言えばいいですか」「もう一回プロンプトをやり直した方がいいですか」という質問が出ました。宿題のプロンプトは0番から4番まで順につながっていて、後ろの番号は前の番号が書いたファイル… ／ 添付: deck.pdf",
+   "extra_links": []
+  },
   {
    "type": "slack",
    "type_label": "Slack配布",

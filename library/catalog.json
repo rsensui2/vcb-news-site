@@ -1,7 +1,67 @@
 {
- "generated": "2026-11-02T08:20:32+09:00",
- "count": 161,
+ "generated": "2026-11-03T08:20:40+09:00",
+ "count": 167,
  "items": [
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "漫画をお届けします",
+   "date": "2026-11-03",
+   "url": "",
+   "tags": [],
+   "description": "諦めていた月80時間の転記業務に、非エンジニアが自分で手をつけた（全18ページ・読み切り） ／ 添付: non-engineer-routine-work.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "GitHubでリポジトリを作るときの所有者の選び方と、後から組織へ移す手順（全9枚）",
+   "date": "2026-11-03",
+   "url": "",
+   "tags": [],
+   "description": "第2回の講義でリポジトリを作る実習をしたとき、所有者（Owner）の欄に会社の組織と自分のアカウントの2つが出て、どちらを選ぶかで手が止まる場面がありました。会社のアカウントで GitHub に入っている方なら、同じところで迷うことがあると思います。選び方と、あとから移す手順を… ／ 添付: deck.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "APIが無い業務をログイン済みブラウザごとAIに任せる手順と止める線の決め方（全10枚）",
+   "date": "2026-11-03",
+   "url": "",
+   "tags": [],
+   "description": "講義の冒頭で、受講企業の方から「経費精算が爆裂めんどくさいんですよ」と相談がありました。専用のツールと自作のワークフローが混ざっていて、画面に1件ずつ打ち込む作業に時間を取られている、という話です。 ／ 添付: deck.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "常駐エージェントに最初の仕事を任せる手順と先に決める5つ（全12枚）",
+   "date": "2026-11-03",
+   "url": "",
+   "tags": [],
+   "description": "サーバーも立てて、Slack でエージェントも返事をする。なのに、任せている仕事がゼロ。AIエージェントの回（第5回）がまだ無かった期に卒業した方から、この状態の相談を受けました。 ／ 添付: deck.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "AIエージェントに仕事を任せる怖さの見分け方と最初に数えるもの（全10枚）",
+   "date": "2026-11-02",
+   "url": "",
+   "tags": [],
+   "description": "ある受講企業の研修の最終回で、同席した決裁者の方から「AIが勝手に発信しまくって、人間が追いつけなくなるのが怖い」と言われました。 ／ 添付: deck.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "画面の価格が1円に書き換わる仕組みと、金額やログインの判断をバックエンドに置く理由（全11枚）",
+   "date": "2026-11-02",
+   "url": "",
+   "tags": [],
+   "description": "第2回の講義で、通販サイトの商品ページの値段6,899円を、ブラウザの開発者ツールでその場で1円に書き換える実演をしました。画面の数字は手元でいくらでも変えられます。AI に作ってもらったアプリでも、お金やログインの判断を画面側に置いたままだと、同じ操作で結果を変えられてしまい… ／ 添付: deck.pdf",
+   "extra_links": []
+  },
   {
    "type": "slack",
    "type_label": "Slack配布",
@@ -1073,6 +1133,10 @@
     {
      "label": "note",
      "url": "https://note.com/rsensui/n/nc4f1d4984fb2"
+    },
+    {
+     "label": "slack",
+     "url": "https://tekion-groupworkspace.slack.com/archives/C0A8ZFR36JK/p1793654018776479"
     }
    ]
   },
@@ -1300,6 +1364,10 @@
     {
      "label": "note",
      "url": "https://note.com/rsensui/n/nbcf4d3f861b4"
+    },
+    {
+     "label": "slack",
+     "url": "https://tekion-groupworkspace.slack.com/archives/C0A8ZFR36JK/p1793654095369659"
     }
    ]
   },

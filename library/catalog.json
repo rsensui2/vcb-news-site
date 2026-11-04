@@ -1,7 +1,17 @@
 {
- "generated": "2026-11-04T08:20:32+09:00",
- "count": 167,
+ "generated": "2026-11-05T08:20:35+09:00",
+ "count": 168,
  "items": [
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "TEKION Slide Generator のモーションスライドが、さらにパワーアップしました！",
+   "date": "2026-11-04",
+   "url": "",
+   "tags": [],
+   "description": "（添付の動画で、これまでと最新バージョンを見比べられます） ／ 添付: TEKION-Slide-Generator-Motion-Slides.mp4",
+   "extra_links": []
+  },
   {
    "type": "slack",
    "type_label": "Slack配布",

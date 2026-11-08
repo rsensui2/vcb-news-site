@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>これまでで最も価値のあるSEO記事（パート2） — Bookmarks · Vibe Coder Bootcamp</title>
+  <meta name="description" content="元FAANGで検索ランキングのエンジニアをしていた著者（現在は法律事務所向けSEO代理店を経営）による、ローカルSEO解説のパート2。順位は検索する人の位置で変わるのでグリッド計測で見ること、マップ上位3枠がクリックの約61%を取ること、ビジネスプロフィールの主カテゴリの選び方、" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho+B1:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css" />
+  <style>
+  /* Archive page — day sections */
+  .bm-archive { padding: 0 0 40px; background: var(--paper); }
+  .bm-day {
+    padding: 56px 0;
+    border-bottom: 1px solid var(--hair);
+  }
+  .bm-day:first-of-type { padding-top: 40px; }
+  .bm-day-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+  }
+  .bm-day-head .date {
+    font-family: "Shippori Mincho B1", "Noto Serif JP", serif;
+    font-weight: 800;
+    font-size: clamp(40px, 6vw, 72px);
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin: 0;
+  }
+  .bm-day-head .date .sep { color: var(--accent); margin: 0 2px; }
+  .bm-day-head .count {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding: 8px 14px;
+    border: 1px solid var(--accent);
+    white-space: nowrap;
+  }
+  /* active nav underline */
+  .masthead nav a.is-active { border-bottom-color: var(--accent); color: var(--accent); }
+
+  /* Article page — prose */
+  .bm-article-head {
+    padding: 48px 0 40px;
+    border-bottom: 1px solid var(--hair);
+  }
+  .bm-article-head .breadcrumb {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mute);
+    margin-bottom: 18px;
+  }
+  .bm-article-head .breadcrumb a { color: var(--ink); border-bottom: 1px solid var(--hair); padding-bottom: 1px; }
+  .bm-article-head .breadcrumb a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  .bm-article-head .cat-line {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .bm-article-head .cat-line .sep { color: var(--mute); }
+  .bm-article-head h1.title {
+    font-family: "Shippori Mincho B1", "Noto Serif JP", serif;
+    font-weight: 800;
+    font-size: clamp(32px, 4.4vw, 58px);
+    line-height: 1.12;
+    letter-spacing: -0.005em;
+    margin: 0 0 24px;
+    color: var(--ink);
+  }
+  .bm-article-head .strap {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--mute);
+  }
+  .bm-article-head .strap span .label { color: var(--accent); margin-right: 6px; }
+  .bm-article-head .strap a { border-bottom: 1px solid var(--hair); padding-bottom: 2px; }
+  .bm-article-head .strap a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+  .bm-body { padding: 72px 0; border-bottom: 1px solid var(--hair); }
+  .bm-body .container {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr) 300px;
+    gap: 48px;
+  }
+  .bm-body .numeral {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 96px;
+    font-weight: 800;
+    line-height: 0.85;
+    color: var(--ink);
+    position: sticky;
+    top: 40px;
+    align-self: start;
+    letter-spacing: -0.03em;
+  }
+  .bm-body .numeral .ord {
+    display: block;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.14em;
+    margin-top: 14px;
+    font-weight: 500;
+  }
+  .bm-body .prose {
+    font-size: 16px;
+    line-height: 1.9;
+    color: var(--ink-soft);
+    font-family: "Inter", "Noto Sans JP", sans-serif;
+  }
+  .bm-body .prose > *:first-child { margin-top: 0; }
+  .bm-body .prose h1 {
+    font-family: "Shippori Mincho B1", serif;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 1.25;
+    margin: 40px 0 18px;
+    color: var(--ink);
+  }
+  .bm-body .prose h2 {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 40px 0 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+  }
+  .bm-body .prose h2::before {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: var(--accent);
+  }
+  .bm-body .prose h3 {
+    font-family: "Shippori Mincho B1", serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.35;
+    margin: 32px 0 14px;
+    color: var(--ink);
+  }
+  .bm-body .prose p { margin: 0 0 18px; }
+  .bm-body .prose ul, .bm-body .prose ol {
+    border-left: 2px solid var(--ink);
+    padding: 4px 0 4px 24px;
+    margin: 18px 0 24px;
+    list-style: none;
+  }
+  .bm-body .prose ul li, .bm-body .prose ol li {
+    position: relative;
+    padding: 4px 0 4px 18px;
+    font-size: 15px;
+  }
+  .bm-body .prose ul li::before {
+    content: "·";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1;
+  }
+  .bm-body .prose blockquote {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 19px;
+    line-height: 1.6;
+    padding: 18px 0 18px 24px;
+    border-left: 4px solid var(--accent);
+    margin: 28px 0;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .bm-body .prose pre {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 18px 20px;
+    overflow-x: auto;
+    margin: 20px 0;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 13px;
+    line-height: 1.65;
+  }
+  .bm-body .prose code {
+    background: var(--paper-deep);
+    border: 1px solid var(--hair);
+    padding: 1px 6px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.9em;
+  }
+  .bm-body .prose pre code { background: transparent; border: 0; padding: 0; color: inherit; font-size: 13px; }
+  .bm-body .prose a { color: var(--accent); border-bottom: 1px solid rgba(200,52,31,0.25); }
+  .bm-body .prose a:hover { border-bottom-color: var(--accent); }
+
+  .bm-body .side {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: var(--mute);
+    border-top: 1px solid var(--hair);
+    padding-top: 24px;
+    position: sticky;
+    top: 40px;
+    align-self: start;
+  }
+  .bm-body .side dl { margin: 0; }
+  .bm-body .side dt {
+    color: var(--accent);
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-top: 18px;
+    margin-bottom: 6px;
+  }
+  .bm-body .side dt:first-child { margin-top: 0; }
+  .bm-body .side dd {
+    margin: 0 0 4px;
+    color: var(--ink);
+    word-break: break-all;
+    font-size: 12.5px;
+    line-height: 1.6;
+  }
+  .bm-body .side dd a { border-bottom: 1px solid var(--hair); padding-bottom: 1px; }
+  .bm-body .side dd a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+  .bm-body .side .stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 18px;
+    margin-top: 8px;
+  }
+  .bm-body .side .stats .stat .num {
+    font-family: "Shippori Mincho B1", serif;
+    font-size: 24px;
+    color: var(--ink);
+    line-height: 1;
+    font-weight: 800;
+    display: block;
+  }
+  .bm-body .side .stats .stat .lab {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--mute);
+    margin-top: 4px;
+    display: block;
+    text-transform: uppercase;
+  }
+
+  /* card: stretched-link target must be local nav, not external */
+  .xcard .xcard-main-link { cursor: pointer; }
+
+  @media (max-width: 980px) {
+    .bm-body .container { grid-template-columns: 1fr; gap: 24px; }
+    .bm-body .numeral { position: static; font-size: 64px; }
+    .bm-body .side { position: static; }
+    .bm-day-head .date { font-size: 36px; }
+  }
+</style>
+</head>
+<body>
+<div class="dispatch">
+  <div class="container row">
+    <span class="tick">BOOKMARK №001</span>
+    <span class="sep">/</span>
+    <span>2026-11-08</span>
+    <span class="sep">/</span>
+    <span>@BowTiedBills</span>
+    <span class="sep">/</span>
+    <span>641 ITEMS</span>
+    <span class="sep">/</span>
+    <span>JST 07:15 MON</span>
+    <span class="sep">/</span>
+    <span class="live">LIVE</span>
+    <span class="sep">/</span>
+    <span>CURATED BY 泉水亮介</span>
+  </div>
+</div>
+<header class="masthead">
+  <div class="container row">
+    <a href="../" class="wordmark"><span class="bar"></span>Vibe Coder Bootcamp</a>
+    <nav>
+      <a href="../">HOME</a>
+      <a href="../news/2026-11-08/">NEWS</a>
+      <a href="./" class="is-active">BOOKMARKS</a>
+      <a href="../#archive">ARCHIVE</a>
+      <a href="../#about">ABOUT</a>
+    </nav>
+    <div class="meta">JST · 07:15 · MON</div>
+  </div>
+</header>
+
+<section class="bm-article-head">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="./">← BOOKMARKS</a> <span>/</span> 2026-11-08 <span>/</span> №001
+    </div>
+    <div class="cat-line">
+      <span>💼 AI×ビジネス活用</span>
+      <span class="sep">·</span><span>BowTiedBills <span style="opacity:.7">@BowTiedBills</span></span>
+      <span class="sep">·</span><span>2026-11-08</span>
+    </div>
+    <h1 class="title">これまでで最も価値のあるSEO記事（パート2）</h1>
+    <div class="strap">
+      <span><span class="label">№</span>001 / 641</span>
+      <span><span class="label">SRC</span><a href="https://x.com/BowTiedBills/status/2119143764698571207" target="_blank" rel="noopener noreferrer">x.com/BowTiedBills ↗</a></span>
+      <span><span class="label">GH</span><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/2026-11-07_BowTiedBills__2119143764698571207.md" target="_blank" rel="noopener noreferrer">GitHub ↗</a></span>
+    </div>
+  </div>
+</section>
+
+<section class="bm-body">
+  <div class="container">
+    <aside class="numeral">001<span class="ord">BOOKMARK / 641</span></aside>
+    <article class="prose">
+<p><strong>いいね:</strong> 241</p><p><strong>リポスト:</strong> 25</p><p><strong>ブックマーク:</strong> 1418</p><p><strong>閲覧数:</strong> 100780</p><h2>本文</h2><p>https://x.com/i/article/2110560577420431360</p><h2>まとめ</h2><p>元FAANGで検索ランキングのエンジニアをしていた著者（現在は法律事務所向けSEO代理店を経営）による、ローカルSEO解説のパート2。順位は検索する人の位置で変わるのでグリッド計測で見ること、マップ上位3枠がクリックの約61%を取ること、ビジネスプロフィールの主カテゴリの選び方、サイテーション（店名・住所・電話番号の掲載）の差分監査、直近90日の口コミの増え方、市区町村ページとスマホでの問い合わせ導線、被リンクの安全な買い方、複数拠点の運用、「SEOは死んだ」論の見分け方までを扱う。AI検索については、AIの回答に出るかどうかは結局Googleの上位表示とドメインの評価についてくる、と主張している。</p><h2>日本語訳全文</h2><h3>はじめに</h3><p>パート1では、SEOの仕組みを説明しました。検索が人を送り込む3つの場所、ビジネスプロフィール、Webサイト、コンテンツ、口コミとリンク、AIの回答、そして成果が出るまでの時間です。</p><p>これはパート2です。それぞれをさらに深掘りし、前回入りきらなかった内容も扱います。上位の順位がどう決まるか、サイテーションの正しいやり方、ペナルティを受けずにリンクを買う方法、クリックを電話に変える方法、そして誰かがまた「SEOは死んだ」と言い出したときの対処です。</p><p>書いているのが誰かを改めて。私は代理店を始める前、FAANGでランキングと検索アルゴリズムのエンジニアをしていました。私のチームはこれまでに50以上の法律事務所をGoogleで1位にしています。そのうち3件の案件だけで、地図上の619地点が「上位3位の圏外」から「1位」に上がりました。</p><p>各セクションの最後に「使い方」の欄を付けたので、その日のうちに手を動かせます。</p><h3>1. 順位は検索する人と一緒に動く</h3><p>多くの経営者は、自分の机からメインのサービス名をGoogle検索して順位を確かめます。それで分かるのは「自分の机での順位」で、知っても一番役に立たない場所です。</p><p>検索する人を数マイル動かすと、Googleは別の検索結果を返します。ローカル順位トラッカーを使うと、周囲およそ100平方マイルにわたってこれを地図にでき、地図上の点ごとに自分の順位が違って見えます。</p><p>これが思った以上に重要な理由は、お金になる検索は事務所から離れた場所で起きるからです。交通事故は高速道路で起きます。離婚の検索は自宅でされます。飲酒運転はほぼどこでも起こりえます。事務所の目の前でしか上位にいない（多くの事務所がそうです）なら、人が実際に検索している場所で上位にいる相手に負けます。</p><p>2社の顧客のグリッドはこうでした。中西部の中規模都市の離婚弁護士は、グリッドの169地点のどこでも上位3位に入っていませんでした。90日目には、169地点すべてで1位でした。Googleからの電話は月約4件から50件以上になり、本人いわく「リードが多すぎて、さばききれないほど」。</p><p>東海岸で30年以上続く移民法の事務所は、州全体の225地点のどこでも上位3位に入っていませんでした。4か月で225地点すべて1位になり、電話は月約32件から104件になりました。</p><p>使い方:</p><ul><li>何かを変える前に、メインのサービスでグリッドスキャンをして基準値を取る</li><li>事務所の場所だけでなく、5マイル・10マイル先での順位を見る</li><li>毎月スキャンし直し、グリッド全体で施策を評価する</li></ul><h3>2. マップ上位の数字</h3><p>Googleマップの順位とクリックの関係は、3位を過ぎると崖のように落ちます。マップパック内の3社が、地域検索のクリックの約61%を取ります。最上部の広告とローカルサービス広告が5〜10%ほどを分け合います。3位より下の全員が、残りを奪い合います。</p><p>順位は1つ上がるごとに価値が大きくなります。3位から2位に上がると問い合わせはおおむね倍になり、2位から1位でさらに倍になります。だから4位の事務所は、マップから本当の電話が来るまであと1つです（4位の方、すみません）。</p><p>1つの検索で複数の枠を取ることもできます。強いプロフィールと、1ページ目に載るWebサイトがそろえば、同じ検索結果に自社が2回、3回と出ます。最上部の広告を1枠買うより、そのページの50%を占めたくありませんか。</p><p>上位から来たリードが成約しやすい理由もあります。1位で見つけた人は、最初の電話の前からもう信頼しています。ページ上のほかの全員より自分を選んでいて、誰かが説得したわけではありません。だから私の顧客は、検索からの問い合わせの方が有料広告のリードより成約しやすいと感じています。</p><p>使い方:</p><ul><li>グリッドで自分の順位を確かめ、上位3位まであといくつかを数える</li><li>同じ検索で、マップの掲載と並んでWebサイトが1ページ目に載っているか確かめる</li><li>検索からの電話と広告からの電話を分けて記録し、成約率の差を見る</li></ul><h3>3. プロフィールで何の検索に出るかを選ぶ</h3><p>ビジネスプロフィールの主カテゴリは、プロフィールの中で最も重要な項目です。Googleはこれを使って、どの検索に関連があるかを判断します。</p><p>「法律事務所」のまま、という失敗があります。多くの事務所が主カテゴリを単に「法律事務所」にしていて、本当に取りたい案件の順位を自ら潰しています。私が担当した人身傷害の弁護士は、カテゴリが「法律事務所」で、電話は月約20件でした。カテゴリを人身傷害に変え、口コミの仕組みを入れ、事務所の実際の写真を載せました。7週目の時点で、1か月目の電話は2倍、2か月目はさらに70〜80%増え、6週間で約23件の新規案件が契約に至りました。</p><p>1つの事務所で2種類の業務をしている場合は、増やしたい方を主カテゴリにします。家事事件と刑事事件の両方を扱う弁護士なら、その都市で検索需要が多く利益率も良い方を選びます。両方でしっかり上位を取るには、別のフロアや区画に、正当な別プロフィールを持たせることが認められています。鍵は「正当な」という点です（実際のスペース、実際の看板、実際の電話回線）。</p><p>サービスはすべて登録します。人身傷害の事務所なら、自転車事故、ボート事故、自動車事故、労災、転倒事故、犬の咬傷事故を、それぞれ別の項目として載せます。犬の咬傷が独立した項目になって初めて、Googleは犬の咬傷の案件で順位を付けます。</p><p>市場が求めるなら2言語にします。移民法の事務所では、プロフィールとすべてのサービスを英語とスペイン語で作りました。ヒスパニック系の市場は一般に手薄で、競合の多くは英語でしか最適化していません。</p><p>使い方:</p><ul><li>今日、主カテゴリを確認し、一番稼げる単一のサービスに切り替える</li><li>提供しているサービスを、1つにつき1項目ですべて登録する</li><li>地域で第二言語が話されているなら、プロフィールと主要ページを翻訳する</li></ul><h3>4. サイテーションを、今度こそ正しく</h3><p>パート1で説明したとおり、サイテーションとは、ネット上で自社の名前・住所・電話番号を載せている場所のことです。退屈で手間がかかるので、多くの代理店が飛ばす部分です。そして、その顧客が7位、10位、12位で頭打ちになる理由もまさにここにあります。</p><p>無料でできるサイテーション差分監査は、検索1回で済みます。地域で最上位の競合の正確な事業者名をコピーし、引用符で囲んでGoogle検索します。結果の件数が、おおよその掲載の広がりです。自社の名前でも同じことをします。ある監査では、上位2事務所が5,260件と4,660件でした。「どこにも順位が出ない」と相談してくる事務所の多くは、20件、30件、せいぜい100件です。上位の競合と同じくらいの規模を目指してください。</p><p>サイテーションが崩れるのは、電話番号が変わったのに誰もディレクトリを更新しなかったとき、Webサイトが新しいドメインに移ったとき、新しいパートナーが加わって事務所名が変わったときです。どれもネット上に古い情報の跡を残し、食い違いが1つあるごとにGoogleはその掲載を信用しなくなります。Googleは面倒な作業を代わりにやってくれないので、こちらでできる限り分かりやすくしておく必要があります。</p><p>地元の町だけでなく州全体で上位を取りたいなら、州全体をカバーするサイテーションが必要です。移民法の事務所では、州全体で英語とスペイン語の約100件のサイテーションを用意しました。それが225地点すべてで1位になった理由の一部です。</p><p>サイテーションは、通常検索よりマップに効きます。主にビジネスプロフィールの信頼の合図だからです。Webサイトの青いリンクの順位は、コンテンツとリンクの方に左右されます。</p><p>使い方:</p><ul><li>自社と上位3社の競合について、引用符付きの検索をする</li><li>これまで使った古い電話番号と住所をすべて検索し、まだ載っている掲載をすべて直す</li><li>80〜100件以上のディレクトリに、まったく同じ情報で載ることを目指す</li></ul><h3>5. 口コミの増え方を、もっと深く</h3><p>これは私が他の何より繰り返す点です。ほとんどの人が間違えるからです。Googleは口コミの総数より、口コミの増え方（ベロシティ）をはるかに重視します。ここでいう増え方とは、直近90日に得た口コミの数を、競合する事業者と比べたものです。</p><p>口コミ356件の事務所が、756件の事務所より上位にいるのを見たことがあります。5年前の口コミの山は、今年あなたがどれだけ良いかについてGoogleに何も伝えません。</p><p>必要な数は、毎月5〜20件の新しい口コミです。大きな都市ほど上の方が要ります。一度だけ集中して頼み、その後1年何もしないのは、ほぼ効果がありません。</p><p>口コミの仕組みを詳しく書くと、こうです。</p><ul><li>依頼を、受任時と案件終了時の流れに組み込む</li><li>実際の口コミ投稿リンクを送る。「口コミをお願いします」だけでは無視される</li><li>まずメール、次にSMS、時間があれば電話</li><li>2〜4回追いかける。顧客は「はい、もちろん」と言って忘れるから</li><li>追いかけを自動化し、弁護士は法律の仕事に集中できるようにする</li><li>すべての口コミに1〜2日以内に返信する。悪い口コミにも</li></ul><p>返信もランキングの合図になりますが、ほとんどの事務所が無視しています。</p><p>パート1からの更新が1つあります。2026年4月、Googleは口コミの規約に2つの条項を加えました。事業者は、従業員に決まった件数の口コミを集めるよう指示してはいけません。また、特定のスタッフ名を挙げるなど、特定の内容の口コミを頼むよう指示してもいけません。なので私も助言を変えました。事業としての目標は持ち、仕組みは回し続け、顧客には好きなことを書いてもらう。満足しそうな顧客にだけ頼む「レビューゲーティング」と、あらゆる見返りは、以前から禁止されています。</p><p>口コミを書くのが不安な顧客もいます。移民法の顧客にとって、口コミは危険に感じられることがあります。手続きが安全で簡単だと感じられなければ、誰も書いてくれません。その事務所は、私たちが関わる間に5つ星の口コミが70件から90件に増え、オーナーは「社内のチームメイトみたいだ」と言ってくれました。</p><p>口コミを新しい事務所へ回すこともできます。正当な拠点が複数あるなら、口コミが一番必要な拠点へ依頼を送ります。新しい都市に新しい事務所を開き、古い事務所では口コミが順調に集まっているなら、古い事務所の顧客に新しい事務所のリンクを渡します。本物の顧客による本物の口コミなので、偽装ではありません。強い都市が、弱い都市を立ち上げてくれます。</p><p>使い方:</p><ul><li>直近90日に自社と上位3社が得た口コミの数を数える</li><li>案件や仕事の終了をきっかけに、3回の追いかけ付きの自動依頼を設定する</li><li>先月分のすべての口コミに、今日返信する</li></ul><h3>6. 上位に出るページと、成約につながるページ</h3><p>検索エンジンは、Webサイトに何が書いてあるか、そして誰がそれを言っているかを気にします。</p><p>Googleが最初に読む3つは、どのページでも、タイトルタグ、その下の説明文、メインの見出しです。この3つは他のどんな構造より重みがあります。どれにもサービス名と都市名を入れ、人が書くように書きます。H2やH3も役に立ちますが、この3つほどページを動かすものはありません。</p><p>上位1%がやっている市区町村ページの作り方は、こうです。サービス地域のそれぞれに専用のページを作ります。町の名前だけ差し替えた同じページのコピーは絶対に作りません。</p><ul><li>サービス名、その地区、事務所名から組み立てた見出し</li><li>その地域のGoogleマップを埋め込み、自社のプロフィールを表示</li><li>どの裁判所が扱うか、近くの目印など、地元の人しか知らない情報</li><li>メインのサービスページへの内部リンク</li></ul><p>距離が離れれば順位は下がりますが、それで構いません。40分離れた事務所から、都心の「[大都市] 離婚弁護士」で上位を取ることはできません。市区町村ページは、マップには載っていても中心都市の外にある周辺の町のためのものです。</p><p>案件の種類ごとにページを作ります。犬に噛まれてけがをした人は、犬の咬傷事故を扱う弁護士を探します。だから犬の咬傷は独自のページを持ち、他のすべての案件の種類も同じです。家事事件の事務所なら、離婚、親権、配偶者扶養料、養育費です。「配偶者扶養料 弁護士」や「養育費 弁護士」と検索する人は、すでに弁護士を雇ったか、雇う直前です。移民法の事務所では、ビザの種類、グリーンカード、強制送還、亡命、家族の請願ごとに、英語とスペイン語の両方で別々のページを作りました。</p><p>お金を払ってくれる人に向けて書きます。「自分でやる方法」のコンテンツを大量に作ると、自分でやろうとする人が集まります。すべてのページは、上位に出て、かつ成約につながるように書くべきです。交通違反の事務所の場合は、赤信号カメラについてのコンテンツでした。新しいカメラの設置場所、罰金の額、そして事務所がそれに対して何をするかです。</p><p>技術的な掃除もあります。リンク切れ、404ページ、大きすぎる画像、alt属性の欠落、メタタイトルの欠落。どれも面白くはありませんが、どの案件でも最初の1か月で全部直します。</p><p>使い方:</p><ul><li>最も重要な5ページのメタタイトル、説明文、H1を確認する</li><li>上位を取りたい案件の種類やサービスをすべて書き出し、それぞれに専用ページがあるか確かめる</li><li>顧客を取りたい町ごとにページを作り、その町にしか当てはまらない内容を入れる</li></ul><h3>7. クリックを電話に変える</h3><p>順位が上がれば、人がページに来ます。その人が電話をかけるか、下の検索結果に移るかは、ページの中身が決めます。</p><p>アクセスの大半はスマホからです。今すぐ自社のサイトをスマホで開いてみてください。ページを下にスクロールしても、電話ボタンがついてきますか。スクロールせずにフォームを入力できますか。スマホの人は、スクロールしてまで探す前にやめてしまいます。</p><p>ほかに電話する前に予約を入れてもらいます。交通事故のあと、人は5つの事務所に電話します。最初に出たところが勝ちます。だから私は、サイトに直接カレンダー予約を埋め込みます。15分の通話を予約した人は、もう市場から外れます。予約したあとで3つ目、4つ目、5つ目の事務所に電話はしないからです。</p><p>営業時間を長くします。営業時間はランキングの合図です。夜に近くの人身傷害の弁護士を検索すると、まだ開いている事務所が上に押し上げられます。夜間は電話代行サービスを入れ、動き始めたらGoogleの営業時間を更新します。</p><p>リードを連れてくる無料ツールもあります。計算ツールはそれ自体の検索で上位に出られ、弁護士にたどり着く前にリードを確保できます。</p><ul><li>人身傷害: 案件の価値の計算ツール。成功報酬制の案件の訪問者は、みな頭の中に金額を持っているから</li><li>家事事件: 配偶者扶養料、養育費、親権の計算ツール</li><li>移民や刑事事件では機能しません。計算するものがないからです</li></ul><p>使い方:</p><ul><li>自社サイトをスマホで試し、電話番号を見つけるまでの時間を測る</li><li>主要なサービスページに予約カレンダーを置く</li><li>人身傷害か家事事件なら、計算ツールを1つ作り、専用ページを与える</li></ul><h3>8. 被リンクの、正直な話</h3><p>Googleは、リンクを買う必要はないと言います。良いコンテンツを出せば、自然にリンクしてもらえると。それは機能しません。だからリンクは買う必要があり、どう買うかで、効くかペナルティを受けるかが決まります。</p><p>リンクのマーケットプレイスで問題になる理由はこうです。何千人もが同じマーケットプレイスからリンクを買えば、Googleに見つかるのは時間の問題です。Googleはどのサイトがリンクを売っているかを知っていて、動くときにはそれにつながるすべてのドメインにペナルティを科します。</p><p>指標がやけに良く見える理由もあります。マーケットプレイスはドメインレーティング、トラフィック、価格を見せてくれます。見た目は素晴らしいです。Ahrefsのような有料ツールで深く見ると、そのサイトはトラフィックの99%を、無関係な検索でインドから得ていたりします。だから顧客が、私のDR10〜30のリンクとマーケットプレイスのDR70〜90のリンクを比べるとき、それは本物のリンクと地雷を比べているのです。</p><p>良いリンクとは何か。被リンクは、紹介のネット版です。イーロン・マスクのリポストは、フォロワー0のアカウントのリポストよりはるかに重みがあります。リンクも同じです。私が使う関連性のルールは単純です。</p><ul><li>自社の業界のサイトは関連がある</li><li>自社の都市のサイトは関連がある</li><li>両方なら理想的。どちらか一方でも問題ない</li></ul><p>私のチームは、実在のサイトへの手作業の依頼でリンクを得ています。Googleがボットのリンクとして検出するのは、ずっと難しくなります。</p><p>一般的な助言の多くがここを間違える理由は、AIツールが被リンクを買わないよう誘導し、しかもリンクを得るべき良い地元サイトの一覧を持っていないからです。</p><p>使い方:</p><ul><li>Ahrefsなどで自社の被リンク一覧を出し、それらのサイトがどこからトラフィックを得ているか確認する</li><li>勘でリンク否認はしない。ただし、本物の地元や業界のトラフィックが見えないところからは買うのをやめる</li><li>地元と業界のサイトを20件書き出し、依頼を始める</li></ul><h3>9. 複数の拠点を、1つの仕組みで</h3><p>拠点ごとに独自の設定が必要で、それらを並行して回します。</p><ul><li>都市ごとに専用ページ</li><li>プロフィールごとに独自のサイテーションと口コミ戦略</li><li>被リンクはメインのドメインの評価を高め、拠点ごとに配分する</li></ul><p>交通違反の事務所での成果を紹介します。カリフォルニア州の3つの市場に事務所を持つある交通違反の顧客は、Googleに毎月5万ドルの広告費を払っていました。私たちは都市ごとのページとプロフィールを作り、事務所全体の口コミ戦略を入れ、技術的な掃除をし、赤信号カメラと罰金についてのコンテンツを書き、被リンクを拠点ごとに配分しました。3つの市場すべてで1位になりました。月間の自然検索のクリックは1,200から4,800へと4倍になり、広告費を5万ドルから5千ドルに減らせました。毎月4万5千ドルが、Googleではなく事務所に残るようになりました。私たちへの口コミは「私はとても要求の厳しい客だが、最高の推薦をする」でした。</p><p>使い方:</p><ul><li>すべての拠点を書き出し、それぞれに専用のプロフィール、ページ、サイテーション、口コミの流れがあるか確かめる</li><li>どの拠点が一番弱いかを見て、そこに最も多く口コミ依頼を送る</li><li>拠点ごとの広告費と、自然検索で置き換えられそうな分を比べる</li></ul><h3>10. 誰かが「SEOは死んだ」と言ったとき</h3><p>数か月おきに、ネットの誰かが「GoogleがSEOを殺した」と言い出します。それが本当かどうかの見分け方を書きます。</p><p>&amp;num=100騒ぎがありました。2025年、ある人が「Googleの静かなアップデートがSEOを破壊した」と主張しました。実際に起きたのは、1ページに100件の結果を表示するURLの設定が効かなくなったことです。AhrefsやSemrushは1回ではなく10回のリクエストが必要になり、コストが10倍になりました。実際の利用者と実際の検索への影響はゼロでした。好きな言葉で検索し、下までスクロールして2ページ目をクリックすれば、自分で確かめられます。</p><p>AI検索はSEOの上で動いています。AIの回答に出るかどうかの大部分は、結局、関連する検索でGoogleの上位にいるかどうかです。そもそも、それにはしっかりしたドメインの評価が必要です。まずマップと自然検索の順位を上げれば、AIでの見え方もそれと一緒に上がります。ChatGPTに引用されるという点では、GoogleのプロフィールよりYelpの方が効きます。そして、事例を持っていながら見せ方を知らない創業20〜30年の事務所は、できたばかりの事業よりずっと楽な仕事です。</p><p>AI SEOツールについて。ツールにお金を払い、そのプロンプトが吐き出したものを公開して、一晩でAIの回答の1位になれると期待している人は、私にDMしてください。売りたい橋があります（訳注: 英語の「騙されやすい人に橋を売る」という慣用句）。画面は良くできていて、AIのキーワード調査には少し役立ちます。価値はそこまでです。</p><p>使い方:</p><ul><li>「SEOは死んだ」という投稿を見たら、何かを変える前に自社の電話件数と順位を確認する</li><li>毎月ChatGPTに「[自分の都市]で一番の[自分のサービス]は？」と聞き、答えを記録する</li><li>Yelpの掲載を整える。多くの人が思う以上にAIの回答の材料になっている</li></ul><h3>11. この仕事を誰がやるべきか</h3><p>ここまでの内容はすべて学べます。大半は退屈な繰り返しの作業で、だからこそ多くの事業者（と代理店）が中途半端に終えてしまいます。</p><p>何にでもイエスと言う代理店がいます。顧客がネットの記事を1本読み、そこに書いてあったことを頼むと、代理店はそれをやる。何を望んでいるか分かっていない顧客にイエスを言いすぎると、キャンペーンは1年漂流し、何も残りません。</p><p>サイテーションを飛ばす代理店もいます。順位が何か月も7位、10位、12位で止まっているなら、まずサイテーションを確認してください。ほとんどの代理店が飛ばす工程で、頭打ちの大半はここから来ます。</p><p>AIツールの一般的な助言もあります。今では多くの経営者が、SEOの計画をClaudeやChatGPTから得ています。それらは被リンクを安全に買う方法を決して教えてくれず、どの地元サイトから得ればよいかも知りません。</p><p>実際に話す相手は誰か。私のところには、新人のアカウントマネージャーも、代理店にありがちなたらい回しもありません。顧客は私と直接話し、作業をするのは私自身のチームです。</p><p>あなたの側の役割もあります。仕事の腕は、結果の多くを今も左右します。私はリードを連れてきますが、成約させるのは事業者の側です。1位で選んでくれた人からの、決めるだけの案件を取りこぼす事務所はたくさんあります。だから私の側で弁護士の解約は、3年で1〜2件にとどまっています。</p><p>使い方:</p><ul><li>SEOの担当者に、サイテーションの件数と、上位の競合との比較を聞く</li><li>被リンクをどう得ているか、そのサイトはどこからトラフィックを得ているかを聞く</li><li>新しいリードにチームがどれだけ早く折り返しているかを確かめる。順位が売上に変わるのはそこだから</li></ul><h3>実践への落とし込み</h3><p>11のセクションを1年に分散させ、日課として回します。</p><p>毎週:</p><ul><li>ビジネスプロフィールに、実際の写真付きで2〜3回投稿する</li><li>新しい口コミすべてに返信する</li><li>口コミ依頼が送られているか確認する</li></ul><p>毎月:</p><ul><li>グリッドをスキャンし直し、先月と比べる</li><li>自社と上位の競合でサイテーション検索をする</li><li>直近90日の口コミを、上位3社と比べて数える</li><li>Googleからの電話とフォーム送信を記録する</li></ul><p>四半期ごと:</p><ul><li>新しい市区町村ページと案件種類のページを足す</li><li>被リンクと、そのサイトのトラフィックの出どころを見直す</li><li>AIツールに誰を推薦するか聞き、自社かどうかを見る</li></ul><p>時間軸の目安です。1か月目は、クリック、電話、プロフィール閲覧が増え始める時期です。私の顧客がGoogleから最も早くリードを得たのは、6日目でした。3か月目ごろには、事務所から20〜25平方マイルの範囲でマップ1位は現実的で、狙った検索も最初の2ページに上がってきます。競争の最も激しい都市では、6か月近くかかります。3〜4か月続けることで、S&amp;P500を毎月買うのと同じように、成果が積み上がっていきます。1〜2か月目でやめた人は、大きな見返りを得られません。</p><h3>要約（TLDR）</h3><ul><li>自分の位置は検索する人と一緒に動くので、グリッド全体で計測する</li><li>マップの上位3枠がクリックの約61%を取り、1つ上がるごとに問い合わせは倍になる</li><li>主カテゴリを望むサービスそのものにし、すべてのサービスに独自の項目とページを与える</li><li>上位の競合と同じ規模になるまで、サイテーションを直す</li><li>毎月口コミを集め、すべてに返信し、顧客が書く内容は指示しない</li><li>お金を払う顧客のためのページを作り、電話番号を押しやすくし、営業時間を長くする</li><li>リンクは地元と業界の本物のサイトへの依頼で得る。マーケットプレイスは使わない</li><li>誰かが「SEOは死んだ」と言ったら、まず自社の数字を確かめる</li></ul><p>私には、腕の問題に見えます。</p><p>（以下、著者のSEOサービスの案内。「VALUABLE」とDMするか、Calendlyで通話を予約するよう呼びかけ、50以上の法律事務所をGoogleで1位にしてきたこと、1都市1業務分野につき1事務所としか組まないことが書かれている）</p><h3>スレッド</h3><ul><li>Part 1（親ポスト）: 記事本体へのリンク</li><li>Part 2: 「90日いただければ、あなたの事業は次のものを得ます」として、望む仕事に合わせたGoogleプロフィールの作り直し、弁護士の電話を月約4件から50件以上にした仕組み、サービスと対応地域ごとのページ、仕事ごとの口コミ依頼、月次レポートなどを列挙するサービス案内</li><li>Part 3: 「まだならパート1もどうぞ」というパート1へのリンク</li></ul>
+    </article>
+    <aside class="side">
+      <dl>
+        <dt>AUTHOR</dt><dd>BowTiedBills</dd>
+        <dt>HANDLE</dt><dd>@BowTiedBills</dd>
+        <dt>POSTED</dt><dd>2026-11-08</dd>
+        <dt>CATEGORY</dt><dd>💼 AI×ビジネス活用</dd>
+        <dt>SOURCE</dt><dd><a href="https://x.com/BowTiedBills/status/2119143764698571207" target="_blank" rel="noopener noreferrer">x.com/BowTiedBills/status/2119143764698571…</a></dd>
+        <dt>MARKDOWN</dt><dd><a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/2026-11-07_BowTiedBills__2119143764698571207.md" target="_blank" rel="noopener noreferrer">GitHub で原文を見る</a></dd>
+        
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<section class="page-nav">
+  <div class="container">
+    <span class="btn" style="opacity:.35;pointer-events:none">← 最新です</span>
+    <a class="btn next" href="./2026-11-06_milesdeutscher__2118741112726888533.md.html">
+      <span>古いブックマーク →</span>
+      <span class="big">シンギュラリティはもう始まっている（現実的な5年予測）</span>
+    </a>
+  </div>
+</section>
+
+<section class="actions">
+  <div class="container">
+    <a href="./">← 一覧へ戻る</a>
+    <a class="primary" href="https://x.com/BowTiedBills/status/2119143764698571207" target="_blank" rel="noopener noreferrer">元ポストを X で見る</a>
+    <a href="https://github.com/rsensui2/ryoko/blob/master/bookmarks/ja/2026-11-07_BowTiedBills__2119143764698571207.md" target="_blank" rel="noopener noreferrer">GitHub で開く</a>
+  </div>
+</section>
+
+<footer class="foot" id="about">
+  <div class="container">
+    <div class="grid">
+      <div>
+        <div class="wordmark">Vibe Coder Bootcamp</div>
+        <p>
+          AI の新しい動きを毎朝整理して、Vibe Coder が今日使える形で届けるフィード。
+          運営は泉水亮介。Slackコミュニティと連動した公開ログです。
+        </p>
+        <p style="margin-top:20px;font-size:12px;font-family:'JetBrains Mono',monospace;letter-spacing:0.08em;color:#9a9285;">
+          BOOKMARKS ARCHIVE · 641 ITEMS · EN+JP
+        </p>
+      </div>
+      <div>
+        <h5>SECTIONS</h5>
+        <ul>
+          <li><a href="../">HOME</a></li>
+          <li><a href="../news/2026-11-08/">TODAY</a></li>
+          <li><a href="./">BOOKMARKS</a></li>
+          <li><a href="../#archive">ARCHIVE</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>SUBSCRIBE</h5>
+        <ul>
+          <li><a href="#">Slack に参加</a></li>
+          <li><a href="#">RSS</a></li>
+          <li><a href="#">X で購読</a></li>
+          <li><a href="#">メール通知</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>PROJECT</h5>
+        <ul>
+          <li><a href="https://github.com/rsensui2/vibe-coder-demo">GitHub</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Colophon</a></li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>© 2026 Vibe Coder Bootcamp</span>
+      <span>SET IN SHIPPORI MINCHO / INTER / JETBRAINS MONO</span>
+      <span>BUILD 2026-11-09</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

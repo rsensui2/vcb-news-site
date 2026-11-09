@@ -1,7 +1,37 @@
 {
- "generated": "2026-11-09T08:20:37+09:00",
- "count": 169,
+ "generated": "2026-11-10T08:20:40+09:00",
+ "count": 172,
  "items": [
+  {
+   "type": "note",
+   "type_label": "note",
+   "title": "送信ボタンの無いメールAI——「送らないでください」と書くのをやめた",
+   "date": "2026-11-09",
+   "url": "https://note.com/rsensui/n/nba085b7d4d02",
+   "tags": [],
+   "description": "",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "会社のPCから外部サービスにつながるかとGitHubに入れるかを講義前に確かめる手順（全11枚）",
+   "date": "2026-11-09",
+   "url": "",
+   "tags": [],
+   "description": "宿題や演習が止まる原因は、アプリのコードとは限りません。会社のネットワークがログインやデータベースのサービスの名前を返さないと、ブラウザでは画面が開けるのに、自分で動かしているアプリだけが外につながらないことがあります。GitHubの2段階認証で入れなくなると、復旧の申請からそ… ／ 添付: deck.pdf",
+   "extra_links": []
+  },
+  {
+   "type": "slack",
+   "type_label": "Slack配布",
+   "title": "受講中に業務データをAIツール・外部API・GitHubへ入れていいかの線引きと題材の選び方（全12枚）",
+   "date": "2026-11-09",
+   "url": "",
+   "tags": [],
+   "description": "講義の質疑で「お客様情報や請求書データは入れないようにしているが、Claude Code や Cursor に入れていいもの・ダメなものの基準はあるか。何のアプリを作るか今考えている」という質問がありました。決まりが無いと、真面目な人ほど全部やめておこうと考え、業務と関係の薄い… ／ 添付: deck.pdf",
+   "extra_links": []
+  },
   {
    "type": "slack",
    "type_label": "Slack配布",
